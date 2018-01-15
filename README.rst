@@ -5,6 +5,27 @@ This tool and library were written to optimize Microsoft Word / Libreoffice ZIP 
 and pngquant and recompresses not only host zip file but also all images and other suitable files inside it.
 
 ============
+Installation
+============
+
+At the command line::
+
+    $ pip install filerepack
+
+Or, if you don't have pip installed::
+
+    $ easy_install filerepack
+
+If you want to install from the latest sources, you can do::
+
+    $ git clone https://github.com/ivbeg/filerepack.git
+    $ cd  filerepack
+    $ python setup.py filerepack
+
+
+
+
+============
 Command line
 ============
 

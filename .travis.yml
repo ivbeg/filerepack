@@ -35,5 +35,5 @@ deploy:
   user: ivbeg
   on:
     tags: true
-    repo: ivbeg/docx2csv
+    repo: ivbeg/filerepack
     condition: "$TOXENV == py36"

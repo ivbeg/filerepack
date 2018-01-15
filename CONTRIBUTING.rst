@@ -13,7 +13,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/ivbeg/docx2csv/issues.
+Report bugs at https://github.com/ivbeg/filerepack/issues.
 
 If you are reporting a bug, please include:
 
@@ -37,14 +37,14 @@ We encourage you to add new languages to existing stack.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-docx2csv could always use more documentation, whether as part of the
-official docx2csv docs, in docstrings, or even on the web in blog posts,
+filerepack could always use more documentation, whether as part of the
+official filerepack docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/ivbeg/docx2csv/issues.
+The best way to send feedback is to file an issue at https://github.com/ivbeg/filerepack/issues.
 
 If you are proposing a feature:
 
@@ -56,15 +56,15 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `docx2csv` for local development.
+Ready to contribute? Here's how to set up `filerepack` for local development.
 
-1. Fork the `docx2csv` repo on GitHub.
+1. Fork the `filerepack` repo on GitHub.
 2. Clone your fork locally::
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
-    $ mkvirtualenv docx2csv
-    $ cd docx2csv/
+    $ mkvirtualenv filerepack
+    $ cd filerepack/
     $ python setup.py develop
 
 4. Create a branch for local development::
@@ -76,7 +76,7 @@ Ready to contribute? Here's how to set up `docx2csv` for local development.
 5. When you're done making changes, check that your changes pass flake8 and the tests, including testing other Python versions with tox::
 
     $ pip install -r tests/requirements.txt # install test dependencies
-    $ flake8 docx2csv tests
+    $ flake8 filerepack tests
     $ nosetests
     $ tox
 
@@ -99,7 +99,7 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in *README.rst*.
-3. Check https://travis-ci.org/ivbeg/docx2csv/pull_requests
+3. Check https://travis-ci.org/ivbeg/filerepack/pull_requests
    and make sure that the tests pass for all supported Python versions.
 4. Follow the core developers' advice which aim to ensure code's consistency regardless of variety of approaches used by many contributors.
 5. In case you are unable to continue working on a PR, please leave a short comment to notify us. We will be pleased to make any changes required to get it done.
