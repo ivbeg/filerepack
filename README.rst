@@ -63,7 +63,7 @@ Recursively repacks all images .jpg and .png files in directory "some_media_path
 Requirements
 ============
 It works in both Windows and Linux environments.
-You need to install 7Zip, jpegoptim and pngquant in your OS PATH settings.
+You need to install zip, 7Zip, jpegoptim and pngquant tools in your OS PATH settings.
 
 
 Acknowledgements
