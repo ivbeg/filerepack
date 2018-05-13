@@ -17,6 +17,21 @@ TEMP_PATH = tempfile.gettempdir()
 def pack_jpg(filepath, debug=False):
     """Lossy compress JPG file using jpegoptim"""
     insize = os.path.getsize(filepath)
+    cmd = JPEG_RE_CMD + ' ' + JPEG_RE_OPTIONS + ' "' + filepath + '"' + ' "' + filepath + '"' 
+    if debug:
+        logging.info('jpeg recompress cmd: %s' % (cmd))
+    os.system(cmd)
+    outsize = os.path.getsize(filepath)
+    if insize > 0:
+        share = (insize - outsize) * 100.0 / insize
+    else:
+        share = 0
+    return [filepath, insize, outsize, share]
+
+
+def pack_jpg_jo(filepath, debug=False):
+    """Lossy compress JPG file using jpegoptim"""
+    insize = os.path.getsize(filepath)
     cmd = JPEGOPTIM_PATH + JPEGIOPTIM_OPTIONS + '"' + filepath + '"'
     if debug:
         logging.info('jpeg optimization cmd: %s' % (cmd))
@@ -103,9 +118,13 @@ class FileRepacker:
 
 
     def repack_zip_file(self, filename, outfile=None,
-                        options={"debug": False, 'pack_images': True, 'repack_archive': True, 'pack_archives': True,
-                                 'deep_walking': True, 'log': False, 'quiet': False}):
+                       def_options=None):
         """Repack single ZIP file """
+        options = {"debug": False, 'pack_images': True, 'repack_archive': True, 'pack_archives': True,
+                                 'deep_walking': True, 'log': False, 'quiet': False}
+        if def_options:
+            for k in def_options.keys(): 
+                options[k] = def_options[k]
         results = {'stats': [0, 0, 0], 'files': []}
         f_outfile = outfile
         if outfile is None: f_outfile = filename
@@ -121,7 +140,7 @@ class FileRepacker:
                 logging.debug('Filename %s' % fn)
             os.system(fn)
             if options['debug']:
-                self.log('Filetype %s' % str(filetype))
+                logging.info('Filetype %s' % str(filetype))
             rpath = os.path.abspath(filename)
             # Deep walking. Looking into every directory and every file
             if options['deep_walking']:

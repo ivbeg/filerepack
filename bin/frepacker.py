@@ -13,7 +13,7 @@ from filerepack import FileRepacker
 
 def run(filename):
     dr = FileRepacker()
-    results = dr.repack_zip_file(filename)
+    results = dr.repack_zip_file(filename, def_options={'debug' : True})
     print('File %s shrinked %d -> %d (%f%%)' % (filename.encode('utf8'), results['final'][0], results['final'][1], results['final'][2]))
     if len(results['files']) > 0:
         print('Files recompressed:')
