@@ -1,5 +1,9 @@
 # History
 
+## 0.1.4 (2025-11-12)
+
+* Added long_description_content_type to setup.py for proper Markdown rendering on PyPI
+
 ## 0.1.3 (2025-11-12)
 
 * Updated requirements.txt with typer and optional duckdb dependency

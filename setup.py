@@ -23,6 +23,7 @@ setup(
     version=__version__,
     description="Repacks existing (un)compressed files for higher compression",
     long_description=readme + '\n\n' + history,
+    long_description_content_type='text/markdown',    
     author='Ivan Begtin',
     author_email='ivan@begtin.tech',
     url='https://github.com/ivbeg/filesrepack',
