@@ -31,7 +31,10 @@ setup(
     install_requires=[
         'typer>=0.9.0',
     ],
-   entry_points={
+    extras_require={
+        'parquet': ['duckdb>=0.9.0'],
+    },
+    entry_points={
         'console_scripts': [
             'filerepack = filerepack.__main__:main',
         ],

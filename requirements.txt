@@ -1,0 +1,5 @@
+typer>=0.9.0
+
+# Optional dependencies
+duckdb>=0.9.0  # For Parquet file compression support
+

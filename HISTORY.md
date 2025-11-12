@@ -1,5 +1,10 @@
 # History
 
+## 0.1.3 (2025-11-12)
+
+* Updated requirements.txt with typer and optional duckdb dependency
+* Added extras_require to setup.py for optional parquet support (duckdb)
+
 ## 0.1.2 (2025-11-12)
 
 * Converted HISTORY.rst to HISTORY.md
