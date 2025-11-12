@@ -29,16 +29,16 @@ If you want to install from the latest sources, you can do::
 Command line
 ============
 
-Usage: frepacker.py FILENAME
+Usage: filerepack FILENAME
 
   docx to csv convertor (http://github.com/ivbeg/filesrepack)
   Repacks ZIP and ZIP'based files and images for better compression
 
-  Use command: "frepacker.py <filename>" to run recompression.
+  Use command: "filerepack <filename>" to run recompression.
 
 Examples
 ========
-frepacker.py CP_CONTRACT_160166.docx
+filerepack CP_CONTRACT_160166.docx
 
 Recompresses CP_CONTRACT_160166.docx including all zip files, images and so on
 
