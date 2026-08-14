@@ -49,6 +49,21 @@ class TestRepackCLI:
         result = runner.invoke(app, ['repack', '--help'])
         assert '--max-extract-size' in result.output
 
+    def test_pdf_profile_in_help(self):
+        result = runner.invoke(app, ['repack', '--help'])
+        assert '--pdf-profile' in result.output
+        result = runner.invoke(app, ['bulk', '--help'])
+        assert '--pdf-profile' in result.output
+
+    def test_invalid_pdf_profile(self, tmp_path):
+        f = tmp_path / 'a.pdf'
+        f.write_bytes(b'%PDF-1.4\n')
+        result = runner.invoke(
+            app, ['repack', str(f), '--pdf-profile', 'ultra'],
+        )
+        assert result.exit_code == 1
+        assert 'Unknown PDF profile' in result.output
+
 
 class TestBulkCLI:
     def test_help_output(self):
@@ -68,6 +83,13 @@ class TestBulkCLI:
         assert result.exit_code == 0
         assert 'Found 1 files' in result.output or result.exit_code == 0
 
+    def test_bulk_finds_tgz(self, tmp_path):
+        archive = tmp_path / 'bundle.tgz'
+        archive.write_bytes(b'\x1f\x8b' + b'\x00' * 32)
+        result = runner.invoke(app, ['bulk', str(tmp_path), '--dryrun', '--quiet'])
+        assert result.exit_code == 0
+        assert 'Found 1 files' in result.output or result.exit_code == 0
+
     def test_invalid_jobs(self, tmp_path):
         result = runner.invoke(app, ['bulk', str(tmp_path), '--jobs', 'nope'])
         assert result.exit_code == 1
@@ -81,7 +103,48 @@ class TestDoctorCLI:
     def test_doctor_runs(self):
         result = runner.invoke(app, ['doctor'])
         assert 'szip' in result.output
+        assert 'lz4' in result.output
+        assert 'woff2_compress' in result.output
+        assert 'mp3packer' in result.output
+        assert 'gdcmconv' in result.output
+        assert 'dcmcjpls' in result.output
         assert result.exit_code in (0, 1)
+
+    def test_doctor_install_hints_when_missing(self, monkeypatch):
+        monkeypatch.setattr(
+            'filerepack.__main__.doctor_rows',
+            lambda: [
+                {
+                    'tool': 'szip',
+                    'binaries': '7zz, 7z',
+                    'path': '/usr/bin/7zz',
+                    'status': 'ok',
+                    'purpose': 'archives',
+                    'install': '',
+                },
+                {
+                    'tool': 'jpegoptim',
+                    'binaries': 'jpegoptim',
+                    'path': '',
+                    'status': 'missing (optional)',
+                    'purpose': 'JPEG',
+                    'install': 'brew install jpegoptim',
+                },
+            ],
+        )
+        monkeypatch.setattr(
+            'filerepack.__main__.install_instructions',
+            lambda keys: (
+                'Install missing tools on macOS:\n\n'
+                '  Homebrew:\n'
+                '    brew install jpegoptim\n'
+            ) if keys == ['jpegoptim'] else '',
+        )
+        result = runner.invoke(app, ['doctor'])
+        assert result.exit_code == 0
+        assert 'jpegoptim' in result.output
+        assert 'brew install jpegoptim' in result.output
+        assert 'Install missing tools' in result.output
 
 
 # Fixtures needed for CLI tests

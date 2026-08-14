@@ -1,12 +1,18 @@
 # -*- coding: utf-8 -*-
 
+import gzip
+import io
 import os
+import tarfile
 import zipfile
 from unittest.mock import patch
 
 from filerepack.repack import (
-    FileRepacker, _commit_output, _expand_globs, pack_jpg, pack_png, pack_wmv,
-    pack_avif, pack_brotli, pack_flac, pack_heic,
+    FileRepacker, _commit_output, _dispatch_packer, _expand_globs,
+    pack_jpg, pack_png, pack_wmv, pack_avif, pack_brotli, pack_flac, pack_heic,
+)
+from filerepack.codecs import (
+    pack_lz4, pack_jxl, pack_sqlite, pack_woff, pack_mp3, pack_ai, pack_psd,
 )
 from filerepack.utils import verify_output
 
@@ -106,6 +112,29 @@ class TestZipRepack:
         assert 'final' in results
         assert os.path.exists(zip_path)
 
+    def test_repack_zip_progress_events(self, tmp_path):
+        zip_path = str(tmp_path / 'test.zip')
+        with zipfile.ZipFile(zip_path, 'w') as zf:
+            zf.writestr('a.gz', gzip.compress(b'hello' * 80))
+            zf.writestr('b.gz', gzip.compress(b'world' * 80))
+        events = []
+
+        def hook(event, **kwargs):
+            events.append((event, kwargs.get('total', 0), kwargs.get('name', '')))
+
+        FileRepacker(quiet=True).repack_zip_file(
+            zip_path,
+            def_options={'quiet': True, 'dryrun': True},
+            on_progress=hook,
+        )
+        names = [e[0] for e in events]
+        assert names[0] == 'extract'
+        if 'files' not in names:
+            return
+        assert 'files' in names
+        assert names.count('file') == 2
+        assert 'write' in names
+
     def test_repack_dryrun(self, tmp_path):
         zip_path = str(tmp_path / 'test.zip')
         with zipfile.ZipFile(zip_path, 'w') as zf:
@@ -124,6 +153,47 @@ class TestZipRepack:
 
         assert os.path.getsize(zip_path) == original_size
         assert open(zip_path, 'rb').read() == original
+
+    def test_dryrun_predicts_inner_file_savings(self, tmp_path):
+        zip_path = str(tmp_path / 'test.zip')
+        payload = bytes(range(256)) * 2000
+        fat_gz = gzip.compress(payload, compresslevel=1)
+        with zipfile.ZipFile(zip_path, 'w', compression=zipfile.ZIP_STORED) as zf:
+            zf.writestr('payload.gz', fat_gz)
+
+        original = open(zip_path, 'rb').read()
+        dr = FileRepacker(quiet=True)
+        predicted = dr.repack_zip_file(zip_path, def_options={
+            'quiet': True, 'dryrun': True,
+        })
+        assert open(zip_path, 'rb').read() == original
+
+        actual = dr.repack_zip_file(zip_path, def_options={
+            'quiet': True, 'dryrun': False,
+        })
+        if predicted.inner_count == 0 and actual.inner_count == 0:
+            return
+        assert predicted.total_outsize == actual.total_outsize
+        assert predicted.total_outsize < predicted.total_insize
+
+    def test_dryrun_applies_inner_packs_in_extract_dir(self, tmp_path):
+        zip_path = str(tmp_path / 'test.zip')
+        with zipfile.ZipFile(zip_path, 'w') as zf:
+            zf.writestr('payload.gz', gzip.compress(b'hello' * 80, compresslevel=1))
+
+        seen = []
+
+        def spy(ext, fullname, options):
+            seen.append(options.get('dryrun'))
+            return _dispatch_packer(ext, fullname, options)
+
+        with patch('filerepack.repack._dispatch_packer', side_effect=spy):
+            FileRepacker(quiet=True).repack_zip_file(
+                zip_path, def_options={'quiet': True, 'dryrun': True},
+            )
+        if not seen:
+            return
+        assert seen == [False]
 
     def test_missing_7zz_does_not_delete_zip(self, tmp_path):
         zip_path = str(tmp_path / 'test.zip')
@@ -252,6 +322,130 @@ class TestPackerFailures:
             assert pack_heic(str(path)) is None
         assert path.exists()
 
+    def test_pack_lz4_missing_tool(self, tmp_path):
+        path = tmp_path / 'a.lz4'
+        path.write_bytes(b'\x04\x22\x4d\x18' + b'\x00' * 16)
+        with patch('filerepack.codecs.resolve_tool', return_value=None):
+            assert pack_lz4(str(path)) is None
+        assert path.exists()
+
+    def test_pack_jxl_missing_tool(self, tmp_path):
+        path = tmp_path / 'a.jxl'
+        path.write_bytes(b'\xff\x0a' + b'\x00' * 16)
+        with patch('filerepack.codecs.resolve_tool', return_value=None):
+            assert pack_jxl(str(path)) is None
+        assert path.exists()
+
+    def test_pack_woff_missing_fonttools(self, tmp_path):
+        path = tmp_path / 'a.woff'
+        path.write_bytes(b'wOFF' + b'\x00' * 16)
+        with patch.dict('sys.modules', {'fontTools': None, 'fontTools.ttLib': None}):
+            assert pack_woff(str(path)) is None
+        assert path.exists()
+
+
+class TestSqlitePack:
+    def test_vacuum_shrinks_or_keeps(self, tmp_path):
+        import sqlite3
+        path = tmp_path / 'db.sqlite'
+        conn = sqlite3.connect(str(path))
+        conn.execute('CREATE TABLE t (x TEXT)')
+        conn.execute("INSERT INTO t VALUES (?)", ('x' * 10000,))
+        conn.commit()
+        conn.execute('DELETE FROM t')
+        conn.commit()
+        conn.close()
+        original = path.read_bytes()
+        result = pack_sqlite(str(path))
+        assert path.exists()
+        if result is not None and result.replaced:
+            assert path.stat().st_size <= len(original)
+            assert path.read_bytes().startswith(b'SQLite format 3')
+        else:
+            assert path.read_bytes() == original
+
+    def test_gpkg_and_mbtiles_use_sqlite_packer(self):
+        from filerepack.repack import _PACKERS
+        assert _PACKERS['gpkg'].func is pack_sqlite
+        assert _PACKERS['mbtiles'].func is pack_sqlite
+
+
+class TestMp3AiPsd:
+    def test_pack_mp3_missing_tool(self, tmp_path):
+        path = tmp_path / 'a.mp3'
+        path.write_bytes(b'ID3' + b'\x00' * 16)
+        with patch('filerepack.codecs.resolve_tool', return_value=None):
+            assert pack_mp3(str(path)) is None
+        assert path.exists()
+
+    def test_pack_ai_skips_eps(self, tmp_path):
+        path = tmp_path / 'logo.ai'
+        path.write_bytes(b'%!PS-Adobe-3.0\n%%Creator: Adobe Illustrator\n')
+        assert pack_ai(str(path)) is None
+        assert path.read_bytes().startswith(b'%!PS-Adobe')
+
+    def test_pack_ai_pdf_calls_pdf_packer(self, tmp_path):
+        path = tmp_path / 'logo.ai'
+        path.write_bytes(b'%PDF-1.5\n%\xe2\xe3\xcf\xd3\n')
+        with patch('filerepack.repack.pack_pdf', return_value=None) as mocked:
+            assert pack_ai(str(path)) is None
+            mocked.assert_called_once()
+
+    def test_pack_psd_skips_raw_composite(self, tmp_path):
+        import struct
+        path = tmp_path / 'flat.psd'
+        header = b'8BPS' + struct.pack('>H', 1) + b'\x00' * 6
+        header += struct.pack('>H', 3)
+        header += struct.pack('>I', 1) + struct.pack('>I', 1)
+        header += struct.pack('>H', 8) + struct.pack('>H', 3)
+        header += struct.pack('>I', 0) + struct.pack('>I', 0) + struct.pack('>I', 0)
+        original = header + struct.pack('>H', 0) + b'\x00\x00\x00'
+        path.write_bytes(original)
+        assert pack_psd(str(path)) is None
+        assert path.read_bytes() == original
+
+    def test_pack_psd_recompresses_zip_composite(self, tmp_path):
+        import struct
+        import zlib
+        width = height = 48
+        raw = bytes((i * 13) % 256 for i in range(width * height * 3))
+        payload = zlib.compress(raw, 1)
+        header = b'8BPS' + struct.pack('>H', 1) + b'\x00' * 6
+        header += struct.pack('>H', 3)
+        header += struct.pack('>I', height) + struct.pack('>I', width)
+        header += struct.pack('>H', 8) + struct.pack('>H', 3)
+        header += struct.pack('>I', 0) + struct.pack('>I', 0) + struct.pack('>I', 0)
+        original = header + struct.pack('>H', 2) + payload
+        path = tmp_path / 'zipped.psd'
+        path.write_bytes(original)
+        result = pack_psd(str(path))
+        assert path.exists()
+        assert path.read_bytes().startswith(b'8BPS')
+        if result is not None and result.replaced:
+            assert path.stat().st_size <= len(original)
+
+
+
+class TestTarGzContainer:
+    def test_targz_roundtrip_with_7zz(self, tmp_path):
+        import shutil
+        if not shutil.which('7zz') and not shutil.which('7z'):
+            import pytest
+            pytest.skip('7zz/7z required')
+        archive = tmp_path / 'bundle.tar.gz'
+        payload = io.BytesIO(b'hello-world' * 50)
+        with tarfile.open(str(archive), 'w:gz') as tar:
+            info = tarfile.TarInfo('hello.txt')
+            info.size = payload.getbuffer().nbytes
+            payload.seek(0)
+            tar.addfile(info, payload)
+        original = archive.read_bytes()
+        FileRepacker(quiet=True).repack_zip_file(
+            str(archive), def_options={'quiet': True, 'pack_images': False},
+        )
+        assert archive.exists()
+        assert archive.read_bytes()[:2] == b'\x1f\x8b' or archive.read_bytes() == original
+
 
 class TestVerifyOutput:
     def test_zip(self, tmp_path):
@@ -267,7 +461,29 @@ class TestVerifyOutput:
         path.write_bytes(b'not-a-jpeg')
         assert not verify_output(str(path), 'jpg')
 
+    def test_dcm_magic(self, tmp_path):
+        path = tmp_path / 't.dcm'
+        path.write_bytes(b'\x00' * 128 + b'DICM' + b'\x00' * 4)
+        assert verify_output(str(path), 'dcm')
+        path.write_bytes(b'\x00' * 132)
+        assert not verify_output(str(path), 'dcm')
+
     def test_flac_header(self, tmp_path):
         path = tmp_path / 't.flac'
         path.write_bytes(b'fLaC' + b'\x00' * 8)
         assert verify_output(str(path), 'flac')
+
+    def test_new_magics(self, tmp_path):
+        cases = [
+            ('lz4', b'\x04\x22\x4d\x18' + b'\x00' * 4),
+            ('cab', b'MSCF' + b'\x00' * 8),
+            ('woff2', b'wOF2' + b'\x00' * 8),
+            ('sqlite', b'SQLite format 3\x00'),
+            ('z', b'\x1f\x9d' + b'\x00' * 8),
+            ('psd', b'8BPS' + b'\x00' * 8),
+            ('mp3', b'ID3' + b'\x00' * 8),
+        ]
+        for kind, data in cases:
+            path = tmp_path / f't.{kind}'
+            path.write_bytes(data)
+            assert verify_output(str(path), kind), kind

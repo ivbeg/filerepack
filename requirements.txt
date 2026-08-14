@@ -2,4 +2,6 @@ typer>=0.9.0
 
 # Optional extras:
 #   pip install 'filerepack[parquet]'    # DuckDB Parquet support
+#   pip install 'filerepack[data]'       # Parquet + ORC/Avro/Feather/Arrow
+#   pip install 'filerepack[fonts]'      # WOFF/WOFF2 via fonttools
 #   pip install 'filerepack[progress]'   # rich progress bars for --progress

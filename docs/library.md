@@ -27,9 +27,10 @@ options = RepackOptions(
     pack_images=True,
     pack_archives=True,
     compression_level=9,
-    jpeg_quality=None,      # set to enable lossy JPEG
+    jpeg_quality=None,      # set to enable lossy JPEG (also PDF images)
     png_quality=None,       # 'high'|'medium'|'low' enables pngquant
-    lossy=False,
+    pdf_profile=None,       # 'screen'|'ebook'|'printer'|'prepress'|'default'
+    lossy=False,            # PDF uses Ghostscript /ebook unless pdf_profile is set
     wmv_lossless=False,
     convert_container=True,
     keep_if_larger=True,
@@ -43,14 +44,24 @@ options = RepackOptions(
 summary = rp.repack("data.parquet", options=options)
 ```
 
+Pass `on_progress` to observe archive stages (`extract`, `files`, `file`, `write`) or a standalone pack (`standalone`):
+
+```python
+def on_progress(event, *, current=0, total=0, name=""):
+    print(event, current, total, name)
+
+summary = rp.repack("slides.pptx", on_progress=on_progress)
+```
+
 A plain `dict` is still accepted as `def_options=`.
 
 ## Format helpers
 
 ```python
 from filerepack.repack import pack_gzip, pack_pdf, pack_jpg, pack_mp4
+from filerepack.codecs import pack_sqlite, pack_jxl, pack_dcm
 
-result = pack_pdf("document.pdf")
+result = pack_sqlite("notes.sqlite")
 if result:
     print(result.insize, result.outsize, result.replaced)
 ```
@@ -60,9 +71,11 @@ if result:
 ## Tool paths
 
 ```python
-from filerepack.tools import resolve_szip, doctor_rows
+from filerepack.tools import resolve_szip, doctor_rows, install_instructions
 
 print(resolve_szip())
 for row in doctor_rows():
-    print(row['tool'], row['status'], row['path'])
+    print(row['tool'], row['status'], row['path'], row['install'])
+
+print(install_instructions())
 ```

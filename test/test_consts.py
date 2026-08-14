@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from filerepack.consts import (
-    ARCHIVE_EXTS, STANDALONE_EXTS, SUPPORTED_EXTS, ZIP_SENSITIVE_EXTS,
+    ARCHIVE_EXTS, DEFAULT_LOSSY_PDF_PROFILE, PDF_PROFILES,
+    STANDALONE_EXTS, SUPPORTED_EXTS, ZIP_SENSITIVE_EXTS,
 )
 
 
@@ -47,10 +48,52 @@ class TestSupportedExts:
         assert 'avi' in SUPPORTED_EXTS
         assert 'asf' in SUPPORTED_EXTS
 
-    def test_contains_compressed(self):
-        assert 'gz' in SUPPORTED_EXTS
-        assert 'xz' in SUPPORTED_EXTS
-        assert 'bz2' in SUPPORTED_EXTS
+    def test_contains_zip_aliases(self):
+        for ext in (
+            'war', 'ear', 'aar', 'nupkg', 'vsix', 'sketch', 'cbr', 'cb7',
+            'oxt', 'aab', 'npz', 'fcstd', 'xapk', 'mcworld', 'unitypackage',
+        ):
+            assert ext in SUPPORTED_EXTS
+            assert ext in ARCHIVE_EXTS
+
+    def test_contains_tarball_aliases(self):
+        for ext in (
+            'tar', 'tgz', 'tbz2', 'txz', 'tzst', 'tlz', 'tzo', 'gem', 'crate',
+            'unitypackage', 'cab', 'wim',
+        ):
+            assert ext in ARCHIVE_EXTS
+
+    def test_contains_new_standalone(self):
+        for ext in (
+            'lz4', 'jxl', 'jp2', 'exr', 'dng', 'mov', 'm4a', 'sqlite',
+            'gpkg', 'mbtiles', 'orc', 'woff2', 'svgz', 'jpe', 'mp3', 'psd', 'ai',
+            'dcm', 'dicom', 'dic',
+        ):
+            assert ext in STANDALONE_EXTS
+
+    def test_contains_odf_templates(self):
+        for ext in ('oth', 'otm', 'otc', 'oti'):
+            assert ext in ARCHIVE_EXTS
+        assert 'otf' not in ARCHIVE_EXTS
+
+    def test_contains_ooo1_zip(self):
+        for ext in ('sxw', 'sxc', 'sxi', 'sxd', 'stw', 'stc', 'sti', 'std', 'sxg', 'sxm'):
+            assert ext in ARCHIVE_EXTS
+
+    def test_contains_iwork_templates(self):
+        for ext in ('pages', 'key', 'numbers', 'kth', 'nmbtemplate', 'template'):
+            assert ext in ARCHIVE_EXTS
+
+    def test_ooxml_siblings_sensitive(self):
+        for ext in ('vsdm', 'vstx', 'vstm', 'vssx', 'vssm', 'sldm'):
+            assert ext in ZIP_SENSITIVE_EXTS
+
+
+class TestPdfConsts:
+    def test_lossy_default_is_ebook(self):
+        assert DEFAULT_LOSSY_PDF_PROFILE == 'ebook'
+        assert 'ebook' in PDF_PROFILES
+        assert 'prepress' in PDF_PROFILES
 
 
 class TestZipSensitiveExts:

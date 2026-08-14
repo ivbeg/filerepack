@@ -1,7 +1,7 @@
 # Project Context
 
 ## Purpose
-filerepack is a Python CLI tool and library for lossless and lossy re-compression of files. It optimizes a wide variety of file formats including Microsoft Word/LibreOffice/OOXML documents, archives (ZIP, 7z, RAR), compressed files (GZIP, XZ, BZ2), Parquet data files, PDFs, images (JPEG, PNG, GIF, WebP, SVG, TIF/TIFF), and videos (WMV, MP4, AVI, ASF).
+filerepack is a Python CLI tool and library for lossless and lossy re-compression of files. It optimizes Office/OOXML documents, ZIP/7z/RAR/tar archives, stream codecs, PDFs, images, video, lossless audio, and data files (Parquet, SQLite, ORC, …).
 
 ## Tech Stack
 - Python 3.9+

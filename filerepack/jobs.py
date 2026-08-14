@@ -50,6 +50,7 @@ def process_file_job(job: Dict[str, Any]) -> Dict[str, Any]:
             compression_level=int(job.get('compression_level', 9)),
             jpeg_quality=job.get('jpeg_quality'),
             png_quality=job.get('png_quality'),
+            pdf_profile=job.get('pdf_profile'),
             wmv_lossless=bool(job.get('wmv_lossless')),
             lossy=bool(job.get('lossy')),
             convert_container=bool(job.get('convert_container', True)),

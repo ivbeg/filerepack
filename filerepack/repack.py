@@ -16,10 +16,13 @@ from os import listdir, walk
 from shutil import copyfile, copyfileobj, rmtree
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
+from . import codecs as extra_codecs
 from .consts import (
-    ARCHIVE_EXTS, DEFAULT_JPEG_QUALITY, DEFAULT_MAX_EXTRACT_BYTES,
-    DEFAULT_MAX_EXTRACT_RATIO, SUPPORTED_EXTS, ZIP_SENSITIVE_EXTS,
+    DEFAULT_JPEG_QUALITY, DEFAULT_LOSSY_PDF_PROFILE,
+    DEFAULT_MAX_EXTRACT_BYTES, DEFAULT_MAX_EXTRACT_RATIO,
+    PDF_PROFILES, ZIP_SENSITIVE_EXTS,
 )
+from .formats import identify_filename
 from .models import PackResult, RepackOptions, RepackSummary
 from .tools import resolve_szip, resolve_tool
 from .utils import (
@@ -214,6 +217,81 @@ def _pack_stream_codec(
         _remove_quietly(out_temp)
 
 
+def _pack_pipe_codec(
+    filepath: str,
+    decode_cmd: List[str],
+    encode_prefix: List[str],
+    suffix: str,
+    verify: Optional[str],
+    debug: bool = False,
+    **commit: Any,
+) -> Optional[PackResult]:
+    """Decode with argv stdout, encode with prefix+[payload], then replace."""
+    insize = os.path.getsize(filepath)
+    dec_temp = _make_temp('.bin')
+    out_temp = _make_temp(suffix)
+    try:
+        if not _run_to_file(decode_cmd, dec_temp, debug):
+            return None
+        if not _run_to_file(encode_prefix + [dec_temp], out_temp, debug):
+            return None
+        return _commit_output(
+            out_temp, filepath, insize, verify=verify, **_commit_kwargs(**commit)
+        )
+    finally:
+        _remove_quietly(dec_temp)
+        _remove_quietly(out_temp)
+
+
+def _compress_file(src: str, dest: str, codec: str, debug: bool = False) -> bool:
+    """Compress a single payload file with the named stream codec."""
+    if codec == 'gz':
+        tool = resolve_tool('pigz')
+        if tool:
+            return _run_to_file([tool, '-9', '-c', src], dest, debug)
+        with open(src, 'rb') as f_in, gzip.open(dest, 'wb', compresslevel=9) as f_out:
+            copyfileobj(f_in, f_out, length=_COPY_BUF)
+        return os.path.exists(dest) and os.path.getsize(dest) > 0
+    if codec == 'bz2':
+        tool = resolve_tool('bzip2')
+        if tool:
+            return _run_to_file([tool, '-9', '-c', src], dest, debug)
+        with open(src, 'rb') as f_in, bz2.open(dest, 'wb', compresslevel=9) as f_out:
+            copyfileobj(f_in, f_out, length=_COPY_BUF)
+        return os.path.exists(dest) and os.path.getsize(dest) > 0
+    if codec == 'xz':
+        tool = resolve_tool('xz')
+        if tool:
+            return _run_to_file([tool, '-9', '-c', src], dest, debug)
+        with open(src, 'rb') as f_in, lzma.open(dest, 'wb', preset=9) as f_out:
+            copyfileobj(f_in, f_out, length=_COPY_BUF)
+        return os.path.exists(dest) and os.path.getsize(dest) > 0
+    if codec == 'lzma':
+        tool = resolve_tool('lzma')
+        if tool:
+            return _run_to_file([tool, '-9', '-c', src], dest, debug)
+        with open(src, 'rb') as f_in:
+            with lzma.open(dest, 'wb', format=lzma.FORMAT_ALONE, preset=9) as f_out:
+                copyfileobj(f_in, f_out, length=_COPY_BUF)
+        return os.path.exists(dest) and os.path.getsize(dest) > 0
+    tool_map = {
+        'zst': ('zstd', ['-19', '-c']),
+        'br': ('brotli', ['-q', '11', '-c']),
+        'lz4': ('lz4', ['-9', '-c']),
+        'lz': ('lzip', ['-9', '-c']),
+        'lzo': ('lzop', ['-9', '-c']),
+        'z': ('compress', ['-c']),
+    }
+    spec = tool_map.get(codec)
+    if spec is None:
+        return False
+    key, flags = spec
+    tool = resolve_tool(key)
+    if tool is None:
+        return False
+    return _run_to_file([tool] + flags + [src], dest, debug)
+
+
 def pack_parquet(
     filepath: str, debug: bool = False, quiet: bool = False,
     ultra: bool = False, **commit: Any,
@@ -301,20 +379,10 @@ def pack_zstd(
         if debug:
             logging.warning('zstd not installed')
         return None
-    insize = os.path.getsize(filepath)
-    dec_temp = _make_temp('.bin')
-    out_temp = _make_temp('.zst')
-    try:
-        if not _run_to_file([zstd, '-d', '-c', filepath], dec_temp, debug):
-            return None
-        if not _run_to_file([zstd, '-19', '-c', dec_temp], out_temp, debug):
-            return None
-        return _commit_output(
-            out_temp, filepath, insize, verify='zst', **_commit_kwargs(**commit)
-        )
-    finally:
-        _remove_quietly(dec_temp)
-        _remove_quietly(out_temp)
+    return _pack_pipe_codec(
+        filepath, [zstd, '-d', '-c', filepath], [zstd, '-19', '-c'],
+        '.zst', 'zst', debug=debug, **commit,
+    )
 
 
 def pack_brotli(
@@ -325,18 +393,10 @@ def pack_brotli(
         if debug:
             logging.warning('brotli not installed')
         return None
-    insize = os.path.getsize(filepath)
-    dec_temp = _make_temp('.bin')
-    out_temp = _make_temp('.br')
-    try:
-        if not _run_to_file([brotli, '-d', '-c', filepath], dec_temp, debug):
-            return None
-        if not _run_to_file([brotli, '-q', '11', '-c', dec_temp], out_temp, debug):
-            return None
-        return _commit_output(out_temp, filepath, insize, **_commit_kwargs(**commit))
-    finally:
-        _remove_quietly(dec_temp)
-        _remove_quietly(out_temp)
+    return _pack_pipe_codec(
+        filepath, [brotli, '-d', '-c', filepath], [brotli, '-q', '11', '-c'],
+        '.br', None, debug=debug, **commit,
+    )
 
 
 def pack_avif(
@@ -430,9 +490,67 @@ def pack_flac(
     )
 
 
+def normalize_pdf_profile(value: Optional[str]) -> Optional[str]:
+    """Return a canonical Ghostscript profile name, or None if unset."""
+    if value is None:
+        return None
+    key = str(value).strip().lower().lstrip('/')
+    if key not in PDF_PROFILES:
+        raise ValueError(
+            f"Unknown PDF profile {value!r}; expected one of "
+            + ', '.join(PDF_PROFILES)
+        )
+    return key
+
+
+def jpeg_quality_to_qfactor(quality: int) -> float:
+    """Map JPEG quality 1-100 to a Ghostscript Distiller QFactor."""
+    q = max(1, min(100, int(quality)))
+    return round(0.15 + (100 - q) * (2.25 / 99.0), 3)
+
+
+def build_gs_pdf_cmd(
+    gs_path: str,
+    src: str,
+    dest: str,
+    profile: str = DEFAULT_LOSSY_PDF_PROFILE,
+    jpeg_quality: Optional[int] = None,
+) -> List[str]:
+    """Ghostscript pdfwrite command for lossy PDF recompression."""
+    cmd = [
+        gs_path, '-sDEVICE=pdfwrite', '-dCompatibilityLevel=1.4',
+        f'-dPDFSETTINGS=/{profile}', '-dNOPAUSE', '-dQUIET', '-dBATCH',
+        '-dAutoRotatePages=/None', f'-sOutputFile={dest}',
+    ]
+    if jpeg_quality is None:
+        cmd.append(src)
+        return cmd
+    qfactor = jpeg_quality_to_qfactor(jpeg_quality)
+    image_dict = (
+        f'<</QFactor {qfactor} /Blend 1 /HSamples [2 1 1 2] '
+        f'/VSamples [2 1 1 2]>>'
+    )
+    cmd.extend([
+        '-dAutoFilterColorImages=false',
+        '-dAutoFilterGrayImages=false',
+        '-dColorImageFilter=/DCTEncode',
+        '-dGrayImageFilter=/DCTEncode',
+        '-c',
+        (
+            f'<</ColorACSImageDict {image_dict} '
+            f'/GrayACSImageDict {image_dict} '
+            f'/ColorImageDict {image_dict} '
+            f'/GrayImageDict {image_dict}>> setdistillerparams'
+        ),
+        '-f', src,
+    ])
+    return cmd
+
+
 def pack_pdf(
     filepath: str, debug: bool = False, quiet: bool = False,
-    lossy: bool = False, **commit: Any,
+    lossy: bool = False, pdf_profile: Optional[str] = None,
+    jpeg_quality: Optional[int] = None, **commit: Any,
 ) -> Optional[PackResult]:
     """Compress PDF. Default is lossless qpdf; Ghostscript is opt-in lossy."""
     insize = os.path.getsize(filepath)
@@ -443,8 +561,17 @@ def pack_pdf(
             logging.warning('Neither ghostscript nor qpdf is installed')
         return None
 
+    try:
+        profile = normalize_pdf_profile(pdf_profile)
+    except ValueError:
+        if debug:
+            logging.warning('Unknown PDF profile %s', pdf_profile)
+        return None
+
     abs_in = abspath(filepath)
     ck = _commit_kwargs(**commit)
+    use_gs = bool(lossy or profile is not None or jpeg_quality is not None)
+    gs_profile = profile or DEFAULT_LOSSY_PDF_PROFILE
 
     def _try_qpdf() -> Optional[PackResult]:
         if not qpdf_path:
@@ -466,11 +593,10 @@ def pack_pdf(
         if not gs_path:
             return None
         tempfpath = _make_temp('.pdf')
-        cmd = [
-            gs_path, '-sDEVICE=pdfwrite', '-dCompatibilityLevel=1.4',
-            '-dPDFSETTINGS=/prepress', '-dNOPAUSE', '-dQUIET', '-dBATCH',
-            '-dAutoRotatePages=/None', f'-sOutputFile={tempfpath}', abs_in,
-        ]
+        cmd = build_gs_pdf_cmd(
+            gs_path, abs_in, tempfpath, profile=gs_profile,
+            jpeg_quality=jpeg_quality,
+        )
         if debug:
             logging.info('ghostscript cmd: %s', ' '.join(cmd))
         result = _run_command(cmd, quiet=quiet, debug=debug)
@@ -479,7 +605,7 @@ def pack_pdf(
             return None
         return _commit_output(tempfpath, filepath, insize, verify='pdf', **ck)
 
-    if lossy:
+    if use_gs:
         return _try_gs() or _try_qpdf()
     return _try_qpdf()
 
@@ -630,7 +756,7 @@ def _encode_video(
             ffmpeg_path, '-i', abspath(src), '-c:v', 'libx264', '-crf', crf,
             '-preset', preset, '-c:a', 'copy', '-y', dest,
         ]
-        if container == 'mp4':
+        if container in ('mp4', 'mov', 'm4v'):
             cmd[-2:-2] = ['-movflags', '+faststart']
     result = _run_command(cmd, quiet=quiet, debug=debug)
     return result is not None and os.path.exists(dest) and os.path.getsize(dest) > 0
@@ -647,15 +773,21 @@ def _pack_video(
             logging.warning('ffmpeg not installed')
         return None
     insize = os.path.getsize(filepath)
-    keep_modes = {'mp4', 'mkv', 'webm'}
+    keep_modes = {'mp4', 'mkv', 'webm', 'mov', 'm4v'}
+    known = keep_modes | {'3gp', 'ts', 'mts', 'm2ts'}
     dest = filepath
     if convert_container and mode not in keep_modes:
         dest = filepath.rsplit('.', 1)[0] + '.mp4'
         out_mode = 'mp4'
     else:
-        out_mode = mode if mode in ('mp4', 'mkv', 'webm') else 'mp4'
-    suffix = '.' + out_mode
-    verify = 'mp4' if out_mode == 'mp4' else out_mode
+        out_mode = mode if mode in known else 'mp4'
+    suffix = '.' + dest.rsplit('.', 1)[-1].lower() if '.' in dest else '.' + out_mode
+    if out_mode in ('mp4', 'mov', 'm4v', '3gp'):
+        verify = 'mp4'
+    elif out_mode in ('ts', 'mts', 'm2ts'):
+        verify = 'ts'
+    else:
+        verify = out_mode
     tempfpath = _make_temp(suffix)
     try:
         if not _encode_video(
@@ -825,23 +957,73 @@ class PackerSpec:
 _PACKERS: Dict[str, PackerSpec] = {
     'jpg': PackerSpec(pack_jpg, 'image', {'jpeg_quality': 'jpeg_quality'}),
     'jpeg': PackerSpec(pack_jpg, 'image', {'jpeg_quality': 'jpeg_quality'}),
+    'jpe': PackerSpec(pack_jpg, 'image', {'jpeg_quality': 'jpeg_quality'}),
+    'jfif': PackerSpec(pack_jpg, 'image', {'jpeg_quality': 'jpeg_quality'}),
     'png': PackerSpec(pack_png, 'image', {'png_quality': 'png_quality'}),
     'gif': PackerSpec(pack_gif, 'image'),
     'webp': PackerSpec(pack_webp, 'image'),
     'svg': PackerSpec(pack_svg, 'image'),
+    'svgz': PackerSpec(extra_codecs.pack_svgz, 'image'),
     'tif': PackerSpec(pack_tif, 'image'),
     'tiff': PackerSpec(pack_tif, 'image'),
+    'jxl': PackerSpec(extra_codecs.pack_jxl, 'image'),
+    'jp2': PackerSpec(extra_codecs.pack_jp2, 'image'),
+    'j2k': PackerSpec(extra_codecs.pack_jp2, 'image'),
+    'jpf': PackerSpec(extra_codecs.pack_jp2, 'image'),
+    'jpx': PackerSpec(extra_codecs.pack_jp2, 'image'),
+    'exr': PackerSpec(extra_codecs.pack_exr, 'image'),
+    'dng': PackerSpec(extra_codecs.pack_dng, 'image'),
+    'dcm': PackerSpec(extra_codecs.pack_dcm, 'image'),
+    'dicom': PackerSpec(extra_codecs.pack_dcm, 'image'),
+    'dic': PackerSpec(extra_codecs.pack_dcm, 'image'),
+    'ico': PackerSpec(extra_codecs.pack_ico, 'image'),
+    'icns': PackerSpec(extra_codecs.pack_icns, 'image'),
     'parquet': PackerSpec(pack_parquet, 'data', {'ultra': 'ultra'}),
+    'orc': PackerSpec(extra_codecs.pack_orc, 'data'),
+    'avro': PackerSpec(extra_codecs.pack_avro, 'data'),
+    'feather': PackerSpec(extra_codecs.pack_feather, 'data'),
+    'arrow': PackerSpec(extra_codecs.pack_arrow, 'data'),
+    'ipc': PackerSpec(extra_codecs.pack_arrow, 'data'),
+    'sqlite': PackerSpec(extra_codecs.pack_sqlite, 'data'),
+    'sqlite3': PackerSpec(extra_codecs.pack_sqlite, 'data'),
+    'gpkg': PackerSpec(extra_codecs.pack_sqlite, 'data'),
+    'mbtiles': PackerSpec(extra_codecs.pack_sqlite, 'data'),
+    'h5': PackerSpec(extra_codecs.pack_hdf5, 'data'),
+    'hdf5': PackerSpec(extra_codecs.pack_hdf5, 'data'),
+    'hdf': PackerSpec(extra_codecs.pack_hdf5, 'data'),
+    'nc': PackerSpec(extra_codecs.pack_netcdf, 'data'),
+    'nc4': PackerSpec(extra_codecs.pack_netcdf, 'data'),
     'gz': PackerSpec(pack_gzip, 'data'),
     'xz': PackerSpec(pack_xz, 'data'),
     'bz2': PackerSpec(pack_bz2, 'data'),
     'zst': PackerSpec(pack_zstd, 'data'),
     'br': PackerSpec(pack_brotli, 'data'),
-    'pdf': PackerSpec(pack_pdf, 'document'),
+    'lz4': PackerSpec(extra_codecs.pack_lz4, 'data'),
+    'lz': PackerSpec(extra_codecs.pack_lzip, 'data'),
+    'lzma': PackerSpec(extra_codecs.pack_lzma, 'data'),
+    'lzo': PackerSpec(extra_codecs.pack_lzo, 'data'),
+    'z': PackerSpec(extra_codecs.pack_compress, 'data'),
+    'pdf': PackerSpec(pack_pdf, 'document', {
+        'pdf_profile': 'pdf_profile',
+        'jpeg_quality': 'jpeg_quality',
+    }),
     'avif': PackerSpec(pack_avif, 'image'),
     'heic': PackerSpec(pack_heic, 'image'),
     'heif': PackerSpec(pack_heic, 'image'),
     'flac': PackerSpec(pack_flac, 'audio'),
+    'm4a': PackerSpec(extra_codecs.pack_m4a, 'audio'),
+    'wv': PackerSpec(extra_codecs.pack_wv, 'audio'),
+    'ape': PackerSpec(extra_codecs.pack_ape, 'audio'),
+    'tta': PackerSpec(extra_codecs.pack_tta, 'audio'),
+    'oga': PackerSpec(extra_codecs.pack_oga, 'audio'),
+    'mp3': PackerSpec(extra_codecs.pack_mp3, 'audio', {'ultra': 'ultra'}),
+    'psd': PackerSpec(extra_codecs.pack_psd, 'image'),
+    'ai': PackerSpec(extra_codecs.pack_ai, 'document', {
+        'pdf_profile': 'pdf_profile',
+        'jpeg_quality': 'jpeg_quality',
+    }),
+    'woff': PackerSpec(extra_codecs.pack_woff, 'data'),
+    'woff2': PackerSpec(extra_codecs.pack_woff2, 'data'),
     'wmv': PackerSpec(pack_wmv, 'video', {
         'wmv_lossless': 'lossless',
         'convert_container': 'convert_container',
@@ -860,6 +1042,24 @@ _PACKERS: Dict[str, PackerSpec] = {
     }),
     'mkv': PackerSpec(pack_mkv, 'video', {'wmv_lossless': 'lossless'}),
     'webm': PackerSpec(pack_webm, 'video', {'wmv_lossless': 'lossless'}),
+    'mov': PackerSpec(extra_codecs.pack_mov, 'video', {'wmv_lossless': 'lossless'}),
+    'm4v': PackerSpec(extra_codecs.pack_m4v, 'video', {'wmv_lossless': 'lossless'}),
+    '3gp': PackerSpec(extra_codecs.pack_3gp, 'video', {
+        'wmv_lossless': 'lossless',
+        'convert_container': 'convert_container',
+    }),
+    'ts': PackerSpec(extra_codecs.pack_ts, 'video', {
+        'wmv_lossless': 'lossless',
+        'convert_container': 'convert_container',
+    }),
+    'mts': PackerSpec(extra_codecs.pack_ts, 'video', {
+        'wmv_lossless': 'lossless',
+        'convert_container': 'convert_container',
+    }),
+    'm2ts': PackerSpec(extra_codecs.pack_ts, 'video', {
+        'wmv_lossless': 'lossless',
+        'convert_container': 'convert_container',
+    }),
 }
 
 
@@ -869,7 +1069,9 @@ def _dispatch_packer(
     spec = _PACKERS.get(ext)
     if spec is None:
         return None
-    if spec.category in ('image', 'video') and not options.get('pack_images', True):
+    if spec.category in ('image', 'video', 'audio') and not options.get(
+        'pack_images', True
+    ):
         return None
     kwargs: Dict[str, Any] = {
         'debug': options.get('debug', False),
@@ -891,6 +1093,7 @@ def _normalize_options(def_options: Any) -> Dict[str, Any]:
         'quiet': False, 'ultra': False, 'dryrun': False,
         'keep_if_larger': True, 'lossy': False, 'convert_container': True,
         'min_savings': None, 'compression_level': 9,
+        'pdf_profile': None, 'jpeg_quality': None,
     }
     if isinstance(def_options, RepackOptions):
         options.update(def_options.to_dict())
@@ -903,6 +1106,19 @@ def _empty_summary(filepath: str, size: int) -> RepackSummary:
     return RepackSummary(
         filepath=filepath, total_insize=size, total_outsize=size,
     )
+
+
+def _notify(
+    hook: Optional[Callable[..., None]],
+    event: str,
+    *,
+    current: int = 0,
+    total: int = 0,
+    name: str = "",
+) -> None:
+    if hook is None:
+        return
+    hook(event, current=current, total=total, name=name)
 
 
 def _extract_limits(options: Dict[str, Any]) -> Tuple[int, float]:
@@ -987,8 +1203,10 @@ class FileRepacker:
                 for f in files:
                     files_to_process.append((join(root, f), f))
         for fn, name in files_to_process:
-            ext = name.rsplit('.', 1)[-1].lower() if '.' in name else ''
-            res = _dispatch_packer(ext, fn, options)
+            kind = identify_filename(name, peek_path=fn)
+            if kind is None or kind.is_archive:
+                continue
+            res = _dispatch_packer(kind.packer or kind.key, fn, options)
             if res is not None:
                 summary.results.append(res)
                 summary.inner_count += 1
@@ -1000,16 +1218,28 @@ class FileRepacker:
 
     def repack_zip_file(
         self, filename: str, outfile: Optional[str] = None,
-        def_options: Any = None,
+        def_options: Any = None, *,
+        on_progress: Optional[Callable[..., None]] = None,
     ) -> RepackSummary:
         """Repack a standalone file or archive. Never unlinks the original first."""
         options = _normalize_options(def_options)
         f_insize = os.path.getsize(filename)
-        filetype = filename.rsplit('.', 1)[-1].lower() if '.' in filename else ''
         dest = os.path.abspath(outfile or filename)
+        kind = identify_filename(filename, peek_path=filename)
+        if kind is None:
+            _notify(on_progress, 'standalone', name=filename)
+            return _empty_summary(filename, f_insize)
 
-        standalone = _dispatch_packer(filetype, filename, options)
-        if standalone is not None or filetype in _PACKERS:
+        if kind.is_archive:
+            return self._repack_container(
+                filename, dest, f_insize, kind.key, options,
+                family=kind.family, on_progress=on_progress,
+            )
+
+        packer_key = kind.packer or kind.key
+        _notify(on_progress, 'standalone', name=filename)
+        standalone = _dispatch_packer(packer_key, filename, options)
+        if standalone is not None or packer_key in _PACKERS:
             summary = RepackSummary(filepath=filename, total_insize=f_insize)
             if standalone is None:
                 summary.total_outsize = f_insize
@@ -1018,26 +1248,32 @@ class FileRepacker:
             summary.results.append(standalone)
             return summary
 
-        if filetype not in ARCHIVE_EXTS and filetype not in SUPPORTED_EXTS:
-            return _empty_summary(filename, f_insize)
-
-        return self._repack_container(filename, dest, f_insize, filetype, options)
+        return _empty_summary(filename, f_insize)
 
     def repack(
         self, filename: str, outfile: Optional[str] = None,
-        options: Any = None,
+        options: Any = None, *,
+        on_progress: Optional[Callable[..., None]] = None,
     ) -> RepackSummary:
         """Library-facing alias for repack_zip_file."""
-        return self.repack_zip_file(filename, outfile=outfile, def_options=options)
+        return self.repack_zip_file(
+            filename, outfile=outfile, def_options=options,
+            on_progress=on_progress,
+        )
 
     def _repack_container(
         self, filename: str, dest: str, f_insize: int,
-        filetype: str, options: Dict[str, Any],
+        filetype: str, options: Dict[str, Any], family: Optional[str] = None,
+        on_progress: Optional[Callable[..., None]] = None,
     ) -> RepackSummary:
+        if family is None:
+            kind = identify_filename(filename, peek_path=filename)
+            family = kind.family if kind else 'zip'
         summary = RepackSummary(filepath=filename, total_insize=f_insize)
         fpath = os.path.join(self.temppath, uuid.uuid4().hex)
         try:
-            if filetype == 'rar':
+            _notify(on_progress, 'extract', name=filename)
+            if family == 'rar':
                 extracted = self._extract_rar(filename, fpath, options)
             else:
                 extracted = self._extract_7z(filename, fpath, options)
@@ -1046,23 +1282,40 @@ class FileRepacker:
                 return summary
 
             if options.get('deep_walking', True):
-                self._deep_walk(fpath, options, summary)
+                # Inner files live in a throwaway extract dir. Replace them even
+                # on dryrun so the rewritten archive size matches a real run.
+                # The outer _commit_output still honors dryrun.
+                walk_options = options
+                if options.get('dryrun'):
+                    walk_options = {**options, 'dryrun': False}
+                self._deep_walk(
+                    fpath, walk_options, summary, on_progress=on_progress,
+                )
 
-            if filetype == 'rar':
-                self._repack_rar(
-                    fpath, dest, filename, options, summary, f_insize
-                )
-            elif filetype == '7z':
-                self._write_archive(
-                    fpath, dest, options, summary, f_insize, '7z', filetype
-                )
-            else:
-                self._write_archive(
-                    fpath, dest, options, summary, f_insize, 'zip', filetype
-                )
+            _notify(on_progress, 'write', name=filename)
+            self._write_by_family(
+                family, fpath, dest, filename, options, summary, f_insize, filetype
+            )
             return summary
         finally:
             _remove_quietly(fpath)
+
+    def _write_by_family(
+        self, family: str, fpath: str, dest: str, filename: str,
+        options: Dict[str, Any], summary: RepackSummary, f_insize: int,
+        filetype: str,
+    ) -> None:
+        if family == 'rar':
+            self._repack_rar(fpath, dest, filename, options, summary, f_insize)
+            return
+        if family.startswith('tar') and family != 'tar':
+            outer = family.split('.', 1)[1]
+            self._write_tar_bundle(fpath, dest, options, summary, f_insize, outer)
+            return
+        archive_type = family if family in ('zip', '7z', 'tar', 'cab', 'wim') else 'zip'
+        self._write_archive(
+            fpath, dest, options, summary, f_insize, archive_type, filetype
+        )
 
     def _extract_7z(
         self, filename: str, fpath: str, options: Dict[str, Any]
@@ -1112,31 +1365,45 @@ class FileRepacker:
         return self._extract_7z(filename, fpath, options)
 
     def _deep_walk(
-        self, fpath: str, options: Dict[str, Any], summary: RepackSummary
+        self, fpath: str, options: Dict[str, Any], summary: RepackSummary,
+        on_progress: Optional[Callable[..., None]] = None,
     ) -> None:
+        items = []
         for root, dirs, files in os.walk(fpath):
             for name in files:
-                ext = name.rsplit('.', 1)[-1].lower() if '.' in name else ''
                 fullname = os.path.join(root, name)
-                if ext in ARCHIVE_EXTS:
-                    if not options.get('pack_archives', True):
-                        continue
-                    nested = self.repack_zip_file(fullname, fullname, options)
-                    if nested.total_insize:
-                        summary.results.append(PackResult(
-                            fullname, nested.total_insize, nested.total_outsize,
-                            nested.total_savings_pct,
-                        ))
-                        summary.inner_count += 1
-                        summary.inner_insize += nested.total_insize
-                        summary.inner_outsize += nested.total_outsize
-                else:
-                    res = _dispatch_packer(ext, fullname, options)
-                    if res is not None:
-                        summary.results.append(res)
-                        summary.inner_count += 1
-                        summary.inner_insize += res.insize
-                        summary.inner_outsize += res.outsize
+                kind = identify_filename(name, peek_path=fullname)
+                if kind is None:
+                    continue
+                if kind.is_archive and not options.get('pack_archives', True):
+                    continue
+                items.append((fullname, name, kind))
+        _notify(on_progress, 'files', current=0, total=len(items))
+        for i, (fullname, name, kind) in enumerate(items, 1):
+            self._process_walk_item(fullname, kind, options, summary)
+            _notify(on_progress, 'file', current=i, total=len(items), name=name)
+
+    def _process_walk_item(
+        self, fullname: str, kind: Any, options: Dict[str, Any],
+        summary: RepackSummary,
+    ) -> None:
+        if kind.is_archive:
+            nested = self.repack_zip_file(fullname, fullname, options)
+            if nested.total_insize:
+                summary.results.append(PackResult(
+                    fullname, nested.total_insize, nested.total_outsize,
+                    nested.total_savings_pct,
+                ))
+                summary.inner_count += 1
+                summary.inner_insize += nested.total_insize
+                summary.inner_outsize += nested.total_outsize
+            return
+        res = _dispatch_packer(kind.packer or kind.key, fullname, options)
+        if res is not None:
+            summary.results.append(res)
+            summary.inner_count += 1
+            summary.inner_insize += res.insize
+            summary.inner_outsize += res.outsize
 
     def _write_archive(
         self, fpath: str, dest: str, options: Dict[str, Any],
@@ -1150,11 +1417,22 @@ class FileRepacker:
         if szip is None:
             summary.total_outsize = f_insize
             return
-        suffix = '.zip' if archive_type == 'zip' else '.7z'
+        suffix_map = {
+            'zip': '.zip', '7z': '.7z', 'tar': '.tar', 'cab': '.cab', 'wim': '.wim',
+        }
+        verify_map = {
+            'zip': 'zip', '7z': '7z', 'tar': 'tar', 'cab': 'cab', 'wim': 'wim',
+        }
+        suffix = suffix_map.get(archive_type, '.zip')
         temp_out = _make_temp(suffix)
         _remove_quietly(temp_out)
         level = options.get('compression_level', 9)
-        cmd = [szip, f'-t{archive_type}', '-y', f'-mx{level}', 'a', temp_out, '*']
+        if archive_type == 'tar':
+            cmd = [szip, '-ttar', '-y', '-mx0', 'a', temp_out, '*']
+        else:
+            cmd = [
+                szip, f'-t{archive_type}', '-y', f'-mx{level}', 'a', temp_out, '*',
+            ]
         result = _run_command(
             cmd, quiet=options.get('quiet', False),
             debug=options.get('debug', False), cwd=fpath,
@@ -1163,9 +1441,56 @@ class FileRepacker:
             _remove_quietly(temp_out)
             summary.total_outsize = f_insize
             return
-        verify = 'zip' if archive_type == 'zip' else '7z'
+        verify = verify_map.get(archive_type, 'zip')
         packed = _commit_output(
             temp_out, dest, f_insize, verify=verify,
+            dryrun=options.get('dryrun', False),
+            keep_if_larger=options.get('keep_if_larger', True),
+            min_savings=options.get('min_savings'),
+        )
+        if packed is None:
+            summary.total_outsize = f_insize
+            return
+        summary.total_outsize = packed.outsize
+
+    def _write_tar_bundle(
+        self, fpath: str, dest: str, options: Dict[str, Any],
+        summary: RepackSummary, f_insize: int, outer: str,
+    ) -> None:
+        """Write an uncompressed tar, then wrap it in gz/xz/bz2/zst/..."""
+        szip = resolve_szip()
+        if szip is None:
+            summary.total_outsize = f_insize
+            return
+        tar_temp = _make_temp('.tar')
+        _remove_quietly(tar_temp)
+        result = _run_command(
+            [szip, '-ttar', '-y', '-mx0', 'a', tar_temp, '*'],
+            quiet=options.get('quiet', False),
+            debug=options.get('debug', False), cwd=fpath,
+        )
+        if result is None:
+            _remove_quietly(tar_temp)
+            summary.total_outsize = f_insize
+            return
+        suffix = {
+            'gz': '.gz', 'bz2': '.bz2', 'xz': '.xz', 'zst': '.zst',
+            'br': '.br', 'lz4': '.lz4', 'lz': '.lz', 'lzo': '.lzo',
+            'lzma': '.lzma', 'z': '.Z',
+        }.get(outer, '.gz')
+        verify = {
+            'gz': 'gz', 'bz2': 'bz2', 'xz': 'xz', 'zst': 'zst',
+            'lz4': 'lz4', 'lz': 'lz', 'lzo': 'lzo', 'lzma': 'lzma', 'z': 'z',
+        }.get(outer)
+        out_temp = _make_temp(suffix)
+        ok = _compress_file(tar_temp, out_temp, outer, options.get('debug', False))
+        _remove_quietly(tar_temp)
+        if not ok:
+            _remove_quietly(out_temp)
+            summary.total_outsize = f_insize
+            return
+        packed = _commit_output(
+            out_temp, dest, f_insize, verify=verify,
             dryrun=options.get('dryrun', False),
             keep_if_larger=options.get('keep_if_larger', True),
             min_savings=options.get('min_savings'),

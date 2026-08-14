@@ -6,7 +6,9 @@ import os
 from dataclasses import dataclass
 from os.path import expanduser, exists
 from shutil import which
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Sequence, Tuple
+
+from .install_hints import format_install_instructions, install_command
 
 
 _CONFIG_CACHE: Optional[Dict[str, str]] = None
@@ -48,9 +50,40 @@ TOOL_SPECS: Tuple[ToolSpec, ...] = (
     ToolSpec('bzip2', ('bzip2',), 'FILEREPACK_BZIP2', False, 'BZ2'),
     ToolSpec('zstd', ('zstd',), 'FILEREPACK_ZSTD', False, 'Zstandard'),
     ToolSpec('brotli', ('brotli',), 'FILEREPACK_BROTLI', False, 'Brotli'),
+    ToolSpec('lz4', ('lz4',), 'FILEREPACK_LZ4', False, 'LZ4'),
+    ToolSpec('lzip', ('lzip',), 'FILEREPACK_LZIP', False, 'lzip'),
+    ToolSpec('lzma', ('lzma',), 'FILEREPACK_LZMA', False, 'LZMA'),
+    ToolSpec('lzop', ('lzop',), 'FILEREPACK_LZOP', False, 'LZO'),
+    ToolSpec('compress', ('compress',), 'FILEREPACK_COMPRESS', False, 'Unix compress (.Z)'),
+    ToolSpec('gzip', ('gzip',), 'FILEREPACK_GZIP', False, 'gzip / decompress .Z'),
     ToolSpec('avifenc', ('avifenc',), 'FILEREPACK_AVIFENC', False, 'AVIF encode'),
     ToolSpec('avifdec', ('avifdec',), 'FILEREPACK_AVIFDEC', False, 'AVIF decode'),
+    ToolSpec('cjxl', ('cjxl',), 'FILEREPACK_CJXL', False, 'JPEG XL encode'),
+    ToolSpec('djxl', ('djxl',), 'FILEREPACK_DJXL', False, 'JPEG XL decode'),
     ToolSpec('flac', ('flac',), 'FILEREPACK_FLAC', False, 'FLAC recompress'),
+    ToolSpec('h5repack', ('h5repack',), 'FILEREPACK_H5REPACK', False, 'HDF5'),
+    ToolSpec('nccopy', ('nccopy',), 'FILEREPACK_NCCOPY', False, 'NetCDF'),
+    ToolSpec('mac', ('mac',), 'FILEREPACK_MAC', False, "Monkey's Audio"),
+    ToolSpec(
+        'woff2_compress', ('woff2_compress',), 'FILEREPACK_WOFF2_COMPRESS',
+        False, 'WOFF2 encode',
+    ),
+    ToolSpec(
+        'woff2_decompress', ('woff2_decompress',), 'FILEREPACK_WOFF2_DECOMPRESS',
+        False, 'WOFF2 decode',
+    ),
+    ToolSpec(
+        'mp3packer', ('mp3packer',), 'FILEREPACK_MP3PACKER',
+        False, 'lossless MP3',
+    ),
+    ToolSpec(
+        'gdcmconv', ('gdcmconv',), 'FILEREPACK_GDCMCONV',
+        False, 'DICOM JPEG-LS',
+    ),
+    ToolSpec(
+        'dcmcjpls', ('dcmcjpls',), 'FILEREPACK_DCMCJPLS',
+        False, 'DICOM JPEG-LS fallback',
+    ),
 )
 
 
@@ -119,7 +152,7 @@ def resolve_szip() -> Optional[str]:
 
 
 def doctor_rows() -> List[Dict[str, str]]:
-    """Rows for `filerepack doctor`: name, path, status, purpose."""
+    """Rows for `filerepack doctor`: name, path, status, purpose, install."""
     rows = []
     for spec in TOOL_SPECS:
         path = resolve_tool(spec.key)
@@ -135,5 +168,20 @@ def doctor_rows() -> List[Dict[str, str]]:
             'path': path or '',
             'status': status,
             'purpose': spec.purpose,
+            'install': '' if path else install_command(spec.key),
         })
     return rows
+
+
+def install_instructions(
+    missing_keys: Optional[Sequence[str]] = None,
+    *,
+    system: Optional[str] = None,
+    managers: Optional[Sequence[str]] = None,
+) -> str:
+    """OS-specific install commands for missing tools (all missing if omitted)."""
+    if missing_keys is None:
+        missing_keys = [row['tool'] for row in doctor_rows() if not row['path']]
+    return format_install_instructions(
+        missing_keys, system=system, managers=managers,
+    )

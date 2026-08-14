@@ -5,6 +5,37 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] - 2026-08-14
+
+### Added
+
+- ZIP-family aliases: `war`, `ear`, `aar`, `nupkg`, `snupkg`, `vsix`, `xpi`, `crx`, `appx`, `msix`, `appxbundle`, `sketch`, `kra`, `ora`, `xd`, `usdz`, `ifczip`, `cbr`/`cb7`/`cbt`, OOXML siblings (`vsdm`, `vstx`, `vstm`, `vssx`, `vssm`, `sldm`, `ots`, `otg`, `odb`), ODF templates (`oth`, `otm`, `otc`, `oti`; `otf` only when the file is a ZIP, not an OpenType font), OpenOffice.org 1.x (`stw`, `stc`, `sti`, `std`, `sxg`, `sxm`), iWork templates (`kth`, `nmbtemplate`, `template`), `oxt`, `aab`, `xapk`/`apks`, `npz`, `fcstd`, `mcworld`/`mcpack`/`mcaddon`, `unitypackage`, `onepkg`, `wgt`, `ibooks`
+- Tarball walk: `tar`, `tar.gz`/`tgz`, `tar.bz2`/`tbz2`, `tar.xz`/`txz`, `tar.zst`/`tzst`, `tar.br`, `tar.lz4`, `tar.lzo`/`tzo`, `tar.lz`/`tlz`, plus `gem`/`crate`. Inner files are optimized, then the archive is rewritten. Compressed streams whose payload is a tar (`.gz`, `.zst`, `.lz4`, …) are detected by peeking the first 512 decompressed bytes
+- Stream codecs: `lz4`, `lz` (lzip), `lzma`, `lzo`, Unix `compress` (`.Z`)
+- Containers: Microsoft Cabinet (`cab`) and WIM (`wim`)
+- Images: JPEG aliases (`jpe`, `jfif`), JPEG XL, JPEG 2000, OpenEXR, DNG, ICO, ICNS, `svgz`
+- DICOM (`.dcm` / `.dicom` / `.dic`): lossless JPEG-LS for uncompressed or RLE image instances via `gdcmconv` or `dcmcjpls`. Signed, non-image, and already-compressed files are skipped. `--lossy` does not apply
+- Video: `mov`, `m4v` (kept), `3gp`/`ts`/`mts`/`m2ts` (convert to MP4 unless `--no-convert-container`)
+- Lossless audio recompress: ALAC in `m4a`, WavPack, TTA, FLAC-in-Ogg; Monkey's Audio when `mac` is installed; MP3 via `mp3packer`
+- Photoshop `psd`: recompress ZIP-encoded layer/composite channels (RLE/raw channels are left unchanged)
+- Adobe Illustrator `ai` when the file is a PDF wrapper (same path as `pdf`)
+- `--pdf-profile screen|ebook|printer|prepress|default` for Ghostscript Distiller presets (implies lossy PDF)
+- Data: SQLite `VACUUM` (`sqlite`, `gpkg`, `mbtiles`), ORC/Avro/Feather/Arrow (optional extras), HDF5 (`h5repack`), NetCDF (`nccopy`)
+- Fonts: WOFF/WOFF2 via fonttools or `woff2_compress`
+- Optional extras: `filerepack[data]`, `filerepack[fonts]`
+- `filerepack doctor` prints OS-specific install commands (Homebrew, apt, dnf, pacman, Chocolatey, winget, …) for missing tools. `mp3packer` is not packaged; doctor points at the GitHub release with macOS/Linux/Windows binaries, and `docs/tools.md` has install steps
+- `filerepack repack --progress` shows a progress bar (on by default on a TTY). Archives report extract / inner-file / rewrite stages
+
+### Changed
+
+- File type detection uses compound suffixes (`archive.tar.gz`) instead of only the last extension
+- `--include-ext tar.gz` matches compound names; `--include-ext gz` still matches them too
+- `--lossy` PDF uses Ghostscript `/ebook` (150 dpi) instead of `/prepress`, which actually downsamples scanned pages. `--pdf-profile prepress` restores the previous print-quality path. `--jpeg-quality` now also sets Distiller QFactor for images inside PDFs
+
+### Fixed
+
+- `--dryrun` on archives now includes inner-file savings in the predicted size. Previously inner packs were measured but not applied in the temp extract dir, so the rewritten archive looked larger than a real run
+
 ## [0.2.0] - 2026-08-14
 
 ### Security

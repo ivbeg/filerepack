@@ -121,6 +121,16 @@ class TestShouldProcessFile:
         assert should_process is False
         assert 'max_size' in reason
 
+    def test_include_compound_tar_gz(self, tmp_path):
+        path = tmp_path / 'a.tar.gz'
+        path.write_bytes(b'\x1f\x8b' + b'\x00' * 8)
+        should, _reason = should_process_file(str(path), include_exts=['tar.gz'])
+        assert should is True
+        should, _reason = should_process_file(str(path), include_exts=['gz'])
+        assert should is True
+        should, _reason = should_process_file(str(path), include_exts=['jpg'])
+        assert should is False
+
 
 class TestCreateBackup:
     def test_create_backup_same_dir(self, sample_text_file):

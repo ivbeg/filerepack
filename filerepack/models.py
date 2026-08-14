@@ -31,6 +31,7 @@ class RepackOptions:
     compression_level: int = 9
     jpeg_quality: Optional[int] = None
     png_quality: Optional[str] = None
+    pdf_profile: Optional[str] = None
     wmv_lossless: bool = False
     lossy: bool = False
     convert_container: bool = True

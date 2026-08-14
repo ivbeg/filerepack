@@ -14,7 +14,7 @@ filerepack bulk <directory> [OPTIONS]
 |------|---------|
 | `--dryrun` | Measure savings; do not modify files |
 | `--quiet` / `--verbose` / `--debug` | Verbosity |
-| `--no-images` | Skip image and video packers |
+| `--no-images` | Skip image, video, and audio packers |
 | `--no-archives` | Skip nested archive rewriting |
 | `--deep` / `--no-deep` | Walk inside archives (default: on) |
 | `--min-savings PCT` | Keep result only if savings ≥ PCT |
@@ -22,9 +22,10 @@ filerepack bulk <directory> [OPTIONS]
 | `--backup` / `--backup-dir` | Copy source before rewriting |
 | `--output-dir` | Write results here instead of in place |
 | `--compression-level 1-9` | Archive compression (default 9) |
-| `--jpeg-quality 1-100` | Implies lossy JPEG |
+| `--jpeg-quality 1-100` | Implies lossy JPEG; also re-encodes images inside PDFs |
 | `--png-quality high\|medium\|low` | Implies lossy PNG (pngquant) |
-| `--lossy` | Ghostscript PDF, jpegoptim `-m`, pngquant, lossy AVIF/HEIC |
+| `--pdf-profile` | Ghostscript Distiller preset: `screen`, `ebook`, `printer`, `prepress`, `default` (implies lossy PDF) |
+| `--lossy` | Ghostscript PDF (`/ebook` unless `--pdf-profile` is set), jpegoptim `-m`, pngquant, lossy AVIF/HEIC |
 | `--wmv-lossless` | Video CRF 0 (or VP9 lossless for WebM) |
 | `--convert-container` / `--no-convert-container` | WMV/AVI/ASF → MP4 (default: convert) |
 | `--allow-grow` | Keep output even if larger |
@@ -33,8 +34,10 @@ filerepack bulk <directory> [OPTIONS]
 | `--json` / `--csv` | Machine-readable output (mutually exclusive) |
 | `--log-file PATH` | Also write CLI messages to a file |
 | `--stats` | Extra timing / counts |
+| `--progress` | Progress bar (`rich` if installed). `repack` is on for a TTY (`--no-progress` to hide); `bulk` needs `--progress` |
+| `--progress-interval N` | Interval when `rich` is not installed (default 10) |
 
-JPEG/PNG/PDF are lossless unless `--lossy` or a quality flag is set. Results that are not smaller are discarded unless `--allow-grow`.
+JPEG/PNG/PDF are lossless unless `--lossy`, `--pdf-profile`, or a quality flag is set. Lossy PDF defaults to Ghostscript `/ebook` (150 dpi) because `/prepress` barely shrinks scanned pages. Use `--pdf-profile prepress` for the old print-quality Ghostscript path. DICOM is always lossless JPEG-LS (`gdcmconv` or `dcmcjpls`); `--lossy` does not apply. Results that are not smaller are discarded unless `--allow-grow`.
 
 ## bulk-only
 
@@ -45,8 +48,6 @@ JPEG/PNG/PDF are lossless unless `--lossy` or a quality flag is set. Results tha
 | `--exclude-dir` | Extra directory names to skip |
 | `--jobs N\|auto` | Process pool workers |
 | `--continue-on-error` | Do not stop the scan on a failure |
-| `--progress` | Progress bar (`rich` if installed) or every N files |
-| `--progress-interval N` | Interval when `rich` is not installed (default 10) |
 
 Default skipped directories: `.git`, `.hg`, `.svn`, `.tox`, `.venv`, `venv`, `node_modules`, `__pycache__`, `.mypy_cache`, `.pytest_cache`.
 
@@ -56,16 +57,23 @@ Default skipped directories: `.git`, `.hg`, `.svn`, `.tox`, `.venv`, `venv`, `no
 - `1` — usage error, missing path, or a failure without `--continue-on-error`
 - `2` — some files failed while `--continue-on-error` was set
 - `filerepack doctor` exits `1` if `7zz`/`7z` is missing
+- `filerepack doctor` prints install commands for the current OS after the tool table when anything is missing
 
 ## Examples
 
 ```bash
 filerepack repack contract.docx
+filerepack repack contract.docx --progress
 filerepack repack contract.docx --dryrun --stats
 filerepack bulk ./documents --min-size 1MB --min-savings 5 --jobs auto
-filerepack bulk ./photos --include-ext jpg,png,webp,avif --progress
-filerepack bulk ./video --include-ext mp4,mkv,webm --wmv-lossless
+filerepack bulk ./photos --include-ext jpg,png,webp,avif,jxl --progress
+filerepack bulk ./dicom --include-ext dcm --progress
+filerepack bulk ./video --include-ext mp4,mkv,webm,mov --wmv-lossless
+filerepack repack photos.tar.gz
+filerepack repack data.sqlite
 filerepack repack data.parquet --ultra
+filerepack repack scan.pdf --lossy
+filerepack repack scan.pdf --pdf-profile printer --jpeg-quality 75
 filerepack repack archive.rar          # becomes .7z if `rar` is missing
 ```
 

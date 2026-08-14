@@ -11,11 +11,12 @@ from typing import Any, Dict, List, Optional
 
 import typer
 
-from .consts import SUPPORTED_EXTS
+from .formats import is_supported_filename
 from .jobs import process_file_job
 from .models import RepackOptions
-from .repack import FileRepacker
-from .tools import doctor_rows
+from .progress import ProgressReporter, stderr_is_tty
+from .repack import FileRepacker, normalize_pdf_profile
+from .tools import doctor_rows, install_instructions
 from .utils import (
     DEFAULT_EXCLUDE_DIRS, create_backup, format_size, output_csv, output_json,
     parse_dir_names, parse_extensions, parse_jobs, parse_size, setup_logging,
@@ -78,6 +79,7 @@ def _build_options(
     keep_if_larger: bool, min_savings: Optional[float],
     max_extract_bytes: Optional[int] = None,
     max_extract_ratio: Optional[float] = None,
+    pdf_profile: Optional[str] = None,
 ) -> RepackOptions:
     return RepackOptions(
         debug=debug,
@@ -90,6 +92,7 @@ def _build_options(
         compression_level=compression_level,
         jpeg_quality=jpeg_quality,
         png_quality=png_quality,
+        pdf_profile=pdf_profile,
         wmv_lossless=wmv_lossless,
         lossy=lossy,
         convert_container=convert_container,
@@ -118,6 +121,27 @@ def _max_extract_or_exit(value: Optional[str]):
         raise typer.Exit(1)
 
 
+def _pdf_profile_or_exit(value: Optional[str]) -> Optional[str]:
+    if value is None:
+        return None
+    try:
+        return normalize_pdf_profile(value)
+    except ValueError as exc:
+        typer.echo(f"Error: {exc}", err=True)
+        raise typer.Exit(1)
+
+
+def _want_progress(progress_flag: Optional[bool]) -> bool:
+    """Progress is off for quiet/json/csv. Otherwise honor the flag, else TTY."""
+    if _verbose_level == 0 or _output_format is not None:
+        return False
+    if progress_flag is False:
+        return False
+    if progress_flag is True:
+        return True
+    return stderr_is_tty()
+
+
 @app.command()
 def repack(
     filename: str = typer.Argument(..., help="Path to the file to repack"),
@@ -128,7 +152,7 @@ def repack(
     verbose: bool = typer.Option(False, "--verbose", help="Verbose mode"),
     debug: bool = typer.Option(False, "--debug", help="Debug mode"),
     no_images: bool = typer.Option(
-        False, "--no-images", help="Skip image/video optimization"
+        False, "--no-images", help="Skip image, video, and audio optimization"
     ),
     no_archives: bool = typer.Option(False, "--no-archives", help="Skip nested archives"),
     min_savings: Optional[float] = typer.Option(
@@ -150,6 +174,11 @@ def repack(
     png_quality: Optional[str] = typer.Option(
         None, "--png-quality", help="PNG quality high|medium|low (lossy)"
     ),
+    pdf_profile: Optional[str] = typer.Option(
+        None, "--pdf-profile",
+        help="Ghostscript PDF profile: screen, ebook, printer, prepress, "
+             "default (implies lossy; --lossy defaults to ebook)",
+    ),
     wmv_lossless: bool = typer.Option(False, "--wmv-lossless", help="Lossless video (CRF 0)"),
     lossy: bool = typer.Option(False, "--lossy", help="Allow lossy JPEG/PNG/PDF tools"),
     convert_container: bool = typer.Option(
@@ -165,6 +194,13 @@ def repack(
     csv: bool = typer.Option(False, "--csv", help="CSV output"),
     log_file: Optional[str] = typer.Option(None, "--log-file", help="Write log to file"),
     stats: bool = typer.Option(False, "--stats", help="Show detailed statistics"),
+    progress: Optional[bool] = typer.Option(
+        None, "--progress/--no-progress",
+        help="Show a progress bar (default: on for a TTY; rich if installed)",
+    ),
+    progress_interval: int = typer.Option(
+        10, "--progress-interval", help="Progress every N files if rich is missing"
+    ),
 ):
     """Repack a single file for higher compression."""
     _set_verbosity(quiet, verbose, debug)
@@ -204,6 +240,7 @@ def repack(
             echo_verbose(f"Copied to output directory: {output_filepath}", level=2)
 
     max_extract_bytes, max_extract_ratio = _max_extract_or_exit(max_extract_size)
+    pdf_profile = _pdf_profile_or_exit(pdf_profile)
     options = _build_options(
         ultra=ultra, dryrun=dryrun, deep=deep, quiet=quiet, debug=debug,
         no_images=no_images, no_archives=no_archives,
@@ -211,14 +248,23 @@ def repack(
         png_quality=png_quality, wmv_lossless=wmv_lossless, lossy=lossy,
         convert_container=convert_container, keep_if_larger=not allow_grow,
         min_savings=min_savings, max_extract_bytes=max_extract_bytes,
-        max_extract_ratio=max_extract_ratio,
+        max_extract_ratio=max_extract_ratio, pdf_profile=pdf_profile,
     )
 
     start_time = time.time()
     dr = FileRepacker()
     target = output_filepath if output_filepath != filename else filename
     outfile = output_filepath if output_filepath != filename else None
-    results = dr.repack_zip_file(target, outfile=outfile, def_options=options)
+    show_progress = _want_progress(progress)
+    with ProgressReporter(
+        show_progress,
+        interval=progress_interval,
+        description=f"Repacking {basename(filename)}",
+    ) as bar:
+        results = dr.repack_zip_file(
+            target, outfile=outfile, def_options=options,
+            on_progress=bar.hook if show_progress else None,
+        )
     elapsed_time = time.time() - start_time
 
     output_data = {
@@ -276,9 +322,12 @@ def _collect_bulk_files(directory: str, skip_dirs: set, skip_zip: bool) -> List[
     for root, dirs, files in walk(directory):
         dirs[:] = [d for d in dirs if d not in skip_dirs]
         for file in files:
-            ext = file.rsplit('.', 1)[-1].lower() if '.' in file else ''
-            if ext in SUPPORTED_EXTS and not (skip_zip and ext == 'zip'):
-                found.append(join(root, file))
+            full = join(root, file)
+            if is_supported_filename(file, peek_path=full):
+                ext = file.rsplit('.', 1)[-1].lower() if '.' in file else ''
+                if skip_zip and ext == 'zip':
+                    continue
+                found.append(full)
     return found
 
 
@@ -329,32 +378,15 @@ def _run_bulk_jobs(
     acc: _BulkAcc, progress: bool, progress_interval: int,
 ) -> None:
     total = len(all_files)
-    rich_progress = None
-    rich_task = None
-    if progress and _verbose_level > 0 and _output_format is None:
-        try:
-            from rich.progress import (
-                BarColumn, MofNCompleteColumn, Progress, TextColumn,
-                TimeElapsedColumn,
-            )
-            rich_progress = Progress(
-                TextColumn("[progress.description]{task.description}"),
-                BarColumn(),
-                MofNCompleteColumn(),
-                TimeElapsedColumn(),
-            )
-            rich_progress.start()
-            rich_task = rich_progress.add_task("Repacking", total=total)
-        except ImportError:
-            rich_progress = None
-
-    def _tick(done: int) -> None:
-        if rich_progress is not None and rich_task is not None:
-            rich_progress.update(rich_task, completed=done)
-        elif progress and progress_interval and done % progress_interval == 0:
-            echo_verbose(f"Progress: {done}/{total} files processed", level=1)
-
-    try:
+    show_bar = bool(progress) and _verbose_level > 0 and _output_format is None
+    with ProgressReporter(
+        show_bar,
+        interval=progress_interval,
+        description="Repacking",
+        echo=lambda msg: echo_verbose(msg, level=1),
+    ) as bar:
+        if show_bar:
+            bar.set_stage("Repacking", total=total)
         if job_count > 1 and total > 1:
             with ProcessPoolExecutor(max_workers=job_count) as pool:
                 future_map = {
@@ -374,7 +406,7 @@ def _run_bulk_jobs(
                             fp,
                         )
                     done += 1
-                    _tick(done)
+                    bar.update(done, name=fp)
                     if acc.abort:
                         break
             return
@@ -382,12 +414,9 @@ def _run_bulk_jobs(
             acc.consume(
                 process_file_job({**job_base, 'filepath': filepath}), filepath
             )
-            _tick(i)
+            bar.update(i, name=filepath)
             if acc.abort:
                 break
-    finally:
-        if rich_progress is not None:
-            rich_progress.stop()
 
 
 def _emit_bulk_summary(acc: _BulkAcc, dryrun: bool, stats: bool, elapsed: float) -> None:
@@ -452,7 +481,7 @@ def bulk(
     verbose: bool = typer.Option(False, "--verbose", help="Verbose mode"),
     debug: bool = typer.Option(False, "--debug", help="Debug mode"),
     no_images: bool = typer.Option(
-        False, "--no-images", help="Skip image/video optimization"
+        False, "--no-images", help="Skip image, video, and audio optimization"
     ),
     no_archives: bool = typer.Option(False, "--no-archives", help="Skip nested archives"),
     min_savings: Optional[float] = typer.Option(
@@ -479,6 +508,11 @@ def bulk(
     png_quality: Optional[str] = typer.Option(
         None, "--png-quality", help="PNG quality high|medium|low (lossy)"
     ),
+    pdf_profile: Optional[str] = typer.Option(
+        None, "--pdf-profile",
+        help="Ghostscript PDF profile: screen, ebook, printer, prepress, "
+             "default (implies lossy; --lossy defaults to ebook)",
+    ),
     wmv_lossless: bool = typer.Option(False, "--wmv-lossless", help="Lossless video (CRF 0)"),
     lossy: bool = typer.Option(False, "--lossy", help="Allow lossy JPEG/PNG/PDF tools"),
     convert_container: bool = typer.Option(
@@ -496,7 +530,7 @@ def bulk(
     ),
     progress: bool = typer.Option(
         False, "--progress",
-        help="Show progress (rich bar if installed, else every N files)",
+        help="Show a progress bar (rich if installed, else every N files)",
     ),
     progress_interval: int = typer.Option(
         10, "--progress-interval", help="Progress every N files"
@@ -530,6 +564,7 @@ def bulk(
     exclude_exts = parse_extensions(exclude_ext) if exclude_ext else None
     skip_dirs = set(DEFAULT_EXCLUDE_DIRS) | parse_dir_names(exclude_dir)
     max_extract_bytes, max_extract_ratio = _max_extract_or_exit(max_extract_size)
+    pdf_profile = _pdf_profile_or_exit(pdf_profile)
 
     if dryrun:
         echo_verbose("[DRYRUN MODE] Files will not be modified.", level=1)
@@ -560,6 +595,7 @@ def bulk(
         'compression_level': compression_level,
         'jpeg_quality': jpeg_quality,
         'png_quality': png_quality,
+        'pdf_profile': pdf_profile,
         'wmv_lossless': wmv_lossless,
         'lossy': lossy,
         'convert_container': convert_container,
@@ -582,17 +618,33 @@ def bulk(
 
 @app.command()
 def doctor():
-    """Show which external tools are available and which formats they enable."""
+    """Show available tools and OS-specific commands to install missing ones."""
     rows = doctor_rows()
-    typer.echo(f"{'tool':12} {'status':22} {'path':40} purpose")
+    tool_w = max(4, max((len(row['tool']) for row in rows), default=4))
+    status_w = max(6, max((len(row['status']) for row in rows), default=6))
+    path_w = max(4, max((len(row['path'] or '-') for row in rows), default=4))
+    path_w = min(path_w, 48)
+    typer.echo(
+        f"{'tool':<{tool_w}}  {'status':<{status_w}}  {'path':<{path_w}}  purpose"
+    )
     missing_required = False
+    missing_keys = []
     for row in rows:
         path = row['path'] or '-'
+        if len(path) > path_w:
+            path = path[: max(1, path_w - 3)] + '...'
         typer.echo(
-            f"{row['tool']:12} {row['status']:22} {path:40} {row['purpose']}"
+            f"{row['tool']:<{tool_w}}  {row['status']:<{status_w}}  "
+            f"{path:<{path_w}}  {row['purpose']}"
         )
+        if not row['path']:
+            missing_keys.append(row['tool'])
         if row['status'].startswith('missing (required)'):
             missing_required = True
+    hints = install_instructions(missing_keys)
+    if hints:
+        typer.echo('')
+        typer.echo(hints, nl=False)
     if missing_required:
         raise typer.Exit(1)
 

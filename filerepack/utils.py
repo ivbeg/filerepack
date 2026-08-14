@@ -101,13 +101,16 @@ def should_process_file(
     Determine if a file should be processed based on filters.
     Returns (should_process, reason_if_skipped)
     """
+    from .formats import excluded_by_ext_filter, filename_exts, matches_ext_filter
+
     ext = os.path.splitext(filepath)[1][1:].lower() if '.' in filepath else ''
+    keys = filename_exts(filepath)
 
-    if include_exts and ext not in include_exts:
-        return False, f"Extension '{ext}' not in include list"
+    if include_exts and not matches_ext_filter(filepath, include_exts):
+        return False, f"Extension '{ext or ','.join(keys)}' not in include list"
 
-    if exclude_exts and ext in exclude_exts:
-        return False, f"Extension '{ext}' in exclude list"
+    if exclude_exts and excluded_by_ext_filter(filepath, exclude_exts):
+        return False, f"Extension '{ext or ','.join(keys)}' in exclude list"
 
     try:
         file_size = os.path.getsize(filepath)
@@ -244,6 +247,127 @@ def setup_logging(log_file: Optional[str] = None, level: str = 'INFO') -> None:
     )
 
 
+_VERIFY_PREFIXES = {
+    'pdf': b'%PDF',
+    'gz': b'\x1f\x8b',
+    'gzip': b'\x1f\x8b',
+    'svgz': b'\x1f\x8b',
+    'xz': b'\xfd7zXZ',
+    'bz2': b'BZh',
+    'zst': b'\x28\xb5\x2f\xfd',
+    'zstd': b'\x28\xb5\x2f\xfd',
+    'lz4': b'\x04\x22\x4d\x18',
+    'lz': b'LZIP',
+    'lzo': b'\x89LZO',
+    'z': b'\x1f\x9d',
+    'jpg': b'\xff\xd8',
+    'jpeg': b'\xff\xd8',
+    'png': b'\x89PNG',
+    'gif': b'GIF8',
+    'parquet': b'PAR1',
+    'orc': b'ORC',
+    'avro': b'Obj\x01',
+    '7z': b'7z\xbc\xaf\x27\x1c',
+    'flac': b'fLaC',
+    'cab': b'MSCF',
+    'wim': b'MSWIM',
+    'woff': b'wOFF',
+    'woff2': b'wOF2',
+    'exr': b'\x76\x2f\x31\x01',
+    'ico': b'\x00\x00\x01\x00',
+    'icns': b'icns',
+    'sqlite': b'SQLite format 3',
+    'hdf5': b'\x89HDF\r\n\x1a\n',
+    'h5': b'\x89HDF\r\n\x1a\n',
+    'psd': b'8BPS',
+    'ai': b'%PDF',
+}
+
+
+def _verify_special(path: str, kind: str, header: bytes) -> bool:
+    checks = {
+        'zip': lambda: zipfile.is_zipfile(path),
+        'ooxml': lambda: zipfile.is_zipfile(path),
+        'jar': lambda: zipfile.is_zipfile(path),
+        'epub': lambda: zipfile.is_zipfile(path),
+        'cbz': lambda: zipfile.is_zipfile(path),
+        'tif': lambda: header[:2] in (b'II', b'MM'),
+        'tiff': lambda: header[:2] in (b'II', b'MM'),
+        'dng': lambda: header[:2] in (b'II', b'MM'),
+        'webp': lambda: header[:4] == b'RIFF',
+        'avif': lambda: b'ftyp' in header,
+        'heic': lambda: b'ftyp' in header,
+        'heif': lambda: b'ftyp' in header,
+        'mkv': lambda: header.startswith(b'\x1a\x45\xdf\xa3'),
+        'webm': lambda: header.startswith(b'\x1a\x45\xdf\xa3'),
+        'svg': lambda: (
+            b'<svg' in header.lower() or header.lower().lstrip().startswith(b'<')
+        ),
+        'mp4': lambda: b'ftyp' in header or os.path.getsize(path) > 32,
+        'mov': lambda: b'ftyp' in header or os.path.getsize(path) > 32,
+        'm4v': lambda: b'ftyp' in header or os.path.getsize(path) > 32,
+        'm4a': lambda: b'ftyp' in header or os.path.getsize(path) > 32,
+        '3gp': lambda: b'ftyp' in header or os.path.getsize(path) > 32,
+        'video': lambda: b'ftyp' in header or os.path.getsize(path) > 32,
+        'ts': lambda: header[:1] == b'\x47',
+        'mts': lambda: header[:1] == b'\x47',
+        'm2ts': lambda: header[:1] == b'\x47',
+        'jxl': lambda: header.startswith(b'\xff\x0a') or b'JXL' in header,
+        'jp2': lambda: _jp2_magic(header),
+        'j2k': lambda: _jp2_magic(header),
+        'jpf': lambda: _jp2_magic(header),
+        'jpx': lambda: _jp2_magic(header),
+        'tar': lambda: _tar_magic(path),
+        'feather': lambda: _arrow_magic(header),
+        'arrow': lambda: _arrow_magic(header),
+        'ipc': lambda: _arrow_magic(header),
+        'nc': lambda: header.startswith(b'CDF') or header.startswith(b'\x89HDF'),
+        'nc4': lambda: header.startswith(b'CDF') or header.startswith(b'\x89HDF'),
+        'netcdf': lambda: header.startswith(b'CDF') or header.startswith(b'\x89HDF'),
+        'wv': lambda: os.path.getsize(path) > 16,
+        'ape': lambda: os.path.getsize(path) > 16,
+        'tta': lambda: os.path.getsize(path) > 16,
+        'oga': lambda: os.path.getsize(path) > 16,
+        'lzma': lambda: os.path.getsize(path) > 8,
+        'mp3': lambda: _mp3_magic(header),
+        'dcm': lambda: _dicm_magic(path),
+        'dicom': lambda: _dicm_magic(path),
+        'dic': lambda: _dicm_magic(path),
+    }
+    checker = checks.get(kind)
+    if checker is None:
+        return True
+    return checker()
+
+
+def _arrow_magic(header: bytes) -> bool:
+    return header.startswith(b'ARROW1') or header.startswith(b'FEA1') or len(header) >= 8
+
+
+def _jp2_magic(header: bytes) -> bool:
+    return b'jP' in header or b'ftypjp' in header or header.startswith(b'\xff\x4f')
+
+
+def _tar_magic(path: str) -> bool:
+    try:
+        with open(path, 'rb') as tfh:
+            tfh.seek(257)
+            return tfh.read(5) == b'ustar'
+    except OSError:
+        return False
+
+
+def _dicm_magic(path: str) -> bool:
+    from .dicom import has_dicm_magic
+    return has_dicm_magic(path)
+
+
+def _mp3_magic(header: bytes) -> bool:
+    if header.startswith(b'ID3'):
+        return True
+    return len(header) >= 2 and header[0] == 0xFF and (header[1] & 0xE0) == 0xE0
+
+
 def verify_output(path: str, kind: str) -> bool:
     """Return True if path looks like a valid file of the given kind."""
     try:
@@ -253,41 +377,10 @@ def verify_output(path: str, kind: str) -> bool:
             header = fh.read(16)
     except OSError:
         return False
-
-    prefixes = {
-        'pdf': b'%PDF',
-        'gz': b'\x1f\x8b',
-        'gzip': b'\x1f\x8b',
-        'xz': b'\xfd7zXZ',
-        'bz2': b'BZh',
-        'zst': b'\x28\xb5\x2f\xfd',
-        'zstd': b'\x28\xb5\x2f\xfd',
-        'jpg': b'\xff\xd8',
-        'jpeg': b'\xff\xd8',
-        'png': b'\x89PNG',
-        'gif': b'GIF8',
-        'parquet': b'PAR1',
-        '7z': b'7z\xbc\xaf\x27\x1c',
-        'flac': b'fLaC',
-    }
-    if kind in prefixes:
-        return header.startswith(prefixes[kind])
-    if kind in ('zip', 'ooxml', 'jar', 'epub', 'cbz'):
-        return zipfile.is_zipfile(path)
-    if kind in ('tif', 'tiff'):
-        return header[:2] in (b'II', b'MM')
-    if kind == 'webp':
-        return header[:4] == b'RIFF'
-    if kind in ('avif', 'heic', 'heif'):
-        return b'ftyp' in header
-    if kind in ('mkv', 'webm'):
-        return header.startswith(b'\x1a\x45\xdf\xa3')
-    if kind == 'svg':
-        lowered = header.lower()
-        return b'<svg' in lowered or lowered.lstrip().startswith(b'<')
-    if kind in ('mp4', 'video'):
-        return b'ftyp' in header or os.path.getsize(path) > 32
-    return True
+    prefix = _VERIFY_PREFIXES.get(kind)
+    if prefix is not None:
+        return header.startswith(prefix)
+    return _verify_special(path, kind, header)
 
 
 def parse_jobs(jobs_value: str) -> int:
