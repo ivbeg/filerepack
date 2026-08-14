@@ -1,2156 +1,1269 @@
 #!/usr/bin/env python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
-import sys, os ,random
-
-from os.path import isfile, join, exists, abspath
-from shutil import move, rmtree, which
-from os import listdir, walk
-import uuid
-import logging
-import tempfile
+import glob
 import gzip
+import logging
 import lzma
 import bz2
-from .consts import *
-try:
-    import duckdb
-except ImportError:
-    logging.warning('duckdb not installed, will not be able to compress parquet files') 
-    duckdb = None
+import os
+import subprocess
+import tempfile
+import uuid
+from dataclasses import dataclass, field
+from os.path import abspath, exists, isfile, join
+from os import listdir, walk
+from shutil import copyfile, copyfileobj, rmtree
+from typing import Any, Callable, Dict, List, Optional, Tuple
+
+from .consts import (
+    ARCHIVE_EXTS, DEFAULT_JPEG_QUALITY, DEFAULT_MAX_EXTRACT_BYTES,
+    DEFAULT_MAX_EXTRACT_RATIO, SUPPORTED_EXTS, ZIP_SENSITIVE_EXTS,
+)
+from .models import PackResult, RepackOptions, RepackSummary
+from .tools import resolve_szip, resolve_tool
+from .utils import (
+    dir_total_size, extract_exceeds_limit, verify_output, zip_uncompressed_size,
+)
 
 TEMP_PATH = tempfile.gettempdir()
+_COPY_BUF = 1024 * 1024
 
-def pack_parquet(filepath, debug=False, quiet=False, ultra=False):
-    """Lossless compress parquet file using duckdb"""
-    if duckdb is None:
-        logging.warning('duckdb not installed, will not be able to compress parquet files')
-        return None
-    insize = os.path.getsize(filepath)
-    c_level = 22 if ultra else 19
-    tempname = uuid.uuid4().hex + '.parquet'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    temp_file_created = False
-    
-    try:
-        # Use absolute path for duckdb command
-        abs_filepath = abspath(filepath).replace('\\', '/')
-        abs_tempfpath = abspath(tempfpath).replace('\\', '/')
-        # Escape single quotes in file paths for duckdb SQL command
-        escaped_filepath = abs_filepath.replace("'", "''")
-        escaped_tempfpath = abs_tempfpath.replace("'", "''")
-        # Construct duckdb command with proper quoting
-        sql_cmd = f"COPY (SELECT * FROM read_parquet('{escaped_filepath}')) TO '{escaped_tempfpath}' (FORMAT parquet, COMPRESSION zstd, COMPRESSION_LEVEL {c_level})"
-        cmd = f'duckdb -c "{sql_cmd}"'
-        if quiet:
-            if os.name == 'nt':  # Windows
-                cmd = cmd + ' > nul 2>&1'
-            else:  # Unix-like
-                cmd = cmd + ' > /dev/null 2>&1'
-        if debug:
-            logging.info('parquet compression cmd: %s' % (cmd))
-        os.system(cmd)
-        if os.path.exists(tempfpath):
-            temp_file_created = True
-            move(tempfpath, abs_filepath)
-            outsize = os.path.getsize(filepath)
-            if insize > 0:
-                share = (insize - outsize) * 100.0 / insize
+
+def _expand_globs(cmd: List[str], cwd: Optional[str] = None) -> List[str]:
+    """Expand a bare '*' argument only (archive contents). Never glob filenames."""
+    if cwd is None:
+        cwd = os.getcwd()
+    expanded: List[str] = []
+    for arg in cmd:
+        if arg == '*':
+            matches = glob.glob(os.path.join(cwd, '*'))
+            if matches:
+                expanded.extend(os.path.relpath(m, cwd) for m in sorted(matches))
             else:
-                share = 0
-            return [filepath, insize, outsize, share]
+                expanded.append(arg)
         else:
-            if debug:
-                logging.warning('parquet compression failed, output file not found')
-            return None
-    except Exception as e:
+            expanded.append(arg)
+    return expanded
+
+
+def _run_command(
+    cmd: List[str],
+    quiet: bool = False,
+    debug: bool = False,
+    cwd: Optional[str] = None,
+) -> Optional[subprocess.CompletedProcess]:
+    """Run an external command with an argv list. Never uses a shell."""
+    cmd = _expand_globs(cmd, cwd)
+    if debug:
+        logging.info('command: %s', ' '.join(cmd))
+    try:
+        result = subprocess.run(
+            cmd,
+            capture_output=True,
+            text=True,
+            encoding='utf-8',
+            errors='replace',
+            cwd=cwd,
+            timeout=3600,
+        )
+        if result.returncode == 0:
+            return result
         if debug:
-            logging.warning('parquet compression failed: %s' % str(e))
+            logging.warning(
+                'command failed with return code %d: %s',
+                result.returncode, ' '.join(cmd),
+            )
+        return None
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        if debug:
+            logging.warning('command exception: %s', str(exc))
+        return None
+
+
+def _calc_savings(insize: int, outsize: int) -> float:
+    if insize > 0:
+        return (insize - outsize) * 100.0 / insize
+    return 0.0
+
+
+def _remove_quietly(path: Optional[str]) -> None:
+    if not path:
+        return
+    try:
+        if os.path.isdir(path):
+            rmtree(path, ignore_errors=True)
+        elif os.path.exists(path):
+            os.remove(path)
+    except OSError:
+        pass
+
+
+def _make_temp(suffix: str) -> str:
+    fd, path = tempfile.mkstemp(suffix=suffix, dir=TEMP_PATH)
+    os.close(fd)
+    return path
+
+
+def _commit_kwargs(**kwargs: Any) -> Dict[str, Any]:
+    return {
+        'dryrun': bool(kwargs.get('dryrun', False)),
+        'keep_if_larger': kwargs.get('keep_if_larger', True),
+        'min_savings': kwargs.get('min_savings'),
+    }
+
+
+def _commit_output(
+    temp_path: str,
+    dest_path: str,
+    insize: int,
+    *,
+    dryrun: bool = False,
+    keep_if_larger: bool = True,
+    min_savings: Optional[float] = None,
+    verify: Optional[str] = None,
+) -> Optional[PackResult]:
+    """Replace dest with temp only after verification and size checks."""
+    try:
+        if not temp_path or not os.path.exists(temp_path):
+            return None
+        if os.path.getsize(temp_path) == 0:
+            return None
+        if verify and not verify_output(temp_path, verify):
+            return None
+
+        outsize = os.path.getsize(temp_path)
+        share = _calc_savings(insize, outsize)
+        reject = False
+        if keep_if_larger and outsize >= insize:
+            reject = True
+        if min_savings is not None and share < min_savings:
+            reject = True
+
+        if dryrun:
+            if reject:
+                return PackResult(dest_path, insize, insize, 0.0, replaced=False)
+            return PackResult(dest_path, insize, outsize, share, replaced=False)
+
+        if reject:
+            return PackResult(dest_path, insize, insize, 0.0, replaced=False)
+
+        dest_dir = os.path.dirname(abspath(dest_path)) or '.'
+        os.makedirs(dest_dir, exist_ok=True)
+        os.replace(temp_path, dest_path)
+        outsize = os.path.getsize(dest_path)
+        share = _calc_savings(insize, outsize)
+        return PackResult(dest_path, insize, outsize, share, replaced=True)
+    finally:
+        _remove_quietly(temp_path)
+
+
+def _run_to_file(cmd: List[str], out_path: str, debug: bool = False) -> bool:
+    if debug:
+        logging.info('command: %s', ' '.join(cmd))
+    try:
+        with open(out_path, 'wb') as fh:
+            result = subprocess.run(
+                cmd, stdout=fh, stderr=subprocess.PIPE, timeout=3600
+            )
+        return result.returncode == 0 and os.path.getsize(out_path) > 0
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        if debug:
+            logging.warning('command exception: %s', str(exc))
+        return False
+
+
+def _pack_stream_codec(
+    filepath: str,
+    suffix: str,
+    open_decomp: Callable,
+    open_comp: Callable,
+    cli_key: Optional[str],
+    cli_args: List[str],
+    verify: str,
+    debug: bool = False,
+    quiet: bool = False,
+    **commit: Any,
+) -> Optional[PackResult]:
+    """Decompress to a temp file, recompress, then atomic-replace."""
+    insize = os.path.getsize(filepath)
+    dec_temp = _make_temp('.bin')
+    out_temp = _make_temp(suffix)
+    try:
+        with open_decomp(filepath, 'rb') as f_in, open(dec_temp, 'wb') as f_out:
+            copyfileobj(f_in, f_out, length=_COPY_BUF)
+
+        used_cli = False
+        tool = resolve_tool(cli_key) if cli_key else None
+        if tool:
+            used_cli = _run_to_file([tool] + cli_args + [dec_temp], out_temp, debug)
+
+        if not used_cli:
+            with open(dec_temp, 'rb') as f_in, open_comp(out_temp) as f_out:
+                copyfileobj(f_in, f_out, length=_COPY_BUF)
+
+        return _commit_output(
+            out_temp, filepath, insize, verify=verify, **_commit_kwargs(**commit)
+        )
+    except Exception as exc:
+        if debug:
+            logging.warning('%s repack failed: %s', suffix, exc)
         return None
     finally:
-        # Ensure temp file is cleaned up if it still exists
-        if not temp_file_created and os.path.exists(tempfpath):
-            try:
-                os.remove(tempfpath)
-            except Exception:
-                pass  # Ignore errors during cleanup   
+        _remove_quietly(dec_temp)
+        _remove_quietly(out_temp)
 
-def pack_gzip(filepath, debug=False, quiet=False):
-    """Repack Gzip file with maximum compression (level 9). Uses pigz if available, otherwise uses Python gzip."""
-    insize = os.path.getsize(filepath)
-    tempname = uuid.uuid4().hex + '.gz'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    decompressed_temp = None
-    
-    # Check if pigz is available
-    pigz_path = which('pigz')
-    
+
+def pack_parquet(
+    filepath: str, debug: bool = False, quiet: bool = False,
+    ultra: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    """Lossless compress parquet file using the duckdb Python API."""
     try:
-        # Decompress the original file
-        with gzip.open(filepath, 'rb') as f_in:
-            decompressed_data = f_in.read()
-        
-        if pigz_path:
-            # Use pigz for compression (parallel gzip, often faster and better compression)
-            decompressed_temp = os.path.join(TEMP_PATH, uuid.uuid4().hex)
-            with open(decompressed_temp, 'wb') as f_out:
-                f_out.write(decompressed_data)
-            
-            # Compress with pigz at maximum compression level (9)
-            if quiet:
-                if os.name == 'nt':  # Windows
-                    cmd = f'{pigz_path} -9 -c "{decompressed_temp}" > "{tempfpath}" 2>nul'
-                else:  # Unix-like
-                    cmd = f'{pigz_path} -9 -c "{decompressed_temp}" > "{tempfpath}" 2>/dev/null'
-            else:
-                cmd = f'{pigz_path} -9 -c "{decompressed_temp}" > "{tempfpath}"'
-            if debug:
-                logging.info('pigz compression cmd: %s' % (cmd))
-            os.system(cmd)
-        else:
-            # Fall back to Python's gzip module
-            with gzip.open(tempfpath, 'wb', compresslevel=9) as f_out:
-                f_out.write(decompressed_data)
-        
-        # Clean up decompressed temp file if it was created
-        if decompressed_temp and os.path.exists(decompressed_temp):
-            os.remove(decompressed_temp)
-        
-        if os.path.exists(tempfpath):
-            move(tempfpath, abspath(filepath))
-            outsize = os.path.getsize(filepath)
-            if insize > 0:
-                share = (insize - outsize) * 100.0 / insize
-            else:
-                share = 0
-            tool_used = 'pigz' if pigz_path else 'gzip'
-            if debug:
-                logging.info('gzip repack (%s): %s %d -> %d (%f%%)' % (tool_used, filepath, insize, outsize, share))
-            return [filepath, insize, outsize, share]
-        else:
-            if debug:
-                logging.warning('gzip repack failed, output file not found')
-            return None
-    except Exception as e:
-        if debug:
-            logging.warning('gzip repack failed: %s' % str(e))
-        # Clean up temp files if they exist
-        if os.path.exists(tempfpath):
-            os.remove(tempfpath)
-        if decompressed_temp and os.path.exists(decompressed_temp):
-            os.remove(decompressed_temp)
+        import duckdb
+    except ImportError:
+        logging.warning('duckdb not installed, cannot compress parquet files')
         return None
 
-def pack_xz(filepath, debug=False, quiet=False):
-    """Repack XZ file with maximum compression (level 9). Uses xz command if available, otherwise uses Python lzma."""
     insize = os.path.getsize(filepath)
-    tempname = uuid.uuid4().hex + '.xz'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    decompressed_temp = None
-    
-    # Check if xz command is available
-    xz_path = which('xz')
-    
+    tempfpath = _make_temp('.parquet')
+    c_level = 22 if ultra else 19
     try:
-        # Decompress the original file
-        with lzma.open(filepath, 'rb') as f_in:
-            decompressed_data = f_in.read()
-        
-        if xz_path:
-            # Use xz command for compression (often better compression)
-            decompressed_temp = os.path.join(TEMP_PATH, uuid.uuid4().hex)
-            with open(decompressed_temp, 'wb') as f_out:
-                f_out.write(decompressed_data)
-            
-            # Compress with xz at maximum compression level (9)
-            if quiet:
-                if os.name == 'nt':  # Windows
-                    cmd = f'{xz_path} -9 -c "{decompressed_temp}" > "{tempfpath}" 2>nul'
-                else:  # Unix-like
-                    cmd = f'{xz_path} -9 -c "{decompressed_temp}" > "{tempfpath}" 2>/dev/null'
-            else:
-                cmd = f'{xz_path} -9 -c "{decompressed_temp}" > "{tempfpath}"'
-            if debug:
-                logging.info('xz compression cmd: %s' % (cmd))
-            os.system(cmd)
-        else:
-            # Fall back to Python's lzma module
-            with lzma.open(tempfpath, 'wb', preset=9) as f_out:
-                f_out.write(decompressed_data)
-        
-        # Clean up decompressed temp file if it was created
-        if decompressed_temp and os.path.exists(decompressed_temp):
-            os.remove(decompressed_temp)
-        
-        if os.path.exists(tempfpath):
-            move(tempfpath, abspath(filepath))
-            outsize = os.path.getsize(filepath)
-            if insize > 0:
-                share = (insize - outsize) * 100.0 / insize
-            else:
-                share = 0
-            tool_used = 'xz' if xz_path else 'lzma'
-            if debug:
-                logging.info('xz repack (%s): %s %d -> %d (%f%%)' % (tool_used, filepath, insize, outsize, share))
-            return [filepath, insize, outsize, share]
-        else:
-            if debug:
-                logging.warning('xz repack failed, output file not found')
-            return None
-    except Exception as e:
+        abs_in = abspath(filepath).replace('\\', '/')
+        abs_out = abspath(tempfpath).replace('\\', '/')
+        escaped_in = abs_in.replace("'", "''")
+        escaped_out = abs_out.replace("'", "''")
+        sql_cmd = (
+            f"COPY (SELECT * FROM read_parquet('{escaped_in}')) "
+            f"TO '{escaped_out}' (FORMAT parquet, COMPRESSION zstd, "
+            f"COMPRESSION_LEVEL {c_level})"
+        )
         if debug:
-            logging.warning('xz repack failed: %s' % str(e))
-        # Clean up temp files if they exist
-        if os.path.exists(tempfpath):
-            os.remove(tempfpath)
-        if decompressed_temp and os.path.exists(decompressed_temp):
-            os.remove(decompressed_temp)
+            logging.info('parquet sql: %s', sql_cmd)
+        con = duckdb.connect()
+        try:
+            con.execute(sql_cmd)
+        finally:
+            con.close()
+        return _commit_output(
+            tempfpath, filepath, insize, verify='parquet',
+            **_commit_kwargs(**commit),
+        )
+    except Exception as exc:
+        if debug:
+            logging.warning('parquet compression failed: %s', exc)
         return None
+    finally:
+        _remove_quietly(tempfpath)
 
-def pack_bz2(filepath, debug=False, quiet=False):
-    """Repack BZ2 file with maximum compression (level 9). Uses bzip2 command if available, otherwise uses Python bz2."""
+
+def pack_gzip(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    def _gz_out(path: str):
+        return gzip.open(path, 'wb', compresslevel=9)
+
+    return _pack_stream_codec(
+        filepath, '.gz', gzip.open, _gz_out, 'pigz', ['-9', '-c'],
+        'gz', debug=debug, quiet=quiet, **commit,
+    )
+
+
+def pack_xz(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    def _xz_out(path: str):
+        return lzma.open(path, 'wb', preset=9)
+
+    return _pack_stream_codec(
+        filepath, '.xz', lzma.open, _xz_out, 'xz', ['-9', '-c'],
+        'xz', debug=debug, quiet=quiet, **commit,
+    )
+
+
+def pack_bz2(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    def _bz_out(path: str):
+        return bz2.open(path, 'wb', compresslevel=9)
+
+    return _pack_stream_codec(
+        filepath, '.bz2', bz2.open, _bz_out, 'bzip2', ['-9', '-c'],
+        'bz2', debug=debug, quiet=quiet, **commit,
+    )
+
+
+def pack_zstd(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    zstd = resolve_tool('zstd')
+    if zstd is None:
+        if debug:
+            logging.warning('zstd not installed')
+        return None
     insize = os.path.getsize(filepath)
-    tempname = uuid.uuid4().hex + '.bz2'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    decompressed_temp = None
-    
-    # Check if bzip2 command is available
-    bzip2_path = which('bzip2')
-    
+    dec_temp = _make_temp('.bin')
+    out_temp = _make_temp('.zst')
     try:
-        # Decompress the original file
-        with bz2.open(filepath, 'rb') as f_in:
-            decompressed_data = f_in.read()
-        
-        if bzip2_path:
-            # Use bzip2 command for compression (often better compression)
-            decompressed_temp = os.path.join(TEMP_PATH, uuid.uuid4().hex)
-            with open(decompressed_temp, 'wb') as f_out:
-                f_out.write(decompressed_data)
-            
-            # Compress with bzip2 at maximum compression level (9)
-            if quiet:
-                if os.name == 'nt':  # Windows
-                    cmd = f'{bzip2_path} -9 -c "{decompressed_temp}" > "{tempfpath}" 2>nul'
-                else:  # Unix-like
-                    cmd = f'{bzip2_path} -9 -c "{decompressed_temp}" > "{tempfpath}" 2>/dev/null'
-            else:
-                cmd = f'{bzip2_path} -9 -c "{decompressed_temp}" > "{tempfpath}"'
-            if debug:
-                logging.info('bzip2 compression cmd: %s' % (cmd))
-            os.system(cmd)
-        else:
-            # Fall back to Python's bz2 module
-            with bz2.open(tempfpath, 'wb', compresslevel=9) as f_out:
-                f_out.write(decompressed_data)
-        
-        # Clean up decompressed temp file if it was created
-        if decompressed_temp and os.path.exists(decompressed_temp):
-            os.remove(decompressed_temp)
-        
-        if os.path.exists(tempfpath):
-            move(tempfpath, abspath(filepath))
-            outsize = os.path.getsize(filepath)
-            if insize > 0:
-                share = (insize - outsize) * 100.0 / insize
-            else:
-                share = 0
-            tool_used = 'bzip2' if bzip2_path else 'bz2'
-            if debug:
-                logging.info('bz2 repack (%s): %s %d -> %d (%f%%)' % (tool_used, filepath, insize, outsize, share))
-            return [filepath, insize, outsize, share]
-        else:
-            if debug:
-                logging.warning('bz2 repack failed, output file not found')
+        if not _run_to_file([zstd, '-d', '-c', filepath], dec_temp, debug):
             return None
-    except Exception as e:
-        if debug:
-            logging.warning('bz2 repack failed: %s' % str(e))
-        # Clean up temp files if they exist
-        if os.path.exists(tempfpath):
-            os.remove(tempfpath)
-        if decompressed_temp and os.path.exists(decompressed_temp):
-            os.remove(decompressed_temp)
-        return None
+        if not _run_to_file([zstd, '-19', '-c', dec_temp], out_temp, debug):
+            return None
+        return _commit_output(
+            out_temp, filepath, insize, verify='zst', **_commit_kwargs(**commit)
+        )
+    finally:
+        _remove_quietly(dec_temp)
+        _remove_quietly(out_temp)
 
-def pack_pdf(filepath, debug=False, quiet=False):
-    """Lossless compress PDF file using ghostscript (with qpdf as fallback)"""
+
+def pack_brotli(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    brotli = resolve_tool('brotli')
+    if brotli is None:
+        if debug:
+            logging.warning('brotli not installed')
+        return None
     insize = os.path.getsize(filepath)
-    tempname = uuid.uuid4().hex + '.pdf'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    temp_file_created = False
-    
-    # Check if ghostscript is available (primary tool)
-    gs_path = which('gs')
-    if gs_path is None:
-        # Try alternative names
-        gs_path = which('gswin64c') or which('gswin32c')
-    
-    # Check if qpdf is available (fallback tool)
-    qpdf_path = which('qpdf')
-    
+    dec_temp = _make_temp('.bin')
+    out_temp = _make_temp('.br')
+    try:
+        if not _run_to_file([brotli, '-d', '-c', filepath], dec_temp, debug):
+            return None
+        if not _run_to_file([brotli, '-q', '11', '-c', dec_temp], out_temp, debug):
+            return None
+        return _commit_output(out_temp, filepath, insize, **_commit_kwargs(**commit))
+    finally:
+        _remove_quietly(dec_temp)
+        _remove_quietly(out_temp)
+
+
+def pack_avif(
+    filepath: str, debug: bool = False, quiet: bool = False,
+    lossy: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    avifenc = resolve_tool('avifenc')
+    avifdec = resolve_tool('avifdec')
+    convert_path = resolve_tool('convert')
+    if (avifenc is None or avifdec is None) and convert_path is None:
+        if debug:
+            logging.warning('avifenc/avifdec or ImageMagick not installed')
+        return None
+    insize = os.path.getsize(filepath)
+    ck = _commit_kwargs(**commit)
+    if avifenc and avifdec:
+        png_temp = _make_temp('.png')
+        out_temp = _make_temp('.avif')
+        try:
+            decode = _run_command(
+                [avifdec, abspath(filepath), png_temp], quiet=quiet, debug=debug
+            )
+            if decode is None:
+                return None
+            if lossy:
+                encode_cmd = [avifenc, '-q', '80', png_temp, out_temp]
+            else:
+                encode_cmd = [avifenc, '--lossless', png_temp, out_temp]
+            encode = _run_command(encode_cmd, quiet=quiet, debug=debug)
+            if encode is None:
+                _remove_quietly(out_temp)
+                return None
+            return _commit_output(
+                out_temp, filepath, insize, verify='avif', **ck
+            )
+        finally:
+            _remove_quietly(png_temp)
+            _remove_quietly(out_temp)
+    out_temp = _make_temp('.avif')
+    quality = '80' if lossy else '100'
+    cmd = [
+        convert_path or '', abspath(filepath), '-quality', quality, out_temp
+    ]
+    result = _run_command(cmd, quiet=quiet, debug=debug)
+    if result is None:
+        _remove_quietly(out_temp)
+        return None
+    return _commit_output(out_temp, filepath, insize, verify='avif', **ck)
+
+
+def pack_heic(
+    filepath: str, debug: bool = False, quiet: bool = False,
+    lossy: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    convert_path = resolve_tool('convert')
+    if convert_path is None:
+        if debug:
+            logging.warning('ImageMagick not installed for HEIC')
+        return None
+    insize = os.path.getsize(filepath)
+    ext = '.' + filepath.rsplit('.', 1)[-1].lower() if '.' in filepath else '.heic'
+    out_temp = _make_temp(ext)
+    quality = '80' if lossy else '100'
+    cmd = [convert_path, abspath(filepath), '-quality', quality, out_temp]
+    result = _run_command(cmd, quiet=quiet, debug=debug)
+    if result is None:
+        _remove_quietly(out_temp)
+        return None
+    return _commit_output(
+        out_temp, filepath, insize, verify='heic', **_commit_kwargs(**commit)
+    )
+
+
+def pack_flac(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    flac = resolve_tool('flac')
+    if flac is None:
+        if debug:
+            logging.warning('flac not installed')
+        return None
+    insize = os.path.getsize(filepath)
+    out_temp = _make_temp('.flac')
+    cmd = [flac, '--best', '--verify', '-f', '-o', out_temp, abspath(filepath)]
+    result = _run_command(cmd, quiet=quiet, debug=debug)
+    if result is None:
+        _remove_quietly(out_temp)
+        return None
+    return _commit_output(
+        out_temp, filepath, insize, verify='flac', **_commit_kwargs(**commit)
+    )
+
+
+def pack_pdf(
+    filepath: str, debug: bool = False, quiet: bool = False,
+    lossy: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    """Compress PDF. Default is lossless qpdf; Ghostscript is opt-in lossy."""
+    insize = os.path.getsize(filepath)
+    gs_path = resolve_tool('gs')
+    qpdf_path = resolve_tool('qpdf')
     if gs_path is None and qpdf_path is None:
         if debug:
-            logging.warning('Neither ghostscript nor qpdf is installed, will not be able to compress PDF files')
+            logging.warning('Neither ghostscript nor qpdf is installed')
         return None
-    
-    try:
-        # Try ghostscript first (better compression)
-        if gs_path:
-            try:
-                # Use absolute paths for ghostscript command
-                abs_filepath = abspath(filepath).replace('\\', '/')
-                abs_tempfpath = abspath(tempfpath).replace('\\', '/')
-                
-                # ghostscript command for lossless compression:
-                # -sDEVICE=pdfwrite: output PDF format
-                # -dCompatibilityLevel=1.4: PDF 1.4 compatibility
-                # -dPDFSETTINGS=/prepress: high quality settings (lossless)
-                # -dNOPAUSE -dQUIET -dBATCH: non-interactive mode
-                # -dColorImageResolution=300 -dGrayImageResolution=300: preserve image quality
-                # -dAutoRotatePages=/None: preserve page orientation
-                # -sOutputFile: output file
-                if quiet:
-                    if os.name == 'nt':  # Windows
-                        cmd = f'{gs_path} -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -dColorImageResolution=300 -dGrayImageResolution=300 -dAutoRotatePages=/None -sOutputFile="{abs_tempfpath}" "{abs_filepath}" 2>nul'
-                    else:  # Unix-like
-                        cmd = f'{gs_path} -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -dColorImageResolution=300 -dGrayImageResolution=300 -dAutoRotatePages=/None -sOutputFile="{abs_tempfpath}" "{abs_filepath}" 2>/dev/null'
-                else:
-                    cmd = f'{gs_path} -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -dColorImageResolution=300 -dGrayImageResolution=300 -dAutoRotatePages=/None -sOutputFile="{abs_tempfpath}" "{abs_filepath}"'
-                if debug:
-                    logging.info('ghostscript compression cmd: %s' % (cmd))
-                
-                result = os.system(cmd)
-                
-                # Check if ghostscript command succeeded (exit code 0)
-                if result == 0 and os.path.exists(tempfpath) and os.path.getsize(tempfpath) > 0:
-                    temp_file_created = True
-                    move(tempfpath, abs_filepath)
-                    outsize = os.path.getsize(filepath)
-                    if insize > 0:
-                        share = (insize - outsize) * 100.0 / insize
-                    else:
-                        share = 0
-                    if debug:
-                        logging.info('pdf repack (ghostscript): %s %d -> %d (%f%%)' % (filepath, insize, outsize, share))
-                    return [filepath, insize, outsize, share]
-                else:
-                    if debug:
-                        logging.warning('ghostscript compression failed, trying qpdf fallback')
-            except Exception as e:
-                if debug:
-                    logging.warning('ghostscript compression failed: %s, trying qpdf fallback' % str(e))
-        
-        # Fallback to qpdf if ghostscript failed or is not available
-        if not temp_file_created and qpdf_path:
-            try:
-                # Use absolute paths for qpdf command
-                abs_filepath = abspath(filepath).replace('\\', '/')
-                abs_tempfpath = abspath(tempfpath).replace('\\', '/')
-                
-                # qpdf command: qpdf --linearize --object-streams=preserve input.pdf output.pdf
-                # --linearize: optimize for web viewing and reduce file size
-                # --object-streams=preserve: preserve object streams for better compression
-                # --suppress-password-recovery: suppress password recovery warnings (non-interactive)
-                if quiet:
-                    if os.name == 'nt':  # Windows
-                        cmd = f'{qpdf_path} --linearize --object-streams=preserve --suppress-password-recovery "{abs_filepath}" "{abs_tempfpath}" 2>nul'
-                    else:  # Unix-like
-                        cmd = f'{qpdf_path} --linearize --object-streams=preserve --suppress-password-recovery "{abs_filepath}" "{abs_tempfpath}" 2>/dev/null'
-                else:
-                    cmd = f'{qpdf_path} --linearize --object-streams=preserve --suppress-password-recovery "{abs_filepath}" "{abs_tempfpath}"'
-                if debug:
-                    logging.info('qpdf compression cmd (fallback): %s' % (cmd))
-                
-                result = os.system(cmd)
-                
-                # Check if qpdf command succeeded (exit code 0)
-                if result == 0 and os.path.exists(tempfpath):
-                    temp_file_created = True
-                    move(tempfpath, abs_filepath)
-                    outsize = os.path.getsize(filepath)
-                    if insize > 0:
-                        share = (insize - outsize) * 100.0 / insize
-                    else:
-                        share = 0
-                    if debug:
-                        logging.info('pdf repack (qpdf fallback): %s %d -> %d (%f%%)' % (filepath, insize, outsize, share))
-                    return [filepath, insize, outsize, share]
-                else:
-                    if debug:
-                        logging.warning('pdf repack failed, both ghostscript and qpdf commands returned non-zero exit code or output file not found')
-                    return None
-            except Exception as e:
-                if debug:
-                    logging.warning('pdf repack failed: %s' % str(e))
-                return None
-        else:
-            if debug:
-                logging.warning('pdf repack failed, ghostscript failed and qpdf is not available')
-            return None
-    finally:
-        # Ensure temp file is cleaned up if it still exists
-        if not temp_file_created and os.path.exists(tempfpath):
-            try:
-                os.remove(tempfpath)
-            except Exception:
-                pass  # Ignore errors during cleanup
 
-def pack_gif(filepath, debug=False, quiet=False):
-    """Lossless compress GIF file using gifsicle"""
-    insize = os.path.getsize(filepath)
-    tempname = uuid.uuid4().hex + '.gif'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    temp_file_created = False
-    
-    # Check if gifsicle is available
-    gifsicle_path = which('gifsicle')
+    abs_in = abspath(filepath)
+    ck = _commit_kwargs(**commit)
+
+    def _try_qpdf() -> Optional[PackResult]:
+        if not qpdf_path:
+            return None
+        tempfpath = _make_temp('.pdf')
+        cmd = [
+            qpdf_path, '--linearize', '--object-streams=generate',
+            '--compress-streams=y', abs_in, tempfpath,
+        ]
+        if debug:
+            logging.info('qpdf cmd: %s', ' '.join(cmd))
+        result = _run_command(cmd, quiet=quiet, debug=debug)
+        if result is None:
+            _remove_quietly(tempfpath)
+            return None
+        return _commit_output(tempfpath, filepath, insize, verify='pdf', **ck)
+
+    def _try_gs() -> Optional[PackResult]:
+        if not gs_path:
+            return None
+        tempfpath = _make_temp('.pdf')
+        cmd = [
+            gs_path, '-sDEVICE=pdfwrite', '-dCompatibilityLevel=1.4',
+            '-dPDFSETTINGS=/prepress', '-dNOPAUSE', '-dQUIET', '-dBATCH',
+            '-dAutoRotatePages=/None', f'-sOutputFile={tempfpath}', abs_in,
+        ]
+        if debug:
+            logging.info('ghostscript cmd: %s', ' '.join(cmd))
+        result = _run_command(cmd, quiet=quiet, debug=debug)
+        if result is None:
+            _remove_quietly(tempfpath)
+            return None
+        return _commit_output(tempfpath, filepath, insize, verify='pdf', **ck)
+
+    if lossy:
+        return _try_gs() or _try_qpdf()
+    return _try_qpdf()
+
+
+def pack_gif(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    gifsicle_path = resolve_tool('gifsicle')
     if gifsicle_path is None:
         if debug:
-            logging.warning('gifsicle not installed, will not be able to compress GIF files')
+            logging.warning('gifsicle not installed')
         return None
-    
-    try:
-        # Use absolute paths for gifsicle command
-        abs_filepath = abspath(filepath).replace('\\', '/')
-        abs_tempfpath = abspath(tempfpath).replace('\\', '/')
-        
-        # gifsicle command: gifsicle -O3 --lossy=0 input.gif -o output.gif
-        # -O3: maximum optimization level
-        # --lossy=0: lossless compression (no quality loss)
-        # --batch: process files without prompting (non-interactive)
-        if quiet:
-            if os.name == 'nt':  # Windows
-                cmd = f'{gifsicle_path} -O3 --lossy=0 --batch "{abs_filepath}" -o "{abs_tempfpath}" 2>nul'
-            else:  # Unix-like
-                cmd = f'{gifsicle_path} -O3 --lossy=0 --batch "{abs_filepath}" -o "{abs_tempfpath}" 2>/dev/null'
-        else:
-            cmd = f'{gifsicle_path} -O3 --lossy=0 --batch "{abs_filepath}" -o "{abs_tempfpath}"'
-        if debug:
-            logging.info('gifsicle compression cmd: %s' % (cmd))
-        
-        result = os.system(cmd)
-        
-        # Check if gifsicle command succeeded (exit code 0)
-        if result == 0 and os.path.exists(tempfpath):
-            temp_file_created = True
-            move(tempfpath, abs_filepath)
-            outsize = os.path.getsize(filepath)
-            if insize > 0:
-                share = (insize - outsize) * 100.0 / insize
-            else:
-                share = 0
-            if debug:
-                logging.info('gif repack (gifsicle): %s %d -> %d (%f%%)' % (filepath, insize, outsize, share))
-            return [filepath, insize, outsize, share]
-        else:
-            if debug:
-                logging.warning('gif repack failed, gifsicle command returned non-zero exit code or output file not found')
-            return None
-    except Exception as e:
-        if debug:
-            logging.warning('gif repack failed: %s' % str(e))
-        return None
-    finally:
-        # Ensure temp file is cleaned up if it still exists
-        if not temp_file_created and os.path.exists(tempfpath):
-            try:
-                os.remove(tempfpath)
-            except Exception:
-                pass  # Ignore errors during cleanup
-
-def pack_webp(filepath, debug=False, quiet=False):
-    """Lossless compress WebP file using dwebp and cwebp"""
     insize = os.path.getsize(filepath)
-    tempname = uuid.uuid4().hex + '.webp'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    temp_png = os.path.join(TEMP_PATH, uuid.uuid4().hex + '.png')
-    temp_file_created = False
-    
-    # Check if dwebp and cwebp are available
-    dwebp_path = which('dwebp')
-    cwebp_path = which('cwebp')
-    
+    tempfpath = _make_temp('.gif')
+    cmd = [
+        gifsicle_path, '-O3', '--lossy=0', abspath(filepath), '-o', tempfpath,
+    ]
+    result = _run_command(cmd, quiet=quiet, debug=debug)
+    if result is None:
+        _remove_quietly(tempfpath)
+        return None
+    return _commit_output(
+        tempfpath, filepath, insize, verify='gif', **_commit_kwargs(**commit)
+    )
+
+
+def pack_webp(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    dwebp_path = resolve_tool('dwebp')
+    cwebp_path = resolve_tool('cwebp')
     if dwebp_path is None or cwebp_path is None:
         if debug:
-            logging.warning('dwebp or cwebp not installed, will not be able to compress WebP files')
+            logging.warning('dwebp or cwebp not installed')
         return None
-    
-    try:
-        # Use absolute paths
-        abs_filepath = abspath(filepath).replace('\\', '/')
-        abs_tempfpath = abspath(tempfpath).replace('\\', '/')
-        abs_temp_png = abspath(temp_png).replace('\\', '/')
-        
-        # Step 1: Decode WebP to PNG using dwebp
-        # dwebp is non-interactive by default
-        if quiet:
-            if os.name == 'nt':  # Windows
-                decode_cmd = f'{dwebp_path} "{abs_filepath}" -o "{abs_temp_png}" 2>nul'
-            else:  # Unix-like
-                decode_cmd = f'{dwebp_path} "{abs_filepath}" -o "{abs_temp_png}" 2>/dev/null'
-        else:
-            decode_cmd = f'{dwebp_path} "{abs_filepath}" -o "{abs_temp_png}"'
-        
-        if debug:
-            logging.info('dwebp decode cmd: %s' % (decode_cmd))
-        
-        decode_result = os.system(decode_cmd)
-        
-        if decode_result != 0 or not os.path.exists(temp_png):
-            if debug:
-                logging.warning('webp repack failed, dwebp decode failed')
-            return None
-        
-        # Step 2: Re-encode PNG to WebP with lossless compression using cwebp
-        # -lossless: use lossless compression
-        # -z 9: maximum compression level (0-9)
-        # cwebp is non-interactive by default
-        if quiet:
-            if os.name == 'nt':  # Windows
-                encode_cmd = f'{cwebp_path} -lossless -z 9 "{abs_temp_png}" -o "{abs_tempfpath}" 2>nul'
-            else:  # Unix-like
-                encode_cmd = f'{cwebp_path} -lossless -z 9 "{abs_temp_png}" -o "{abs_tempfpath}" 2>/dev/null'
-        else:
-            encode_cmd = f'{cwebp_path} -lossless -z 9 "{abs_temp_png}" -o "{abs_tempfpath}"'
-        
-        if debug:
-            logging.info('cwebp encode cmd: %s' % (encode_cmd))
-        
-        encode_result = os.system(encode_cmd)
-        
-        # Check if cwebp command succeeded (exit code 0)
-        if encode_result == 0 and os.path.exists(tempfpath):
-            temp_file_created = True
-            move(tempfpath, abs_filepath)
-            outsize = os.path.getsize(filepath)
-            if insize > 0:
-                share = (insize - outsize) * 100.0 / insize
-            else:
-                share = 0
-            if debug:
-                logging.info('webp repack (dwebp+cwebp): %s %d -> %d (%f%%)' % (filepath, insize, outsize, share))
-            return [filepath, insize, outsize, share]
-        else:
-            if debug:
-                logging.warning('webp repack failed, cwebp encode failed or output file not found')
-            return None
-    except Exception as e:
-        if debug:
-            logging.warning('webp repack failed: %s' % str(e))
-        return None
-    finally:
-        # Ensure all temp files are cleaned up
-        if not temp_file_created and os.path.exists(tempfpath):
-            try:
-                os.remove(tempfpath)
-            except Exception:
-                pass  # Ignore errors during cleanup
-        if os.path.exists(temp_png):
-            try:
-                os.remove(temp_png)
-            except Exception:
-                pass  # Ignore errors during cleanup
-
-def pack_svg(filepath, debug=False, quiet=False):
-    """Lossless compress SVG file using svgo (or scour as fallback)"""
     insize = os.path.getsize(filepath)
-    tempname = uuid.uuid4().hex + '.svg'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    temp_file_created = False
-    
-    # Check if svgo is available (preferred)
-    svgo_path = which('svgo')
-    # Check if scour is available (fallback)
-    scour_path = which('scour') if svgo_path is None else None
-    
+    temp_png = _make_temp('.png')
+    tempfpath = _make_temp('.webp')
+    try:
+        abs_in = abspath(filepath)
+        decode = _run_command(
+            [dwebp_path, abs_in, '-o', temp_png], quiet=quiet, debug=debug
+        )
+        if decode is None:
+            return None
+        encode = _run_command(
+            [cwebp_path, '-lossless', '-z', '9', temp_png, '-o', tempfpath],
+            quiet=quiet, debug=debug,
+        )
+        if encode is None:
+            _remove_quietly(tempfpath)
+            return None
+        return _commit_output(
+            tempfpath, filepath, insize, verify='webp', **_commit_kwargs(**commit)
+        )
+    finally:
+        _remove_quietly(temp_png)
+        _remove_quietly(tempfpath)
+
+
+def pack_svg(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    svgo_path = resolve_tool('svgo')
+    scour_path = resolve_tool('scour') if svgo_path is None else None
     if svgo_path is None and scour_path is None:
         if debug:
-            logging.warning('svgo or scour not installed, will not be able to compress SVG files')
+            logging.warning('svgo or scour not installed')
         return None
-    
-    try:
-        # Use absolute paths
-        abs_filepath = abspath(filepath).replace('\\', '/')
-        abs_tempfpath = abspath(tempfpath).replace('\\', '/')
-        
-        if svgo_path:
-            # svgo command: svgo --input input.svg --output output.svg
-            # svgo automatically optimizes SVG files losslessly
-            # svgo is non-interactive by default
-            if quiet:
-                if os.name == 'nt':  # Windows
-                    cmd = f'{svgo_path} --input "{abs_filepath}" --output "{abs_tempfpath}" 2>nul'
-                else:  # Unix-like
-                    cmd = f'{svgo_path} --input "{abs_filepath}" --output "{abs_tempfpath}" 2>/dev/null'
-            else:
-                cmd = f'{svgo_path} --input "{abs_filepath}" --output "{abs_tempfpath}"'
-            tool_used = 'svgo'
-        else:
-            # scour command: scour --enable-viewboxing --enable-id-stripping --enable-comment-stripping --remove-metadata --strip-xml-prolog --no-line-breaks input.svg output.svg
-            # scour optimizes SVG files losslessly
-            if quiet:
-                if os.name == 'nt':  # Windows
-                    cmd = f'{scour_path} --enable-viewboxing --enable-id-stripping --enable-comment-stripping --remove-metadata --strip-xml-prolog --no-line-breaks "{abs_filepath}" "{abs_tempfpath}" 2>nul'
-                else:  # Unix-like
-                    cmd = f'{scour_path} --enable-viewboxing --enable-id-stripping --enable-comment-stripping --remove-metadata --strip-xml-prolog --no-line-breaks "{abs_filepath}" "{abs_tempfpath}" 2>/dev/null'
-            else:
-                cmd = f'{scour_path} --enable-viewboxing --enable-id-stripping --enable-comment-stripping --remove-metadata --strip-xml-prolog --no-line-breaks "{abs_filepath}" "{abs_tempfpath}"'
-            tool_used = 'scour'
-        
-        if debug:
-            logging.info('svg compression cmd (%s): %s' % (tool_used, cmd))
-        
-        result = os.system(cmd)
-        
-        # Check if command succeeded (exit code 0)
-        if result == 0 and os.path.exists(tempfpath):
-            temp_file_created = True
-            move(tempfpath, abs_filepath)
-            outsize = os.path.getsize(filepath)
-            if insize > 0:
-                share = (insize - outsize) * 100.0 / insize
-            else:
-                share = 0
-            if debug:
-                logging.info('svg repack (%s): %s %d -> %d (%f%%)' % (tool_used, filepath, insize, outsize, share))
-            return [filepath, insize, outsize, share]
-        else:
-            if debug:
-                logging.warning('svg repack failed, %s command returned non-zero exit code or output file not found' % tool_used)
-            return None
-    except Exception as e:
-        if debug:
-            logging.warning('svg repack failed: %s' % str(e))
-        return None
-    finally:
-        # Ensure temp file is cleaned up if it still exists
-        if not temp_file_created and os.path.exists(tempfpath):
-            try:
-                os.remove(tempfpath)
-            except Exception:
-                pass  # Ignore errors during cleanup
-
-def pack_wmv(filepath, debug=False, quiet=False, lossless=False):
-    """Compress WMV file using ffmpeg with lossless or lossy compression
-    
-    Note: Output will be converted to MP4 container with H.264 codec for better compatibility.
-    The original WMV file will be replaced with the compressed MP4 file.
-    """
     insize = os.path.getsize(filepath)
-    # Use .mp4 extension for output (standard container for H.264)
-    tempname = uuid.uuid4().hex + '.mp4'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    temp_file_created = False
-    
-    # Check if ffmpeg is available
-    ffmpeg_path = which('ffmpeg')
-    if ffmpeg_path is None:
-        if debug:
-            logging.warning('ffmpeg not installed, will not be able to compress WMV files')
-        return None
-    
-    try:
-        # Use absolute paths
-        abs_filepath = abspath(filepath).replace('\\', '/')
-        abs_tempfpath = abspath(tempfpath).replace('\\', '/')
-        
-        if lossless:
-            # Lossless compression: use libx264 with crf 0 (lossless)
-            # -c:v libx264: use H.264 codec
-            # -crf 0: lossless mode (constant rate factor 0 = lossless)
-            # -preset veryslow: best compression (slowest)
-            # -c:a copy: copy audio stream without re-encoding (if compatible)
-            # -movflags +faststart: optimize for streaming
-            if quiet:
-                if os.name == 'nt':  # Windows
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 0 -preset veryslow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>nul'
-                else:  # Unix-like
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 0 -preset veryslow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>/dev/null'
-            else:
-                cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 0 -preset veryslow -c:a copy -movflags +faststart -y "{abs_tempfpath}"'
-            mode = 'lossless'
-        else:
-            # Lossy compression: use libx264 with crf 18 (high quality)
-            # -c:v libx264: use H.264 codec
-            # -crf 18: high quality (lower = better quality, 18 is visually lossless for most content)
-            # -preset slow: good balance between compression and speed
-            # -c:a copy: copy audio stream without re-encoding (if compatible)
-            # -movflags +faststart: optimize for streaming
-            if quiet:
-                if os.name == 'nt':  # Windows
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 18 -preset slow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>nul'
-                else:  # Unix-like
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 18 -preset slow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>/dev/null'
-            else:
-                cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 18 -preset slow -c:a copy -movflags +faststart -y "{abs_tempfpath}"'
-            mode = 'lossy'
-        
-        if debug:
-            logging.info('ffmpeg wmv compression cmd (%s): %s' % (mode, cmd))
-        
-        result = os.system(cmd)
-        
-        # Check if ffmpeg command succeeded (exit code 0)
-        if result == 0 and os.path.exists(tempfpath):
-            temp_file_created = True
-            # Replace original WMV file with compressed MP4 file
-            # Output is MP4 since WMV container doesn't support H.264 well
-            original_ext = filepath.rsplit('.', 1)[-1].lower()
-            if original_ext == 'wmv':
-                # Change extension to .mp4
-                new_filepath = filepath.rsplit('.', 1)[0] + '.mp4'
-            else:
-                new_filepath = filepath
-            
-            # Remove original file and move compressed file
-            if os.path.exists(filepath):
-                os.remove(filepath)
-            move(tempfpath, abspath(new_filepath))
-            filepath = new_filepath
-            
-            outsize = os.path.getsize(filepath)
-            if insize > 0:
-                share = (insize - outsize) * 100.0 / insize
-            else:
-                share = 0
-            if debug:
-                logging.info('wmv repack (ffmpeg, %s): %s %d -> %d (%f%%)' % (mode, filepath, insize, outsize, share))
-            return [filepath, insize, outsize, share]
-        else:
-            if debug:
-                logging.warning('wmv repack failed, ffmpeg command returned non-zero exit code or output file not found')
-            return None
-    except Exception as e:
-        if debug:
-            logging.warning('wmv repack failed: %s' % str(e))
-        return None
-    finally:
-        # Ensure temp file is cleaned up if it still exists
-        if not temp_file_created and os.path.exists(tempfpath):
-            try:
-                os.remove(tempfpath)
-            except Exception:
-                pass  # Ignore errors during cleanup
-
-def pack_mp4(filepath, debug=False, quiet=False, lossless=False):
-    """Compress MP4 file using ffmpeg with lossless or lossy compression"""
-    insize = os.path.getsize(filepath)
-    tempname = uuid.uuid4().hex + '.mp4'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    temp_file_created = False
-    
-    # Check if ffmpeg is available
-    ffmpeg_path = which('ffmpeg')
-    if ffmpeg_path is None:
-        if debug:
-            logging.warning('ffmpeg not installed, will not be able to compress MP4 files')
-        return None
-    
-    try:
-        # Use absolute paths
-        abs_filepath = abspath(filepath).replace('\\', '/')
-        abs_tempfpath = abspath(tempfpath).replace('\\', '/')
-        
-        if lossless:
-            # Lossless compression: use libx264 with crf 0 (lossless)
-            if quiet:
-                if os.name == 'nt':  # Windows
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 0 -preset veryslow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>nul'
-                else:  # Unix-like
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 0 -preset veryslow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>/dev/null'
-            else:
-                cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 0 -preset veryslow -c:a copy -movflags +faststart -y "{abs_tempfpath}"'
-            mode = 'lossless'
-        else:
-            # Lossy compression: use libx264 with crf 18 (high quality)
-            if quiet:
-                if os.name == 'nt':  # Windows
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 18 -preset slow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>nul'
-                else:  # Unix-like
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 18 -preset slow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>/dev/null'
-            else:
-                cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 18 -preset slow -c:a copy -movflags +faststart -y "{abs_tempfpath}"'
-            mode = 'lossy'
-        
-        if debug:
-            logging.info('ffmpeg mp4 compression cmd (%s): %s' % (mode, cmd))
-        
-        result = os.system(cmd)
-        
-        # Check if ffmpeg command succeeded (exit code 0)
-        if result == 0 and os.path.exists(tempfpath):
-            temp_file_created = True
-            # Replace original file with compressed version
-            if os.path.exists(filepath):
-                os.remove(filepath)
-            move(tempfpath, abs_filepath)
-            
-            outsize = os.path.getsize(filepath)
-            if insize > 0:
-                share = (insize - outsize) * 100.0 / insize
-            else:
-                share = 0
-            if debug:
-                logging.info('mp4 repack (ffmpeg, %s): %s %d -> %d (%f%%)' % (mode, filepath, insize, outsize, share))
-            return [filepath, insize, outsize, share]
-        else:
-            if debug:
-                logging.warning('mp4 repack failed, ffmpeg command returned non-zero exit code or output file not found')
-            return None
-    except Exception as e:
-        if debug:
-            logging.warning('mp4 repack failed: %s' % str(e))
-        return None
-    finally:
-        # Ensure temp file is cleaned up if it still exists
-        if not temp_file_created and os.path.exists(tempfpath):
-            try:
-                os.remove(tempfpath)
-            except Exception:
-                pass  # Ignore errors during cleanup
-
-def pack_avi(filepath, debug=False, quiet=False, lossless=False):
-    """Compress AVI file using ffmpeg with lossless or lossy compression
-    
-    Note: Output will be converted to MP4 container with H.264 codec for better compatibility.
-    The original AVI file will be replaced with the compressed MP4 file.
-    """
-    insize = os.path.getsize(filepath)
-    # Use .mp4 extension for output (standard container for H.264)
-    tempname = uuid.uuid4().hex + '.mp4'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    temp_file_created = False
-    
-    # Check if ffmpeg is available
-    ffmpeg_path = which('ffmpeg')
-    if ffmpeg_path is None:
-        if debug:
-            logging.warning('ffmpeg not installed, will not be able to compress AVI files')
-        return None
-    
-    try:
-        # Use absolute paths
-        abs_filepath = abspath(filepath).replace('\\', '/')
-        abs_tempfpath = abspath(tempfpath).replace('\\', '/')
-        
-        if lossless:
-            # Lossless compression: use libx264 with crf 0 (lossless)
-            if quiet:
-                if os.name == 'nt':  # Windows
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 0 -preset veryslow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>nul'
-                else:  # Unix-like
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 0 -preset veryslow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>/dev/null'
-            else:
-                cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 0 -preset veryslow -c:a copy -movflags +faststart -y "{abs_tempfpath}"'
-            mode = 'lossless'
-        else:
-            # Lossy compression: use libx264 with crf 18 (high quality)
-            if quiet:
-                if os.name == 'nt':  # Windows
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 18 -preset slow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>nul'
-                else:  # Unix-like
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 18 -preset slow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>/dev/null'
-            else:
-                cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 18 -preset slow -c:a copy -movflags +faststart -y "{abs_tempfpath}"'
-            mode = 'lossy'
-        
-        if debug:
-            logging.info('ffmpeg avi compression cmd (%s): %s' % (mode, cmd))
-        
-        result = os.system(cmd)
-        
-        # Check if ffmpeg command succeeded (exit code 0)
-        if result == 0 and os.path.exists(tempfpath):
-            temp_file_created = True
-            # Replace original AVI file with compressed MP4 file
-            original_ext = filepath.rsplit('.', 1)[-1].lower()
-            if original_ext == 'avi':
-                # Change extension to .mp4
-                new_filepath = filepath.rsplit('.', 1)[0] + '.mp4'
-            else:
-                new_filepath = filepath
-            
-            # Remove original file and move compressed file
-            if os.path.exists(filepath):
-                os.remove(filepath)
-            move(tempfpath, abspath(new_filepath))
-            filepath = new_filepath
-            
-            outsize = os.path.getsize(filepath)
-            if insize > 0:
-                share = (insize - outsize) * 100.0 / insize
-            else:
-                share = 0
-            if debug:
-                logging.info('avi repack (ffmpeg, %s): %s %d -> %d (%f%%)' % (mode, filepath, insize, outsize, share))
-            return [filepath, insize, outsize, share]
-        else:
-            if debug:
-                logging.warning('avi repack failed, ffmpeg command returned non-zero exit code or output file not found')
-            return None
-    except Exception as e:
-        if debug:
-            logging.warning('avi repack failed: %s' % str(e))
-        return None
-    finally:
-        # Ensure temp file is cleaned up if it still exists
-        if not temp_file_created and os.path.exists(tempfpath):
-            try:
-                os.remove(tempfpath)
-            except Exception:
-                pass  # Ignore errors during cleanup
-
-def pack_asf(filepath, debug=False, quiet=False, lossless=False):
-    """Compress ASF file using ffmpeg with lossless or lossy compression
-    
-    Note: Output will be converted to MP4 container with H.264 codec for better compatibility.
-    The original ASF file will be replaced with the compressed MP4 file.
-    """
-    insize = os.path.getsize(filepath)
-    # Use .mp4 extension for output (standard container for H.264)
-    tempname = uuid.uuid4().hex + '.mp4'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    temp_file_created = False
-    
-    # Check if ffmpeg is available
-    ffmpeg_path = which('ffmpeg')
-    if ffmpeg_path is None:
-        if debug:
-            logging.warning('ffmpeg not installed, will not be able to compress ASF files')
-        return None
-    
-    try:
-        # Use absolute paths
-        abs_filepath = abspath(filepath).replace('\\', '/')
-        abs_tempfpath = abspath(tempfpath).replace('\\', '/')
-        
-        if lossless:
-            # Lossless compression: use libx264 with crf 0 (lossless)
-            if quiet:
-                if os.name == 'nt':  # Windows
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 0 -preset veryslow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>nul'
-                else:  # Unix-like
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 0 -preset veryslow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>/dev/null'
-            else:
-                cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 0 -preset veryslow -c:a copy -movflags +faststart -y "{abs_tempfpath}"'
-            mode = 'lossless'
-        else:
-            # Lossy compression: use libx264 with crf 18 (high quality)
-            if quiet:
-                if os.name == 'nt':  # Windows
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 18 -preset slow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>nul'
-                else:  # Unix-like
-                    cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 18 -preset slow -c:a copy -movflags +faststart -y "{abs_tempfpath}" 2>/dev/null'
-            else:
-                cmd = f'{ffmpeg_path} -i "{abs_filepath}" -c:v libx264 -crf 18 -preset slow -c:a copy -movflags +faststart -y "{abs_tempfpath}"'
-            mode = 'lossy'
-        
-        if debug:
-            logging.info('ffmpeg asf compression cmd (%s): %s' % (mode, cmd))
-        
-        result = os.system(cmd)
-        
-        # Check if ffmpeg command succeeded (exit code 0)
-        if result == 0 and os.path.exists(tempfpath):
-            temp_file_created = True
-            # Replace original ASF file with compressed MP4 file
-            original_ext = filepath.rsplit('.', 1)[-1].lower()
-            if original_ext == 'asf':
-                # Change extension to .mp4
-                new_filepath = filepath.rsplit('.', 1)[0] + '.mp4'
-            else:
-                new_filepath = filepath
-            
-            # Remove original file and move compressed file
-            if os.path.exists(filepath):
-                os.remove(filepath)
-            move(tempfpath, abspath(new_filepath))
-            filepath = new_filepath
-            
-            outsize = os.path.getsize(filepath)
-            if insize > 0:
-                share = (insize - outsize) * 100.0 / insize
-            else:
-                share = 0
-            if debug:
-                logging.info('asf repack (ffmpeg, %s): %s %d -> %d (%f%%)' % (mode, filepath, insize, outsize, share))
-            return [filepath, insize, outsize, share]
-        else:
-            if debug:
-                logging.warning('asf repack failed, ffmpeg command returned non-zero exit code or output file not found')
-            return None
-    except Exception as e:
-        if debug:
-            logging.warning('asf repack failed: %s' % str(e))
-        return None
-    finally:
-        # Ensure temp file is cleaned up if it still exists
-        if not temp_file_created and os.path.exists(tempfpath):
-            try:
-                os.remove(tempfpath)
-            except Exception:
-                pass  # Ignore errors during cleanup
-
-def pack_jpg_re(filepath, debug=False, quiet=False):
-    """Lossy compress JPG file using jpeg-recompress"""
-    insize = os.path.getsize(filepath)
-    cmd = JPEG_RE_CMD + ' ' + JPEG_RE_OPTIONS + ' "' + filepath + '"' + ' "' + filepath + '"' 
-    if quiet:
-        cmd = cmd + ' > /dev/null 2>&1'
-    if debug:
-        logging.info('jpeg recompress cmd: %s' % (cmd))
-    os.system(cmd)
-    outsize = os.path.getsize(filepath)
-    if insize > 0:
-        share = (insize - outsize) * 100.0 / insize
+    tempfpath = _make_temp('.svg')
+    abs_in = abspath(filepath)
+    if svgo_path:
+        cmd = [svgo_path, '--input', abs_in, '--output', tempfpath]
     else:
-        share = 0
-    return [filepath, insize, outsize, share]
+        cmd = [
+            scour_path or '', '--enable-viewboxing', '--enable-id-stripping',
+            '--enable-comment-stripping', '--remove-metadata',
+            '--strip-xml-prolog', '--no-line-breaks', abs_in, tempfpath,
+        ]
+    result = _run_command(cmd, quiet=quiet, debug=debug)
+    if result is None:
+        _remove_quietly(tempfpath)
+        return None
+    return _commit_output(
+        tempfpath, filepath, insize, verify='svg', **_commit_kwargs(**commit)
+    )
 
 
-def pack_jpg_re(filepath, debug=False, quiet=False):
-    """Lossy compress JPG file using jpeg-recompress"""
-    insize = os.path.getsize(filepath)
-    cmd = JPEG_RE_CMD + ' ' + JPEG_RE_OPTIONS + ' "' + filepath + '"' + ' "' + filepath + '"' 
-    if quiet:
-        cmd = cmd + ' > /dev/null 2>&1'
-    if debug:
-        logging.info('jpeg recompress cmd: %s' % (cmd))
-    os.system(cmd)
-    outsize = os.path.getsize(filepath)
-    if insize > 0:
-        share = (insize - outsize) * 100.0 / insize
-    else:
-        share = 0
-    return [filepath, insize, outsize, share]
-
-
-def pack_jpg(filepath, debug=False, quiet=False, jpeg_quality=None):
-    """Lossy compress JPG file using jpegoptim"""
-    insize = os.path.getsize(filepath)
-    # Use custom quality if provided, otherwise use default
-    if jpeg_quality is not None:
-        jpeg_options = ' --strip-all -m%s -p -o -f ' % (str(jpeg_quality))
-    else:
-        jpeg_options = JPEGIOPTIM_OPTIONS
-    cmd = JPEGOPTIM_PATH + jpeg_options + '"' + filepath + '"'
-    if quiet:
-        if os.name == 'nt':  # Windows
-            cmd = cmd + ' > nul 2>&1'
-        else:  # Unix-like
-            cmd = cmd + ' > /dev/null 2>&1'
-    if debug:
-        logging.info('jpeg optimization cmd: %s' % (cmd))
-    os.system(cmd)
-    outsize = os.path.getsize(filepath)
-    if insize > 0:
-        share = (insize - outsize) * 100.0 / insize
-    else:
-        share = 0
-    return [filepath, insize, outsize, share]
-
-def pack_png(filepath, debug=False, quiet=False, png_quality=None):
-    """Lossless compress png files using pngquant"""
-    insize = os.path.getsize(filepath)
-    from shutil import copyfile
-    tempname = uuid.uuid4().hex + '.png'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    copyfile(filepath, tempfpath)
-    mediapath = filepath.rsplit('/', 1)[0]
-    # pngquant quality: high=1, medium=2, low=3 (speed setting)
-    if png_quality == 'high':
-        png_options = ' --force --speed 1 '
-    elif png_quality == 'medium':
-        png_options = ' --force --speed 2 '
-    elif png_quality == 'low':
-        png_options = ' --force --speed 3 '
-    else:
-        png_options = PNGQUANT_OPTIONS
-    cmd = PNGQUANT_PATH + png_options + '"' + tempfpath + '"'
-    if quiet:
-        if os.name == 'nt':  # Windows
-            cmd = cmd + ' > nul 2>&1'
-        else:  # Unix-like
-            cmd = cmd + ' > /dev/null 2>&1'
-    if debug:
-        logging.info('png optimization cmd: %s' % (cmd))
-    os.system(cmd)
-    new_filename = tempname.rsplit('.', 1)[0] + '-fs8.png'
-    if os.path.exists(abspath(os.path.join(TEMP_PATH, new_filename))):
-        move(os.path.join(TEMP_PATH, new_filename), abspath(filepath))
-        os.remove(tempfpath)
-    outsize = os.path.getsize(filepath)
-    if insize > 0:
-        share = (insize - outsize) * 100.0 / insize
-    else:
-        share = 0
-    return [filepath, insize, outsize, share]
-
-def pack_tif(filepath, debug=False, quiet=False):
-    """Lossless compress TIF/TIFF file using ImageMagick (with tiffcp as fallback)"""
-    insize = os.path.getsize(filepath)
-    tempname = uuid.uuid4().hex + '.tif'
-    tempfpath = os.path.join(TEMP_PATH, tempname)
-    temp_file_created = False
-    
-    # Check if ImageMagick is available (primary tool)
-    convert_path = which('convert')
-    if convert_path is None:
-        # Try alternative names
-        convert_path = which('magick')
-    
-    # Check if tiffcp is available (fallback tool)
-    tiffcp_path = which('tiffcp')
-    
+def pack_tif(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    convert_path = resolve_tool('convert')
+    tiffcp_path = resolve_tool('tiffcp')
     if convert_path is None and tiffcp_path is None:
         if debug:
-            logging.warning('Neither ImageMagick (convert) nor tiffcp is installed, will not be able to compress TIF files')
+            logging.warning('Neither ImageMagick nor tiffcp is installed')
         return None
-    
-    try:
-        # Use absolute paths
-        abs_filepath = abspath(filepath).replace('\\', '/')
-        abs_tempfpath = abspath(tempfpath).replace('\\', '/')
-        
-        # Try ImageMagick first (better compression and more features)
-        if convert_path:
-            try:
-                # ImageMagick command for lossless compression:
-                # -compress lzw: use LZW compression (lossless, good compression)
-                # -strip: remove metadata to reduce file size
-                # -quiet: suppress warnings (non-interactive)
-                if quiet:
-                    if os.name == 'nt':  # Windows
-                        cmd = f'{convert_path} "{abs_filepath}" -compress lzw -strip -quiet "{abs_tempfpath}" 2>nul'
-                    else:  # Unix-like
-                        cmd = f'{convert_path} "{abs_filepath}" -compress lzw -strip -quiet "{abs_tempfpath}" 2>/dev/null'
-                else:
-                    cmd = f'{convert_path} "{abs_filepath}" -compress lzw -strip -quiet "{abs_tempfpath}"'
-                if debug:
-                    logging.info('ImageMagick TIF compression cmd: %s' % (cmd))
-                
-                result = os.system(cmd)
-                
-                # Check if ImageMagick command succeeded (exit code 0)
-                if result == 0 and os.path.exists(tempfpath) and os.path.getsize(tempfpath) > 0:
-                    temp_file_created = True
-                    move(tempfpath, abs_filepath)
-                    outsize = os.path.getsize(filepath)
-                    if insize > 0:
-                        share = (insize - outsize) * 100.0 / insize
-                    else:
-                        share = 0
-                    if debug:
-                        logging.info('tif repack (ImageMagick): %s %d -> %d (%f%%)' % (filepath, insize, outsize, share))
-                    return [filepath, insize, outsize, share]
-                else:
-                    if debug:
-                        logging.warning('ImageMagick TIF compression failed, trying tiffcp fallback')
-            except Exception as e:
-                if debug:
-                    logging.warning('ImageMagick TIF compression failed: %s, trying tiffcp fallback' % str(e))
-        
-        # Fallback to tiffcp if ImageMagick failed or is not available
-        if not temp_file_created and tiffcp_path:
-            try:
-                # tiffcp command for lossless compression:
-                # -c lzw: use LZW compression (lossless)
-                # -r: remove metadata tags
-                if quiet:
-                    if os.name == 'nt':  # Windows
-                        cmd = f'{tiffcp_path} -c lzw -r "{abs_filepath}" "{abs_tempfpath}" 2>nul'
-                    else:  # Unix-like
-                        cmd = f'{tiffcp_path} -c lzw -r "{abs_filepath}" "{abs_tempfpath}" 2>/dev/null'
-                else:
-                    cmd = f'{tiffcp_path} -c lzw -r "{abs_filepath}" "{abs_tempfpath}"'
-                if debug:
-                    logging.info('tiffcp TIF compression cmd (fallback): %s' % (cmd))
-                
-                result = os.system(cmd)
-                
-                # Check if tiffcp command succeeded (exit code 0)
-                if result == 0 and os.path.exists(tempfpath):
-                    temp_file_created = True
-                    move(tempfpath, abs_filepath)
-                    outsize = os.path.getsize(filepath)
-                    if insize > 0:
-                        share = (insize - outsize) * 100.0 / insize
-                    else:
-                        share = 0
-                    if debug:
-                        logging.info('tif repack (tiffcp fallback): %s %d -> %d (%f%%)' % (filepath, insize, outsize, share))
-                    return [filepath, insize, outsize, share]
-                else:
-                    if debug:
-                        logging.warning('tif repack failed, both ImageMagick and tiffcp commands returned non-zero exit code or output file not found')
-                    return None
-            except Exception as e:
-                if debug:
-                    logging.warning('tif repack failed: %s' % str(e))
-                return None
-        else:
-            if debug:
-                logging.warning('tif repack failed, ImageMagick failed and tiffcp is not available')
+    insize = os.path.getsize(filepath)
+    abs_in = abspath(filepath)
+    ck = _commit_kwargs(**commit)
+
+    if convert_path:
+        tempfpath = _make_temp('.tif')
+        cmd = [
+            convert_path, abs_in, '-compress', 'lzw', '-strip', '-quiet',
+            tempfpath,
+        ]
+        result = _run_command(cmd, quiet=quiet, debug=debug)
+        if result is not None:
+            packed = _commit_output(
+                tempfpath, filepath, insize, verify='tif', **ck
+            )
+            if packed:
+                return packed
+        _remove_quietly(tempfpath)
+
+    if tiffcp_path:
+        tempfpath = _make_temp('.tif')
+        cmd = [tiffcp_path, '-c', 'lzw', abs_in, tempfpath]
+        result = _run_command(cmd, quiet=quiet, debug=debug)
+        if result is None:
+            _remove_quietly(tempfpath)
             return None
+        return _commit_output(tempfpath, filepath, insize, verify='tif', **ck)
+    return None
+
+
+def _encode_video(
+    ffmpeg_path: str, src: str, dest: str, lossless: bool,
+    quiet: bool, debug: bool, container: str = 'mp4',
+) -> bool:
+    if container == 'webm':
+        if lossless:
+            cmd = [
+                ffmpeg_path, '-i', abspath(src), '-c:v', 'libvpx-vp9',
+                '-lossless', '1', '-c:a', 'copy', '-y', dest,
+            ]
+        else:
+            cmd = [
+                ffmpeg_path, '-i', abspath(src), '-c:v', 'libvpx-vp9',
+                '-crf', '18', '-b:v', '0', '-c:a', 'copy', '-y', dest,
+            ]
+    else:
+        crf = '0' if lossless else '18'
+        preset = 'veryslow' if lossless else 'slow'
+        cmd = [
+            ffmpeg_path, '-i', abspath(src), '-c:v', 'libx264', '-crf', crf,
+            '-preset', preset, '-c:a', 'copy', '-y', dest,
+        ]
+        if container == 'mp4':
+            cmd[-2:-2] = ['-movflags', '+faststart']
+    result = _run_command(cmd, quiet=quiet, debug=debug)
+    return result is not None and os.path.exists(dest) and os.path.getsize(dest) > 0
+
+
+def _pack_video(
+    filepath: str, mode: str, lossless: bool = False,
+    convert_container: bool = True, debug: bool = False, quiet: bool = False,
+    **commit: Any,
+) -> Optional[PackResult]:
+    ffmpeg_path = resolve_tool('ffmpeg')
+    if ffmpeg_path is None:
+        if debug:
+            logging.warning('ffmpeg not installed')
+        return None
+    insize = os.path.getsize(filepath)
+    keep_modes = {'mp4', 'mkv', 'webm'}
+    dest = filepath
+    if convert_container and mode not in keep_modes:
+        dest = filepath.rsplit('.', 1)[0] + '.mp4'
+        out_mode = 'mp4'
+    else:
+        out_mode = mode if mode in ('mp4', 'mkv', 'webm') else 'mp4'
+    suffix = '.' + out_mode
+    verify = 'mp4' if out_mode == 'mp4' else out_mode
+    tempfpath = _make_temp(suffix)
+    try:
+        if not _encode_video(
+            ffmpeg_path, filepath, tempfpath, lossless, quiet, debug,
+            container=out_mode,
+        ):
+            return None
+        result = _commit_output(
+            tempfpath, dest, insize, verify=verify, **_commit_kwargs(**commit)
+        )
+        if result and result.replaced and dest != filepath:
+            _remove_quietly(filepath)
+            return PackResult(
+                dest, result.insize, result.outsize, result.savings_pct, True
+            )
+        if result and dest != filepath:
+            return PackResult(
+                dest if result.replaced else filepath,
+                result.insize, result.outsize, result.savings_pct,
+                result.replaced,
+            )
+        return result
     finally:
-        # Ensure temp file is cleaned up if it still exists
-        if not temp_file_created and os.path.exists(tempfpath):
+        _remove_quietly(tempfpath)
+
+
+def pack_wmv(
+    filepath: str, debug: bool = False, quiet: bool = False,
+    lossless: bool = False, convert_container: bool = True, **commit: Any,
+) -> Optional[PackResult]:
+    return _pack_video(
+        filepath, 'wmv', lossless=lossless,
+        convert_container=convert_container, debug=debug, quiet=quiet, **commit,
+    )
+
+
+def pack_mp4(
+    filepath: str, debug: bool = False, quiet: bool = False,
+    lossless: bool = False, convert_container: bool = True, **commit: Any,
+) -> Optional[PackResult]:
+    return _pack_video(
+        filepath, 'mp4', lossless=lossless,
+        convert_container=convert_container, debug=debug, quiet=quiet, **commit,
+    )
+
+
+def pack_avi(
+    filepath: str, debug: bool = False, quiet: bool = False,
+    lossless: bool = False, convert_container: bool = True, **commit: Any,
+) -> Optional[PackResult]:
+    return _pack_video(
+        filepath, 'avi', lossless=lossless,
+        convert_container=convert_container, debug=debug, quiet=quiet, **commit,
+    )
+
+
+def pack_asf(
+    filepath: str, debug: bool = False, quiet: bool = False,
+    lossless: bool = False, convert_container: bool = True, **commit: Any,
+) -> Optional[PackResult]:
+    return _pack_video(
+        filepath, 'asf', lossless=lossless,
+        convert_container=convert_container, debug=debug, quiet=quiet, **commit,
+    )
+
+
+def pack_mkv(
+    filepath: str, debug: bool = False, quiet: bool = False,
+    lossless: bool = False, convert_container: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    return _pack_video(
+        filepath, 'mkv', lossless=lossless, convert_container=False,
+        debug=debug, quiet=quiet, **commit,
+    )
+
+
+def pack_webm(
+    filepath: str, debug: bool = False, quiet: bool = False,
+    lossless: bool = False, convert_container: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    return _pack_video(
+        filepath, 'webm', lossless=lossless, convert_container=False,
+        debug=debug, quiet=quiet, **commit,
+    )
+
+
+def pack_jpg(
+    filepath: str, debug: bool = False, quiet: bool = False,
+    jpeg_quality: Optional[int] = None, lossy: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    jpegoptim_path = resolve_tool('jpegoptim')
+    if jpegoptim_path is None:
+        if debug:
+            logging.warning('jpegoptim not installed')
+        return None
+    insize = os.path.getsize(filepath)
+    tempfpath = _make_temp('.jpg')
+    copyfile(filepath, tempfpath)
+    cmd = [jpegoptim_path, '--strip-all', '-p', '-o']
+    if jpeg_quality is not None or lossy:
+        quality = jpeg_quality if jpeg_quality is not None else DEFAULT_JPEG_QUALITY
+        cmd.append(f'-m{quality}')
+    cmd.append(tempfpath)
+    result = _run_command(cmd, quiet=quiet, debug=debug)
+    if result is None:
+        _remove_quietly(tempfpath)
+        return None
+    return _commit_output(
+        tempfpath, filepath, insize, verify='jpg', **_commit_kwargs(**commit)
+    )
+
+
+def pack_png(
+    filepath: str, debug: bool = False, quiet: bool = False,
+    png_quality: Optional[str] = None, lossy: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    insize = os.path.getsize(filepath)
+    use_lossy = lossy or png_quality is not None
+    ck = _commit_kwargs(**commit)
+
+    if use_lossy:
+        pngquant_path = resolve_tool('pngquant')
+        if pngquant_path is None:
+            if debug:
+                logging.warning('pngquant not installed')
+            return None
+        tempfpath = _make_temp('.png')
+        copyfile(filepath, tempfpath)
+        speed = {'high': '1', 'medium': '2', 'low': '3'}.get(png_quality or '', '1')
+        cmd = [pngquant_path, '--force', '--speed', speed, tempfpath]
+        result = _run_command(cmd, quiet=quiet, debug=debug)
+        if result is None:
+            _remove_quietly(tempfpath)
+            return None
+        quant = tempfpath.rsplit('.', 1)[0] + '-fs8.png'
+        if os.path.exists(quant):
+            _remove_quietly(tempfpath)
+            tempfpath = quant
+        return _commit_output(tempfpath, filepath, insize, verify='png', **ck)
+
+    oxipng_path = resolve_tool('oxipng')
+    optipng_path = resolve_tool('optipng')
+    if oxipng_path is None and optipng_path is None:
+        if debug:
+            logging.warning('oxipng/optipng not installed for lossless PNG')
+        return None
+    tempfpath = _make_temp('.png')
+    copyfile(filepath, tempfpath)
+    if oxipng_path:
+        cmd = [oxipng_path, '-o', '4', '--strip', 'safe', '-q', tempfpath]
+    else:
+        cmd = [optipng_path or '', '-o7', '-quiet', tempfpath]
+    result = _run_command(cmd, quiet=quiet, debug=debug)
+    if result is None:
+        _remove_quietly(tempfpath)
+        return None
+    return _commit_output(tempfpath, filepath, insize, verify='png', **ck)
+
+
+@dataclass
+class PackerSpec:
+    func: Callable[..., Optional[PackResult]]
+    category: str
+    extra: Dict[str, str] = field(default_factory=dict)
+
+
+_PACKERS: Dict[str, PackerSpec] = {
+    'jpg': PackerSpec(pack_jpg, 'image', {'jpeg_quality': 'jpeg_quality'}),
+    'jpeg': PackerSpec(pack_jpg, 'image', {'jpeg_quality': 'jpeg_quality'}),
+    'png': PackerSpec(pack_png, 'image', {'png_quality': 'png_quality'}),
+    'gif': PackerSpec(pack_gif, 'image'),
+    'webp': PackerSpec(pack_webp, 'image'),
+    'svg': PackerSpec(pack_svg, 'image'),
+    'tif': PackerSpec(pack_tif, 'image'),
+    'tiff': PackerSpec(pack_tif, 'image'),
+    'parquet': PackerSpec(pack_parquet, 'data', {'ultra': 'ultra'}),
+    'gz': PackerSpec(pack_gzip, 'data'),
+    'xz': PackerSpec(pack_xz, 'data'),
+    'bz2': PackerSpec(pack_bz2, 'data'),
+    'zst': PackerSpec(pack_zstd, 'data'),
+    'br': PackerSpec(pack_brotli, 'data'),
+    'pdf': PackerSpec(pack_pdf, 'document'),
+    'avif': PackerSpec(pack_avif, 'image'),
+    'heic': PackerSpec(pack_heic, 'image'),
+    'heif': PackerSpec(pack_heic, 'image'),
+    'flac': PackerSpec(pack_flac, 'audio'),
+    'wmv': PackerSpec(pack_wmv, 'video', {
+        'wmv_lossless': 'lossless',
+        'convert_container': 'convert_container',
+    }),
+    'mp4': PackerSpec(pack_mp4, 'video', {
+        'wmv_lossless': 'lossless',
+        'convert_container': 'convert_container',
+    }),
+    'avi': PackerSpec(pack_avi, 'video', {
+        'wmv_lossless': 'lossless',
+        'convert_container': 'convert_container',
+    }),
+    'asf': PackerSpec(pack_asf, 'video', {
+        'wmv_lossless': 'lossless',
+        'convert_container': 'convert_container',
+    }),
+    'mkv': PackerSpec(pack_mkv, 'video', {'wmv_lossless': 'lossless'}),
+    'webm': PackerSpec(pack_webm, 'video', {'wmv_lossless': 'lossless'}),
+}
+
+
+def _dispatch_packer(
+    ext: str, fullname: str, options: Dict[str, Any]
+) -> Optional[PackResult]:
+    spec = _PACKERS.get(ext)
+    if spec is None:
+        return None
+    if spec.category in ('image', 'video') and not options.get('pack_images', True):
+        return None
+    kwargs: Dict[str, Any] = {
+        'debug': options.get('debug', False),
+        'quiet': options.get('quiet', False),
+        'dryrun': options.get('dryrun', False),
+        'keep_if_larger': options.get('keep_if_larger', True),
+        'min_savings': options.get('min_savings'),
+        'lossy': options.get('lossy', False),
+    }
+    for opt_key, arg_name in spec.extra.items():
+        kwargs[arg_name] = options.get(opt_key)
+    return spec.func(fullname, **kwargs)
+
+
+def _normalize_options(def_options: Any) -> Dict[str, Any]:
+    options = {
+        'debug': False, 'pack_images': True, 'repack_archive': True,
+        'pack_archives': True, 'deep_walking': True, 'log': False,
+        'quiet': False, 'ultra': False, 'dryrun': False,
+        'keep_if_larger': True, 'lossy': False, 'convert_container': True,
+        'min_savings': None, 'compression_level': 9,
+    }
+    if isinstance(def_options, RepackOptions):
+        options.update(def_options.to_dict())
+    elif def_options:
+        options.update(def_options)
+    return options
+
+
+def _empty_summary(filepath: str, size: int) -> RepackSummary:
+    return RepackSummary(
+        filepath=filepath, total_insize=size, total_outsize=size,
+    )
+
+
+def _extract_limits(options: Dict[str, Any]) -> Tuple[int, float]:
+    max_bytes = options.get('max_extract_bytes')
+    if max_bytes is None:
+        max_bytes = DEFAULT_MAX_EXTRACT_BYTES
+    ratio = options.get('max_extract_ratio')
+    if ratio is None:
+        ratio = DEFAULT_MAX_EXTRACT_RATIO
+    return int(max_bytes), float(ratio)
+
+
+def _szip_listed_size(
+    szip: str, filename: str, options: Dict[str, Any],
+) -> Optional[int]:
+    result = _run_command(
+        [szip, 'l', '-slt', filename],
+        quiet=options.get('quiet', False),
+        debug=options.get('debug', False),
+    )
+    if result is None or not result.stdout:
+        return None
+    total = 0
+    found = False
+    for line in result.stdout.splitlines():
+        if line.startswith('Size = '):
             try:
-                os.remove(tempfpath)
-            except Exception:
-                pass  # Ignore errors during cleanup
+                total += int(line.split('=', 1)[1].strip() or '0')
+                found = True
+            except ValueError:
+                continue
+    return total if found else None
+
+
+def _planned_extract_size(
+    filename: str, szip: Optional[str], options: Dict[str, Any],
+) -> Optional[int]:
+    zipped = zip_uncompressed_size(filename)
+    if zipped is not None:
+        return zipped
+    if szip:
+        return _szip_listed_size(szip, filename, options)
+    return None
+
+
+def _extract_over_limit(
+    uncompressed: Optional[int], original: int, options: Dict[str, Any],
+    filename: str,
+) -> bool:
+    max_bytes, ratio = _extract_limits(options)
+    if not extract_exceeds_limit(uncompressed, original, max_bytes, ratio):
+        return False
+    logging.warning(
+        'skipping extract of %s: uncompressed size %s exceeds limit',
+        filename, uncompressed,
+    )
+    return True
+
 
 class FileRepacker:
-    """Document repacker class"""
-    def __init__(self, quiet=False, temppath=None):
-        self.quiet = quiet
-        random.seed()
-        self.toolpath = SZIP_PATH
-        self.temppath = temppath if temppath else TEMP_PATH
-        self.currpath = os.getcwd()
+    """Document and file repacker."""
 
-    def pack_images(self, mediapath, recursive=False, options={'debug' : False}):
-        """Packs all images"""
-        results = {'stats' : [0, 0, 0], 'files' : []}
-        quiet = options.get('quiet', False)
+    def __init__(self, quiet: bool = False, temppath: Optional[str] = None):
+        self.quiet = quiet
+        self.temppath = temppath if temppath else TEMP_PATH
+
+    def pack_images(
+        self, mediapath: str, recursive: bool = False,
+        options: Optional[Dict[str, Any]] = None,
+    ) -> Optional[RepackSummary]:
+        if options is None:
+            options = {'debug': False}
         if not exists(mediapath):
             return None
+        summary = RepackSummary(filepath=mediapath)
         if not recursive:
-            onlyfiles = [ f for f in listdir(mediapath) if isfile(join(mediapath, f)) ]
-            for f in onlyfiles:
-                res = None
-                ext = f.rsplit('.', 1)[-1].lower()
-                fn = join(mediapath, f)
-                if ext in ['jpg', 'jpeg']:
-                    res = pack_jpg(fn, debug=options['debug'], quiet=quiet, jpeg_quality=options.get('jpeg_quality'))
-                elif ext  == 'png':
-                    res = pack_png(fn, debug=options['debug'], quiet=quiet, png_quality=options.get('png_quality'))
-                elif ext == 'gif':
-                    res = pack_gif(fn, debug=options['debug'], quiet=quiet)
-                elif ext == 'webp':
-                    res = pack_webp(fn, debug=options['debug'], quiet=quiet)
-                elif ext == 'svg':
-                    res = pack_svg(fn, debug=options['debug'], quiet=quiet)
-                elif ext in ['tif', 'tiff']:
-                    res = pack_tif(fn, debug=options['debug'], quiet=quiet)
-                elif ext == 'wmv':
-                    wmv_lossless = options.get('wmv_lossless', False)
-                    res = pack_wmv(fn, debug=options['debug'], quiet=quiet, lossless=wmv_lossless)
-                elif ext == 'mp4':
-                    wmv_lossless = options.get('wmv_lossless', False)
-                    res = pack_mp4(fn, debug=options['debug'], quiet=quiet, lossless=wmv_lossless)
-                elif ext == 'avi':
-                    wmv_lossless = options.get('wmv_lossless', False)
-                    res = pack_avi(fn, debug=options['debug'], quiet=quiet, lossless=wmv_lossless)
-                elif ext == 'asf':
-                    wmv_lossless = options.get('wmv_lossless', False)
-                    res = pack_asf(fn, debug=options['debug'], quiet=quiet, lossless=wmv_lossless)
-                if res is not None:
-                    results['files'].append([fn, res[1], res[2], res[3]])
-                    outfile, insize, outsize, share = res
-                    results['stats'][0] += 1
-                    results['stats'][1] += insize
-                    results['stats'][2] += outsize
+            names = [f for f in listdir(mediapath) if isfile(join(mediapath, f))]
+            files_to_process = [(join(mediapath, f), f) for f in names]
         else:
+            files_to_process = []
             for root, dirs, files in walk(mediapath):
                 for f in files:
-                    res = None
-                    ext = f.rsplit('.', 1)[-1].lower()
-                    fn = join(root, f)
-                    if ext in ['jpg', 'jpeg']:
-                        res = pack_jpg(fn, debug=options['debug'], quiet=quiet, jpeg_quality=options.get('jpeg_quality'))
-                    elif ext  == 'png':
-                        res = pack_png(fn, debug=options['debug'], quiet=quiet, png_quality=options.get('png_quality'))
-                    elif ext == 'gif':
-                        res = pack_gif(fn, debug=options['debug'], quiet=quiet)
-                    elif ext == 'webp':
-                        res = pack_webp(fn, debug=options['debug'], quiet=quiet)
-                    elif ext == 'svg':
-                        res = pack_svg(fn, debug=options['debug'], quiet=quiet)
-                    elif ext in ['tif', 'tiff']:
-                        res = pack_tif(fn, debug=options['debug'], quiet=quiet)
-                    elif ext == 'wmv':
-                        wmv_lossless = options.get('wmv_lossless', False)
-                        res = pack_wmv(fn, debug=options['debug'], quiet=quiet, lossless=wmv_lossless)
-                    elif ext == 'mp4':
-                        wmv_lossless = options.get('wmv_lossless', False)
-                        res = pack_mp4(fn, debug=options['debug'], quiet=quiet, lossless=wmv_lossless)
-                    elif ext == 'avi':
-                        wmv_lossless = options.get('wmv_lossless', False)
-                        res = pack_avi(fn, debug=options['debug'], quiet=quiet, lossless=wmv_lossless)
-                    elif ext == 'asf':
-                        wmv_lossless = options.get('wmv_lossless', False)
-                        res = pack_asf(fn, debug=options['debug'], quiet=quiet, lossless=wmv_lossless)
-                    if res is not None:
-                        results['files'].append([fn, res[1], res[2], res[3]])
-                        outfile, insize, outsize, share = res
-                        results['stats'][0] += 1
-                        results['stats'][1] += insize
-                        results['stats'][2] += outsize
-        return results
+                    files_to_process.append((join(root, f), f))
+        for fn, name in files_to_process:
+            ext = name.rsplit('.', 1)[-1].lower() if '.' in name else ''
+            res = _dispatch_packer(ext, fn, options)
+            if res is not None:
+                summary.results.append(res)
+                summary.inner_count += 1
+                summary.inner_insize += res.insize
+                summary.inner_outsize += res.outsize
+        summary.total_insize = summary.inner_insize
+        summary.total_outsize = summary.inner_outsize
+        return summary
 
-
-    def repack_zip_file(self, filename, outfile=None,
-                       def_options=None):
-        """Repack single ZIP file """
-        options = {"debug": False, 'pack_images': True, 'repack_archive': True, 'pack_archives': True,
-                                 'deep_walking': True, 'log': False, 'quiet': False, 'ultra': False, 'dryrun': False}
-        if def_options:
-            for k in def_options.keys(): 
-                options[k] = def_options[k]
-        results = {'stats': [0, 0, 0], 'files': []}
-        f_outfile = outfile
-        dryrun = options.get('dryrun', False)
-        if outfile is None: 
-            if dryrun:
-                # Use temporary file for dryrun
-                tempname = uuid.uuid4().hex
-                f_outfile = os.path.join(self.temppath, tempname + os.path.splitext(filename)[1])
-            else:
-                f_outfile = filename
+    def repack_zip_file(
+        self, filename: str, outfile: Optional[str] = None,
+        def_options: Any = None,
+    ) -> RepackSummary:
+        """Repack a standalone file or archive. Never unlinks the original first."""
+        options = _normalize_options(def_options)
         f_insize = os.path.getsize(filename)
-        filetype = filename.rsplit('.', 1)[-1].lower()
-        
-        # Handle standalone parquet files (not ZIP-based)
-        if filetype == 'parquet':
-            ultra = options.get('ultra', False)
-            if dryrun:
-                # For dryrun, work with a copy
-                from shutil import copyfile
-                temp_parquet = os.path.join(self.temppath, uuid.uuid4().hex + '.parquet')
-                copyfile(filename, temp_parquet)
-                res = pack_parquet(temp_parquet, debug=options.get('debug', False), quiet=options.get('quiet', False), ultra=ultra)
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    # Clean up temp file
-                    if os.path.exists(temp_parquet):
-                        os.remove(temp_parquet)
-                    return results
-                else:
-                    # Clean up temp file if it exists
-                    if os.path.exists(temp_parquet):
-                        os.remove(temp_parquet)
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-            else:
-                res = pack_parquet(filename, debug=options.get('debug', False), quiet=options.get('quiet', False), ultra=ultra)
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    return results
-                else:
-                    # If pack_parquet failed, return None or empty results
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-        
-        # Handle standalone gzip files (not ZIP-based)
-        if filetype == 'gz':
-            if dryrun:
-                # For dryrun, work with a copy
-                from shutil import copyfile
-                temp_gzip = os.path.join(self.temppath, uuid.uuid4().hex + '.gz')
-                copyfile(filename, temp_gzip)
-                res = pack_gzip(temp_gzip, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    # Clean up temp file
-                    if os.path.exists(temp_gzip):
-                        os.remove(temp_gzip)
-                    return results
-                else:
-                    # Clean up temp file if it exists
-                    if os.path.exists(temp_gzip):
-                        os.remove(temp_gzip)
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-            else:
-                res = pack_gzip(filename, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    return results
-                else:
-                    # If pack_gzip failed, return None or empty results
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-        
-        # Handle standalone xz files (not ZIP-based)
-        if filetype == 'xz':
-            if dryrun:
-                # For dryrun, work with a copy
-                from shutil import copyfile
-                temp_xz = os.path.join(self.temppath, uuid.uuid4().hex + '.xz')
-                copyfile(filename, temp_xz)
-                res = pack_xz(temp_xz, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    # Clean up temp file
-                    if os.path.exists(temp_xz):
-                        os.remove(temp_xz)
-                    return results
-                else:
-                    # Clean up temp file if it exists
-                    if os.path.exists(temp_xz):
-                        os.remove(temp_xz)
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-            else:
-                res = pack_xz(filename, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    return results
-                else:
-                    # If pack_xz failed, return None or empty results
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-        
-        # Handle standalone bz2 files (not ZIP-based)
-        if filetype == 'bz2':
-            if dryrun:
-                # For dryrun, work with a copy
-                from shutil import copyfile
-                temp_bz2 = os.path.join(self.temppath, uuid.uuid4().hex + '.bz2')
-                copyfile(filename, temp_bz2)
-                res = pack_bz2(temp_bz2, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    # Clean up temp file
-                    if os.path.exists(temp_bz2):
-                        os.remove(temp_bz2)
-                    return results
-                else:
-                    # Clean up temp file if it exists
-                    if os.path.exists(temp_bz2):
-                        os.remove(temp_bz2)
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-            else:
-                res = pack_bz2(filename, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    return results
-                else:
-                    # If pack_bz2 failed, return None or empty results
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-        
-        # Handle standalone PDF files
-        if filetype == 'pdf':
-            if dryrun:
-                # For dryrun, work with a copy
-                from shutil import copyfile
-                temp_pdf = os.path.join(self.temppath, uuid.uuid4().hex + '.pdf')
-                copyfile(filename, temp_pdf)
-                res = pack_pdf(temp_pdf, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    # Clean up temp file
-                    if os.path.exists(temp_pdf):
-                        os.remove(temp_pdf)
-                    return results
-                else:
-                    # Clean up temp file if it exists
-                    if os.path.exists(temp_pdf):
-                        os.remove(temp_pdf)
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-            else:
-                res = pack_pdf(filename, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    return results
-                else:
-                    # If pack_pdf failed, return None or empty results
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-        
-        # Handle standalone GIF files
-        if filetype == 'gif':
-            if dryrun:
-                # For dryrun, work with a copy
-                from shutil import copyfile
-                temp_gif = os.path.join(self.temppath, uuid.uuid4().hex + '.gif')
-                copyfile(filename, temp_gif)
-                res = pack_gif(temp_gif, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    # Clean up temp file
-                    if os.path.exists(temp_gif):
-                        os.remove(temp_gif)
-                    return results
-                else:
-                    # Clean up temp file if it exists
-                    if os.path.exists(temp_gif):
-                        os.remove(temp_gif)
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-            else:
-                res = pack_gif(filename, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    return results
-                else:
-                    # If pack_gif failed, return None or empty results
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-        
-        # Handle standalone WebP files
-        if filetype == 'webp':
-            if dryrun:
-                # For dryrun, work with a copy
-                from shutil import copyfile
-                temp_webp = os.path.join(self.temppath, uuid.uuid4().hex + '.webp')
-                copyfile(filename, temp_webp)
-                res = pack_webp(temp_webp, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    # Clean up temp file
-                    if os.path.exists(temp_webp):
-                        os.remove(temp_webp)
-                    return results
-                else:
-                    # Clean up temp file if it exists
-                    if os.path.exists(temp_webp):
-                        os.remove(temp_webp)
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-            else:
-                res = pack_webp(filename, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    return results
-                else:
-                    # If pack_webp failed, return None or empty results
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-        
-        # Handle standalone SVG files
-        if filetype == 'svg':
-            if dryrun:
-                # For dryrun, work with a copy
-                from shutil import copyfile
-                temp_svg = os.path.join(self.temppath, uuid.uuid4().hex + '.svg')
-                copyfile(filename, temp_svg)
-                res = pack_svg(temp_svg, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    # Clean up temp file
-                    if os.path.exists(temp_svg):
-                        os.remove(temp_svg)
-                    return results
-                else:
-                    # Clean up temp file if it exists
-                    if os.path.exists(temp_svg):
-                        os.remove(temp_svg)
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-            else:
-                res = pack_svg(filename, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    return results
-                else:
-                    # If pack_svg failed, return None or empty results
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-        
-        # Handle standalone WMV files
-        if filetype == 'wmv':
-            wmv_lossless = options.get('wmv_lossless', False)
-            if dryrun:
-                # For dryrun, work with a copy
-                from shutil import copyfile
-                temp_wmv = os.path.join(self.temppath, uuid.uuid4().hex + '.wmv')
-                copyfile(filename, temp_wmv)
-                res = pack_wmv(temp_wmv, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    # Clean up temp file
-                    if os.path.exists(temp_wmv):
-                        os.remove(temp_wmv)
-                    return results
-                else:
-                    # Clean up temp file if it exists
-                    if os.path.exists(temp_wmv):
-                        os.remove(temp_wmv)
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-            else:
-                res = pack_wmv(filename, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    return results
-                else:
-                    # If pack_wmv failed, return None or empty results
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-        
-        # Handle standalone MP4 files
-        if filetype == 'mp4':
-            wmv_lossless = options.get('wmv_lossless', False)
-            if dryrun:
-                # For dryrun, work with a copy
-                from shutil import copyfile
-                temp_mp4 = os.path.join(self.temppath, uuid.uuid4().hex + '.mp4')
-                copyfile(filename, temp_mp4)
-                res = pack_mp4(temp_mp4, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    # Clean up temp file
-                    if os.path.exists(temp_mp4):
-                        os.remove(temp_mp4)
-                    return results
-                else:
-                    # Clean up temp file if it exists
-                    if os.path.exists(temp_mp4):
-                        os.remove(temp_mp4)
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-            else:
-                res = pack_mp4(filename, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    return results
-                else:
-                    # If pack_mp4 failed, return None or empty results
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-        
-        # Handle standalone AVI files
-        if filetype == 'avi':
-            wmv_lossless = options.get('wmv_lossless', False)
-            if dryrun:
-                # For dryrun, work with a copy
-                from shutil import copyfile
-                temp_avi = os.path.join(self.temppath, uuid.uuid4().hex + '.avi')
-                copyfile(filename, temp_avi)
-                res = pack_avi(temp_avi, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    # Clean up temp file
-                    if os.path.exists(temp_avi):
-                        os.remove(temp_avi)
-                    return results
-                else:
-                    # Clean up temp file if it exists
-                    if os.path.exists(temp_avi):
-                        os.remove(temp_avi)
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-            else:
-                res = pack_avi(filename, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    return results
-                else:
-                    # If pack_avi failed, return None or empty results
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-        
-        # Handle standalone ASF files
-        if filetype == 'asf':
-            wmv_lossless = options.get('wmv_lossless', False)
-            if dryrun:
-                # For dryrun, work with a copy
-                from shutil import copyfile
-                temp_asf = os.path.join(self.temppath, uuid.uuid4().hex + '.asf')
-                copyfile(filename, temp_asf)
-                res = pack_asf(temp_asf, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    # Clean up temp file
-                    if os.path.exists(temp_asf):
-                        os.remove(temp_asf)
-                    return results
-                else:
-                    # Clean up temp file if it exists
-                    if os.path.exists(temp_asf):
-                        os.remove(temp_asf)
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-            else:
-                res = pack_asf(filename, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                if res is not None:
-                    outfile, insize, outsize, share = res
-                    results['final'] = [insize, outsize, share]
-                    results['files'].append([filename, insize, outsize, share])
-                    return results
-                else:
-                    # If pack_asf failed, return None or empty results
-                    results['final'] = [f_insize, f_insize, 0.0]
-                    return results
-        
-        # Handle standalone 7z files (archive format, needs extraction and repacking)
-        if filetype == '7z':
-            # Extract, process contents, and repack as 7z with maximum compression
-            rnd = random.randint(1, 1000)
-            tempname = uuid.uuid4().hex
-            fpath = os.path.join(self.temppath, tempname)
-            os.mkdir(fpath)
-            fn = SZIP_PATH + ' x -y -o%s "%s"' % (fpath, filename)
-            if options['quiet']:
-                if os.name == 'nt':  # Windows
-                    fn = fn + ' > nul 2>&1'
-                else:  # Unix-like
-                    fn = fn + ' > /dev/null 2>&1'
-            if options['debug']:
-                logging.debug('Extracting 7z file: %s' % fn)
-            os.system(fn)
-            
-            # Deep walking. Looking into every directory and every file
-            if options['deep_walking']:
-                for root, dirs, files in os.walk(fpath):
-                    for name in files:
-                        ext = name.rsplit('.', 1)[-1].lower()
-                        fullname = os.path.join(root, name)
-                        res = None
-                        if ext in SUPPORTED_EXTS:
-                            if options['pack_archives']:
-                                res = self.repack_zip_file(fullname, fullname, options)
-                                if res is not None:
-                                    results['files'].append([fullname, res['final'][0], res['final'][1], res['final'][2]])
-                                    results['stats'][0] += 1
-                                    results['stats'][1] += res['stats'][1]
-                                    results['stats'][2] += res['stats'][2]
-                        else:
-                            if ext in ['jpg', 'jpeg']:
-                                if options['pack_images']:
-                                    res = pack_jpg(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), jpeg_quality=options.get('jpeg_quality'))
-                            elif ext in ['png', ]:
-                                if options['pack_images']:
-                                    res = pack_png(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), png_quality=options.get('png_quality'))
-                            elif ext == 'parquet':
-                                ultra = options.get('ultra', False)
-                                res = pack_parquet(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), ultra=ultra)
-                            elif ext == 'gz':
-                                res = pack_gzip(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'xz':
-                                res = pack_xz(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'bz2':
-                                res = pack_bz2(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'pdf':
-                                res = pack_pdf(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'gif':
-                                res = pack_gif(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'webp':
-                                res = pack_webp(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'svg':
-                                res = pack_svg(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext in ['tif', 'tiff']:
-                                res = pack_tif(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'wmv':
-                                wmv_lossless = options.get('wmv_lossless', False)
-                                res = pack_wmv(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                            elif ext == 'mp4':
-                                wmv_lossless = options.get('wmv_lossless', False)
-                                res = pack_mp4(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                            elif ext == 'avi':
-                                wmv_lossless = options.get('wmv_lossless', False)
-                                res = pack_avi(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                            elif ext == 'asf':
-                                wmv_lossless = options.get('wmv_lossless', False)
-                                res = pack_asf(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                            if res is not None:
-                                results['files'].append([name, res[1], res[2], res[3]])
-                                outfile, insize, outsize, share = res
-                                results['stats'][0] += 1
-                                results['stats'][1] += insize
-                                results['stats'][2] += outsize
-            
-            # Repack as 7z with maximum compression
-            if dryrun:
-                rpath = os.path.abspath(f_outfile)
-            else:
-                rpath = os.path.abspath(filename)
-            compression_level = options.get('compression_level', 9)
-            fn = self.toolpath + ' -t7z -y -mx%d a "%s" *' % (compression_level, rpath)
-            if options['quiet']:
-                if os.name == 'nt':  # Windows
-                    fn = fn + ' > nul 2>&1'
-                else:  # Unix-like
-                    fn = fn + ' > /dev/null 2>&1'
-            if options['debug']:
-                logging.debug('Repacking 7z file: %s' % fn)
-            # Execute 7z repacking cmd
-            os.chdir(fpath)
-            os.system(fn)
-            os.chdir(self.currpath)
-            rmtree(fpath)
-            # Calc size gains
-            outsize = os.path.getsize(f_outfile)
-            share = (f_insize - outsize) * 100.0 / f_insize if f_insize > 0 else 0
-            if not options['quiet']:
-                if dryrun:
-                    logging.debug('File %s would shrink %d -> %d (%f%%) [DRYRUN]' % (filename.encode('utf8'), f_insize, outsize, share))
-                else:
-                    logging.debug('File %s shrinked %d -> %d (%f%%)' % (f_outfile.encode('utf8'), f_insize, outsize, share))
-            results['final'] = [f_insize, outsize, share]
-            # Clean up temporary output file in dryrun mode
-            if dryrun and os.path.exists(f_outfile) and f_outfile != filename:
-                os.remove(f_outfile)
-            return results
-        
-        # Handle standalone RAR files (archive format, needs extraction and repacking)
-        if filetype == 'rar':
-            # Check if rar tool is available
-            rar_path = which(RAR_PATH)
-            if not rar_path:
-                if not options['quiet']:
-                    logging.warning('rar tool not found. RAR files can be extracted but not recompressed. Install WinRAR or rar command-line tool to enable RAR recompression.')
-                # Still extract and optimize contents, but recompress as 7z
-                use_7z_fallback = True
-            else:
-                use_7z_fallback = False
-            
-            # Extract, process contents, and repack as RAR (or 7z if rar tool unavailable)
-            rnd = random.randint(1, 1000)
-            tempname = uuid.uuid4().hex
-            fpath = os.path.join(self.temppath, tempname)
-            os.mkdir(fpath)
-            
-            # Try to extract using unrar first, fall back to 7zz if unrar is not available
-            unrar_path = which(UNRAR_PATH)
-            if unrar_path:
-                # Extract using unrar (preferred for RAR files)
-                # unrar x archive.rar extracts to current directory
-                # Use absolute path for filename since we're changing directories
-                abs_filename = abspath(filename)
-                # Change to output directory first, then extract
-                os.chdir(fpath)
-                fn = unrar_path + ' x -y "%s"' % abs_filename
-                if options['quiet']:
-                    if os.name == 'nt':  # Windows
-                        fn = fn + ' > nul 2>&1'
-                    else:  # Unix-like
-                        fn = fn + ' > /dev/null 2>&1'
-                if options['debug']:
-                    logging.debug('Extracting RAR file with unrar: %s' % fn)
-                os.system(fn)
-                os.chdir(self.currpath)
-            else:
-                # Fall back to 7zz if unrar is not available
-                if not options['quiet']:
-                    logging.warning('unrar tool not found, using 7zz for RAR extraction. Install unrar for better RAR support.')
-                fn = SZIP_PATH + ' x -y -o%s "%s"' % (fpath, filename)
-                if options['quiet']:
-                    if os.name == 'nt':  # Windows
-                        fn = fn + ' > nul 2>&1'
-                    else:  # Unix-like
-                        fn = fn + ' > /dev/null 2>&1'
-                if options['debug']:
-                    logging.debug('Extracting RAR file with 7zz: %s' % fn)
-                os.system(fn)
-            
-            # Deep walking. Looking into every directory and every file
-            if options['deep_walking']:
-                for root, dirs, files in os.walk(fpath):
-                    for name in files:
-                        ext = name.rsplit('.', 1)[-1].lower()
-                        fullname = os.path.join(root, name)
-                        res = None
-                        if ext in SUPPORTED_EXTS:
-                            if options['pack_archives']:
-                                res = self.repack_zip_file(fullname, fullname, options)
-                                if res is not None:
-                                    results['files'].append([fullname, res['final'][0], res['final'][1], res['final'][2]])
-                                    results['stats'][0] += 1
-                                    results['stats'][1] += res['stats'][1]
-                                    results['stats'][2] += res['stats'][2]
-                        else:
-                            if ext in ['jpg', 'jpeg']:
-                                if options['pack_images']:
-                                    res = pack_jpg(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), jpeg_quality=options.get('jpeg_quality'))
-                            elif ext in ['png', ]:
-                                if options['pack_images']:
-                                    res = pack_png(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), png_quality=options.get('png_quality'))
-                            elif ext == 'parquet':
-                                ultra = options.get('ultra', False)
-                                res = pack_parquet(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), ultra=ultra)
-                            elif ext == 'gz':
-                                res = pack_gzip(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'xz':
-                                res = pack_xz(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'bz2':
-                                res = pack_bz2(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'pdf':
-                                res = pack_pdf(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'gif':
-                                res = pack_gif(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'webp':
-                                res = pack_webp(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'svg':
-                                res = pack_svg(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext in ['tif', 'tiff']:
-                                res = pack_tif(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'wmv':
-                                wmv_lossless = options.get('wmv_lossless', False)
-                                res = pack_wmv(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                            elif ext == 'mp4':
-                                wmv_lossless = options.get('wmv_lossless', False)
-                                res = pack_mp4(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                            elif ext == 'avi':
-                                wmv_lossless = options.get('wmv_lossless', False)
-                                res = pack_avi(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                            elif ext == 'asf':
-                                wmv_lossless = options.get('wmv_lossless', False)
-                                res = pack_asf(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                            if res is not None:
-                                results['files'].append([name, res[1], res[2], res[3]])
-                                outfile, insize, outsize, share = res
-                                results['stats'][0] += 1
-                                results['stats'][1] += insize
-                                results['stats'][2] += outsize
-            
-            # Repack as RAR with maximum compression (or 7z if rar tool unavailable)
-            if dryrun:
-                rpath = os.path.abspath(f_outfile)
-            else:
-                rpath = os.path.abspath(filename)
-            
-            if use_7z_fallback:
-                # Fallback to 7z compression if rar tool is not available
-                compression_level = options.get('compression_level', 9)
-                # Create 7z file with .7z extension
-                if dryrun:
-                    rpath_7z = f_outfile.rsplit('.', 1)[0] + '.7z'
-                else:
-                    rpath_7z = rpath.rsplit('.', 1)[0] + '.7z'
-                fn = self.toolpath + ' -t7z -y -mx%d a "%s" *' % (compression_level, rpath_7z)
-                if options['quiet']:
-                    if os.name == 'nt':  # Windows
-                        fn = fn + ' > nul 2>&1'
-                    else:  # Unix-like
-                        fn = fn + ' > /dev/null 2>&1'
-                if options['debug']:
-                    logging.debug('Repacking RAR file as 7z (rar tool not available): %s' % fn)
-                rpath = rpath_7z
-            else:
-                # Use rar tool for recompression
-                # RAR compression levels: -m0 (store), -m1 (fastest), -m2, -m3, -m4, -m5 (default), 5 (best)
-                # Map compression_level (1-9) to RAR levels: 1-2 -> -m3, 3-4 -> -m4, 5-6 -> -m5, 7-9 -> -m6
-                compression_level = options.get('compression_level', 9)
-                if compression_level <= 2:
-                    rar_level = '-m3'
-                elif compression_level <= 4:
-                    rar_level = '-m4'
-                elif compression_level <= 6:
-                    rar_level = '-m5'
-                else:
-                    rar_level = '-m5'  # Best compression
-                
-                # RAR command: rar a -r -inul -m6 output.rar *
-                # -a: add files, -r: recurse subdirectories, -inul: suppress messages, -m6: best compression
-                fn = rar_path + ' a -r ' + rar_level + ' -y "%s" *' % rpath
-                if options['quiet']:
-                    if os.name == 'nt':  # Windows
-                        fn = fn + ' > nul 2>&1'
-                    else:  # Unix-like
-                        fn = fn + ' > /dev/null 2>&1'
-                if options['debug']:
-                    logging.debug('Repacking RAR file: %s' % fn)
-            
-            # Execute repacking cmd
-            os.chdir(fpath)
-            os.system(fn)
-            os.chdir(self.currpath)
-            rmtree(fpath)
-            
-            # Calc size gains
-            if use_7z_fallback:
-                # If we created a 7z file, use that path
-                outsize = os.path.getsize(rpath) if os.path.exists(rpath) else f_insize
-            else:
-                outsize = os.path.getsize(f_outfile) if os.path.exists(f_outfile) else f_insize
-            share = (f_insize - outsize) * 100.0 / f_insize if f_insize > 0 else 0
-            if not options['quiet']:
-                if dryrun:
-                    if use_7z_fallback:
-                        logging.debug('File %s would be converted to 7z and shrink %d -> %d (%f%%) [DRYRUN]' % (filename.encode('utf8'), f_insize, outsize, share))
-                    else:
-                        logging.debug('File %s would shrink %d -> %d (%f%%) [DRYRUN]' % (filename.encode('utf8'), f_insize, outsize, share))
-                else:
-                    if use_7z_fallback:
-                        logging.debug('File %s converted to 7z and shrinked %d -> %d (%f%%)' % (rpath.encode('utf8'), f_insize, outsize, share))
-                        # Remove original RAR file if conversion was successful
-                        if os.path.exists(filename) and filename != rpath:
-                            try:
-                                os.remove(filename)
-                            except Exception:
-                                pass
-                    else:
-                        logging.debug('File %s shrinked %d -> %d (%f%%)' % (f_outfile.encode('utf8'), f_insize, outsize, share))
-            results['final'] = [f_insize, outsize, share]
-            # Clean up temporary output file in dryrun mode
-            if dryrun and os.path.exists(f_outfile) and f_outfile != filename:
-                os.remove(f_outfile)
-            return results
-        
-        rnd = random.randint(1, 1000)
-        tempname = uuid.uuid4().hex
-        if filetype in SUPPORTED_EXTS:
-            fpath = os.path.join(self.temppath, tempname)  # os.path.basename(filename) + '_' + str(rnd)
-            os.mkdir(fpath)
-            fn = SZIP_PATH + ' x -y -o%s "%s"' % (fpath, filename)
-            if options['quiet']:
-                fn = fn + ' > /dev/null 2>&1'
-            if options['debug']:
-                logging.debug('Filename %s' % fn)
-            os.system(fn)
-            if options['debug']:
-                logging.info('Filetype %s' % str(filetype))
-            rpath = os.path.abspath(filename)
-            # Deep walking. Looking into every directory and every file
-            if options['deep_walking']:
-                for root, dirs, files in os.walk(fpath):
-                    for name in files:
-                        ext = name.rsplit('.', 1)[-1].lower()
-                        fullname = os.path.join(root, name)
-                        res = None
-                        if ext in SUPPORTED_EXTS:
-                            if options['pack_archives']:
-                                res = self.repack_zip_file(fullname, fullname, options)
-                                if res is not None:
-                                    results['files'].append([fullname, res['final'][0], res['final'][1], res['final'][2]])
-                                    results['stats'][0] += 1
-                                    results['stats'][1] += res['stats'][1]
-                                    results['stats'][2] += res['stats'][2]
-                        else:
-                            if ext in ['jpg', 'jpeg']:
-                                if options['pack_images']:
-                                    res = pack_jpg(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), jpeg_quality=options.get('jpeg_quality'))
-                            elif ext in ['png', ]:
-                                if options['pack_images']:
-                                    res = pack_png(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), png_quality=options.get('png_quality'))
-                            elif ext == 'parquet':
-                                ultra = options.get('ultra', False)
-                                res = pack_parquet(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), ultra=ultra)
-                            elif ext == 'gz':
-                                res = pack_gzip(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'xz':
-                                res = pack_xz(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'bz2':
-                                res = pack_bz2(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'pdf':
-                                res = pack_pdf(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'gif':
-                                res = pack_gif(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'webp':
-                                res = pack_webp(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'svg':
-                                res = pack_svg(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext in ['tif', 'tiff']:
-                                res = pack_tif(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False))
-                            elif ext == 'wmv':
-                                wmv_lossless = options.get('wmv_lossless', False)
-                                res = pack_wmv(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                            elif ext == 'mp4':
-                                wmv_lossless = options.get('wmv_lossless', False)
-                                res = pack_mp4(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                            elif ext == 'avi':
-                                wmv_lossless = options.get('wmv_lossless', False)
-                                res = pack_avi(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                            elif ext == 'asf':
-                                wmv_lossless = options.get('wmv_lossless', False)
-                                res = pack_asf(fullname, debug=options.get('debug', False), quiet=options.get('quiet', False), lossless=wmv_lossless)
-                            if res is not None:
-                                results['files'].append([name, res[1], res[2], res[3]])
-                                outfile, insize, outsize, share = res
-                                results['stats'][0] += 1
-                                results['stats'][1] += insize
-                                results['stats'][2] += outsize
-            else:
-                # if not deep walking we use only preset of directories
-                mediapaths = []
-                for mp in EXT_IMAGE_MAP[filetype]:
-                    mediapaths.append(fpath + mp)
-                    for mp in mediapaths:
-                        if options['pack_images']:
-                            res = self.pack_images(mp, True, options)
-                            if res is not None:
-#                                results['files'].append([fn, res['stats'][1], res['stats'][2],
-#                                                        (res['stats'][1] - res['stats'][2]) * 100.0 / res['stats'][
-#                                                           1] if res['stats'][1] > 0 else 0])
-                                results['stats'][0] += 1
-                                results['stats'][1] += res['stats'][1]
-                                results['stats'][2] += res['stats'][2]
+        filetype = filename.rsplit('.', 1)[-1].lower() if '.' in filename else ''
+        dest = os.path.abspath(outfile or filename)
 
-#            if filetype in ZIP_SENSITIVE_EXTS:
-#                fn = ZIP_PATH + ' -r -q -9 "%s" *' % (rpath,)
-#            else:
-            # Use temporary output file for dryrun
-            if dryrun:
-                rpath = os.path.abspath(f_outfile)
+        standalone = _dispatch_packer(filetype, filename, options)
+        if standalone is not None or filetype in _PACKERS:
+            summary = RepackSummary(filepath=filename, total_insize=f_insize)
+            if standalone is None:
+                summary.total_outsize = f_insize
+                return summary
+            summary.total_outsize = standalone.outsize
+            summary.results.append(standalone)
+            return summary
+
+        if filetype not in ARCHIVE_EXTS and filetype not in SUPPORTED_EXTS:
+            return _empty_summary(filename, f_insize)
+
+        return self._repack_container(filename, dest, f_insize, filetype, options)
+
+    def repack(
+        self, filename: str, outfile: Optional[str] = None,
+        options: Any = None,
+    ) -> RepackSummary:
+        """Library-facing alias for repack_zip_file."""
+        return self.repack_zip_file(filename, outfile=outfile, def_options=options)
+
+    def _repack_container(
+        self, filename: str, dest: str, f_insize: int,
+        filetype: str, options: Dict[str, Any],
+    ) -> RepackSummary:
+        summary = RepackSummary(filepath=filename, total_insize=f_insize)
+        fpath = os.path.join(self.temppath, uuid.uuid4().hex)
+        try:
+            if filetype == 'rar':
+                extracted = self._extract_rar(filename, fpath, options)
             else:
-                rpath = os.path.abspath(filename)
-            compression_level = options.get('compression_level', 9)
-            fn = self.toolpath + ' -tzip -y -mx%d a "%s" *' % (compression_level, rpath)
-            if options['quiet']:
-                fn = fn + ' > /dev/null 2>&1'
-            # Execute zip shrinking cmd
-            os.chdir(fpath)
-            os.system(fn)
-            os.chdir(self.currpath)
-            rmtree(fpath)
-            # Calc size gains
-            outsize = os.path.getsize(f_outfile)
-            share = (f_insize - outsize) * 100.0 / f_insize if f_insize > 0 else 0
-            if not options['quiet']:
-                if dryrun:
-                    logging.debug('File %s would shrink %d -> %d (%f%%) [DRYRUN]' % (filename.encode('utf8'), f_insize, outsize, share))
+                extracted = self._extract_7z(filename, fpath, options)
+            if not extracted:
+                summary.total_outsize = f_insize
+                return summary
+
+            if options.get('deep_walking', True):
+                self._deep_walk(fpath, options, summary)
+
+            if filetype == 'rar':
+                self._repack_rar(
+                    fpath, dest, filename, options, summary, f_insize
+                )
+            elif filetype == '7z':
+                self._write_archive(
+                    fpath, dest, options, summary, f_insize, '7z', filetype
+                )
+            else:
+                self._write_archive(
+                    fpath, dest, options, summary, f_insize, 'zip', filetype
+                )
+            return summary
+        finally:
+            _remove_quietly(fpath)
+
+    def _extract_7z(
+        self, filename: str, fpath: str, options: Dict[str, Any]
+    ) -> bool:
+        szip = resolve_szip()
+        if szip is None:
+            logging.warning('7zz/7z not found; cannot extract %s', filename)
+            return False
+        original = os.path.getsize(filename)
+        planned = _planned_extract_size(filename, szip, options)
+        if _extract_over_limit(planned, original, options, filename):
+            return False
+        os.makedirs(fpath, exist_ok=True)
+        cmd = [szip, 'x', '-y', f'-o{fpath}', filename]
+        result = _run_command(
+            cmd, quiet=options.get('quiet', False),
+            debug=options.get('debug', False),
+        )
+        if result is None:
+            return False
+        if planned is None:
+            extracted = dir_total_size(fpath)
+            if _extract_over_limit(extracted, original, options, filename):
+                return False
+        return True
+
+    def _extract_rar(
+        self, filename: str, fpath: str, options: Dict[str, Any]
+    ) -> bool:
+        os.makedirs(fpath, exist_ok=True)
+        unrar_path = resolve_tool('unrar')
+        if unrar_path:
+            cmd = [unrar_path, 'x', '-y', abspath(filename)]
+            result = _run_command(
+                cmd, quiet=options.get('quiet', False),
+                debug=options.get('debug', False), cwd=fpath,
+            )
+            if result is None:
+                return False
+            extracted = dir_total_size(fpath)
+            original = os.path.getsize(filename)
+            return not _extract_over_limit(
+                extracted, original, options, filename
+            )
+        if not options.get('quiet', False):
+            logging.warning('unrar not found, using 7zz/7z for RAR extraction')
+        return self._extract_7z(filename, fpath, options)
+
+    def _deep_walk(
+        self, fpath: str, options: Dict[str, Any], summary: RepackSummary
+    ) -> None:
+        for root, dirs, files in os.walk(fpath):
+            for name in files:
+                ext = name.rsplit('.', 1)[-1].lower() if '.' in name else ''
+                fullname = os.path.join(root, name)
+                if ext in ARCHIVE_EXTS:
+                    if not options.get('pack_archives', True):
+                        continue
+                    nested = self.repack_zip_file(fullname, fullname, options)
+                    if nested.total_insize:
+                        summary.results.append(PackResult(
+                            fullname, nested.total_insize, nested.total_outsize,
+                            nested.total_savings_pct,
+                        ))
+                        summary.inner_count += 1
+                        summary.inner_insize += nested.total_insize
+                        summary.inner_outsize += nested.total_outsize
                 else:
-                    logging.debug('File %s shrinked %d -> %d (%f%%)' % (f_outfile.encode('utf8'), f_insize, outsize, share))
-            results['final'] = [f_insize, outsize, share]
-            # Clean up temporary output file in dryrun mode
-            if dryrun and os.path.exists(f_outfile) and f_outfile != filename:
-                os.remove(f_outfile)
-            return results
+                    res = _dispatch_packer(ext, fullname, options)
+                    if res is not None:
+                        summary.results.append(res)
+                        summary.inner_count += 1
+                        summary.inner_insize += res.insize
+                        summary.inner_outsize += res.outsize
 
-if __name__ == "__main__":
-	dr = FileRepacker()
-	results = dr.repack_zip_file(sys.argv[1])
+    def _write_archive(
+        self, fpath: str, dest: str, options: Dict[str, Any],
+        summary: RepackSummary, f_insize: int, archive_type: str,
+        source_ext: str = '',
+    ) -> None:
+        if archive_type == 'zip' and source_ext in ZIP_SENSITIVE_EXTS:
+            if self._write_infozip(fpath, dest, options, summary, f_insize):
+                return
+        szip = resolve_szip()
+        if szip is None:
+            summary.total_outsize = f_insize
+            return
+        suffix = '.zip' if archive_type == 'zip' else '.7z'
+        temp_out = _make_temp(suffix)
+        _remove_quietly(temp_out)
+        level = options.get('compression_level', 9)
+        cmd = [szip, f'-t{archive_type}', '-y', f'-mx{level}', 'a', temp_out, '*']
+        result = _run_command(
+            cmd, quiet=options.get('quiet', False),
+            debug=options.get('debug', False), cwd=fpath,
+        )
+        if result is None:
+            _remove_quietly(temp_out)
+            summary.total_outsize = f_insize
+            return
+        verify = 'zip' if archive_type == 'zip' else '7z'
+        packed = _commit_output(
+            temp_out, dest, f_insize, verify=verify,
+            dryrun=options.get('dryrun', False),
+            keep_if_larger=options.get('keep_if_larger', True),
+            min_savings=options.get('min_savings'),
+        )
+        if packed is None:
+            summary.total_outsize = f_insize
+            return
+        summary.total_outsize = packed.outsize
 
+    def _write_infozip(
+        self, fpath: str, dest: str, options: Dict[str, Any],
+        summary: RepackSummary, f_insize: int,
+    ) -> bool:
+        """Rewrite OOXML with Info-ZIP when available. False = try 7zz."""
+        zip_tool = resolve_tool('zip')
+        if zip_tool is None:
+            return False
+        temp_out = _make_temp('.zip')
+        _remove_quietly(temp_out)
+        level = min(9, max(1, int(options.get('compression_level', 9))))
+        cmd = [zip_tool, '-r', f'-{level}', '-X', temp_out, '*']
+        result = _run_command(
+            cmd, quiet=options.get('quiet', False),
+            debug=options.get('debug', False), cwd=fpath,
+        )
+        if result is None:
+            _remove_quietly(temp_out)
+            return False
+        packed = _commit_output(
+            temp_out, dest, f_insize, verify='zip',
+            dryrun=options.get('dryrun', False),
+            keep_if_larger=options.get('keep_if_larger', True),
+            min_savings=options.get('min_savings'),
+        )
+        if packed is None:
+            return False
+        summary.total_outsize = packed.outsize
+        return True
+
+    def _repack_rar(
+        self, fpath: str, dest: str, filename: str,
+        options: Dict[str, Any], summary: RepackSummary, f_insize: int,
+    ) -> None:
+        rar_path = resolve_tool('rar')
+        if not rar_path:
+            if not options.get('quiet', False):
+                logging.warning('rar tool not found. Recompressing as 7z.')
+            dest_7z = dest.rsplit('.', 1)[0] + '.7z'
+            self._write_archive(
+                fpath, dest_7z, options, summary, f_insize, '7z', 'rar'
+            )
+            if (
+                summary.total_outsize
+                and summary.total_outsize != f_insize
+                and not options.get('dryrun', False)
+                and dest_7z != filename
+                and os.path.exists(dest_7z)
+            ):
+                _remove_quietly(filename)
+            return
+
+        temp_out = _make_temp('.rar')
+        _remove_quietly(temp_out)
+        level = options.get('compression_level', 9)
+        if level <= 2:
+            rar_level = '-m3'
+        elif level <= 4:
+            rar_level = '-m4'
+        else:
+            rar_level = '-m5'
+        cmd = [rar_path, 'a', '-r', rar_level, '-y', temp_out, '*']
+        result = _run_command(
+            cmd, quiet=options.get('quiet', False),
+            debug=options.get('debug', False), cwd=fpath,
+        )
+        if result is None:
+            _remove_quietly(temp_out)
+            summary.total_outsize = f_insize
+            return
+        packed = _commit_output(
+            temp_out, dest, f_insize,
+            dryrun=options.get('dryrun', False),
+            keep_if_larger=options.get('keep_if_larger', True),
+            min_savings=options.get('min_savings'),
+        )
+        if packed is None:
+            summary.total_outsize = f_insize
+            return
+        summary.total_outsize = packed.outsize
+
+
+def pack_file_simple(filepath: str, pack_fn, **kwargs) -> Optional[PackResult]:
+    result = pack_fn(filepath, **kwargs)
+    if result is None:
+        return None
+    if isinstance(result, PackResult):
+        return result
+    return PackResult(
+        filepath=result[0], insize=result[1], outsize=result[2],
+        savings_pct=result[3],
+    )

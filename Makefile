@@ -1,4 +1,4 @@
-.PHONY: clean-pyc clean-build docs clean
+.PHONY: clean-pyc clean-build docs clean test lint
 SHELL := /bin/bash
 
 help:
@@ -6,9 +6,9 @@ help:
 	@echo "clean-build - remove build artifacts"
 	@echo "clean-pyc - remove Python file artifacts"
 	@echo "clean-test - remove test and coverage artifacts"
-	@echo "lint - check style with flake8"
+	@echo "lint - check style with ruff and mypy"
+	@echo "test - run pytest with coverage"
 	@echo "coverage - check code coverage quickly with the default Python"
-	@echo "docs - generate Sphinx HTML documentation, including API docs"
 	@echo "release - package and upload a release"
 	@echo "dist - package"
 
@@ -29,29 +29,23 @@ clean-test:
 	rm -fr .tox/
 	rm -f .coverage
 	rm -fr htmlcov/
+	rm -fr .pytest_cache
 
 lint:
-	flake8 filesrepack tests --config=./flake8
+	ruff check filerepack test
+	mypy filerepack test --ignore-missing-imports
+
+test:
+	pytest --cov=filerepack --cov-report=term-missing
 
 coverage:
-	coverage run --source filesrepack setup.py test
-	coverage report -m
-	coverage html
+	pytest --cov=filerepack --cov-report=html
 	python -m webbrowser htmlcov/index.html
 
-docs:
-	rm -f docs/filesrepack.rst
-	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ filesrepack
-	$(MAKE) -C docs clean
-	$(MAKE) -C docs html
-	python -m webbrowser docs/_build/html/index.html
-
 release: clean
-	python setup.py sdist upload
-	python setup.py bdist_wheel upload
+	python -m build
+	python -m twine upload dist/*
 
 dist: clean
-	python setup.py sdist
-	python setup.py bdist_wheel
+	python -m build
 	ls -l dist

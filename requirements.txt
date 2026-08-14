@@ -1,5 +1,5 @@
 typer>=0.9.0
 
-# Optional dependencies
-duckdb>=0.9.0  # For Parquet file compression support
-
+# Optional extras:
+#   pip install 'filerepack[parquet]'    # DuckDB Parquet support
+#   pip install 'filerepack[progress]'   # rich progress bars for --progress
