@@ -29,8 +29,16 @@ TOOL_SPECS: Tuple[ToolSpec, ...] = (
     ToolSpec('unrar', ('unrar',), 'FILEREPACK_UNRAR', False, 'RAR extraction'),
     ToolSpec('rar', ('rar',), 'FILEREPACK_RAR', False, 'RAR recompression'),
     ToolSpec('jpegoptim', ('jpegoptim',), 'FILEREPACK_JPEGOPTIM', False, 'JPEG'),
+    ToolSpec(
+        'jpegtran', ('jpegtran',), 'FILEREPACK_JPEGTRAN', False,
+        'JPEG (mozjpeg / libjpeg-turbo)',
+    ),
     ToolSpec('pngquant', ('pngquant',), 'FILEREPACK_PNGQUANT', False, 'lossy PNG'),
     ToolSpec('oxipng', ('oxipng',), 'FILEREPACK_OXIPNG', False, 'lossless PNG'),
+    ToolSpec(
+        'zopflipng', ('zopflipng',), 'FILEREPACK_ZOPFLIPNG', False,
+        'lossless PNG (ultra)',
+    ),
     ToolSpec('optipng', ('optipng',), 'FILEREPACK_OPTIPNG', False, 'lossless PNG'),
     ToolSpec('gifsicle', ('gifsicle',), 'FILEREPACK_GIFSICLE', False, 'GIF'),
     ToolSpec('dwebp', ('dwebp',), 'FILEREPACK_DWEBP', False, 'WebP decode'),
@@ -39,7 +47,7 @@ TOOL_SPECS: Tuple[ToolSpec, ...] = (
     ToolSpec('scour', ('scour',), 'FILEREPACK_SCOUR', False, 'SVG fallback'),
     ToolSpec(
         'convert', ('magick', 'convert'), 'FILEREPACK_CONVERT', False,
-        'TIFF/HEIC/AVIF',
+        'TIFF/HEIC/AVIF/BMP/TGA/PNM/PCX',
     ),
     ToolSpec('tiffcp', ('tiffcp',), 'FILEREPACK_TIFFCP', False, 'TIFF fallback'),
     ToolSpec('gs', ('gs', 'gswin64c', 'gswin32c'), 'FILEREPACK_GS', False, 'lossy PDF'),
@@ -75,6 +83,10 @@ TOOL_SPECS: Tuple[ToolSpec, ...] = (
     ToolSpec(
         'mp3packer', ('mp3packer',), 'FILEREPACK_MP3PACKER',
         False, 'lossless MP3',
+    ),
+    ToolSpec(
+        'optivorbis', ('optivorbis',), 'FILEREPACK_OPTIVORBIS',
+        False, 'Ogg Vorbis/Opus',
     ),
     ToolSpec(
         'gdcmconv', ('gdcmconv',), 'FILEREPACK_GDCMCONV',

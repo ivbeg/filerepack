@@ -144,7 +144,43 @@ class TestIdentifyFilename:
         kind = identify_filename('pic.jfif')
         assert kind is not None
         assert kind.family == 'standalone'
-        assert kind.packer == 'jfif'
+        assert kind.packer == 'jpg'
+
+    def test_sqlite_db_alias(self):
+        kind = identify_filename('notes.db')
+        assert kind is not None
+        assert kind.family == 'standalone'
+        assert kind.packer == 'sqlite'
+
+    def test_apng_and_cur_aliases(self):
+        assert identify_filename('icon.apng').packer == 'png'
+        assert identify_filename('pointer.cur').packer == 'ico'
+
+    def test_m4b_is_m4a(self):
+        assert identify_filename('book.m4b').packer == 'm4a'
+
+    def test_ogg_opus(self):
+        assert identify_filename('a.ogg').packer == 'ogg'
+        assert identify_filename('a.opus').packer == 'ogg'
+
+    def test_xml_aliases(self):
+        for name in ('a.xml', 'a.kml', 'book.fb2', 'style.xsl'):
+            kind = identify_filename(name)
+            assert kind is not None
+            assert kind.packer == 'xml'
+
+    def test_pk3_is_zip(self):
+        kind = identify_filename('pak.pk3')
+        assert kind is not None
+        assert kind.family == 'zip'
+
+    def test_deb_unsupported(self):
+        assert identify_filename('pkg.deb') is None
+
+    def test_include_ext_png_matches_apng(self):
+        from filerepack.formats import filename_exts
+        assert 'png' in filename_exts('icon.apng')
+        assert 'jpg' in filename_exts('preview.thm')
 
     def test_unsupported(self):
         assert identify_filename('notes.txt') is None
@@ -252,3 +288,9 @@ class TestIsSupported:
         assert is_supported_filename('scan.dcm')
         assert is_supported_filename('study.dicom')
         assert is_supported_filename('image.dic')
+        assert is_supported_filename('notes.json')
+        assert is_supported_filename('data.xml')
+        assert is_supported_filename('icon.apng')
+        assert is_supported_filename('notes.db')
+        assert is_supported_filename('song.ogg')
+        assert is_supported_filename('a.bmp')

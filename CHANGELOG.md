@@ -9,7 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- ZIP-family aliases: `war`, `ear`, `aar`, `nupkg`, `snupkg`, `vsix`, `xpi`, `crx`, `appx`, `msix`, `appxbundle`, `sketch`, `kra`, `ora`, `xd`, `usdz`, `ifczip`, `cbr`/`cb7`/`cbt`, OOXML siblings (`vsdm`, `vstx`, `vstm`, `vssx`, `vssm`, `sldm`, `ots`, `otg`, `odb`), ODF templates (`oth`, `otm`, `otc`, `oti`; `otf` only when the file is a ZIP, not an OpenType font), OpenOffice.org 1.x (`stw`, `stc`, `sti`, `std`, `sxg`, `sxm`), iWork templates (`kth`, `nmbtemplate`, `template`), `oxt`, `aab`, `xapk`/`apks`, `npz`, `fcstd`, `mcworld`/`mcpack`/`mcaddon`, `unitypackage`, `onepkg`, `wgt`, `ibooks`
+- ZIP-family aliases: `war`, `ear`, `aar`, `nupkg`, `snupkg`, `vsix`, `xpi`, `crx`, `appx`, `msix`, `appxbundle`, `sketch`, `kra`, `ora`, `xd`, `usdz`, `ifczip`, `cbr`/`cb7`/`cbt`, OOXML siblings (`vsdm`, `vstx`, `vstm`, `vssx`, `vssm`, `sldm`, `ots`, `otg`, `odb`), ODF templates (`oth`, `otm`, `otc`, `oti`; `otf` only when the file is a ZIP, not an OpenType font), OpenOffice.org 1.x (`stw`, `stc`, `sti`, `std`, `sxg`, `sxm`), iWork templates (`kth`, `nmbtemplate`, `template`), `oxt`, `aab`, `xapk`/`apks`, `npz`, `fcstd`, `mcworld`/`mcpack`/`mcaddon`, `unitypackage`, `onepkg`, `wgt`, `ibooks`, `air`, `pk3`, `xap`, `ipsw`, `osk`, `oex`, `puz`, `rmskin`, `notebook`, `nbk`
+- XML/JSON minify (including nested parts in ZIP/OOXML/ODF/EPUB): `.xml`, `.json`, `.xhtml`, `.kml`, `.gpx`, `.dae`, `.rss`, `.atom`, `.xmp`, `.xsl`, `.xslt`, `.fb2`. SVG falls back to XML minify when svgo/scour are missing; `data:` image URIs are packed
+- Cover art in MP3/FLAC/M4A/MP4/Ogg/APE via optional `filerepack[media]` (mutagen)
+- Lossless PDF image-stream walking via optional `filerepack[pdf]` (pikepdf); `--lossy` still uses Ghostscript
+- `jpegtran` lossless JPEG pass; `zopflipng` on `--ultra` PNG; `--keep-meta` to keep JPEG/PNG metadata
+- Images: BMP, TGA, PNM, PCX, APNG, CUR; JPEG aliases `jif`/`jfi`/`thm`
+- Ogg Vorbis/Opus via optional `optivorbis`; `.m4b` follows the M4A path; SQLite `.db` alias
 - Tarball walk: `tar`, `tar.gz`/`tgz`, `tar.bz2`/`tbz2`, `tar.xz`/`txz`, `tar.zst`/`tzst`, `tar.br`, `tar.lz4`, `tar.lzo`/`tzo`, `tar.lz`/`tlz`, plus `gem`/`crate`. Inner files are optimized, then the archive is rewritten. Compressed streams whose payload is a tar (`.gz`, `.zst`, `.lz4`, …) are detected by peeking the first 512 decompressed bytes
 - Stream codecs: `lz4`, `lz` (lzip), `lzma`, `lzo`, Unix `compress` (`.Z`)
 - Containers: Microsoft Cabinet (`cab`) and WIM (`wim`)
@@ -22,8 +28,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `--pdf-profile screen|ebook|printer|prepress|default` for Ghostscript Distiller presets (implies lossy PDF)
 - Data: SQLite `VACUUM` (`sqlite`, `gpkg`, `mbtiles`), ORC/Avro/Feather/Arrow (optional extras), HDF5 (`h5repack`), NetCDF (`nccopy`)
 - Fonts: WOFF/WOFF2 via fonttools or `woff2_compress`
-- Optional extras: `filerepack[data]`, `filerepack[fonts]`
-- `filerepack doctor` prints OS-specific install commands (Homebrew, apt, dnf, pacman, Chocolatey, winget, …) for missing tools. `mp3packer` is not packaged; doctor points at the GitHub release with macOS/Linux/Windows binaries, and `docs/tools.md` has install steps
+- Optional extras: `filerepack[data]`, `filerepack[fonts]`, `filerepack[media]`, `filerepack[pdf]`
+- `filerepack doctor` prints OS-specific install commands (Homebrew, apt, dnf, pacman, Chocolatey, winget, …) for missing tools. `mp3packer` and `optivorbis` are not packaged; doctor points at their GitHub releases with macOS/Linux/Windows binaries, and `docs/tools.md` has install steps
 - `filerepack repack --progress` shows a progress bar (on by default on a TTY). Archives report extract / inner-file / rewrite stages
 
 ### Changed
@@ -31,6 +37,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - File type detection uses compound suffixes (`archive.tar.gz`) instead of only the last extension
 - `--include-ext tar.gz` matches compound names; `--include-ext gz` still matches them too
 - `--lossy` PDF uses Ghostscript `/ebook` (150 dpi) instead of `/prepress`, which actually downsamples scanned pages. `--pdf-profile prepress` restores the previous print-quality path. `--jpeg-quality` now also sets Distiller QFactor for images inside PDFs
+- `optivorbis` install hints point at GitHub CLI zips. Cargo cannot install the CLI (`optivorbis` on crates.io is a library; `cargo install` has no `--package`)
 
 ### Fixed
 

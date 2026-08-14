@@ -263,6 +263,9 @@ _VERIFY_PREFIXES = {
     'jpg': b'\xff\xd8',
     'jpeg': b'\xff\xd8',
     'png': b'\x89PNG',
+    'bmp': b'BM',
+    'ogg': b'OggS',
+    'opus': b'OggS',
     'gif': b'GIF8',
     'parquet': b'PAR1',
     'orc': b'ORC',
@@ -277,6 +280,7 @@ _VERIFY_PREFIXES = {
     'ico': b'\x00\x00\x01\x00',
     'icns': b'icns',
     'sqlite': b'SQLite format 3',
+    'db': b'SQLite format 3',
     'hdf5': b'\x89HDF\r\n\x1a\n',
     'h5': b'\x89HDF\r\n\x1a\n',
     'psd': b'8BPS',
@@ -303,6 +307,14 @@ def _verify_special(path: str, kind: str, header: bytes) -> bool:
         'svg': lambda: (
             b'<svg' in header.lower() or header.lower().lstrip().startswith(b'<')
         ),
+        'xml': lambda: header.lstrip().startswith(b'<') or header.startswith(
+            b'\xef\xbb\xbf<'
+        ),
+        'json': lambda: _json_magic(header),
+        'tga': lambda: os.path.getsize(path) > 18,
+        'pnm': lambda: header[:2] in (b'P1', b'P2', b'P3', b'P4', b'P5', b'P6'),
+        'pcx': lambda: header[:1] == b'\x0a',
+        'cur': lambda: header[:4] in (b'\x00\x00\x01\x00', b'\x00\x00\x02\x00'),
         'mp4': lambda: b'ftyp' in header or os.path.getsize(path) > 32,
         'mov': lambda: b'ftyp' in header or os.path.getsize(path) > 32,
         'm4v': lambda: b'ftyp' in header or os.path.getsize(path) > 32,
@@ -338,6 +350,11 @@ def _verify_special(path: str, kind: str, header: bytes) -> bool:
     if checker is None:
         return True
     return checker()
+
+
+def _json_magic(header: bytes) -> bool:
+    stripped = header.lstrip().lstrip(b'\xef\xbb\xbf')
+    return stripped[:1] in (b'{', b'[')
 
 
 def _arrow_magic(header: bytes) -> bool:

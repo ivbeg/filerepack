@@ -29,6 +29,7 @@ filerepack bulk <directory> [OPTIONS]
 | `--wmv-lossless` | Video CRF 0 (or VP9 lossless for WebM) |
 | `--convert-container` / `--no-convert-container` | WMV/AVI/ASF → MP4 (default: convert) |
 | `--allow-grow` | Keep output even if larger |
+| `--keep-meta` | Keep JPEG/PNG metadata (default strips EXIF/ICC) |
 | `--max-extract-size` | Skip archive extract if uncompressed size exceeds this (`0` disables; default 8GB, also 100× the archive) |
 | `--ultra` | Parquet zstd level 22 |
 | `--json` / `--csv` | Machine-readable output (mutually exclusive) |
@@ -37,7 +38,7 @@ filerepack bulk <directory> [OPTIONS]
 | `--progress` | Progress bar (`rich` if installed). `repack` is on for a TTY (`--no-progress` to hide); `bulk` needs `--progress` |
 | `--progress-interval N` | Interval when `rich` is not installed (default 10) |
 
-JPEG/PNG/PDF are lossless unless `--lossy`, `--pdf-profile`, or a quality flag is set. Lossy PDF defaults to Ghostscript `/ebook` (150 dpi) because `/prepress` barely shrinks scanned pages. Use `--pdf-profile prepress` for the old print-quality Ghostscript path. DICOM is always lossless JPEG-LS (`gdcmconv` or `dcmcjpls`); `--lossy` does not apply. Results that are not smaller are discarded unless `--allow-grow`.
+JPEG/PNG/PDF are lossless unless `--lossy`, `--pdf-profile`, or a quality flag is set. Lossy PDF defaults to Ghostscript `/ebook` (150 dpi) because `/prepress` barely shrinks scanned pages. Use `--pdf-profile prepress` for the old print-quality Ghostscript path. DICOM is always lossless JPEG-LS (`gdcmconv` or `dcmcjpls`); `--lossy` does not apply. Results that are not smaller are discarded unless `--allow-grow`. `--ultra` also tries `zopflipng` for PNG when it is installed. `--keep-meta` leaves JPEG/PNG metadata in place.
 
 ## bulk-only
 

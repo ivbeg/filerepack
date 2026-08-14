@@ -36,6 +36,7 @@ class RepackOptions:
     lossy: bool = False
     convert_container: bool = True
     keep_if_larger: bool = True
+    keep_meta: bool = False
     min_savings: Optional[float] = None
     max_extract_bytes: Optional[int] = None
     max_extract_ratio: Optional[float] = None

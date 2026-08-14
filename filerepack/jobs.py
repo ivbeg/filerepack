@@ -55,6 +55,7 @@ def process_file_job(job: Dict[str, Any]) -> Dict[str, Any]:
             lossy=bool(job.get('lossy')),
             convert_container=bool(job.get('convert_container', True)),
             keep_if_larger=bool(job.get('keep_if_larger', True)),
+            keep_meta=bool(job.get('keep_meta', False)),
             min_savings=job.get('min_savings'),
             max_extract_bytes=job.get('max_extract_bytes'),
             max_extract_ratio=job.get('max_extract_ratio'),

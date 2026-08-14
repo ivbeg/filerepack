@@ -36,6 +36,12 @@ PACKAGES: Dict[str, Dict[str, str]] = {
         'dnf': 'jpegoptim', 'pacman': 'jpegoptim', 'zypper': 'jpegoptim',
         'apk': 'jpegoptim', 'choco': 'jpegoptim',
     },
+    'jpegtran': {
+        'brew': 'jpeg', 'ports': 'jpeg', 'apt': 'libjpeg-turbo-progs',
+        'dnf': 'libjpeg-turbo-utils', 'pacman': 'libjpeg-turbo',
+        'zypper': 'libjpeg-turbo', 'apk': 'libjpeg-turbo',
+        'choco': 'mozjpeg', 'scoop': 'mozjpeg',
+    },
     'pngquant': {
         'brew': 'pngquant', 'ports': 'pngquant', 'apt': 'pngquant',
         'dnf': 'pngquant', 'pacman': 'pngquant', 'zypper': 'pngquant',
@@ -44,6 +50,10 @@ PACKAGES: Dict[str, Dict[str, str]] = {
     'oxipng': {
         'brew': 'oxipng', 'ports': 'oxipng', 'apt': 'oxipng', 'dnf': 'oxipng',
         'pacman': 'oxipng', 'choco': 'oxipng',
+    },
+    'zopflipng': {
+        'brew': 'zopfli', 'ports': 'zopfli', 'apt': 'zopfli', 'dnf': 'zopfli',
+        'pacman': 'zopfli', 'zypper': 'zopfli',
     },
     'optipng': {
         'brew': 'optipng', 'ports': 'optipng', 'apt': 'optipng',
@@ -188,6 +198,10 @@ PACKAGES: Dict[str, Dict[str, str]] = {
     },
     'mp3packer': {
         'url': 'https://github.com/Snesnopic/mp3packer/releases',
+        'note': 'not packaged; download the OS zip from',
+    },
+    'optivorbis': {
+        'url': 'https://github.com/OptiVorbis/OptiVorbis/releases',
         'note': 'not packaged; download the OS zip from',
     },
     'gdcmconv': {

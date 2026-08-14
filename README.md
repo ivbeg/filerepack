@@ -12,6 +12,8 @@ pip install 'filerepack[parquet]'    # DuckDB Parquet support
 pip install 'filerepack[data]'       # Parquet + ORC/Avro/Feather/Arrow
 pip install 'filerepack[fonts]'      # WOFF/WOFF2 via fonttools
 pip install 'filerepack[progress]'   # rich progress bars for repack and bulk --progress
+pip install 'filerepack[media]'      # mutagen cover-art walking in MP3/FLAC/M4A/Ogg/APE
+pip install 'filerepack[pdf]'        # pikepdf lossless PDF image-stream walking
 ```
 
 External tools are optional per format. See what you have and how to install the rest on this OS:
@@ -20,7 +22,7 @@ External tools are optional per format. See what you have and how to install the
 filerepack doctor
 ```
 
-Install commands use Homebrew or MacPorts on macOS, apt/dnf/pacman/zypper/apk on Linux, and Chocolatey/winget/Scoop on Windows. Full notes: [docs/tools.md](docs/tools.md). Override paths with `FILEREPACK_7ZZ` (and similar) or `~/.config/filerepack/config.toml`.
+Install commands use Homebrew or MacPorts on macOS, apt/dnf/pacman/zypper/apk on Linux, and Chocolatey/winget/Scoop on Windows. `mp3packer` and `optivorbis` are not packaged; doctor points at GitHub CLI zips. Full notes: [docs/tools.md](docs/tools.md). Override paths with `FILEREPACK_7ZZ` (and similar) or `~/.config/filerepack/config.toml`.
 
 ## Quick start
 
@@ -33,7 +35,7 @@ filerepack bulk ./photos --include-ext jpg,png,webp
 
 `filerepack repack` shows a progress bar on a TTY (`--no-progress` to hide it). `bulk` needs `--progress`. Install `filerepack[progress]` for a `rich` bar; otherwise progress prints every N files.
 
-JPEG, PNG, and PDF default to **lossless** tools. Opt into lossy codecs with `--lossy`, `--jpeg-quality`, `--png-quality`, or `--pdf-profile`. Lossy PDF uses Ghostscript `/ebook` (150 dpi) so scanned pages actually shrink; `--pdf-profile prepress` restores print-quality Ghostscript. `--jpeg-quality` also re-encodes images inside PDFs. Output that is not smaller than the original is discarded unless `--allow-grow`.
+JPEG, PNG, and PDF default to **lossless** tools. Opt into lossy codecs with `--lossy`, `--jpeg-quality`, `--png-quality`, or `--pdf-profile`. Lossy PDF uses Ghostscript `/ebook` (150 dpi) so scanned pages actually shrink; `--pdf-profile prepress` restores print-quality Ghostscript. `--jpeg-quality` also re-encodes images inside PDFs. Lossless JPEG/PNG strip metadata unless `--keep-meta`. Output that is not smaller than the original is discarded unless `--allow-grow`.
 
 ```bash
 filerepack repack scan.pdf --lossy
@@ -49,14 +51,14 @@ Full CLI: [docs/cli.md](docs/cli.md). Library API: [docs/library.md](docs/librar
 | Office / OOXML | docx, xlsx, pptx, odt, ods, odp, ott, oth, otm, sxw, stw, pages, key, kth, vsdx, vssx, … |
 | Archives | zip, 7z, rar, tar, tar.gz/tgz, tar.xz, tar.lzo, cab, wim, jar, epub, apk, aab, war, nupkg, oxt, … |
 | Compressed | gz, xz, bz2, zst, br, lz4, lz, lzma, lzo, Z |
-| Documents | pdf, ai (PDF-based) |
-| Images | jpg, png, gif, webp, svg/svgz, tif, avif, heic, jxl, jp2, exr, dng, ico, psd, dcm |
+| Documents | pdf, ai (PDF-based), xml, json, xhtml, kml, gpx, fb2, … |
+| Images | jpg, png, gif, webp, svg/svgz, tif, avif, heic, jxl, jp2, exr, dng, ico, cur, icns, bmp, tga, pnm, pcx, psd, dcm |
 | Video | mp4, mkv, webm, mov, m4v, wmv, avi, asf, 3gp, ts |
-| Audio | flac, m4a (ALAC), wv, ape, tta, oga, mp3 |
+| Audio | flac, m4a/m4b (ALAC), ogg/opus, wv, ape, tta, oga, mp3 |
 | Data | parquet, orc, avro, feather/arrow, sqlite, gpkg, mbtiles, hdf5, netcdf |
 | Fonts | woff, woff2 |
 
-WMV/AVI/ASF/3GP/MPEG-TS convert to MP4 unless `--no-convert-container`. MKV/WebM/MOV/M4V keep their container. `.tar.gz` and friends are unpacked so nested files can be optimized, then the tarball is rewritten. Signed installers (`deb`, `rpm`, `pkg`, `dmg`) are not rewritten. DICOM (`.dcm` / `.dicom` / `.dic`) is lossless JPEG-LS only; `--lossy` does not apply. Needs `gdcmconv` or `dcmcjpls`.
+WMV/AVI/ASF/3GP/MPEG-TS convert to MP4 unless `--no-convert-container`. MKV/WebM/MOV/M4V keep their container. `.tar.gz` and friends are unpacked so nested files can be optimized, then the tarball is rewritten. Signed installers (`deb`, `rpm`, `pkg`, `dmg`) are not rewritten. DICOM (`.dcm` / `.dicom` / `.dic`) is lossless JPEG-LS only; `--lossy` does not apply. Needs `gdcmconv` or `dcmcjpls`. Nested XML/JSON inside ZIP/OOXML is minified. Cover art inside MP3/FLAC/M4A/Ogg/APE is optimized when `filerepack[media]` is installed. Lossless PDF can walk image streams when `filerepack[pdf]` is installed.
 
 ## Safety
 

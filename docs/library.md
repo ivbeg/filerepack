@@ -34,6 +34,7 @@ options = RepackOptions(
     wmv_lossless=False,
     convert_container=True,
     keep_if_larger=True,
+    keep_meta=False,        # True keeps JPEG/PNG EXIF/ICC
     min_savings=None,
     max_extract_bytes=None,  # None = 8GiB default; 0 disables
     max_extract_ratio=None,  # None = 100× archive size
@@ -59,7 +60,7 @@ A plain `dict` is still accepted as `def_options=`.
 
 ```python
 from filerepack.repack import pack_gzip, pack_pdf, pack_jpg, pack_mp4
-from filerepack.codecs import pack_sqlite, pack_jxl, pack_dcm
+from filerepack.codecs import pack_sqlite, pack_jxl, pack_dcm, pack_xml, pack_json
 
 result = pack_sqlite("notes.sqlite")
 if result:

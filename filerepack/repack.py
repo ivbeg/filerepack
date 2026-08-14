@@ -473,20 +473,35 @@ def pack_heic(
 def pack_flac(
     filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
 ) -> Optional[PackResult]:
+    from .covers import optimize_embedded_covers
+
     flac = resolve_tool('flac')
-    if flac is None:
+    insize = os.path.getsize(filepath)
+    work = _make_temp('.flac')
+    copyfile(filepath, work)
+    optimize_embedded_covers(work, {
+        'debug': debug, 'quiet': quiet,
+        'pack_images': bool(commit.get('pack_images', True)),
+        'keep_meta': bool(commit.get('keep_meta', False)),
+        'lossy': bool(commit.get('lossy', False)),
+        'ultra': bool(commit.get('ultra', False)),
+    })
+    if flac is not None:
+        out_temp = _make_temp('.flac')
+        cmd = [flac, '--best', '--verify', '-f', '-o', out_temp, abspath(work)]
+        result = _run_command(cmd, quiet=quiet, debug=debug)
+        if result is not None:
+            _remove_quietly(work)
+            work = out_temp
+        else:
+            _remove_quietly(out_temp)
+    elif os.path.getsize(work) >= insize:
+        _remove_quietly(work)
         if debug:
             logging.warning('flac not installed')
         return None
-    insize = os.path.getsize(filepath)
-    out_temp = _make_temp('.flac')
-    cmd = [flac, '--best', '--verify', '-f', '-o', out_temp, abspath(filepath)]
-    result = _run_command(cmd, quiet=quiet, debug=debug)
-    if result is None:
-        _remove_quietly(out_temp)
-        return None
     return _commit_output(
-        out_temp, filepath, insize, verify='flac', **_commit_kwargs(**commit)
+        work, filepath, insize, verify='flac', **_commit_kwargs(**commit)
     )
 
 
@@ -547,6 +562,69 @@ def build_gs_pdf_cmd(
     return cmd
 
 
+def _maybe_walk_pdf_images(
+    abs_in: str, debug: bool, quiet: bool, commit: Dict[str, Any],
+) -> Tuple[str, Optional[str]]:
+    """Lossless pikepdf image-stream walk. Returns (source, temp-or-None)."""
+    from .pdf_streams import rebuild_pdf_images
+    walked = _make_temp('.pdf')
+    options = {
+        'debug': debug, 'quiet': quiet, 'pack_images': True,
+        'keep_meta': bool(commit.get('keep_meta', False)),
+        'ultra': bool(commit.get('ultra', False)),
+    }
+    if rebuild_pdf_images(abs_in, walked, options):
+        return walked, walked
+    _remove_quietly(walked)
+    return abs_in, None
+
+
+def _qpdf_linearize(
+    qpdf_path: Optional[str], walk_src: str, walked: Optional[str],
+    filepath: str, insize: int, debug: bool, quiet: bool, ck: Dict[str, Any],
+) -> Optional[PackResult]:
+    if not qpdf_path:
+        if walked:
+            return _commit_output(walked, filepath, insize, verify='pdf', **ck)
+        return None
+    tempfpath = _make_temp('.pdf')
+    cmd = [
+        qpdf_path, '--linearize', '--object-streams=generate',
+        '--compress-streams=y', walk_src, tempfpath,
+    ]
+    if debug:
+        logging.info('qpdf cmd: %s', ' '.join(cmd))
+    result = _run_command(cmd, quiet=quiet, debug=debug)
+    if result is None:
+        _remove_quietly(tempfpath)
+        if walked:
+            return _commit_output(walked, filepath, insize, verify='pdf', **ck)
+        return None
+    _remove_quietly(walked)
+    return _commit_output(tempfpath, filepath, insize, verify='pdf', **ck)
+
+
+def _gs_pdf(
+    gs_path: Optional[str], abs_in: str, filepath: str, insize: int,
+    gs_profile: str, jpeg_quality: Optional[int],
+    debug: bool, quiet: bool, ck: Dict[str, Any],
+) -> Optional[PackResult]:
+    if not gs_path:
+        return None
+    tempfpath = _make_temp('.pdf')
+    cmd = build_gs_pdf_cmd(
+        gs_path, abs_in, tempfpath, profile=gs_profile,
+        jpeg_quality=jpeg_quality,
+    )
+    if debug:
+        logging.info('ghostscript cmd: %s', ' '.join(cmd))
+    result = _run_command(cmd, quiet=quiet, debug=debug)
+    if result is None:
+        _remove_quietly(tempfpath)
+        return None
+    return _commit_output(tempfpath, filepath, insize, verify='pdf', **ck)
+
+
 def pack_pdf(
     filepath: str, debug: bool = False, quiet: bool = False,
     lossy: bool = False, pdf_profile: Optional[str] = None,
@@ -572,42 +650,20 @@ def pack_pdf(
     ck = _commit_kwargs(**commit)
     use_gs = bool(lossy or profile is not None or jpeg_quality is not None)
     gs_profile = profile or DEFAULT_LOSSY_PDF_PROFILE
-
-    def _try_qpdf() -> Optional[PackResult]:
-        if not qpdf_path:
-            return None
-        tempfpath = _make_temp('.pdf')
-        cmd = [
-            qpdf_path, '--linearize', '--object-streams=generate',
-            '--compress-streams=y', abs_in, tempfpath,
-        ]
-        if debug:
-            logging.info('qpdf cmd: %s', ' '.join(cmd))
-        result = _run_command(cmd, quiet=quiet, debug=debug)
-        if result is None:
-            _remove_quietly(tempfpath)
-            return None
-        return _commit_output(tempfpath, filepath, insize, verify='pdf', **ck)
-
-    def _try_gs() -> Optional[PackResult]:
-        if not gs_path:
-            return None
-        tempfpath = _make_temp('.pdf')
-        cmd = build_gs_pdf_cmd(
-            gs_path, abs_in, tempfpath, profile=gs_profile,
-            jpeg_quality=jpeg_quality,
-        )
-        if debug:
-            logging.info('ghostscript cmd: %s', ' '.join(cmd))
-        result = _run_command(cmd, quiet=quiet, debug=debug)
-        if result is None:
-            _remove_quietly(tempfpath)
-            return None
-        return _commit_output(tempfpath, filepath, insize, verify='pdf', **ck)
+    walk_src, walked = abs_in, None
+    if not use_gs:
+        walk_src, walked = _maybe_walk_pdf_images(abs_in, debug, quiet, commit)
 
     if use_gs:
-        return _try_gs() or _try_qpdf()
-    return _try_qpdf()
+        gs_result = _gs_pdf(
+            gs_path, abs_in, filepath, insize, gs_profile, jpeg_quality,
+            debug, quiet, ck,
+        )
+        if gs_result:
+            return gs_result
+    return _qpdf_linearize(
+        qpdf_path, walk_src, walked, filepath, insize, debug, quiet, ck,
+    )
 
 
 def pack_gif(
@@ -669,12 +725,12 @@ def pack_webp(
 def pack_svg(
     filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
 ) -> Optional[PackResult]:
+    from .markup import pack_xml, rewrite_data_uris
+
     svgo_path = resolve_tool('svgo')
     scour_path = resolve_tool('scour') if svgo_path is None else None
     if svgo_path is None and scour_path is None:
-        if debug:
-            logging.warning('svgo or scour not installed')
-        return None
+        return pack_xml(filepath, debug=debug, quiet=quiet, **commit)
     insize = os.path.getsize(filepath)
     tempfpath = _make_temp('.svg')
     abs_in = abspath(filepath)
@@ -689,7 +745,21 @@ def pack_svg(
     result = _run_command(cmd, quiet=quiet, debug=debug)
     if result is None:
         _remove_quietly(tempfpath)
-        return None
+        return pack_xml(filepath, debug=debug, quiet=quiet, **commit)
+    try:
+        with open(tempfpath, 'r', encoding='utf-8') as fh:
+            text = fh.read()
+        options = {
+            'debug': debug, 'quiet': quiet, 'pack_images': True,
+            'lossy': bool(commit.get('lossy', False)),
+            'keep_meta': bool(commit.get('keep_meta', False)),
+        }
+        rewritten = rewrite_data_uris(text, options)
+        if rewritten != text:
+            with open(tempfpath, 'w', encoding='utf-8') as fh:
+                fh.write(rewritten)
+    except (OSError, UnicodeError):
+        pass
     return _commit_output(
         tempfpath, filepath, insize, verify='svg', **_commit_kwargs(**commit)
     )
@@ -876,75 +946,152 @@ def pack_webm(
 
 def pack_jpg(
     filepath: str, debug: bool = False, quiet: bool = False,
-    jpeg_quality: Optional[int] = None, lossy: bool = False, **commit: Any,
+    jpeg_quality: Optional[int] = None, lossy: bool = False,
+    keep_meta: bool = False, **commit: Any,
 ) -> Optional[PackResult]:
     jpegoptim_path = resolve_tool('jpegoptim')
-    if jpegoptim_path is None:
+    jpegtran_path = resolve_tool('jpegtran')
+    if jpegoptim_path is None and jpegtran_path is None:
         if debug:
-            logging.warning('jpegoptim not installed')
+            logging.warning('jpegoptim/jpegtran not installed')
         return None
     insize = os.path.getsize(filepath)
-    tempfpath = _make_temp('.jpg')
+    work = _make_temp('.jpg')
+    copyfile(filepath, work)
+    ck = _commit_kwargs(**commit)
+    use_lossy = jpeg_quality is not None or lossy
+    try:
+        if jpegtran_path and not use_lossy:
+            _jpegtran_inplace(
+                jpegtran_path, work, keep_meta=keep_meta,
+                debug=debug, quiet=quiet,
+            )
+        if jpegoptim_path:
+            cmd = [jpegoptim_path, '-p', '-o']
+            if not keep_meta:
+                cmd.append('--strip-all')
+            if use_lossy:
+                quality = (
+                    jpeg_quality if jpeg_quality is not None
+                    else DEFAULT_JPEG_QUALITY
+                )
+                cmd.append(f'-m{quality}')
+            cmd.append(work)
+            result = _run_command(cmd, quiet=quiet, debug=debug)
+            if result is None and jpegtran_path is None:
+                return None
+        return _commit_output(work, filepath, insize, verify='jpg', **ck)
+    finally:
+        _remove_quietly(work)
+
+
+def _jpegtran_inplace(
+    jpegtran_path: str, work: str, keep_meta: bool,
+    debug: bool, quiet: bool,
+) -> None:
+    out = _make_temp('.jpg')
+    copy_mode = 'all' if keep_meta else 'none'
+    cmd = [
+        jpegtran_path, '-optimize', '-progressive',
+        '-copy', copy_mode, '-outfile', out, work,
+    ]
+    result = _run_command(cmd, quiet=quiet, debug=debug)
+    if result is None or not verify_output(out, 'jpg'):
+        _remove_quietly(out)
+        return
+    if os.path.getsize(out) < os.path.getsize(work):
+        os.replace(out, work)
+    else:
+        _remove_quietly(out)
+
+
+def _pngquant_lossy(
+    filepath: str, png_quality: Optional[str], debug: bool, quiet: bool,
+) -> Optional[str]:
+    pngquant_path = resolve_tool('pngquant')
+    if pngquant_path is None:
+        if debug:
+            logging.warning('pngquant not installed')
+        return None
+    tempfpath = _make_temp('.png')
     copyfile(filepath, tempfpath)
-    cmd = [jpegoptim_path, '--strip-all', '-p', '-o']
-    if jpeg_quality is not None or lossy:
-        quality = jpeg_quality if jpeg_quality is not None else DEFAULT_JPEG_QUALITY
-        cmd.append(f'-m{quality}')
-    cmd.append(tempfpath)
+    speed = {'high': '1', 'medium': '2', 'low': '3'}.get(png_quality or '', '1')
+    cmd = [pngquant_path, '--force', '--speed', speed, tempfpath]
     result = _run_command(cmd, quiet=quiet, debug=debug)
     if result is None:
         _remove_quietly(tempfpath)
         return None
-    return _commit_output(
-        tempfpath, filepath, insize, verify='jpg', **_commit_kwargs(**commit)
-    )
+    quant = tempfpath.rsplit('.', 1)[0] + '-fs8.png'
+    if os.path.exists(quant):
+        _remove_quietly(tempfpath)
+        return quant
+    return tempfpath
+
+
+def _png_lossless_candidates(
+    filepath: str, ultra: bool, keep_meta: bool, debug: bool, quiet: bool,
+) -> List[str]:
+    oxipng_path = resolve_tool('oxipng')
+    optipng_path = resolve_tool('optipng')
+    zopflipng_path = resolve_tool('zopflipng') if ultra else None
+    if oxipng_path is None and optipng_path is None and zopflipng_path is None:
+        if debug:
+            logging.warning('oxipng/optipng not installed for lossless PNG')
+        return []
+
+    candidates: List[str] = []
+    if oxipng_path or optipng_path:
+        tempfpath = _make_temp('.png')
+        copyfile(filepath, tempfpath)
+        if oxipng_path:
+            cmd = [oxipng_path, '-o', '4', '-q', tempfpath]
+            if not keep_meta:
+                cmd[3:3] = ['--strip', 'safe']
+        else:
+            cmd = [optipng_path or '', '-o7', '-quiet', tempfpath]
+        result = _run_command(cmd, quiet=quiet, debug=debug)
+        if result is not None and verify_output(tempfpath, 'png'):
+            candidates.append(tempfpath)
+        else:
+            _remove_quietly(tempfpath)
+
+    if zopflipng_path:
+        z_out = _make_temp('.png')
+        cmd = [zopflipng_path, '-y']
+        if keep_meta:
+            cmd.append('--keepchunks=iCCP,sRGB,gAMA,pHYs,eXIf,tEXt,zTXt,iTXt')
+        cmd.extend([abspath(filepath), z_out])
+        result = _run_command(cmd, quiet=quiet, debug=debug)
+        if result is not None and verify_output(z_out, 'png'):
+            candidates.append(z_out)
+        else:
+            _remove_quietly(z_out)
+    return candidates
 
 
 def pack_png(
     filepath: str, debug: bool = False, quiet: bool = False,
-    png_quality: Optional[str] = None, lossy: bool = False, **commit: Any,
+    png_quality: Optional[str] = None, lossy: bool = False,
+    ultra: bool = False, keep_meta: bool = False, **commit: Any,
 ) -> Optional[PackResult]:
     insize = os.path.getsize(filepath)
-    use_lossy = lossy or png_quality is not None
     ck = _commit_kwargs(**commit)
-
-    if use_lossy:
-        pngquant_path = resolve_tool('pngquant')
-        if pngquant_path is None:
-            if debug:
-                logging.warning('pngquant not installed')
+    if lossy or png_quality is not None:
+        tempfpath = _pngquant_lossy(filepath, png_quality, debug, quiet)
+        if tempfpath is None:
             return None
-        tempfpath = _make_temp('.png')
-        copyfile(filepath, tempfpath)
-        speed = {'high': '1', 'medium': '2', 'low': '3'}.get(png_quality or '', '1')
-        cmd = [pngquant_path, '--force', '--speed', speed, tempfpath]
-        result = _run_command(cmd, quiet=quiet, debug=debug)
-        if result is None:
-            _remove_quietly(tempfpath)
-            return None
-        quant = tempfpath.rsplit('.', 1)[0] + '-fs8.png'
-        if os.path.exists(quant):
-            _remove_quietly(tempfpath)
-            tempfpath = quant
         return _commit_output(tempfpath, filepath, insize, verify='png', **ck)
 
-    oxipng_path = resolve_tool('oxipng')
-    optipng_path = resolve_tool('optipng')
-    if oxipng_path is None and optipng_path is None:
-        if debug:
-            logging.warning('oxipng/optipng not installed for lossless PNG')
+    candidates = _png_lossless_candidates(
+        filepath, ultra, keep_meta, debug, quiet,
+    )
+    if not candidates:
         return None
-    tempfpath = _make_temp('.png')
-    copyfile(filepath, tempfpath)
-    if oxipng_path:
-        cmd = [oxipng_path, '-o', '4', '--strip', 'safe', '-q', tempfpath]
-    else:
-        cmd = [optipng_path or '', '-o7', '-quiet', tempfpath]
-    result = _run_command(cmd, quiet=quiet, debug=debug)
-    if result is None:
-        _remove_quietly(tempfpath)
-        return None
-    return _commit_output(tempfpath, filepath, insize, verify='png', **ck)
+    best = min(candidates, key=os.path.getsize)
+    for path in candidates:
+        if path != best:
+            _remove_quietly(path)
+    return _commit_output(best, filepath, insize, verify='png', **ck)
 
 
 @dataclass
@@ -955,14 +1102,15 @@ class PackerSpec:
 
 
 _PACKERS: Dict[str, PackerSpec] = {
-    'jpg': PackerSpec(pack_jpg, 'image', {'jpeg_quality': 'jpeg_quality'}),
-    'jpeg': PackerSpec(pack_jpg, 'image', {'jpeg_quality': 'jpeg_quality'}),
-    'jpe': PackerSpec(pack_jpg, 'image', {'jpeg_quality': 'jpeg_quality'}),
-    'jfif': PackerSpec(pack_jpg, 'image', {'jpeg_quality': 'jpeg_quality'}),
-    'png': PackerSpec(pack_png, 'image', {'png_quality': 'png_quality'}),
+    'jpg': PackerSpec(pack_jpg, 'image', {
+        'jpeg_quality': 'jpeg_quality', 'keep_meta': 'keep_meta',
+    }),
+    'png': PackerSpec(pack_png, 'image', {
+        'png_quality': 'png_quality', 'ultra': 'ultra', 'keep_meta': 'keep_meta',
+    }),
     'gif': PackerSpec(pack_gif, 'image'),
     'webp': PackerSpec(pack_webp, 'image'),
-    'svg': PackerSpec(pack_svg, 'image'),
+    'svg': PackerSpec(pack_svg, 'image', {'keep_meta': 'keep_meta'}),
     'svgz': PackerSpec(extra_codecs.pack_svgz, 'image'),
     'tif': PackerSpec(pack_tif, 'image'),
     'tiff': PackerSpec(pack_tif, 'image'),
@@ -978,6 +1126,15 @@ _PACKERS: Dict[str, PackerSpec] = {
     'dic': PackerSpec(extra_codecs.pack_dcm, 'image'),
     'ico': PackerSpec(extra_codecs.pack_ico, 'image'),
     'icns': PackerSpec(extra_codecs.pack_icns, 'image'),
+    'bmp': PackerSpec(extra_codecs.pack_bmp, 'image'),
+    'tga': PackerSpec(extra_codecs.pack_tga, 'image'),
+    'pnm': PackerSpec(extra_codecs.pack_pnm, 'image'),
+    'pcx': PackerSpec(extra_codecs.pack_pcx, 'image'),
+    'xml': PackerSpec(extra_codecs.pack_xml, 'document', {
+        'keep_meta': 'keep_meta', 'ultra': 'ultra',
+        'jpeg_quality': 'jpeg_quality', 'png_quality': 'png_quality',
+    }),
+    'json': PackerSpec(extra_codecs.pack_json, 'document'),
     'parquet': PackerSpec(pack_parquet, 'data', {'ultra': 'ultra'}),
     'orc': PackerSpec(extra_codecs.pack_orc, 'data'),
     'avro': PackerSpec(extra_codecs.pack_avro, 'data'),
@@ -1006,17 +1163,22 @@ _PACKERS: Dict[str, PackerSpec] = {
     'pdf': PackerSpec(pack_pdf, 'document', {
         'pdf_profile': 'pdf_profile',
         'jpeg_quality': 'jpeg_quality',
+        'keep_meta': 'keep_meta',
+        'ultra': 'ultra',
     }),
     'avif': PackerSpec(pack_avif, 'image'),
     'heic': PackerSpec(pack_heic, 'image'),
     'heif': PackerSpec(pack_heic, 'image'),
-    'flac': PackerSpec(pack_flac, 'audio'),
-    'm4a': PackerSpec(extra_codecs.pack_m4a, 'audio'),
+    'flac': PackerSpec(pack_flac, 'audio', {'keep_meta': 'keep_meta'}),
+    'm4a': PackerSpec(extra_codecs.pack_m4a, 'audio', {'keep_meta': 'keep_meta'}),
     'wv': PackerSpec(extra_codecs.pack_wv, 'audio'),
-    'ape': PackerSpec(extra_codecs.pack_ape, 'audio'),
+    'ape': PackerSpec(extra_codecs.pack_ape, 'audio', {'keep_meta': 'keep_meta'}),
     'tta': PackerSpec(extra_codecs.pack_tta, 'audio'),
-    'oga': PackerSpec(extra_codecs.pack_oga, 'audio'),
-    'mp3': PackerSpec(extra_codecs.pack_mp3, 'audio', {'ultra': 'ultra'}),
+    'oga': PackerSpec(extra_codecs.pack_oga, 'audio', {'keep_meta': 'keep_meta'}),
+    'ogg': PackerSpec(extra_codecs.pack_ogg, 'audio', {'keep_meta': 'keep_meta'}),
+    'mp3': PackerSpec(extra_codecs.pack_mp3, 'audio', {
+        'ultra': 'ultra', 'keep_meta': 'keep_meta',
+    }),
     'psd': PackerSpec(extra_codecs.pack_psd, 'image'),
     'ai': PackerSpec(extra_codecs.pack_ai, 'document', {
         'pdf_profile': 'pdf_profile',
@@ -1094,6 +1256,7 @@ def _normalize_options(def_options: Any) -> Dict[str, Any]:
         'keep_if_larger': True, 'lossy': False, 'convert_container': True,
         'min_savings': None, 'compression_level': 9,
         'pdf_profile': None, 'jpeg_quality': None,
+        'keep_meta': False,
     }
     if isinstance(def_options, RepackOptions):
         options.update(def_options.to_dict())

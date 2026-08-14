@@ -80,6 +80,7 @@ def _build_options(
     max_extract_bytes: Optional[int] = None,
     max_extract_ratio: Optional[float] = None,
     pdf_profile: Optional[str] = None,
+    keep_meta: bool = False,
 ) -> RepackOptions:
     return RepackOptions(
         debug=debug,
@@ -100,6 +101,7 @@ def _build_options(
         min_savings=min_savings,
         max_extract_bytes=max_extract_bytes,
         max_extract_ratio=max_extract_ratio,
+        keep_meta=keep_meta,
     )
 
 
@@ -186,6 +188,10 @@ def repack(
         help="Convert WMV/AVI/ASF to MP4 (default: True)",
     ),
     allow_grow: bool = typer.Option(False, "--allow-grow", help="Keep result even if larger"),
+    keep_meta: bool = typer.Option(
+        False, "--keep-meta",
+        help="Keep JPEG/PNG metadata (default strips EXIF/ICC)",
+    ),
     max_extract_size: Optional[str] = typer.Option(
         None, "--max-extract-size",
         help="Abort archive extract above this size (0 disables, default 8GB)",
@@ -249,6 +255,7 @@ def repack(
         convert_container=convert_container, keep_if_larger=not allow_grow,
         min_savings=min_savings, max_extract_bytes=max_extract_bytes,
         max_extract_ratio=max_extract_ratio, pdf_profile=pdf_profile,
+        keep_meta=keep_meta,
     )
 
     start_time = time.time()
@@ -520,6 +527,10 @@ def bulk(
         help="Convert WMV/AVI/ASF to MP4 (default: True)",
     ),
     allow_grow: bool = typer.Option(False, "--allow-grow", help="Keep result even if larger"),
+    keep_meta: bool = typer.Option(
+        False, "--keep-meta",
+        help="Keep JPEG/PNG metadata (default strips EXIF/ICC)",
+    ),
     max_extract_size: Optional[str] = typer.Option(
         None, "--max-extract-size",
         help="Abort archive extract above this size (0 disables, default 8GB)",
@@ -600,6 +611,7 @@ def bulk(
         'lossy': lossy,
         'convert_container': convert_container,
         'keep_if_larger': not allow_grow,
+        'keep_meta': keep_meta,
         'max_extract_bytes': max_extract_bytes,
         'max_extract_ratio': max_extract_ratio,
     }

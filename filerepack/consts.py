@@ -19,7 +19,10 @@ ARCHIVE_EXTS = [
     # MindMaps
     'xmind',
     # EBooks
-    'epub', 'fb2', 'lpf', 'ibooks',
+    'epub', 'lpf', 'ibooks',
+    # ZIP aliases (7-Zip round-trips these as ZIP)
+    'air', 'pk3', 'xap', 'ipsw', 'osk', 'oex', 'puz', 'rmskin',
+    'notebook', 'nbk',
     # Programming / package manager archives (ZIP)
     'jar', 'egg', 'whl', 'war', 'ear', 'aar', 'npz',
     'nupkg', 'snupkg', 'vsix', 'xpi', 'crx',
@@ -53,17 +56,21 @@ ARCHIVE_EXTS = [
 # Standalone formats with dedicated pack_* functions
 STANDALONE_EXTS = [
     'parquet', 'orc', 'avro', 'feather', 'arrow', 'ipc',
-    'sqlite', 'sqlite3', 'gpkg', 'mbtiles',
+    'sqlite', 'sqlite3', 'db', 'gpkg', 'mbtiles',
     'h5', 'hdf5', 'hdf', 'nc', 'nc4',
     'gz', 'xz', 'bz2', 'zst', 'br', 'lz4', 'lz', 'lzma', 'lzo', 'z',
     'pdf',
-    'jpg', 'jpeg', 'jpe', 'jfif', 'png', 'gif', 'webp', 'svg', 'svgz',
+    'jpg', 'jpeg', 'jpe', 'jfif', 'jif', 'jfi', 'thm',
+    'png', 'apng', 'gif', 'webp', 'svg', 'svgz',
     'tif', 'tiff', 'avif', 'heic', 'heif',
-    'jxl', 'jp2', 'j2k', 'jpf', 'jpx', 'exr', 'dng', 'ico', 'icns',
+    'jxl', 'jp2', 'j2k', 'jpf', 'jpx', 'exr', 'dng', 'ico', 'icns', 'cur',
+    'bmp', 'dib', 'tga', 'targa', 'pnm', 'ppm', 'pgm', 'pbm', 'pcx', 'dcx',
+    'xml', 'json', 'xhtml', 'kml', 'gpx', 'dae', 'rss', 'atom', 'xmp',
+    'xsl', 'xslt', 'fb2',
     'dcm', 'dicom', 'dic',
     'wmv', 'mp4', 'avi', 'asf', 'mkv', 'webm',
     'mov', 'm4v', '3gp', 'ts', 'mts', 'm2ts',
-    'flac', 'm4a', 'wv', 'ape', 'tta', 'oga', 'mp3',
+    'flac', 'm4a', 'm4b', 'wv', 'ape', 'tta', 'oga', 'ogg', 'opus', 'mp3',
     'woff', 'woff2',
     'psd', 'ai',
 ]

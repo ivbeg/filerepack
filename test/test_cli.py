@@ -55,6 +55,12 @@ class TestRepackCLI:
         result = runner.invoke(app, ['bulk', '--help'])
         assert '--pdf-profile' in result.output
 
+    def test_keep_meta_in_help(self):
+        result = runner.invoke(app, ['repack', '--help'])
+        assert '--keep-meta' in result.output
+        result = runner.invoke(app, ['bulk', '--help'])
+        assert '--keep-meta' in result.output
+
     def test_invalid_pdf_profile(self, tmp_path):
         f = tmp_path / 'a.pdf'
         f.write_bytes(b'%PDF-1.4\n')
@@ -108,6 +114,9 @@ class TestDoctorCLI:
         assert 'mp3packer' in result.output
         assert 'gdcmconv' in result.output
         assert 'dcmcjpls' in result.output
+        assert 'jpegtran' in result.output
+        assert 'zopflipng' in result.output
+        assert 'optivorbis' in result.output
         assert result.exit_code in (0, 1)
 
     def test_doctor_install_hints_when_missing(self, monkeypatch):

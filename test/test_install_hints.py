@@ -82,6 +82,16 @@ class TestInstallCommand:
         assert 'github.com/Snesnopic/mp3packer/releases' in cmd
         assert 'not packaged' in cmd
 
+    def test_optivorbis_is_manual_url(self):
+        cmd = install_command('optivorbis', system='macos', manager='brew')
+        assert 'github.com/OptiVorbis/OptiVorbis/releases' in cmd
+        assert 'not packaged' in cmd
+        assert 'cargo install' not in cmd
+
+    def test_macos_brew_jpegtran(self):
+        cmd = install_command('jpegtran', system='macos', manager='brew')
+        assert cmd == 'brew install jpeg'
+
     def test_debian_apt_gdcmconv(self):
         cmd = install_command('gdcmconv', system='linux', manager='apt')
         assert cmd == 'sudo apt-get install libgdcm-tools'

@@ -52,6 +52,7 @@ class TestSupportedExts:
         for ext in (
             'war', 'ear', 'aar', 'nupkg', 'vsix', 'sketch', 'cbr', 'cb7',
             'oxt', 'aab', 'npz', 'fcstd', 'xapk', 'mcworld', 'unitypackage',
+            'pk3', 'air', 'ipsw',
         ):
             assert ext in SUPPORTED_EXTS
             assert ext in ARCHIVE_EXTS
@@ -67,7 +68,8 @@ class TestSupportedExts:
         for ext in (
             'lz4', 'jxl', 'jp2', 'exr', 'dng', 'mov', 'm4a', 'sqlite',
             'gpkg', 'mbtiles', 'orc', 'woff2', 'svgz', 'jpe', 'mp3', 'psd', 'ai',
-            'dcm', 'dicom', 'dic',
+            'dcm', 'dicom', 'dic', 'xml', 'json', 'bmp', 'ogg', 'db', 'apng',
+            'cur', 'fb2',
         ):
             assert ext in STANDALONE_EXTS
 

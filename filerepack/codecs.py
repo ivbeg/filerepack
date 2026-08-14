@@ -6,6 +6,7 @@ import os
 import struct
 import zlib
 from os.path import abspath
+from shutil import copyfile
 from typing import Any, List, Optional
 
 from .models import PackResult
@@ -173,6 +174,66 @@ def _pack_magick(
     return r._commit_output(
         out_temp, filepath, insize, verify=verify, **r._commit_kwargs(**commit)
     )
+
+
+def pack_bmp(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    return _pack_magick(filepath, '.bmp', 'bmp', debug=debug, quiet=quiet, **commit)
+
+
+def pack_tga(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    return _pack_magick(filepath, '.tga', 'tga', debug=debug, quiet=quiet, **commit)
+
+
+def pack_pnm(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    return _pack_magick(filepath, '.pnm', 'pnm', debug=debug, quiet=quiet, **commit)
+
+
+def pack_pcx(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    return _pack_magick(filepath, '.pcx', 'pcx', debug=debug, quiet=quiet, **commit)
+
+
+def pack_xml(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    from .markup import pack_xml as _pack
+    return _pack(filepath, debug=debug, quiet=quiet, **commit)
+
+
+def pack_json(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    from .markup import pack_json as _pack
+    return _pack(filepath, debug=debug, quiet=quiet, **commit)
+
+
+def _cover_options(**commit: Any) -> dict:
+    return {
+        'debug': bool(commit.get('debug', False)),
+        'quiet': bool(commit.get('quiet', False)),
+        'pack_images': bool(commit.get('pack_images', True)),
+        'keep_meta': bool(commit.get('keep_meta', False)),
+        'lossy': bool(commit.get('lossy', False)),
+        'ultra': bool(commit.get('ultra', False)),
+        'jpeg_quality': commit.get('jpeg_quality'),
+        'png_quality': commit.get('png_quality'),
+    }
+
+
+def _copy_with_covers(filepath: str, suffix: str, **commit: Any) -> str:
+    from .covers import optimize_embedded_covers
+    r = _r()
+    work = r._make_temp(suffix)
+    copyfile(filepath, work)
+    optimize_embedded_covers(work, _cover_options(**commit))
+    return work
 
 
 def pack_jp2(
@@ -359,9 +420,21 @@ def _pack_ffmpeg_audio(
 def pack_m4a(
     filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
 ) -> Optional[PackResult]:
-    return _pack_ffmpeg_audio(
-        filepath, 'alac', '.m4a', 'm4a', allowed=('alac',),
-        debug=debug, quiet=quiet, **commit,
+    r = _r()
+    insize = os.path.getsize(filepath)
+    work = _copy_with_covers(filepath, '.m4a', debug=debug, quiet=quiet, **commit)
+    ffmpeg = resolve_tool('ffmpeg')
+    if ffmpeg:
+        _pack_ffmpeg_audio(
+            work, 'alac', '.m4a', 'm4a', allowed=('alac',),
+            debug=debug, quiet=quiet, dryrun=False, keep_if_larger=True,
+            min_savings=None,
+        )
+    elif os.path.getsize(work) >= insize:
+        r._remove_quietly(work)
+        return None
+    return r._commit_output(
+        work, filepath, insize, verify='m4a', **r._commit_kwargs(**commit)
     )
 
 
@@ -386,9 +459,26 @@ def pack_tta(
 def pack_oga(
     filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
 ) -> Optional[PackResult]:
-    return _pack_ffmpeg_audio(
-        filepath, 'flac', '.oga', 'oga', allowed=('flac', ''),
-        debug=debug, quiet=quiet, **commit,
+    ffmpeg = resolve_tool('ffmpeg')
+    found = ''
+    if ffmpeg:
+        found = _probe_audio_codec(filepath, ffmpeg, debug)
+    if found in ('vorbis', 'opus'):
+        return pack_ogg(filepath, debug=debug, quiet=quiet, **commit)
+    r = _r()
+    insize = os.path.getsize(filepath)
+    work = _copy_with_covers(filepath, '.oga', debug=debug, quiet=quiet, **commit)
+    if ffmpeg:
+        _pack_ffmpeg_audio(
+            work, 'flac', '.oga', 'oga', allowed=('flac', ''),
+            debug=debug, quiet=quiet, dryrun=False, keep_if_larger=True,
+            min_savings=None,
+        )
+    elif os.path.getsize(work) >= insize:
+        r._remove_quietly(work)
+        return None
+    return r._commit_output(
+        work, filepath, insize, verify='oga', **r._commit_kwargs(**commit)
     )
 
 
@@ -396,20 +486,25 @@ def pack_ape(
     filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
 ) -> Optional[PackResult]:
     mac = resolve_tool('mac')
-    if mac is None:
-        return None
     r = _r()
     insize = os.path.getsize(filepath)
-    out_temp = r._make_temp('.ape')
-    result = r._run_command(
-        [mac, abspath(filepath), out_temp, '-c5000'],
-        quiet=quiet, debug=debug,
-    )
-    if result is None:
-        r._remove_quietly(out_temp)
+    work = _copy_with_covers(filepath, '.ape', debug=debug, quiet=quiet, **commit)
+    if mac:
+        out_temp = r._make_temp('.ape')
+        result = r._run_command(
+            [mac, abspath(work), out_temp, '-c5000'],
+            quiet=quiet, debug=debug,
+        )
+        if result is not None:
+            r._remove_quietly(work)
+            work = out_temp
+        else:
+            r._remove_quietly(out_temp)
+    elif os.path.getsize(work) >= insize:
+        r._remove_quietly(work)
         return None
     return r._commit_output(
-        out_temp, filepath, insize, verify='ape', **r._commit_kwargs(**commit)
+        work, filepath, insize, verify='ape', **r._commit_kwargs(**commit)
     )
 
 
@@ -666,21 +761,54 @@ def pack_mp3(
 ) -> Optional[PackResult]:
     """Lossless MP3 frame packing via mp3packer (not a transcode)."""
     tool = resolve_tool('mp3packer')
-    if tool is None:
-        return None
     r = _r()
     insize = os.path.getsize(filepath)
-    out_temp = r._make_temp('.mp3')
-    cmd = [tool]
-    if ultra:
-        cmd.append('-z')
-    cmd.extend([abspath(filepath), out_temp])
-    result = r._run_command(cmd, quiet=quiet, debug=debug)
-    if result is None:
-        r._remove_quietly(out_temp)
+    work = _copy_with_covers(
+        filepath, '.mp3', debug=debug, quiet=quiet, ultra=ultra, **commit
+    )
+    if tool:
+        out_temp = r._make_temp('.mp3')
+        cmd = [tool]
+        if ultra:
+            cmd.append('-z')
+        cmd.extend([abspath(work), out_temp])
+        result = r._run_command(cmd, quiet=quiet, debug=debug)
+        if result is not None:
+            r._remove_quietly(work)
+            work = out_temp
+        else:
+            r._remove_quietly(out_temp)
+    elif os.path.getsize(work) >= insize:
+        r._remove_quietly(work)
         return None
     return r._commit_output(
-        out_temp, filepath, insize, verify='mp3', **r._commit_kwargs(**commit)
+        work, filepath, insize, verify='mp3', **r._commit_kwargs(**commit)
+    )
+
+
+def pack_ogg(
+    filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
+) -> Optional[PackResult]:
+    tool = resolve_tool('optivorbis')
+    r = _r()
+    insize = os.path.getsize(filepath)
+    suffix = '.opus' if filepath.lower().endswith('.opus') else '.ogg'
+    work = _copy_with_covers(filepath, suffix, debug=debug, quiet=quiet, **commit)
+    if tool:
+        out_temp = r._make_temp(suffix)
+        result = r._run_command(
+            [tool, abspath(work), out_temp], quiet=quiet, debug=debug,
+        )
+        if result is not None:
+            r._remove_quietly(work)
+            work = out_temp
+        else:
+            r._remove_quietly(out_temp)
+    elif os.path.getsize(work) >= insize:
+        r._remove_quietly(work)
+        return None
+    return r._commit_output(
+        work, filepath, insize, verify='ogg', **r._commit_kwargs(**commit)
     )
 
 
