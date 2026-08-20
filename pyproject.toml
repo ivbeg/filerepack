@@ -54,6 +54,7 @@ filerepack = "filerepack.__main__:main"
 
 [project.urls]
 Homepage = "https://github.com/ivbeg/filerepack"
+Documentation = "https://ivbeg.github.io/filerepack/"
 
 [tool.setuptools.dynamic]
 version = {attr = "filerepack.__version__"}

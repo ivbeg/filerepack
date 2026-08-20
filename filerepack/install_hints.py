@@ -346,7 +346,7 @@ def choose_managers(
         return 'brew', ['ports']
 
     if system == 'windows':
-        preferred = [m for m in ('winget', 'choco', 'scoop') if m in present]
+        preferred: List[str] = [m for m in ('winget', 'choco', 'scoop') if m in present]
         if not preferred:
             preferred = ['choco', 'winget', 'scoop']
         return preferred[0], preferred[1:]
@@ -561,5 +561,5 @@ def format_install_instructions(
     has_commands = any(by_manager.get(m) for m in order) or bool(manual)
     if not has_commands:
         return ''
-    lines.append('  See docs/tools.md for full install notes.')
+    lines.append('  See docs/docs/tools/ for full install notes.')
     return '\n'.join(lines).rstrip() + '\n'

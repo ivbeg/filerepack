@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ivbeg.github.io/filerepack/sitemap.xml

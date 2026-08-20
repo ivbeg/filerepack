@@ -1,0 +1,38 @@
+# filerepack
+
+Lossless-first recompression for Office documents, archives, images, PDFs, video, and compressed data files. Nested files inside ZIP/7z/RAR/OOXML are walked and optimized, then the container is rewritten.
+
+Site: https://ivbeg.github.io/filerepack/
+CLI help: `filerepack <command> --help`
+
+## Getting started
+
+- [Installation](https://ivbeg.github.io/filerepack/getting-started/installation) — pip extras, `filerepack doctor`, OS tools
+- [Quick start](https://ivbeg.github.io/filerepack/getting-started/quick-start)
+- [Cookbook](https://ivbeg.github.io/filerepack/getting-started/cookbook)
+- [Basic usage](https://ivbeg.github.io/filerepack/getting-started/basic-usage) — lossless vs lossy, nested walking, extras
+- [Shared CLI options](https://ivbeg.github.io/filerepack/commands/shared-options)
+- [Safety](https://ivbeg.github.io/filerepack/getting-started/safety)
+- [Troubleshooting](https://ivbeg.github.io/filerepack/getting-started/troubleshooting)
+
+## Commands
+
+- [Command index](https://ivbeg.github.io/filerepack/commands/)
+- [repack](https://ivbeg.github.io/filerepack/commands/repack)
+- [bulk](https://ivbeg.github.io/filerepack/commands/bulk)
+- [doctor](https://ivbeg.github.io/filerepack/commands/doctor)
+- [Shared options](https://ivbeg.github.io/filerepack/commands/shared-options)
+
+## Formats and tools
+
+- [Format support matrix](https://ivbeg.github.io/filerepack/formats/)
+- [External tools](https://ivbeg.github.io/filerepack/tools/)
+
+## Library
+
+- [Python API](https://ivbeg.github.io/filerepack/library/) — `FileRepacker`, `RepackOptions`, `RepackSummary`
+
+## Development
+
+- [Contributing](https://ivbeg.github.io/filerepack/development/contributing)
+- [License](https://ivbeg.github.io/filerepack/license)

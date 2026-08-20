@@ -1,4 +1,4 @@
-.PHONY: clean-pyc clean-build docs clean test lint
+.PHONY: clean-pyc clean-build docs docs-serve clean test lint
 SHELL := /bin/bash
 
 help:
@@ -9,10 +9,10 @@ help:
 	@echo "lint - check style with ruff and mypy"
 	@echo "test - run pytest with coverage"
 	@echo "coverage - check code coverage quickly with the default Python"
+	@echo "docs - build documentation site (Docusaurus)"
+	@echo "docs-serve - serve documentation locally (Docusaurus)"
 	@echo "release - package and upload a release"
 	@echo "dist - package"
-
-clean: clean-build clean-pyc clean-test
 
 clean-build:
 	rm -fr build/
@@ -30,6 +30,17 @@ clean-test:
 	rm -f .coverage
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
+
+docs:
+	cd docs && npm ci && npm run build
+
+docs-serve:
+	cd docs && npm start
+
+clean: clean-build clean-pyc clean-test
+	rm -rf docs/_build/
+	rm -rf docs/build/
+	rm -rf docs/.docusaurus/
 
 lint:
 	ruff check filerepack test

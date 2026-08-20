@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- Documentation is now a Docusaurus site under [`docs/`](docs/) (Getting Started, Use Cases, CLI reference, Formats, Tools, Library), ready for GitHub Pages at https://ivbeg.github.io/filerepack/
+
 ## [0.3.0] - 2026-08-14
 
 ### Added
@@ -29,11 +35,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Data: SQLite `VACUUM` (`sqlite`, `gpkg`, `mbtiles`), ORC/Avro/Feather/Arrow (optional extras), HDF5 (`h5repack`), NetCDF (`nccopy`)
 - Fonts: WOFF/WOFF2 via fonttools or `woff2_compress`
 - Optional extras: `filerepack[data]`, `filerepack[fonts]`, `filerepack[media]`, `filerepack[pdf]`
-- `filerepack doctor` prints OS-specific install commands (Homebrew, apt, dnf, pacman, Chocolatey, winget, …) for missing tools. `mp3packer` and `optivorbis` are not packaged; doctor points at their GitHub releases with macOS/Linux/Windows binaries, and `docs/tools.md` has install steps
+- `filerepack doctor` prints OS-specific install commands (Homebrew, apt, dnf, pacman, Chocolatey, winget, …) for missing tools. `mp3packer` and `optivorbis` are not packaged; doctor points at their GitHub releases with macOS/Linux/Windows binaries, and [tools](docs/docs/tools/index.md) has install steps
 - `filerepack repack --progress` shows a progress bar (on by default on a TTY). Archives report extract / inner-file / rewrite stages
 
 ### Changed
 
+- Docs: full format coverage, nested walking, and extras in [formats](docs/docs/formats/index.md); `--ultra` documents PNG/MP3 as well as Parquet
 - File type detection uses compound suffixes (`archive.tar.gz`) instead of only the last extension
 - `--include-ext tar.gz` matches compound names; `--include-ext gz` still matches them too
 - `--lossy` PDF uses Ghostscript `/ebook` (150 dpi) instead of `/prepress`, which actually downsamples scanned pages. `--pdf-profile prepress` restores the previous print-quality path. `--jpeg-quality` now also sets Distiller QFactor for images inside PDFs

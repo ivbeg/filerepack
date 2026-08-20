@@ -63,6 +63,11 @@ instance/
 # Sphinx documentation
 docs/_build/
 
+# Docusaurus
+docs/build/
+docs/.docusaurus/
+docs/node_modules/
+
 # PyBuilder
 target/
 

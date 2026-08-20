@@ -1,8 +1,19 @@
+---
+title: "External tools"
+description: "Binaries filerepack uses, OS install commands, and unpackaged CLIs"
+slug: /tools
+---
+
 # Installing command-line tools
 
-`filerepack doctor` prints which binaries are on PATH and, for anything missing, OS-specific install commands (Homebrew / MacPorts on macOS, apt / dnf / pacman / zypper / apk on Linux, Chocolatey / winget / Scoop on Windows). Only `7zz` or `7z` is required for archive/OOXML work. Everything else enables extra formats.
+`filerepack doctor` prints which binaries are on PATH and, for anything missing,
+OS-specific install commands (Homebrew / MacPorts on macOS, apt / dnf / pacman /
+zypper / apk on Linux, Chocolatey / winget / Scoop on Windows). Only `7zz` or
+`7z` is required for archive/OOXML work. Everything else enables extra formats.
 
-Override a tool with an environment variable (`FILEREPACK_7ZZ`, `FILEREPACK_JPEGOPTIM`, …) or:
+Override a tool with an environment variable (`FILEREPACK_7ZZ`,
+`FILEREPACK_JPEGOPTIM`, `FILEREPACK_JPEGTRAN`, `FILEREPACK_ZOPFLIPNG`,
+`FILEREPACK_OPTIVORBIS`, …) or:
 
 ```toml
 # ~/.config/filerepack/config.toml
@@ -11,6 +22,9 @@ szip = "/opt/homebrew/bin/7zz"
 qpdf = "/usr/local/bin/qpdf"
 ```
 
+For other Linux or Windows package managers, run `filerepack doctor` and follow
+the printed commands.
+
 ## What each tool is for
 
 | Tool | Formats |
@@ -18,7 +32,7 @@ qpdf = "/usr/local/bin/qpdf"
 | `7zz` or `7z` | ZIP, 7z, OOXML, nested archives |
 | `zip` | Preferred rewrite for OOXML (docx/xlsx/pptx, …) |
 | `jpegoptim` | JPEG (lossless strip, or `-m` with `--jpeg-quality`) |
-| `jpegtran` | lossless JPEG (`-optimize -progressive`; mozjpeg or libjpeg-turbo) |
+| `jpegtran` | lossless JPEG (`-optimize -progressive`; mozjpeg or libjpeg-turbo). `--keep-meta` uses `-copy all` |
 | `oxipng` / `optipng` | lossless PNG |
 | `zopflipng` | extra lossless PNG pass when `--ultra` is set |
 | `pngquant` | lossy PNG (`--png-quality` / `--lossy`) |
@@ -60,7 +74,9 @@ pip install 'filerepack[data]' 'filerepack[fonts]' 'filerepack[progress]' \
 
 `p7zip` may install `7z` instead of `7zz`. filerepack accepts either.
 
-`mp3packer` and `optivorbis` are not in Homebrew. Install them from the [mp3packer](#mp3packer-not-packaged) and [optivorbis](#optivorbis-not-packaged) GitHub releases below.
+`mp3packer` and `optivorbis` are not in Homebrew. Install them from the
+[mp3packer](#mp3packer-not-packaged) and [optivorbis](#optivorbis-not-packaged)
+GitHub releases below.
 
 ## Ubuntu / Debian
 
@@ -86,13 +102,17 @@ pip install 'filerepack[data]' 'filerepack[fonts]' 'filerepack[progress]' `
   'filerepack[media]' 'filerepack[pdf]'
 ```
 
-Add `C:\Program Files\7-Zip` to PATH. filerepack looks for `7zz` then `7z`. `optivorbis` is not in Chocolatey; use the [GitHub CLI zip](#optivorbis-not-packaged).
+Add `C:\Program Files\7-Zip` to PATH. filerepack looks for `7zz` then `7z`.
+`optivorbis` is not in Chocolatey; use the [GitHub CLI zip](#optivorbis-not-packaged).
 
 ## mp3packer (not packaged)
 
-`mp3packer` losslessly rearranges MP3 frames. It is not in Homebrew, MacPorts, apt, or Chocolatey. filerepack needs the original CLI: `mp3packer [-z] in.mp3 out.mp3`. `--ultra` passes `-z` (Huffman recompression).
+`mp3packer` losslessly rearranges MP3 frames. It is not in Homebrew, MacPorts,
+apt, or Chocolatey. filerepack needs the original CLI:
+`mp3packer [-z] in.mp3 out.mp3`. `--ultra` passes `-z` (Huffman recompression).
 
-Pre-built binaries for macOS, Linux, and Windows: [Snesnopic/mp3packer releases](https://github.com/Snesnopic/mp3packer/releases).
+Pre-built binaries for macOS, Linux, and Windows:
+[Snesnopic/mp3packer releases](https://github.com/Snesnopic/mp3packer/releases).
 
 ### macOS
 
@@ -106,7 +126,8 @@ chmod +x mp3packer
 sudo mv mp3packer /usr/local/bin/mp3packer
 ```
 
-Intel Mac: download `mp3packer-macos-x64.zip` instead. If the zip unpacks into a folder, copy the `mp3packer` binary from inside it. If Gatekeeper blocks it:
+Intel Mac: download `mp3packer-macos-x64.zip` instead. If the zip unpacks into a
+folder, copy the `mp3packer` binary from inside it. If Gatekeeper blocks it:
 
 ```bash
 xattr -d com.apple.quarantine /usr/local/bin/mp3packer
@@ -133,13 +154,17 @@ dune build
 sudo cp _build/default/mp3packer.exe /usr/local/bin/mp3packer
 ```
 
-Linux/Windows zips from the same release: `mp3packer-ubuntu-arm64.zip`, `mp3packer-ubuntu-x64.zip`, `mp3packer-windows-x64.zip`.
+Linux/Windows zips from the same release: `mp3packer-ubuntu-arm64.zip`,
+`mp3packer-ubuntu-x64.zip`, `mp3packer-windows-x64.zip`.
 
 ## optivorbis (not packaged)
 
-`optivorbis` losslessly remuxes Ogg Vorbis (and Opus in an Ogg container). It is not in Homebrew, MacPorts, apt, or Chocolatey, and Cargo cannot install it: crates.io `optivorbis` is a library, and the CLI package is unpublished.
+`optivorbis` losslessly remuxes Ogg Vorbis (and Opus in an Ogg container). It is
+not in Homebrew, MacPorts, apt, or Chocolatey, and Cargo cannot install it:
+crates.io `optivorbis` is a library, and the CLI package is unpublished.
 
-filerepack needs the official CLI: `optivorbis in.ogg out.ogg`. Pre-built binaries: [OptiVorbis/OptiVorbis releases](https://github.com/OptiVorbis/OptiVorbis/releases).
+filerepack needs the official CLI: `optivorbis in.ogg out.ogg`. Pre-built
+binaries: [OptiVorbis/OptiVorbis releases](https://github.com/OptiVorbis/OptiVorbis/releases).
 
 ### macOS
 
@@ -154,7 +179,9 @@ xattr -d com.apple.quarantine optivorbis 2>/dev/null || true
 mv optivorbis "$(brew --prefix)/bin/optivorbis"
 ```
 
-Intel Mac: download `OptiVorbis.CLI.x86_64-apple-darwin.zip` instead. If `brew` is missing, move the binary to `/usr/local/bin/optivorbis`. If Gatekeeper still blocks it:
+Intel Mac: download `OptiVorbis.CLI.x86_64-apple-darwin.zip` instead. If `brew`
+is missing, move the binary to `/usr/local/bin/optivorbis`. If Gatekeeper still
+blocks it:
 
 ```bash
 xattr -d com.apple.quarantine "$(brew --prefix)/bin/optivorbis"
@@ -181,7 +208,8 @@ sudo mv optivorbis /usr/local/bin/optivorbis
 
 ### Windows
 
-Download `OptiVorbis.CLI.x86_64-pc-windows-gnu.zip` from the same release, unzip `optivorbis.exe`, and put it on PATH.
+Download `OptiVorbis.CLI.x86_64-pc-windows-gnu.zip` from the same release, unzip
+`optivorbis.exe`, and put it on PATH.
 
 ## Verify
 
