@@ -2,7 +2,7 @@ import json
 import os
 
 import pytest
-from typer.testing import CliRunner
+from test.helpers import separated_cli_runner
 
 from filerepack.__main__ import app
 from filerepack.reports import AuditReport, ResultSpool
@@ -18,7 +18,9 @@ def test_audit_stdout_and_completion(tmp_path, format, command):
     source.write_text(' { "record": [1,2,3] } ' * 1)
     report = tmp_path / ('audit.' + format)
     target = source if command == 'repack' else source_dir
-    result = CliRunner().invoke(app, [command, str(target), '--json', '--report', str(report)])
+    result = separated_cli_runner().invoke(
+        app, [command, str(target), '--json', '--report', str(report)],
+    )
     assert result.exit_code == 0, result.output
     stdout = json.loads(result.stdout)
     assert stdout['schema_version'] == 1
@@ -98,11 +100,11 @@ def test_cli_bulk_resume_no_encoder(tmp_path, monkeypatch):
     manifest = tmp_path / 'run.manifest'
     monkeypatch.setattr('filerepack.__main__.execution_fingerprint', lambda *a: 'test-execution')
     args = ['bulk', str(inputs), '--json', '--manifest', str(manifest)]
-    result = CliRunner().invoke(app, args)
+    result = separated_cli_runner().invoke(app, args)
     assert result.exit_code == 0, result.output
     monkeypatch.setattr('filerepack.__main__.process_file_job',
                         lambda *a: pytest.fail('Completed input re-encoded'))
-    resumed = CliRunner().invoke(app, args + ['--resume'])
+    resumed = separated_cli_runner().invoke(app, args + ['--resume'])
     assert resumed.exit_code == 0, resumed.output
     row = json.loads(resumed.stdout)['files'][0]
     assert row['reused'] and row['savings_bytes'] == 0
@@ -163,8 +165,8 @@ def test_resume_applies_current_size_filters_before_reusing(tmp_path, monkeypatc
     manifest = tmp_path / 'run.manifest'
     monkeypatch.setattr('filerepack.__main__.execution_fingerprint', lambda *a: 'test')
     args = ['bulk', str(source), '--json', '--manifest', str(manifest)]
-    assert CliRunner().invoke(app, args).exit_code == 0
-    result = CliRunner().invoke(app, args + ['--resume', '--min-size', '1MB'])
+    assert separated_cli_runner().invoke(app, args).exit_code == 0
+    result = separated_cli_runner().invoke(app, args + ['--resume', '--min-size', '1MB'])
     assert result.exit_code == 0, result.output
     assert json.loads(result.stdout)['files'][0]['reason_code'] == 'filtered'
 
@@ -188,7 +190,7 @@ def test_interrupted_bulk_reuses_only_completed_input(tmp_path, monkeypatch):
 
     monkeypatch.setattr(cli, 'process_file_job', interrupted)
     args = ['bulk', str(root), '--json', '--manifest', str(manifest)]
-    first = CliRunner().invoke(app, args)
+    first = separated_cli_runner().invoke(app, args)
     assert first.exit_code == 130, first.output
     completed = calls[0]
     second_calls = []
@@ -199,7 +201,7 @@ def test_interrupted_bulk_reuses_only_completed_input(tmp_path, monkeypatch):
         return original(job)
 
     monkeypatch.setattr(cli, 'process_file_job', resumed)
-    second = CliRunner().invoke(app, args + ['--resume'])
+    second = separated_cli_runner().invoke(app, args + ['--resume'])
     assert second.exit_code == 0, second.output
     rows = json.loads(second.stdout)['files']
     assert len(second_calls) == 2
@@ -287,7 +289,9 @@ def test_report_failure_returns_non_success_with_actual_published_outcome(
 
     monkeypatch.setattr(AuditReport, 'item' if fault == 'item' else '_finalize_json', disk_full)
     target = source if command == 'repack' else root
-    result = CliRunner().invoke(app, [command, str(target), '--json', '--report', str(report)])
+    result = separated_cli_runner().invoke(
+        app, [command, str(target), '--json', '--report', str(report)],
+    )
     assert result.exit_code == 1
     data = json.loads(result.stdout)
     row = data if command == 'repack' else data['files'][0]

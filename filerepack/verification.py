@@ -58,6 +58,12 @@ def _hash_reader(source: Any) -> str:
 
 
 def stream_fingerprint(path: str, kind: str) -> str:
+    if kind == "z":
+        with open(path, "rb") as source:
+            header = source.read(3)
+        if (len(header) != 3 or header[:2] != b"\x1f\x9d" or header[2] & 0x60
+                or not 9 <= header[2] & 0x1f <= 16):
+            raise ValueError("Invalid Unix compress header or code width")
     readers: Dict[str, Callable[[str, Literal["rb"]], ContextManager[BinaryReader]]] = {
         "gz": gzip.open,
         "svgz": gzip.open,

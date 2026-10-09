@@ -114,7 +114,7 @@ def test_changed_source_is_a_conflict(tmp_path, monkeypatch, mutation, distinct)
             new.write_bytes(ORIGINAL)
             os.replace(new, source)
         elif mutation == 'mode':
-            source.chmod(0o600)
+            source.chmod(0o444 if os.name == 'nt' else 0o600)
         elif mutation == 'mtime':
             os.utime(source, ns=(before.st_atime_ns, before.st_mtime_ns + 1_000_000_000))
         else:

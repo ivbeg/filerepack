@@ -34,7 +34,7 @@ def compressed_image_pdf(path, encoded, kind, mode, soft_mask=False):
         page = pdf.add_blank_page(page_size=(32, 32))
         page.Resources = Dictionary(XObject=Dictionary(Im=image))
         page.Contents = pdf.make_stream(b'q 32 0 0 32 0 0 cm /Im Do Q')
-        pdf.save(path, compress_streams=False)
+        pdf.save(path, compress_streams=True, recompress_flate=False)
 
 
 @pytest.mark.parametrize('kind,mode', [('JPEG', 'L'), ('JPEG', 'RGB'), ('JPEG', 'CMYK'),
@@ -157,7 +157,8 @@ def make_pdf(path, predictor=1, cycles=False):
         page = pdf.add_blank_page(page_size=(64, 64))
         page.Resources = Dictionary(XObject=Dictionary(Nested=form, Direct=image))
         page.Contents = pdf.make_stream(b'/Nested Do')
-    pdf.save(path, compress_streams=False)
+    # Keep the deliberately weak Flate bytes on pikepdf 8/9 and newer versions.
+    pdf.save(path, compress_streams=True, recompress_flate=False)
     pdf.close()
 
 
@@ -241,7 +242,7 @@ def test_color_masks_and_high_depth_render_identically(tmp_path, variant):
                 mask.Width, mask.Height, mask.BitsPerComponent = width, height, 8
                 image.SMask = mask
         image.write(zlib.compress(raw, 0), filter=Name.FlateDecode)
-        pdf.save(source, compress_streams=False)
+        pdf.save(source, compress_streams=True, recompress_flate=False)
     expected = pdf_fingerprint(str(source))
     assert rebuild_pdf_images(str(source), str(output))
     assert pdf_fingerprint(str(output)) == expected

@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 import pytest
-from typer.testing import CliRunner
+from test.helpers import separated_cli_runner
 
 from filerepack import FileRepacker, RepackOptions, ole
 from filerepack.__main__ import app
@@ -67,7 +67,7 @@ def test_dependency_reason_reaches_library_and_job(tmp_path, monkeypatch, missin
 
 def test_protection_reason_reaches_json(tmp_path):
     source = source_file(tmp_path, "PasswordProtected.doc")
-    result = CliRunner().invoke(app, ["repack", str(source), "--dryrun", "--json"])
+    result = separated_cli_runner().invoke(app, ["repack", str(source), "--dryrun", "--json"])
     assert result.exit_code == 0, result.output
     record = json.loads(result.stdout)["files"][0]
     assert "Encrypted/obfuscated Word" in record["reason"]
@@ -145,7 +145,7 @@ def test_missing_writer_reason_visible_in_verbose(tmp_path, monkeypatch):
     monkeypatch.setattr(ole, "resolve_tool", lambda key: None)
     # Keep the test runner's logging handlers intact; exercise an actual CLI
     # process for log configuration in the other tests.
-    result = CliRunner().invoke(app, ["repack", str(source), "--dryrun", "--verbose"])
+    result = separated_cli_runner().invoke(app, ["repack", str(source), "--dryrun", "--verbose"])
     assert result.exit_code == 1 and "Error: filerepack-ole writer is unavailable" in result.stdout
     assert "[ERROR]" in result.stderr
     assert "[SUCCESS]" not in result.output
@@ -154,7 +154,7 @@ def test_missing_writer_reason_visible_in_verbose(tmp_path, monkeypatch):
 def test_macro_workbook_no_savings_is_explicit_success(tmp_path, native_writer):
     source = source_file(tmp_path, "SquareMacro.xls")
     original = source.read_bytes()
-    result = CliRunner().invoke(
+    result = separated_cli_runner().invoke(
         app, ["repack", str(source), "--dryrun", "--ole-recompress", "--verbose"],
     )
     assert result.exit_code == 0, result.output

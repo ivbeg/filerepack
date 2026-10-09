@@ -5,7 +5,7 @@ import io
 import json
 
 import pytest
-from typer.testing import CliRunner
+from test.helpers import separated_cli_runner
 
 from filerepack.__main__ import app
 
@@ -16,7 +16,7 @@ def test_success_is_explicit_with_and_without_size_reduction(tmp_path, dryrun, c
     source = tmp_path / 'data.json'
     source.write_text(content)
     extra = ['--dryrun'] if dryrun else []
-    result = CliRunner().invoke(app, ['repack', str(source), '--verbose', *extra])
+    result = separated_cli_runner().invoke(app, ['repack', str(source), '--verbose', *extra])
     assert result.exit_code == 0, result.output
     assert '[SUCCESS]' in result.stdout and '[ERROR]' not in result.output
     if dryrun:
@@ -33,7 +33,7 @@ def test_real_decode_error_is_explicit_and_never_reported_as_unchanged(tmp_path,
     source = tmp_path / 'broken.gz'
     source.write_bytes(b'not gzip')
     extra = ['--quiet'] if quiet else []
-    result = CliRunner().invoke(app, ['repack', str(source), *extra])
+    result = separated_cli_runner().invoke(app, ['repack', str(source), *extra])
     assert result.exit_code == 1
     assert '[ERROR] failed' in result.stderr
     assert '[SUCCESS]' not in result.output and 'File ' not in result.stdout
@@ -45,7 +45,7 @@ def test_missing_tool_is_explicit_error(tmp_path, monkeypatch):
     original = b'\x89LZO\x00\r\n\x1a\n' + b'\x00' * 30
     source.write_bytes(original)
     monkeypatch.setattr('filerepack.tools.which', lambda name: None)
-    result = CliRunner().invoke(app, ['repack', str(source)])
+    result = separated_cli_runner().invoke(app, ['repack', str(source)])
     assert result.exit_code == 1
     assert '[ERROR] unsupported' in result.stderr
     assert '[SUCCESS]' not in result.output
@@ -55,7 +55,7 @@ def test_missing_tool_is_explicit_error(tmp_path, monkeypatch):
 def test_intentional_skip_is_distinct_from_an_error(tmp_path):
     source = tmp_path / 'small.json'
     source.write_text('{}')
-    result = CliRunner().invoke(app, ['repack', str(source), '--min-size', '1KB'])
+    result = separated_cli_runner().invoke(app, ['repack', str(source), '--min-size', '1KB'])
     assert result.exit_code == 0
     assert '[SKIPPED]' in result.stdout and '[ERROR]' not in result.output
     assert source.read_text() == '{}'
@@ -69,7 +69,7 @@ def test_user_interruption_has_an_explicit_cancelled_label(tmp_path, monkeypatch
         raise KeyboardInterrupt
 
     monkeypatch.setattr('filerepack.__main__.FileRepacker.repack_zip_file', interrupted)
-    result = CliRunner().invoke(app, ['repack', str(source)])
+    result = separated_cli_runner().invoke(app, ['repack', str(source)])
     assert result.exit_code == 130
     assert '[CANCELLED]' in result.stderr
     assert '[SUCCESS]' not in result.output
@@ -78,7 +78,7 @@ def test_user_interruption_has_an_explicit_cancelled_label(tmp_path, monkeypatch
 def test_quiet_suppresses_success_messages(tmp_path):
     source = tmp_path / 'data.json'
     source.write_text('{}')
-    result = CliRunner().invoke(app, ['repack', str(source), '--quiet'])
+    result = separated_cli_runner().invoke(app, ['repack', str(source), '--quiet'])
     assert result.exit_code == 0 and not result.stdout
 
 
@@ -87,7 +87,7 @@ def test_quiet_suppresses_success_messages(tmp_path):
 def test_machine_reports_remain_parseable_without_human_labels(tmp_path, format, valid):
     source = tmp_path / ('data.json' if valid else 'broken.gz')
     source.write_bytes(b' { "value": 1 } ' if valid else b'not gzip')
-    result = CliRunner().invoke(app, ['repack', str(source), '--' + format, '--verbose'])
+    result = separated_cli_runner().invoke(app, ['repack', str(source), '--' + format, '--verbose'])
     assert result.exit_code == (0 if valid else 1)
     assert '[SUCCESS]' not in result.stdout and '[ERROR]' not in result.stdout
     if format == 'json':
@@ -101,7 +101,7 @@ def test_machine_reports_remain_parseable_without_human_labels(tmp_path, format,
 def test_bulk_clean_completion_has_success_label(tmp_path, dryrun):
     (tmp_path / 'data.json').write_text(' { "value": 1 } ')
     extra = ['--dryrun'] if dryrun else []
-    result = CliRunner().invoke(app, ['bulk', str(tmp_path), *extra])
+    result = separated_cli_runner().invoke(app, ['bulk', str(tmp_path), *extra])
     assert result.exit_code == 0, result.output
     prefix = '[DRYRUN] ' if dryrun else ''
     assert f'[SUCCESS] {prefix}Bulk processing completed.' in result.stdout
@@ -116,7 +116,7 @@ def test_bulk_failure_has_error_summary_matching_exit_code(tmp_path, continue_on
     extra = ['--continue-on-error'] if continue_on_error else []
     if quiet:
         extra.append('--quiet')
-    result = CliRunner().invoke(app, ['bulk', str(tmp_path), *extra])
+    result = separated_cli_runner().invoke(app, ['bulk', str(tmp_path), *extra])
     assert result.exit_code == (2 if continue_on_error else 1)
     assert '[ERROR] (failed)' in result.stderr
     verb = 'completed with errors' if continue_on_error else 'stopped after an error'
@@ -135,7 +135,7 @@ def test_bulk_scan_failure_and_interruption_have_terminal_labels(tmp_path, monke
         yield  # Make discovery lazy so the error occurs inside the job lifecycle.
 
     monkeypatch.setattr('filerepack.__main__._collect_bulk_files', failed_scan)
-    result = CliRunner().invoke(app, ['bulk', str(tmp_path)])
+    result = separated_cli_runner().invoke(app, ['bulk', str(tmp_path)])
     assert result.exit_code == (1 if failure == 'scan' else 130)
     label = '[ERROR]' if failure == 'scan' else '[CANCELLED]'
     assert label in result.stderr
@@ -146,7 +146,7 @@ def test_bulk_scan_failure_and_interruption_have_terminal_labels(tmp_path, monke
 
 def test_bulk_intentional_skip_still_completes_successfully(tmp_path):
     (tmp_path / 'small.json').write_text('{}')
-    result = CliRunner().invoke(app, ['bulk', str(tmp_path), '--min-size', '1KB'])
+    result = separated_cli_runner().invoke(app, ['bulk', str(tmp_path), '--min-size', '1KB'])
     assert result.exit_code == 0
     assert '[SKIPPED]' in result.stdout
     assert '[SUCCESS] Bulk processing completed.' in result.stdout
@@ -155,7 +155,7 @@ def test_bulk_intentional_skip_still_completes_successfully(tmp_path):
 
 @pytest.mark.parametrize('command', ['repack', 'bulk'])
 def test_missing_input_has_explicit_error_label(tmp_path, command):
-    result = CliRunner().invoke(app, [command, str(tmp_path / 'missing')])
+    result = separated_cli_runner().invoke(app, [command, str(tmp_path / 'missing')])
     assert result.exit_code == 1
     assert '[ERROR]' in result.stderr
     assert '[SUCCESS]' not in result.output
@@ -173,7 +173,7 @@ def test_report_failure_cannot_claim_successful_completion(tmp_path, monkeypatch
 
     monkeypatch.setattr('filerepack.reports.AuditReport.finish', failed_report)
     target = source if command == 'repack' else inputs
-    result = CliRunner().invoke(
+    result = separated_cli_runner().invoke(
         app, [command, str(target), '--report', str(tmp_path / 'report.json')],
     )
     assert result.exit_code == 1

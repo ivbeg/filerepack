@@ -224,6 +224,13 @@ formats and pending platform/reader gates remain explicitly marked.
 
 ### Fixed
 
+- PDF image walking uses the dictionary API supported by pikepdf 8/9 as well
+  as newer releases, retaining the same shared/nested XObject checks.
+- Unix compress validation rejects invalid flags and unsupported code widths
+  before invoking decoders that may otherwise accept malformed headers.
+- CI/test fixtures separate stdout from stderr on supported older Click
+  versions and use native Windows permission/executable behavior. Development
+  type checking stays on mypy versions supporting the Python 3.9 target.
 - Bulk discovery and submission are bounded; source/output/backup reservations
   prevent competing operations, cancellation drains workers, and owned process
   trees are supervised. Result-spool failures stop new work while preserving

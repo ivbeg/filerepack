@@ -216,7 +216,7 @@ jobs:
       run: |
         python -c "import pyarrow, fastavro, fontTools, brotli, mutagen, rich, pikepdf, PIL, lz4"
         python -c "from filerepack.tools import resolve_tool; assert all(resolve_tool(k) for k in ('ffmpeg', 'ffprobe', 'qpdf', 'jpegoptim', 'jpegtran', 'optipng', 'pigz'))"
-        opj_dump -h
+        python -c "import shutil; assert shutil.which('opj_dump')"
     - name: Run native preservation and diagnostic contracts
       run: >-
         python -m pytest -q test/test_data_preservation.py test/test_parquet_preservation.py

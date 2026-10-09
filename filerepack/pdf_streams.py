@@ -77,7 +77,7 @@ def _images(resources: Any, visited: set, budget: Budget, depth: int = 0,
         raise FormatLimit('PDF resource graph depth exceeds 16')
     if resources is None:
         return
-    for obj in resources.get('/XObject', {}).values():
+    for _, obj in resources.get('/XObject', {}).items():
         budget.consume(nodes=1)
         identity = tuple(obj.objgen) if tuple(obj.objgen) != (0, 0) else ('direct', id(obj))
         if identity in visited:

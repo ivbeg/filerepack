@@ -132,7 +132,7 @@ def png_samples_digest(parsed: PngData, budget: Optional[Budget] = None) -> str:
         tool = _png_row_tool(budget)
         if tool is not None:
             return _native_png_samples_digest(parsed, tool, budget)
-    previous = bytes(stride)
+    previous = bytearray(stride)
     digest = hashlib.sha256()
     position = 0
     palette = next((len(v) // 3 for k, v in parsed.chunks if k == b"PLTE"), 0)

@@ -9,7 +9,7 @@ import threading
 import time
 
 import pytest
-from typer.testing import CliRunner
+from test.helpers import separated_cli_runner
 
 from filerepack import FileRepacker
 from filerepack.__main__ import app
@@ -57,7 +57,7 @@ def test_bulk_report_retains_all_terminal_outcomes(tmp_path, mode):
     (tmp_path / 'a.json').write_bytes(b' { "x": 1 } ')
     (tmp_path / 'broken.gz').write_bytes(b'bad')
     (tmp_path / 'filtered.json').write_bytes(b'{}')
-    result = CliRunner().invoke(app, ['bulk', str(tmp_path), mode, '--continue-on-error',
+    result = separated_cli_runner().invoke(app, ['bulk', str(tmp_path), mode, '--continue-on-error',
                                     '--min-size', '3', '--verbose'])
     assert result.exit_code == 2, result.output
     if mode == '--json':
@@ -87,7 +87,7 @@ def test_parallel_bulk_excludes_output_and_drains_known_results(tmp_path):
     (output / 'existing.json').write_bytes(b' { "x": 0 } ')
     for number in range(7):
         (tmp_path / f'{number}.json').write_bytes(b' { "x": 1 } ')
-    result = CliRunner().invoke(app, ['bulk', str(tmp_path), '--json', '--jobs', '2',
+    result = separated_cli_runner().invoke(app, ['bulk', str(tmp_path), '--json', '--jobs', '2',
                                     '--output-dir', str(output)])
     assert result.exit_code == 0, result.output
     data = json.loads(result.stdout)
@@ -124,7 +124,7 @@ def test_repeated_invocations_do_not_reuse_log(tmp_path):
     with gzip.open(source, 'wb') as target:
         target.write(b'x' * 500)
     log = tmp_path / 'operation.log'
-    runner = CliRunner()
+    runner = separated_cli_runner()
     first = runner.invoke(app, ['repack', str(source), '--log-file', str(log)])
     assert first.exit_code == 0, first.output
     logged = log.read_text()

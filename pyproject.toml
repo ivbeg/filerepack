@@ -68,7 +68,7 @@ dev = [
     "Pillow>=10",
     "pikepdf>=8",
     "ruff>=0.6",
-    "mypy>=1.0,<2.4",
+    "mypy>=1.0,<2",
     "olefile==0.47",
 ]
 

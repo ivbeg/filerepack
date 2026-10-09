@@ -91,7 +91,7 @@ def _decode(data: bytes, codec: str, budget: Budget) -> bytes:
     if codec == 'zstandard':
         import zstandard
         with zstandard.ZstdDecompressor().stream_reader(io.BytesIO(data)) as reader:
-            raw = reader.read(maximum + 1)
+            raw: bytes = reader.read(maximum + 1)
         if len(raw) > maximum:
             raise FormatLimit('Avro decoded block exceeds supported budget')
         budget.consume(decoded=len(raw))

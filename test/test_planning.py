@@ -1,4 +1,7 @@
 import json
+import os
+import shutil
+import sys
 import zipfile
 
 import pytest
@@ -99,8 +102,11 @@ def test_inspection_unknown_protection_and_occupied_target_are_independent(tmp_p
 def test_override_executable_and_config_refresh(tmp_path, monkeypatch):
     monkeypatch.setenv('FILEREPACK_FFMPEG', str(tmp_path / 'missing'))
     assert resolve_tool('ffmpeg') is None
-    executable = tmp_path / 'fake'
-    executable.write_text('#!/bin/sh\nprintf "example version 1\\n"\n')
+    executable = tmp_path / ('fake.exe' if os.name == 'nt' else 'fake')
+    if os.name == 'nt':
+        shutil.copyfile(sys.executable, executable)
+    else:
+        executable.write_text('#!/bin/sh\nprintf "example version 1\\n"\n')
     assert resolve_tool('ffmpeg') is None
     executable.chmod(0o755)
     monkeypatch.setenv('FILEREPACK_FFMPEG', str(executable))
@@ -108,7 +114,7 @@ def test_override_executable_and_config_refresh(tmp_path, monkeypatch):
     monkeypatch.delenv('FILEREPACK_FFMPEG')
     config = tmp_path / 'config.toml'
     monkeypatch.setattr('filerepack.tools._config_paths', lambda: [str(config)])
-    config.write_text('[tools]\nffmpeg="' + str(executable) + '"\n')
+    config.write_text('[tools]\nffmpeg=' + json.dumps(str(executable)) + '\n')
     assert resolve_tool('ffmpeg') == str(executable)
-    config.write_text('[tools]\nffmpeg="' + str(tmp_path / 'missing') + '"\n')
+    config.write_text('[tools]\nffmpeg=' + json.dumps(str(tmp_path / 'missing')) + '\n')
     assert resolve_tool('ffmpeg') is None
