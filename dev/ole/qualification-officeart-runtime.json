@@ -1,0 +1,823 @@
+{
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.7",
+  "writer": "filerepack-ole 0.3.0 (cfb 0.14.0)",
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "rasterizer": "pdftoppm version 26.05.0",
+  "fixture_sha256": {
+    "vector_image.doc": "747eb4c44a9ff7ac646f267fad6d4006b596a8beaec211fe27cb67f018800850",
+    "word_with_embeded.doc": "206acf1f7eb7b7d7d2075e04015d005ae9bb56f025560f2583ad3878257bc4c7",
+    "SimpleWithImages.xls": "dd35970bf68df7bb609b681634602ead30001816009c791012d00b5563ab9314",
+    "ole2-embedding-2003.ppt": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd"
+  },
+  "cases": [
+    {
+      "fixture": "vector_image.doc",
+      "variant": "original",
+      "source_bytes": 24064,
+      "compaction_bytes": 24064,
+      "candidate_bytes": 24064,
+      "verifier": "ole",
+      "intent_equal": true,
+      "decoded_metafiles_equal": true,
+      "strict_manifest_equal": true,
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+          }
+        ],
+        "dpi": 96,
+        "macro_security_level": 3
+      },
+      "details": {
+        "strategy": "ole-compaction",
+        "compaction_bytes": 24064,
+        "additional_savings_bytes": 0,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 1,
+          "metafile_types": [
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15"
+          ],
+          "recompressed_metafiles": 1,
+          "decoded_metafile_bytes": 7348,
+          "stream_savings_bytes": 74
+        },
+        "officeart_candidate_bytes": 24064,
+        "officeart_skip": "metafile savings do not improve the selected physical file size",
+        "recompression_skip": "metafile savings do not improve the selected physical file size",
+        "worker_usage": {
+          "decoded": 22044,
+          "written": 56292,
+          "nodes": 90,
+          "peak_worker_rss_bytes": 34504704,
+          "seconds": 0.20295595900097396
+        }
+      }
+    },
+    {
+      "fixture": "vector_image.doc",
+      "variant": "zlib0",
+      "source_bytes": 30208,
+      "compaction_bytes": 30208,
+      "candidate_bytes": 24064,
+      "verifier": "officeart",
+      "intent_equal": true,
+      "decoded_metafiles_equal": true,
+      "strict_manifest_equal": false,
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+          }
+        ],
+        "dpi": 96,
+        "macro_security_level": 3
+      },
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 30208,
+        "additional_savings_bytes": 6144,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 1,
+          "metafile_types": [
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15"
+          ],
+          "recompressed_metafiles": 1,
+          "decoded_metafile_bytes": 7348,
+          "stream_savings_bytes": 5890
+        },
+        "officeart_candidate_bytes": 24064,
+        "officeart_host": "doc",
+        "metafile_count": 1,
+        "metafile_types": [
+          "EMF"
+        ],
+        "encoders": [
+          "zopfli15"
+        ],
+        "recompressed_metafiles": 1,
+        "decoded_metafile_bytes": 7348,
+        "stream_savings_bytes": 5890,
+        "worker_usage": {
+          "decoded": 22044,
+          "written": 62436,
+          "nodes": 90,
+          "peak_worker_rss_bytes": 33947648,
+          "seconds": 0.2013317920063855
+        }
+      }
+    },
+    {
+      "fixture": "vector_image.doc",
+      "variant": "zlib1",
+      "source_bytes": 24576,
+      "compaction_bytes": 24576,
+      "candidate_bytes": 24064,
+      "verifier": "officeart",
+      "intent_equal": true,
+      "decoded_metafiles_equal": true,
+      "strict_manifest_equal": false,
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+          }
+        ],
+        "dpi": 96,
+        "macro_security_level": 3
+      },
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 24576,
+        "additional_savings_bytes": 512,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 1,
+          "metafile_types": [
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15"
+          ],
+          "recompressed_metafiles": 1,
+          "decoded_metafile_bytes": 7348,
+          "stream_savings_bytes": 385
+        },
+        "officeart_candidate_bytes": 24064,
+        "officeart_host": "doc",
+        "metafile_count": 1,
+        "metafile_types": [
+          "EMF"
+        ],
+        "encoders": [
+          "zopfli15"
+        ],
+        "recompressed_metafiles": 1,
+        "decoded_metafile_bytes": 7348,
+        "stream_savings_bytes": 385,
+        "worker_usage": {
+          "decoded": 22044,
+          "written": 56804,
+          "nodes": 90,
+          "peak_worker_rss_bytes": 34209792,
+          "seconds": 0.20319916598964483
+        }
+      }
+    },
+    {
+      "fixture": "word_with_embeded.doc",
+      "variant": "original",
+      "source_bytes": 117248,
+      "compaction_bytes": 117248,
+      "candidate_bytes": 116224,
+      "verifier": "officeart",
+      "intent_equal": true,
+      "decoded_metafiles_equal": true,
+      "strict_manifest_equal": false,
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+          }
+        ],
+        "dpi": 96,
+        "macro_security_level": 3
+      },
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 117248,
+        "additional_savings_bytes": 1024,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 4,
+          "metafile_types": [
+            "EMF",
+            "EMF",
+            "EMF",
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15",
+            "zopfli15",
+            "zopfli15",
+            "zopfli15"
+          ],
+          "recompressed_metafiles": 4,
+          "decoded_metafile_bytes": 16784,
+          "stream_savings_bytes": 773
+        },
+        "officeart_candidate_bytes": 116224,
+        "officeart_host": "doc",
+        "metafile_count": 4,
+        "metafile_types": [
+          "EMF",
+          "EMF",
+          "EMF",
+          "EMF"
+        ],
+        "encoders": [
+          "zopfli15",
+          "zopfli15",
+          "zopfli15",
+          "zopfli15"
+        ],
+        "recompressed_metafiles": 4,
+        "decoded_metafile_bytes": 16784,
+        "stream_savings_bytes": 773,
+        "worker_usage": {
+          "decoded": 50352,
+          "written": 241969,
+          "nodes": 528,
+          "peak_worker_rss_bytes": 35258368,
+          "seconds": 0.4640325000073062
+        }
+      }
+    },
+    {
+      "fixture": "word_with_embeded.doc",
+      "variant": "zlib0",
+      "source_bytes": 129536,
+      "compaction_bytes": 129536,
+      "candidate_bytes": 116224,
+      "verifier": "officeart",
+      "intent_equal": true,
+      "decoded_metafiles_equal": true,
+      "strict_manifest_equal": false,
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+          }
+        ],
+        "dpi": 96,
+        "macro_security_level": 3
+      },
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 129536,
+        "additional_savings_bytes": 13312,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 4,
+          "metafile_types": [
+            "EMF",
+            "EMF",
+            "EMF",
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15",
+            "zopfli15",
+            "zopfli15",
+            "zopfli15"
+          ],
+          "recompressed_metafiles": 4,
+          "decoded_metafile_bytes": 16784,
+          "stream_savings_bytes": 13331
+        },
+        "officeart_candidate_bytes": 116224,
+        "officeart_host": "doc",
+        "metafile_count": 4,
+        "metafile_types": [
+          "EMF",
+          "EMF",
+          "EMF",
+          "EMF"
+        ],
+        "encoders": [
+          "zopfli15",
+          "zopfli15",
+          "zopfli15",
+          "zopfli15"
+        ],
+        "recompressed_metafiles": 4,
+        "decoded_metafile_bytes": 16784,
+        "stream_savings_bytes": 13331,
+        "worker_usage": {
+          "decoded": 50352,
+          "written": 254257,
+          "nodes": 528,
+          "peak_worker_rss_bytes": 35323904,
+          "seconds": 0.4620345000002999
+        }
+      }
+    },
+    {
+      "fixture": "word_with_embeded.doc",
+      "variant": "zlib1",
+      "source_bytes": 116736,
+      "compaction_bytes": 116736,
+      "candidate_bytes": 116224,
+      "verifier": "officeart",
+      "intent_equal": true,
+      "decoded_metafiles_equal": true,
+      "strict_manifest_equal": false,
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+          }
+        ],
+        "dpi": 96,
+        "macro_security_level": 3
+      },
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 116736,
+        "additional_savings_bytes": 512,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 4,
+          "metafile_types": [
+            "EMF",
+            "EMF",
+            "EMF",
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15",
+            "zopfli15",
+            "zopfli15",
+            "zopfli15"
+          ],
+          "recompressed_metafiles": 4,
+          "decoded_metafile_bytes": 16784,
+          "stream_savings_bytes": 682
+        },
+        "officeart_candidate_bytes": 116224,
+        "officeart_host": "doc",
+        "metafile_count": 4,
+        "metafile_types": [
+          "EMF",
+          "EMF",
+          "EMF",
+          "EMF"
+        ],
+        "encoders": [
+          "zopfli15",
+          "zopfli15",
+          "zopfli15",
+          "zopfli15"
+        ],
+        "recompressed_metafiles": 4,
+        "decoded_metafile_bytes": 16784,
+        "stream_savings_bytes": 682,
+        "worker_usage": {
+          "decoded": 50352,
+          "written": 241457,
+          "nodes": 528,
+          "peak_worker_rss_bytes": 35340288,
+          "seconds": 0.46372975000122096
+        }
+      }
+    },
+    {
+      "fixture": "SimpleWithImages.xls",
+      "variant": "original",
+      "source_bytes": 48128,
+      "compaction_bytes": 48128,
+      "candidate_bytes": 47104,
+      "verifier": "officeart",
+      "intent_equal": true,
+      "decoded_metafiles_equal": true,
+      "strict_manifest_equal": false,
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+          }
+        ],
+        "dpi": 96,
+        "macro_security_level": 3
+      },
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 48128,
+        "additional_savings_bytes": 1024,
+        "officeart": {
+          "officeart_host": "xls",
+          "metafile_count": 2,
+          "metafile_types": [
+            "WMF",
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15",
+            "zopfli15"
+          ],
+          "recompressed_metafiles": 2,
+          "decoded_metafile_bytes": 34858,
+          "stream_savings_bytes": 796
+        },
+        "officeart_candidate_bytes": 47104,
+        "officeart_host": "xls",
+        "metafile_count": 2,
+        "metafile_types": [
+          "WMF",
+          "EMF"
+        ],
+        "encoders": [
+          "zopfli15",
+          "zopfli15"
+        ],
+        "recompressed_metafiles": 2,
+        "decoded_metafile_bytes": 34858,
+        "stream_savings_bytes": 796,
+        "worker_usage": {
+          "decoded": 104574,
+          "written": 132451,
+          "nodes": 354,
+          "peak_worker_rss_bytes": 36552704,
+          "seconds": 0.9325207910005702
+        }
+      }
+    },
+    {
+      "fixture": "SimpleWithImages.xls",
+      "variant": "zlib0",
+      "source_bytes": 60928,
+      "compaction_bytes": 60928,
+      "candidate_bytes": 47104,
+      "verifier": "officeart",
+      "intent_equal": true,
+      "decoded_metafiles_equal": true,
+      "strict_manifest_equal": false,
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+          }
+        ],
+        "dpi": 96,
+        "macro_security_level": 3
+      },
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 60928,
+        "additional_savings_bytes": 13824,
+        "officeart": {
+          "officeart_host": "xls",
+          "metafile_count": 2,
+          "metafile_types": [
+            "WMF",
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15",
+            "zopfli15"
+          ],
+          "recompressed_metafiles": 2,
+          "decoded_metafile_bytes": 34858,
+          "stream_savings_bytes": 13768
+        },
+        "officeart_candidate_bytes": 47104,
+        "officeart_host": "xls",
+        "metafile_count": 2,
+        "metafile_types": [
+          "WMF",
+          "EMF"
+        ],
+        "encoders": [
+          "zopfli15",
+          "zopfli15"
+        ],
+        "recompressed_metafiles": 2,
+        "decoded_metafile_bytes": 34858,
+        "stream_savings_bytes": 13768,
+        "worker_usage": {
+          "decoded": 104574,
+          "written": 145251,
+          "nodes": 355,
+          "peak_worker_rss_bytes": 38518784,
+          "seconds": 0.9314296669908799
+        }
+      }
+    },
+    {
+      "fixture": "SimpleWithImages.xls",
+      "variant": "zlib1",
+      "source_bytes": 48640,
+      "compaction_bytes": 48640,
+      "candidate_bytes": 47104,
+      "verifier": "officeart",
+      "intent_equal": true,
+      "decoded_metafiles_equal": true,
+      "strict_manifest_equal": false,
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+          }
+        ],
+        "dpi": 96,
+        "macro_security_level": 3
+      },
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 48640,
+        "additional_savings_bytes": 1536,
+        "officeart": {
+          "officeart_host": "xls",
+          "metafile_count": 2,
+          "metafile_types": [
+            "WMF",
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15",
+            "zopfli15"
+          ],
+          "recompressed_metafiles": 2,
+          "decoded_metafile_bytes": 34858,
+          "stream_savings_bytes": 1614
+        },
+        "officeart_candidate_bytes": 47104,
+        "officeart_host": "xls",
+        "metafile_count": 2,
+        "metafile_types": [
+          "WMF",
+          "EMF"
+        ],
+        "encoders": [
+          "zopfli15",
+          "zopfli15"
+        ],
+        "recompressed_metafiles": 2,
+        "decoded_metafile_bytes": 34858,
+        "stream_savings_bytes": 1614,
+        "worker_usage": {
+          "decoded": 104574,
+          "written": 132963,
+          "nodes": 354,
+          "peak_worker_rss_bytes": 36880384,
+          "seconds": 0.9357118750049267
+        }
+      }
+    },
+    {
+      "fixture": "ole2-embedding-2003.ppt",
+      "variant": "original",
+      "source_bytes": 40448,
+      "compaction_bytes": 37888,
+      "candidate_bytes": 37376,
+      "verifier": "ppt-ole",
+      "intent_equal": true,
+      "decoded_metafiles_equal": true,
+      "strict_manifest_equal": false,
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+          }
+        ],
+        "dpi": 96,
+        "macro_security_level": 3
+      },
+      "details": {
+        "strategy": "ppt-ole-recompression",
+        "compaction_bytes": 37888,
+        "additional_savings_bytes": 512,
+        "encoders": [
+          "zopfli15",
+          "zopfli15"
+        ],
+        "document_stream_savings_bytes": 521,
+        "decoded_storage_bytes": 54272,
+        "officeart": {
+          "officeart_host": "ppt",
+          "metafile_count": 2,
+          "metafile_types": [
+            "EMF",
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15",
+            "zopfli15"
+          ],
+          "recompressed_metafiles": 2,
+          "decoded_metafile_bytes": 9712,
+          "stream_savings_bytes": 149
+        },
+        "officeart_candidate_bytes": 37888,
+        "officeart_skip": "metafile savings do not improve the selected physical file size",
+        "worker_usage": {
+          "decoded": 300496,
+          "written": 134337,
+          "nodes": 852,
+          "peak_worker_rss_bytes": 36487168,
+          "seconds": 0.6718395829957444
+        }
+      }
+    },
+    {
+      "fixture": "ole2-embedding-2003.ppt",
+      "variant": "zlib0",
+      "source_bytes": 46080,
+      "compaction_bytes": 46080,
+      "candidate_bytes": 37888,
+      "verifier": "officeart",
+      "intent_equal": true,
+      "decoded_metafiles_equal": true,
+      "strict_manifest_equal": false,
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+          }
+        ],
+        "dpi": 96,
+        "macro_security_level": 3
+      },
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 46080,
+        "additional_savings_bytes": 8192,
+        "encoders": [
+          "zopfli15",
+          "zopfli15"
+        ],
+        "document_stream_savings_bytes": 521,
+        "decoded_storage_bytes": 54272,
+        "officeart": {
+          "officeart_host": "ppt",
+          "metafile_count": 2,
+          "metafile_types": [
+            "EMF",
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15",
+            "zopfli15"
+          ],
+          "recompressed_metafiles": 2,
+          "decoded_metafile_bytes": 9712,
+          "stream_savings_bytes": 7942
+        },
+        "officeart_candidate_bytes": 37888,
+        "officeart_host": "ppt",
+        "metafile_count": 2,
+        "metafile_types": [
+          "EMF",
+          "EMF"
+        ],
+        "recompressed_metafiles": 2,
+        "decoded_metafile_bytes": 9712,
+        "stream_savings_bytes": 7942,
+        "worker_usage": {
+          "decoded": 300496,
+          "written": 150721,
+          "nodes": 852,
+          "peak_worker_rss_bytes": 36651008,
+          "seconds": 0.6702145410090452
+        }
+      }
+    },
+    {
+      "fixture": "ole2-embedding-2003.ppt",
+      "variant": "zlib1",
+      "source_bytes": 37888,
+      "compaction_bytes": 37888,
+      "candidate_bytes": 37376,
+      "verifier": "ppt-ole",
+      "intent_equal": true,
+      "decoded_metafiles_equal": true,
+      "strict_manifest_equal": false,
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+          }
+        ],
+        "dpi": 96,
+        "macro_security_level": 3
+      },
+      "details": {
+        "strategy": "ppt-ole-recompression",
+        "compaction_bytes": 37888,
+        "additional_savings_bytes": 512,
+        "encoders": [
+          "zopfli15",
+          "zopfli15"
+        ],
+        "document_stream_savings_bytes": 521,
+        "decoded_storage_bytes": 54272,
+        "officeart": {
+          "officeart_host": "ppt",
+          "metafile_count": 2,
+          "metafile_types": [
+            "EMF",
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15",
+            "zopfli15"
+          ],
+          "recompressed_metafiles": 2,
+          "decoded_metafile_bytes": 9712,
+          "stream_savings_bytes": 359
+        },
+        "officeart_candidate_bytes": 37888,
+        "officeart_skip": "metafile savings do not improve the selected physical file size",
+        "worker_usage": {
+          "decoded": 300496,
+          "written": 134337,
+          "nodes": 852,
+          "peak_worker_rss_bytes": 38060032,
+          "seconds": 0.6748543749999953
+        }
+      }
+    }
+  ],
+  "scope": "Public API with native writer; controls change only zlib encodings. macOS qualification; Microsoft Office repair behavior unmeasured.",
+  "source_checksums_unchanged": true
+}

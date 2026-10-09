@@ -1,0 +1,40 @@
+{
+  "torch": "2.14.1",
+  "results": [
+    {
+      "mode": "stored",
+      "bytes": 17069,
+      "False": {
+        "equal": true,
+        "sharing": true
+      },
+      "True": {
+        "equal": true,
+        "sharing": true
+      }
+    },
+    {
+      "mode": "metadata-deflate",
+      "bytes": 17045,
+      "False": {
+        "equal": true,
+        "sharing": true
+      },
+      "True": {
+        "equal": true,
+        "sharing": true
+      }
+    },
+    {
+      "mode": "all-deflate",
+      "bytes": 5507,
+      "False": {
+        "equal": true,
+        "sharing": true
+      },
+      "True": {
+        "error": "Trying to resize storage that is not resizable"
+      }
+    }
+  ]
+}

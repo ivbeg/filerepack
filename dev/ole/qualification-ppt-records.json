@@ -1,0 +1,499 @@
+{
+  "status": "development-only feasibility; production integration awaits approval",
+  "fixture": "ole2-embedding-2003.ppt",
+  "fixture_sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+  "corpus_commit": "12c3688d130035f3dc2ca2a0f50d929456435a93",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.7",
+  "zlib": "1.2.12",
+  "zopfli": "0.4.3",
+  "olefile": "0.47",
+  "writer": "filerepack-ole 0.1.0 (cfb 0.14.0)",
+  "scope": "one pinned, macro-free, single-edit fixture; two embedded DOC/XLS objects",
+  "peak_memory": "not measured",
+  "cases": [
+    {
+      "variant": "original",
+      "encoder": "zlib9",
+      "source_bytes": 40448,
+      "compaction_bytes": 37888,
+      "candidate_bytes": 37888,
+      "additional_savings_bytes": 0,
+      "total_savings_bytes": 2560,
+      "document_stream_savings_bytes": 100,
+      "encoding": [
+        {
+          "decoded_bytes": 40448,
+          "encoded_bytes": 2558,
+          "seconds": 0.002953
+        },
+        {
+          "decoded_bytes": 13824,
+          "encoded_bytes": 2547,
+          "seconds": 0.002128
+        }
+      ],
+      "baseline_writer_seconds": 0.023422,
+      "writer_seconds": 0.02087,
+      "source_sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+      "candidate_sha256": "20189fdbfe1dca2c3f00275e6769bd0fd7479d7e6204d0d469dc2f0f8c39b2a0",
+      "preservation": {
+        "intent_equal": true,
+        "surrounding_records_byte_equal": true,
+        "unrelated_streams_and_directory_metadata_equal": true,
+        "strict_ole_manifest_equal": false,
+        "before": {
+          "objects": [
+            4568,
+            7195
+          ],
+          "persist_directory": 9797,
+          "user_edit": 9829,
+          "persist_targets": [
+            0,
+            4568,
+            7195,
+            1426,
+            3902
+          ]
+        },
+        "after": {
+          "objects": [
+            4568,
+            7138
+          ],
+          "persist_directory": 9697,
+          "user_edit": 9729,
+          "persist_targets": [
+            0,
+            4568,
+            7138,
+            1426,
+            3902
+          ]
+        },
+        "decoded_storage_sha256": [
+          "ef12727ff1260e84aa467dbf925d8baee6c504ec58bd5caa4c710556d4dc13aa",
+          "8ed0c27172a682a6355b33ae1b4f459facc5c5ea9e8959a6ae349339ecf98425"
+        ]
+      },
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+          }
+        ],
+        "macro_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "variant": "original",
+      "encoder": "zopfli15",
+      "source_bytes": 40448,
+      "compaction_bytes": 37888,
+      "candidate_bytes": 37376,
+      "additional_savings_bytes": 512,
+      "total_savings_bytes": 3072,
+      "document_stream_savings_bytes": 521,
+      "encoding": [
+        {
+          "decoded_bytes": 40448,
+          "encoded_bytes": 2291,
+          "seconds": 0.106952
+        },
+        {
+          "decoded_bytes": 13824,
+          "encoded_bytes": 2393,
+          "seconds": 0.048541
+        }
+      ],
+      "baseline_writer_seconds": 0.023422,
+      "writer_seconds": 0.019544,
+      "source_sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+      "candidate_sha256": "a23e2c1f76db5903177fe74a321ed5a45ff6d1b646c13637cb5a7acd0640c709",
+      "preservation": {
+        "intent_equal": true,
+        "surrounding_records_byte_equal": true,
+        "unrelated_streams_and_directory_metadata_equal": true,
+        "strict_ole_manifest_equal": false,
+        "before": {
+          "objects": [
+            4568,
+            7195
+          ],
+          "persist_directory": 9797,
+          "user_edit": 9829,
+          "persist_targets": [
+            0,
+            4568,
+            7195,
+            1426,
+            3902
+          ]
+        },
+        "after": {
+          "objects": [
+            4568,
+            6871
+          ],
+          "persist_directory": 9276,
+          "user_edit": 9308,
+          "persist_targets": [
+            0,
+            4568,
+            6871,
+            1426,
+            3902
+          ]
+        },
+        "decoded_storage_sha256": [
+          "ef12727ff1260e84aa467dbf925d8baee6c504ec58bd5caa4c710556d4dc13aa",
+          "8ed0c27172a682a6355b33ae1b4f459facc5c5ea9e8959a6ae349339ecf98425"
+        ]
+      },
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+          }
+        ],
+        "macro_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "variant": "controlled-zlib1",
+      "encoder": "zlib9",
+      "source_bytes": 38400,
+      "compaction_bytes": 38400,
+      "candidate_bytes": 37888,
+      "additional_savings_bytes": 512,
+      "total_savings_bytes": 512,
+      "document_stream_savings_bytes": 808,
+      "encoding": [
+        {
+          "decoded_bytes": 40448,
+          "encoded_bytes": 2558,
+          "seconds": 0.00296
+        },
+        {
+          "decoded_bytes": 13824,
+          "encoded_bytes": 2547,
+          "seconds": 0.002138
+        }
+      ],
+      "baseline_writer_seconds": 0.027401,
+      "writer_seconds": 0.021754,
+      "source_sha256": "a874b8ca76c360bc1fcd6a495ffc9613c22860f34998485f086e14385adf35b7",
+      "candidate_sha256": "20189fdbfe1dca2c3f00275e6769bd0fd7479d7e6204d0d469dc2f0f8c39b2a0",
+      "preservation": {
+        "intent_equal": true,
+        "surrounding_records_byte_equal": true,
+        "unrelated_streams_and_directory_metadata_equal": true,
+        "strict_ole_manifest_equal": false,
+        "before": {
+          "objects": [
+            4568,
+            7568
+          ],
+          "persist_directory": 10505,
+          "user_edit": 10537,
+          "persist_targets": [
+            0,
+            4568,
+            7568,
+            1426,
+            3902
+          ]
+        },
+        "after": {
+          "objects": [
+            4568,
+            7138
+          ],
+          "persist_directory": 9697,
+          "user_edit": 9729,
+          "persist_targets": [
+            0,
+            4568,
+            7138,
+            1426,
+            3902
+          ]
+        },
+        "decoded_storage_sha256": [
+          "ef12727ff1260e84aa467dbf925d8baee6c504ec58bd5caa4c710556d4dc13aa",
+          "8ed0c27172a682a6355b33ae1b4f459facc5c5ea9e8959a6ae349339ecf98425"
+        ]
+      },
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+          }
+        ],
+        "macro_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "variant": "controlled-zlib1",
+      "encoder": "zopfli15",
+      "source_bytes": 38400,
+      "compaction_bytes": 38400,
+      "candidate_bytes": 37376,
+      "additional_savings_bytes": 1024,
+      "total_savings_bytes": 1024,
+      "document_stream_savings_bytes": 1229,
+      "encoding": [
+        {
+          "decoded_bytes": 40448,
+          "encoded_bytes": 2291,
+          "seconds": 0.116239
+        },
+        {
+          "decoded_bytes": 13824,
+          "encoded_bytes": 2393,
+          "seconds": 0.051352
+        }
+      ],
+      "baseline_writer_seconds": 0.027401,
+      "writer_seconds": 0.021364,
+      "source_sha256": "a874b8ca76c360bc1fcd6a495ffc9613c22860f34998485f086e14385adf35b7",
+      "candidate_sha256": "a23e2c1f76db5903177fe74a321ed5a45ff6d1b646c13637cb5a7acd0640c709",
+      "preservation": {
+        "intent_equal": true,
+        "surrounding_records_byte_equal": true,
+        "unrelated_streams_and_directory_metadata_equal": true,
+        "strict_ole_manifest_equal": false,
+        "before": {
+          "objects": [
+            4568,
+            7568
+          ],
+          "persist_directory": 10505,
+          "user_edit": 10537,
+          "persist_targets": [
+            0,
+            4568,
+            7568,
+            1426,
+            3902
+          ]
+        },
+        "after": {
+          "objects": [
+            4568,
+            6871
+          ],
+          "persist_directory": 9276,
+          "user_edit": 9308,
+          "persist_targets": [
+            0,
+            4568,
+            6871,
+            1426,
+            3902
+          ]
+        },
+        "decoded_storage_sha256": [
+          "ef12727ff1260e84aa467dbf925d8baee6c504ec58bd5caa4c710556d4dc13aa",
+          "8ed0c27172a682a6355b33ae1b4f459facc5c5ea9e8959a6ae349339ecf98425"
+        ]
+      },
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+          }
+        ],
+        "macro_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "variant": "controlled-zlib0",
+      "encoder": "zlib9",
+      "source_bytes": 87552,
+      "compaction_bytes": 87552,
+      "candidate_bytes": 37888,
+      "additional_savings_bytes": 49664,
+      "total_savings_bytes": 49664,
+      "document_stream_savings_bytes": 49189,
+      "encoding": [
+        {
+          "decoded_bytes": 40448,
+          "encoded_bytes": 2558,
+          "seconds": 0.00301
+        },
+        {
+          "decoded_bytes": 13824,
+          "encoded_bytes": 2547,
+          "seconds": 0.002158
+        }
+      ],
+      "baseline_writer_seconds": 0.021611,
+      "writer_seconds": 0.020934,
+      "source_sha256": "2b576148a8760772a20ea9ea5ffebc8ada37eb3b2912f2935e18c5f32738180f",
+      "candidate_sha256": "20189fdbfe1dca2c3f00275e6769bd0fd7479d7e6204d0d469dc2f0f8c39b2a0",
+      "preservation": {
+        "intent_equal": true,
+        "surrounding_records_byte_equal": true,
+        "unrelated_streams_and_directory_metadata_equal": true,
+        "strict_ole_manifest_equal": false,
+        "before": {
+          "objects": [
+            4568,
+            45039
+          ],
+          "persist_directory": 58886,
+          "user_edit": 58918,
+          "persist_targets": [
+            0,
+            4568,
+            45039,
+            1426,
+            3902
+          ]
+        },
+        "after": {
+          "objects": [
+            4568,
+            7138
+          ],
+          "persist_directory": 9697,
+          "user_edit": 9729,
+          "persist_targets": [
+            0,
+            4568,
+            7138,
+            1426,
+            3902
+          ]
+        },
+        "decoded_storage_sha256": [
+          "ef12727ff1260e84aa467dbf925d8baee6c504ec58bd5caa4c710556d4dc13aa",
+          "8ed0c27172a682a6355b33ae1b4f459facc5c5ea9e8959a6ae349339ecf98425"
+        ]
+      },
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+          }
+        ],
+        "macro_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "variant": "controlled-zlib0",
+      "encoder": "zopfli15",
+      "source_bytes": 87552,
+      "compaction_bytes": 87552,
+      "candidate_bytes": 37376,
+      "additional_savings_bytes": 50176,
+      "total_savings_bytes": 50176,
+      "document_stream_savings_bytes": 49610,
+      "encoding": [
+        {
+          "decoded_bytes": 40448,
+          "encoded_bytes": 2291,
+          "seconds": 0.357253
+        },
+        {
+          "decoded_bytes": 13824,
+          "encoded_bytes": 2393,
+          "seconds": 0.179308
+        }
+      ],
+      "baseline_writer_seconds": 0.021611,
+      "writer_seconds": 0.057233,
+      "source_sha256": "2b576148a8760772a20ea9ea5ffebc8ada37eb3b2912f2935e18c5f32738180f",
+      "candidate_sha256": "a23e2c1f76db5903177fe74a321ed5a45ff6d1b646c13637cb5a7acd0640c709",
+      "preservation": {
+        "intent_equal": true,
+        "surrounding_records_byte_equal": true,
+        "unrelated_streams_and_directory_metadata_equal": true,
+        "strict_ole_manifest_equal": false,
+        "before": {
+          "objects": [
+            4568,
+            45039
+          ],
+          "persist_directory": 58886,
+          "user_edit": 58918,
+          "persist_targets": [
+            0,
+            4568,
+            45039,
+            1426,
+            3902
+          ]
+        },
+        "after": {
+          "objects": [
+            4568,
+            6871
+          ],
+          "persist_directory": 9276,
+          "user_edit": 9308,
+          "persist_targets": [
+            0,
+            4568,
+            6871,
+            1426,
+            3902
+          ]
+        },
+        "decoded_storage_sha256": [
+          "ef12727ff1260e84aa467dbf925d8baee6c504ec58bd5caa4c710556d4dc13aa",
+          "8ed0c27172a682a6355b33ae1b4f459facc5c5ea9e8959a6ae349339ecf98425"
+        ]
+      },
+      "render": {
+        "equal": true,
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+          }
+        ],
+        "macro_security_level": 3,
+        "dpi": 96
+      }
+    }
+  ],
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "rasterizer": "pdftoppm version 26.05.0",
+  "original_fixture_unchanged": true
+}

@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 
 import os
+import struct
 from unittest.mock import patch
+
+import pytest
 
 from filerepack.codecs import pack_dcm
 from filerepack.dicom import (
@@ -15,7 +18,7 @@ from filerepack.repack import _dispatch_packer
 from filerepack.utils import verify_output
 
 from test.dicom_fixtures import (
-    TS_JPEG_BASELINE, build_dicom, encoder_fixture,
+    TS_JPEG_BASELINE, build_dicom, encoder_fixture, expl_elem,
 )
 
 
@@ -47,11 +50,11 @@ class TestIdentifyDicom:
 
 
 class TestVerifyDicom:
-    def test_accepts_dicm_magic(self, tmp_path):
+    def test_rejects_magic_only(self, tmp_path):
         path = tmp_path / 'a.dcm'
         path.write_bytes(b'\x00' * 128 + b'DICM' + b'\x00' * 8)
-        assert verify_output(str(path), 'dcm')
-        assert verify_output(str(path), 'dicom')
+        assert not verify_output(str(path), 'dcm')
+        assert not verify_output(str(path), 'dicom')
         assert has_dicm_magic(str(path))
 
     def test_rejects_missing_magic(self, tmp_path):
@@ -73,6 +76,7 @@ class TestDicomSafetyGate:
         assert dicom_is_packable(str(path))
 
     def test_implicit_le(self, tmp_path):
+        pytest.importorskip('pydicom')
         path = tmp_path / 'ok.dcm'
         path.write_bytes(build_dicom(
             transfer_syntax=TS_IMPLICIT_VR_LE, implicit_dataset=True,
@@ -88,7 +92,12 @@ class TestDicomSafetyGate:
 
     def test_rle_lossless(self, tmp_path):
         path = tmp_path / 'ok.dcm'
-        path.write_bytes(build_dicom(transfer_syntax=TS_RLE_LOSSLESS))
+        fragments = (struct.pack('<HHI', 0xFFFE, 0xE000, 0)
+                     + struct.pack('<HHI', 0xFFFE, 0xE000, 2) + b'xx'
+                     + struct.pack('<HHI', 0xFFFE, 0xE0DD, 0))
+        pixel = b'\xe0\x7f\x10\x00OB\0\0\xff\xff\xff\xff' + fragments
+        path.write_bytes(build_dicom(transfer_syntax=TS_RLE_LOSSLESS,
+                                    pixel_data=None, extra_dataset=[pixel]))
         assert dicom_is_packable(str(path))
 
     def test_missing_dicm(self, tmp_path):
@@ -124,12 +133,13 @@ class TestDicomSafetyGate:
             pixel_data=None,
             extra_dataset=[pix],
         ))
-        assert dicom_is_packable(str(path))
+        assert not dicom_is_packable(str(path))
 
     def test_undefined_sq_is_skipped(self, tmp_path):
+        value = expl_elem(0x0010, 0x0020, 'LO', b'test')
         item = (
-            b'\xfe\xff\x00\xe0\x04\x00\x00\x00abcd'
-            b'\xfe\xff\xdd\xe0\x00\x00\x00\x00'
+            struct.pack('<HHI', 0xFFFE, 0xE000, len(value)) + value
+            + b'\xfe\xff\xdd\xe0\x00\x00\x00\x00'
         )
         sq = b'\x08\x00\x11\x11SQ\x00\x00\xff\xff\xff\xff' + item
         path = tmp_path / 'seq.dcm'
@@ -140,9 +150,12 @@ class TestDicomSafetyGate:
 class TestPackDcm:
     def test_missing_tools_returns_none(self, tmp_path, monkeypatch):
         path = tmp_path / 'scan.dcm'
-        path.write_bytes(build_dicom())
+        path.write_bytes(encoder_fixture())
         original = path.read_bytes()
-        monkeypatch.setattr('filerepack.codecs.resolve_tool', lambda key: None)
+        from filerepack.dicom import DicomInspection
+        monkeypatch.setattr('filerepack.dicom_verify.verification_ready',
+                            lambda _: DicomInspection(True, 'test verifier'))
+        monkeypatch.setattr('filerepack.medical.resolve_tool', lambda key: None)
         assert pack_dcm(str(path)) is None
         assert path.read_bytes() == original
 
@@ -154,14 +167,14 @@ class TestPackDcm:
         def fake_resolve(key):
             return '/usr/bin/gdcmconv' if key == 'gdcmconv' else None
 
-        monkeypatch.setattr('filerepack.codecs.resolve_tool', fake_resolve)
-        with patch('filerepack.repack._run_command', side_effect=called.append):
+        monkeypatch.setattr('filerepack.medical.resolve_tool', fake_resolve)
+        with patch('filerepack.medical._run_command', side_effect=called.append):
             assert pack_dcm(str(path)) is None
         assert called == []
 
     def test_gdcmconv_success(self, tmp_path, monkeypatch):
         path = tmp_path / 'scan.dcm'
-        path.write_bytes(build_dicom() + b'\x00' * 200)
+        path.write_bytes(encoder_fixture())
         original = path.read_bytes()
 
         def fake_resolve(key):
@@ -176,8 +189,13 @@ class TestPackDcm:
                 fh.write(b'\x00' * 128 + b'DICM' + b'x')
             return type('R', (), {'returncode': 0})()
 
-        monkeypatch.setattr('filerepack.codecs.resolve_tool', fake_resolve)
-        with patch('filerepack.repack._run_command', fake_run):
+        monkeypatch.setattr('filerepack.medical.resolve_tool', fake_resolve)
+        # This unit test isolates command routing; real preservation is tested separately.
+        from filerepack.dicom import DicomInspection
+        monkeypatch.setattr('filerepack.dicom_verify.verification_ready',
+                            lambda _: DicomInspection(True, 'test verifier'))
+        monkeypatch.setattr('filerepack.dicom_verify.verify_dicom', lambda *args: True)
+        with patch('filerepack.medical._run_command', fake_run):
             result = pack_dcm(str(path), lossy=True)
         assert result is not None
         assert result.replaced
@@ -186,7 +204,7 @@ class TestPackDcm:
 
     def test_dcmcjpls_fallback(self, tmp_path, monkeypatch):
         path = tmp_path / 'scan.dcm'
-        path.write_bytes(build_dicom() + b'\x00' * 200)
+        path.write_bytes(encoder_fixture())
 
         def fake_resolve(key):
             return '/usr/bin/dcmcjpls' if key == 'dcmcjpls' else None
@@ -198,29 +216,40 @@ class TestPackDcm:
                 fh.write(b'\x00' * 128 + b'DICM' + b'y')
             return type('R', (), {'returncode': 0})()
 
-        monkeypatch.setattr('filerepack.codecs.resolve_tool', fake_resolve)
-        with patch('filerepack.repack._run_command', fake_run):
+        monkeypatch.setattr('filerepack.medical.resolve_tool', fake_resolve)
+        from filerepack.dicom import DicomInspection
+        monkeypatch.setattr('filerepack.dicom_verify.verification_ready',
+                            lambda _: DicomInspection(True, 'test verifier'))
+        monkeypatch.setattr('filerepack.dicom_verify.verify_dicom', lambda *args: True)
+        with patch('filerepack.medical._run_command', fake_run):
             result = pack_dcm(str(path))
         assert result is not None
         assert result.replaced
 
     def test_failed_encoder_leaves_original(self, tmp_path, monkeypatch):
         path = tmp_path / 'scan.dcm'
-        path.write_bytes(build_dicom())
+        path.write_bytes(encoder_fixture())
         original = path.read_bytes()
+        from filerepack.dicom import DicomInspection
+        monkeypatch.setattr('filerepack.dicom_verify.verification_ready',
+                            lambda _: DicomInspection(True, 'test verifier'))
 
         monkeypatch.setattr(
-            'filerepack.codecs.resolve_tool',
+            'filerepack.medical.resolve_tool',
             lambda key: '/usr/bin/gdcmconv' if key == 'gdcmconv' else None,
         )
-        with patch('filerepack.repack._run_command', return_value=None):
+        with patch('filerepack.medical._run_command', return_value=None) as mocked:
             assert pack_dcm(str(path)) is None
+        mocked.assert_called_once()
         assert path.read_bytes() == original
 
     def test_invalid_output_not_committed(self, tmp_path, monkeypatch):
         path = tmp_path / 'scan.dcm'
-        path.write_bytes(build_dicom() + b'\x00' * 200)
+        path.write_bytes(encoder_fixture())
         original = path.read_bytes()
+        from filerepack.dicom import DicomInspection
+        monkeypatch.setattr('filerepack.dicom_verify.verification_ready',
+                            lambda _: DicomInspection(True, 'test verifier'))
 
         def fake_run(cmd, **kwargs):
             with open(cmd[-1], 'wb') as fh:
@@ -228,16 +257,17 @@ class TestPackDcm:
             return type('R', (), {'returncode': 0})()
 
         monkeypatch.setattr(
-            'filerepack.codecs.resolve_tool',
+            'filerepack.medical.resolve_tool',
             lambda key: '/usr/bin/gdcmconv' if key == 'gdcmconv' else None,
         )
-        with patch('filerepack.repack._run_command', fake_run):
+        with patch('filerepack.medical._run_command', fake_run):
             assert pack_dcm(str(path)) is None
         assert path.read_bytes() == original
 
     def test_env_override(self, monkeypatch, tmp_path):
         fake = tmp_path / 'gdcmconv'
         fake.write_text('#!/bin/sh\n')
+        fake.chmod(0o755)
         monkeypatch.setenv('FILEREPACK_GDCMCONV', str(fake))
         from filerepack.tools import resolve_tool
         import filerepack.tools as tools_mod
@@ -255,14 +285,17 @@ class TestPackDcm:
 
 class TestPackDcmIntegration:
     def test_real_encoder_if_installed(self, tmp_path):
+        pytest.importorskip('pydicom')
+        pytest.importorskip('jpeg_ls')
         import shutil
         if not shutil.which('gdcmconv') and not shutil.which('dcmcjpls'):
-            import pytest
             pytest.skip('gdcmconv/dcmcjpls not installed')
         path = tmp_path / 'scan.dcm'
         path.write_bytes(encoder_fixture())
-        result = pack_dcm(str(path))
+        source = tmp_path / 'original.dcm'
+        source.write_bytes(path.read_bytes())
+        result = pack_dcm(str(path), keep_if_larger=False)
         assert has_dicm_magic(str(path))
-        if result is not None and result.replaced:
-            assert verify_output(str(path), 'dcm')
-            assert os.path.getsize(str(path)) > 132
+        assert result is not None and result.replaced
+        assert verify_output(str(path), 'dcm', source_path=str(source))
+        assert os.path.getsize(str(path)) > 132

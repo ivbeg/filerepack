@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-08",
+  "scope": "Read-only exact-image duplicate survey and preserving PNG zlib9 trials; Photoshop object deduplication is not qualified",
+  "files": [
+    {
+      "file": "temp/_raw/crimemapping_v2.ppt",
+      "source_sha256": "ebdcda7f9fd78bb18a75d12b611da64e2f86a8ef3429043eff8708c5d2c99394",
+      "picture_count": 19,
+      "exact_duplicate_blip_groups": [],
+      "exact_duplicate_encoded_image_payload_groups": [],
+      "selected_png_count": 18,
+      "selected_png_sample_bytes": 21046508,
+      "all_png_zlib9_verified_stream_savings": 595977,
+      "selected_png_zlib9_verified_stream_savings": 595977,
+      "additional_unselected_png_zlib9_stream_savings": 0,
+      "photoshop_wrapper_count": 7,
+      "photoshop_encoded_payload_bytes": 720810,
+      "unique_photoshop_encoded_payload_hashes": 1,
+      "photoshop_deduplication_qualified": false
+    },
+    {
+      "file": "temp/_raw/mapping_rus_v1.ppt",
+      "source_sha256": "997276d3ebbef628f74e7fbcf10875c60a3bd9a92b2a2ce1038b1b0508861a2a",
+      "picture_count": 50,
+      "exact_duplicate_blip_groups": [],
+      "exact_duplicate_encoded_image_payload_groups": [],
+      "selected_png_count": 37,
+      "selected_png_sample_bytes": 66645422,
+      "all_png_zlib9_verified_stream_savings": 2138915,
+      "selected_png_zlib9_verified_stream_savings": 1499469,
+      "additional_unselected_png_zlib9_stream_savings": 639446,
+      "photoshop_wrapper_count": 7,
+      "photoshop_encoded_payload_bytes": 720810,
+      "unique_photoshop_encoded_payload_hashes": 1,
+      "photoshop_deduplication_qualified": false
+    },
+    {
+      "file": "temp/_raw/ruslocal_v1.ppt",
+      "source_sha256": "f6e47aa2a7626d15d8bdb5afd2e99783906fcc44df067dd18e12758bc5767f41",
+      "picture_count": 31,
+      "exact_duplicate_blip_groups": [],
+      "exact_duplicate_encoded_image_payload_groups": [],
+      "selected_png_count": 27,
+      "selected_png_sample_bytes": 65750478,
+      "all_png_zlib9_verified_stream_savings": 1634445,
+      "selected_png_zlib9_verified_stream_savings": 1431579,
+      "additional_unselected_png_zlib9_stream_savings": 202866,
+      "photoshop_wrapper_count": 7,
+      "photoshop_encoded_payload_bytes": 720810,
+      "unique_photoshop_encoded_payload_hashes": 1,
+      "photoshop_deduplication_qualified": false
+    }
+  ]
+}

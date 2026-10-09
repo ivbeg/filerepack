@@ -1,7 +1,11 @@
 typer>=0.9.0
+psutil>=5.9
+tomli>=2; python_version < '3.11'
 
 # Optional extras:
-#   pip install 'filerepack[parquet]'    # DuckDB Parquet support
+#   pip install 'filerepack[parquet]'    # verified PyArrow Parquet support
 #   pip install 'filerepack[data]'       # Parquet + ORC/Avro/Feather/Arrow
 #   pip install 'filerepack[fonts]'      # WOFF/WOFF2 via fonttools
 #   pip install 'filerepack[progress]'   # rich progress bars for --progress
+#   pip install 'filerepack[fits]'       # Astropy FITS tiled-image compression
+#   pip install 'filerepack[blend]'      # Zstandard Blender compression

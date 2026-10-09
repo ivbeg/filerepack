@@ -1,0 +1,180 @@
+[
+  {
+    "repository": "Roche/pyreadstat",
+    "commit": "12cc1495d468ae8a170c57cce7557c147b972eac",
+    "url": "https://raw.githubusercontent.com/Roche/pyreadstat/12cc1495d468ae8a170c57cce7557c147b972eac/test_data/basic/sample.sav",
+    "name": "Roche-pyreadstat-sample.sav",
+    "input_bytes": 1651,
+    "sha256": "0a1da593dcbb9bbe7f00c081573f23f02d6f74e22995a7878c363324331912ef",
+    "mode": 1,
+    "result": {
+      "equal": true,
+      "changed": true,
+      "details": {
+        "profile": "SAV-IEEE-bytecode",
+        "source_compression": 1,
+        "case_elements": 35,
+        "dictionary_policy": "exact bytes",
+        "tested_reader": "ReadStat via pyreadstat 1.3.6"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 560,
+        "written": 1651,
+        "nodes": 820,
+        "peak_worker_rss_bytes": 28688384,
+        "seconds": 0.5308197080012178
+      }
+    },
+    "candidate_bytes": 1651,
+    "native_equal": true,
+    "seconds": 1.6337884169915924
+  },
+  {
+    "repository": "Roche/pyreadstat",
+    "commit": "12cc1495d468ae8a170c57cce7557c147b972eac",
+    "url": "https://raw.githubusercontent.com/Roche/pyreadstat/12cc1495d468ae8a170c57cce7557c147b972eac/test_data/basic/sample_large.sav",
+    "name": "Roche-pyreadstat-sample_large.sav",
+    "input_bytes": 27895,
+    "sha256": "03e5815d246edbe35ce1d7be3656fd3e84f5e5776c01a35e5581ff8f8b97a449",
+    "mode": 0,
+    "result": {
+      "equal": true,
+      "changed": true,
+      "details": {
+        "profile": "SAV-IEEE-bytecode",
+        "source_compression": 0,
+        "case_elements": 3395,
+        "dictionary_policy": "exact bytes",
+        "tested_reader": "ReadStat via pyreadstat 1.3.6"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 54320,
+        "written": 20431,
+        "nodes": 7116,
+        "peak_worker_rss_bytes": 25526272,
+        "seconds": 0.2874201670056209
+      }
+    },
+    "candidate_bytes": 20431,
+    "native_equal": true,
+    "seconds": 0.312394583990681
+  },
+  {
+    "repository": "Roche/pyreadstat",
+    "commit": "12cc1495d468ae8a170c57cce7557c147b972eac",
+    "url": "https://raw.githubusercontent.com/Roche/pyreadstat/12cc1495d468ae8a170c57cce7557c147b972eac/test_data/basic/sample.zsav",
+    "name": "Roche-pyreadstat-sample.zsav",
+    "input_bytes": 1656,
+    "sha256": "8bd82278d40876b60890fa31facd4c65a2a8d75ec98c7359fc628ed979e21d4b",
+    "mode": 2,
+    "result": {
+      "equal": true,
+      "changed": true,
+      "details": {
+        "profile": "ZSAV-zlib",
+        "source_compression": 2,
+        "case_elements": 35,
+        "dictionary_policy": "exact bytes",
+        "tested_reader": "ReadStat via pyreadstat 1.3.6",
+        "experimental": true
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 976,
+        "written": 1652,
+        "nodes": 822,
+        "peak_worker_rss_bytes": 24707072,
+        "seconds": 0.2982599160022801
+      }
+    },
+    "candidate_bytes": 1652,
+    "native_equal": true,
+    "seconds": 0.30671416700351983
+  },
+  {
+    "repository": "Roche/pyreadstat",
+    "commit": "12cc1495d468ae8a170c57cce7557c147b972eac",
+    "url": "https://raw.githubusercontent.com/Roche/pyreadstat/12cc1495d468ae8a170c57cce7557c147b972eac/test_data/multiple_response/simple_alltypes.sav",
+    "name": "Roche-pyreadstat-simple_alltypes.sav",
+    "input_bytes": 2727,
+    "sha256": "04731f7a1fcc694b5366f505a6054c0b3315cf59c006af756939fe48a7839eb4",
+    "mode": 1,
+    "error": "unknown SAV dictionary extension",
+    "seconds": 0.4329542500054231
+  },
+  {
+    "repository": "tidyverse/haven",
+    "commit": "f067fb27e436bc1207e8424f50df90ed9d5acc3a",
+    "url": "https://raw.githubusercontent.com/tidyverse/haven/f067fb27e436bc1207e8424f50df90ed9d5acc3a/inst/examples/iris.sav",
+    "name": "tidyverse-haven-iris.sav",
+    "input_bytes": 6690,
+    "sha256": "38dc8f29dc62c0f562b568d83f5d713ec98ef80cb4092425563ea91350e5bf92",
+    "mode": 0,
+    "error": "nonstandard SAV system-missing bit representation",
+    "seconds": 0.45426374999806285
+  },
+  {
+    "repository": "jamovi/jamovi",
+    "commit": "1cc4d360dee9f40b32cda814a6f2e1d038261907",
+    "url": "https://raw.githubusercontent.com/jamovi/jamovi/1cc4d360dee9f40b32cda814a6f2e1d038261907/server/jamovi/tests/data/multi.sav",
+    "name": "jamovi-jamovi-multi.sav",
+    "input_bytes": 69475,
+    "sha256": "c24593457455f14087208096efb2ac3aee989abc68991968aa545fae8c4fed5c",
+    "mode": 1,
+    "result": {
+      "equal": true,
+      "changed": true,
+      "details": {
+        "profile": "SAV-IEEE-bytecode",
+        "source_compression": 1,
+        "case_elements": 9000,
+        "dictionary_policy": "exact bytes",
+        "tested_reader": "ReadStat via pyreadstat 1.3.6"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 144000,
+        "written": 62483,
+        "nodes": 18600,
+        "peak_worker_rss_bytes": 29097984,
+        "seconds": 0.6032130420062458
+      }
+    },
+    "candidate_bytes": 62483,
+    "native_equal": true,
+    "seconds": 0.6217607500002487
+  },
+  {
+    "repository": "jasp-stats/jasp-desktop",
+    "commit": "01dad136297aa7aa64211fa96ff44e0108c8a82b",
+    "url": "https://raw.githubusercontent.com/jasp-stats/jasp-desktop/01dad136297aa7aa64211fa96ff44e0108c8a82b/Tests/TestLibrary/readstat/Labelled_data.sav",
+    "name": "jasp-stats-jasp-desktop-Labelled_data.sav",
+    "input_bytes": 9129,
+    "sha256": "0536e0e9112b378433cd7d1ec4649ac748124c9ed74c0f4f93de12f0f55a009d",
+    "mode": 1,
+    "result": {
+      "equal": true,
+      "changed": true,
+      "details": {
+        "profile": "SAV-IEEE-bytecode",
+        "source_compression": 1,
+        "case_elements": 2520,
+        "dictionary_policy": "exact bytes",
+        "tested_reader": "ReadStat via pyreadstat 1.3.6"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 40320,
+        "written": 8777,
+        "nodes": 5902,
+        "peak_worker_rss_bytes": 28835840,
+        "seconds": 0.4143764159962302
+      }
+    },
+    "candidate_bytes": 8777,
+    "native_equal": true,
+    "seconds": 0.43085987500671763
+  }
+]

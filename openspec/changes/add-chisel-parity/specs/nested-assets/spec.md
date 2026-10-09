@@ -1,4 +1,4 @@
-## ADDED Requirements
+## MODIFIED Requirements
 
 ### Requirement: Virtual Nested Asset Containers
 The system SHALL extract nested assets from host files that are not ZIP/7z/tar archives (audio tags, XML data URIs, PDF streams) into a temporary directory using the asset’s real extension, dispatch existing packers on those files, and reinsert any strictly smaller valid output into a rebuilt host file. If no nested asset shrinks, or the extra/library required to extract is missing, the host file SHALL be left unchanged (codec-only packers may still run). Temp directories SHALL be removed after success or failure.
@@ -46,25 +46,3 @@ The system SHALL extract `data:` URI images from XML/SVG into temporary files, p
 #### Scenario: Unknown data URI
 - **WHEN** a data URI is not a supported image type
 - **THEN** it is not modified
-
-### Requirement: Lossless PDF Stream Walking
-When pikepdf is importable (`filerepack[pdf]`) and the PDF path is lossless (no `--lossy`, `--pdf-profile`, or `--jpeg-quality`), the system SHALL extract image streams (JPEG DCT, JPEG 2000, and Flate-decoded PNG-like images), pack them with existing image packers, replace the streams, then run the existing qpdf linearize/compress step. Encrypted or digitally signed PDFs SHALL be skipped for stream replacement. The Ghostscript lossy path SHALL remain unchanged. Missing pikepdf SHALL leave lossless PDF as qpdf-only.
-
-#### Scenario: Lossless PDF with embedded JPEG
-- **WHEN** pikepdf and jpegoptim are available and `pack_pdf` runs without lossy flags
-- **THEN** embedded DCT streams are packed
-- **AND** qpdf is still applied to the rebuilt file
-- **AND** a smaller valid PDF is committed when commit rules pass
-
-#### Scenario: Lossy flags skip stream walking
-- **WHEN** `--lossy`, `--pdf-profile`, or `--jpeg-quality` selects Ghostscript
-- **THEN** pikepdf stream walking is not used
-
-#### Scenario: Signed or encrypted PDF
-- **WHEN** the PDF is encrypted or has a signature dictionary
-- **THEN** stream replacement is skipped
-- **AND** lossless qpdf may still run
-
-#### Scenario: pikepdf missing
-- **WHEN** pikepdf cannot be imported
-- **THEN** lossless `pack_pdf` uses qpdf only as today

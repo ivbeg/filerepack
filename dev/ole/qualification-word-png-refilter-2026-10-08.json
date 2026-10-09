@@ -1,0 +1,983 @@
+{
+  "qualification_date": "2026-10-08",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.7",
+  "writer": "filerepack-ole 0.4.0 (cfb 0.14.0)",
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "scope": "User-provided originals; binaries are not redistributed. Local LibreOffice rendering; Microsoft Office and remote platforms unmeasured.",
+  "cases": [
+    {
+      "source_name": "gov.doc",
+      "source_sha256": "fe2ab40c6306e6abe365c572628fa5742d49490a307f606a473e9d33f76f66ee",
+      "source_bytes": 4553216,
+      "source_unchanged": true,
+      "candidate_sha256": "300166d941b60641c0b49b33ccbaf04cbefa57e7477e55139120fc06ffbbd1af",
+      "candidate_bytes": 4060672,
+      "strict_compaction_bytes": 4553216,
+      "additional_savings_bytes": 492544,
+      "independent_preservation_equal": true,
+      "candidate_seconds": 10.972,
+      "render": {
+        "equal": true,
+        "pages": 34,
+        "dpi": 96,
+        "macro_security_level": 3,
+        "page_hashes": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "2f22f106a8402ec3d6e723849a24faeb051fe61fd90a65923b20cc898d4398ec"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "84b08fb56e225d313ee57c0857eec8588ccaef2a727aab778579170f0b85b6d7"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "06b71f2cd9ccc81e6e8e71e626f83d15b76eea21ce989ab2070f3bcd48b5a2c0"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "206b75fbdedabdc7fc0078a6d63a804a04375ea8979d5ef439285f8fca9fb7e9"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "b40363a7b2f8591fabe29c03d8af7987088ec5457815e8f4dd52c2c2cf5c10e3"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "0e61c9e7a88133741f016dc2ac594ea6abcf888abacddc3af876667e1a63117e"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "fcea5b350e625b9cb7f5782d28bc9dbbab5f96d4f8e565cb1f6118ddb2c66262"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "d8fb684f037ef17b480edf41e4189d66161739a4aed9de950ff613e2968ddf8a"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "a6fd33f9adbbc74ab48a5705a9c477698808898cd88b475eba1c3377399580aa"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "cc9d589d6f19f424a4dfd78f3eddfc66093b19a337c76d628faa217f1b4daf6c"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "b8d8af673d52052ea0431e77515e92bc5be0e8ecb5384d731da6d3c2c82b40f5"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "3f42a7444e71ae090fd3ed25e1559f0c2cdce70880ebffcc43f937d3be10e716"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "506962c5a4678c9fbb039c2c8ff19f00d6bfd57367435b8ca8d50288c08c08fa"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "751022a2340c43262f9cb5e02cf13c0dd5f25e374e051ebe7b02f920de8e9170"
+          },
+          {
+            "size": [
+              1123,
+              794
+            ],
+            "sha256": "8c4862c3f5755e4f8b49c93382de8b6e3a5661da007db2aefd8fd0f1bb944240"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "58ab828ad091af2b5b0898e4e0a4b9ad5d9224e7727ebe90d13b7e34c060ead9"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "a0ac09eea391f8623ebabd931c600f6ae969a71576c1b69304042f543b5cce68"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "47ac9a46b804cdb6c262ec4fb0df4361d87b2ceb0a5c4dd649faab07c704f85f"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "940af2c451705ecbdd4cfc9a105a05d4aadc868eb8bfc694252a39affd6013f8"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "d637c001eea3f519af68d7f4cc42b1a5314e00e8713142116f854d4e5e24fe12"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "03f2ac80d3c9291530cc36e56f8fce7adcc3ac4e8a24845245f94ef7c0c56972"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "2b4427fa34649537463c43eac7679ce661ac4f2539f55e9a3a04d80edce5d1b7"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "56048db8b665c0026ba063311542b39c12df79bb6c84ea38fe6f4fc638169ac4"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "37140089ea2605cd0330cd98deeea73549d6f5070069e3a5fe5d03be1408c2a0"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "909e26739ee05240bdf8a3f8fa2ad5b8d8b4a7cbde24d0e075193b3b7319acfe"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "5230a1f9d985653e59a0e5ae2e16ecf667c09af92babac99216583656766d043"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "3ae65ac7585a69daf70ae143b43af1fec2e67c433c99d10476578883e211c88f"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "69a3947ba892abd82a16d77e5154a0cbe93117cec07aaeb6fba237dd12a026d5"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "8d2baea0a619ad39f49dd6e619ef97649355cfb9798b3308d51369a16bd0456b"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "cb7bc4dddada84250c515e4fc496ed182eca9bd7fe54759f14e76fb06104c45a"
+          },
+          {
+            "size": [
+              1123,
+              794
+            ],
+            "sha256": "440630e75f42b40b91c9f45fb23c32f129f45e3d5cc961b354e68b00ef9c8818"
+          },
+          {
+            "size": [
+              1123,
+              794
+            ],
+            "sha256": "7b018b8fefe8b7d9256c4de94338a9a2f8f43d87fa175c7ad505d4a8f6850a40"
+          },
+          {
+            "size": [
+              1123,
+              794
+            ],
+            "sha256": "9abaacca36b66e3083cde08397e1dafb5a640c13b9665b05c3d5deb669114c9d"
+          },
+          {
+            "size": [
+              1123,
+              794
+            ],
+            "sha256": "27e5b007807fab9200e31a3bf918d27149c93ff750169e3b8803cb9dc9836607"
+          }
+        ]
+      },
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 4553216,
+        "additional_savings_bytes": 492544,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 10,
+          "raster_encoders": [
+            "png-zlib9",
+            "png-oxipng10.2.0",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-zopfli15",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 10,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 488166
+        },
+        "officeart_candidate_bytes": 4060672,
+        "officeart_host": "doc",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 10,
+        "raster_encoders": [
+          "png-zlib9",
+          "png-oxipng10.2.0",
+          "png-zopfli15",
+          "png-zopfli15",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-zopfli15",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 10,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 488166,
+        "worker_usage": {
+          "decoded": 86098434,
+          "written": 133787346,
+          "nodes": 11536,
+          "peak_worker_rss_bytes": 117669888,
+          "seconds": 7.441411957999662
+        },
+        "evidence": [
+          {
+            "type": "tool",
+            "executable": "/Users/ibegtin/workspace/ivbeg/filerepack/tools/ole-compactor/target/release/filerepack-ole",
+            "key": "ole_compactor",
+            "version": null,
+            "count": 22
+          },
+          {
+            "type": "tool",
+            "executable": "/opt/homebrew/bin/oxipng",
+            "key": "oxipng",
+            "version": null,
+            "count": 8
+          },
+          {
+            "type": "library",
+            "name": "zopfli",
+            "version": "0.4.3",
+            "count": 1
+          },
+          {
+            "type": "library",
+            "name": "olefile",
+            "version": "0.47",
+            "count": 1
+          },
+          {
+            "type": "worker",
+            "kind": "officeart",
+            "action": "rewrite",
+            "valid": true,
+            "reason": "",
+            "count": 1
+          },
+          {
+            "type": "validation",
+            "kind": "officeart",
+            "stage": "structure",
+            "valid": true,
+            "reason": "",
+            "count": 1
+          },
+          {
+            "type": "validation",
+            "kind": "officeart",
+            "stage": "preservation",
+            "valid": true,
+            "reason": "",
+            "count": 1
+          }
+        ],
+        "profile": null,
+        "profile_version": null,
+        "effective_options": {
+          "debug": false,
+          "pack_images": true,
+          "repack_archive": true,
+          "pack_archives": true,
+          "deep_walking": true,
+          "log": false,
+          "quiet": false,
+          "ultra": false,
+          "dryrun": false,
+          "keep_if_larger": true,
+          "lossy": false,
+          "convert_container": true,
+          "min_savings": null,
+          "compression_level": 9,
+          "pdf_profile": null,
+          "jpeg_quality": null,
+          "keep_meta": false,
+          "overwrite": false,
+          "backup": false,
+          "backup_dir": null,
+          "profile": null,
+          "profile_version": null,
+          "tool_threads": 1,
+          "png_quality": null,
+          "wmv_lossless": false,
+          "video_mode": null,
+          "max_extract_bytes": null,
+          "max_extract_ratio": null,
+          "durability": "atomic",
+          "pdf_linearize": false,
+          "ole_recompress": true,
+          "ole_embedded_recompress": false,
+          "ole_deduplicate_images": false,
+          "r_compression": "preserve",
+          "checkpoint_compatibility": "preserve-mmap",
+          "zarr_codec_policy": "preserve",
+          "experimental_formats": false,
+          "sqlite_offline": false,
+          "exclude_members": [],
+          "allow_categories": null,
+          "skip_categories": [],
+          "max_depth": null,
+          "format_max_decoded_bytes": 536870912,
+          "format_max_memory_bytes": 268435456,
+          "format_max_scratch_bytes": 2147483648,
+          "format_max_nodes": 100000,
+          "format_max_depth": 16,
+          "format_timeout": 120.0
+        },
+        "resources": {
+          "decoded_bytes": 86098434,
+          "scratch_written_bytes": 133787346,
+          "peak_live_scratch_bytes": 4553216
+        }
+      },
+      "previous_candidate_bytes": 4279808,
+      "improvement_beyond_previous_bytes": 219136,
+      "source_reduction_percent": 10.82
+    },
+    {
+      "source_name": "rosspending_fullreport.doc",
+      "source_sha256": "4a4426185600fec98234ab3154d04bd9fbd18f969409e63062d6f009966605a5",
+      "source_bytes": 1348608,
+      "source_unchanged": true,
+      "candidate_sha256": "b7536eece4e7aac27cab3be5628c0aacb1ffb73d573d40a64f1a8223b7945c75",
+      "candidate_bytes": 1049088,
+      "strict_compaction_bytes": 1348608,
+      "additional_savings_bytes": 299520,
+      "independent_preservation_equal": true,
+      "candidate_seconds": 4.264,
+      "render": {
+        "equal": true,
+        "pages": 48,
+        "dpi": 96,
+        "macro_security_level": 3,
+        "page_hashes": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "dfb3dbe387de9578ecd64353b1614a0999e79ecd094a2de3302fd843ddd1a8df"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "75fc613a64b1aa6feff3cc80cd1e6618e329c3a394f3033e0e8607eb8977fc1a"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "5b67e988d5d76668e3e09978d3f72dbe652d687acfbe57b7136557ac690a5960"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "8118901d2c66eeacc3b3a2102f46191a1d88497f174b0fec886e15122deb23dd"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "4d5bce881e67369222850aa6687431debf361f0803f08ac9ebd627b6671b82ed"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "5c71a4fe0bf74addcb7cf0612776c7c170ab7d0d81f90e025b92beccab11e340"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "bcca7d84ee348681f6046ff37609ee5077500392cdcf46384a672dc4f30dfa14"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "4b219c94e8390333dea3b9181e27ce8ea5d28b0311b064e3a860f9efd9e6604a"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "c5340b5c13fa1a27bdb7ab3ff2c87621efdb7179de2e71d866f0b58e9d249fce"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "57e7f69719e7a8d6c9eb84a479414f98b039b8f447ad08fb049ddc1188994903"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "fa0230e707ad3d05371cbb13e8f2eef9c5bab417da2f0b484fa9d28bac11d6e0"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "c284f23b6cfd1f776ac1fb5460218febfbb9fba8ad963b4c9ca967aeb8cbc2da"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "8dea1c628dfab91ec4a1834e9fb1573c3f9160ed602ffcf91bb73e886ff2f82e"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "02372a96adcc814a8f4a40184dbf9000aa2f80535bb9afc8e964b7d134c4a897"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "53467d1654fc0ed8fdcb8f1ad1fbf1cb5e98dafe94011c39e02faa1afd6bc89f"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "8e86d449f070b790d5c4037e206ff1ae3fab51fcbaf57870313e479a3a87529a"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "54ee2c1ba96704f7d8509185f6bb72008d06d665dc06ce2806dc30abfdb813e7"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "e2794598519aa05f2b201e7155648a176a35d6ca7b50eec8483bf37a415c2f8a"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "c90dcf1dbf66501b32240a061ccb76b12809de5cdc52e41a96ad20eda1373020"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "d26de0d95adfc68dc8643c89962b823f5e2b8ab5a0ad6d6967a49f6e137a7ccd"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "24a414971bfd8aaa63b714140e289427a63b528093f43715b58c7b4dd6d907c8"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "af50fc883cd94711342c7032895f908d338296514b7ca2a047ff0162181db4ed"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "f90ce493ba6ebd499255471c847cb48642b58f5f295d0518ecfb6c758b587264"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "5072e5830d05780b04cccf89a6c6ed9ee0034705645abc63c79cba465a273e41"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "8994862e54aa08b2e2dd6cb14e2eaa6a9558dbb0361d8de480f0e26703197b6d"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "7740e868e38be66fe3f1cc51dd2f5252d6ed3eeae7fee5200902c9de54c6f7ca"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "f85cab09c747e21d64e2e6c57a21435cb8c6b82881133f6efe757000cea91626"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "a8a1116efdb73ccf2b3cdb14357743653e8062bbe4fea45ed5d4bc92677915ba"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "bd6a16c5f78c2417ae1b0604dd9016e3bedcd9a4e19c70f1d753749117ce8ab5"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "008874dbbb3f64b2d4c6c25a5073f623262fd682a47650c266edb678cd0d8561"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "72cab4e406e355f65b16f2e63a16b1a406736af79737c909dfa15b124ba5fcaa"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "dc70288b4bf160b2e1158b6721d36ccf92163e94da48cf6170d623c55fc4ec1a"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "fbae22d555d3dee5ed018592c375a488adfd5a0e0c7c5dbc1b77c8b70ceadc8a"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "ce750024e56bf27973406784722e1409f852778797fc03b3e8ae3917e395b31a"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "9a1a4ca106042a1269038ac5f5107dfb7577a9c62516cc33fd6da167a273fbe0"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "3940302af74f39b270c1597a765faf91aa659a9161a0251c164a280f5634666f"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "7a908844ad2c8e4f55f0c4e64544f78cb94917fc3c040a1d69fe82651c0b44d9"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "44047230d6aa6899d6e52c04e473cc4eb4b612434fe876fe7a14e507d6c2a20a"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "30fc3b280d33fee6298606af81eb6bc149d153d7fb55acaf66671241dc6b92a4"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "9e0ccba54fc1317546d7267286b6a89cd34a1f277883be66a415f31bae3bb724"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "07a4a575ecc2484519da13d66ff3d855081d10ad4cabc57545e1d84aae2ab11c"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "d3c72f7caf67be939a0fcf4f57b1963db9b7e9b391a56cba92ddd073bb174b3b"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "5ee34825c1a522de4580bd3c8d455503371d13a2a7bc429276b5cc6df34eb1a3"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "53ea98960b7d49b8e98daa8331a0f23a13971c86ffcb225faac3468050b601de"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "4c712c8f8602b38fb9a35281bc4585c48cc2eafc9884bc47e9b50a5b443f9fbe"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "8681c435446cb9546c7adf32d3cbc4236fea55013c5dcc03d0b95c24de73e254"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "4e385c00fd874d6bf56dfa4393552af0c2c78058d38164e9c579ce76a7440317"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "3cc461d0573ce9cd2e87f88436f1bb121e63752ac8fdb16b980a0cc37bfe998e"
+          }
+        ]
+      },
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 1348608,
+        "additional_savings_bytes": 299520,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 10,
+          "raster_encoders": [
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 10,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 297053
+        },
+        "officeart_candidate_bytes": 1049088,
+        "officeart_host": "doc",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 10,
+        "raster_encoders": [
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 10,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 297053,
+        "worker_usage": {
+          "decoded": 83447060,
+          "written": 129841701,
+          "nodes": 11745,
+          "peak_worker_rss_bytes": 79282176,
+          "seconds": 2.4485789999998815
+        },
+        "evidence": [
+          {
+            "type": "tool",
+            "executable": "/Users/ibegtin/workspace/ivbeg/filerepack/tools/ole-compactor/target/release/filerepack-ole",
+            "key": "ole_compactor",
+            "version": null,
+            "count": 31
+          },
+          {
+            "type": "tool",
+            "executable": "/opt/homebrew/bin/oxipng",
+            "key": "oxipng",
+            "version": null,
+            "count": 11
+          },
+          {
+            "type": "library",
+            "name": "zopfli",
+            "version": "0.4.3",
+            "count": 1
+          },
+          {
+            "type": "library",
+            "name": "olefile",
+            "version": "0.47",
+            "count": 1
+          },
+          {
+            "type": "worker",
+            "kind": "officeart",
+            "action": "rewrite",
+            "valid": true,
+            "reason": "",
+            "count": 1
+          },
+          {
+            "type": "validation",
+            "kind": "officeart",
+            "stage": "structure",
+            "valid": true,
+            "reason": "",
+            "count": 1
+          },
+          {
+            "type": "validation",
+            "kind": "officeart",
+            "stage": "preservation",
+            "valid": true,
+            "reason": "",
+            "count": 1
+          }
+        ],
+        "profile": null,
+        "profile_version": null,
+        "effective_options": {
+          "debug": false,
+          "pack_images": true,
+          "repack_archive": true,
+          "pack_archives": true,
+          "deep_walking": true,
+          "log": false,
+          "quiet": false,
+          "ultra": false,
+          "dryrun": false,
+          "keep_if_larger": true,
+          "lossy": false,
+          "convert_container": true,
+          "min_savings": null,
+          "compression_level": 9,
+          "pdf_profile": null,
+          "jpeg_quality": null,
+          "keep_meta": false,
+          "overwrite": false,
+          "backup": false,
+          "backup_dir": null,
+          "profile": null,
+          "profile_version": null,
+          "tool_threads": 1,
+          "png_quality": null,
+          "wmv_lossless": false,
+          "video_mode": null,
+          "max_extract_bytes": null,
+          "max_extract_ratio": null,
+          "durability": "atomic",
+          "pdf_linearize": false,
+          "ole_recompress": true,
+          "ole_embedded_recompress": false,
+          "ole_deduplicate_images": false,
+          "r_compression": "preserve",
+          "checkpoint_compatibility": "preserve-mmap",
+          "zarr_codec_policy": "preserve",
+          "experimental_formats": false,
+          "sqlite_offline": false,
+          "exclude_members": [],
+          "allow_categories": null,
+          "skip_categories": [],
+          "max_depth": null,
+          "format_max_decoded_bytes": 536870912,
+          "format_max_memory_bytes": 268435456,
+          "format_max_scratch_bytes": 2147483648,
+          "format_max_nodes": 100000,
+          "format_max_depth": 16,
+          "format_timeout": 120.0
+        },
+        "resources": {
+          "decoded_bytes": 83447060,
+          "scratch_written_bytes": 129841701,
+          "peak_live_scratch_bytes": 1348608
+        }
+      },
+      "previous_candidate_bytes": 1194496,
+      "improvement_beyond_previous_bytes": 145408,
+      "source_reduction_percent": 22.21
+    }
+  ],
+  "comparison_report": "qualification-word-properties-2026-10-08.json"
+}

@@ -188,12 +188,12 @@ class TestJpegtranKeepMeta:
             calls.append(cmd)
             return MagicMock(returncode=0)
 
-        with patch('filerepack.repack.resolve_tool') as resolve:
+        with patch('filerepack.images.resolve_tool') as resolve:
             resolve.side_effect = lambda key: (
                 '/bin/jpegoptim' if key == 'jpegoptim' else None
             )
-            with patch('filerepack.repack._run_command', side_effect=fake_run):
-                with patch('filerepack.repack.verify_output', return_value=True):
+            with patch('filerepack.images._run_command', side_effect=fake_run):
+                with patch('filerepack.candidates.verify_output', return_value=True):
                     pack_jpg(
                         str(path), keep_meta=True, dryrun=True,
                         keep_if_larger=False,
@@ -203,19 +203,19 @@ class TestJpegtranKeepMeta:
 
     def test_default_strips(self, tmp_path):
         path = tmp_path / 'a.jpg'
-        path.write_bytes(b'\xff\xd8\xff' + b'\x00' * 32)
+        pytest.importorskip('PIL.Image').new('RGB', (8, 8)).save(path)
         calls = []
 
         def fake_run(cmd, quiet=False, debug=False, cwd=None):
             calls.append(cmd)
             return MagicMock(returncode=0)
 
-        with patch('filerepack.repack.resolve_tool') as resolve:
+        with patch('filerepack.images.resolve_tool') as resolve:
             resolve.side_effect = lambda key: (
                 '/bin/jpegoptim' if key == 'jpegoptim' else None
             )
-            with patch('filerepack.repack._run_command', side_effect=fake_run):
-                with patch('filerepack.repack.verify_output', return_value=True):
+            with patch('filerepack.images._run_command', side_effect=fake_run):
+                with patch('filerepack.candidates.verify_output', return_value=True):
                     pack_jpg(str(path), dryrun=True, keep_if_larger=False)
         jpegoptim = [c for c in calls if c and c[0] == '/bin/jpegoptim'][0]
         assert '--strip-all' in jpegoptim
@@ -229,19 +229,19 @@ class TestJpegtranKeepMeta:
             calls.append(cmd)
             return MagicMock(returncode=0)
 
-        with patch('filerepack.repack.resolve_tool') as resolve:
+        with patch('filerepack.images.resolve_tool') as resolve:
             resolve.side_effect = lambda key: (
                 '/bin/jpegoptim' if key == 'jpegoptim' else None
             )
-            with patch('filerepack.repack._run_command', side_effect=fake_run):
-                with patch('filerepack.repack.verify_output', return_value=True):
+            with patch('filerepack.images._run_command', side_effect=fake_run):
+                with patch('filerepack.candidates.verify_output', return_value=True):
                     pack_jpg(str(path), dryrun=True, keep_if_larger=False)
         assert any(c[0] == '/bin/jpegoptim' for c in calls)
         assert all('jpegtran' not in c[0] for c in calls)
 
     def test_jpegtran_then_jpegoptim(self, tmp_path):
         path = tmp_path / 'a.jpg'
-        path.write_bytes(b'\xff\xd8\xff' + b'\x00' * 32)
+        pytest.importorskip('PIL.Image').new('RGB', (8, 8)).save(path)
         calls = []
 
         def fake_run(cmd, quiet=False, debug=False, cwd=None):
@@ -258,9 +258,9 @@ class TestJpegtranKeepMeta:
                 'jpegoptim': '/bin/jpegoptim',
             }.get(key)
 
-        with patch('filerepack.repack.resolve_tool', side_effect=resolve):
-            with patch('filerepack.repack._run_command', side_effect=fake_run):
-                with patch('filerepack.repack.verify_output', return_value=True):
+        with patch('filerepack.images.resolve_tool', side_effect=resolve):
+            with patch('filerepack.images._run_command', side_effect=fake_run):
+                with patch('filerepack.candidates.verify_output', return_value=True):
                     pack_jpg(str(path), dryrun=True, keep_if_larger=False)
         assert any(c and c[0] == '/bin/jpegtran' for c in calls)
         assert any(c and c[0] == '/bin/jpegoptim' for c in calls)
@@ -286,9 +286,9 @@ class TestJpegtranKeepMeta:
                 'jpegoptim': '/bin/jpegoptim',
             }.get(key)
 
-        with patch('filerepack.repack.resolve_tool', side_effect=resolve):
-            with patch('filerepack.repack._run_command', side_effect=fake_run):
-                with patch('filerepack.repack.verify_output', return_value=True):
+        with patch('filerepack.images.resolve_tool', side_effect=resolve):
+            with patch('filerepack.images._run_command', side_effect=fake_run):
+                with patch('filerepack.candidates.verify_output', return_value=True):
                     pack_jpg(
                         str(path), keep_meta=True, dryrun=True,
                         keep_if_larger=False,
@@ -317,9 +317,9 @@ class TestJpegtranKeepMeta:
                 'zopflipng': '/bin/zopflipng',
             }.get(key)
 
-        with patch('filerepack.repack.resolve_tool', side_effect=resolve):
-            with patch('filerepack.repack._run_command', side_effect=fake_run):
-                with patch('filerepack.repack.verify_output', return_value=True):
+        with patch('filerepack.images.resolve_tool', side_effect=resolve):
+            with patch('filerepack.images._run_command', side_effect=fake_run):
+                with patch('filerepack.candidates.verify_output', return_value=True):
                     pack_png(
                         str(path), ultra=True, dryrun=True, keep_if_larger=False,
                     )
@@ -335,12 +335,12 @@ class TestJpegtranKeepMeta:
             calls.append(cmd)
             return MagicMock(returncode=0)
 
-        with patch('filerepack.repack.resolve_tool') as resolve:
+        with patch('filerepack.images.resolve_tool') as resolve:
             resolve.side_effect = lambda key: (
                 '/bin/oxipng' if key == 'oxipng' else None
             )
-            with patch('filerepack.repack._run_command', side_effect=fake_run):
-                with patch('filerepack.repack.verify_output', return_value=True):
+            with patch('filerepack.images._run_command', side_effect=fake_run):
+                with patch('filerepack.candidates.verify_output', return_value=True):
                     pack_png(
                         str(path), ultra=True, dryrun=True, keep_if_larger=False,
                     )
@@ -356,12 +356,12 @@ class TestJpegtranKeepMeta:
             calls.append(cmd)
             return MagicMock(returncode=0)
 
-        with patch('filerepack.repack.resolve_tool') as resolve:
+        with patch('filerepack.images.resolve_tool') as resolve:
             resolve.side_effect = lambda key: (
                 '/bin/oxipng' if key == 'oxipng' else None
             )
-            with patch('filerepack.repack._run_command', side_effect=fake_run):
-                with patch('filerepack.repack.verify_output', return_value=True):
+            with patch('filerepack.images._run_command', side_effect=fake_run):
+                with patch('filerepack.candidates.verify_output', return_value=True):
                     pack_png(
                         str(path), keep_meta=True, dryrun=True,
                         keep_if_larger=False,

@@ -1,0 +1,115 @@
+{
+  "source": "Apache POI",
+  "commit": "12c3688d130035f3dc2ca2a0f50d929456435a93",
+  "license": "Apache-2.0",
+  "selection": {
+    "extensions": [
+      "doc",
+      "xls",
+      "ppt"
+    ],
+    "minimum_bytes": 2097153,
+    "maximum_bytes": 8388608
+  },
+  "files": [
+    {
+      "category": "document",
+      "name": "Bug61268.doc",
+      "bytes": 6239232,
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/document/Bug61268.doc",
+      "git_blob_sha1": "ac815872ef5163dbdc0b1c51da357a1e55da6098",
+      "sha256": "24b47ad892871c80495c64b440c24200dbcaa16c367faf780aec43e3bf8ddae6",
+      "license": "Apache-2.0"
+    },
+    {
+      "category": "spreadsheet",
+      "name": "44593.xls",
+      "bytes": 2586112,
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/44593.xls",
+      "git_blob_sha1": "84d131144113ee266e8a03a4444a90f4dcfdf733",
+      "sha256": "8b83e4c2fc621ce173b8db5d629da654da1ecea5dde8a7ba1359de4c7febff30",
+      "license": "Apache-2.0"
+    },
+    {
+      "category": "spreadsheet",
+      "name": "46904.xls",
+      "bytes": 2597376,
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/46904.xls",
+      "git_blob_sha1": "5720672dd114330048bc571854ce7ebe5fd052a1",
+      "sha256": "b459a1af22c887b7729db279d87d4b5622a5d7a50f68216e71ce1537bc921d6d",
+      "license": "Apache-2.0"
+    },
+    {
+      "category": "spreadsheet",
+      "name": "57231_MixedGasReport.xls",
+      "bytes": 2322432,
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/57231_MixedGasReport.xls",
+      "git_blob_sha1": "d4a526c58cd15786d402de0d07ac4d18d7ccb224",
+      "sha256": "215a67aff2a81eb285055505053618948643b05fc6b81bd9bed7344711191a9c",
+      "license": "Apache-2.0"
+    },
+    {
+      "category": "spreadsheet",
+      "name": "Basic_Expense_Template_2011.xls",
+      "bytes": 2638848,
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/Basic_Expense_Template_2011.xls",
+      "git_blob_sha1": "5df7ae3c9ba603860b3491f3f6113e4659f5a485",
+      "sha256": "045d3dd646819787b84e6a078226fe6571b009210506958d31d2feb96404f387",
+      "license": "Apache-2.0"
+    },
+    {
+      "category": "spreadsheet",
+      "name": "ex45698-22488.xls",
+      "bytes": 4746305,
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/ex45698-22488.xls",
+      "git_blob_sha1": "615e6c5d8cf7eb602d9774920b445423dfba743e",
+      "sha256": "ae2e23c31546b6aad7b63a81d05c8b1ec6206fa2657869ee1e046c6a1b557a75",
+      "license": "Apache-2.0"
+    },
+    {
+      "category": "slideshow",
+      "name": "23884_defense_FINAL_OOimport_edit.ppt",
+      "bytes": 2579456,
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/slideshow/23884_defense_FINAL_OOimport_edit.ppt",
+      "git_blob_sha1": "782ad933865654ee237ce98f4ed163648250ba89",
+      "sha256": "bdfdb2d76c352fff3ac922a8c56cfd9ba7ed166d9e5a9e88fe43f818ff7b7a2b",
+      "license": "Apache-2.0"
+    },
+    {
+      "category": "slideshow",
+      "name": "bug60345_Jankovic_final_Retreat_2002.ppt",
+      "bytes": 2414080,
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/slideshow/bug60345_Jankovic_final_Retreat_2002.ppt",
+      "git_blob_sha1": "5bb52fc5d2e6cb366a0c438dcbf49bf39e6e1682",
+      "sha256": "7d485f5d3fbfc18191854b3a6c370e7195df736442e29799d38786c62259173f",
+      "license": "Apache-2.0"
+    },
+    {
+      "category": "slideshow",
+      "name": "customGeo.ppt",
+      "bytes": 3333632,
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/slideshow/customGeo.ppt",
+      "git_blob_sha1": "fdb80edcbc41b676f2e6fd7fc45d7613e8307d07",
+      "sha256": "f2ff935113a5018142dc97ff0a9f9532f109aaee503756dc724dc9ce4aabe199",
+      "license": "Apache-2.0"
+    },
+    {
+      "category": "slideshow",
+      "name": "iisd_report.ppt",
+      "bytes": 2207744,
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/slideshow/iisd_report.ppt",
+      "git_blob_sha1": "976fa94b6acb5ad6a7ded5cf430e5f2d7384c96f",
+      "sha256": "4cd7952ba5638f3863328c51f9606630563999993325f9db68fc48be7279eebf",
+      "license": "Apache-2.0"
+    },
+    {
+      "category": "slideshow",
+      "name": "missing_core_records.ppt",
+      "bytes": 3012096,
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/slideshow/missing_core_records.ppt",
+      "git_blob_sha1": "67325ebcf65c97f118689058cc4def37e782fadc",
+      "sha256": "f811cc54258f56e94f09cbd1fcccf14e3f96c7a201105aab0c625bf78a7e629e",
+      "license": "Apache-2.0"
+    }
+  ]
+}

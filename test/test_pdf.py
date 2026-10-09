@@ -9,6 +9,7 @@ from filerepack.repack import (
 )
 from filerepack.codecs import pack_ai
 from filerepack.consts import DEFAULT_LOSSY_PDF_PROFILE, PDF_PROFILES
+from test.pdf_fixtures import pdf_bytes
 
 
 def _tools(gs='/usr/bin/gs', qpdf='/usr/bin/qpdf'):
@@ -73,17 +74,23 @@ class TestPdfHelpers:
 
 
 class TestPackPdf:
+    @pytest.fixture(autouse=True)
+    def inspection_backend(self):
+        from filerepack.tools import resolve_tool
+        if resolve_tool('qpdf') is None:
+            pytest.importorskip('pikepdf')
+
     def test_lossless_uses_qpdf(self, tmp_path):
         path = tmp_path / 'a.pdf'
-        path.write_bytes(b'%PDF-1.4\n')
+        path.write_bytes(pdf_bytes())
         calls = []
 
         def fake_run(cmd, **kwargs):
             calls.append(list(cmd))
             return None
 
-        with patch('filerepack.repack.resolve_tool', side_effect=_tools()):
-            with patch('filerepack.repack._run_command', side_effect=fake_run):
+        with patch('filerepack.documents.resolve_tool', side_effect=_tools()):
+            with patch('filerepack.documents._run_command', side_effect=fake_run):
                 pack_pdf(str(path))
         assert len(calls) == 1
         assert calls[0][0] == '/usr/bin/qpdf'
@@ -92,45 +99,45 @@ class TestPackPdf:
 
     def test_lossy_defaults_to_ebook(self, tmp_path):
         path = tmp_path / 'a.pdf'
-        path.write_bytes(b'%PDF-1.4\n')
+        path.write_bytes(pdf_bytes())
         calls = []
 
         def fake_run(cmd, **kwargs):
             calls.append(list(cmd))
             return None
 
-        with patch('filerepack.repack.resolve_tool', side_effect=_tools()):
-            with patch('filerepack.repack._run_command', side_effect=fake_run):
+        with patch('filerepack.documents.resolve_tool', side_effect=_tools()):
+            with patch('filerepack.documents._run_command', side_effect=fake_run):
                 pack_pdf(str(path), lossy=True)
         assert calls[0][0] == '/usr/bin/gs'
         assert '-dPDFSETTINGS=/ebook' in calls[0]
 
     def test_profile_implies_ghostscript(self, tmp_path):
         path = tmp_path / 'a.pdf'
-        path.write_bytes(b'%PDF-1.4\n')
+        path.write_bytes(pdf_bytes())
         calls = []
 
         def fake_run(cmd, **kwargs):
             calls.append(list(cmd))
             return None
 
-        with patch('filerepack.repack.resolve_tool', side_effect=_tools()):
-            with patch('filerepack.repack._run_command', side_effect=fake_run):
+        with patch('filerepack.documents.resolve_tool', side_effect=_tools()):
+            with patch('filerepack.documents._run_command', side_effect=fake_run):
                 pack_pdf(str(path), pdf_profile='prepress')
         assert calls[0][0] == '/usr/bin/gs'
         assert '-dPDFSETTINGS=/prepress' in calls[0]
 
     def test_jpeg_quality_implies_ghostscript(self, tmp_path):
         path = tmp_path / 'a.pdf'
-        path.write_bytes(b'%PDF-1.4\n')
+        path.write_bytes(pdf_bytes())
         calls = []
 
         def fake_run(cmd, **kwargs):
             calls.append(list(cmd))
             return None
 
-        with patch('filerepack.repack.resolve_tool', side_effect=_tools()):
-            with patch('filerepack.repack._run_command', side_effect=fake_run):
+        with patch('filerepack.documents.resolve_tool', side_effect=_tools()):
+            with patch('filerepack.documents._run_command', side_effect=fake_run):
                 pack_pdf(str(path), jpeg_quality=85)
         assert calls[0][0] == '/usr/bin/gs'
         assert '-dPDFSETTINGS=/ebook' in calls[0]
@@ -139,16 +146,16 @@ class TestPackPdf:
 
     def test_unknown_profile_skips_tools(self, tmp_path):
         path = tmp_path / 'a.pdf'
-        path.write_bytes(b'%PDF-1.4\n')
-        with patch('filerepack.repack.resolve_tool', side_effect=_tools()):
-            with patch('filerepack.repack._run_command') as run:
+        path.write_bytes(pdf_bytes())
+        with patch('filerepack.documents.resolve_tool', side_effect=_tools()):
+            with patch('filerepack.documents._run_command') as run:
                 assert pack_pdf(str(path), pdf_profile='ultra') is None
                 run.assert_not_called()
         assert path.read_bytes().startswith(b'%PDF')
 
     def test_lossy_falls_back_to_qpdf(self, tmp_path):
         path = tmp_path / 'a.pdf'
-        path.write_bytes(b'%PDF-1.4\n')
+        path.write_bytes(pdf_bytes())
         calls = []
 
         def fake_run(cmd, **kwargs):
@@ -156,19 +163,19 @@ class TestPackPdf:
             return None
 
         with patch(
-            'filerepack.repack.resolve_tool',
+            'filerepack.documents.resolve_tool',
             side_effect=_tools(gs=None),
         ):
-            with patch('filerepack.repack._run_command', side_effect=fake_run):
+            with patch('filerepack.documents._run_command', side_effect=fake_run):
                 pack_pdf(str(path), lossy=True)
         assert len(calls) == 1
         assert calls[0][0] == '/usr/bin/qpdf'
 
     def test_missing_tools(self, tmp_path):
         path = tmp_path / 'a.pdf'
-        path.write_bytes(b'%PDF-1.4\n')
+        path.write_bytes(pdf_bytes())
         with patch(
-            'filerepack.repack.resolve_tool',
+            'filerepack.documents.resolve_tool',
             side_effect=_tools(gs=None, qpdf=None),
         ):
             assert pack_pdf(str(path), lossy=True) is None
@@ -195,7 +202,7 @@ class TestPdfDispatch:
     def test_pack_ai_forwards_pdf_options(self, tmp_path):
         path = tmp_path / 'logo.ai'
         path.write_bytes(b'%PDF-1.5\n%\xe2\xe3\xcf\xd3\n')
-        with patch('filerepack.repack.pack_pdf', return_value=None) as mocked:
+        with patch('filerepack.documents.pack_pdf', return_value=None) as mocked:
             pack_ai(
                 str(path), lossy=True, pdf_profile='screen', jpeg_quality=70,
             )

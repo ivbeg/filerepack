@@ -1,4 +1,4 @@
-## ADDED Requirements
+## MODIFIED Requirements
 
 ### Requirement: Optional jpegtran for Lossless JPEG
 The system SHALL register `jpegtran` as an optional tool (`FILEREPACK_JPEGTRAN`). For lossless JPEG (no `--lossy` / `--jpeg-quality`), the packer SHALL try `jpegtran -optimize -progressive` when available, then existing `jpegoptim`. The smallest valid JPEG that passes commit rules SHALL be kept. Missing `jpegtran` SHALL fall back to jpegoptim-only behavior.
@@ -24,23 +24,6 @@ The system SHALL register `zopflipng` as an optional tool (`FILEREPACK_ZOPFLIPNG
 #### Scenario: ultra without zopflipng
 - **WHEN** `--ultra` is set and zopflipng is missing
 - **THEN** lossless PNG still uses oxipng/optipng
-
-### Requirement: Keep Metadata Flag
-The system SHALL add `RepackOptions.keep_meta` (default false) and CLI `--keep-meta`. When false, lossless JPEG/PNG stripping stays as today (`jpegoptim --strip-all`, oxipng `--strip safe`). When true, JPEG SHALL use jpegtran `-copy all` and jpegoptim without `--strip-all`, and PNG SHALL not pass oxipng `--strip`. Default CLI behavior without the flag SHALL not change.
-
-#### Scenario: default still strips JPEG
-- **WHEN** `pack_jpg` runs lossless without `keep_meta`
-- **THEN** jpegoptim is invoked with `--strip-all` (when jpegoptim runs)
-
-#### Scenario: --keep-meta
-- **WHEN** the user passes `--keep-meta`
-- **THEN** JPEG strip-all is not used
-- **AND** jpegtran is invoked with `-copy all` when jpegtran runs
-- **AND** oxipng is invoked without `--strip`
-
-#### Scenario: library option
-- **WHEN** `RepackOptions(keep_meta=True)` is passed to `FileRepacker.repack`
-- **THEN** the JPEG/PNG packers receive `keep_meta=True`
 
 ### Requirement: Encoder Tool Discovery
 The system SHALL list `jpegtran` and `zopflipng` in `filerepack doctor` as optional tools with OS install hints when a package mapping exists. Their absence SHALL NOT make `doctor` exit 1.

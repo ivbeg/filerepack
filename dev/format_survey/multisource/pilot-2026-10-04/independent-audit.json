@@ -1,0 +1,45 @@
+{
+  "accounting_checks": "passed",
+  "files": 217344,
+  "bytes": 18732461826418,
+  "censuses": {
+    "commoncrawl-header": {
+      "CC-MAIN-2026-30": {
+        "rows": 100,
+        "pages": 2149001456
+      },
+      "CC-MAIN-2026-34": {
+        "rows": 100,
+        "pages": 2139617681
+      },
+      "CC-MAIN-2026-39": {
+        "rows": 100,
+        "pages": 2171285702
+      }
+    },
+    "commoncrawl-detected": {
+      "CC-MAIN-2026-30": {
+        "rows": 87,
+        "pages": 2149001456
+      },
+      "CC-MAIN-2026-34": {
+        "rows": 91,
+        "pages": 2139617681
+      },
+      "CC-MAIN-2026-39": {
+        "rows": 89,
+        "pages": 2171285702
+      }
+    },
+    "commons": {
+      "files": 148717792,
+      "bytes": 1151497881022729,
+      "rows": 22
+    }
+  },
+  "local_probe_checks": {
+    "input_sha256_verified": 25,
+    "sample_budget": "passed",
+    "store_accounting": "passed"
+  }
+}

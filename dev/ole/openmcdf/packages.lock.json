@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net8.0": {
+      "OpenMcdf": {
+        "type": "Direct",
+        "requested": "[3.3.0, 3.3.0]",
+        "resolved": "3.3.0",
+        "contentHash": "a7lcs+yTDzPRRS82KMmU/eVCMKbJrDStD1Yt+6RRZIsDxU006IdxEVkmMLvxt2hB5YS3Imfcxrdwywtv29ogjw=="
+      }
+    }
+  }
+}

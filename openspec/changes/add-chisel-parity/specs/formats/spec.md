@@ -1,4 +1,4 @@
-## ADDED Requirements
+## MODIFIED Requirements
 
 ### Requirement: SQLite .db Alias
 The system SHALL treat `.db` as a SQLite alias for identification and `--include-ext` filters. `pack_sqlite` SHALL still require the `SQLite format 3` header before rewriting.

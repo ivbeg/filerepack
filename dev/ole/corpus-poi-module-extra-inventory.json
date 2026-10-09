@@ -1,0 +1,26 @@
+{
+  "source": "https://github.com/apache/poi",
+  "commit": "12c3688d130035f3dc2ca2a0f50d929456435a93",
+  "license": "Apache-2.0",
+  "selection": "Recursive scan of every poi* code-module tree and repository-level src tree outside the separately inventoried root test-data corpus; exact-name DOC/XLS/PPT objects 512 bytes\u20138 MiB; exclude Git blob duplicates of the existing POI census.",
+  "files": [
+    {
+      "category": "slideshow",
+      "name": "empty.ppt",
+      "bytes": 10240,
+      "git_blob_sha1": "3978b10340d4eeae8b272eade5e68aa19e1740ea",
+      "sha256": "12142803e51e4cff4804253f8e32857d312ddb4e8c78139bab99114062fbf210",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/poi-scratchpad/src/main/resources/org/apache/poi/hslf/data/empty.ppt",
+      "license": "Apache-2.0"
+    },
+    {
+      "category": "spreadsheet",
+      "name": "mortgage-calculation.xls",
+      "bytes": 37376,
+      "git_blob_sha1": "4e71ba8e65bebd5c88a1d7d95303135ec7d1a013",
+      "sha256": "271c06d988bfe033afdc69733c5ba09e95658ebff571bfca189b567e678631dc",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/poi-examples/src/main/java/org/apache/poi/examples/ss/formula/mortgage-calculation.xls",
+      "license": "Apache-2.0"
+    }
+  ]
+}

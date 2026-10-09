@@ -35,7 +35,7 @@ class TestPackMembers:
         path = tmp_path / 'a.jpg'
         payload = b'\xff\xd8\xff' + b'\x00' * 32
         path.write_bytes(payload)
-        with patch('filerepack.repack._dispatch_packer', return_value=None):
+        with patch('filerepack.dispatch.dispatch_packer', return_value=None):
             results = pack_members({'cover': str(path)})
         item = results['cover']
         assert item.shrank is False
@@ -52,7 +52,7 @@ class TestPackMembers:
             from filerepack.models import PackResult
             return PackResult(fullname, 20, 8, 60.0)
 
-        with patch('filerepack.repack._dispatch_packer', side_effect=fake_dispatch):
+        with patch('filerepack.dispatch.dispatch_packer', side_effect=fake_dispatch):
             results = pack_members({'img': str(small)})
         assert results['img'].shrank is True
         assert shrunken_paths(results) == {'img': str(small)}

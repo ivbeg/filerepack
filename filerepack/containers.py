@@ -4,12 +4,12 @@
 
 import os
 import shutil
-import tempfile
 from contextlib import contextmanager
 from dataclasses import dataclass
 from typing import Any, Dict, Iterator, Optional
 
 from .formats import identify_filename
+from .candidates import make_temp_dir
 
 
 @dataclass
@@ -30,7 +30,7 @@ class MemberResult:
 @contextmanager
 def staging_dir(prefix: str = 'filerepack-') -> Iterator[str]:
     """Temporary directory that is always removed."""
-    path = tempfile.mkdtemp(prefix=prefix)
+    path = make_temp_dir(prefix=prefix)
     try:
         yield path
     finally:
@@ -46,10 +46,11 @@ def pack_members(
     *members* maps a caller key to a filesystem path. The host rebuild is
     left to the caller; use paths of members whose ``shrank`` is true.
     """
-    from .repack import _dispatch_packer
+    from .dispatch import dispatch_packer
 
     opts: Dict[str, Any] = dict(options or {})
     opts['dryrun'] = False
+    opts['_nested_member'] = True
     results: Dict[str, MemberResult] = {}
     for key, path in members.items():
         try:
@@ -60,7 +61,7 @@ def pack_members(
         packed = False
         if kind is not None and not kind.is_archive:
             packer = kind.packer or kind.key
-            result = _dispatch_packer(packer, path, opts)
+            result = dispatch_packer(packer, path, opts)
             packed = result is not None
         try:
             outsize = os.path.getsize(path)

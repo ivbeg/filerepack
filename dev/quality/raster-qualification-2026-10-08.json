@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-08",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.7",
+  "runtime_sha256": "db77c1d973d54d72af73f402e4e1e8c0e554dee8a1c1bdeae61590c42cb3fdd5",
+  "focused_native_tests": {
+    "passed": 45,
+    "skipped": 0,
+    "seconds": 2.17,
+    "tests": [
+      "test/test_image_presentation.py",
+      "test/test_pdf_walking.py"
+    ]
+  },
+  "full_checkout": {
+    "command": "python -m pytest -q -ra --cov=filerepack --cov-report=json --cov-report=term",
+    "date": "2026-10-08",
+    "passed": 2361,
+    "skipped": 3,
+    "warnings": 32,
+    "seconds": 281.29,
+    "scope": "Current runtime, including PNG/JPX precision checks and lossless ImageMagick/AVIF/HEIC/JXL publication checks; provisioned optional readers."
+  },
+  "tools": {
+    "oxipng": {
+      "path": "/opt/homebrew/bin/oxipng",
+      "version": "oxipng 10.2.0"
+    },
+    "optipng": {
+      "path": "/opt/homebrew/bin/optipng",
+      "version": "OptiPNG version 7.9.1"
+    },
+    "zopflipng": {
+      "path": "/opt/homebrew/bin/zopflipng",
+      "version": "Unknown flag: --version"
+    },
+    "qpdf": {
+      "path": "/opt/homebrew/bin/qpdf",
+      "version": "qpdf version 12.2.0"
+    },
+    "jpegtran": {
+      "path": "/opt/homebrew/bin/jpegtran",
+      "version": null
+    },
+    "jpegoptim": {
+      "path": "/opt/homebrew/bin/jpegoptim",
+      "version": "jpegoptim v1.5.6  aarch64-apple-darwin25.0.0 (Sep 15 2025)"
+    }
+  },
+  "pdf_readers": {
+    "Poppler": "26.05.0; pdftoppm 72 dpi PNG, exact mode/size/pixels before and after",
+    "OpenJPEG": "2.5.4; standalone opj_dump component inventory",
+    "Pillow": "12.3.0; OpenJPEG 2.5.4 and libjpeg-turbo 3.1.4.1"
+  },
+  "native_png_profiles": [
+    "Oxipng 10.2.0 and OptiPNG 7.9.1: 1-bit Gray, 8-bit Gray/RGB/RGBA, 16-bit Gray, 4-bit indexed"
+  ],
+  "native_pdf_profiles": [
+    "DCT 8-bit Gray/RGB/CMYK",
+    "JPX unsigned unsampled 8-bit Gray/RGB/RGBA",
+    "Flate/PNG predictors, masks, ICC/Indexed, 16-bit Gray"
+  ],
+  "negative_contracts": [
+    "equal PNG pixels with changed IHDR depth/color type cannot publish",
+    "smaller rejected ultra candidate cannot hide valid candidate",
+    "all rejected PNG candidates keep source and fail explicitly",
+    "valid ImageMagick output with changed pixels cannot publish",
+    "genuine 16-bit JPX declared as 8-bit in host dictionary is refused",
+    "encoded/PDF dimension disagreement is refused"
+  ],
+  "sample_precision_reference": "https://github.com/uclouvain/openjpeg/tree/v2.5.4/src/lib/openjp2",
+  "public_profile_png_header_checks": [
+    {
+      "profile": "fast",
+      "source_url": "https://raw.githubusercontent.com/jupyter/notebook/39b1e3232c297e8b779c288dc40d7d17484ec924/docs/resources/ipynb.iconset/icon_16x16.png",
+      "source_sha256": "0f442f7cc2ae5725bdcdc6ed557a3fc4df5b7dd0b170d6743dafea81a8b3827b",
+      "output_sha256": "f33e2292d8e8a538daf6459c180fe490a41760fb5b8ba4f0c4eb4ebdad38ae43",
+      "source_bit_depth": 8,
+      "output_bit_depth": 8,
+      "source_color_type": 6,
+      "output_color_type": 6,
+      "identical": true
+    },
+    {
+      "profile": "fast",
+      "source_url": "https://raw.githubusercontent.com/QGIS/QGIS/901db8dfa858694f90969af78fc0d3f3af3e07f8/tests/testdata/control_images/expected_geometrygenerator_z_clipping/expected_geometrygenerator_z_clipping.png",
+      "source_sha256": "8e52ecbd167a72abf234bda512cf34decb59f9465ac9a88824b59cb777399b70",
+      "output_sha256": "9d576429d552773bee975b7a4048bf59586fa9cbd4c29a3df735bbc4ca4526bb",
+      "source_bit_depth": 8,
+      "output_bit_depth": 8,
+      "source_color_type": 6,
+      "output_color_type": 6,
+      "identical": true
+    },
+    {
+      "profile": "balanced",
+      "source_url": "https://raw.githubusercontent.com/jupyter/notebook/39b1e3232c297e8b779c288dc40d7d17484ec924/docs/resources/ipynb.iconset/icon_16x16.png",
+      "source_sha256": "0f442f7cc2ae5725bdcdc6ed557a3fc4df5b7dd0b170d6743dafea81a8b3827b",
+      "output_sha256": "f33e2292d8e8a538daf6459c180fe490a41760fb5b8ba4f0c4eb4ebdad38ae43",
+      "source_bit_depth": 8,
+      "output_bit_depth": 8,
+      "source_color_type": 6,
+      "output_color_type": 6,
+      "identical": true
+    },
+    {
+      "profile": "balanced",
+      "source_url": "https://raw.githubusercontent.com/QGIS/QGIS/901db8dfa858694f90969af78fc0d3f3af3e07f8/tests/testdata/control_images/expected_geometrygenerator_z_clipping/expected_geometrygenerator_z_clipping.png",
+      "source_sha256": "8e52ecbd167a72abf234bda512cf34decb59f9465ac9a88824b59cb777399b70",
+      "output_sha256": "9d576429d552773bee975b7a4048bf59586fa9cbd4c29a3df735bbc4ca4526bb",
+      "source_bit_depth": 8,
+      "output_bit_depth": 8,
+      "source_color_type": 6,
+      "output_color_type": 6,
+      "identical": true
+    },
+    {
+      "profile": "maximum",
+      "source_url": "https://raw.githubusercontent.com/jupyter/notebook/39b1e3232c297e8b779c288dc40d7d17484ec924/docs/resources/ipynb.iconset/icon_16x16.png",
+      "source_sha256": "0f442f7cc2ae5725bdcdc6ed557a3fc4df5b7dd0b170d6743dafea81a8b3827b",
+      "output_sha256": "58bfc6a9a027683c8499043b5061be17eb4e907807bc488b80969ed8e72c76b0",
+      "source_bit_depth": 8,
+      "output_bit_depth": 8,
+      "source_color_type": 6,
+      "output_color_type": 6,
+      "identical": true
+    },
+    {
+      "profile": "maximum",
+      "source_url": "https://raw.githubusercontent.com/QGIS/QGIS/901db8dfa858694f90969af78fc0d3f3af3e07f8/tests/testdata/control_images/expected_geometrygenerator_z_clipping/expected_geometrygenerator_z_clipping.png",
+      "source_sha256": "8e52ecbd167a72abf234bda512cf34decb59f9465ac9a88824b59cb777399b70",
+      "output_sha256": "9d576429d552773bee975b7a4048bf59586fa9cbd4c29a3df735bbc4ca4526bb",
+      "source_bit_depth": 8,
+      "output_bit_depth": 8,
+      "source_color_type": 6,
+      "output_color_type": 6,
+      "identical": true
+    },
+    {
+      "profile": "preserve",
+      "source_url": "https://raw.githubusercontent.com/jupyter/notebook/39b1e3232c297e8b779c288dc40d7d17484ec924/docs/resources/ipynb.iconset/icon_16x16.png",
+      "source_sha256": "0f442f7cc2ae5725bdcdc6ed557a3fc4df5b7dd0b170d6743dafea81a8b3827b",
+      "output_sha256": "f33e2292d8e8a538daf6459c180fe490a41760fb5b8ba4f0c4eb4ebdad38ae43",
+      "source_bit_depth": 8,
+      "output_bit_depth": 8,
+      "source_color_type": 6,
+      "output_color_type": 6,
+      "identical": true
+    },
+    {
+      "profile": "preserve",
+      "source_url": "https://raw.githubusercontent.com/QGIS/QGIS/901db8dfa858694f90969af78fc0d3f3af3e07f8/tests/testdata/control_images/expected_geometrygenerator_z_clipping/expected_geometrygenerator_z_clipping.png",
+      "source_sha256": "8e52ecbd167a72abf234bda512cf34decb59f9465ac9a88824b59cb777399b70",
+      "output_sha256": "9d576429d552773bee975b7a4048bf59586fa9cbd4c29a3df735bbc4ca4526bb",
+      "source_bit_depth": 8,
+      "output_bit_depth": 8,
+      "source_color_type": 6,
+      "output_color_type": 6,
+      "identical": true
+    }
+  ],
+  "limitations": [
+    "No universal encoded-depth qualification for every other image codec.",
+    "DCT/JPX cases use controlled native encoded files and removable comments/free boxes; not a broad observational PDF corpus.",
+    "High-depth, signed and subsampled JPX profiles remain unavailable.",
+    "No remote platform run or deployment claim."
+  ],
+  "test_source_sha256": {
+    "test/test_image_presentation.py": "1e0ac0004b60ba2deb319dd142e85afa1fedd59de90342568fb39521226dc91f",
+    "test/test_pdf_walking.py": "0b921b4900fa817f8561b7dac6e7e730706bb7ca9eb2f6f8d9b9422bb5158b68"
+  }
+}

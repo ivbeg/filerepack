@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "source": "Apache POI",
+  "commit": "12c3688d130035f3dc2ca2a0f50d929456435a93",
+  "license": "Apache-2.0",
+  "selection": {
+    "extensions": [
+      "doc",
+      "xls",
+      "ppt"
+    ],
+    "minimum_bytes": 2097153,
+    "maximum_bytes": 8388608
+  },
+  "inventory_sha256": "2f25bc83559e10c5a6c73fe5df12687ba818aa60110bafa040372b0a88ee764a",
+  "python": "3.13.7",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "scope": "read-only eligibility; no savings or application acceptance inferred",
+  "counts": {
+    "document": {
+      "selected": 1,
+      "source_verified": 1,
+      "container": 1,
+      "host": 1,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 1,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "spreadsheet": {
+      "selected": 5,
+      "source_verified": 5,
+      "container": 0,
+      "host": 0,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "slideshow": {
+      "selected": 5,
+      "source_verified": 5,
+      "container": 4,
+      "host": 1,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    }
+  },
+  "rejection_reasons": {
+    "source": {},
+    "container": {
+      "OLE: unsupported root storage": 3,
+      "OLE: stream/chain length mismatch": 1,
+      "OLE: invalid file size or 128 MiB limit exceeded": 1,
+      "OLE: invalid directory type/name": 1
+    },
+    "host": {
+      "Empty/unknown PowerPoint VBA project flags": 3
+    },
+    "officeart": {
+      "OfficeArt: unqualified/duplicate Word property: 0x2405; OfficeArt: unqualified/duplicate FOPT property: 0x81": 1,
+      "PPT OLE records: unqualified record type/version: 1008": 1
+    },
+    "dedup": {
+      "PPT OLE records: unqualified record type/version: 1008": 1
+    }
+  },
+  "files": [
+    {
+      "name": "Bug61268.doc",
+      "category": "document",
+      "sha256": "24b47ad892871c80495c64b440c24200dbcaa16c367faf780aec43e3bf8ddae6",
+      "container": true,
+      "piece_prm": {
+        "pieces": 17,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2405; OfficeArt: unqualified/duplicate FOPT property: 0x81"
+    },
+    {
+      "name": "44593.xls",
+      "category": "spreadsheet",
+      "sha256": "8b83e4c2fc621ce173b8db5d629da654da1ecea5dde8a7ba1359de4c7febff30",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "46904.xls",
+      "category": "spreadsheet",
+      "sha256": "b459a1af22c887b7729db279d87d4b5622a5d7a50f68216e71ce1537bc921d6d",
+      "container_skip": "OLE: stream/chain length mismatch"
+    },
+    {
+      "name": "57231_MixedGasReport.xls",
+      "category": "spreadsheet",
+      "sha256": "215a67aff2a81eb285055505053618948643b05fc6b81bd9bed7344711191a9c",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Basic_Expense_Template_2011.xls",
+      "category": "spreadsheet",
+      "sha256": "045d3dd646819787b84e6a078226fe6571b009210506958d31d2feb96404f387",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "ex45698-22488.xls",
+      "category": "spreadsheet",
+      "sha256": "ae2e23c31546b6aad7b63a81d05c8b1ec6206fa2657869ee1e046c6a1b557a75",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "23884_defense_FINAL_OOimport_edit.ppt",
+      "category": "slideshow",
+      "sha256": "bdfdb2d76c352fff3ac922a8c56cfd9ba7ed166d9e5a9e88fe43f818ff7b7a2b",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "bug60345_Jankovic_final_Retreat_2002.ppt",
+      "category": "slideshow",
+      "sha256": "7d485f5d3fbfc18191854b3a6c370e7195df736442e29799d38786c62259173f",
+      "container_skip": "OLE: invalid directory type/name"
+    },
+    {
+      "name": "customGeo.ppt",
+      "category": "slideshow",
+      "sha256": "f2ff935113a5018142dc97ff0a9f9532f109aaee503756dc724dc9ce4aabe199",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008"
+    },
+    {
+      "name": "iisd_report.ppt",
+      "category": "slideshow",
+      "sha256": "4cd7952ba5638f3863328c51f9606630563999993325f9db68fc48be7279eebf",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "missing_core_records.ppt",
+      "category": "slideshow",
+      "sha256": "f811cc54258f56e94f09cbd1fcccf14e3f96c7a201105aab0c625bf78a7e629e",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    }
+  ]
+}

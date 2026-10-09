@@ -1,0 +1,3693 @@
+{
+  "schema_version": 1,
+  "source": "LibreOffice core full sw/sc/sd QA trees excluding earlier selection",
+  "commit": "cf80890d16f7ef318155efe5843f99153d199e07",
+  "license": "MPL-2.0",
+  "selection": {
+    "extensions": [
+      "doc",
+      "xls",
+      "ppt"
+    ],
+    "minimum_bytes": 512,
+    "maximum_bytes": 8388608,
+    "directories": [
+      "sw/qa",
+      "sc/qa",
+      "sd/qa"
+    ],
+    "excludes": [
+      "existing 277-file LibreOffice corpus by Git blob SHA-1",
+      "paths under /pptx/"
+    ]
+  },
+  "inventory_sha256": "22d817a5f62c7a87a4b6b4079aa4d0ff0046d91dd3f38482b1651ca45d877ae5",
+  "python": "3.13.7",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "scope": "read-only eligibility; no savings or application acceptance inferred",
+  "counts": {
+    "document": {
+      "selected": 169,
+      "source_verified": 169,
+      "container": 53,
+      "host": 48,
+      "officeart": 2,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 47,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "spreadsheet": {
+      "selected": 269,
+      "source_verified": 269,
+      "container": 36,
+      "host": 35,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "slideshow": {
+      "selected": 42,
+      "source_verified": 42,
+      "container": 5,
+      "host": 1,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    }
+  },
+  "rejection_reasons": {
+    "source": {},
+    "container": {
+      "OLE: invalid file size or 128 MiB limit exceeded": 75,
+      "OLE: not a CFB container": 64,
+      "OLE: consecutive red directory nodes": 146,
+      "OLE: invalid stream directory metadata": 5,
+      "OLE: unexplained DIFAT entries": 8,
+      "OLE: FAT sector marker mismatch": 1,
+      "OLE: stream/chain length mismatch": 1,
+      "OLE: storage contains stream allocation fields": 16,
+      "OLE: unsupported Unicode name comparison": 2,
+      "OLE: unsupported root storage": 65,
+      "OLE: unexplained sector allocation": 1,
+      "OLE: mini-sector reference outside carrier": 2
+    },
+    "host": {
+      "Unsupported Word binary version": 5,
+      "Nonzero OLE property stream padding": 1,
+      "Truncated PowerPoint record": 1,
+      "PowerPoint VBA history/multiple-info layout is not qualified": 1,
+      "Empty/unknown PowerPoint VBA project flags": 2
+    },
+    "officeart": {
+      "OfficeArt: unqualified/duplicate Word property: 0x6870; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore": 8,
+      "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: unqualified/duplicate FOPT property: 0x186": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: missing/invalid floating OfficeArtContent": 1,
+      "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186": 8,
+      "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: unqualified/duplicate FOPT property: 0x186": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0x840f; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: missing/invalid floating OfficeArtContent": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: unqualified/duplicate FOPT property: 0x180": 1,
+      "OfficeArt: host macros are not qualified": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x6815; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: unqualified/duplicate FOPT property: 0x186": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0x484b; OfficeArt: unqualified/duplicate FOPT property: 0x186": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0x85c; OfficeArt: unqualified/duplicate FOPT property: 0x186": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a50; OfficeArt: this floating profile requires a delayed BStore": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0x85c; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0xc60d; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: no inline picture Data stream; OfficeArt: floating FBSE name/count": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: missing/invalid floating OfficeArtContent": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x801; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x484b; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0xa413; OfficeArt: unqualified/duplicate FOPT property: 0x186": 2,
+      "OfficeArt: no inline picture Data stream; OfficeArt: missing/invalid floating OfficeArtContent": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x87c": 24,
+      "OfficeArt: unqualified BIFF type/version/length: 0x4d": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ae": 4,
+      "OfficeArt: expected one global drawing group": 4,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1a9": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ba": 1,
+      "PPT OLE records: unqualified record type/version: 4041": 1
+    },
+    "dedup": {
+      "OfficeArt: unqualified BIFF type/version/length: 0x87c": 24,
+      "OfficeArt: unqualified BIFF type/version/length: 0x4d": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ae": 4,
+      "OfficeArt: expected one global drawing group": 4,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1a9": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ba": 1,
+      "OfficeArt: only qualified macro-free XLS/PPT shared stores": 1
+    }
+  },
+  "files": [
+    {
+      "name": "crash-1-5b94b9a558.doc",
+      "category": "document",
+      "sha256": "30a1ba4bcfbfc47a7135ae966d70e20ba260ec8a2476137c9b4582b39e232219",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "crash-2-23a189712d.doc",
+      "category": "document",
+      "sha256": "fdf2c95f01826a54b737e38a63168a066b6115d8e0a1673ac7a49279e682d2c5",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "crash-3-54931a2820.doc",
+      "category": "document",
+      "sha256": "83bb64639a71cbc87988baaf4db4e2b9ac79ed970ac87db242ac861a6916d815",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-1-603372406e.doc",
+      "category": "document",
+      "sha256": "cca3e5bdfff2fb78bd69d187d3a5a9c87907caf0ed5da4b9c8472db5d21c8dc3",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-2-5f76093f95.doc",
+      "category": "document",
+      "sha256": "844477af7a2c1fe650ffb3d2c81d39a804a50bdee7b2d3c9a839baafd22cdb75",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-3-14fbaa6063.doc",
+      "category": "document",
+      "sha256": "267124a7561ad57392b2ed633f70df0db25782a878bf7d5d50ffeb0163ffc9c0",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz18526-1-e651650f9a.doc",
+      "category": "document",
+      "sha256": "a99be449c63fb801fcac4b9645d831eae73555fef97007e11f9ef8c10b8849a4",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ooo2535-1-WW2-2c594f5623.doc",
+      "category": "document",
+      "sha256": "093fa729eeae035219e0ec357e62bb8a17db46cebeb6546af73d1cd9de82fd41",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ooo37322-1-WW2-fd64eeed29.doc",
+      "category": "document",
+      "sha256": "def66228bb92e130dfd712c31b0aa52dc4f5dd4a4feef6a27cd1a1fe77c0ac83",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ooo40683-1-WW1-af63daa0c0.doc",
+      "category": "document",
+      "sha256": "21f1f8f0209b3c881ee969a723fb42e443af86db25fe2b5d999ce0f96010e9c1",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz45140-1-59538b13e4.doc",
+      "category": "document",
+      "sha256": "4ff135b76ab2a26e89c1df3a72bde2d382e093841f9fc16c424d85330bf17010",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "crash-1-3c6f684e85.doc",
+      "category": "document",
+      "sha256": "2c24a713e56175d5d391c091162deafb47577818f7b2a8524dd40749b7096813",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "crash-2-f155e973f7.doc",
+      "category": "document",
+      "sha256": "a891a1ed8d2ac4e5820e7c5f3a7c4f49fc95f40e727b9fe5266ebbfe56695803",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "crash-3-8646b7ac5d.doc",
+      "category": "document",
+      "sha256": "0b8d61591f481628da8ec0db2c01169187fc7542336466d547bc41322f721605",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "crash-4-5abaecc2b3.doc",
+      "category": "document",
+      "sha256": "a41dfb59a54e4193a17fbc188aa7e2dc166fd8d5acebd04a428068845a5b64da",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "crash-5-f1f4d7808c.doc",
+      "category": "document",
+      "sha256": "7eeec15d9c880331afa24ae8af4ae0b3002406a1929e44f1ab9cddafac548331",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "crash-6-08c879176a.doc",
+      "category": "document",
+      "sha256": "c78fe1769919f4cc4d76d937669a288086f0a1202d6991bbd007ba7fb544f406",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "crash-7-5a9dab32bf.doc",
+      "category": "document",
+      "sha256": "900653997e03579084c3c3e9db7f7aa46f8c56e8df5f6cc9a93f923b5f79ef7e",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-1-825283d51e.doc",
+      "category": "document",
+      "sha256": "cec28a9e9870998f649912707183e021dbdbf96b6a5b10b5d07943e8b6b4e9b9",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz-redlining-1-b2f60eb2a2.doc",
+      "category": "document",
+      "sha256": "a04d0497cd41a70b7d30c5fde93e05558eb03364334b5ac354e0bc76959d38f3",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz-trailingpara-40c574759b.doc",
+      "category": "document",
+      "sha256": "856e81d89d173f0a832971c983e2f40c385d44a5a7f3930594d4b8ca9d91d39e",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz21168-1-3bafb1d36b.doc",
+      "category": "document",
+      "sha256": "c76f7f18d7f445b2183955195ce5617b6469dcc353027e4c30a0676daad0e84f",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz21385-1-311c6ed5fe.doc",
+      "category": "document",
+      "sha256": "2925912a7c7b8cf9a38591bd1d7b3dde7aaa00d3e0ac42b916935035f069d362",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz34898-1-544dd0d558.doc",
+      "category": "document",
+      "sha256": "1237e75ff192651940a50c9dab16440281201ade867379c79849d29f49f62574",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz41398-1-34c6e357d8.doc",
+      "category": "document",
+      "sha256": "707c84b1d06e44bbe20e8c096870a8a67c273592f2d2e4fbdc72cd6e10a5de80",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz42330-1-a1cd04f53d.doc",
+      "category": "document",
+      "sha256": "f1a7e4e5f355a4fca7b823fb2545d6103399f3dcf2fa97d597a84941306879ad",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ooo17498-1-258c6ff63e.doc",
+      "category": "document",
+      "sha256": "6f1fdcb2940b04a9d6c4442b19be677f32506c28f14c1b52531165548cc8e5fa",
+      "container": true,
+      "piece_prm_skip": "('0Table',)",
+      "host_skip": "Unsupported Word binary version"
+    },
+    {
+      "name": "ooo17498-2-9955f78209.doc",
+      "category": "document",
+      "sha256": "6ad3316ed40bfde9b43ff584673d4768adabe77d6587db3f124063645fbeafb9",
+      "container": true,
+      "piece_prm_skip": "('0Table',)",
+      "host_skip": "Unsupported Word binary version"
+    },
+    {
+      "name": "ooo17498-3-c0db457ca0.doc",
+      "category": "document",
+      "sha256": "1bd151ffe9d0b1416c3dc4bb6f45d8c22d868c30669f005240cd37090dac8857",
+      "container": true,
+      "piece_prm_skip": "('0Table',)",
+      "host_skip": "Unsupported Word binary version"
+    },
+    {
+      "name": "ooo17498-4-be0df81954.doc",
+      "category": "document",
+      "sha256": "eded7359bf03b29498869aa170ba2fdd97967caccad1514024812de7bc18c517",
+      "container": true,
+      "piece_prm_skip": "('0Table',)",
+      "host_skip": "Unsupported Word binary version"
+    },
+    {
+      "name": "ooo8726-1-e78dab1551.doc",
+      "category": "document",
+      "sha256": "5b37047e27d90c10ae95966d850899a4ae10c88e178d5d2f42a68e8895f8cf08",
+      "container": true,
+      "piece_prm_skip": "('0Table',)",
+      "host_skip": "Unsupported Word binary version"
+    },
+    {
+      "name": "CVE-2005-0941-1-a1f5b7668b.doc",
+      "category": "document",
+      "sha256": "c07560a6d03f425c8cc5d5db4cf5d85e051d582be9560964f0af5f22e4483f1c",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2006-2389-1-a99da57e8c.doc",
+      "category": "document",
+      "sha256": "38ef3281330d6195ff456e7520e31439bde787bf5c0433499efcf8217e6a8e52",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2008-0320-1-5c6d351f25.doc",
+      "category": "document",
+      "sha256": "825a374519a1f59f085392b3994f8c91f6cad8a16e42672ac41a259d71564d89",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "forcepoint-44-100422a224.doc",
+      "category": "document",
+      "sha256": "cf42153e7b90e9cd78c6f52e32b5ed8b83756f4a1ac16747a5eca2d8f39ca6fa",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "hang-2-a48b521aed.doc",
+      "category": "document",
+      "sha256": "5f066470fe289926b281881fc02d5b495135b6ef165d93f5d6e0b8528b148b95",
+      "container_skip": "OLE: invalid stream directory metadata"
+    },
+    {
+      "name": "redline-1-86c9673148.doc",
+      "category": "document",
+      "sha256": "f57ccfbddd6399a3b337219e89a7070dd0a05568a43291529b23c3b44d1df63d",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "CVE-2003-0820-1-b3466d2807.doc",
+      "category": "document",
+      "sha256": "c16714f0f7825c046fd770e2a9b3e70620ac8a10ea796d3f16aa39326204f99c",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2006-3493-1-4623e3c190.doc",
+      "category": "document",
+      "sha256": "1f0e7c5d8599fca8664a4929a04d5a2afb929bbdd78caea97cb13e86cb699d18",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2006-6561-1-390a6634d1.doc",
+      "category": "document",
+      "sha256": "abe1b5d6703f7b4e67154240e730f7d93b62cb9fab6ee0a133e23261c39e2220",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2006-6628-1-390a6634d1.doc",
+      "category": "document",
+      "sha256": "abe1b5d6703f7b4e67154240e730f7d93b62cb9fab6ee0a133e23261c39e2220",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2007-1347-1-dabcf3fbaa.doc",
+      "category": "document",
+      "sha256": "331ebde24ee877feabee901ca8a59fe1616419e131605ac10ae3d15ac1934ff7",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2008-2752-1-20c40a8409.doc",
+      "category": "document",
+      "sha256": "0b846828ba30af2f8e09071e9a9de65e4a26321c4cbf8c71543e65c6d72a9ae0",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2008-2752-2-569967ef92.doc",
+      "category": "document",
+      "sha256": "2418db25d70cb2e927d12f02218d9c4d426d7a8c47a87b608ed4a638d2f11d27",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2008-2752-3-3fe55f6db1.doc",
+      "category": "document",
+      "sha256": "7fbe47a4e443040abc6c5e3fe81f49ddced2fee72ae09cff77a9f2af5b9bdcdf",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2008-2752-4-1bd549907e.doc",
+      "category": "document",
+      "sha256": "aff8edd4ca54ef27e5d3c36cb1f99b02790fc1fc756e1c8c958469a2d390c48f",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2008-4841-1-37b9945341.doc",
+      "category": "document",
+      "sha256": "b9feea96a96d4fe1181138daa3ee6c05a621c744339224fc67feb60ad2580890",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2009-0200-1-6b9fb25f74.doc",
+      "category": "document",
+      "sha256": "ae2fad1cf6807f59b9dbe1fd0f3657832957e8e2cd036ca3397f17b6f5776b25",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2009-0201-1-462b17bef3.doc",
+      "category": "document",
+      "sha256": "597e8829eecc0a671abdbb71b281e84336e5238fd78515b8e162360177dc5f1c",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2009-0259-1-37b9945341.doc",
+      "category": "document",
+      "sha256": "b9feea96a96d4fe1181138daa3ee6c05a621c744339224fc67feb60ad2580890",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2009-3301-1-8351c834cc.doc",
+      "category": "document",
+      "sha256": "496814b24832382c56be0ed7f690808911adbcbd840c89184f8d226ec6cd5c94",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2009-3302-1-8351c834cc.doc",
+      "category": "document",
+      "sha256": "496814b24832382c56be0ed7f690808911adbcbd840c89184f8d226ec6cd5c94",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2009-3302-2-f8181f3db6.doc",
+      "category": "document",
+      "sha256": "ae4dfcf3ce945081f95d7226c32a5056e565d8199c28ca02212b4542ab683724",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2010-3200-1-4bdb0532a8.doc",
+      "category": "document",
+      "sha256": "78acf8103769bb2f8b96832dc09eb8c14055b3352783c53029a2f0efc794b989",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2010-3453-1-62dacdc29b.doc",
+      "category": "document",
+      "sha256": "2fb71f2ed4773c215db582e2151c847182098b671162b0098eca1035c56a4964",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2010-3454-1-9bbadc0947.doc",
+      "category": "document",
+      "sha256": "381f620556aa6884e9029833a7e08646f483738934db37f5f9e51150d101074b",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2012-4886-1-609e8f68d9.doc",
+      "category": "document",
+      "sha256": "7d792462558392c8f22d73b846099b38b2556b9689f501d45ca7f1e67353ba4a",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "CVE-2014-6356-1-a28729498c.doc",
+      "category": "document",
+      "sha256": "ef953e473e30af7bc463983e7bd12a57bdfa4fa7e494690defac3e1d53bec1ac",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2014-6364-14ac417406.doc",
+      "category": "document",
+      "sha256": "7128763ab498296b826b9e1f941cef2c4a695395d96bca39f1131f8390ad5425",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2015-0064-1-21263d591b.doc",
+      "category": "document",
+      "sha256": "d75d4cd023c3bd995fdb12895b3d836f3b145b86483eba44ea7784bce72a732f",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2015-0065-1-e3c9640b95.doc",
+      "category": "document",
+      "sha256": "99128c6a98fa333971d138da1581040c7197d8984995dfae9979f1687bd5e6d3",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2015-0097-1-7c893da4b0.doc",
+      "category": "document",
+      "sha256": "a4fc743505c2669534ee40a22ef1e515d37da5338bc68e6085b91181ece6aa8a",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2015-2380-1-cf1567806c.doc",
+      "category": "document",
+      "sha256": "e3e9111abc10f017cd909ee024cca6710e95ccdcf04167b9bba525e98bb5db5e",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2015-2431-1-05582e26a3.doc",
+      "category": "document",
+      "sha256": "11c22738a005d51194ce86fd1708220f04df09384ccd8b89bc4da6f2e8586e57",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2015-2467-1-a8f0f26333.doc",
+      "category": "document",
+      "sha256": "6e533ab7385fbffc6e2f47e75989cc7e0777fe12276f0aee9ee960f538e0f36d",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2016-3133-1-2d23eefa99.doc",
+      "category": "document",
+      "sha256": "55371c6068069faeaf0e578d31ab6815b240265c17e45dca231cf420730b87c6",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "EDB-14092-1-a9caf97f72.doc",
+      "category": "document",
+      "sha256": "bf5e07a508eb2588d501342f56c10cc8309db268ad7b99dffe582c025a6e6fe1",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "EDB-18952-1-505eb1d80a.doc",
+      "category": "document",
+      "sha256": "8add3a292ea21bceb731510d7fe315851ff919879a1c47e1370e74dc726b4da1",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "EDB-22215-1-f4429f6059.doc",
+      "category": "document",
+      "sha256": "5ca0a9cdfd0f9eee9f00f44014a30185f9ab18aaa8be2142debab1a2de980204",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "EDB-37909-1-a51a985ad0.doc",
+      "category": "document",
+      "sha256": "56065af38cdd89be3e479bc8e0f8be0346ba3359a60a6cdb9932b6e2a12311b7",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "EDB-37910-1-6ed7912312.doc",
+      "category": "document",
+      "sha256": "2074d53ddd7f76b836c1fcdfe13ba98541e34c8dcf97238083a119d58d32b1d2",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "EDB-37924-1-39545b5cad.doc",
+      "category": "document",
+      "sha256": "583ec68f41fa72035211b22cf5a1d444ed600392af34b22d69aa312823b9985a",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "EDB-39396-1-ae7c7ae7cb.doc",
+      "category": "document",
+      "sha256": "e200ccd29f130b822b2852e0f5b03975f6e2b0a6f0c7a54938bd7ae4caa55381",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "crash-1-9f6b25348c.doc",
+      "category": "document",
+      "sha256": "69f1c05045d015d8b8a5320469e705907d0762c5cfcbed79562f3cf91d900741",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "crash-2-452e21e511.doc",
+      "category": "document",
+      "sha256": "e043d95168528e36e0264dbb3bd94e3675a992ab0048199d38bb5fe903b60fc1",
+      "container_skip": "OLE: unexplained DIFAT entries"
+    },
+    {
+      "name": "crash-3-d36afef50d.doc",
+      "category": "document",
+      "sha256": "422a874074ab59a5596c908fce1c1fc9d7a88c81b88f5d846592262252b0e99c",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "crash-4-8658e0eeab.doc",
+      "category": "document",
+      "sha256": "7a12d46cb50e9d10e7f6383a2ad84916dd0a136c14fe1ae7ec7397de30e46b30",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x6870; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "fdo40686-1-bb0fd59274.doc",
+      "category": "document",
+      "sha256": "90fe7f998039ca6163020c202792beecfb0b62e5f3782354e580eeb5a27af934",
+      "container_skip": "OLE: FAT sector marker mismatch"
+    },
+    {
+      "name": "fdo66692-2-5042eeeb20.doc",
+      "category": "document",
+      "sha256": "108e6436a6679d4b8f58ecc021af6f782a628ffdaba2e1182a71a2fdfb52e76d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      }
+    },
+    {
+      "name": "forcepoint-layout-1-37801a9b14.doc",
+      "category": "document",
+      "sha256": "3f2ee569c4cc51fd235be13ebdc47c43bfbcada9c8958d37b8d5fdbf62d10f0d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "forcepoint50-grfanchor-1-91ee6b58f2.doc",
+      "category": "document",
+      "sha256": "e0c985928376839a76fc2b67eec0832defcce87b6801d2bb9a1ab4c6ad4c505e",
+      "container_skip": "OLE: stream/chain length mismatch"
+    },
+    {
+      "name": "forcepoint50-rows-1-e91f9dd324.doc",
+      "category": "document",
+      "sha256": "7b1b265dad204bac6a0307054a01f4a2282b01dda804bdb9c12f5238f73580aa",
+      "container": true,
+      "piece_prm": {
+        "pieces": 9,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "hang-1-8d68bbb127.doc",
+      "category": "document",
+      "sha256": "d03b425a6b8420785f8cc8c70019b706e176e1efbfe0cb2575be2b9dd1f67eaa",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "hang-2-6940c89e13.doc",
+      "category": "document",
+      "sha256": "f1dff6191e4cd4625dec0ddba2215934f53eee7e08c4a1c75bdd12137efd5132",
+      "container_skip": "OLE: unexplained DIFAT entries"
+    },
+    {
+      "name": "hang-3-4188b801a4.doc",
+      "category": "document",
+      "sha256": "798c08fbae4201932fd5e61c519fe211080a608bc5fbeeb75ac82b1c7ca7c862",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "hang-4-b7fd04012f.doc",
+      "category": "document",
+      "sha256": "b6ee1edf00ab6613844ce5d0ca3f63b51161ba49e0986380db0142260a7d1e1a",
+      "container_skip": "OLE: invalid stream directory metadata"
+    },
+    {
+      "name": "hang-5-c9d56711ab.doc",
+      "category": "document",
+      "sha256": "d45948d5fc6dace042a3315efbf8c4531b78d7ebf85fe02d534ec40f1b6b93dc",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "hang-6-48293c5fa9.doc",
+      "category": "document",
+      "sha256": "f84ce2fd19f6da7bcdd8c21343eda5b5520675c380b1b211e37aa4eae900426f",
+      "container_skip": "OLE: invalid stream directory metadata"
+    },
+    {
+      "name": "hang-7-a52a452fea.doc",
+      "category": "document",
+      "sha256": "593ddb6c5947dc5b1ee873be7984f1b9bce14fa40acd1d4883a45bb0bb0fa9ef",
+      "container_skip": "OLE: invalid stream directory metadata"
+    },
+    {
+      "name": "hang-8-4f0e30ecc4.doc",
+      "category": "document",
+      "sha256": "02aaea30ac9511773e2b8238230890ba7e8e8cdb5dd6841e859887cb315a5d49",
+      "container": true,
+      "piece_prm_skip": "OfficeArt: piece CP order",
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "hang-9-4e9e4120f4.doc",
+      "category": "document",
+      "sha256": "7947cd52a120761d02cd2b274e11743652b0dd88ff3113770be553b2c411c0f4",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "ofz18414-1-84204d197b.doc",
+      "category": "document",
+      "sha256": "d76c316b89cc94acd6a8f2605c3ddd30a9341b79dcc574c2159744dc121a5a40",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz18534-1-6b50fdd6d4.doc",
+      "category": "document",
+      "sha256": "383d777edc70c7883a6e31d8d9361fa7e289f7155915bf7ab4eb13c729e66159",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz18554-1-0a6b81d78b.doc",
+      "category": "document",
+      "sha256": "7f7c9034ad4b0074d57b3751d735ce06e116c6de7dc61f98c8f974ddc4d7ce2a",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz19065-a242f13bf8.doc",
+      "category": "document",
+      "sha256": "8ca01f444d565e5dfc755ddc4a4e33d19ae862da578af58612b567200716bc50",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz34749-1-d657a71b52.doc",
+      "category": "document",
+      "sha256": "cbe78fae42cceb6ce2b3a25f31be6a573bbbfabb360dda8d40e52577264de662",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz38011-1-8ef58ca539.doc",
+      "category": "document",
+      "sha256": "684f4e2668701bf35355be7907796f84fe0054cf06cf2690bc62aa61540ddc23",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz46457-1-c986678b5b.doc",
+      "category": "document",
+      "sha256": "1d1de9f8ae27fc1365c89e18eade3bcbc5ca44a7755c7efc8abc698ea245d20a",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz47205-1-acbb4830d5.doc",
+      "category": "document",
+      "sha256": "3dd881b2ee0d472a45cd4bc218bd16ac62d412bc78abb979b908fda4fea56fce",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz53457-1-b847eedbbd.doc",
+      "category": "document",
+      "sha256": "51212eb8e81752c05037071c81df6abdc0dd093df8c3ed57824bb7f1ec8b5e38",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz57592-1-289343a1af.doc",
+      "category": "document",
+      "sha256": "ea3a988363132b6cbb6084d71fcb927e2693c921d36eb4a0faacfb8cb69e00e8",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz7322-1-5f4858849a.doc",
+      "category": "document",
+      "sha256": "c702a9ba0f0425857d12b459f72cd17a657a4c0d87781e7c9d843b52cd6f90e5",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "tdf117129_dxagoal0-9fca8ef048.doc",
+      "category": "document",
+      "sha256": "53b2a5f2e199bc2127b3ae3255f6e4d73be14b30fb7f093ee60bffc9c9a530e9",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tdf57532-1-70068fe10c.doc",
+      "category": "document",
+      "sha256": "46d0d53be666236cdbbcfb463f6c8387275f38a60c666fd57b50cb73384edc5a",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "bookmark-delete-redline-7e46b0236b.doc",
+      "category": "document",
+      "sha256": "f8c19b5712e12244af5e243ab6b996af6bc32193dad208948a155c4a4d5bb3dd",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "ofz515655013-6b43d1c2a2.doc",
+      "category": "document",
+      "sha256": "dc4ea0e7ebee5d9618a2381c32960d1dab2159c74b5273c71ff5423ec03199d9",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz566727923-4c836d0815.doc",
+      "category": "document",
+      "sha256": "54a93b9ff29edfb0b37c4c96289af03c7fd4f8de2233d240b4c84390c419fbcc",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "fdo67386-ecd3d13af2.doc",
+      "category": "document",
+      "sha256": "e9a629161900738b78766aa65394395e47b3ef6ff39b3b9b7e3c2e358b7396bf",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "first-header-footer-023c494862.doc",
+      "category": "document",
+      "sha256": "384bc3570ef6193116210c5afd4dcfdcc6a5b63a983dc94512844439ab1b5f6a",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "continuous-endnotes-move-backwards-3ee6c56aa3.doc",
+      "category": "document",
+      "sha256": "01412c7d31609a93c1f0d5ace12208d5d17e4b5e23d31d5876bcaf554961d7f7",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "floattable-no-footer-overlap-87e301189d.doc",
+      "category": "document",
+      "sha256": "fd3133b1609d05a9575a20d9f019291affc1404f20547b30413933349b9d1631",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "floattable-then-table-8c9684e595.doc",
+      "category": "document",
+      "sha256": "ce5ce0304d4c8fe20822d9a3dd6429db3d946de01f984540e673d27869b60911",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x840f; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "inline-endnote-and-columns-2053df31bb.doc",
+      "category": "document",
+      "sha256": "0fdd579afa0848f40c6c2e53ce83944d08e174fe94ce39d8c1bf24e32b051207",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "inline-endnote-and-footnote-39c5636e1e.doc",
+      "category": "document",
+      "sha256": "56585ab2faeeb3b2c3b1e8b03f67e87b9f04e360f03de08d312d854d0bdc2cda",
+      "container_skip": "OLE: unsupported Unicode name comparison"
+    },
+    {
+      "name": "tdf122894-4-2fe41c9ad1.doc",
+      "category": "document",
+      "sha256": "44ae33ad12714ce2a38bf7824a322b17d2e5f355aa2d4b988c4dc4cf9afc3bd5",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf171263-ca810f0389.doc",
+      "category": "document",
+      "sha256": "d09d22f8e7ebad5b2628f2504b02bfcd46ad1fdb1f12917c8822b7782f3b3a12",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "btlr-cell-chinese-a4a70f6779.doc",
+      "category": "document",
+      "sha256": "0fe4681626a1b8050b1a8aea5841505e9190740a2cb2d8a9fd8b310af22cf493",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "cjklist30-bdabe35614.doc",
+      "category": "document",
+      "sha256": "fc42656d6fdb0ae9caa1812a11b7c6889038e29a587f0b048c6b43820abc0ea8",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "cjklist31-d11c90a8be.doc",
+      "category": "document",
+      "sha256": "a4a73895588459c127472ba4be04cb94ce4fde477e25f8688e25c168960b0d7d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "cjklist34-8a4620a019.doc",
+      "category": "document",
+      "sha256": "d62464d5b1e022eb349d8550ca03dfe55beb983a45e57cca3cd288c05520f07e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "cjklist35-8810acb094.doc",
+      "category": "document",
+      "sha256": "22e5b23bf7430f520d196f610f9ae9f40b7e625362a6f4ab443e2cfc4dd7e4c9",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf118564-a8c53d2479.doc",
+      "category": "document",
+      "sha256": "e0eade3089c6ba3319f88fb6e53a38f2a165c0183b183f38829dcea3b5264898",
+      "container": true,
+      "piece_prm": {
+        "pieces": 2,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf77964-2b36036b97.doc",
+      "category": "document",
+      "sha256": "22203d15ce96d27d42afe2b1b077cce1e18917780ef20b365111fa538d08c3bf",
+      "container": true,
+      "piece_prm": {
+        "pieces": 2,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: unqualified/duplicate FOPT property: 0x180"
+    },
+    {
+      "name": "skipimages-3c40599b08.doc",
+      "category": "document",
+      "sha256": "01760503385e413d1bfcc6ebbcebb195220523af91d36ee49be5c97e8920e164",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "checkbox-radiobutton-17162a4101.doc",
+      "category": "document",
+      "sha256": "3854d47ae18a9427719b52e71b3d4216695a73823f63f6626cb95efb94a6a7ce",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified"
+    },
+    {
+      "name": "skipimage-embedded-b4b57ec5f5.doc",
+      "category": "document",
+      "sha256": "9805f1355b79dc66aac9ea3eef5b83f145479a12d185a31f8319368fcef8b32c",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x6815; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "forcepoint92-7d9e02deca.doc",
+      "category": "document",
+      "sha256": "74bc88a841e38a2b1b7868583e054f3a3eaa8e056e20aca2c34d996d2b527531",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "tdf117923-c43cf40c9f.doc",
+      "category": "document",
+      "sha256": "0281095b1e46ed480ba7b45d064089501830d6fc2750c2347a0946ad6a00604d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf124601-fdfde8215f.doc",
+      "category": "document",
+      "sha256": "ffbd57320c2c0d5600cb99fbbb2acd35b7df0cd30607089f85a166eb8bd89223",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf124601b-a580e81d3d.doc",
+      "category": "document",
+      "sha256": "1a025fd6517135d565806e9cb80c0184f7528e7cbb48caba5ad5ae900f9530e4",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf131707_flyWrap-c32e5dafd9.doc",
+      "category": "document",
+      "sha256": "8d1475eb1cf6d0db8ea9a3e39bf4512c3c3781709e399ac9a403c8aed9891176",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      }
+    },
+    {
+      "name": "footnote_spacing_hanging_para-b381ba9b61.doc",
+      "category": "document",
+      "sha256": "f4acb6bc1b25a8579789a07206e55d505789a506f6fac502fac11373956f57f8",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x484b; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf122452-9fd823130d.doc",
+      "category": "document",
+      "sha256": "0c0a67af44dee2d6901f901e1b84736dea0ec194a526888111ba822184256154",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf43569_conditionalfield-456a6ed833.doc",
+      "category": "document",
+      "sha256": "71b04e90a82ad7f155941f1c5ed3d0889913e0d50bc6353c7cc5a6dbae7f485a",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "bnc581614-f56525e87d.doc",
+      "category": "document",
+      "sha256": "b03e5e3ded0cb1fc4fe7068644274d2f66d23fed60c136394af4f73d93947cb1",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x85c; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf107618-8a6972f45b.doc",
+      "category": "document",
+      "sha256": "b0a9e68f35e2c4dc440c4823ed689fc3d8cafe1884e9ef36a19b266053d62f83",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf113399-1f3ddc993d.doc",
+      "category": "document",
+      "sha256": "6f7656beee6ad37a19a43d0aa5ed79a4a21ad2f8e326a05fa736f4b36c7a7b84",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf114537_conditional-text2-16f8076dc3.doc",
+      "category": "document",
+      "sha256": "f0490d5eb29aa764ae8ada591cb2b6d767e40a70547dceb5a1a9820530fe6612",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf121374_sectionHF2-56a33d260e.doc",
+      "category": "document",
+      "sha256": "300a4b129fa8d4bba87a43a2add932fe3e17ae8c7ffc2698eabd7091c7be9772",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf133643-52db5e344f.doc",
+      "category": "document",
+      "sha256": "d360a09837fadea2198fbe87a6f728271623008b897abf9487e95889b1dbf8b3",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a50; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf134618-693ab87e21.doc",
+      "category": "document",
+      "sha256": "5e751dea215ca6d065ce7582c71400045587d8883d69fe818e1142fcf343948e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x85c; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf134619_numberingProps-742b45ce65.doc",
+      "category": "document",
+      "sha256": "d8633892dd3d1137aa2b315c420c9275a1e9d0a4dae5ef0d767d8a2bda21fc71",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf137295-915b7d62d9.doc",
+      "category": "document",
+      "sha256": "17bb4859751ee1b528d46fd4ba1fa34b93ab88540e8ad6ddfaf5a4ed0e4831e1",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf156372-3b8ade19f8.doc",
+      "category": "document",
+      "sha256": "a7c55f22f2510d5061027748ef4e7fc0015c1694b841363c17bfd7a0fafd29ee",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf171527_flyInFramePr-699b693e2b.doc",
+      "category": "document",
+      "sha256": "7e4f0f8830b4e74a6e35537130b020bf055322c326a4bbcdb921b022b6e3059a",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xc60d; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf38778_properties_in_run_for_field-5f0f7238a1.doc",
+      "category": "document",
+      "sha256": "43cbc1245818fbdfc3f82e8d80c5892782cebb16fea15fb02384c2a74c4cdc5e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf79435_legacyInputFields-da7fade809.doc",
+      "category": "document",
+      "sha256": "b9fccb6bc7e7854e8cd94b68759f55ad15c54b2eac772cb3c5c2f6d09b56a623",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf92524_autoColor-147e9c133b.doc",
+      "category": "document",
+      "sha256": "b5285a0dfea96d27ea28cb8fe15a434ac5a8507260f9a50bfb1d074f11165ca9",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: floating FBSE name/count"
+    },
+    {
+      "name": "mw00_table_of_contents_templates-f0f80543bf.doc",
+      "category": "document",
+      "sha256": "3b912399160ef0b30e8b69b3c31f491ef5fdaffd16c13dfeb78b09869e2a7633",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tdf106701_tabOverMarginAutotab-438a8cb791.doc",
+      "category": "document",
+      "sha256": "c8988f0325c91f75cf9b6eb4b722e3bcacf365f52fc485340c01f2e0dade2ee2",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf132637_protectTrackChanges-2f75e60278.doc",
+      "category": "document",
+      "sha256": "3f464233354f76c5035c5f17a13255b187b4114b89aecdf458694f496e2826ff",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x801; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf157129-955426077b.doc",
+      "category": "document",
+      "sha256": "4c81778b451c2e018d88908e20109c322c5716f9c099ed3d455a1dfc04bae8bc",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf35021_tabOverMarginDemo-22c79e8fad.doc",
+      "category": "document",
+      "sha256": "7aa0a9e2f2468115550af083caff68bdd246c44e581227bb8dc353a87638450f",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf76636-2d94868da5.doc",
+      "category": "document",
+      "sha256": "a1f2692479834ae4549116fb99bd9570b6c6c9d12a907f7843e6cc53de902f85",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "3endnotes-fca1cb1238.doc",
+      "category": "document",
+      "sha256": "5317a69f37ce29dbd4fd6e8556c7566249bb8ad0a7dc17a27f8e96bd9f87a396",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "dont-break-wrapped-tables-01f3552272.doc",
+      "category": "document",
+      "sha256": "d7471d140121391a204c6cf48e7d3fdd4c01e2a1245b350f84ca71fc7927d043",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x484b; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "floattable-compat14-020aa2deb3.doc",
+      "category": "document",
+      "sha256": "69ca4170ebff76b5151d302e3d0292ac20a5a61219178fa2045e86cd80fe70ef",
+      "container_skip": "OLE: unsupported Unicode name comparison"
+    },
+    {
+      "name": "floattable-footnote-c99bc13f43.doc",
+      "category": "document",
+      "sha256": "a15040879ea84e69f7d553a9e86e5774942bf19cf39be5923e7ccf8e5c75b903",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "floattable-hidden-anchor-3e8feb8769.doc",
+      "category": "document",
+      "sha256": "e053ead5dc332af6df99fb73e56041b675ebfad15a74339e7591a6f7ea79a634",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xa413; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "floattable-in-inlinetable-a2f06973a5.doc",
+      "category": "document",
+      "sha256": "1bb03b5cdc9b738fd0e234b9b6a930cee3fcd160070d8121a9e1f014234b8d2e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "floattable-tbl-overlap-921ffe1fa6.doc",
+      "category": "document",
+      "sha256": "d8709c3853adef852716f419d78b604a4402636f90dec3cc7bcd59c75f28ec17",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x484b; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "floattable-then-floattable-6e69414074.doc",
+      "category": "document",
+      "sha256": "6a93ed6f09166d65f59a4d8192a26a61b53ec5b785ac2c5b4354041b9d77a8dd",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "floattable-vertical-fly-offset-d17bb5e886.doc",
+      "category": "document",
+      "sha256": "2ad0bd1949ab3975026ec6ce95ceb22269e706fea73e7a0dd744d89b68dcc761",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xa413; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "negative-page-border-6ea5e9030f.doc",
+      "category": "document",
+      "sha256": "2255f90fa6c7ff6c0b51416ffd4a93614b98a4f915f1234971d5563902ff19a3",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "null-pointer-dereference-c2bc0a9744.doc",
+      "category": "document",
+      "sha256": "c52e4853aaa38c59d9c91380234f2a59700ea43ab0611810c8f16903d7f994fa",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a50; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "ofz-delflyinrange-1-735b259f0c.doc",
+      "category": "document",
+      "sha256": "28e9152aeec07c1ecb19e2a4d3467ab4f9db00786fb665df0d3086ae45991c85",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "tdf71749_with_footnote-9de42a4aac.doc",
+      "category": "document",
+      "sha256": "380e28ebd98c34e88237d79f32ecc4d89992a6933898eb2ff8e1ad52b4ca4c72",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tdf71749_without_footnote-cf0b647f10.doc",
+      "category": "document",
+      "sha256": "a52c4423ced21d03cea4c487a2ba6f72278d2ad14b778b2f944656b55fd62101",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "drop_down_form_field-cf94a1fdad.doc",
+      "category": "document",
+      "sha256": "01b95ddebe6a398bf9191dc89b9eadec5e0c0202e14e5be92fb50d85d95d2815",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "AutoFilter-1a8e5e5e99.xls",
+      "category": "spreadsheet",
+      "sha256": "2f5e9c7608c4619ded6de7b335ec1e97756951f25c9ea234bab90133fac01905",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "BGR-RGBTest-e2bf43fb0e.xls",
+      "category": "spreadsheet",
+      "sha256": "c21d2a87035adbcf8652c582ce15202bd128f141f1d238d23c6e1939ed047b98",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "CalcFont-86304063c4.xls",
+      "category": "spreadsheet",
+      "sha256": "3a184fad4d71106f07485c4ee138f46a3e888eb21f9f142f6a0662b285a6664f",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "CheckOptionToggleValue-14cf152af3.xls",
+      "category": "spreadsheet",
+      "sha256": "85eb125bcc35f90a42b6de7ee80ccea92e3a1a2eb7739a8ec94ce8e59043ee6a",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "GeneratedEventTest-9325de32d7.xls",
+      "category": "spreadsheet",
+      "sha256": "9dd4008774e1513587fc7913e0b41ae33fa10d15b2d4036d6431ae6a1b41205e",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "MiscControlTests-3503795b02.xls",
+      "category": "spreadsheet",
+      "sha256": "eba8ed349891a89ddc71c08ee5206864d984b565b4aa61a79b38883814808bcb",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "MiscRangeTests-c6dffd4754.xls",
+      "category": "spreadsheet",
+      "sha256": "174ba491e9a141d0492b5cd39fde173a0f6e63eb1302a3af6b8b1d5ba0919457",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Names-fcacf9bbde.xls",
+      "category": "spreadsheet",
+      "sha256": "1f4aed58630576bb02271eafb2e78b8af861baa73d19c55d5eaf11c3ea525d07",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "NamesSheetLocal-9086d62a1f.xls",
+      "category": "spreadsheet",
+      "sha256": "dec7ca9e99c34ca690e2de7a43dee20f97e593829e4debaeb18fef163b26d82c",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "PageBreaks-4e6ac0a42b.xls",
+      "category": "spreadsheet",
+      "sha256": "a412ca952c17b5e39e4414ff931d7fbdaa88d9e558fac6ef53564fc64338f48d",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Ranges-2-84fdc45c0d.xls",
+      "category": "spreadsheet",
+      "sha256": "851f7d9059033c056ed243f03e37370d05c04dc3088374ba242f2f6e4c9b6ba7",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Ranges-3-f96620f218.xls",
+      "category": "spreadsheet",
+      "sha256": "f8f78d8b16e242c17a53f605f9198eee3d645af0791d89a9fcf86f22b88fb006",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Ranges-7a513de258.xls",
+      "category": "spreadsheet",
+      "sha256": "29846e0f3b7610de724159949c4e5e3659f9153b7c19b69ceee3c8bb009a2812",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Shapes-dbccf3da33.xls",
+      "category": "spreadsheet",
+      "sha256": "515b7569042fafaa0ada6b084acd2af632752ca9a7205360e1c46e464c496c2a",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "TestAddress-629645c41c.xls",
+      "category": "spreadsheet",
+      "sha256": "84f694f10b68c08a5f06072e9d7c8275a2290de3a9425c1a94e135b39dd9161e",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "TestCalc_Rangetest-9c00f5522c.xls",
+      "category": "spreadsheet",
+      "sha256": "57100cd0435ac52e10fdb6a881017180788e17bfe13be60cf31faee8e2b4ca32",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "TestCalc_Rangetest2-409459df64.xls",
+      "category": "spreadsheet",
+      "sha256": "ead7f80f82dfaf3930de8b65938028766a3f4dd92904856f9492ccd698368eaf",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "TestIntersection-5872be7ca1.xls",
+      "category": "spreadsheet",
+      "sha256": "fb9de4be9f2f24db9b5f1a1c7f135abdd06a9f2691a6567ce0321b395d39aeed",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "TestUnion-bde207e746.xls",
+      "category": "spreadsheet",
+      "sha256": "9ec3a9f86ca07bcc7bb7b4e5016dad98f61c7e69e86ac387fe70f5440679f170",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Window-3daebfb99b.xls",
+      "category": "spreadsheet",
+      "sha256": "329e236989e42d51e0ff238e415a92a9d3761e133b9c89fc0d1157fe9175ef17",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Workbooks-2e8a7e78b4.xls",
+      "category": "spreadsheet",
+      "sha256": "440555b89f7be8878ca49e25cf0379a2c701880a10f13fb5ed8f20946c58af32",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "bytearraystring-22da6de484.xls",
+      "category": "spreadsheet",
+      "sha256": "678f7a633858de2671a5f851329fd278213e9cd1b8ac193ac2c9576ec62a1f54",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "pagesetup-db1033af79.xls",
+      "category": "spreadsheet",
+      "sha256": "471229bad336bc2b880a4541ac7438eeccba07a7d4399f69adaf42380242a503",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "range-4-67d1ad7aa6.xls",
+      "category": "spreadsheet",
+      "sha256": "1d4384c237c50a1d2bfd943a37ed20dc48881e3f73291cd676531d3152bdf288",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tdf149531-e79c16b009.xls",
+      "category": "spreadsheet",
+      "sha256": "e96748dce8f410d793bcaf5d559028d4004fde1c38fe8dbd55272a6c8e1de736",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf52602-1770b15fb4.xls",
+      "category": "spreadsheet",
+      "sha256": "b31110744eca60f66e312b3369761a23f194a773389cf54742039f1821909c70",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tdf78897-e2177fc785.xls",
+      "category": "spreadsheet",
+      "sha256": "940fb6f143e8d54c545e62599dd7c38e45846db6787397283b7ec93e70eb96ae",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf90278-2d79455566.xls",
+      "category": "spreadsheet",
+      "sha256": "7abf04562a79d067c1de6bbe41c3aa21271d39c75f1b244e3a1945ad782d273b",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "vba-22bee379ca.xls",
+      "category": "spreadsheet",
+      "sha256": "d888c5e6dad77e8e52eb9344ca7152a7008596b7831353c757e34c54e5d297a1",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "vba_endFunction-af7fa86256.xls",
+      "category": "spreadsheet",
+      "sha256": "4503ce6b858870de644dd8fdb48fb6fc586c0cc58daa6b80cd7f5ccc8b5b2db7",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "vba_findFunction-bb0f450b1a.xls",
+      "category": "spreadsheet",
+      "sha256": "2c369b8ad63dee728c8ee1e20d835c4763f569a9ce2b4093d529f0e519731916",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "window2-d1822fa366.xls",
+      "category": "spreadsheet",
+      "sha256": "eeb517a820c3847d30e569e75584b8b791e15cf59a46f5f9737f1dcc370b1fa4",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tdf124318-9dc7c12d79.xls",
+      "category": "spreadsheet",
+      "sha256": "db58c5ea02fd905fa6d04b6ba90a44735d0613d6647bb65eccda6b00626e84b6",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tdf159707-c75d53097e.xls",
+      "category": "spreadsheet",
+      "sha256": "7f3cedce1d1d4d7130925450af422ec4adea7e30b03cc34c1d7bc9094d9bce32",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tdf77509-d8d690c8be.xls",
+      "category": "spreadsheet",
+      "sha256": "efd9df5f31fc8de1531dfd221e50822e75ed9765c3cbcde46c15a1fc0885c4e8",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "mortgage-45015d6d8e.xls",
+      "category": "spreadsheet",
+      "sha256": "798a0d3643160af88794763f5aa4c450a0fbd295d7b6b631181308a6c6721537",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x4d",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x4d"
+    },
+    {
+      "name": "CVE-2006-3059-1-e58082f431.xls",
+      "category": "spreadsheet",
+      "sha256": "2e92158240e37ae2f7764928194f8878ee926a50b77557dad2ecb5d64fd896bd",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "EDB-39398-1-dd0de64dff.xls",
+      "category": "spreadsheet",
+      "sha256": "3aed885d4cef3560a868b9d37dd85588f8b4973b3693ffd11c4be68e09b93331",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "forcepoint-group-range-1-1aca9c7f11.xls",
+      "category": "spreadsheet",
+      "sha256": "1baf94dcbeeabf28d430fac271eda0490852b42343d9f0b325313c87717d2f20",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "besselj-ddee1a3c14.xls",
+      "category": "spreadsheet",
+      "sha256": "191f549e17e575f3dee3e9410f982b7966bb89153d2cc9df61a5576428a717d6",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "SUMX2MY2-62d8c9a8c8.xls",
+      "category": "spreadsheet",
+      "sha256": "ac13e2d4a61b6527cc5c1e3020c9e9b12a1d1da54055c182f1837a27a53ab1b6",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "SUMX2PY2-4b7ad1a838.xls",
+      "category": "spreadsheet",
+      "sha256": "308dc4666cf1fec3ac4fb69f56a1fd697ad9117ff9174893df4d6555aa9e09b4",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "SUMXMY2-b45e2ac1cd.xls",
+      "category": "spreadsheet",
+      "sha256": "a7d7da137853af11361b24ccd25599115465b595f20326147cafbcd2292ecabb",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "daverage-c852f8188f.xls",
+      "category": "spreadsheet",
+      "sha256": "dcdc4a8a8d40a05621da168b21bd1921d9fd3f6b7fdb69814e0519cfc15bbc43",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "dcount-2f597cc7e5.xls",
+      "category": "spreadsheet",
+      "sha256": "1fa79adadea7208cf6a56448c9ee5c73b242c9f776b18e983767a368c06218e3",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "dcountA-2b93a145ea.xls",
+      "category": "spreadsheet",
+      "sha256": "18b33b85202b525809aaf4cf942e7eb7ea4577a0d1816d613b92df11c997d384",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "dmax-922ae674bc.xls",
+      "category": "spreadsheet",
+      "sha256": "a7f0306649fb56e01033ee82ea0b700703fb39ef8145ce1a64923a96038c80ff",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "dmin-8de12d1f04.xls",
+      "category": "spreadsheet",
+      "sha256": "ecc7bdde514229109e69bbe641895a2e4d3cc9d098af2d0c0bdd595f1cdd7e67",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "dproduct-fa1ea256e4.xls",
+      "category": "spreadsheet",
+      "sha256": "bdf09aafc73f4714787d5b88a62bb49ffacb2a1a57602bb38c4aa7b7d020261c",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "dstdev-4c32536058.xls",
+      "category": "spreadsheet",
+      "sha256": "e065fad0c93d375f56ea5a9064351753bbdd4116b9b39f8689a8aa358bfae7b3",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "dstdevp-88984b9e7d.xls",
+      "category": "spreadsheet",
+      "sha256": "2b4c3289b364528ec77a4aac2645d0463712a07acc348a3300ea9c9b66d0de96",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "dsum-a0123e2611.xls",
+      "category": "spreadsheet",
+      "sha256": "044aa4c78ca7a831d2b1b6e14bbcd8182280faf12cdb9ca3f80063ae18473057",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "dvar-a0efc13e4b.xls",
+      "category": "spreadsheet",
+      "sha256": "57487daefac269f0cd830946b5fa336c69c57a76c2d2ea7c9c804945701f7107",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "dvarp-2d32a228ac.xls",
+      "category": "spreadsheet",
+      "sha256": "cfef37cf38346cd42555b5031f69d44da244052c15c37a1e08332504d7b506f6",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Accrint-4c792e50fb.xls",
+      "category": "spreadsheet",
+      "sha256": "7816636bf4a37d94be475c91d58558ba5c7e9b10adf4388d78d5482c04158383",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Accrintm-42f0beb12c.xls",
+      "category": "spreadsheet",
+      "sha256": "cf7cfef191f38756236a989d198273fd8def02ca4de83986121994df721e5a8f",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Amordegrc-7cb9e474c8.xls",
+      "category": "spreadsheet",
+      "sha256": "c9c9400b1c33a47c901b6a148931d5bb35b5dc212a0bd6a5352a5e3674974320",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Amorlinc-59623342b9.xls",
+      "category": "spreadsheet",
+      "sha256": "1988049df4cdb7ea707605c0890051d45b614d7fcfac60e307f87a1b563b9587",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Coupdaybs-ca8c8cfb86.xls",
+      "category": "spreadsheet",
+      "sha256": "8fd59bb34f61b1a0e34597169ed64d424d74bf48e8377a9be23493ca9d966ba1",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Coupdays-9f1d4d481d.xls",
+      "category": "spreadsheet",
+      "sha256": "eddbc3cea379fe682a14b924bbdd76b03215293efa01a375bf4697bcf3a4e218",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "Coupdaysnc-98aa3df9e1.xls",
+      "category": "spreadsheet",
+      "sha256": "bb9bfd514efa99a7e39e18a2936d94b3767a6a5b812284f167ef4d5153fed546",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Coupncd-776127f013.xls",
+      "category": "spreadsheet",
+      "sha256": "522c801f4dbe43dd3d0794ccd674d6ed33fa8ce30ea5607f1307585162c3fc7d",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Coupnum-914612ed17.xls",
+      "category": "spreadsheet",
+      "sha256": "74f42422b5e5db78571664fd55f80a3a5df036c41084123121a0548b9f046fbc",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Couppcd-22689cf835.xls",
+      "category": "spreadsheet",
+      "sha256": "8c83824a7a5ceb10de67d604ce8b94881cefafc8ca85dd69cffa6062bb6554b5",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Cumipmt-07d31c039f.xls",
+      "category": "spreadsheet",
+      "sha256": "1e56881e802786e8a8240eb2e01660098eb07e36da3a3b1fc331ef22e98fbdd9",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Cumprinc-214b7758fb.xls",
+      "category": "spreadsheet",
+      "sha256": "b7affae1fe390e1b4d9b4409dbbe45779ed9f65cf8438e3957afd3f4ac3d00d5",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "DISC-3425e92a50.xls",
+      "category": "spreadsheet",
+      "sha256": "b11aa00d457d530add4c2cb8f4113452ceb60695c34e2dbd21554a4279b75c5b",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Dollarde-2410905bc8.xls",
+      "category": "spreadsheet",
+      "sha256": "171d64bce5519ed2f033cd1cca289ae68912357b354c08424a0cc499678ae4b9",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Dollarfr-92149ee360.xls",
+      "category": "spreadsheet",
+      "sha256": "fbb260df28d3ddd9a60354e06899ef2b8325dd8d693eae97a397eaccb6a4c6ff",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Duration_ADD-18e5ddb752.xls",
+      "category": "spreadsheet",
+      "sha256": "d94f2ca514ca232f6cbf4dc8c94146793ff5ca1bff0d576e0ed50021d5dd59f7",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "EFFECT_ADD-6b8850344b.xls",
+      "category": "spreadsheet",
+      "sha256": "e45179d3f012af400ed535adcf81e9637bf387deca037b4817c8539b6c8e9c17",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "FV-681986a11e.xls",
+      "category": "spreadsheet",
+      "sha256": "20097d5b2aad1fabb07ec015500ab455302b5cdc9796e677388e5185e29fa690",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Fvschedule-0380b4acba.xls",
+      "category": "spreadsheet",
+      "sha256": "dfc8131f303a24543edf91fe87868d17997291485812b83927097b1ab7d3a4b8",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "INTRATE-b08ce1a714.xls",
+      "category": "spreadsheet",
+      "sha256": "e2cd1920f7954b9f0893abae4a62add3e1620969a5c7637ec262b460d8ecfa10",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "IPMT-dbb6e518c9.xls",
+      "category": "spreadsheet",
+      "sha256": "51994978f7c725c865d27467bba581f02a94f77d5736ca677fc092a364d4d807",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "IRR-5eea7ac1ff.xls",
+      "category": "spreadsheet",
+      "sha256": "1ce86d21a7f8447b97524f2814adfc8fac4dc487665910002e4f991b531f5cf8",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "ISPMT-8759e7e59d.xls",
+      "category": "spreadsheet",
+      "sha256": "fae8235cbd8de471eedef008199e03ac6cd354d670ddef8a76bcb71f75d9ab49",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "MDuration-807ca2d2ac.xls",
+      "category": "spreadsheet",
+      "sha256": "c0128f826d226a56fa06e01b3927ba399fa3e69684caadd453798fffb787c9a4",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "MDuration1-c382aa8952.xls",
+      "category": "spreadsheet",
+      "sha256": "336e5bfea6348005221cc312e521f6b9f57eceaf965e398ec7cc1d8dda1397f4",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "MIRR-05feb46d34.xls",
+      "category": "spreadsheet",
+      "sha256": "f0a5462cefa1689f15884dbfa38d11d897aee5212c023c4e0586024c6b734ba1",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "NPER-a5e2cbcdbf.xls",
+      "category": "spreadsheet",
+      "sha256": "b95d8447c1c58b7c68771299fbedcce423799b224cd8a166b57a0a605a948699",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "NPER1-6ba2c56d54.xls",
+      "category": "spreadsheet",
+      "sha256": "6dccf2380400e66f9784e9141a772323b80a6adf351225a762d4c9e216bb1e6e",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "NPV-6c00e17e9c.xls",
+      "category": "spreadsheet",
+      "sha256": "ed65d799b57425153cbfbd8c01b79286bc41c4a79e490b0d6a6c89860dc9f1cf",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Nominal-7a10f74cec.xls",
+      "category": "spreadsheet",
+      "sha256": "fa01138f1867d95f218362618f36f1d6e9001eb2db1d08cf8cddaa146ba6aaad",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Oddlprice-052d9c4ab7.xls",
+      "category": "spreadsheet",
+      "sha256": "60872dcf08556a298982a4a836d1c929dc1f390eb9622a8bd80b48b2b9d1e3b7",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Oddlyield-daaa0d275c.xls",
+      "category": "spreadsheet",
+      "sha256": "1b0bf35dc2e199060e222849bb63c2e1809c5cac16e2b976d2cf367b9f98ad31",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "PMT-8c14db655e.xls",
+      "category": "spreadsheet",
+      "sha256": "61356700d9831c5e1f1130a45c94440e04c1953ab4604d6b45125767c0923549",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "PPMT-484ee64cd0.xls",
+      "category": "spreadsheet",
+      "sha256": "f72cadf790da1ed5abd66419ba40863b62871336e3e33e3e4b5e1d2344ebe3d0",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "PV-a6f8d9c059.xls",
+      "category": "spreadsheet",
+      "sha256": "f84703d35b7be1da220e93795a4e8e98a58ef33e24e51bf85d26563b1cf43091",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Price-ed507fd928.xls",
+      "category": "spreadsheet",
+      "sha256": "fb2498550b2232418aefe0e344ed990b7ca48db801b87c2e8b423e283b9ffee5",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "PriceDisc-16269e9357.xls",
+      "category": "spreadsheet",
+      "sha256": "a3afb9dc39abd9b3cdbc4cd300dad4b2febebeae1f38683522da65011cf1505a",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "PriceMat-d774dca1c7.xls",
+      "category": "spreadsheet",
+      "sha256": "16f419a27184ce455f2603b8193890108f4a4a5b042e8937de54a125ca1c29fd",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "RATE-c2e6e96bbe.xls",
+      "category": "spreadsheet",
+      "sha256": "e45b9f39e18d9da6022d35db22350ce78a5283a2155e358790469be66edfb08e",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "RRI-e44f850721.xls",
+      "category": "spreadsheet",
+      "sha256": "0b10d836e503ffb2c058c296336c6c350a9cfc767da017a4c77f7e4d0fb84793",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Received-2aebde2c10.xls",
+      "category": "spreadsheet",
+      "sha256": "56891717572aa8e01fa7a036532f80e515ecee40adc70431de7299ce5c0e2062",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "SLN-33ebfc1f3c.xls",
+      "category": "spreadsheet",
+      "sha256": "f935f8bfe3f10d66149ac194c3af844d547365784d1b7234c469402981cdd3e0",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "SYD-6faed72e34.xls",
+      "category": "spreadsheet",
+      "sha256": "665cc27099f4edd56829769c61f02de3d24516ae4c0db3596ad87b6ce6575a41",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "TBILLEQ-3680d692da.xls",
+      "category": "spreadsheet",
+      "sha256": "a3a3faae04598232ff35e3800c2d0109b1f20eca69ef3c348ed4e7d105ce83ca",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "TBILLPRICE-f704bb3c7d.xls",
+      "category": "spreadsheet",
+      "sha256": "f0b70ba7fb4c87548d3946b9c07d983162ea494640ae2f138c1bbc8febbd6ab6",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "TBILLYIELD-1ea70a1b93.xls",
+      "category": "spreadsheet",
+      "sha256": "e812f20985213cb693bbc82416aba4c4080f692ae9dc32b50a943cd9ae105729",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "VDB-d0f58b510f.xls",
+      "category": "spreadsheet",
+      "sha256": "38813a7ae97c4b55d0e267613556440d9bc700ac3534ec14e1dbcfba420b1667",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "XNPV-e8e0607451.xls",
+      "category": "spreadsheet",
+      "sha256": "32916d4b9149ee81e2d75ab051c9c8371dfb5c6349c5c517cc2373ecde5e4d17",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "YIELD-def6c02957.xls",
+      "category": "spreadsheet",
+      "sha256": "c87872e14facae8806bbfb344a283b0128c7cce4a0e1dd7a0e8adfaf6b46039c",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "YIELDDISC-b6d494a9ce.xls",
+      "category": "spreadsheet",
+      "sha256": "262d03087f36c3c8c6ada2f9c0078004de4b4db6cfae1f9bf5cf1061d1afe2ee",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "YIELDMAT-b177c0ac46.xls",
+      "category": "spreadsheet",
+      "sha256": "95bf4828cdaff39421b3af488c37f30c3b90a1f42dafc05129849661c213ab11",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "db-81cd024a51.xls",
+      "category": "spreadsheet",
+      "sha256": "e9cd030540daeed23adcfc3cbd651082cb1fc243f947e00f8df76ff94ee860bf",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "ddb-e98ae085a0.xls",
+      "category": "spreadsheet",
+      "sha256": "00ffb2718546991415799bf310d085663c7819f3a69ddd5d4ce7a5a19deb8c7e",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "general-bac55116ea.xls",
+      "category": "spreadsheet",
+      "sha256": "8a6bee1c5075dd4ef9078de4d503d9c9c00a87efc495eee053e3475409a07ae7",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "and-19ae64bf39.xls",
+      "category": "spreadsheet",
+      "sha256": "9ea34aa45bcfddc0f1c2a623469246e226cbe178098373fedbbf40b24994d78d",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "not-7cd86a0677.xls",
+      "category": "spreadsheet",
+      "sha256": "a13254897c10702fb2b8e9095227a3949132fa5e859fdb85979c2c48563eb055",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "or-50970987d5.xls",
+      "category": "spreadsheet",
+      "sha256": "60b470bab92e74f84fc938e0afcfac8a738274a9113351b8bc349b3a55df5079",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "xor-7737727ae5.xls",
+      "category": "spreadsheet",
+      "sha256": "92b6f3e2e45ff5feb88b5d4fdd982d2b150e3a942eb6e34baed92be4a0846aed",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "LN-e57d809ae8.xls",
+      "category": "spreadsheet",
+      "sha256": "f715426f81a4c72c625a7f85e94068b84b6e2abd1dcb6972c8d7d0c6c2602eeb",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "MROUND-5aeabf3a5c.xls",
+      "category": "spreadsheet",
+      "sha256": "eb7526b8e170d48a3437c23211e1f2ecd321dbf44b0c456ded330bdb6062254b",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "NegSub-3379510917.xls",
+      "category": "spreadsheet",
+      "sha256": "a4caa5e3156a6f815ab7de155e9f7cbdeaf07e90dfb340a30a1ed0d1c73aad42",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "ROUND-0076e36d25.xls",
+      "category": "spreadsheet",
+      "sha256": "f4624d30345be4314fea898fa7e3f12e30c24f3e4374f3fdbef3a196056f534d",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "averageif-456f12757f.xls",
+      "category": "spreadsheet",
+      "sha256": "0408c4ce6924b8fcf908213c1785b7f30373621e7d4b96980b4188638b030051",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "averageif_mix-0fd3f8dd5d.xls",
+      "category": "spreadsheet",
+      "sha256": "13eca5de9393c3323dc41276f5a2e343cbcb502e899363a532cede81aeede1ed",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "averageifs-d022e7ce25.xls",
+      "category": "spreadsheet",
+      "sha256": "1af6ab055db609bad48f7b65aa30bcdc2a813be23fbf60950a5977d45ad7958c",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "combina-9189b3a5ee.xls",
+      "category": "spreadsheet",
+      "sha256": "aff0abfcce8ccfe740b60de07fb72f639b356811708b8c5f188823e2daa28ec8",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "convert-4e2f2061d5.xls",
+      "category": "spreadsheet",
+      "sha256": "619ecb60f531310e39715c8264262acc2264a87e0cb2dfc5a9a2ec85494bd8e8",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "cos-427cda85cd.xls",
+      "category": "spreadsheet",
+      "sha256": "457cfc23114971582851e3731b169f27792877808e98cf32d7d86e52e344b20c",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "cosh-ce9a7beea4.xls",
+      "category": "spreadsheet",
+      "sha256": "c22d706491583ee16c162eb99a9567ea9983b84a9875304732427b262e4049bc",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "countif-06c715c452.xls",
+      "category": "spreadsheet",
+      "sha256": "9261ed2202ad828e787c75008339d057f91d08616bdc5792fdb78552d9199dcd",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "countifs-12230109bd.xls",
+      "category": "spreadsheet",
+      "sha256": "fd998209d25905961336356b45b1c92ad08c0931e40f859ea2aabfe012bc577d",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "degrees-73e343701e.xls",
+      "category": "spreadsheet",
+      "sha256": "577cf316b567c248bf532709edd7b4ababa994bf95a8581a8fd4335a7563a162",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "even-b882d7ed3a.xls",
+      "category": "spreadsheet",
+      "sha256": "5f28e83ebef8fdf1588fb2f9a22d399271074ffffade593bac0a2921e263ccca",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "fact-ed7fbcf93c.xls",
+      "category": "spreadsheet",
+      "sha256": "51ab04f50773da9bdc78a62fc904cd86ef8fe27d2fa602a4435e3087c02f3237",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "int-e9636382e5.xls",
+      "category": "spreadsheet",
+      "sha256": "285da6655899d2fcdcafa61b40be85022133665298b9e615035b40e9405ec69f",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "iseven-ad285e5038.xls",
+      "category": "spreadsheet",
+      "sha256": "589cbd90998f79d2f18695f75f3fd6eee2f09e90166db0297f2beb9681c786e8",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "isodd-399ee01cc8.xls",
+      "category": "spreadsheet",
+      "sha256": "96794984ae4fbb6aa929f077f96e8c3a20330c4e0a5883fb69df580bbe570e6e",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "log-456fc042ca.xls",
+      "category": "spreadsheet",
+      "sha256": "7ef9001cc07691859c63a9b002ccfdaca013c3781df4703e8907919405f3f243",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "mod-300102c63a.xls",
+      "category": "spreadsheet",
+      "sha256": "143cd554790f08fae70622f9503d415e07ee9bb4c4b5b8b7f92b1e480da7d341",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "odd-95adbcf093.xls",
+      "category": "spreadsheet",
+      "sha256": "d11dfff1f1aa07c38a5ae11c6200beeea9f02e0faffbd61aedcbab760879a4fd",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "pi-c0a824ddc4.xls",
+      "category": "spreadsheet",
+      "sha256": "b0c5242991ac18e58fc658d3b1bba156a3f57e9d711b6581804bdce13925312b",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "product-34520f7a3f.xls",
+      "category": "spreadsheet",
+      "sha256": "1f043512cc52590698d40211a3675f80e615e3678257e6dbd6a9006ed810d5bd",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "radians-a72e17d86d.xls",
+      "category": "spreadsheet",
+      "sha256": "96cd4494117368de80d464af7a304189e6483fb0d5ff536d0fe2ec76575c25fd",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "random-8712263a82.xls",
+      "category": "spreadsheet",
+      "sha256": "0056aa62566c23eaf0823c10f465fbeab2660342f18d872d6b1e20018bb2f67a",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "rounddown-34d0bc680d.xls",
+      "category": "spreadsheet",
+      "sha256": "75ebda47575a571724d64379cf84a742b1e3607eb58c488f59e97a92950b582f",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "roundup-1d9505292c.xls",
+      "category": "spreadsheet",
+      "sha256": "af640d00f439aaff41dd78d13a95b768877ad72217cda3af35d4bc4800d48186",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "seriessum-14104ac0e2.xls",
+      "category": "spreadsheet",
+      "sha256": "57249f0e758c3b985a9e85703566663bd7fdad91022a179172dd7dc9bc0d01c8",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "sin-71ea0d1aed.xls",
+      "category": "spreadsheet",
+      "sha256": "18c5bc10533f3ff2f8f41cc34eaf55cb40f0db6bad06d41704194c3c0a0c7664",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "sinh-1a960b2a60.xls",
+      "category": "spreadsheet",
+      "sha256": "014bb6e92ae0d23bae89551d38486492ccce39becdda35169ee88d833b65cf25",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "sqrt-83551c4c9d.xls",
+      "category": "spreadsheet",
+      "sha256": "90ef06f5d84a269638d4a02cbaa401602278fe78bccfdfce1223fd471a109dd4",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "sqrtpi-2acf5b282a.xls",
+      "category": "spreadsheet",
+      "sha256": "6b2b04a62658861add63264be63afc4dda552bcbf0fe960195764bfa3d2ac314",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "sumif-ef8ef8c2a6.xls",
+      "category": "spreadsheet",
+      "sha256": "54120662e323669e37818e41f447c0e03873b74c9f29ee82866e33e44f883061",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "sumifs-4ee7274d5b.xls",
+      "category": "spreadsheet",
+      "sha256": "813c493fd001683f3b7ae488689fdced7df053a5586fbb006fb76fc9295ff4b0",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "sumproductTest-28eaebf8f5.xls",
+      "category": "spreadsheet",
+      "sha256": "569298ec5fab72f9229c05d517b7131a5ac7cb59e5662f69e0aa5e9693de3e35",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "sumproduct_mixSliding-09ff33e1d7.xls",
+      "category": "spreadsheet",
+      "sha256": "54387ee523c5fe85ee3dfbd3066d7fb93434581134a2861a364163b6e4e36f80",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "sumsq-54f00b66eb.xls",
+      "category": "spreadsheet",
+      "sha256": "effa1ddb8b43d51c6c0422e35a154051ef0f93f4c0d6e99a8a72c916ce1c0cbc",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tan-2a73718c1d.xls",
+      "category": "spreadsheet",
+      "sha256": "8605a3e6c1f914e2e7109c4633dd5d97b5655cea7c0f63792e4ce9e62c58ab08",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tanh-a19efd3c9b.xls",
+      "category": "spreadsheet",
+      "sha256": "497417f7b84fadcd0801e7fb769261a10c2337cdfacc64128a95adb9de5f346e",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "trunc-a64b591d71.xls",
+      "category": "spreadsheet",
+      "sha256": "5b13810ca37506c6db9dc9f6c4619b1dcd529001f4a44fc476a2cd0df6848d95",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "VLookup-89fd6db036.xls",
+      "category": "spreadsheet",
+      "sha256": "1f1f02be6751c591cb56ed9aefd4725146cdd3903e0a63ac779b524b0dfe1c0a",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "Avedev-d085313dcb.xls",
+      "category": "spreadsheet",
+      "sha256": "0560036a6f8395899b311a51e6f0470b272c2fc6a3dc24c37065b903320f7320",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "AverageA-6ba475b114.xls",
+      "category": "spreadsheet",
+      "sha256": "10d7b86d51c474416981ebb238e6089a2bbf8b618c509d13fdee4a499b05ccaa",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "B-06952c47a6.xls",
+      "category": "spreadsheet",
+      "sha256": "e1e715afa91dc93b839c76c2c6cf08e33632b3823a9ce326285d4097860035d1",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Betainv-d06dfcaa20.xls",
+      "category": "spreadsheet",
+      "sha256": "bc311f436d737f193c7aae4791908ddb40a97d14e96dcc75566f75193ae08a62",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "BinomDist-09c712be85.xls",
+      "category": "spreadsheet",
+      "sha256": "09ca161ee9ed50a294343ffe4d6157b49c04ca4a9e16cbb0a0eacce53a554fe2",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "ChiDist-4fcbecb3b2.xls",
+      "category": "spreadsheet",
+      "sha256": "ae2422d2c9b9a263d5d65d390d0c444e6c708789d43a4f953a5f37a12547e882",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "ChiInv-9de54c1cda.xls",
+      "category": "spreadsheet",
+      "sha256": "81bae01049e73996fe1ceff35e657a31326cc5760c4366789b86aa0c2eb5b7a4",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Confidence-6bd38473ea.xls",
+      "category": "spreadsheet",
+      "sha256": "7b2a9cfbe2d244a8ae64cb3e948fb4358981190798fadf0199760102d757a31d",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Covar-fc559b0d50.xls",
+      "category": "spreadsheet",
+      "sha256": "f4e98de20da26c7cf7af100f5becce9a12f2eab97b8d956de08da26756bff2bf",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "CritBinom-eb02321030.xls",
+      "category": "spreadsheet",
+      "sha256": "f1c3144858c8deeeb520ce59d3bac3ca491f6339c7ebf68b196e3712a573e4e0",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "DevSq-496be32fe8.xls",
+      "category": "spreadsheet",
+      "sha256": "56c1ed88fd34629594dab3fd430c412d62d2780eb851c96fef7abd4c4b78b6bc",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Expondist-63efa27418.xls",
+      "category": "spreadsheet",
+      "sha256": "5abb88e49dc8ec2b71a9b9633d800b9900575be112b0aba0e1166c428daa58ae",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "FInv-c569f5f8f4.xls",
+      "category": "spreadsheet",
+      "sha256": "2d3c0505eb8d7e261ff5e9d74167907dcab8c40cb3232d958b5a06738747a9fc",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "FTest-088cb6d968.xls",
+      "category": "spreadsheet",
+      "sha256": "65231b2fc3be1bae85adee20a7bf1e8e1c69feb89982c4b72339d9327e200e8a",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Fdist-16ab18f822.xls",
+      "category": "spreadsheet",
+      "sha256": "f0699823bf49c256440c0437820e1fe23792f10c221a31b14a3525b1b7cdf2d0",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Fisher-01616373d5.xls",
+      "category": "spreadsheet",
+      "sha256": "e6708757d143e6ac05778dc5b7da4d80e06fed84cc44425a4912db76a8eaa454",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "FisherInv-ef3fab38f6.xls",
+      "category": "spreadsheet",
+      "sha256": "d7e99883321edbd25447f76259570d3bd83247361741ddbb85fd652e5d5009f5",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Forecast-aee8c9fd19.xls",
+      "category": "spreadsheet",
+      "sha256": "5520ae5bfcf808daa353fca8d8a13254bdb2f0c33bafe37cc4bafab948d337db",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Gamma-21b4bebdbc.xls",
+      "category": "spreadsheet",
+      "sha256": "b33d6f162d59eb9d1f712e884b0f70150d01ed3ac1aae634fb17922f4a83ca67",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "GammaDist-d10bbe2c40.xls",
+      "category": "spreadsheet",
+      "sha256": "3a0489bd8bea822d2e2cf236660a6933ce88e612eb3034c421435453c20047e8",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "GammaInv-077cfaddfa.xls",
+      "category": "spreadsheet",
+      "sha256": "144217501d734ec51a8f567088909ed399023d5c9059827d7995047d6f5ae1cb",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "GammaLn-e68d06cf5d.xls",
+      "category": "spreadsheet",
+      "sha256": "0987755ca3290ea749c14f96a635cf4170ef9154f6155e33268c0f091f7b6289",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Gauss-9b1a4464d1.xls",
+      "category": "spreadsheet",
+      "sha256": "bc029a632a26c767f2411946258fe4996142731aa626e06c99de408dc8c0b762",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "GeoMean-0308c5dad6.xls",
+      "category": "spreadsheet",
+      "sha256": "61cbd630806cb0ec2f97f0296018e70ee1afcb08e46488c5d355adfa44d15759",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "HarMean-55bb9fb4fd.xls",
+      "category": "spreadsheet",
+      "sha256": "b4de69b08c4db3022130113bc5e6562ab5899c914777dbbd8fcdbf6aa7af8675",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "HarMean1-ab9bc58cfe.xls",
+      "category": "spreadsheet",
+      "sha256": "bc3cf19b895dd6d342483188d8fd6ef1b193274048a0712cfdd557df3f15eeba",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "HypGeomDist-551cf248c7.xls",
+      "category": "spreadsheet",
+      "sha256": "f4eccbc16f0b30d884d7f00407223b8b4d712af9ac074b88e16538579458da1d",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Intercept-7a5c588590.xls",
+      "category": "spreadsheet",
+      "sha256": "595b1738fd1ff6173043603ec64f822b9aecfba0fbcaee14bc653f68057a7ac3",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Kurt-f4ed4dba02.xls",
+      "category": "spreadsheet",
+      "sha256": "513edac84efe8052ccb2fcc7bde0652327295b7be13af58ce69fa409e53c084f",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Kurt1-24f489fcb3.xls",
+      "category": "spreadsheet",
+      "sha256": "5115810330ba07d0b007cda5b5b793b84f6ed54631bad68b72bbf1122479ab24",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "LogInv-244abe439c.xls",
+      "category": "spreadsheet",
+      "sha256": "45d65987d287e5f693197f04e59551ba3e961f68546a43571e6f04e5f81cb442",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Maxa-a546b32d90.xls",
+      "category": "spreadsheet",
+      "sha256": "4afdb2025a3e06d017d20a9e3d394efca6b1e85d9b5f9715a5881128fc29e92c",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Median-232629e163.xls",
+      "category": "spreadsheet",
+      "sha256": "b3f942fa73fd7f80e58e78a61b68825c816205c88591ba98735522555469860a",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Mina-5701e72664.xls",
+      "category": "spreadsheet",
+      "sha256": "dac1224ad9f3ef6f4ded577ac14b0bc32e3415ddfc493b429f08403a94efc258",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "Negbinomdist-b14b8deacf.xls",
+      "category": "spreadsheet",
+      "sha256": "8fb57713daa9d19a2b3fdd52b08bd39c30bb272efdb7351dbad5e2c40205d498",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Normdist-a9f2e07779.xls",
+      "category": "spreadsheet",
+      "sha256": "7a8f94e0b625e7f21932f0d1de7cda146e075f11a33c676e974e0bf2a425922a",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Norminv-0833717abd.xls",
+      "category": "spreadsheet",
+      "sha256": "74905f899b298002a5505266095102740d5e514dd56f0660b69c4bb41fa86870",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Normsdist-aae02af38c.xls",
+      "category": "spreadsheet",
+      "sha256": "4cbee95a89d8cd11aa0ad0f29458f7910f38e33903c126b12d8dac4fc7bfb5eb",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Normsinv-ff7d78af19.xls",
+      "category": "spreadsheet",
+      "sha256": "9e01208f2844e30e1582b1c49f41654fbb58398d34a43ec44e2f2e452558c47c",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Pearson-9d3d5c3ec5.xls",
+      "category": "spreadsheet",
+      "sha256": "531914af4a4c6ebdf08f6f096f00403642de60f1a0253ddce182d49e3188cc4b",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Permut-933852819c.xls",
+      "category": "spreadsheet",
+      "sha256": "913e2d3c8d2e5ccfb840d73edadc9fd3394c487b69d233e45eeea0cbdbc6593d",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Permutation-c5527b47aa.xls",
+      "category": "spreadsheet",
+      "sha256": "170bf05b789cebcb96822d9ea330d8faeed034c59b3e86d4680d5d7a4aa37d4a",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Phi-6555289528.xls",
+      "category": "spreadsheet",
+      "sha256": "660168c2fc84553ddf036255bcc4a81ef5ab4c1875eecdc69f07fd2d1d11b11c",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Poisson-135c5fe7af.xls",
+      "category": "spreadsheet",
+      "sha256": "8d20713a698361838771c513fc68ab81045038d90cc7e582900754cfd3b712b4",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Rsq-26794f8c30.xls",
+      "category": "spreadsheet",
+      "sha256": "fc70b08343976041511cd258e97007b1c0e49f050aa95f653c45d3df6232ab35",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "STEYX-5deb7399fb.xls",
+      "category": "spreadsheet",
+      "sha256": "c98b22acdad8687bbfee573bd74b8aa0ebe25d8efe2555ce87fa9bde4fe25546",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Skew-1a58309c39.xls",
+      "category": "spreadsheet",
+      "sha256": "09b6968c773957e5adf416dcd407b84078aa50bd5d879fd8b43435ad5770244e",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Skewp-deeca27e46.xls",
+      "category": "spreadsheet",
+      "sha256": "4f83ca86ac56654449299231df526d4057f99f00cad7667c61d55440a466e99d",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Slope-1ba210eb02.xls",
+      "category": "spreadsheet",
+      "sha256": "4ff67db67e3a0835665cce3f7fbbd19626c7fa6445a0a8e5fcecfd18ca3098d4",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "StDev-da00293c13.xls",
+      "category": "spreadsheet",
+      "sha256": "fc1b0981fbc72e00f0602a7a902a489f0dc6c4f3c6c491f1ce9cf4aa73d44b68",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "StDevA-4c0721f7fd.xls",
+      "category": "spreadsheet",
+      "sha256": "26bc1aa28fe44afd55f8a9de9b3e3522434e90b854add42d4727821f4459dcd4",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "StDevA1-e17e90dddd.xls",
+      "category": "spreadsheet",
+      "sha256": "a2a8bd8e0137220cb70e04bd8b9b024881152236503e3d1037c720e9ef4ab79f",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "StDevP-fff92fc386.xls",
+      "category": "spreadsheet",
+      "sha256": "4f871cfced9d1dea14f4c50d67efb0fa019e280d399aed1a5f728ba33e3f658d",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "StDevPA-05b267f260.xls",
+      "category": "spreadsheet",
+      "sha256": "3658022e92b4a57f9ae2c3fdd3aa75ddd917a293c5f48e2dbd7067a70043e101",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "StDevPA1-e9c99571e3.xls",
+      "category": "spreadsheet",
+      "sha256": "c569e8d26ec4f24c60a007816de859dd2ca999f81396ac28b3af1e02f5fecd33",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Standard-fe735e52b2.xls",
+      "category": "spreadsheet",
+      "sha256": "82dfbedcc37438216bdd2de056c77fb812b1be3d158306891169a45b6f7c4d29",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "TDist-bab249211c.xls",
+      "category": "spreadsheet",
+      "sha256": "94cd5b295a05be48911c91743bdd5168aeed67714c401e33cee799c6dab4b0dc",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "TInv-7aa4669971.xls",
+      "category": "spreadsheet",
+      "sha256": "7c0cea230dca955c8964a0f41a095afb6dce84b2417219ef929b846670f0641a",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "TTest-1133a62f24.xls",
+      "category": "spreadsheet",
+      "sha256": "4ee6dedf4270c4ec24f3d2a56124f635ec2be2cb42ab154f4b5f604edd333bf1",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Var-d3118fcde4.xls",
+      "category": "spreadsheet",
+      "sha256": "0f3dba89d0340f73c781708fef44c4b1fe6a20b8ee2b392d0f7e2b714f23bc23",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "VarA-f83654762a.xls",
+      "category": "spreadsheet",
+      "sha256": "4484ad2377dd7821ce4f886700eb719272dfe69779476d77277678c63af23081",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "VarA1-4aa4082a1e.xls",
+      "category": "spreadsheet",
+      "sha256": "4a2b155bb0993286b018ee852496228223c57ff7580c42f090e4ae24a5828d37",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "VarP-3263ffb4d7.xls",
+      "category": "spreadsheet",
+      "sha256": "46149133481f6ae8f02f5bee0054458115a81c58fca94eb58c1a43e8017cf79c",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "VarPA-bcb32766b6.xls",
+      "category": "spreadsheet",
+      "sha256": "7146075ec9988f79754a603adaa0c3626b2c103c213e687b16673e05d6649b21",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "VarPA1-dc0909332c.xls",
+      "category": "spreadsheet",
+      "sha256": "9f970a1a666870db2f2210c26f90a90176fa0176e80c4c612024b4da7d40fa4e",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "Weibull-e94304195f.xls",
+      "category": "spreadsheet",
+      "sha256": "42e1fd1b242fc092dad244a5eaea12bfade4d82a5d5319ae809d4a9c2ada99cb",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "ZTest-115fdbc16e.xls",
+      "category": "spreadsheet",
+      "sha256": "742cd8259df7dd552e4bc9101e5f1d523f96ead7972ace439dd6b849720b1948",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "counta-3dc410b5e3.xls",
+      "category": "spreadsheet",
+      "sha256": "893e64d4e13f2fd4eb0afbdf6d6176749d8adf0eb8975d3a38201ae142fe8e75",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "CVE-2006-3086-1-675f4f70c8.xls",
+      "category": "spreadsheet",
+      "sha256": "5dc1b007565225b8c90881846d23ec8f2253af96d82f21c5bb827da21fa847d7",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2007-0031-1-2981d6058c.xls",
+      "category": "spreadsheet",
+      "sha256": "51ed915891c6577aecd626f2bb7fb15a7dec0c104c767edc089e589196c45beb",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2007-3490-1-9f0b9b2220.xls",
+      "category": "spreadsheet",
+      "sha256": "40a783ebe538956399649c991b6b3fb8a82fc203b3aa2b6a676b03208125c28a",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2009-3129-1-703cfdacdf.xls",
+      "category": "spreadsheet",
+      "sha256": "7923418ed80bd692626346f48cc04d804afceec323adb282fc7c36c26a704d4b",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2010-0822-1-076d79ffdd.xls",
+      "category": "spreadsheet",
+      "sha256": "e9d0606314c7b3802c32e65eb4ccee69c1833120265ee1fe8c2331f07b414e55",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2010-1245-1-90b8301ee7.xls",
+      "category": "spreadsheet",
+      "sha256": "351db13ed2dff7512d7a6056a967e59d07eaa79d283a77b90f7207adb86652e0",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2010-1246-1-1b7c48cf26.xls",
+      "category": "spreadsheet",
+      "sha256": "2cea48932c91fe651de43cbf04b814c0ea652b93666850a3c1bad6ef2a9626ff",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2010-1248-1-94c02d06bf.xls",
+      "category": "spreadsheet",
+      "sha256": "36cab868ada366b756a5537d563922208d520fa885b80c1cab5f96016a3d1d68",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2011-0105-1-dafb72cffd.xls",
+      "category": "spreadsheet",
+      "sha256": "abb729302999db0c14e81d4b9b0f25af594cb81ca70083ef4befb83d7e84f422",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "CVE-2011-0978-1-9ccffbd4cc.xls",
+      "category": "spreadsheet",
+      "sha256": "4fa384a4208505e7f77d203edf6a15bef8664f529597c4a97ac0879cca9d073e",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2012-4233-4-7f8f89c5d5.xls",
+      "category": "spreadsheet",
+      "sha256": "d779b5a1a6dee71031168fcb51b80208dd98b3759561377daaae2b1b1274f05b",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2014-6360-1-319ed6e05e.xls",
+      "category": "spreadsheet",
+      "sha256": "ef2ebeb660d6f379771e36205bcb8bd29a7786f32dae109f7da7463a8b2c83af",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2014-6361-f56dd33ae5.xls",
+      "category": "spreadsheet",
+      "sha256": "4b45198c77a58398ea2f4f8759504f796bda841479460f2976f4d3445f866d7d",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2015-2510-1-00597f32ef.xls",
+      "category": "spreadsheet",
+      "sha256": "ada18bc9373ab4298f66585436470073cd27f791d7bf0c11ea998f24627a7e4b",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2015-2520-1-75f3446401.xls",
+      "category": "spreadsheet",
+      "sha256": "e8b0fd6377fc24172b58f4cbeda0808ac324fc5a9744d44149d54c027717ec67",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2015-2521-1-d118a4b121.xls",
+      "category": "spreadsheet",
+      "sha256": "d536b533961d2933616d5ba984ae05af6e80d5f6ed2fe72af5bda1d2cee987a7",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2015-2523-1-44bd03045b.xls",
+      "category": "spreadsheet",
+      "sha256": "c1dfff9cd351b4571a5a9b45edca82dc87deee206a618008dad1a456f7c8f8c0",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "EDB-22330-1-a10c24de0b.xls",
+      "category": "spreadsheet",
+      "sha256": "19fa6e61a88527cb42222e5b8984cb8d378cdab5fcd166daa3cf9a3f8266a9fa",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "EDB-22591-1-7cc78465e1.xls",
+      "category": "spreadsheet",
+      "sha256": "e2c2b28e45e0f203a8c4b55ba1e770cd20de90a4d8dc83dc60adf8f321bf6c57",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "crash-1-724bfc1a6f.xls",
+      "category": "spreadsheet",
+      "sha256": "f93b48d16210e7dbc60f5faa334941eeea224ccd1ed245b653ad0cecf6ccd047",
+      "container_skip": "OLE: unexplained sector allocation"
+    },
+    {
+      "name": "crash-2-99e485aeec.xls",
+      "category": "spreadsheet",
+      "sha256": "0332d5012688aad36df336ec6f3f75e0388231814a64e65acbd326de0951ad53",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "crash-3-99e485aeec.xls",
+      "category": "spreadsheet",
+      "sha256": "0332d5012688aad36df336ec6f3f75e0388231814a64e65acbd326de0951ad53",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "crash-6-19544baf7a.xls",
+      "category": "spreadsheet",
+      "sha256": "d17ac2b5d8dafc381174000415f0789a212766f2a1d6d252e5c4fe81022ce0e1",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "crash-7-3dd200a41c.xls",
+      "category": "spreadsheet",
+      "sha256": "f54b6a42c030437a653ea2f32a1b2c4d9edf9b9f319e99107fc5d4159830386a",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "forcepoint-pivot-1-1291992266.xls",
+      "category": "spreadsheet",
+      "sha256": "e290446dfa82bfd8cdc1cdf0d637c4567183d097cdd887b5f163b856592a034c",
+      "container_skip": "OLE: mini-sector reference outside carrier"
+    },
+    {
+      "name": "forcepoint-selfseriesadd-e5eafd2625.xls",
+      "category": "spreadsheet",
+      "sha256": "179d4d15252a4fb8ad334b3001c4174558c89eb5222281f03230f11e811059e3",
+      "container": true,
+      "host_skip": "Nonzero OLE property stream padding"
+    },
+    {
+      "name": "ofz14120-1-5d526b445c.xls",
+      "category": "spreadsheet",
+      "sha256": "0bf6bfa4a99c1ef75bad4a069feb73f81b1f851668c63d279c047d90f24ec441",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz20904-1-44dbe8f6e2.xls",
+      "category": "spreadsheet",
+      "sha256": "7193c6efeeb292425c7f75b12c09e1e4b066d6f4b396929493b29e326686382b",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz5527-1-334cafe424.xls",
+      "category": "spreadsheet",
+      "sha256": "a52614ce71020e8740fadb7a8a4dabc2fdf4579fdd638e492363b4d7d2ddb186",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ooo47086-1-eb5b0a6284.xls",
+      "category": "spreadsheet",
+      "sha256": "0c861c670615be3d40b1e008e3b639b40803b8fd5f43fdd1cc55ccfc13bb2a7a",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae"
+    },
+    {
+      "name": "ooo56295-1-bd727c9bcf.xls",
+      "category": "spreadsheet",
+      "sha256": "4bb4314af8b917aeadaec2a1af0275873352eaa3e9c4f89a14147c47fc56b088",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae"
+    },
+    {
+      "name": "ooo956-3-dc8f353b2b.xls",
+      "category": "spreadsheet",
+      "sha256": "248e4024ace9d098278f8b69996889cd7f0105823fdb286201107c8162863f49",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "basic-f27acb4cc6.xls",
+      "category": "spreadsheet",
+      "sha256": "6277d4c3ee511868d23d1171275bde6df5dfb2cfa39f9a0db67e39f7353402a4",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: expected one global drawing group",
+      "dedup_skip": "OfficeArt: expected one global drawing group"
+    },
+    {
+      "name": "biff5-ce72eb10e1.xls",
+      "category": "spreadsheet",
+      "sha256": "09949939b8e85c24f4ffa54b0cbb875af78eab7038577bda2c696efa4a185c12",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "gap-762e3935f5.xls",
+      "category": "spreadsheet",
+      "sha256": "cb8900169f02ef66bce8f7cb486dafb1be467cc6f53dbda90858c8d283eb8751",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: expected one global drawing group",
+      "dedup_skip": "OfficeArt: expected one global drawing group"
+    },
+    {
+      "name": "horizontal-318379f371.xls",
+      "category": "spreadsheet",
+      "sha256": "9f9e4866ab766e7e9d8ed878577497151001dbe0c1991b834e4dec4a6dac782e",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "relative-refs1-88678b46e5.xls",
+      "category": "spreadsheet",
+      "sha256": "4885d23bf468e8d493fa362d792cc67450ec4e045e3614ad7340c4939a596509",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "relative-refs2-36c188c206.xls",
+      "category": "spreadsheet",
+      "sha256": "22e247053823e70165143cc359ff918c4ee807f9df066b6b509a69d50a2aff8b",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "wrapped-refs-72487ce22d.xls",
+      "category": "spreadsheet",
+      "sha256": "43ecca2b02d8a86aacfe0bb9b43142be1a95642317f2e6cd79c3fea468e8bee7",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: expected one global drawing group",
+      "dedup_skip": "OfficeArt: expected one global drawing group"
+    },
+    {
+      "name": "literal-in-formula-75e48f0d03.xls",
+      "category": "spreadsheet",
+      "sha256": "89f951112908e404e8ca761128807e6b941de9e5d37368e35bf88ec87bddb4a4",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: expected one global drawing group",
+      "dedup_skip": "OfficeArt: expected one global drawing group"
+    },
+    {
+      "name": "simple-cell-changes-8def1175b1.xls",
+      "category": "spreadsheet",
+      "sha256": "fcd0b34e1b703cbf6bda041ce8eaed9cfb83f8c62e7a0646cc0644cb2a9b1e19",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1a9",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1a9"
+    },
+    {
+      "name": "tdf100582-24886a2fe6.xls",
+      "category": "spreadsheet",
+      "sha256": "9540141b5c52c5ec2e8dda900babadc16927c38c1e2e5a17636d3a4be41bba40",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf124818-2e5656978a.xls",
+      "category": "spreadsheet",
+      "sha256": "3c01840e21d8b2c39601b76ba6cf6185493bcdd656ff19328c9ea7b1f4d7b2ae",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae"
+    },
+    {
+      "name": "tdf124822-2e5656978a.xls",
+      "category": "spreadsheet",
+      "sha256": "3c01840e21d8b2c39601b76ba6cf6185493bcdd656ff19328c9ea7b1f4d7b2ae",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae"
+    },
+    {
+      "name": "tdf142010-c58bc0169f.xls",
+      "category": "spreadsheet",
+      "sha256": "96f5c69af30fa4de5d6eb5e791039dda17309b2885718e12bf8e051d98ec9e88",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tdf149503-88e4fb4ad6.xls",
+      "category": "spreadsheet",
+      "sha256": "22bf4340b8d69076d19b000646b58b5c2aee7c5a048137e98850bd2c269a7345",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf150499-1b7289a6ee.xls",
+      "category": "spreadsheet",
+      "sha256": "8de9d7968da282663019107e36bc964713ae055b3c555447d2097ea6e8bdf7e1",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ba",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ba"
+    },
+    {
+      "name": "fdo64586-62a4b11a1f.ppt",
+      "category": "slideshow",
+      "sha256": "41a27e47f2dbe357d5709816c77b132a4ed8e3bbb1d68f01a3bbc15c86f20513",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "n758621-1470efa2b3.ppt",
+      "category": "slideshow",
+      "sha256": "bee6a717b25cde17ff8e4b11de7de25c591856edf58d8ac371064552d2f6d244",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 4041",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "CVE-2010-0033-1-0e4f50239e.ppt",
+      "category": "slideshow",
+      "sha256": "335c53e0ac34a364e82d83d6913713428b6e5a60c0081217c9bdd6938e08dd90",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2006-3655-1-3cbcb724a4.ppt",
+      "category": "slideshow",
+      "sha256": "9057dd6d58d44fb46a66735788b1246b9113d5b799c189b92b621cff53075ddf",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2006-3656-1-a1fd65a19f.ppt",
+      "category": "slideshow",
+      "sha256": "bba1def650775547a0257df1a66fa820419a2bfa3285b0f8c5610842024f32f0",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2006-3660-1-1289cfa222.ppt",
+      "category": "slideshow",
+      "sha256": "323af5ea2f54d8cb1c7ae5206712e150edb8c3eae5aec0df2d323ecb0c1b1ecf",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2006-5296-1-5d50f905b1.ppt",
+      "category": "slideshow",
+      "sha256": "41910975c263c5319f59304f3c4b235c4cb89783ca59d77ff3c3acf8db1388b0",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "CVE-2012-4233-3-625c116fd1.ppt",
+      "category": "slideshow",
+      "sha256": "e841a0f2965356348c12f2b05d14d2dcd4e0d6db97eddf78c9a235b2a9101a86",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "EDB-39395-1-64043235bf.ppt",
+      "category": "slideshow",
+      "sha256": "9d553a1db963f16905c84a558d452f4816e20527fdc02767ad0194ed37b09f9c",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "EDB-39397-1-091fb653a9.ppt",
+      "category": "slideshow",
+      "sha256": "da260064838622575a20382a98264c143ce351549126247b2b8692a979e5dbb9",
+      "container_skip": "OLE: not a CFB container"
+    },
+    {
+      "name": "crash-1-5d1a04b33c.ppt",
+      "category": "slideshow",
+      "sha256": "b736f77bcf360e743ee5f618ef097a032843b393a5b0c3eedb7a5c6e58170d49",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "crash-2-78a4da4660.ppt",
+      "category": "slideshow",
+      "sha256": "8706210ec64bbd0774284c37f25363fd95246fd2f5efee695992e3a826a9898d",
+      "container_skip": "OLE: unexplained DIFAT entries"
+    },
+    {
+      "name": "crash-3-daa0102db4.ppt",
+      "category": "slideshow",
+      "sha256": "80fc51d7d7315930824fb9efb2803052c669c0ffe418654c1896cb16b454038c",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-1-d30cb8472e.ppt",
+      "category": "slideshow",
+      "sha256": "0328667f47f90d3a5231094f8013edf13cd1797f95bfca974c468a09b0e0bd19",
+      "container": true,
+      "host_skip": "Truncated PowerPoint record"
+    },
+    {
+      "name": "hang-10-99a81c4a33.ppt",
+      "category": "slideshow",
+      "sha256": "a49ebc71d18795e42d842440a663d5c9475c56f8c1a0a3ee533561fbfe29a691",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-11-2d9ef18373.ppt",
+      "category": "slideshow",
+      "sha256": "aaa2701d320e1924be6d7c25607ceda8184b74573e19df040271d854a60f7df8",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-12-921481c930.ppt",
+      "category": "slideshow",
+      "sha256": "40e1a64d9b5c4fbdf94f5da7e1e1b093dcbfaa9b24bd647049eeda29d934b801",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-13-04fbdc558c.ppt",
+      "category": "slideshow",
+      "sha256": "ae2b88e48bc802683ac2da78105be6f6d70f6416a2146ebe30286f95437ae690",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-14-8dd397bb36.ppt",
+      "category": "slideshow",
+      "sha256": "0685e71f569b61b98c37841912c7f73861a3085475fed62929436abf8efb3d78",
+      "container_skip": "OLE: mini-sector reference outside carrier"
+    },
+    {
+      "name": "hang-15-b93255a7fd.ppt",
+      "category": "slideshow",
+      "sha256": "79fc80f031e61952f9fe0ed7922e4fed85e4d9772178ce081d2cd83c299b6cd2",
+      "container_skip": "OLE: unexplained DIFAT entries"
+    },
+    {
+      "name": "hang-16-c398d2ba1e.ppt",
+      "category": "slideshow",
+      "sha256": "4e315615e18e7e47ab6a81ca3f98316e7e1ef474b00717fddf5000e45449e9a2",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-17-de876ff37e.ppt",
+      "category": "slideshow",
+      "sha256": "3c67de8a3a8bfbc1a133a416e01063ce9dbd4e663d2ceae744b4e692686b8b0a",
+      "container_skip": "OLE: unexplained DIFAT entries"
+    },
+    {
+      "name": "hang-18-3b3e9f744a.ppt",
+      "category": "slideshow",
+      "sha256": "e52cf34a2d3b623d1313aed317a2b6cc5bd0896cecca2508b1a69c59b199bb55",
+      "container_skip": "OLE: unexplained DIFAT entries"
+    },
+    {
+      "name": "hang-19-942a58a66c.ppt",
+      "category": "slideshow",
+      "sha256": "38e429648f67f6d947e3528b8c93f3f10039f8e141d01f725606b341f6571f00",
+      "container_skip": "OLE: unexplained DIFAT entries"
+    },
+    {
+      "name": "hang-2-c6880b771d.ppt",
+      "category": "slideshow",
+      "sha256": "c5a6d258c0737b69b2138049873bc2578612e42bc8bd0b73193ba2f5df0c655e",
+      "container_skip": "OLE: invalid stream directory metadata"
+    },
+    {
+      "name": "hang-20-7bfe75d7b1.ppt",
+      "category": "slideshow",
+      "sha256": "1b31a587b718c7169ebd0c326b5e834070bd39684f927f514674af55dacf8584",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-21-99cf49f8d1.ppt",
+      "category": "slideshow",
+      "sha256": "c42566822e1422c2162ededf43080891bdde9fc4e29c7f256090158b4f47f6b5",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-22-c869b39372.ppt",
+      "category": "slideshow",
+      "sha256": "c4bd0bb37129e4dbf7b32ab3365a505b8df38b9c7a7c0cf4721587d6161b7705",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified"
+    },
+    {
+      "name": "hang-3-156a9d0e50.ppt",
+      "category": "slideshow",
+      "sha256": "60b7cdae0ff9425aa3c5e7d5888e22c542cc113a3ef57b8db642568b67795c9e",
+      "container_skip": "OLE: unexplained DIFAT entries"
+    },
+    {
+      "name": "hang-4-f5aa247521.ppt",
+      "category": "slideshow",
+      "sha256": "1f7b5e59abe4abd31efeefbf23b322199f4fcec4649dd047997cdbbb14bcf269",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-5-cfaa8f4c60.ppt",
+      "category": "slideshow",
+      "sha256": "4ad6b4eefee7c727e9528abcd06f03e1154e4307d8b4c524efcbee995595a148",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-6-f5aa247521.ppt",
+      "category": "slideshow",
+      "sha256": "1f7b5e59abe4abd31efeefbf23b322199f4fcec4649dd047997cdbbb14bcf269",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-7-8c05271f9b.ppt",
+      "category": "slideshow",
+      "sha256": "803289a0d993ce5445e9a8951046869b90b0b776a27daf04e988774ee99dc0a2",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-8-0f52bd5d24.ppt",
+      "category": "slideshow",
+      "sha256": "ad506d653e8aa1e959903cfece303a3f3a0ac6db08bc11a5a25487275cbef967",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "hang-9-97e0158ac9.ppt",
+      "category": "slideshow",
+      "sha256": "14006968673ee3876ed8a0be4ea3a6a15679a5eb1f0ad23156f6155fbc44045c",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz14989-1-b470ebecdb.ppt",
+      "category": "slideshow",
+      "sha256": "1e7745fbe0b60a9eee1c67716beea9cb38304d101633808d595a598689463128",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz21531-1-0d93e5b845.ppt",
+      "category": "slideshow",
+      "sha256": "e6053f409cf2db09eeb3ab9d5b5048919024d02c96d6ee87b3ae53dfa0966e8e",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz37370-1-87f904c747.ppt",
+      "category": "slideshow",
+      "sha256": "0f0f7c8a143a3e5a9a001a2722477640f06260e5dcac3d74fe82ebd7c58de8e4",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz43902-1-44d81a9514.ppt",
+      "category": "slideshow",
+      "sha256": "c95463203b7f0eb7ed7cc13712d148858b27b7c44be429210681fdaf1ec9d344",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "ofz7469-leak-1-d52f795e6d.ppt",
+      "category": "slideshow",
+      "sha256": "21ed665b4648641ff2d8670c5b43e260964a3443de5da3447f1136b129fb686f",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "tdf124708-6d29e1acbf.ppt",
+      "category": "slideshow",
+      "sha256": "ead5c705a6350b62cd4048c29b999dce2f6d57c2fa971226be69cc229738c5b8",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "tdf131269-480691d3b7.ppt",
+      "category": "slideshow",
+      "sha256": "66750334d76df393a00d64757f8525551390487bd43fa1b4a8da499e37459d11",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    }
+  ]
+}

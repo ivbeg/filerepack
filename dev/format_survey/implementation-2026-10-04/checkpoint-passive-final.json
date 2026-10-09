@@ -1,0 +1,185 @@
+{
+  "purpose": "Recheck complete ZIP/ZIP64 framing after stricter local extras validation; no native user-object loads",
+  "results": [
+    {
+      "url": "https://huggingface.co/datasets/danil-e/pinnacle-optuna-db/resolve/f386723c11fcf97dece376c4db7bb7a8eea0fbac/rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+      "sha256": "9046ca4eb4b17565407b85d289b0b8e9eb5ba10342df98328d7569d16241d462",
+      "policy": "preserve-mmap",
+      "input_bytes": 195070,
+      "output_bytes": 178389,
+      "outcome": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "torch-save-ZIP-v3",
+          "compatibility": "preserve-mmap",
+          "mmap": true,
+          "tested_readers": [
+            "Python Torch 2.2.2",
+            "Python Torch 2.14.1"
+          ],
+          "records": 21,
+          "user_objects_loaded": false
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 380438,
+          "written": 178389,
+          "nodes": 42,
+          "peak_worker_rss_bytes": 25509888,
+          "seconds": 0.26549562500440516
+        }
+      }
+    },
+    {
+      "url": "https://huggingface.co/datasets/danil-e/pinnacle-optuna-db/resolve/f386723c11fcf97dece376c4db7bb7a8eea0fbac/rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+      "sha256": "9046ca4eb4b17565407b85d289b0b8e9eb5ba10342df98328d7569d16241d462",
+      "policy": "load-only",
+      "input_bytes": 195070,
+      "output_bytes": 158769,
+      "outcome": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "torch-save-ZIP-v3",
+          "compatibility": "load-only",
+          "mmap": false,
+          "tested_readers": [
+            "Python Torch 2.2.2",
+            "Python Torch 2.14.1"
+          ],
+          "records": 21,
+          "user_objects_loaded": false
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 380438,
+          "written": 158769,
+          "nodes": 42,
+          "peak_worker_rss_bytes": 25640960,
+          "seconds": 0.2637441660044715
+        }
+      }
+    },
+    {
+      "url": "https://huggingface.co/datasets/sagels/new-dataset/resolve/77c7e42059c28fc2269899e0aba7117757e337c9/share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+      "sha256": "4eb86eadfa758e7d6bdec5e75a6099291f5580ed7eab84408956ec7a3a1d3f54",
+      "policy": "preserve-mmap",
+      "input_bytes": 15517,
+      "output_bytes": 13973,
+      "outcome": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "torch-save-ZIP-v3",
+          "compatibility": "preserve-mmap",
+          "mmap": true,
+          "tested_readers": [
+            "Python Torch 2.2.2",
+            "Python Torch 2.14.1"
+          ],
+          "records": 8,
+          "user_objects_loaded": false
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 28078,
+          "written": 13973,
+          "nodes": 16,
+          "peak_worker_rss_bytes": 29048832,
+          "seconds": 0.36925712499942165
+        }
+      }
+    },
+    {
+      "url": "https://huggingface.co/datasets/sagels/new-dataset/resolve/77c7e42059c28fc2269899e0aba7117757e337c9/share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+      "sha256": "4eb86eadfa758e7d6bdec5e75a6099291f5580ed7eab84408956ec7a3a1d3f54",
+      "policy": "load-only",
+      "input_bytes": 15517,
+      "output_bytes": 12134,
+      "outcome": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "torch-save-ZIP-v3",
+          "compatibility": "load-only",
+          "mmap": false,
+          "tested_readers": [
+            "Python Torch 2.2.2",
+            "Python Torch 2.14.1"
+          ],
+          "records": 8,
+          "user_objects_loaded": false
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 28078,
+          "written": 12134,
+          "nodes": 16,
+          "peak_worker_rss_bytes": 27934720,
+          "seconds": 0.1579767919902224
+        }
+      }
+    },
+    {
+      "url": "https://huggingface.co/BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/colbert_linear.pt",
+      "sha256": "19bfbae397c2b7524158c919d0e9b19393c5639d098f0a66932c91ed8f5f9abb",
+      "policy": "preserve-mmap",
+      "input_bytes": 2100674,
+      "output_bytes": 2100547,
+      "outcome": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "torch-save-ZIP-v3",
+          "compatibility": "preserve-mmap",
+          "mmap": true,
+          "tested_readers": [
+            "Python Torch 2.2.2",
+            "Python Torch 2.14.1"
+          ],
+          "records": 6,
+          "user_objects_loaded": false
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 4198980,
+          "written": 2100547,
+          "nodes": 12,
+          "peak_worker_rss_bytes": 29655040,
+          "seconds": 0.09340195800177753
+        }
+      }
+    },
+    {
+      "url": "https://huggingface.co/BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/colbert_linear.pt",
+      "sha256": "19bfbae397c2b7524158c919d0e9b19393c5639d098f0a66932c91ed8f5f9abb",
+      "policy": "load-only",
+      "input_bytes": 2100674,
+      "output_bytes": 1915905,
+      "outcome": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "torch-save-ZIP-v3",
+          "compatibility": "load-only",
+          "mmap": false,
+          "tested_readers": [
+            "Python Torch 2.2.2",
+            "Python Torch 2.14.1"
+          ],
+          "records": 6,
+          "user_objects_loaded": false
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 4198980,
+          "written": 1915905,
+          "nodes": 12,
+          "peak_worker_rss_bytes": 40599552,
+          "seconds": 0.18564554199110717
+        }
+      }
+    }
+  ]
+}

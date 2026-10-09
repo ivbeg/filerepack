@@ -1,0 +1,1989 @@
+{
+  "schema_version": 1,
+  "inventory": "corpus-napierone-tiny-inventory.json",
+  "archive_sha256": "9c39cd014fdd19f907fd32c7708568d6d286d28d88b45f401d51484bf09ff22c",
+  "subset_description_sha256": "c8438aac82b7ba059d1ad897f18e6affd301020c6839fc32aab903f71f1abce0",
+  "scope": "19 OfficeArt-qualified DOCs; candidate-vs-strict-compaction manifests, OfficeArt fingerprints and eligible equal RGB page renders verified with local Zopfli/jpegtran and LibreOffice",
+  "files": [
+    {
+      "name": "0006-doc.doc",
+      "archive_path": "0006-doc.doc",
+      "sha256": "b624447cd1b83555d9f68cb6d50be81dfe0a4d45bc435fca8ea604aa9c528c6c",
+      "source_bytes": 98816,
+      "strict_bytes": 98816,
+      "candidate_bytes": 98304,
+      "strict_savings": 0,
+      "additional_savings": 512,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 98816,
+        "additional_savings_bytes": 512,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 1,
+          "raster_encoders": [
+            "png-zopfli15"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 1,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 668
+        },
+        "officeart_candidate_bytes": 98304,
+        "officeart_host": "doc",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 1,
+        "raster_encoders": [
+          "png-zopfli15"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 1,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 668,
+        "worker_usage": {
+          "decoded": 125244,
+          "written": 279165,
+          "nodes": 967,
+          "peak_worker_rss_bytes": 35962880,
+          "seconds": 0.39676758300629444
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "7aa7298de4bdf67e5bd08ad8209c74b27bcd807e225dd316d142691e2305bc99"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "f1bfd989c642e56bbb9d820844c49ba2260966bbcf6e39c6b90613f9ea05744f"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "6e53104a51ecd399c87e0797484ae5b57abf8a67ee864b66571379149d426b9e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "07333345b651b6aeac37426c3a149cc7eef9841bb65a558e219cd4054da92c59"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "47160d863f8e1278fed937e74ba36220e84d907f844af0217719fab86c751740"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "109a2bf866e63973b97f27b4d9566ae46857d26e60fe6ebfb8a45e35903aee25"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "604f74fbc667ea407e8acfad94841e1b463ea00cd99238edf2c29cb207bc25fe"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "43ebf150697dcd6420f383f62af7e7388223545fa36b8410d9f6f31c9c04d165"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "f769ee84d86e05b2d7b61175cadec56ee26df15347701b8b56a9534f5576114d"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "80c8fa4abb02fd1c0f6b5a73c7cbf67bf0ba2ff34cdcf3c86f3f5c12c68f44b7"
+        }
+      ]
+    },
+    {
+      "name": "0009-doc.doc",
+      "archive_path": "0009-doc.doc",
+      "sha256": "3b1052c2ed892237d70aa21a9ed021f932aa479bfdd540f96073caf381bc687c",
+      "source_bytes": 457728,
+      "strict_bytes": 457728,
+      "candidate_bytes": 455680,
+      "strict_savings": 0,
+      "additional_savings": 2048,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 457728,
+        "additional_savings_bytes": 2048,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 1,
+          "raster_encoders": [
+            "png-zopfli15"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 1,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 1812
+        },
+        "officeart_candidate_bytes": 455680,
+        "officeart_host": "doc",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 1,
+        "raster_encoders": [
+          "png-zopfli15"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 1,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 1812,
+        "worker_usage": {
+          "decoded": 762192,
+          "written": 963783,
+          "nodes": 1028,
+          "peak_worker_rss_bytes": 40321024,
+          "seconds": 1.2802994579833467
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3d4d1ad1f28f6e2c25236a36c5c5d650676e2659b97ad454fb3662ab7bfcac7a"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "641e055349f1420f4055f2a86f36c09976ac95add5ef62b8f96e0c219340e8ab"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "4bf8925b062403b1c834344ff09bcea756ff463c345a09aaddb6cab1269b2439"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "0820f141f17d7f2047049feecead6baf7350c2322727fd02a51db840ad522dc5"
+        }
+      ]
+    },
+    {
+      "name": "0013-doc.doc",
+      "archive_path": "0013-doc.doc",
+      "sha256": "514a51cec2e673769119ce475a1c1cd48967ad966ccf594ffc83bb513666c91f",
+      "source_bytes": 69632,
+      "strict_bytes": 69632,
+      "candidate_bytes": 69120,
+      "strict_savings": 0,
+      "additional_savings": 512,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 69632,
+        "additional_savings_bytes": 512,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 1,
+          "raster_encoders": [
+            "png-zopfli15"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 1,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 817
+        },
+        "officeart_candidate_bytes": 69120,
+        "officeart_host": "doc",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 1,
+        "raster_encoders": [
+          "png-zopfli15"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 1,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 817,
+        "worker_usage": {
+          "decoded": 104624,
+          "written": 186319,
+          "nodes": 932,
+          "peak_worker_rss_bytes": 37109760,
+          "seconds": 0.28607916698092595
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "f5bc39d67b2bfec8d0b1c884b76afdcc877deb1f0a6b99a533da3c54f960ac6b"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "17f392dd6d50ed40074a105dcf88d2e0b050bb80763c3929b3d56e0bee69806e"
+        }
+      ]
+    },
+    {
+      "name": "0014-doc.doc",
+      "archive_path": "0014-doc.doc",
+      "sha256": "abe413043d636af0f6ccc3605a1614524739f7b2d61bc1dd1c445d164a546f32",
+      "source_bytes": 81920,
+      "strict_bytes": 81920,
+      "candidate_bytes": 81408,
+      "strict_savings": 0,
+      "additional_savings": 512,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 81920,
+        "additional_savings_bytes": 512,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 1,
+          "raster_encoders": [
+            "png-zopfli15"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 1,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 692
+        },
+        "officeart_candidate_bytes": 81408,
+        "officeart_host": "doc",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 1,
+        "raster_encoders": [
+          "png-zopfli15"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 1,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 692,
+        "worker_usage": {
+          "decoded": 64512,
+          "written": 226556,
+          "nodes": 1169,
+          "peak_worker_rss_bytes": 35536896,
+          "seconds": 0.28803950001019984
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "ef34212b14ce988f4f76b38cf5258422f1b7019da04467ff457f4497126aaf8e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "4a8bc9ea5f7938f10f62726e4066060553415ee418b7b3920354f78c03d469c1"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "1ad5f2e907dd5537ca1f618ab56d7a515a5c5f8c4c317fa1167081b3dac18f79"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "0ada603d2b08cf57fbd3889fb14366ce3c4d95e09a8e35bea3a298ae48f2c4c7"
+        }
+      ]
+    },
+    {
+      "name": "0018-doc.doc",
+      "archive_path": "0018-doc.doc",
+      "sha256": "08d37431abe3548fac67b88337f2ce8986b8caf4f2cea64e4be4ae9da45b83cc",
+      "source_bytes": 245760,
+      "strict_bytes": 245760,
+      "candidate_bytes": 243200,
+      "strict_savings": 0,
+      "additional_savings": 2560,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 245760,
+        "additional_savings_bytes": 2560,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 1,
+          "metafile_types": [
+            "WMF"
+          ],
+          "encoders": [
+            "zopfli15"
+          ],
+          "raster_count": 1,
+          "raster_encoders": [
+            "png-zopfli15"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 1,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 1,
+          "decoded_metafile_bytes": 55442,
+          "stream_savings_bytes": 2212
+        },
+        "officeart_candidate_bytes": 243200,
+        "officeart_host": "doc",
+        "metafile_count": 1,
+        "metafile_types": [
+          "WMF"
+        ],
+        "encoders": [
+          "zopfli15"
+        ],
+        "raster_count": 1,
+        "raster_encoders": [
+          "png-zopfli15"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 1,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 1,
+        "decoded_metafile_bytes": 55442,
+        "stream_savings_bytes": 2212,
+        "worker_usage": {
+          "decoded": 330802,
+          "written": 578783,
+          "nodes": 1388,
+          "peak_worker_rss_bytes": 38141952,
+          "seconds": 1.0213787089742254
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "78e4b7bbb9c606d09a5c75e9a5d70679552c1afda1bf6b45a2ed5a192f8824d6"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "af04925d601027f726e674d167ba48dd47eab0814bfa60da3ec7a1c97677ed90"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "90769082a750cfbb04eb84fd4edab52d3ad9639c41fffb30514a59a8c7a58b58"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "4f3e21732f92c44e3ebf74cfe98e53929a6c05491433e79591da29f046d5f6fe"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "b37661e8fe966e5bf881c6666d373cac7bec01fc93e6719edcf3956cb30e5032"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "1fc89649c6110cf79867bc1846d5a9be7ff32bddb51e08df104d1cceb7e33113"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "28f89501d11137856aea44d19ad55e9caa22be1b351115a01b707cbc122239f3"
+        }
+      ]
+    },
+    {
+      "name": "0020-doc.doc",
+      "archive_path": "0020-doc.doc",
+      "sha256": "b19e4e2224542d51a9ebc75c852fd8e20433c9445c8b899e3057f794cb38e585",
+      "source_bytes": 198144,
+      "strict_bytes": 198144,
+      "candidate_bytes": 195072,
+      "strict_savings": 0,
+      "additional_savings": 3072,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 198144,
+        "additional_savings_bytes": 3072,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 1,
+          "metafile_types": [
+            "WMF"
+          ],
+          "encoders": [
+            "zopfli15"
+          ],
+          "raster_count": 0,
+          "raster_encoders": [],
+          "raster_skips": [],
+          "recompressed_rasters": 0,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 1,
+          "decoded_metafile_bytes": 164966,
+          "stream_savings_bytes": 2944
+        },
+        "officeart_candidate_bytes": 195072,
+        "officeart_host": "doc",
+        "metafile_count": 1,
+        "metafile_types": [
+          "WMF"
+        ],
+        "encoders": [
+          "zopfli15"
+        ],
+        "raster_count": 0,
+        "raster_encoders": [],
+        "raster_skips": [],
+        "recompressed_rasters": 0,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 1,
+        "decoded_metafile_bytes": 164966,
+        "stream_savings_bytes": 2944,
+        "worker_usage": {
+          "decoded": 824830,
+          "written": 439401,
+          "nodes": 512,
+          "peak_worker_rss_bytes": 43876352,
+          "seconds": 0.9609278340067249
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "52a0861151c208b794526dba0bd6ac0d21c23facd0b3ac0437925f0b626dd55d"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "5be319f1c988bcfa136a53f7c3907b07e0b4f300e8a3bfcee4169759e5c295ce"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "0b997128abad121e3a506a785a1e7173d722c961c5c94bd78ce044e793b49d66"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "52a85e3ecaefee83a7b570ff40583eb223f70fe5d27361c431932137ee6446f3"
+        }
+      ]
+    },
+    {
+      "name": "0022-doc.doc",
+      "archive_path": "0022-doc.doc",
+      "sha256": "c95cd8e56ea67caec10299e7d17f491d0fea298f7f067c3b71bd189d85b6912b",
+      "source_bytes": 123904,
+      "strict_bytes": 123904,
+      "candidate_bytes": 123392,
+      "strict_savings": 0,
+      "additional_savings": 512,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 123904,
+        "additional_savings_bytes": 512,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 1,
+          "raster_encoders": [
+            "png-zopfli15"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 1,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 692
+        },
+        "officeart_candidate_bytes": 123392,
+        "officeart_host": "doc",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 1,
+        "raster_encoders": [
+          "png-zopfli15"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 1,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 692,
+        "worker_usage": {
+          "decoded": 64512,
+          "written": 342563,
+          "nodes": 1969,
+          "peak_worker_rss_bytes": 38125568,
+          "seconds": 0.3278471669764258
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "9c4b6ced92011e228fd3a8ff89cb0600366fa2b885b074c709b7b7796df73778"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3e46f602b00b2f29cb6568a6c2bf68740343c0b4e674946b793bad59b161fcf4"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "cdeb587f7dbb8e8b3b604b8b7fcbe68e529ae584785b2a37587fbfddddbce2a2"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "a88c719f50e62dcc79e1939bfbb3b02ba69ddc48d7a9052ec0a1f0cd3885c47a"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "17e38c700547634d16c8e6415ee07d35d10f962a1b807364eefa1eb0ae775032"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "abdc03e2296eba2249cc07723332679305c82fbe49dbfe51aab442f72b21acb8"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "6304f9ca4be7af8ab7f6915d3c1bb6746a7404243247b5d070bf1a7258fddb47"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "62a71dc74407b1b4ae49c2af896629f0721e6154860e37e73cfaad1d5ec533a1"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "dd1df523a878aac933b1da9357b6bd8a0fd1209320352513677e9cf5c0a2ac6f"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "75742b4a262794fc6879cd015575fab4705d7368346feeaeabac9dff26b8b9e4"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3c03f16257989e4f91848ffd8361f8f42830903f493373d24504668c8ce6ea76"
+        }
+      ]
+    },
+    {
+      "name": "0028-doc.doc",
+      "archive_path": "0028-doc.doc",
+      "sha256": "e25d2311632c0afbada4674e22ed893df6cf45e990bd0ad9e815dfd5eda59151",
+      "source_bytes": 155136,
+      "strict_bytes": 155136,
+      "candidate_bytes": 148480,
+      "strict_savings": 0,
+      "additional_savings": 6656,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 155136,
+        "additional_savings_bytes": 6656,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 3,
+          "metafile_types": [
+            "EMF",
+            "WMF",
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15",
+            "zopfli15",
+            "zopfli15"
+          ],
+          "raster_count": 0,
+          "raster_encoders": [],
+          "raster_skips": [],
+          "recompressed_rasters": 0,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 3,
+          "decoded_metafile_bytes": 263218,
+          "stream_savings_bytes": 6406
+        },
+        "officeart_candidate_bytes": 148480,
+        "officeart_host": "doc",
+        "metafile_count": 3,
+        "metafile_types": [
+          "EMF",
+          "WMF",
+          "EMF"
+        ],
+        "encoders": [
+          "zopfli15",
+          "zopfli15",
+          "zopfli15"
+        ],
+        "raster_count": 0,
+        "raster_encoders": [],
+        "raster_skips": [],
+        "recompressed_rasters": 0,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 3,
+        "decoded_metafile_bytes": 263218,
+        "stream_savings_bytes": 6406,
+        "worker_usage": {
+          "decoded": 1316090,
+          "written": 376499,
+          "nodes": 1129,
+          "peak_worker_rss_bytes": 41140224,
+          "seconds": 3.1658587499987334
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "cfba4a5f19401671244fc2bbf3a75c524ea3c552bf5c3a0d7be585ddf9c995ae"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "2ef2225835f87e8a57034a1671db9e6470fe5ff2124f3b08485eae76c9199852"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "974959edb829826f0b859456959ef153d0dfd4b7c63b3a0c63c611bf9fd51894"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "9110f15862d25af6349dcfb621fa1dbc71f3040a4485ba07d5ed94105516162b"
+        }
+      ]
+    },
+    {
+      "name": "0029-doc.doc",
+      "archive_path": "0029-doc.doc",
+      "sha256": "8179fbe2c8b371aa00d832de56717bd7b77b73b0fa22595aa6dc6da691178379",
+      "source_bytes": 153088,
+      "strict_bytes": 153088,
+      "candidate_bytes": 145920,
+      "strict_savings": 0,
+      "additional_savings": 7168,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 153088,
+        "additional_savings_bytes": 7168,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 1,
+          "metafile_types": [
+            "EMF"
+          ],
+          "encoders": [
+            "zopfli15"
+          ],
+          "raster_count": 1,
+          "raster_encoders": [
+            "png-zopfli15"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 1,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 1,
+          "decoded_metafile_bytes": 738444,
+          "stream_savings_bytes": 6970
+        },
+        "officeart_candidate_bytes": 145920,
+        "officeart_host": "doc",
+        "metafile_count": 1,
+        "metafile_types": [
+          "EMF"
+        ],
+        "encoders": [
+          "zopfli15"
+        ],
+        "raster_count": 1,
+        "raster_encoders": [
+          "png-zopfli15"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 1,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 1,
+        "decoded_metafile_bytes": 738444,
+        "stream_savings_bytes": 6970,
+        "worker_usage": {
+          "decoded": 4958268,
+          "written": 417874,
+          "nodes": 1398,
+          "peak_worker_rss_bytes": 53968896,
+          "seconds": 3.9367043749953154
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "06a370965df92b79b3189827b6ac79fb3b482fa20df32a735204416f5089dd91"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "f7256506915f165a394d5315aa896feccb8be3a7238dc81e84a0803af57465b2"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "53439215c682560f5c63d3bf75f50e03932cfce760cbca2db8240822b2174e57"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "2e8ad3849b7bf50110cf93df7077e1df627bcd8120cbbc0a77c8afd64fe2ef6c"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "70762efd0bb832555f3fd386a19191bb1c9069002807b8ae0b06d622725f0f8c"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "401693ffaddd0747a9cc81f56c86c7fc7458acbb57c6fc3e9932a819db7fbd83"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "18fa91f9d7343254204037183fc5978db529adc718da14d6a63ffe234d9e16b7"
+        }
+      ]
+    },
+    {
+      "name": "0049-doc.doc",
+      "archive_path": "0049-doc.doc",
+      "sha256": "218cf680aef6671f142032f293ac8f1b9938b45a9887b20a980d505b80718be4",
+      "source_bytes": 79872,
+      "strict_bytes": 79872,
+      "candidate_bytes": 79360,
+      "strict_savings": 0,
+      "additional_savings": 512,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 79872,
+        "additional_savings_bytes": 512,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 1,
+          "raster_encoders": [
+            "png-zopfli15"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 1,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 692
+        },
+        "officeart_candidate_bytes": 79360,
+        "officeart_host": "doc",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 1,
+        "raster_encoders": [
+          "png-zopfli15"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 1,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 692,
+        "worker_usage": {
+          "decoded": 64512,
+          "written": 221459,
+          "nodes": 849,
+          "peak_worker_rss_bytes": 35799040,
+          "seconds": 0.28887958300765604
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "425048148f498648be0848158de09c38dfc7d09525fe508de8dfb82161f62582"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "523355fa5e4dd46d82b233cae29e4605a31952c2946ae3b4edde0a040889ceb4"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "9190e842522c18bb8a8051f1323ce30c0eea75e6f191fac40fc3ba8ba4bb45c5"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "250012a6b0994b54d342943c4c5794962cbc0652d565c0d2001bb86e514b909a"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "953734c81dcb5c011b3ef7ae72a1821101fce977990b3fd897bf6cd42b0833ba"
+        }
+      ]
+    },
+    {
+      "name": "0052-doc.doc",
+      "archive_path": "0052-doc.doc",
+      "sha256": "48fc340b3afbbfcb3804867ccec5e72e162288be518a85a1f29a67d76533624c",
+      "source_bytes": 61440,
+      "strict_bytes": 61440,
+      "candidate_bytes": 59904,
+      "strict_savings": 0,
+      "additional_savings": 1536,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 61440,
+        "additional_savings_bytes": 1536,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 1,
+          "metafile_types": [
+            "WMF"
+          ],
+          "encoders": [
+            "zopfli15"
+          ],
+          "raster_count": 0,
+          "raster_encoders": [],
+          "raster_skips": [],
+          "recompressed_rasters": 0,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 1,
+          "decoded_metafile_bytes": 47166,
+          "stream_savings_bytes": 1300
+        },
+        "officeart_candidate_bytes": 59904,
+        "officeart_host": "doc",
+        "metafile_count": 1,
+        "metafile_types": [
+          "WMF"
+        ],
+        "encoders": [
+          "zopfli15"
+        ],
+        "raster_count": 0,
+        "raster_encoders": [],
+        "raster_skips": [],
+        "recompressed_rasters": 0,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 1,
+        "decoded_metafile_bytes": 47166,
+        "stream_savings_bytes": 1300,
+        "worker_usage": {
+          "decoded": 235830,
+          "written": 170103,
+          "nodes": 746,
+          "peak_worker_rss_bytes": 37634048,
+          "seconds": 0.8510172090027481
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "dd95bcded52137b1d6e85a5da95161e589b3ff517484df19fe5fa1b667ed5a70"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "1369c853e97fadb3e87e84b8acedcaf907130409ff71c31ade07c18c27dac5c2"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "2e226eea69a807b3db2f6e1a57736c9a0de9231c77463a09f2402431a9a80ff5"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "ea6484a9963abc457c8951fd28e5a4ae781a296e339b506c4d57b9741a3ae5ea"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "f5d9434a2f58987a38ab3f9fd8c6551115a872b17894c8798e4cea741bf4979f"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "34c3a4063efc3338116299defb076c1880214968e03370e2ab58d5209bb74273"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "8e98416755f3f2c14f5230e47cdaebfaa27f111eb922dfac8b763f7ffbca5357"
+        }
+      ]
+    },
+    {
+      "name": "0054-doc.doc",
+      "archive_path": "0054-doc.doc",
+      "sha256": "f12c1eaaa68827080a7c86c0ae1d14a1b18ceacbab4b12af1fc645ec4cc5e0b1",
+      "source_bytes": 402432,
+      "strict_bytes": 402432,
+      "candidate_bytes": 402432,
+      "strict_savings": 0,
+      "additional_savings": 0,
+      "strategy": "ole-compaction",
+      "details": {
+        "strategy": "ole-compaction",
+        "compaction_bytes": 402432,
+        "additional_savings_bytes": 0,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 2,
+          "raster_encoders": [
+            "png-zopfli15",
+            "original"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 1,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 243
+        },
+        "officeart_candidate_bytes": 402432,
+        "officeart_skip": "OfficeArt stream savings do not improve the selected physical file size",
+        "recompression_skip": "OfficeArt stream savings do not improve the selected physical file size",
+        "worker_usage": {
+          "decoded": 1598912,
+          "written": 1406533,
+          "nodes": 5498,
+          "peak_worker_rss_bytes": 48300032,
+          "seconds": 0.8873765839962289
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true
+    },
+    {
+      "name": "0056-doc.doc",
+      "archive_path": "0056-doc.doc",
+      "sha256": "6d7f65b7c7862a8abf026bd498cd0f76d6c4c95d3797a6b6034557cbd92fa8c7",
+      "source_bytes": 64512,
+      "strict_bytes": 64512,
+      "candidate_bytes": 62976,
+      "strict_savings": 0,
+      "additional_savings": 1536,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 64512,
+        "additional_savings_bytes": 1536,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 1,
+          "metafile_types": [
+            "WMF"
+          ],
+          "encoders": [
+            "zopfli15"
+          ],
+          "raster_count": 0,
+          "raster_encoders": [],
+          "raster_skips": [],
+          "recompressed_rasters": 0,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 1,
+          "decoded_metafile_bytes": 47166,
+          "stream_savings_bytes": 1300
+        },
+        "officeart_candidate_bytes": 62976,
+        "officeart_host": "doc",
+        "metafile_count": 1,
+        "metafile_types": [
+          "WMF"
+        ],
+        "encoders": [
+          "zopfli15"
+        ],
+        "raster_count": 0,
+        "raster_encoders": [],
+        "raster_skips": [],
+        "recompressed_rasters": 0,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 1,
+        "decoded_metafile_bytes": 47166,
+        "stream_savings_bytes": 1300,
+        "worker_usage": {
+          "decoded": 235830,
+          "written": 174922,
+          "nodes": 741,
+          "peak_worker_rss_bytes": 37584896,
+          "seconds": 0.8441880829923321
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "896022c3c6dc738f4a2ec727122fd12878c3049ee1b9e4f626e7d4704bc45218"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "f83cdd19fc2922cc9b369f0dbbf002c1747a71ea2219cfcb4662e3cc77c2ac1a"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "edf85acc99b174c4014c43a8cec4c76a498a7300450d43f6cb1eb146351cc57b"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "d8a8d7bba9a06c95e34ebb789cb9b9d28354f43002ab63c620bd0c7512ef003b"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "5463441e9de8c343fbbe754947ca0f05ede5a980d77098a609ad77c27e8876b9"
+        }
+      ]
+    },
+    {
+      "name": "0066-doc.doc",
+      "archive_path": "0066-doc.doc",
+      "sha256": "0e6914c32c1985ffc64b31b5eeaf42e26a4e2762ddbd4062dacbcb6c0f2f30ee",
+      "source_bytes": 718336,
+      "strict_bytes": 718336,
+      "candidate_bytes": 682496,
+      "strict_savings": 0,
+      "additional_savings": 35840,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 718336,
+        "additional_savings_bytes": 35840,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 1,
+          "raster_encoders": [
+            "jpegtran"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 1,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 35752
+        },
+        "officeart_candidate_bytes": 682496,
+        "officeart_host": "doc",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 1,
+        "raster_encoders": [
+          "jpegtran"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 1,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 35752,
+        "worker_usage": {
+          "decoded": 9560448,
+          "written": 2071421,
+          "nodes": 1187,
+          "peak_worker_rss_bytes": 77840384,
+          "seconds": 1.889154708973365
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "f096e4f9085a4e5cfb4ad49d8233295e3908bddd5b378ce2663d30ab17a5f559"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "8c06aeba1222d7d63294a3a84b50ef361098eb6222cd262d86e1fdf216cb3b90"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "6fcf066d11a56a2aa9a68dad9bade89444b552d8091a67af32d6854f23678ecb"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "169ec13b10e59dfd93b60b748ce24e6c06842fc3eba3de85625adfc7f894a073"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "94490016f9f44d311144b22ec0a087d1dac90d04141adc818c706352a1838f4d"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3e4a90fdd98c27b18238b330c2604fe417796bab21c9a3b6a3b7e9bd2af971ed"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "66a14740b3619cb13c335072fe419dd5b5e7770a4a2bbcb821cac5dfb6776ab0"
+        }
+      ]
+    },
+    {
+      "name": "0067-doc.doc",
+      "archive_path": "0067-doc.doc",
+      "sha256": "79808ced66f452cf991922bc333dbb8c4af60c2f16bcaad6d7f83821778ee610",
+      "source_bytes": 718336,
+      "strict_bytes": 718336,
+      "candidate_bytes": 682496,
+      "strict_savings": 0,
+      "additional_savings": 35840,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 718336,
+        "additional_savings_bytes": 35840,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 1,
+          "raster_encoders": [
+            "jpegtran"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 1,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 35752
+        },
+        "officeart_candidate_bytes": 682496,
+        "officeart_host": "doc",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 1,
+        "raster_encoders": [
+          "jpegtran"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 1,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 35752,
+        "worker_usage": {
+          "decoded": 9560448,
+          "written": 2071421,
+          "nodes": 1187,
+          "peak_worker_rss_bytes": 78512128,
+          "seconds": 1.8449716250179335
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "f096e4f9085a4e5cfb4ad49d8233295e3908bddd5b378ce2663d30ab17a5f559"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "8c06aeba1222d7d63294a3a84b50ef361098eb6222cd262d86e1fdf216cb3b90"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "6fcf066d11a56a2aa9a68dad9bade89444b552d8091a67af32d6854f23678ecb"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "169ec13b10e59dfd93b60b748ce24e6c06842fc3eba3de85625adfc7f894a073"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "94490016f9f44d311144b22ec0a087d1dac90d04141adc818c706352a1838f4d"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3e4a90fdd98c27b18238b330c2604fe417796bab21c9a3b6a3b7e9bd2af971ed"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "66a14740b3619cb13c335072fe419dd5b5e7770a4a2bbcb821cac5dfb6776ab0"
+        }
+      ]
+    },
+    {
+      "name": "0089-doc.doc",
+      "archive_path": "0089-doc.doc",
+      "sha256": "16a1cdd69c11e43d1eeab5818042fa399884159ceabfdab60c260afa2a99ef63",
+      "source_bytes": 73216,
+      "strict_bytes": 73216,
+      "candidate_bytes": 71680,
+      "strict_savings": 0,
+      "additional_savings": 1536,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 73216,
+        "additional_savings_bytes": 1536,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 1,
+          "metafile_types": [
+            "WMF"
+          ],
+          "encoders": [
+            "zopfli15"
+          ],
+          "raster_count": 0,
+          "raster_encoders": [],
+          "raster_skips": [],
+          "recompressed_rasters": 0,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 1,
+          "decoded_metafile_bytes": 47166,
+          "stream_savings_bytes": 1300
+        },
+        "officeart_candidate_bytes": 71680,
+        "officeart_host": "doc",
+        "metafile_count": 1,
+        "metafile_types": [
+          "WMF"
+        ],
+        "encoders": [
+          "zopfli15"
+        ],
+        "raster_count": 0,
+        "raster_encoders": [],
+        "raster_skips": [],
+        "recompressed_rasters": 0,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 1,
+        "decoded_metafile_bytes": 47166,
+        "stream_savings_bytes": 1300,
+        "worker_usage": {
+          "decoded": 235830,
+          "written": 200754,
+          "nodes": 771,
+          "peak_worker_rss_bytes": 38060032,
+          "seconds": 0.8553517909895163
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "2d642fc84a59bd3ad80456c5493ee21dae9c1e46e40d182b60fcbb3039752da2"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "ef48b7a04c570d67328915ec046ed8c197771978bf8653cc8aeaddaf52e0cc8e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "9f6003da1b3f38fefa50e9eac687afec9a7d637cac6a2e8abc9d5798bc439d4c"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "a264fe056408536651b280c65a58a17333fdd3e399757e78f455ba3d84eae7c3"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "19f5e9951c05cae43ca9f3c4bb6b1b9b7ad8d3f7a4660af086d8bddea0cce6c4"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "aab62a57dc6cd247a2e1a78065ec9fdabefd60e75b8248e7f481942503edb204"
+        }
+      ]
+    },
+    {
+      "name": "0093-doc.doc",
+      "archive_path": "0093-doc.doc",
+      "sha256": "40c2ffd85bfd13c69b4a79620fa262bc11cd0570c7d7ed6c318264695f09cbe3",
+      "source_bytes": 93696,
+      "strict_bytes": 93696,
+      "candidate_bytes": 92160,
+      "strict_savings": 0,
+      "additional_savings": 1536,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 93696,
+        "additional_savings_bytes": 1536,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 1,
+          "metafile_types": [
+            "WMF"
+          ],
+          "encoders": [
+            "zopfli15"
+          ],
+          "raster_count": 0,
+          "raster_encoders": [],
+          "raster_skips": [],
+          "recompressed_rasters": 0,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 1,
+          "decoded_metafile_bytes": 55170,
+          "stream_savings_bytes": 1508
+        },
+        "officeart_candidate_bytes": 92160,
+        "officeart_host": "doc",
+        "metafile_count": 1,
+        "metafile_types": [
+          "WMF"
+        ],
+        "encoders": [
+          "zopfli15"
+        ],
+        "raster_count": 0,
+        "raster_encoders": [],
+        "raster_skips": [],
+        "recompressed_rasters": 0,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 1,
+        "decoded_metafile_bytes": 55170,
+        "stream_savings_bytes": 1508,
+        "worker_usage": {
+          "decoded": 275850,
+          "written": 259138,
+          "nodes": 999,
+          "peak_worker_rss_bytes": 39813120,
+          "seconds": 0.5016130410076585
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "d678b85f33ed997e4ef9c247b4a901aeef636539f9ffe02eac94c36437ff6a51"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "2072a2448e089b7db72d25954eb6fef3628aab00e784ce5aa13bc93f336b5161"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "abc264ad9d11067c766e58019050f2920e4d430f84472fc79b9ed3c872c9f944"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "64c4f583052f0b8bac511ef001f0b8f18005d3b6f7fc350d92cfb54a84946fd4"
+        }
+      ]
+    },
+    {
+      "name": "0095-doc.doc",
+      "archive_path": "0095-doc.doc",
+      "sha256": "5ea242a7ce4033c5f91e7ffc982eff78978cae8b06f49afd215ebd7f547c3652",
+      "source_bytes": 85504,
+      "strict_bytes": 85504,
+      "candidate_bytes": 82432,
+      "strict_savings": 0,
+      "additional_savings": 3072,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 85504,
+        "additional_savings_bytes": 3072,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 1,
+          "raster_encoders": [
+            "png-zopfli15"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 1,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 2971
+        },
+        "officeart_candidate_bytes": 82432,
+        "officeart_host": "doc",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 1,
+        "raster_encoders": [
+          "png-zopfli15"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 1,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 2971,
+        "worker_usage": {
+          "decoded": 407040,
+          "written": 231495,
+          "nodes": 1156,
+          "peak_worker_rss_bytes": 37830656,
+          "seconds": 0.7057098749792203
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "29f04c454a5ebd5f805381ae7de5e1242eb8cf4a0bbd6ffe1c7c8a71935f73ba"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "d429ac901ae5e4a2a24a6ed1a1df0517f73fdda542c5422a1d8ad9a9101fa184"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "ce7db17910feaa6e95bf727225b0b123cb110c50eb60a9824dce25e5f9c427de"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "00416d30916d2ddd2755337bd39a9255e20b827385f1ebe6a5ac3caab80b2cf4"
+        }
+      ]
+    },
+    {
+      "name": "0096-doc.doc",
+      "archive_path": "0096-doc.doc",
+      "sha256": "3da818b1eb6c89bec735d8dc9f27e97a95298b639fd6ef0a60c560fde277f52b",
+      "source_bytes": 75776,
+      "strict_bytes": 75776,
+      "candidate_bytes": 75264,
+      "strict_savings": 0,
+      "additional_savings": 512,
+      "strategy": "ole-officeart-recompression",
+      "details": {
+        "strategy": "ole-officeart-recompression",
+        "compaction_bytes": 75776,
+        "additional_savings_bytes": 512,
+        "officeart": {
+          "officeart_host": "doc",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 1,
+          "raster_encoders": [
+            "png-zopfli15"
+          ],
+          "raster_skips": [],
+          "recompressed_rasters": 1,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 599
+        },
+        "officeart_candidate_bytes": 75264,
+        "officeart_host": "doc",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 1,
+        "raster_encoders": [
+          "png-zopfli15"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 1,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 599,
+        "worker_usage": {
+          "decoded": 136320,
+          "written": 207886,
+          "nodes": 1185,
+          "peak_worker_rss_bytes": 38223872,
+          "seconds": 0.4372465829947032
+        }
+      },
+      "preservation_equal": true,
+      "officeart_equal": true,
+      "render_equal": true,
+      "pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "bec5023a7f2c52ef247ddb9e5e73ac9b9d02bf75a8ab1fd48da90a606fcdeb23"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "41919d37c37398cd2ed950623fb9cf365019e35864b1fa7f0357bcc73b705233"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "55372f3a6ea316441a0d510e9ba70a94fd30a342d3e1aa12df73e1acb39604f1"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "5df78a7e7d64ad0458bf81cfe48e0e5125a69d21a003ede6dc76dfa07b93b67f"
+        }
+      ]
+    }
+  ]
+}

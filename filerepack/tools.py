@@ -12,6 +12,7 @@ from .install_hints import format_install_instructions, install_command
 
 
 _CONFIG_CACHE: Optional[Dict[str, str]] = None
+_CONFIG_SIGNATURE: Optional[Tuple[object, ...]] = None
 
 
 @dataclass(frozen=True)
@@ -24,6 +25,8 @@ class ToolSpec:
 
 
 TOOL_SPECS: Tuple[ToolSpec, ...] = (
+    ToolSpec('ole_compactor', ('filerepack-ole',), 'FILEREPACK_OLE_COMPACTOR',
+             False, 'legacy DOC/XLS/PPT CFB compaction'),
     ToolSpec('szip', ('7zz', '7z'), 'FILEREPACK_7ZZ', True, 'archives (ZIP/7z/OOXML)'),
     ToolSpec('zip', ('zip',), 'FILEREPACK_ZIP', False, 'ZIP fallback for OOXML'),
     ToolSpec('unrar', ('unrar',), 'FILEREPACK_UNRAR', False, 'RAR extraction'),
@@ -53,6 +56,7 @@ TOOL_SPECS: Tuple[ToolSpec, ...] = (
     ToolSpec('gs', ('gs', 'gswin64c', 'gswin32c'), 'FILEREPACK_GS', False, 'lossy PDF'),
     ToolSpec('qpdf', ('qpdf',), 'FILEREPACK_QPDF', False, 'lossless PDF'),
     ToolSpec('ffmpeg', ('ffmpeg',), 'FILEREPACK_FFMPEG', False, 'video'),
+    ToolSpec('ffprobe', ('ffprobe',), 'FILEREPACK_FFPROBE', False, 'media inventory validation'),
     ToolSpec('pigz', ('pigz',), 'FILEREPACK_PIGZ', False, 'parallel gzip'),
     ToolSpec('xz', ('xz',), 'FILEREPACK_XZ', False, 'XZ'),
     ToolSpec('bzip2', ('bzip2',), 'FILEREPACK_BZIP2', False, 'BZ2'),
@@ -110,8 +114,10 @@ def _config_paths() -> List[str]:
 
 
 def _load_config_tools() -> Dict[str, str]:
-    global _CONFIG_CACHE
-    if _CONFIG_CACHE is not None:
+    global _CONFIG_CACHE, _CONFIG_SIGNATURE
+    paths = _config_paths()
+    signature: Tuple[object, ...] = tuple(_file_signature(path) for path in paths)
+    if _CONFIG_CACHE is not None and signature == _CONFIG_SIGNATURE:
         return _CONFIG_CACHE
     tools: Dict[str, str] = {}
     try:
@@ -122,7 +128,7 @@ def _load_config_tools() -> Dict[str, str]:
         except ImportError:
             _CONFIG_CACHE = tools
             return tools
-    for path in _config_paths():
+    for path in paths:
         if not exists(path):
             continue
         try:
@@ -132,10 +138,30 @@ def _load_config_tools() -> Dict[str, str]:
             if isinstance(section, dict):
                 tools = {str(k): str(v) for k, v in section.items() if v}
             break
-        except (OSError, ValueError):
+        except (OSError, ValueError) as exc:
+            from .outcomes import record
+            record('failed', 'invalid_tool_config', str(exc))
             continue
     _CONFIG_CACHE = tools
+    _CONFIG_SIGNATURE = signature
     return tools
+
+
+def _file_signature(path: str) -> Tuple[object, ...]:
+    try:
+        stat = os.stat(path)
+        return path, stat.st_ino, stat.st_size, stat.st_mtime_ns, stat.st_ctime_ns
+    except OSError:
+        return path, None
+
+
+def _executable(value: str, key: str) -> Optional[str]:
+    path = which(expanduser(value))
+    if path and os.path.isfile(path) and os.access(path, os.X_OK):
+        return path
+    from .outcomes import record
+    record('unsupported', 'invalid_tool_override', 'Configured executable is unavailable: ' + key)
+    return None
 
 
 def resolve_tool(key: str) -> Optional[str]:
@@ -146,16 +172,18 @@ def resolve_tool(key: str) -> Optional[str]:
 
     env_val = os.environ.get(spec.env)
     if env_val:
-        return env_val
+        return _executable(env_val, key)
 
     configured = _load_config_tools().get(key) or _load_config_tools().get(spec.binaries[0])
     if configured:
-        return configured
+        return _executable(configured, key)
 
     for name in spec.binaries:
         found = which(name)
         if found:
             return found
+    from .outcomes import record
+    record('unsupported', 'missing_tool', 'Required tool is unavailable: ' + key)
     return None
 
 
@@ -168,8 +196,9 @@ def doctor_rows() -> List[Dict[str, str]]:
     rows = []
     for spec in TOOL_SPECS:
         path = resolve_tool(spec.key)
+        version = probe_version(path, spec.key) if path else None
         if path:
-            status = 'ok'
+            status = 'ok' if version else 'unverified executable'
         elif spec.required:
             status = 'missing (required)'
         else:
@@ -179,10 +208,21 @@ def doctor_rows() -> List[Dict[str, str]]:
             'binaries': ', '.join(spec.binaries),
             'path': path or '',
             'status': status,
+            'version': version or '',
             'purpose': spec.purpose,
             'install': '' if path else install_command(spec.key),
         })
     return rows
+
+
+def probe_version(path: str, key: str) -> Optional[str]:
+    """Bounded read-only tool identity probe; availability is not writer qualification."""
+    from .commands import capture_bytes
+    flags = [] if key == 'szip' else ['-version' if key in ('ffmpeg', 'ffprobe') else '--version']
+    raw = capture_bytes([path] + flags, max_output=65536, timeout=2)
+    if raw:
+        return raw.decode('utf-8', 'replace').strip().split('\n')[0][:300]
+    return None
 
 
 def install_instructions(

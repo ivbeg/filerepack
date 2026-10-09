@@ -1,0 +1,5 @@
+{
+  "inventory_sha256": "eb5a852bda21ecc700d7e42bef243fc73b49ffd30c7b81c590653c8646d3564c",
+  "cached_collection_rerun": "byte-identical",
+  "timings": "probe timings are not byte-reproducible"
+}

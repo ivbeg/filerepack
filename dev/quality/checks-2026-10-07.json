@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-07",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.7",
+  "runtime_sha256": "db77c1d973d54d72af73f402e4e1e8c0e554dee8a1c1bdeae61590c42cb3fdd5",
+  "library_versions": {
+    "Pillow": "12.3.0",
+    "pikepdf": "10.16.0",
+    "psutil": "7.2.2",
+    "numpy": "2.5.3",
+    "pyarrow": "19.0.1",
+    "duckdb": "1.5.6",
+    "fastavro": "1.13.0",
+    "fonttools": "4.66.1",
+    "brotli": "1.2.0",
+    "mutagen": "1.48.1",
+    "lz4": "4.4.5",
+    "olefile": "0.47",
+    "zopfli": "0.4.3",
+    "scipy": "1.18.1",
+    "h5py": "3.16.0",
+    "netCDF4": "1.7.4",
+    "tifffile": "2026.9.20",
+    "imagecodecs": "2026.8.16",
+    "pyreadstat": "1.3.6",
+    "zarr": "2.18.7",
+    "numcodecs": "0.15.1",
+    "onnx": "1.23.2",
+    "torch": "2.14.1",
+    "zstandard": "0.25.0"
+  },
+  "full_checkout": {
+    "command": "python -m pytest -q -ra --cov=filerepack --cov-report=json --cov-report=term",
+    "date": "2026-10-08",
+    "passed": 2361,
+    "skipped": 3,
+    "warnings": 32,
+    "seconds": 281.29,
+    "scope": "Current runtime, including PNG/JPX precision checks and lossless ImageMagick/AVIF/HEIC/JXL publication checks; provisioned optional readers."
+  },
+  "latest_focused_contracts": {
+    "passed": 95,
+    "skipped": 0,
+    "scope": "Audit/resume/inspection/DCP/bulk plus provisioned Mutagen/media; before cover typing refinement."
+  },
+  "full_artifacts": {
+    "wheel": {
+      "passed": 1076,
+      "skipped": 24
+    },
+    "sdist": {
+      "passed": 2133,
+      "skipped": 167
+    },
+    "scope": "Fresh development-extra environments; extracted tests use installed runtime, with explicit optional skips."
+  },
+  "latest_artifact_contracts": {
+    "date": "2026-10-08",
+    "wheel": {
+      "passed": 238,
+      "skipped": 3,
+      "seconds": 15.79
+    },
+    "sdist": {
+      "passed": 238,
+      "skipped": 3,
+      "seconds": 13.81
+    },
+    "scope": "Rebuilt current runtime in isolated [dev,ole-recompress,pdf] environments; source tests cannot import checkout. Smoke/provenance/exports/license/CLI checks passed. Two ONNX-extra cases and one Mutagen integration skipped."
+  },
+  "static": {
+    "ruff": "passed",
+    "mypy": "passed: 169 source files",
+    "documentation": "current production build passed on 2026-10-08",
+    "openspec": "103 passed; 0 failed",
+    "ownership": "180 canonical requirements; 245 unique live deltas; 281 audited blocks"
+  },
+  "coverage": {
+    "line_percent": 76.12417797262871,
+    "branch_percent": 62.44394618834081,
+    "isolated_child_coverage": "not included automatically",
+    "shared_line_floors_pass": true,
+    "shared_line_percent": {
+      "transactions": 95.48022598870057,
+      "candidates": 92.3913043478261,
+      "destinations": 94.36619718309859,
+      "validation": 93.18181818181819,
+      "reports": 90.14084507042253,
+      "verification": 83.63970588235294
+    }
+  },
+  "deployment": "not confirmed; no change archived; no commit/push/release performed",
+  "updated_date": "2026-10-08",
+  "prior_full_checkout": {
+    "command": "python -m pytest -q -ra --cov=filerepack --cov-report=json --cov-report=term",
+    "passed": 2329,
+    "skipped": 4,
+    "seconds": 414.37,
+    "scope": "Before final optional-library fingerprint and audit-header additions; those received the focused checks below."
+  },
+  "latest_raster_contracts": {
+    "date": "2026-10-08",
+    "passed": 427,
+    "skipped": 0,
+    "seconds": 19.38,
+    "scope": "Raster/PDF/media/quality/native/structural contracts; subsequent full run covers final refactoring."
+  }
+}

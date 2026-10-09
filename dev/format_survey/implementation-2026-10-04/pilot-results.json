@@ -1,0 +1,1067 @@
+{
+  "environment": "macOS-26.5.1-arm64-arm-64bit",
+  "results": [
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/13234390?format=original",
+      "project": "doi:10.7910/DVN/4UR5DY",
+      "source": "dataverse",
+      "name": "data/_out/vs.rds",
+      "format": "rds",
+      "sha256": "b6f9d6cb5d1494452ebcb4ddd0d079854a65d5acfe1576b9d6fa1148ff6af93e",
+      "metadata_checksum_verified": true,
+      "profile": "preserve",
+      "input_bytes": 5452022,
+      "error": "decoded payload exceeds bounded parser budget",
+      "accepted": false,
+      "candidate_bytes": 5452022,
+      "seconds": 0.3852
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/13234390?format=original",
+      "project": "doi:10.7910/DVN/4UR5DY",
+      "source": "dataverse",
+      "name": "data/_out/vs.rds",
+      "format": "rds",
+      "sha256": "b6f9d6cb5d1494452ebcb4ddd0d079854a65d5acfe1576b9d6fa1148ff6af93e",
+      "metadata_checksum_verified": true,
+      "profile": "xz",
+      "input_bytes": 5452022,
+      "error": "decoded payload exceeds bounded parser budget",
+      "accepted": false,
+      "candidate_bytes": 5452022,
+      "seconds": 0.3956
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14300924?format=original",
+      "project": "doi:10.7910/DVN/GVVAO1",
+      "source": "dataverse",
+      "name": "Analysis data/EP_analysis.rds",
+      "format": "rds",
+      "sha256": "cec7866300bb34822a75555a1ea66aedce296309c9e72687af7d6177506ffde8",
+      "metadata_checksum_verified": true,
+      "profile": "preserve",
+      "input_bytes": 65479,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "RDS",
+          "serialization_version": 3,
+          "writer_version": 262914,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 1758423,
+          "decoded_sha256": "e9223b7fd9bf27ddf841c237bc530e86bd4befc4a755951426ba3f8a00d377e4",
+          "output_codec": "gzip",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "source profile"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 3516846,
+          "written": 59640,
+          "nodes": 120556
+        }
+      },
+      "candidate_bytes": 59640,
+      "accepted": true,
+      "seconds": 1.1102,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 0.9724632500001462,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14300924?format=original",
+      "project": "doi:10.7910/DVN/GVVAO1",
+      "source": "dataverse",
+      "name": "Analysis data/EP_analysis.rds",
+      "format": "rds",
+      "sha256": "cec7866300bb34822a75555a1ea66aedce296309c9e72687af7d6177506ffde8",
+      "metadata_checksum_verified": true,
+      "profile": "xz",
+      "input_bytes": 65479,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "RDS",
+          "serialization_version": 3,
+          "writer_version": 262914,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 1758423,
+          "decoded_sha256": "e9223b7fd9bf27ddf841c237bc530e86bd4befc4a755951426ba3f8a00d377e4",
+          "output_codec": "xz",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "R 2.10+"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 3516846,
+          "written": 49032,
+          "nodes": 120556
+        }
+      },
+      "candidate_bytes": 49032,
+      "accepted": true,
+      "seconds": 1.3031,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 1.068833708006423,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14300725?format=original",
+      "project": "doi:10.7910/DVN/LMXE9B",
+      "source": "dataverse",
+      "name": "Data/Elections/Hessick/Public Dataset (Version 0) (RDS file for R).rds",
+      "format": "rds",
+      "sha256": "5dbd55171d20fc34023177db0cc9a65fc0079de08936c78bef29a98dd93eee57",
+      "metadata_checksum_verified": true,
+      "profile": "preserve",
+      "input_bytes": 702376,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v2",
+          "kind": "RDS",
+          "serialization_version": 2,
+          "writer_version": 197889,
+          "minimum_reader_version": 131840,
+          "source_codec": "uncompressed",
+          "decoded_bytes": 702376,
+          "decoded_sha256": "5dbd55171d20fc34023177db0cc9a65fc0079de08936c78bef29a98dd93eee57",
+          "output_codec": "uncompressed",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "source profile"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 1404752,
+          "written": 702376,
+          "nodes": 97632
+        }
+      },
+      "candidate_bytes": 702376,
+      "accepted": false,
+      "seconds": 0.6701,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 1.3652932080003666,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14300725?format=original",
+      "project": "doi:10.7910/DVN/LMXE9B",
+      "source": "dataverse",
+      "name": "Data/Elections/Hessick/Public Dataset (Version 0) (RDS file for R).rds",
+      "format": "rds",
+      "sha256": "5dbd55171d20fc34023177db0cc9a65fc0079de08936c78bef29a98dd93eee57",
+      "metadata_checksum_verified": true,
+      "profile": "xz",
+      "input_bytes": 702376,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v2",
+          "kind": "RDS",
+          "serialization_version": 2,
+          "writer_version": 197889,
+          "minimum_reader_version": 131840,
+          "source_codec": "uncompressed",
+          "decoded_bytes": 702376,
+          "decoded_sha256": "5dbd55171d20fc34023177db0cc9a65fc0079de08936c78bef29a98dd93eee57",
+          "output_codec": "xz",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "R 2.10+"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 1404752,
+          "written": 73936,
+          "nodes": 97632
+        }
+      },
+      "candidate_bytes": 73936,
+      "accepted": true,
+      "seconds": 1.0887,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 0.7796522499993443,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/13234388?format=original",
+      "project": "doi:10.7910/DVN/4UR5DY",
+      "source": "dataverse",
+      "name": "data/_out/vs_dta.rds",
+      "format": "rds",
+      "sha256": "17efe0f3756bd416d43ea346b16c720abd8028cbd16bc5754ab513c4e3b6ce5a",
+      "metadata_checksum_verified": true,
+      "profile": "preserve",
+      "input_bytes": 7127786,
+      "error": "decoded payload exceeds bounded parser budget",
+      "accepted": false,
+      "candidate_bytes": 7127786,
+      "seconds": 0.4174
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/13234388?format=original",
+      "project": "doi:10.7910/DVN/4UR5DY",
+      "source": "dataverse",
+      "name": "data/_out/vs_dta.rds",
+      "format": "rds",
+      "sha256": "17efe0f3756bd416d43ea346b16c720abd8028cbd16bc5754ab513c4e3b6ce5a",
+      "metadata_checksum_verified": true,
+      "profile": "xz",
+      "input_bytes": 7127786,
+      "error": "decoded payload exceeds bounded parser budget",
+      "accepted": false,
+      "candidate_bytes": 7127786,
+      "seconds": 0.4125
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14298880?format=original",
+      "project": "doi:10.7910/DVN/J5AWOS",
+      "source": "dataverse",
+      "name": "data.RData",
+      "format": "rdata",
+      "sha256": "79e7e51d210fd11332f6c96a353a06baa2402f8d1f3266c27d9ab4c76c62b7b4",
+      "metadata_checksum_verified": true,
+      "profile": "preserve",
+      "input_bytes": 344306,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "workspace",
+          "serialization_version": 3,
+          "writer_version": 263169,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 3881307,
+          "decoded_sha256": "794bfbcc8ea19eac7c56a4644c67b496c47bd10c64b4a66387fb8621b9b7b4e4",
+          "output_codec": "gzip",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "source profile"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 7762614,
+          "written": 310506,
+          "nodes": 242108
+        }
+      },
+      "candidate_bytes": 310506,
+      "accepted": true,
+      "seconds": 4.6232,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 0.6403822090069298,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14298880?format=original",
+      "project": "doi:10.7910/DVN/J5AWOS",
+      "source": "dataverse",
+      "name": "data.RData",
+      "format": "rdata",
+      "sha256": "79e7e51d210fd11332f6c96a353a06baa2402f8d1f3266c27d9ab4c76c62b7b4",
+      "metadata_checksum_verified": true,
+      "profile": "xz",
+      "input_bytes": 344306,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "workspace",
+          "serialization_version": 3,
+          "writer_version": 263169,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 3881307,
+          "decoded_sha256": "794bfbcc8ea19eac7c56a4644c67b496c47bd10c64b4a66387fb8621b9b7b4e4",
+          "output_codec": "xz",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "R 2.10+"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 7762614,
+          "written": 143684,
+          "nodes": 242108
+        }
+      },
+      "candidate_bytes": 143684,
+      "accepted": true,
+      "seconds": 3.1897,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 0.7688692079973407,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14300753?format=original",
+      "project": "doi:10.7910/DVN/LMXE9B",
+      "source": "dataverse",
+      "name": "Data/Elections/va_election_dat.RDA",
+      "format": "rdata",
+      "sha256": "ac967d61a4c3e86f3f3a87e11c46f0e79a453e23d0e26d6df7605d72834e3b21",
+      "metadata_checksum_verified": true,
+      "profile": "preserve",
+      "input_bytes": 55064,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "workspace",
+          "serialization_version": 3,
+          "writer_version": 262149,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 582599,
+          "decoded_sha256": "e07678b65012eb0e24cfa2dfe32f0d3cda116bd91cc64d7be3392a516668d2d6",
+          "output_codec": "gzip",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "source profile"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 1165198,
+          "written": 52428,
+          "nodes": 28488
+        }
+      },
+      "candidate_bytes": 52428,
+      "accepted": true,
+      "seconds": 0.7252,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 1.4070810420089401,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14300753?format=original",
+      "project": "doi:10.7910/DVN/LMXE9B",
+      "source": "dataverse",
+      "name": "Data/Elections/va_election_dat.RDA",
+      "format": "rdata",
+      "sha256": "ac967d61a4c3e86f3f3a87e11c46f0e79a453e23d0e26d6df7605d72834e3b21",
+      "metadata_checksum_verified": true,
+      "profile": "xz",
+      "input_bytes": 55064,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "workspace",
+          "serialization_version": 3,
+          "writer_version": 262149,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 582599,
+          "decoded_sha256": "e07678b65012eb0e24cfa2dfe32f0d3cda116bd91cc64d7be3392a516668d2d6",
+          "output_codec": "xz",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "R 2.10+"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 1165198,
+          "written": 32868,
+          "nodes": 28488
+        }
+      },
+      "candidate_bytes": 32868,
+      "accepted": true,
+      "seconds": 0.6757,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 1.7063015419989824,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14230490?format=original",
+      "project": "doi:10.7910/DVN/MG5B5N",
+      "source": "dataverse",
+      "name": "catalist_year.RData",
+      "format": "rdata",
+      "sha256": "a3dfe50896d1acdbd014128dc89af77025431037646e82c1343d8d190acabbfb",
+      "metadata_checksum_verified": true,
+      "profile": "preserve",
+      "input_bytes": 1131,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "workspace",
+          "serialization_version": 3,
+          "writer_version": 263170,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 4531,
+          "decoded_sha256": "5e9dfb9e05fe59acf60e96730fea623238205944962844d2a39e657664198241",
+          "output_codec": "gzip",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "source profile"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 9062,
+          "written": 1132,
+          "nodes": 414
+        }
+      },
+      "candidate_bytes": 1132,
+      "accepted": false,
+      "seconds": 0.4218,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 1.011467749995063,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14230490?format=original",
+      "project": "doi:10.7910/DVN/MG5B5N",
+      "source": "dataverse",
+      "name": "catalist_year.RData",
+      "format": "rdata",
+      "sha256": "a3dfe50896d1acdbd014128dc89af77025431037646e82c1343d8d190acabbfb",
+      "metadata_checksum_verified": true,
+      "profile": "xz",
+      "input_bytes": 1131,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "workspace",
+          "serialization_version": 3,
+          "writer_version": 263170,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 4531,
+          "decoded_sha256": "5e9dfb9e05fe59acf60e96730fea623238205944962844d2a39e657664198241",
+          "output_codec": "xz",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "R 2.10+"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 9062,
+          "written": 1068,
+          "nodes": 414
+        }
+      },
+      "candidate_bytes": 1068,
+      "accepted": true,
+      "seconds": 0.551,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 0.7752477079920936,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://ndownloader.figshare.com/files/69625410",
+      "project": "34063794",
+      "source": "figshare",
+      "name": "tbl.plot.site.Rdata",
+      "format": "rdata",
+      "sha256": "215d7b33f8f570a12820c9c628466a2e30adb8b98f47e25840380757ee17ecd4",
+      "metadata_checksum_verified": true,
+      "profile": "preserve",
+      "input_bytes": 1207408,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "workspace",
+          "serialization_version": 3,
+          "writer_version": 262913,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 4486563,
+          "decoded_sha256": "77644fadb4314b824b0725cd29b7db401da105c4674337b909f368ccf23002ee",
+          "output_codec": "gzip",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "source profile"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 8973126,
+          "written": 1186403,
+          "nodes": 37390
+        }
+      },
+      "candidate_bytes": 1186403,
+      "accepted": true,
+      "seconds": 3.6684,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 0.8750390420027543,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://ndownloader.figshare.com/files/69625410",
+      "project": "34063794",
+      "source": "figshare",
+      "name": "tbl.plot.site.Rdata",
+      "format": "rdata",
+      "sha256": "215d7b33f8f570a12820c9c628466a2e30adb8b98f47e25840380757ee17ecd4",
+      "metadata_checksum_verified": true,
+      "profile": "xz",
+      "input_bytes": 1207408,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "workspace",
+          "serialization_version": 3,
+          "writer_version": 262913,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 4486563,
+          "decoded_sha256": "77644fadb4314b824b0725cd29b7db401da105c4674337b909f368ccf23002ee",
+          "output_codec": "xz",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "R 2.10+"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 8973126,
+          "written": 979832,
+          "nodes": 37390
+        }
+      },
+      "candidate_bytes": 979832,
+      "accepted": true,
+      "seconds": 3.2635,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 1.1186257920053322,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14230485?format=original",
+      "project": "doi:10.7910/DVN/MG5B5N",
+      "source": "dataverse",
+      "name": "cps_pooled.RData",
+      "format": "rdata",
+      "sha256": "21fdee74f5509229493c51a183c8bb30585a3071d70644d5b45f2a3e3ab5b072",
+      "metadata_checksum_verified": true,
+      "profile": "preserve",
+      "input_bytes": 852,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "workspace",
+          "serialization_version": 3,
+          "writer_version": 263170,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 2082,
+          "decoded_sha256": "6d75a0db543483e284e2915b02ff860cec67da094744df6b755ba4e4997fa717",
+          "output_codec": "gzip",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "source profile"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 4164,
+          "written": 850,
+          "nodes": 232
+        }
+      },
+      "candidate_bytes": 850,
+      "accepted": true,
+      "seconds": 0.2816,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 0.5417794160021003,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14230485?format=original",
+      "project": "doi:10.7910/DVN/MG5B5N",
+      "source": "dataverse",
+      "name": "cps_pooled.RData",
+      "format": "rdata",
+      "sha256": "21fdee74f5509229493c51a183c8bb30585a3071d70644d5b45f2a3e3ab5b072",
+      "metadata_checksum_verified": true,
+      "profile": "xz",
+      "input_bytes": 852,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "workspace",
+          "serialization_version": 3,
+          "writer_version": 263170,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 2082,
+          "decoded_sha256": "6d75a0db543483e284e2915b02ff860cec67da094744df6b755ba4e4997fa717",
+          "output_codec": "xz",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "R 2.10+"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 4164,
+          "written": 804,
+          "nodes": 232
+        }
+      },
+      "candidate_bytes": 804,
+      "accepted": true,
+      "seconds": 0.2819,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 0.6824418329924811,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14230486?format=original",
+      "project": "doi:10.7910/DVN/MG5B5N",
+      "source": "dataverse",
+      "name": "ces_house.RData",
+      "format": "rdata",
+      "sha256": "2308dfdfbda0bb5bab000beb63ff2bf0b3fc950a1cfdba16fa618ef0fcc04398",
+      "metadata_checksum_verified": true,
+      "profile": "preserve",
+      "input_bytes": 321508,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "workspace",
+          "serialization_version": 3,
+          "writer_version": 263170,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 1440591,
+          "decoded_sha256": "4ef5026e8293e3e5cbfe91996f04069689bdb507ec5e4181f2aa6b9d5314f93e",
+          "output_codec": "gzip",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "source profile"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 2881182,
+          "written": 305549,
+          "nodes": 106
+        }
+      },
+      "candidate_bytes": 305549,
+      "accepted": true,
+      "seconds": 2.2267,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 0.5202216250036145,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14230486?format=original",
+      "project": "doi:10.7910/DVN/MG5B5N",
+      "source": "dataverse",
+      "name": "ces_house.RData",
+      "format": "rdata",
+      "sha256": "2308dfdfbda0bb5bab000beb63ff2bf0b3fc950a1cfdba16fa618ef0fcc04398",
+      "metadata_checksum_verified": true,
+      "profile": "xz",
+      "input_bytes": 321508,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "XDR-v3",
+          "kind": "workspace",
+          "serialization_version": 3,
+          "writer_version": 263170,
+          "minimum_reader_version": 197888,
+          "source_codec": "gzip",
+          "decoded_bytes": 1440591,
+          "decoded_sha256": "4ef5026e8293e3e5cbfe91996f04069689bdb507ec5e4181f2aa6b9d5314f93e",
+          "output_codec": "xz",
+          "reader_validation": "trusted fixture matrix; passive runtime",
+          "wrapper_reader_floor": "R 2.10+"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 2881182,
+          "written": 215432,
+          "nodes": 106
+        }
+      },
+      "candidate_bytes": 215432,
+      "accepted": true,
+      "seconds": 1.3841,
+      "native_reader": {
+        "name": "Rscript 4.6.1",
+        "identical": true,
+        "seconds": 1.0470578750100685,
+        "error": ""
+      }
+    },
+    {
+      "url": "https://zenodo.org/api/records/23128916/files/shearstress_for_ar_en83.mat/content",
+      "project": "23128915",
+      "source": "zenodo",
+      "name": "shearstress_for_ar_en83.mat",
+      "format": "mat",
+      "sha256": "b73ef8232e2d7261f4cdc6a3bc7c4869d60e02c33cc744ed50fb6b1f22a27e65",
+      "metadata_checksum_verified": true,
+      "profile": "preserve",
+      "input_bytes": 2988368,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "MAT-Level-5-existing-compression",
+          "experimental": true,
+          "native_reader_gate": "MATLAB pending"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 11521728,
+          "written": 3026177,
+          "nodes": 72
+        }
+      },
+      "candidate_bytes": 3026177,
+      "accepted": false,
+      "seconds": 1.2681
+    },
+    {
+      "url": "https://zenodo.org/api/records/23128916/files/shearstress_for_ar_en101.mat/content",
+      "project": "23128915",
+      "source": "zenodo",
+      "name": "shearstress_for_ar_en101.mat",
+      "format": "mat",
+      "sha256": "36248719b7b678afde04b7cdb1d943b21802a448a8d2548609ec303f59a5b15c",
+      "metadata_checksum_verified": true,
+      "profile": "preserve",
+      "input_bytes": 2732277,
+      "result": {
+        "changed": true,
+        "details": {
+          "profile": "MAT-Level-5-existing-compression",
+          "experimental": true,
+          "native_reader_gate": "MATLAB pending"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 10596192,
+          "written": 2768661,
+          "nodes": 72
+        }
+      },
+      "candidate_bytes": 2768661,
+      "accepted": false,
+      "seconds": 1.0862
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14300617?format=original",
+      "project": "doi:10.7910/DVN/6F7GKE",
+      "source": "dataverse",
+      "name": "PVIOLPRQ2.SAV",
+      "format": "sav",
+      "sha256": "90eba79c1b9d9fa6627f9e48f9bae768c2970cb94fa5dee8769803d55b4f8a3e",
+      "metadata_checksum_verified": false,
+      "profile": "preserve",
+      "input_bytes": 105720,
+      "result": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "SAV-IEEE-bytecode",
+          "source_compression": 1,
+          "case_elements": 35200,
+          "dictionary_policy": "exact bytes",
+          "tested_reader": "ReadStat via pyreadstat 1.3.6"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 563200,
+          "written": 105728,
+          "nodes": 78386
+        }
+      },
+      "candidate_bytes": 105728,
+      "accepted": false,
+      "seconds": 0.4558,
+      "native_reader": {
+        "name": "ReadStat via pyreadstat 1.3.6",
+        "equal": true,
+        "seconds": 0.4936347500042757
+      }
+    },
+    {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14092649?format=original",
+      "project": "doi:10.7910/DVN/A9NUD7",
+      "source": "dataverse",
+      "name": "\u6570\u636e(2).sav",
+      "format": "sav",
+      "sha256": "4fc9aa54669c197b0e69bf834be412bd77789a9357720c06b3888afd2f68e03d",
+      "metadata_checksum_verified": false,
+      "profile": "preserve",
+      "input_bytes": 168744,
+      "result": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "SAV-IEEE-bytecode",
+          "source_compression": 1,
+          "case_elements": 118888,
+          "dictionary_policy": "exact bytes",
+          "tested_reader": "ReadStat via pyreadstat 1.3.6"
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 1902208,
+          "written": 168752,
+          "nodes": 247220
+        }
+      },
+      "candidate_bytes": 168752,
+      "accepted": false,
+      "seconds": 1.0699,
+      "native_reader": {
+        "name": "ReadStat via pyreadstat 1.3.6",
+        "equal": true,
+        "seconds": 0.04250995800248347
+      }
+    },
+    {
+      "url": "https://huggingface.co/datasets/danil-e/pinnacle-optuna-db/resolve/f386723c11fcf97dece376c4db7bb7a8eea0fbac/rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+      "project": "danil-e/pinnacle-optuna-db",
+      "source": "huggingface-datasets",
+      "name": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+      "format": "pt",
+      "sha256": "9046ca4eb4b17565407b85d289b0b8e9eb5ba10342df98328d7569d16241d462",
+      "metadata_checksum_verified": true,
+      "profile": "preserve-mmap",
+      "input_bytes": 195070,
+      "result": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "torch-save-ZIP-v3",
+          "compatibility": "preserve-mmap",
+          "mmap": true,
+          "tested_reader": "Python Torch 2.14.1",
+          "records": 21,
+          "user_objects_loaded": false
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 380438,
+          "written": 178389,
+          "nodes": 42
+        }
+      },
+      "candidate_bytes": 178389,
+      "accepted": true,
+      "seconds": 0.4385
+    },
+    {
+      "url": "https://huggingface.co/datasets/danil-e/pinnacle-optuna-db/resolve/f386723c11fcf97dece376c4db7bb7a8eea0fbac/rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+      "project": "danil-e/pinnacle-optuna-db",
+      "source": "huggingface-datasets",
+      "name": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+      "format": "pt",
+      "sha256": "9046ca4eb4b17565407b85d289b0b8e9eb5ba10342df98328d7569d16241d462",
+      "metadata_checksum_verified": true,
+      "profile": "load-only",
+      "input_bytes": 195070,
+      "result": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "torch-save-ZIP-v3",
+          "compatibility": "load-only",
+          "mmap": false,
+          "tested_reader": "Python Torch 2.14.1",
+          "records": 21,
+          "user_objects_loaded": false
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 380438,
+          "written": 158769,
+          "nodes": 42
+        }
+      },
+      "candidate_bytes": 158769,
+      "accepted": true,
+      "seconds": 0.4202
+    },
+    {
+      "url": "https://huggingface.co/datasets/sagels/new-dataset/resolve/77c7e42059c28fc2269899e0aba7117757e337c9/share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+      "project": "sagels/new-dataset",
+      "source": "huggingface-datasets",
+      "name": "share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+      "format": "pt",
+      "sha256": "4eb86eadfa758e7d6bdec5e75a6099291f5580ed7eab84408956ec7a3a1d3f54",
+      "metadata_checksum_verified": true,
+      "profile": "preserve-mmap",
+      "input_bytes": 15517,
+      "result": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "torch-save-ZIP-v3",
+          "compatibility": "preserve-mmap",
+          "mmap": true,
+          "tested_reader": "Python Torch 2.14.1",
+          "records": 8,
+          "user_objects_loaded": false
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 28078,
+          "written": 13973,
+          "nodes": 16
+        }
+      },
+      "candidate_bytes": 13973,
+      "accepted": true,
+      "seconds": 0.2836
+    },
+    {
+      "url": "https://huggingface.co/datasets/sagels/new-dataset/resolve/77c7e42059c28fc2269899e0aba7117757e337c9/share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+      "project": "sagels/new-dataset",
+      "source": "huggingface-datasets",
+      "name": "share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+      "format": "pt",
+      "sha256": "4eb86eadfa758e7d6bdec5e75a6099291f5580ed7eab84408956ec7a3a1d3f54",
+      "metadata_checksum_verified": true,
+      "profile": "load-only",
+      "input_bytes": 15517,
+      "result": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "torch-save-ZIP-v3",
+          "compatibility": "load-only",
+          "mmap": false,
+          "tested_reader": "Python Torch 2.14.1",
+          "records": 8,
+          "user_objects_loaded": false
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 28078,
+          "written": 12134,
+          "nodes": 16
+        }
+      },
+      "candidate_bytes": 12134,
+      "accepted": true,
+      "seconds": 0.4173
+    },
+    {
+      "url": "https://huggingface.co/BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/colbert_linear.pt",
+      "project": "BAAI/bge-m3",
+      "source": "huggingface-models",
+      "name": "colbert_linear.pt",
+      "format": "pt",
+      "sha256": "19bfbae397c2b7524158c919d0e9b19393c5639d098f0a66932c91ed8f5f9abb",
+      "metadata_checksum_verified": true,
+      "profile": "preserve-mmap",
+      "input_bytes": 2100674,
+      "result": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "torch-save-ZIP-v3",
+          "compatibility": "preserve-mmap",
+          "mmap": true,
+          "tested_reader": "Python Torch 2.14.1",
+          "records": 6,
+          "user_objects_loaded": false
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 4198980,
+          "written": 2100547,
+          "nodes": 12
+        }
+      },
+      "candidate_bytes": 2100547,
+      "accepted": true,
+      "seconds": 0.4253,
+      "native_reader": {
+        "name": "Torch 2.14.1; reviewed pure-tensor OrderedDict checkpoint",
+        "equal": true,
+        "seconds": 0.011310834001051262
+      }
+    },
+    {
+      "url": "https://huggingface.co/BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/colbert_linear.pt",
+      "project": "BAAI/bge-m3",
+      "source": "huggingface-models",
+      "name": "colbert_linear.pt",
+      "format": "pt",
+      "sha256": "19bfbae397c2b7524158c919d0e9b19393c5639d098f0a66932c91ed8f5f9abb",
+      "metadata_checksum_verified": true,
+      "profile": "load-only",
+      "input_bytes": 2100674,
+      "result": {
+        "equal": true,
+        "changed": true,
+        "details": {
+          "profile": "torch-save-ZIP-v3",
+          "compatibility": "load-only",
+          "mmap": false,
+          "tested_reader": "Python Torch 2.14.1",
+          "records": 6,
+          "user_objects_loaded": false
+        },
+        "ok": true,
+        "usage": {
+          "decoded": 4198980,
+          "written": 1915905,
+          "nodes": 12
+        }
+      },
+      "candidate_bytes": 1915905,
+      "accepted": true,
+      "seconds": 0.6947,
+      "native_reader": {
+        "name": "Torch 2.14.1; reviewed pure-tensor OrderedDict checkpoint",
+        "equal": true,
+        "seconds": 0.02301920899481047
+      }
+    }
+  ]
+}

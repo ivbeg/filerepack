@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-08",
+  "scope": "Local macOS arm64 combined OLE options under unchanged default limits",
+  "python": "3.13.7",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "native_sha256": "c5e4ae89e53bc7173570fa56285a86dc576ec0f90a53ea749a22b03cfc79e101",
+  "command": "venv/bin/filerepack bulk --dryrun --ole-recompress --ole-embedded-recompress --ole-deduplicate-images --json temp/_raw",
+  "format_max_memory_bytes": 268435456,
+  "format_timeout_seconds": 120,
+  "files": [
+    {
+      "file": "temp/_raw/crimemapping_v2.ppt",
+      "source_sha256": "ebdcda7f9fd78bb18a75d12b611da64e2f86a8ef3429043eff8708c5d2c99394",
+      "candidate_sha256": "adcb74cb7c590acbf6c4e68f2d461d8ca556d44212553acb4e37c2d6d9929b0c",
+      "candidate_bytes": 10668032,
+      "matches_rendered_candidate": true,
+      "officeart_contract_equal": true,
+      "source_unchanged": true,
+      "worker_usage": {
+        "decoded": 86090407,
+        "written": 32495473,
+        "nodes": 8961,
+        "peak_worker_rss_bytes": 133890048,
+        "seconds": 19.839418167000986
+      },
+      "source_bytes": 11301376,
+      "saved_bytes": 633344,
+      "saved_percent": 5.604131744665429,
+      "bulk_worker_usage": {
+        "decoded": 86090407,
+        "written": 32495473,
+        "nodes": 8961,
+        "peak_worker_rss_bytes": 135938048,
+        "seconds": 19.590464958004304
+      },
+      "strategy": "ole-officeart-recompression",
+      "embedded_skip": "embedded optimization requires a qualified macro-free DOC/XLS host",
+      "deduplication_skip": "PPT OLE records: unqualified record type/version: 1008"
+    },
+    {
+      "file": "temp/_raw/mapping_rus_v1.ppt",
+      "source_sha256": "997276d3ebbef628f74e7fbcf10875c60a3bd9a92b2a2ce1038b1b0508861a2a",
+      "candidate_sha256": "52c4a730e7ad9a02d37b11f84fc44f036b198afb58031bf4bb26a0bd4b363b2d",
+      "candidate_bytes": 24022016,
+      "matches_rendered_candidate": true,
+      "officeart_contract_equal": true,
+      "source_unchanged": true,
+      "worker_usage": {
+        "decoded": 269114099,
+        "written": 73365817,
+        "nodes": 19722,
+        "peak_worker_rss_bytes": 225640448,
+        "seconds": 25.802275541995186
+      },
+      "source_bytes": 25570304,
+      "saved_bytes": 1548288,
+      "saved_percent": 6.0550238276400625,
+      "bulk_worker_usage": {
+        "decoded": 269114099,
+        "written": 73365817,
+        "nodes": 19722,
+        "peak_worker_rss_bytes": 225689600,
+        "seconds": 25.861276333991555
+      },
+      "strategy": "ole-officeart-recompression",
+      "embedded_skip": "embedded optimization requires a qualified macro-free DOC/XLS host",
+      "deduplication_skip": "PPT OLE records: unqualified record type/version: 1008"
+    },
+    {
+      "file": "temp/_raw/ruslocal_v1.ppt",
+      "source_sha256": "f6e47aa2a7626d15d8bdb5afd2e99783906fcc44df067dd18e12758bc5767f41",
+      "candidate_sha256": "22d0e6a0ffb7e93b529f31ad2f1b538b7c1c4fba5e78a5c28bd39954d084b296",
+      "candidate_bytes": 18439168,
+      "matches_rendered_candidate": true,
+      "officeart_contract_equal": true,
+      "source_unchanged": true,
+      "worker_usage": {
+        "decoded": 263751487,
+        "written": 56562539,
+        "nodes": 15040,
+        "peak_worker_rss_bytes": 205832192,
+        "seconds": 14.661019541992573
+      },
+      "source_bytes": 19887104,
+      "saved_bytes": 1447936,
+      "saved_percent": 7.280778538695227,
+      "bulk_worker_usage": {
+        "decoded": 263751487,
+        "written": 56562539,
+        "nodes": 15040,
+        "peak_worker_rss_bytes": 205291520,
+        "seconds": 14.627665166000952
+      },
+      "strategy": "ole-officeart-recompression",
+      "embedded_skip": "embedded optimization requires a qualified macro-free DOC/XLS host",
+      "deduplication_skip": "PPT OLE records: unqualified record type/version: 1008"
+    }
+  ],
+  "local_regression_checks": {
+    "python_3_13_complete_ole_cfb": {
+      "passed": 662,
+      "skipped": 0,
+      "seconds": 154.76
+    },
+    "python_3_9_complete_ole_cfb": {
+      "passed": 661,
+      "skipped": 1,
+      "seconds": 123.42,
+      "skip": "Optional HWP Zopfli unavailable"
+    },
+    "rust": {
+      "passed": 5,
+      "fmt": "passed",
+      "clippy": "passed"
+    },
+    "ruff": "passed: filerepack and test",
+    "mypy": "passed: six changed Python modules",
+    "source_hashes_unchanged": true,
+    "candidates_match_previous_rendered_sha256": true,
+    "final_native_rebuild_subset": {
+      "passed": 268,
+      "skipped": 0,
+      "seconds": 91.21,
+      "suite": "test/test_ole.py test/test_cfb_names.py test/test_ole_ppt_notes.py test/test_ole_extended.py"
+    }
+  },
+  "publication_check": {
+    "status": "refused_by_existing_filesystem_metadata_guard",
+    "reason": "macOS automatically adds non-removable com.apple.provenance to the private destination although the supplied source has no xattrs",
+    "scope": "Private outfile API probe only; dryrun and isolated verified candidate creation passed; original inputs remain untouched",
+    "metadata_checks_relaxed": false
+  }
+}

@@ -11,6 +11,11 @@ filerepack bulk <directory> [OPTIONS]
 Walks a directory tree and runs the same packers as [`repack`](/commands/repack).
 Shared flags: [Shared CLI options](/commands/shared-options).
 
+`--output-dir` retains paths relative to the scanned directory and preserves
+source bytes. Workers share the library's collision and required-backup rules;
+use `--overwrite` explicitly for existing output/conversion targets. Invalid
+common options are rejected before workers start.
+
 `bulk` needs `--progress` to show a bar. Install `filerepack[progress]` for
 `rich`; otherwise progress prints every N files.
 
@@ -38,5 +43,16 @@ filerepack bulk ./video --include-ext mp4,mkv,webm,mov --wmv-lossless
 ```
 
 Exit code `2` means some files failed while `--continue-on-error` was set.
+
+Human output labels each file with `[SUCCESS]`, `[SKIPPED]`, `[ERROR]` or
+`[CANCELLED]`. The final summary explicitly states `[SUCCESS] Bulk processing
+completed.` or `[ERROR]`/`[CANCELLED]` when errors or interruption occurred.
+An unchanged file with no size reduction is a successful result. Report,
+checkpoint and scan failures also produce an error summary.
+
+`--quiet` hides successful output while retaining errors on stderr. JSON/CSV
+retain structured statuses without human labels on stdout. Exit codes remain
+0 for clean completion, 1 for fatal or fail-fast errors, 2 for errors under
+`--continue-on-error`, and 130 for user interruption.
 
 See [Bulk directories](/use-cases/bulk-directories).

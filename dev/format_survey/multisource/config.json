@@ -1,0 +1,29 @@
+{
+  "pilot_id": "2026-10-04",
+  "timeout_seconds": 20,
+  "workers": 5,
+  "zenodo": [
+    {"label": "recent", "query": "resource_type.type:dataset", "size": 100},
+    {"label": "before-october", "query": "resource_type.type:dataset AND publication_date:[2026-09-01 TO 2026-09-30]", "size": 100}
+  ],
+  "figshare": {"recent": 150},
+  "dataverse": {"recent": 150},
+  "huggingface": {"per_selection": 25, "max_tree_pages": 6},
+  "softwareheritage": {
+    "max_directories": 120,
+    "origins": [
+      "https://github.com/numpy/numpy",
+      "https://github.com/scipy/scipy",
+      "https://github.com/openpreserve/format-corpus"
+    ]
+  },
+  "internetarchive": {"per_type": 25, "types": ["data", "software", "texts"]},
+  "github_inventory": "dev/format_survey/runs/pilot-2026-10-04/inventory.jsonl",
+  "candidate_formats": [
+    "rds", "rdata", "rda", "mat", "root", "h5ad", "loom", "zarr",
+    "sav", "zsav", "dta", "grib", "grib2", "las", "laz", "bam", "cram",
+    "bcf", "vcf", "nii", "mha", "mhd", "glb", "ply", "obj", "stl",
+    "onnx", "safetensors", "gguf", "msgpack", "deb", "rpm", "djvu",
+    "wav", "aiff", "npy", "pkl", "pickle", "pcd", "vtu", "vtp", "vti", "vtk"
+  ]
+}

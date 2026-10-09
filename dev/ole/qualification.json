@@ -1,0 +1,826 @@
+{
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.7",
+  "writer": "filerepack-ole 0.1.0 (cfb 0.14.0)",
+  "olefile": "0.47",
+  "openmcdf": "3.3.0",
+  "corpus_commit": "12c3688d130035f3dc2ca2a0f50d929456435a93",
+  "peak_memory": "Not measured; fixed file/entry/depth bounds are enforced separately",
+  "cases": [
+    {
+      "name": "PngPicture.doc",
+      "source_bytes": 14336,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.020727,
+        "exit_code": 0,
+        "bytes": 14336,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.04751,
+        "exit_code": 0,
+        "bytes": 14336,
+        "savings_bytes": 0,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "modified"
+            ]
+          },
+          {
+            "path": [
+              "ObjectPool"
+            ],
+            "fields": [
+              "created",
+              "modified"
+            ]
+          }
+        ]
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "081f0bd593fe84ff3c602956d15973bcee2a4a486c3e0382835372558e2a3175"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "PngPicture.doc-holes",
+      "source_bytes": 57344,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.025198,
+        "exit_code": 0,
+        "bytes": 14848,
+        "savings_bytes": 42496,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.048375,
+        "exit_code": 0,
+        "bytes": 14848,
+        "savings_bytes": 42496,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "modified"
+            ]
+          },
+          {
+            "path": [
+              "ObjectPool"
+            ],
+            "fields": [
+              "created",
+              "modified"
+            ]
+          },
+          {
+            "path": [
+              "opaque metadata"
+            ],
+            "fields": [
+              "clsid",
+              "state",
+              "created",
+              "modified"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "SampleSS.xls",
+      "source_bytes": 17408,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.013498,
+        "exit_code": 0,
+        "bytes": 17408,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.044897,
+        "exit_code": 0,
+        "bytes": 17408,
+        "savings_bytes": 0,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          }
+        ]
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "8b9be98a5c2218eefcb255a991abc63e30c45d1d694b8ecfee7bd9b664dfc295"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "dd6514b6b811fb4baaf68b006270d26d47dda19f7a24352eb9e4be869cfb9265"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "SampleSS.xls-holes",
+      "source_bytes": 59392,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.021264,
+        "exit_code": 0,
+        "bytes": 17408,
+        "savings_bytes": 41984,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.046646,
+        "exit_code": 0,
+        "bytes": 17408,
+        "savings_bytes": 41984,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          },
+          {
+            "path": [
+              "opaque metadata"
+            ],
+            "fields": [
+              "clsid",
+              "state",
+              "created",
+              "modified"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "SampleShow.ppt",
+      "source_bytes": 125440,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.014897,
+        "exit_code": 0,
+        "bytes": 124928,
+        "savings_bytes": 512,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.049609,
+        "exit_code": 0,
+        "bytes": 124928,
+        "savings_bytes": 512,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          }
+        ]
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "4517689eb9d565219c637835f2b55e1a4423f3b8f8c3aa9d64df6452e4a6c726"
+          },
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "d6f6449ab8b244b0faf76621a43eb61e5090a14ab39771ff9e875b2e09d4a1b3"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "SampleShow.ppt-holes",
+      "source_bytes": 166912,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.024656,
+        "exit_code": 0,
+        "bytes": 124928,
+        "savings_bytes": 41984,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.047016,
+        "exit_code": 0,
+        "bytes": 124928,
+        "savings_bytes": 41984,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          },
+          {
+            "path": [
+              "opaque metadata"
+            ],
+            "fields": [
+              "clsid",
+              "state",
+              "created",
+              "modified"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "Simple.xls",
+      "source_bytes": 13824,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.012193,
+        "exit_code": 0,
+        "bytes": 13824,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.045628,
+        "exit_code": 0,
+        "bytes": 13824,
+        "savings_bytes": 0,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          }
+        ]
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "42ae873cf36a9fc123bbe83838f50dac0ef2e289fa15a4bdf32fba4cc5f6a55e"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "Simple.xls-holes",
+      "source_bytes": 55296,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.013191,
+        "exit_code": 0,
+        "bytes": 14336,
+        "savings_bytes": 40960,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.046839,
+        "exit_code": 0,
+        "bytes": 14336,
+        "savings_bytes": 40960,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          },
+          {
+            "path": [
+              "opaque metadata"
+            ],
+            "fields": [
+              "clsid",
+              "state",
+              "created",
+              "modified"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "SimpleWithFormula.xls",
+      "source_bytes": 13824,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.012617,
+        "exit_code": 0,
+        "bytes": 13824,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.044232,
+        "exit_code": 0,
+        "bytes": 13824,
+        "savings_bytes": 0,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          }
+        ]
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "ff4602d5977f669c578a4d8c6803ef1b50ad980c38736e68538ee889cdea3947"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "SimpleWithFormula.xls-holes",
+      "source_bytes": 55296,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.016863,
+        "exit_code": 0,
+        "bytes": 14336,
+        "savings_bytes": 40960,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.050714,
+        "exit_code": 0,
+        "bytes": 14336,
+        "savings_bytes": 40960,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          },
+          {
+            "path": [
+              "opaque metadata"
+            ],
+            "fields": [
+              "clsid",
+              "state",
+              "created",
+              "modified"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "WithChart.xls",
+      "source_bytes": 20992,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.016364,
+        "exit_code": 0,
+        "bytes": 20992,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.051818,
+        "exit_code": 0,
+        "bytes": 20992,
+        "savings_bytes": 0,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          }
+        ]
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "aae1acafcdababbf0ea917b9867ca310a6916a18f6f26cfb02a06cb0fdbc6057"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "cad049d37084131700ef532282288c9b34ad75c1c075090235e186b453e296a5"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "WithChart.xls-holes",
+      "source_bytes": 62976,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.02774,
+        "exit_code": 0,
+        "bytes": 20992,
+        "savings_bytes": 41984,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.048127,
+        "exit_code": 0,
+        "bytes": 20992,
+        "savings_bytes": 41984,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          },
+          {
+            "path": [
+              "opaque metadata"
+            ],
+            "fields": [
+              "clsid",
+              "state",
+              "created",
+              "modified"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "ole2-embedding-2003.ppt",
+      "source_bytes": 40448,
+      "free_regular_bytes_estimate": 2560,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.017189,
+        "exit_code": 0,
+        "bytes": 37888,
+        "savings_bytes": 2560,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.049774,
+        "exit_code": 0,
+        "bytes": 37888,
+        "savings_bytes": 2560,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          }
+        ]
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "ole2-embedding-2003.ppt-holes",
+      "source_bytes": 80384,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.031142,
+        "exit_code": 0,
+        "bytes": 37888,
+        "savings_bytes": 42496,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.063766,
+        "exit_code": 0,
+        "bytes": 37888,
+        "savings_bytes": 42496,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          },
+          {
+            "path": [
+              "opaque metadata"
+            ],
+            "fields": [
+              "clsid",
+              "state",
+              "created",
+              "modified"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "simple.doc",
+      "source_bytes": 19456,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.014336,
+        "exit_code": 0,
+        "bytes": 19456,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.055833,
+        "exit_code": 0,
+        "bytes": 19456,
+        "savings_bytes": 0,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          },
+          {
+            "path": [
+              "ObjectPool"
+            ],
+            "fields": [
+              "created",
+              "modified"
+            ]
+          }
+        ]
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "c63cdaf5a2454c5ae6695d1b3d49ef94710c680650a63ab309d8d2513db3f5ad"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "simple.doc-holes",
+      "source_bytes": 60416,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.016863,
+        "exit_code": 0,
+        "bytes": 19456,
+        "savings_bytes": 40960,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.048567,
+        "exit_code": 0,
+        "bytes": 19456,
+        "savings_bytes": 40960,
+        "manifest_equal": false,
+        "differences": [
+          {
+            "path": [],
+            "fields": [
+              "clsid",
+              "modified"
+            ]
+          },
+          {
+            "path": [
+              "ObjectPool"
+            ],
+            "fields": [
+              "created",
+              "modified"
+            ]
+          },
+          {
+            "path": [
+              "opaque metadata"
+            ],
+            "fields": [
+              "clsid",
+              "state",
+              "created",
+              "modified"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "word_with_embeded.doc",
+      "source_bytes": 117248,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.028568,
+        "exit_code": 0,
+        "bytes": 117248,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.047309,
+        "exit_code": 0,
+        "bytes": 117248,
+        "savings_bytes": 0,
+        "manifest_equal": false,
+        "error": "incorrect OLE sector index for empty stream"
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "word_with_embeded.doc-holes",
+      "source_bytes": 165888,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.031926,
+        "exit_code": 0,
+        "bytes": 117248,
+        "savings_bytes": 48640,
+        "manifest_equal": true
+      },
+      "openmcdf": {
+        "seconds": 0.058071,
+        "exit_code": 0,
+        "bytes": 117248,
+        "savings_bytes": 48640,
+        "manifest_equal": false,
+        "error": "incorrect OLE sector index for empty stream"
+      }
+    }
+  ],
+  "skips": [
+    {
+      "name": "PasswordProtected.doc",
+      "reason": "Encrypted/obfuscated Word document"
+    },
+    {
+      "name": "Password_Protected-hello.ppt",
+      "reason": "Encrypted PowerPoint document"
+    },
+    {
+      "name": "SimpleMacro.doc",
+      "reason": "VBA signature status is not qualified; macro document skipped"
+    },
+    {
+      "name": "SimpleMacro.ppt",
+      "reason": "PowerPoint VBA/encryption is not qualified"
+    },
+    {
+      "name": "WithEmbeddedObjects.xls",
+      "reason": "OLE: unsupported root storage"
+    },
+    {
+      "name": "external_name.xls",
+      "reason": "VBA signature status is not qualified; macro document skipped"
+    },
+    {
+      "name": "password.xls",
+      "reason": "Encrypted/obfuscated Excel workbook (FilePass)"
+    },
+    {
+      "name": "pictures.ppt",
+      "reason": "OLE: FAT sector marker mismatch"
+    },
+    {
+      "name": "pictures_escher.doc",
+      "reason": "OLE: storage contains stream allocation fields"
+    }
+  ],
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "rasterizer": "pdftoppm version 26.05.0"
+}

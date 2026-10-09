@@ -1,0 +1,3862 @@
+[
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data.pkl",
+    "decoded_bytes": 18852,
+    "compressed_bytes": 18852,
+    "crc32": "65f6fd31",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/.format_version",
+    "decoded_bytes": 1,
+    "compressed_bytes": 1,
+    "crc32": "83dcefb7",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/.storage_alignment",
+    "decoded_bytes": 2,
+    "compressed_bytes": 2,
+    "crc32": "e971773f",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/byteorder",
+    "decoded_bytes": 6,
+    "compressed_bytes": 6,
+    "crc32": "19e33d85",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/0",
+    "decoded_bytes": 800,
+    "compressed_bytes": 800,
+    "crc32": "49f539e4",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/1",
+    "decoded_bytes": 400,
+    "compressed_bytes": 400,
+    "crc32": "fd3ff567",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/2",
+    "decoded_bytes": 40000,
+    "compressed_bytes": 40000,
+    "crc32": "b340abfb",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/3",
+    "decoded_bytes": 400,
+    "compressed_bytes": 400,
+    "crc32": "415a5275",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/4",
+    "decoded_bytes": 40000,
+    "compressed_bytes": 40000,
+    "crc32": "d63a887c",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/5",
+    "decoded_bytes": 400,
+    "compressed_bytes": 400,
+    "crc32": "719dbabf",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/6",
+    "decoded_bytes": 40000,
+    "compressed_bytes": 40000,
+    "crc32": "8b3ac02b",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/7",
+    "decoded_bytes": 400,
+    "compressed_bytes": 400,
+    "crc32": "272f0d3b",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/8",
+    "decoded_bytes": 40000,
+    "compressed_bytes": 40000,
+    "crc32": "1ad8c686",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/9",
+    "decoded_bytes": 400,
+    "compressed_bytes": 400,
+    "crc32": "92c6c315",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/10",
+    "decoded_bytes": 400,
+    "compressed_bytes": 400,
+    "crc32": "4ff0a2ab",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/11",
+    "decoded_bytes": 4,
+    "compressed_bytes": 4,
+    "crc32": "0ce9519d",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/12",
+    "decoded_bytes": 2704,
+    "compressed_bytes": 2704,
+    "crc32": "a87910e4",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/13",
+    "decoded_bytes": 2704,
+    "compressed_bytes": 2704,
+    "crc32": "ffeca0f5",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/data/14",
+    "decoded_bytes": 2704,
+    "compressed_bytes": 2704,
+    "crc32": "842ec15b",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/version",
+    "decoded_bytes": 2,
+    "compressed_bytes": 2,
+    "crc32": "55679ed1",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "danil-e/pinnacle-optuna-db",
+    "container": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+    "name": "ckpt_poissonboltzmann2d_n_qpb2d_t1al_s43_seed43/.data/serialization_id",
+    "decoded_bytes": 40,
+    "compressed_bytes": 40,
+    "crc32": "9b08f103",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "sagels/new-dataset",
+    "container": "share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+    "name": "rank13/data.pkl",
+    "decoded_bytes": 8916,
+    "compressed_bytes": 8916,
+    "crc32": "50e2f0b7",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "sagels/new-dataset",
+    "container": "share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+    "name": "rank13/.format_version",
+    "decoded_bytes": 1,
+    "compressed_bytes": 1,
+    "crc32": "83dcefb7",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "sagels/new-dataset",
+    "container": "share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+    "name": "rank13/.storage_alignment",
+    "decoded_bytes": 2,
+    "compressed_bytes": 2,
+    "crc32": "e971773f",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "sagels/new-dataset",
+    "container": "share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+    "name": "rank13/byteorder",
+    "decoded_bytes": 6,
+    "compressed_bytes": 6,
+    "crc32": "19e33d85",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "sagels/new-dataset",
+    "container": "share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+    "name": "rank13/data/0",
+    "decoded_bytes": 5056,
+    "compressed_bytes": 5056,
+    "crc32": "09085e28",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "sagels/new-dataset",
+    "container": "share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+    "name": "rank13/data/1",
+    "decoded_bytes": 16,
+    "compressed_bytes": 16,
+    "crc32": "3f4f3e87",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "sagels/new-dataset",
+    "container": "share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+    "name": "rank13/version",
+    "decoded_bytes": 2,
+    "compressed_bytes": 2,
+    "crc32": "55679ed1",
+    "method": 0
+  },
+  {
+    "source": "huggingface-datasets",
+    "project": "sagels/new-dataset",
+    "container": "share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+    "name": "rank13/.data/serialization_id",
+    "decoded_bytes": 40,
+    "compressed_bytes": 40,
+    "crc32": "2c0415ee",
+    "method": 0
+  },
+  {
+    "source": "huggingface-models",
+    "project": "BAAI/bge-m3",
+    "container": "colbert_linear.pt",
+    "name": "colbert_linear/data.pkl",
+    "decoded_bytes": 242,
+    "compressed_bytes": 242,
+    "crc32": "5ee82383",
+    "method": 0
+  },
+  {
+    "source": "huggingface-models",
+    "project": "BAAI/bge-m3",
+    "container": "colbert_linear.pt",
+    "name": "colbert_linear/byteorder",
+    "decoded_bytes": 6,
+    "compressed_bytes": 6,
+    "crc32": "19e33d85",
+    "method": 0
+  },
+  {
+    "source": "huggingface-models",
+    "project": "BAAI/bge-m3",
+    "container": "colbert_linear.pt",
+    "name": "colbert_linear/data/0",
+    "decoded_bytes": 2097152,
+    "compressed_bytes": 2097152,
+    "crc32": "b6d87935",
+    "method": 0
+  },
+  {
+    "source": "huggingface-models",
+    "project": "BAAI/bge-m3",
+    "container": "colbert_linear.pt",
+    "name": "colbert_linear/data/1",
+    "decoded_bytes": 2048,
+    "compressed_bytes": 2048,
+    "crc32": "073c625f",
+    "method": 0
+  },
+  {
+    "source": "huggingface-models",
+    "project": "BAAI/bge-m3",
+    "container": "colbert_linear.pt",
+    "name": "colbert_linear/version",
+    "decoded_bytes": 2,
+    "compressed_bytes": 2,
+    "crc32": "55679ed1",
+    "method": 0
+  },
+  {
+    "source": "huggingface-models",
+    "project": "BAAI/bge-m3",
+    "container": "colbert_linear.pt",
+    "name": "colbert_linear/.data/serialization_id",
+    "decoded_bytes": 40,
+    "compressed_bytes": 40,
+    "crc32": "a786f39e",
+    "method": 0
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "README_CODE.md",
+    "decoded_bytes": 2264,
+    "compressed_bytes": 1120,
+    "crc32": "8c7dd9fa",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/A1_distrito_huesca.csv",
+    "decoded_bytes": 6354,
+    "compressed_bytes": 1162,
+    "crc32": "25c2705e",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/A3_diccionario_partidos.csv",
+    "decoded_bytes": 18346,
+    "compressed_bytes": 3505,
+    "crc32": "a33add44",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/A3_evidencia_partidos.csv",
+    "decoded_bytes": 14266,
+    "compressed_bytes": 5113,
+    "crc32": "50f733e8",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/A3_fichas_partido.csv",
+    "decoded_bytes": 3400,
+    "compressed_bytes": 719,
+    "crc32": "3e41516b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/A3_fichas_partido_2.csv",
+    "decoded_bytes": 879,
+    "compressed_bytes": 474,
+    "crc32": "4e0b3aff",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/A3_partido_historico.csv",
+    "decoded_bytes": 1462,
+    "compressed_bytes": 436,
+    "crc32": "f5801206",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/A3_siglas_normalizadas.csv",
+    "decoded_bytes": 668,
+    "compressed_bytes": 305,
+    "crc32": "764f1fa2",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/A5_excepciones_ideologia.csv",
+    "decoded_bytes": 1375,
+    "compressed_bytes": 594,
+    "crc32": "22acb9b1",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/A5_por_diputado.csv",
+    "decoded_bytes": 26952,
+    "compressed_bytes": 3449,
+    "crc32": "919abf71",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/A8_erratas.csv",
+    "decoded_bytes": 57890,
+    "compressed_bytes": 16571,
+    "crc32": "34736934",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/A8_nombre_variantes.csv",
+    "decoded_bytes": 3352,
+    "compressed_bytes": 1394,
+    "crc32": "13be3805",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/A8_nombres.csv",
+    "decoded_bytes": 247929,
+    "compressed_bytes": 35892,
+    "crc32": "20fd3824",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/B1_firmas.csv",
+    "decoded_bytes": 12414,
+    "compressed_bytes": 2189,
+    "crc32": "127332e6",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/C_fechas.csv",
+    "decoded_bytes": 8436,
+    "compressed_bytes": 713,
+    "crc32": "5f91d100",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/LyT_party_family.csv",
+    "decoded_bytes": 2695,
+    "compressed_bytes": 902,
+    "crc32": "4f46c3fe",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/M_decisiones_investigador.csv",
+    "decoded_bytes": 4758,
+    "compressed_bytes": 796,
+    "crc32": "32c3da45",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/M_decisiones_mapa.json",
+    "decoded_bytes": 8860,
+    "compressed_bytes": 2082,
+    "crc32": "63f564a1",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/M_pendientes_investigador.csv",
+    "decoded_bytes": 19,
+    "compressed_bytes": 21,
+    "crc32": "7ac1e473",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/S_decisiones_aplicadas.csv",
+    "decoded_bytes": 7390,
+    "compressed_bytes": 1593,
+    "crc32": "f2918931",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/S_decisiones_investigador.csv",
+    "decoded_bytes": 3798,
+    "compressed_bytes": 988,
+    "crc32": "85cb2d07",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/S_fronteras_evidencia.csv",
+    "decoded_bytes": 1002,
+    "compressed_bytes": 576,
+    "crc32": "6650d2d0",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/S_pendientes_investigador.csv",
+    "decoded_bytes": 12805,
+    "compressed_bytes": 867,
+    "crc32": "aaefa951",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/correcciones/S_revision.csv",
+    "decoded_bytes": 24529,
+    "compressed_bytes": 2756,
+    "crc32": "f0fff344",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/errores_luz_y_taquigrafos/registro_manual.csv",
+    "decoded_bytes": 9229,
+    "compressed_bytes": 4002,
+    "crc32": "d023dd79",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/S_consenso.csv",
+    "decoded_bytes": 798140,
+    "compressed_bytes": 215108,
+    "crc32": "48953c37",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/S_duplicados_candidatos.csv",
+    "decoded_bytes": 4408,
+    "compressed_bytes": 888,
+    "crc32": "2b711b92",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/S_hibrido.csv",
+    "decoded_bytes": 75322,
+    "compressed_bytes": 5683,
+    "crc32": "cc06c457",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/S_tipo_reglas.csv",
+    "decoded_bytes": 33876,
+    "compressed_bytes": 4909,
+    "crc32": "203ea855",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A3_partidos/minimax.json",
+    "decoded_bytes": 16535,
+    "compressed_bytes": 2899,
+    "crc32": "b620fec7",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A3_partidos/minimax_prueba.json",
+    "decoded_bytes": 2080,
+    "compressed_bytes": 765,
+    "crc32": "7de13366",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A3_partidos/minimax_raw.json",
+    "decoded_bytes": 32891,
+    "compressed_bytes": 7025,
+    "crc32": "fb512825",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A3_partidos/minimax_raw_prueba.json",
+    "decoded_bytes": 7012,
+    "compressed_bytes": 2467,
+    "crc32": "062f91df",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A3_partidos/opus.json",
+    "decoded_bytes": 17983,
+    "compressed_bytes": 4183,
+    "crc32": "408328d7",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A3_partidos/sonnet.json",
+    "decoded_bytes": 17191,
+    "compressed_bytes": 3868,
+    "crc32": "a52b3631",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A5_diputados/minimax.json",
+    "decoded_bytes": 16434,
+    "compressed_bytes": 2989,
+    "crc32": "15e00ed7",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A5_diputados/minimax_raw.json",
+    "decoded_bytes": 70569,
+    "compressed_bytes": 16486,
+    "crc32": "79a1b042",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A5_diputados/minimax_raw_fallido_sin_lotes.json",
+    "decoded_bytes": 241522,
+    "compressed_bytes": 5211,
+    "crc32": "13edba4e",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A5_diputados/opus.json",
+    "decoded_bytes": 14235,
+    "compressed_bytes": 2857,
+    "crc32": "570210d2",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A5_diputados/sonnet.json",
+    "decoded_bytes": 15357,
+    "compressed_bytes": 2990,
+    "crc32": "db40b1ce",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A8_erratas/minimax.json",
+    "decoded_bytes": 15463,
+    "compressed_bytes": 3250,
+    "crc32": "2c42ded0",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A8_erratas/minimax_raw.json",
+    "decoded_bytes": 50629,
+    "compressed_bytes": 12163,
+    "crc32": "dbc13375",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A8_erratas/opus.json",
+    "decoded_bytes": 13913,
+    "compressed_bytes": 3524,
+    "crc32": "5c424a2c",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/A8_erratas/sonnet.json",
+    "decoded_bytes": 14998,
+    "compressed_bytes": 3762,
+    "crc32": "4bd7d4ba",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/E/gemma4_12b.jsonl",
+    "decoded_bytes": 808635,
+    "compressed_bytes": 97738,
+    "crc32": "7971e9ec",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/E/gemma4_31b.jsonl",
+    "decoded_bytes": 807522,
+    "compressed_bytes": 99506,
+    "crc32": "1c2bb591",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/E/qwen3.8_27b.jsonl",
+    "decoded_bytes": 918784,
+    "compressed_bytes": 116701,
+    "crc32": "ed6549b1",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/minimax.json",
+    "decoded_bytes": 551242,
+    "compressed_bytes": 69292,
+    "crc32": "5af2a81c",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/minimax_raw.json",
+    "decoded_bytes": 7593404,
+    "compressed_bytes": 1912011,
+    "crc32": "fcd2c875",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/opus_hib_01.json",
+    "decoded_bytes": 26012,
+    "compressed_bytes": 5126,
+    "crc32": "6a0d5649",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/opus_hib_02.json",
+    "decoded_bytes": 25096,
+    "compressed_bytes": 4417,
+    "crc32": "751b4021",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/opus_hib_03.json",
+    "decoded_bytes": 25915,
+    "compressed_bytes": 5064,
+    "crc32": "da341019",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/opus_hib_04.json",
+    "decoded_bytes": 25749,
+    "compressed_bytes": 4987,
+    "crc32": "9585c93d",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/opus_hib_05.json",
+    "decoded_bytes": 22434,
+    "compressed_bytes": 4131,
+    "crc32": "a251f319",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/opus_hib_06.json",
+    "decoded_bytes": 21318,
+    "compressed_bytes": 3836,
+    "crc32": "a8159b35",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/opus_lote_01.json",
+    "decoded_bytes": 20710,
+    "compressed_bytes": 3212,
+    "crc32": "ebcf9f2e",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/opus_lote_02.json",
+    "decoded_bytes": 20504,
+    "compressed_bytes": 3171,
+    "crc32": "0c5b8cb2",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/opus_lote_03.json",
+    "decoded_bytes": 19412,
+    "compressed_bytes": 2945,
+    "crc32": "28b9fcc5",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/opus_lote_04.json",
+    "decoded_bytes": 21354,
+    "compressed_bytes": 3570,
+    "crc32": "077e7620",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/opus_lote_05.json",
+    "decoded_bytes": 22557,
+    "compressed_bytes": 3801,
+    "crc32": "8f36bd62",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/sonnet_hib_01.json",
+    "decoded_bytes": 26145,
+    "compressed_bytes": 4927,
+    "crc32": "ae630d13",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/sonnet_hib_02.json",
+    "decoded_bytes": 25177,
+    "compressed_bytes": 3750,
+    "crc32": "db5cc4f4",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/sonnet_hib_03.json",
+    "decoded_bytes": 25174,
+    "compressed_bytes": 4022,
+    "crc32": "f5c06195",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/sonnet_hib_04.json",
+    "decoded_bytes": 25788,
+    "compressed_bytes": 4950,
+    "crc32": "67e1e846",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/sonnet_hib_05.json",
+    "decoded_bytes": 22391,
+    "compressed_bytes": 3972,
+    "crc32": "5db996d7",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/sonnet_hib_06.json",
+    "decoded_bytes": 21656,
+    "compressed_bytes": 3798,
+    "crc32": "66f9bc95",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/sonnet_lote_01.json",
+    "decoded_bytes": 19753,
+    "compressed_bytes": 2909,
+    "crc32": "6cadfb2f",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/sonnet_lote_02.json",
+    "decoded_bytes": 19925,
+    "compressed_bytes": 2987,
+    "crc32": "dc2cc416",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/sonnet_lote_03.json",
+    "decoded_bytes": 19920,
+    "compressed_bytes": 3008,
+    "crc32": "3a3e60ff",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/sonnet_lote_04.json",
+    "decoded_bytes": 22780,
+    "compressed_bytes": 3211,
+    "crc32": "1fbfb53d",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_medidas/sonnet_lote_05.json",
+    "decoded_bytes": 22167,
+    "compressed_bytes": 2931,
+    "crc32": "b301704b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_prueba/minimax.json",
+    "decoded_bytes": 5960,
+    "compressed_bytes": 1244,
+    "crc32": "4de773b3",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_prueba/minimax_raw.json",
+    "decoded_bytes": 26644,
+    "compressed_bytes": 7779,
+    "crc32": "0c892804",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_prueba/opus.json",
+    "decoded_bytes": 6351,
+    "compressed_bytes": 1759,
+    "crc32": "a21df2ed",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_prueba/sonnet.json",
+    "decoded_bytes": 5850,
+    "compressed_bytes": 1480,
+    "crc32": "ea8323fe",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_prueba_v2/minimax.json",
+    "decoded_bytes": 6831,
+    "compressed_bytes": 1610,
+    "crc32": "cc2220c5",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_prueba_v2/minimax_raw.json",
+    "decoded_bytes": 47917,
+    "compressed_bytes": 12123,
+    "crc32": "99e235bd",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_prueba_v2/opus.json",
+    "decoded_bytes": 6418,
+    "compressed_bytes": 1809,
+    "crc32": "78a6d964",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_prueba_v2/sonnet.json",
+    "decoded_bytes": 6373,
+    "compressed_bytes": 1610,
+    "crc32": "133613eb",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_prueba_v3/minimax.json",
+    "decoded_bytes": 6574,
+    "compressed_bytes": 1473,
+    "crc32": "225fbde5",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_prueba_v3/minimax_raw.json",
+    "decoded_bytes": 22603,
+    "compressed_bytes": 7507,
+    "crc32": "fd655c8b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_prueba_v3/opus.json",
+    "decoded_bytes": 6598,
+    "compressed_bytes": 1889,
+    "crc32": "0b86b6f1",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/S_prueba_v3/sonnet.json",
+    "decoded_bytes": 7440,
+    "compressed_bytes": 1787,
+    "crc32": "5c7bf014",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/TD/gemma4_12b.jsonl",
+    "decoded_bytes": 2009825,
+    "compressed_bytes": 254344,
+    "crc32": "cc1357e9",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/TD/gemma4_31b.jsonl",
+    "decoded_bytes": 2070487,
+    "compressed_bytes": 268882,
+    "crc32": "1720d446",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/TD/qwen3.8_27b.jsonl",
+    "decoded_bytes": 2162171,
+    "compressed_bytes": 279747,
+    "crc32": "628420f6",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/TD_piloto/gemma4_12b.jsonl",
+    "decoded_bytes": 43494,
+    "compressed_bytes": 6705,
+    "crc32": "c08a8fe1",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/TD_piloto/gemma4_31b.jsonl",
+    "decoded_bytes": 45710,
+    "compressed_bytes": 7223,
+    "crc32": "eb60369f",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/llm_raw/TD_piloto/qwen3.8_27b.jsonl",
+    "decoded_bytes": 47637,
+    "compressed_bytes": 7585,
+    "crc32": "9ec8478f",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/medidas_texto.csv",
+    "decoded_bytes": 4672012,
+    "compressed_bytes": 1024136,
+    "crc32": "019f3396",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/medidas_texto_v2.csv",
+    "decoded_bytes": 2834717,
+    "compressed_bytes": 889608,
+    "crc32": "3f2b7da3",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/metadata_cambios_aplicados.csv",
+    "decoded_bytes": 196435,
+    "compressed_bytes": 23736,
+    "crc32": "f938720e",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "data/revision/representative_metadata_rev.csv",
+    "decoded_bytes": 225334,
+    "compressed_bytes": 46343,
+    "crc32": "6df95b38",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "documents/CODEBOOK.md",
+    "decoded_bytes": 31236,
+    "compressed_bytes": 7973,
+    "crc32": "8a3d73c6",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "documents/METHODOLOGY.md",
+    "decoded_bytes": 78085,
+    "compressed_bytes": 27156,
+    "crc32": "bba304b8",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "documents/v3/CHANGELOG_v3.md",
+    "decoded_bytes": 4657,
+    "compressed_bytes": 1765,
+    "crc32": "16c56950",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "documents/v3/CODEBOOK_v3.md",
+    "decoded_bytes": 20455,
+    "compressed_bytes": 6360,
+    "crc32": "7ba319dd",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "documents/v3/DATAVERSE_METADATA_v3.md",
+    "decoded_bytes": 13482,
+    "compressed_bytes": 5512,
+    "crc32": "0ff4bd38",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "documents/v3/METHODOLOGY_v3_secciones.md",
+    "decoded_bytes": 17631,
+    "compressed_bytes": 6911,
+    "crc32": "e3250a68",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "documents/v3/README_v3.md",
+    "decoded_bytes": 12555,
+    "compressed_bytes": 4621,
+    "crc32": "75f11b39",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "documents/v3/REPRODUCIBILITY_GUIDE_v3.md",
+    "decoded_bytes": 8424,
+    "compressed_bytes": 3490,
+    "crc32": "3ba4d19a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "env/environment_snapshot.txt",
+    "decoded_bytes": 1199,
+    "compressed_bytes": 632,
+    "crc32": "45461261",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "env/python/pyproject.toml",
+    "decoded_bytes": 639,
+    "compressed_bytes": 373,
+    "crc32": "927ba68d",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "env/python/uv.lock",
+    "decoded_bytes": 36659,
+    "compressed_bytes": 11707,
+    "crc32": "ddabf00b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/A3_validacion_modelos.md",
+    "decoded_bytes": 8187,
+    "compressed_bytes": 1385,
+    "crc32": "fe912d8d",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/A5_desempate_evidencia.md",
+    "decoded_bytes": 32178,
+    "compressed_bytes": 11140,
+    "crc32": "393b3d7a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/A5_validacion_modelos.md",
+    "decoded_bytes": 8036,
+    "compressed_bytes": 1445,
+    "crc32": "9aa06956",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/A8_validacion_modelos.md",
+    "decoded_bytes": 6073,
+    "compressed_bytes": 1699,
+    "crc32": "8c55c18c",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/B_firmas.md",
+    "decoded_bytes": 552,
+    "compressed_bytes": 360,
+    "crc32": "581e92b1",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/C_fechas.md",
+    "decoded_bytes": 1039,
+    "compressed_bytes": 595,
+    "crc32": "47553a35",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/E_candidatos.md",
+    "decoded_bytes": 1348,
+    "compressed_bytes": 505,
+    "crc32": "e7aad5e5",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/E_consenso.md",
+    "decoded_bytes": 1383,
+    "compressed_bytes": 568,
+    "crc32": "ae2e5dcd",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/F_diff_plataforma.txt",
+    "decoded_bytes": 4767,
+    "compressed_bytes": 1645,
+    "crc32": "4cf410d8",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/G_codigo.md",
+    "decoded_bytes": 2203,
+    "compressed_bytes": 1160,
+    "crc32": "f748ab29",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/M1_base_medidas.md",
+    "decoded_bytes": 649,
+    "compressed_bytes": 400,
+    "crc32": "a951e2e3",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/M2_ensambla.md",
+    "decoded_bytes": 945,
+    "compressed_bytes": 522,
+    "crc32": "3eca742e",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/S_final.md",
+    "decoded_bytes": 1062,
+    "compressed_bytes": 548,
+    "crc32": "249e2cc0",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/S_parcial_validacion_modelos.md",
+    "decoded_bytes": 100327,
+    "compressed_bytes": 2688,
+    "crc32": "633f16dd",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/S_prueba_v2_validacion_modelos.md",
+    "decoded_bytes": 5880,
+    "compressed_bytes": 703,
+    "crc32": "d8761c4b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/S_prueba_v2b_validacion_modelos.md",
+    "decoded_bytes": 5881,
+    "compressed_bytes": 703,
+    "crc32": "e6328d60",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/S_prueba_v3_validacion_modelos.md",
+    "decoded_bytes": 5602,
+    "compressed_bytes": 737,
+    "crc32": "7a018bf1",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/S_prueba_validacion_modelos.md",
+    "decoded_bytes": 5795,
+    "compressed_bytes": 714,
+    "crc32": "062a453c",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/S_validacion_modelos.md",
+    "decoded_bytes": 210641,
+    "compressed_bytes": 5284,
+    "crc32": "d8d598b7",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/TD_consenso.md",
+    "decoded_bytes": 53736,
+    "compressed_bytes": 4250,
+    "crc32": "3448c804",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/TD_piloto.md",
+    "decoded_bytes": 7426,
+    "compressed_bytes": 2057,
+    "crc32": "d895cdc6",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/lyt_v3_docs.md",
+    "decoded_bytes": 2296,
+    "compressed_bytes": 1231,
+    "crc32": "f11683b0",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "logs/verificaciones/lyt_v3_verificacion.md",
+    "decoded_bytes": 1372,
+    "compressed_bytes": 784,
+    "crc32": "7e4518dc",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/diagnostico/errores_luz_y_taquigrafos.py",
+    "decoded_bytes": 15020,
+    "compressed_bytes": 5657,
+    "crc32": "83f06e61",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/legacy_v2/precalc_network_plataforma.py",
+    "decoded_bytes": 50993,
+    "compressed_bytes": 13833,
+    "crc32": "c0563623",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/A1_evidencia_huesca.py",
+    "decoded_bytes": 8324,
+    "compressed_bytes": 3455,
+    "crc32": "a11747e3",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/A3_consenso.py",
+    "decoded_bytes": 7703,
+    "compressed_bytes": 2449,
+    "crc32": "e88da0ee",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/A3_evidencia_partidos.py",
+    "decoded_bytes": 3021,
+    "compressed_bytes": 1354,
+    "crc32": "5069d125",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/A5_consenso.py",
+    "decoded_bytes": 6570,
+    "compressed_bytes": 2311,
+    "crc32": "1e5fc025",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/A5_evidencia_desempate.py",
+    "decoded_bytes": 5049,
+    "compressed_bytes": 2334,
+    "crc32": "f2dd2813",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/A5_evidencia_diputados.py",
+    "decoded_bytes": 4819,
+    "compressed_bytes": 1922,
+    "crc32": "0a07a8ec",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/A8_consenso.py",
+    "decoded_bytes": 2847,
+    "compressed_bytes": 1286,
+    "crc32": "6f2baec2",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/A8_evidencia_erratas.py",
+    "decoded_bytes": 2574,
+    "compressed_bytes": 1201,
+    "crc32": "e99dd1bf",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/A8_nombres.py",
+    "decoded_bytes": 13835,
+    "compressed_bytes": 5126,
+    "crc32": "162c35f4",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/B_firmas.py",
+    "decoded_bytes": 8937,
+    "compressed_bytes": 3414,
+    "crc32": "1ad8fa6a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/C_fechas.py",
+    "decoded_bytes": 6181,
+    "compressed_bytes": 2708,
+    "crc32": "5d259886",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/E_candidatos.py",
+    "decoded_bytes": 9359,
+    "compressed_bytes": 3710,
+    "crc32": "20ad34b3",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/E_consenso.py",
+    "decoded_bytes": 5204,
+    "compressed_bytes": 2016,
+    "crc32": "60739b51",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/E_entradas.py",
+    "decoded_bytes": 5420,
+    "compressed_bytes": 2424,
+    "crc32": "a69fc3a5",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/F_metricas.py",
+    "decoded_bytes": 53091,
+    "compressed_bytes": 14731,
+    "crc32": "6dc92e0a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/G_codigo.py",
+    "decoded_bytes": 6276,
+    "compressed_bytes": 2777,
+    "crc32": "45590428",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/G_docs.py",
+    "decoded_bytes": 19126,
+    "compressed_bytes": 7015,
+    "crc32": "6c310171",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/G_ensambla.py",
+    "decoded_bytes": 8977,
+    "compressed_bytes": 3208,
+    "crc32": "7145f6e3",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/M1_base_medidas.py",
+    "decoded_bytes": 6351,
+    "compressed_bytes": 2344,
+    "crc32": "73ca0512",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/M2_ensambla.py",
+    "decoded_bytes": 6594,
+    "compressed_bytes": 2226,
+    "crc32": "04a1b95a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/M_visor_pendientes.py",
+    "decoded_bytes": 3927,
+    "compressed_bytes": 1652,
+    "crc32": "3aea8c7a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/S_consenso_V.py",
+    "decoded_bytes": 9720,
+    "compressed_bytes": 3920,
+    "crc32": "7f8d56cd",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/S_decisiones.py",
+    "decoded_bytes": 8357,
+    "compressed_bytes": 3280,
+    "crc32": "e1717e5b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/S_entradas_V.py",
+    "decoded_bytes": 5320,
+    "compressed_bytes": 2386,
+    "crc32": "3f9f55d2",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/S_evalua_reglas.py",
+    "decoded_bytes": 3128,
+    "compressed_bytes": 1354,
+    "crc32": "153a40ff",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/S_final.py",
+    "decoded_bytes": 10319,
+    "compressed_bytes": 3160,
+    "crc32": "0d7c37bd",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/S_hibrido.py",
+    "decoded_bytes": 7341,
+    "compressed_bytes": 3064,
+    "crc32": "32d5a16a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/S_reglas_v2.py",
+    "decoded_bytes": 8268,
+    "compressed_bytes": 3412,
+    "crc32": "8adc0705",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/S_resuelve.py",
+    "decoded_bytes": 12705,
+    "compressed_bytes": 4576,
+    "crc32": "ace51560",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/S_texto_medidas.py",
+    "decoded_bytes": 18897,
+    "compressed_bytes": 6947,
+    "crc32": "7a029258",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/S_tipo_reglas.py",
+    "decoded_bytes": 4519,
+    "compressed_bytes": 1878,
+    "crc32": "d2a68b4f",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/S_visor_pendientes.py",
+    "decoded_bytes": 4489,
+    "compressed_bytes": 1911,
+    "crc32": "b5d7fe53",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/TD_E_lanza.sh",
+    "decoded_bytes": 1420,
+    "compressed_bytes": 708,
+    "crc32": "178c059a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/TD_consenso.py",
+    "decoded_bytes": 4704,
+    "compressed_bytes": 2006,
+    "crc32": "5b740bfd",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/TD_entradas.py",
+    "decoded_bytes": 3809,
+    "compressed_bytes": 1756,
+    "crc32": "a08c185e",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/aplica_correcciones_metadata.py",
+    "decoded_bytes": 7815,
+    "compressed_bytes": 2787,
+    "crc32": "4c2b373b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/llm_minimax.py",
+    "decoded_bytes": 10026,
+    "compressed_bytes": 3848,
+    "crc32": "9c0f0055",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/llm_ollama.py",
+    "decoded_bytes": 5353,
+    "compressed_bytes": 2303,
+    "crc32": "c26cb595",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/pipeline_medidas.sh",
+    "decoded_bytes": 2271,
+    "compressed_bytes": 970,
+    "crc32": "c564d653",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/plantillas/pendientes.html",
+    "decoded_bytes": 7747,
+    "compressed_bytes": 3240,
+    "crc32": "051fb34f",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/plantillas/pendientes_M.html",
+    "decoded_bytes": 6444,
+    "compressed_bytes": 2759,
+    "crc32": "d489b50d",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/prompts/A3_partidos.md",
+    "decoded_bytes": 3467,
+    "compressed_bytes": 1514,
+    "crc32": "04fb26f3",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/prompts/A5_diputados.md",
+    "decoded_bytes": 2287,
+    "compressed_bytes": 1155,
+    "crc32": "e191e87e",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/prompts/A5_permitidos.json",
+    "decoded_bytes": 393,
+    "compressed_bytes": 214,
+    "crc32": "32acacf8",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/prompts/A8_erratas.md",
+    "decoded_bytes": 2018,
+    "compressed_bytes": 1072,
+    "crc32": "0b3e7623",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/prompts/A8_permitidos.json",
+    "decoded_bytes": 90,
+    "compressed_bytes": 76,
+    "crc32": "92bdfd41",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/prompts/E_defensa.md",
+    "decoded_bytes": 1242,
+    "compressed_bytes": 675,
+    "crc32": "d114a9a5",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/prompts/E_esquema.json",
+    "decoded_bytes": 424,
+    "compressed_bytes": 179,
+    "crc32": "260bdfa7",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/prompts/S_medidas.md",
+    "decoded_bytes": 3665,
+    "compressed_bytes": 1737,
+    "crc32": "b9256458",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/prompts/S_permitidos.json",
+    "decoded_bytes": 453,
+    "compressed_bytes": 224,
+    "crc32": "f8002bf6",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/prompts/TD_esquema.json",
+    "decoded_bytes": 1138,
+    "compressed_bytes": 332,
+    "crc32": "1ae25232",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/prompts/TD_taxonomia.json",
+    "decoded_bytes": 5562,
+    "compressed_bytes": 2294,
+    "crc32": "1c17bea4",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "scripts/revision/prompts/TD_titulo_tema.md",
+    "decoded_bytes": 4805,
+    "compressed_bytes": 2352,
+    "crc32": "63e92a9f",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CGOCUS",
+    "container": "code_v3.zip",
+    "name": "CODE_MANIFEST.tsv",
+    "decoded_bytes": 20255,
+    "compressed_bytes": 9420,
+    "crc32": "400f1105",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "Data_Replication_Files_Retaliatory_Accountability/.Rhistory",
+    "decoded_bytes": 23994,
+    "compressed_bytes": 4495,
+    "crc32": "99c3739c",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/._.Rhistory",
+    "decoded_bytes": 163,
+    "compressed_bytes": 86,
+    "crc32": "008dc8bc",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "Data_Replication_Files_Retaliatory_Accountability/.DS_Store",
+    "decoded_bytes": 18436,
+    "compressed_bytes": 2179,
+    "crc32": "29b457bd",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/._.DS_Store",
+    "decoded_bytes": 120,
+    "compressed_bytes": 53,
+    "crc32": "38c0880b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/._logs",
+    "decoded_bytes": 163,
+    "compressed_bytes": 86,
+    "crc32": "008dc8bc",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "Data_Replication_Files_Retaliatory_Accountability/README.pdf",
+    "decoded_bytes": 209665,
+    "compressed_bytes": 193584,
+    "crc32": "168b1f13",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/._README.pdf",
+    "decoded_bytes": 333,
+    "compressed_bytes": 217,
+    "crc32": "54c06046",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "Data_Replication_Files_Retaliatory_Accountability/Tables/.DS_Store",
+    "decoded_bytes": 6148,
+    "compressed_bytes": 178,
+    "crc32": "6d88006a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/Tables/._.DS_Store",
+    "decoded_bytes": 120,
+    "compressed_bytes": 53,
+    "crc32": "38c0880b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "Data_Replication_Files_Retaliatory_Accountability/Replication Code/.DS_Store",
+    "decoded_bytes": 6148,
+    "compressed_bytes": 178,
+    "crc32": "6d88006a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/Replication Code/._.DS_Store",
+    "decoded_bytes": 120,
+    "compressed_bytes": 53,
+    "crc32": "38c0880b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "Data_Replication_Files_Retaliatory_Accountability/Replication Code/Do_Replication.do",
+    "decoded_bytes": 24570,
+    "compressed_bytes": 4256,
+    "crc32": "1d3b0b87",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/Replication Code/._Do_Replication.do",
+    "decoded_bytes": 635,
+    "compressed_bytes": 470,
+    "crc32": "408d01c9",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "Data_Replication_Files_Retaliatory_Accountability/Replication Code/Appendix.R",
+    "decoded_bytes": 20592,
+    "compressed_bytes": 4555,
+    "crc32": "85272f43",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/Replication Code/._Appendix.R",
+    "decoded_bytes": 319,
+    "compressed_bytes": 184,
+    "crc32": "e7e8e651",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "Data_Replication_Files_Retaliatory_Accountability/logs/.DS_Store",
+    "decoded_bytes": 6148,
+    "compressed_bytes": 178,
+    "crc32": "6d88006a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/logs/._.DS_Store",
+    "decoded_bytes": 120,
+    "compressed_bytes": 53,
+    "crc32": "38c0880b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "Data_Replication_Files_Retaliatory_Accountability/Figures/.DS_Store",
+    "decoded_bytes": 6148,
+    "compressed_bytes": 178,
+    "crc32": "6d88006a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/Figures/._.DS_Store",
+    "decoded_bytes": 120,
+    "compressed_bytes": 53,
+    "crc32": "38c0880b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "Data_Replication_Files_Retaliatory_Accountability/Data/Codebook.txt",
+    "decoded_bytes": 16589,
+    "compressed_bytes": 1702,
+    "crc32": "440d94b4",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/Data/._Codebook.txt",
+    "decoded_bytes": 220,
+    "compressed_bytes": 93,
+    "crc32": "ca8ef547",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "Data_Replication_Files_Retaliatory_Accountability/Data/.DS_Store",
+    "decoded_bytes": 8196,
+    "compressed_bytes": 1266,
+    "crc32": "55dadaf3",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/Data/._.DS_Store",
+    "decoded_bytes": 120,
+    "compressed_bytes": 53,
+    "crc32": "38c0880b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "Data_Replication_Files_Retaliatory_Accountability/Data/appendix_data.csv",
+    "decoded_bytes": 27687,
+    "compressed_bytes": 13135,
+    "crc32": "8ef9df33",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/Data/._appendix_data.csv",
+    "decoded_bytes": 333,
+    "compressed_bytes": 181,
+    "crc32": "c4c770ab",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "Data_Replication_Files_Retaliatory_Accountability/Data/Main_Data.dta",
+    "decoded_bytes": 23129,
+    "compressed_bytes": 5455,
+    "crc32": "a3593954",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/CXIPKL",
+    "container": "Data_Replication_Files_Retaliatory_Accountability.zip",
+    "name": "__MACOSX/Data_Replication_Files_Retaliatory_Accountability/Data/._Main_Data.dta",
+    "decoded_bytes": 220,
+    "compressed_bytes": 93,
+    "crc32": "ca8ef547",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/GGLKJD",
+    "container": "Replication_Package_MotBeliefsDelayedUncertaintyResolution.zip",
+    "name": "Replication_Package_MotBeliefsDelayedUncertaintyResolution-tbs/1-Data/codebook.xls",
+    "decoded_bytes": 13824,
+    "compressed_bytes": 3085,
+    "crc32": "4966128b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/GGLKJD",
+    "container": "Replication_Package_MotBeliefsDelayedUncertaintyResolution.zip",
+    "name": "Replication_Package_MotBeliefsDelayedUncertaintyResolution-tbs/1-Data/data.dta",
+    "decoded_bytes": 380243,
+    "compressed_bytes": 73833,
+    "crc32": "b373b6b9",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/GGLKJD",
+    "container": "Replication_Package_MotBeliefsDelayedUncertaintyResolution.zip",
+    "name": "Replication_Package_MotBeliefsDelayedUncertaintyResolution-tbs/1-Data/data_cleaned.dta",
+    "decoded_bytes": 100773,
+    "compressed_bytes": 15841,
+    "crc32": "5601eff3",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/GGLKJD",
+    "container": "Replication_Package_MotBeliefsDelayedUncertaintyResolution.zip",
+    "name": "Replication_Package_MotBeliefsDelayedUncertaintyResolution-tbs/1-Data/data_cleaned_excluded.dta",
+    "decoded_bytes": 85404,
+    "compressed_bytes": 13896,
+    "crc32": "adecc2ff",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/GGLKJD",
+    "container": "Replication_Package_MotBeliefsDelayedUncertaintyResolution.zip",
+    "name": "Replication_Package_MotBeliefsDelayedUncertaintyResolution-tbs/2-DoFiles/0_VariableDefinition.do",
+    "decoded_bytes": 48574,
+    "compressed_bytes": 9531,
+    "crc32": "3a192e62",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/GGLKJD",
+    "container": "Replication_Package_MotBeliefsDelayedUncertaintyResolution.zip",
+    "name": "Replication_Package_MotBeliefsDelayedUncertaintyResolution-tbs/2-DoFiles/1_MainAnalysis.do",
+    "decoded_bytes": 12192,
+    "compressed_bytes": 2588,
+    "crc32": "4da43207",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/GGLKJD",
+    "container": "Replication_Package_MotBeliefsDelayedUncertaintyResolution.zip",
+    "name": "Replication_Package_MotBeliefsDelayedUncertaintyResolution-tbs/2-DoFiles/2-AppendixAnalysis.do",
+    "decoded_bytes": 30273,
+    "compressed_bytes": 4557,
+    "crc32": "582ad5ac",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/GGLKJD",
+    "container": "Replication_Package_MotBeliefsDelayedUncertaintyResolution.zip",
+    "name": "Replication_Package_MotBeliefsDelayedUncertaintyResolution-tbs/2-DoFiles/3_LiteratureComparison.do",
+    "decoded_bytes": 21342,
+    "compressed_bytes": 3771,
+    "crc32": "71e46a03",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/GGLKJD",
+    "container": "Replication_Package_MotBeliefsDelayedUncertaintyResolution.zip",
+    "name": "Replication_Package_MotBeliefsDelayedUncertaintyResolution-tbs/READ ME.pdf",
+    "decoded_bytes": 255911,
+    "compressed_bytes": 244166,
+    "crc32": "4a77b6e4",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/tables/appendix_table_a1.tex",
+    "decoded_bytes": 1101,
+    "compressed_bytes": 571,
+    "crc32": "43213c81",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/tables/appendix_table_a3.tex",
+    "decoded_bytes": 855,
+    "compressed_bytes": 487,
+    "crc32": "ce071744",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/tables/appendix_table_a2.tex",
+    "decoded_bytes": 1095,
+    "compressed_bytes": 548,
+    "crc32": "2f575394",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/tables/appendix_table_a5.tex",
+    "decoded_bytes": 753,
+    "compressed_bytes": 407,
+    "crc32": "7fce9ad1",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/tables/appendix_table_a4.tex",
+    "decoded_bytes": 1543,
+    "compressed_bytes": 753,
+    "crc32": "954f0750",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/issue-term-tests.csv",
+    "decoded_bytes": 203,
+    "compressed_bytes": 157,
+    "crc32": "20963634",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/dec25_persuadable_issue_salience.csv",
+    "decoded_bytes": 1184,
+    "compressed_bytes": 548,
+    "crc32": "896793c2",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reported_voter_issue_preference_marginal_effects.csv",
+    "decoded_bytes": 3297,
+    "compressed_bytes": 1195,
+    "crc32": "e705fdcf",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/independent_with_leaners_pid7_composition.csv",
+    "decoded_bytes": 2309,
+    "compressed_bytes": 951,
+    "crc32": "833fcb13",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave_driver_block_means.csv",
+    "decoded_bytes": 1409,
+    "compressed_bytes": 613,
+    "crc32": "0a98bda7",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reg-dec25-coefs.csv",
+    "decoded_bytes": 2144,
+    "compressed_bytes": 1118,
+    "crc32": "fbe3b028",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reg-dec25-pid-coefs.csv",
+    "decoded_bytes": 904,
+    "compressed_bytes": 487,
+    "crc32": "576a9708",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave-term-tests.csv",
+    "decoded_bytes": 185,
+    "compressed_bytes": 146,
+    "crc32": "73d672bf",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave_driver_rebound_contrib.csv",
+    "decoded_bytes": 396,
+    "compressed_bytes": 270,
+    "crc32": "c42b7870",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_common_movement_tests.csv",
+    "decoded_bytes": 760,
+    "compressed_bytes": 322,
+    "crc32": "3aa833c7",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_weight_sensitivity_summary.csv",
+    "decoded_bytes": 363,
+    "compressed_bytes": 245,
+    "crc32": "7b141ea0",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reg-wave-coefs.csv",
+    "decoded_bytes": 775,
+    "compressed_bytes": 380,
+    "crc32": "e16fc0cc",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reported_turnout_congressional_preference_differences.csv",
+    "decoded_bytes": 917,
+    "compressed_bytes": 470,
+    "crc32": "cf8afca1",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave_subgroup_ranges.csv",
+    "decoded_bytes": 338,
+    "compressed_bytes": 207,
+    "crc32": "04192725",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_turnout_by_party.csv",
+    "decoded_bytes": 994,
+    "compressed_bytes": 466,
+    "crc32": "db52c40d",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reported_turnout_issue_priority_joint_tests.csv",
+    "decoded_bytes": 377,
+    "compressed_bytes": 251,
+    "crc32": "30baa569",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_turnout_gaps.csv",
+    "decoded_bytes": 247,
+    "compressed_bytes": 174,
+    "crc32": "36a7a045",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/gcb_two_party_vs_registered_vote_rate.csv",
+    "decoded_bytes": 795,
+    "compressed_bytes": 370,
+    "crc32": "c273e7a7",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reported_turnout_issue_priority_adjusted_marginal_effects.csv",
+    "decoded_bytes": 521,
+    "compressed_bytes": 293,
+    "crc32": "1a440586",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave_driver_definition_summary.csv",
+    "decoded_bytes": 643,
+    "compressed_bytes": 366,
+    "crc32": "100ad60b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_weight_design_2020.csv",
+    "decoded_bytes": 330,
+    "compressed_bytes": 205,
+    "crc32": "56c42930",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_thermostatic_summary.csv",
+    "decoded_bytes": 141,
+    "compressed_bytes": 94,
+    "crc32": "4c5a0e50",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reg-dec25-issueraw-pid-robust.csv",
+    "decoded_bytes": 1557,
+    "compressed_bytes": 733,
+    "crc32": "8e30c553",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave_diagnostics.csv",
+    "decoded_bytes": 865,
+    "compressed_bytes": 456,
+    "crc32": "04f79790",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_composition_decomposition.csv",
+    "decoded_bytes": 4562,
+    "compressed_bytes": 1336,
+    "crc32": "b34d678c",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_ballot_availability.csv",
+    "decoded_bytes": 485,
+    "compressed_bytes": 296,
+    "crc32": "96ea7ef2",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_turnout_2022_counterfactual_cells.csv",
+    "decoded_bytes": 788,
+    "compressed_bytes": 412,
+    "crc32": "0c707227",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/gcb_turnout_item_availability.csv",
+    "decoded_bytes": 1527,
+    "compressed_bytes": 493,
+    "crc32": "811a616f",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_turnout_2022_counterfactual.csv",
+    "decoded_bytes": 197,
+    "compressed_bytes": 136,
+    "crc32": "642aa395",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave_driver_definition_contrib.csv",
+    "decoded_bytes": 1229,
+    "compressed_bytes": 535,
+    "crc32": "f34bfbb4",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_likely_voter_sensitivity.csv",
+    "decoded_bytes": 769,
+    "compressed_bytes": 380,
+    "crc32": "8bd7fa08",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/gcb_two_party_vs_registered_vote_rate_differences.csv",
+    "decoded_bytes": 306,
+    "compressed_bytes": 193,
+    "crc32": "d940752c",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reg-wave-coefs-simple-robust.csv",
+    "decoded_bytes": 617,
+    "compressed_bytes": 347,
+    "crc32": "85045625",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reported_turnout_issue_priority_adjusted_joint_test.csv",
+    "decoded_bytes": 134,
+    "compressed_bytes": 113,
+    "crc32": "aca78ac7",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/true_independent_gcb_tests.csv",
+    "decoded_bytes": 461,
+    "compressed_bytes": 285,
+    "crc32": "2551b433",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_party_composition_endpoint.csv",
+    "decoded_bytes": 238,
+    "compressed_bytes": 174,
+    "crc32": "16a31ab8",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_thermostatic_contrast.csv",
+    "decoded_bytes": 465,
+    "compressed_bytes": 244,
+    "crc32": "2eb74fb9",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reported_turnout_ballot_overlap.csv",
+    "decoded_bytes": 320,
+    "compressed_bytes": 165,
+    "crc32": "e9825cfa",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_issue_priority_shares.csv",
+    "decoded_bytes": 1909,
+    "compressed_bytes": 610,
+    "crc32": "aeacd315",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reg-dec25-issue7-pid-robust.csv",
+    "decoded_bytes": 821,
+    "compressed_bytes": 418,
+    "crc32": "7b6895f0",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/true_independent_gcb_over_time.csv",
+    "decoded_bytes": 1251,
+    "compressed_bytes": 668,
+    "crc32": "6fd6237c",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/independent_definition_gcb_tests.csv",
+    "decoded_bytes": 693,
+    "compressed_bytes": 371,
+    "crc32": "05daaf18",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave_coefficient_paths.csv",
+    "decoded_bytes": 3893,
+    "compressed_bytes": 1503,
+    "crc32": "2e292e61",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/dec25_persuadable_issue_vote.csv",
+    "decoded_bytes": 608,
+    "compressed_bytes": 383,
+    "crc32": "f1faed99",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_composition_decomposition_bootstrap.csv",
+    "decoded_bytes": 807,
+    "compressed_bytes": 390,
+    "crc32": "0b3c5571",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reported_voter_issue_turnout_interaction_test.csv",
+    "decoded_bytes": 289,
+    "compressed_bytes": 203,
+    "crc32": "c3927d26",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_seat_vote_benchmark.csv",
+    "decoded_bytes": 512,
+    "compressed_bytes": 256,
+    "crc32": "f80a01b2",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_party_group_preferences.csv",
+    "decoded_bytes": 1510,
+    "compressed_bytes": 707,
+    "crc32": "fc107b95",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reported_voter_issue_preference_cells.csv",
+    "decoded_bytes": 877,
+    "compressed_bytes": 352,
+    "crc32": "16daf2c0",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/independent_with_leaners_gcb_over_time.csv",
+    "decoded_bytes": 1270,
+    "compressed_bytes": 672,
+    "crc32": "b6df48a6",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_issue_priority_marginal_effects.csv",
+    "decoded_bytes": 2666,
+    "compressed_bytes": 1036,
+    "crc32": "9d70aa4a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_registration_check.csv",
+    "decoded_bytes": 201,
+    "compressed_bytes": 123,
+    "crc32": "13f7e7da",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave_subgroup_stability.csv",
+    "decoded_bytes": 2843,
+    "compressed_bytes": 1115,
+    "crc32": "00d41aa1",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reported_voter_issue_preference_joint_tests.csv",
+    "decoded_bytes": 681,
+    "compressed_bytes": 332,
+    "crc32": "db445215",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/dec25-profile-preds.csv",
+    "decoded_bytes": 635,
+    "compressed_bytes": 356,
+    "crc32": "928552c9",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave_coefficient_stability_tests.csv",
+    "decoded_bytes": 244,
+    "compressed_bytes": 172,
+    "crc32": "040fecb8",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reported_turnout_profile_differences.csv",
+    "decoded_bytes": 5118,
+    "compressed_bytes": 2187,
+    "crc32": "018257c9",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave_driver_definition_tests.csv",
+    "decoded_bytes": 1349,
+    "compressed_bytes": 437,
+    "crc32": "536da95a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_party_composition_three_category.csv",
+    "decoded_bytes": 1168,
+    "compressed_bytes": 531,
+    "crc32": "a561187c",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_recent_house_margins.csv",
+    "decoded_bytes": 110,
+    "compressed_bytes": 85,
+    "crc32": "f01ae6e1",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave_driver_regression_tests.csv",
+    "decoded_bytes": 317,
+    "compressed_bytes": 201,
+    "crc32": "8713fb1a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave_dem_share_ci.csv",
+    "decoded_bytes": 552,
+    "compressed_bytes": 308,
+    "crc32": "2d8477f4",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_persuadable_definition_results.csv",
+    "decoded_bytes": 1531,
+    "compressed_bytes": 750,
+    "crc32": "d6658bba",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/gcb_turnout_unidentified_diagnostics.csv",
+    "decoded_bytes": 466,
+    "compressed_bytes": 236,
+    "crc32": "3d437890",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reg-wave-coefs-adjusted-robust.csv",
+    "decoded_bytes": 1143,
+    "compressed_bytes": 646,
+    "crc32": "286a4fae",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reported_voters_vs_registered_over_time.csv",
+    "decoded_bytes": 447,
+    "compressed_bytes": 233,
+    "crc32": "6a04a6db",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/wave_shock_stability.csv",
+    "decoded_bytes": 625,
+    "compressed_bytes": 330,
+    "crc32": "f12c3e2e",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reg-dec25-independents-issue-robust.csv",
+    "decoded_bytes": 741,
+    "compressed_bytes": 406,
+    "crc32": "96c79811",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reported_turnout_issue_priority_differences.csv",
+    "decoded_bytes": 2831,
+    "compressed_bytes": 1292,
+    "crc32": "6959feca",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_party_composition.csv",
+    "decoded_bytes": 1173,
+    "compressed_bytes": 527,
+    "crc32": "5ad3e4d2",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/issue_importance_ame_independents_2020_2022.csv",
+    "decoded_bytes": 4934,
+    "compressed_bytes": 1959,
+    "crc32": "7b4a1d29",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/gcb_turnout_restrictions_over_time.csv",
+    "decoded_bytes": 1445,
+    "compressed_bytes": 654,
+    "crc32": "6b5efbb3",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_weight_sensitivity_by_wave.csv",
+    "decoded_bytes": 1363,
+    "compressed_bytes": 499,
+    "crc32": "0c9e6205",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/estimates/reviewer_issue_priority_joint_tests.csv",
+    "decoded_bytes": 535,
+    "compressed_bytes": 317,
+    "crc32": "3bea3623",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-state-swing-vs-turnout.pdf",
+    "decoded_bytes": 10786,
+    "compressed_bytes": 9870,
+    "crc32": "97c6e218",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-gcb-reported-turnout-over-time.pdf",
+    "decoded_bytes": 5027,
+    "compressed_bytes": 4438,
+    "crc32": "8988a1ae",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/dec25-gcb-by-issue.pdf",
+    "decoded_bytes": 5206,
+    "compressed_bytes": 4729,
+    "crc32": "327d0e2b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-reg-dec25-coefs.pdf",
+    "decoded_bytes": 5997,
+    "compressed_bytes": 5499,
+    "crc32": "57de7912",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-issue-importance-break-independents.pdf",
+    "decoded_bytes": 5146,
+    "compressed_bytes": 4669,
+    "crc32": "0fbd93c2",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-dec25-persuadable-issue-salience.pdf",
+    "decoded_bytes": 5155,
+    "compressed_bytes": 4673,
+    "crc32": "c3bbde1c",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/dec25-issue-by-ideology-heatmap.pdf",
+    "decoded_bytes": 5530,
+    "compressed_bytes": 5040,
+    "crc32": "18438d3a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/dec25-issue-by-educ-race.pdf",
+    "decoded_bytes": 5995,
+    "compressed_bytes": 5517,
+    "crc32": "20bb5af9",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-wave-coefficient-stability.pdf",
+    "decoded_bytes": 7148,
+    "compressed_bytes": 6481,
+    "crc32": "3af266b9",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/dec25-net-margin-by-news.pdf",
+    "decoded_bytes": 5092,
+    "compressed_bytes": 4340,
+    "crc32": "1588361b",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-wave-subgroup-stability.pdf",
+    "decoded_bytes": 6703,
+    "compressed_bytes": 6008,
+    "crc32": "eeced907",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-gcb-planned-turnout-over-time.pdf",
+    "decoded_bytes": 4712,
+    "compressed_bytes": 4129,
+    "crc32": "98c4b4d5",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-wave-independent-definition-comparison.pdf",
+    "decoded_bytes": 6034,
+    "compressed_bytes": 5450,
+    "crc32": "8600dc99",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-reg-wave-coefs.pdf",
+    "decoded_bytes": 4879,
+    "compressed_bytes": 4403,
+    "crc32": "a73e31cf",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-reg-dec25-issue-coefs-pid.pdf",
+    "decoded_bytes": 5059,
+    "compressed_bytes": 4575,
+    "crc32": "e5411412",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-gcb-vs-house-vote.pdf",
+    "decoded_bytes": 7125,
+    "compressed_bytes": 6420,
+    "crc32": "f40891ea",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/dec25-net-margin-by-issue.pdf",
+    "decoded_bytes": 5808,
+    "compressed_bytes": 5061,
+    "crc32": "0cea7124",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-approval-vs-house-vote.pdf",
+    "decoded_bytes": 8432,
+    "compressed_bytes": 7700,
+    "crc32": "c8a2ef3a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-wave-persuadable-rebound-contrib.pdf",
+    "decoded_bytes": 4464,
+    "compressed_bytes": 3985,
+    "crc32": "1cef18e4",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/output/figures/fig-wave-shock-stability.pdf",
+    "decoded_bytes": 5697,
+    "compressed_bytes": 4992,
+    "crc32": "497a7167",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/code/06_reported_turnout_differences.R",
+    "decoded_bytes": 25082,
+    "compressed_bytes": 5704,
+    "crc32": "1930b5af",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/code/10_dec25_issue_descriptives.R",
+    "decoded_bytes": 11721,
+    "compressed_bytes": 3139,
+    "crc32": "583215d7",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/code/08_gcb_registered_vote_rate.R",
+    "decoded_bytes": 4780,
+    "compressed_bytes": 1445,
+    "crc32": "692ab72c",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/code/07_gcb_turnout_over_time.R",
+    "decoded_bytes": 13486,
+    "compressed_bytes": 3668,
+    "crc32": "00dd6d32",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/code/03_shock_evidence.R",
+    "decoded_bytes": 29972,
+    "compressed_bytes": 7452,
+    "crc32": "2c340758",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/code/09_true_independent_gcb.R",
+    "decoded_bytes": 14477,
+    "compressed_bytes": 3471,
+    "crc32": "edfe4397",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/code/02_robustness_checks.R",
+    "decoded_bytes": 22171,
+    "compressed_bytes": 5167,
+    "crc32": "4ebb8745",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/code/01_main_models.R",
+    "decoded_bytes": 12605,
+    "compressed_bytes": 3730,
+    "crc32": "c1cba6cc",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/code/05_reviewer_analyses.R",
+    "decoded_bytes": 42652,
+    "compressed_bytes": 9489,
+    "crc32": "fe961b2d",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/code/04_appendix_tables.R",
+    "decoded_bytes": 15702,
+    "compressed_bytes": 4180,
+    "crc32": "fcc0950a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/README.md",
+    "decoded_bytes": 5656,
+    "compressed_bytes": 2401,
+    "crc32": "74682b58",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/data_loader.R",
+    "decoded_bytes": 2485,
+    "compressed_bytes": 942,
+    "crc32": "792a3a15",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/gcb_house_fundamentals/code/make_all.R",
+    "decoded_bytes": 5101,
+    "compressed_bytes": 1796,
+    "crc32": "6eb00402",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/gcb_house_fundamentals/README.md",
+    "decoded_bytes": 4013,
+    "compressed_bytes": 1942,
+    "crc32": "3b809406",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/gcb_house_fundamentals/figures/swing_vs_turnout_change_2020_2024.pdf",
+    "decoded_bytes": 10786,
+    "compressed_bytes": 9870,
+    "crc32": "97c6e218",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/gcb_house_fundamentals/figures/generic_ballot_vs_house_vote.pdf",
+    "decoded_bytes": 7125,
+    "compressed_bytes": 6420,
+    "crc32": "f40891ea",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/gcb_house_fundamentals/figures/turnout_counterfactual.csv",
+    "decoded_bytes": 99,
+    "compressed_bytes": 73,
+    "crc32": "0feec19a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/gcb_house_fundamentals/figures/approval_vs_house_vote.pdf",
+    "decoded_bytes": 8432,
+    "compressed_bytes": 7700,
+    "crc32": "c8a2ef3a",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/gcb_house_fundamentals/data/pres_approval.csv",
+    "decoded_bytes": 723,
+    "compressed_bytes": 307,
+    "crc32": "3c0dedf4",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/gcb_house_fundamentals/data/pres_by_state_2024.csv",
+    "decoded_bytes": 1689,
+    "compressed_bytes": 1034,
+    "crc32": "f75ccdb3",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/gcb_house_fundamentals/data/pres_by_state_2020.csv",
+    "decoded_bytes": 1690,
+    "compressed_bytes": 1037,
+    "crc32": "fe9240a2",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/gcb_house_fundamentals/data/house_national_vote.csv",
+    "decoded_bytes": 621,
+    "compressed_bytes": 273,
+    "crc32": "b8734658",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/gcb_house_fundamentals/data/generic_ballot.csv",
+    "decoded_bytes": 551,
+    "compressed_bytes": 170,
+    "crc32": "1e19b453",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/run_all.R",
+    "decoded_bytes": 813,
+    "compressed_bytes": 450,
+    "crc32": "2eedd5f9",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/data/variable_levels.csv",
+    "decoded_bytes": 35653,
+    "compressed_bytes": 4066,
+    "crc32": "c0d9a5ba",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/data/survey_2023_dec.csv",
+    "decoded_bytes": 554417,
+    "compressed_bytes": 37779,
+    "crc32": "f60e5ffd",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/data/survey_2024_junjul.csv",
+    "decoded_bytes": 516733,
+    "compressed_bytes": 35667,
+    "crc32": "395098a0",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/data/survey_2020_nov.csv",
+    "decoded_bytes": 2188765,
+    "compressed_bytes": 111532,
+    "crc32": "7478b7e3",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/data/survey_2025_dec.csv",
+    "decoded_bytes": 593534,
+    "compressed_bytes": 44150,
+    "crc32": "0d42b85e",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/data/survey_2023_jun.csv",
+    "decoded_bytes": 553623,
+    "compressed_bytes": 40926,
+    "crc32": "679562e8",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/data/analytic_codebook.csv",
+    "decoded_bytes": 2878,
+    "compressed_bytes": 841,
+    "crc32": "96dcc442",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/data/variable_labels.csv",
+    "decoded_bytes": 6834,
+    "compressed_bytes": 1280,
+    "crc32": "90bfb5d7",
+    "method": 8
+  },
+  {
+    "source": "dataverse",
+    "project": "doi:10.7910/DVN/IWCTZD",
+    "container": "replication - proof.zip",
+    "name": "replication_package_midterm/data/survey_2022_nov.csv",
+    "decoded_bytes": 822260,
+    "compressed_bytes": 42096,
+    "crc32": "96742342",
+    "method": 8
+  }
+]

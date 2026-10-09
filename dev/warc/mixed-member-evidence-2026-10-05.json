@@ -1,0 +1,21 @@
+{
+  "construction": "Controlled mixed-encoder archive using two exact real Common Crawl records",
+  "sources": [
+    "commoncrawl:CC-MAIN-2026-39:www.wikipedia.org/:20260904205954",
+    "commoncrawl:CC-MAIN-2026-39:docs.python.org/3/library/json.html:20260905082018"
+  ],
+  "source_member_bytes": [
+    29949,
+    23581
+  ],
+  "zlib9_member_bytes": [
+    31718,
+    18568
+  ],
+  "original_bytes": 53530,
+  "current_all_zlib9_bytes": 50286,
+  "current_writer_replaced": true,
+  "current_writer_result_bytes": 50286,
+  "original_or_zlib9_per_record_bytes": 48517,
+  "recovered_savings_bytes": 5013
+}

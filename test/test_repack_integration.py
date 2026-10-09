@@ -48,34 +48,34 @@ class TestExpandGlobs:
 class TestCommitOutput:
     def test_keeps_original_if_larger(self, tmp_path):
         dest = tmp_path / 'orig.bin'
-        dest.write_bytes(b'aa')
+        dest.write_bytes(b'12')
         temp = tmp_path / 'new.bin'
-        temp.write_bytes(b'aaaa')
-        res = _commit_output(str(temp), str(dest), 2, keep_if_larger=True)
+        temp.write_bytes(b'1234')
+        res = _commit_output(str(temp), str(dest), 2, keep_if_larger=True, verify='json')
         assert res is not None
         assert res.replaced is False
-        assert dest.read_bytes() == b'aa'
+        assert dest.read_bytes() == b'12'
         assert not temp.exists()
 
     def test_replaces_when_smaller(self, tmp_path):
         dest = tmp_path / 'orig.bin'
-        dest.write_bytes(b'xxxx')
+        dest.write_bytes(b'1234')
         temp = tmp_path / 'new.bin'
-        temp.write_bytes(b'yy')
-        res = _commit_output(str(temp), str(dest), 4, keep_if_larger=True)
+        temp.write_bytes(b'12')
+        res = _commit_output(str(temp), str(dest), 4, keep_if_larger=True, verify='json')
         assert res is not None
         assert res.replaced is True
-        assert dest.read_bytes() == b'yy'
+        assert dest.read_bytes() == b'12'
         assert res.outsize == 2
 
     def test_min_savings_does_not_mutate(self, tmp_path):
         dest = tmp_path / 'orig.bin'
-        dest.write_bytes(b'x' * 100)
+        dest.write_bytes(b'1' * 100)
         temp = tmp_path / 'new.bin'
-        temp.write_bytes(b'x' * 99)
+        temp.write_bytes(b'1' * 99)
         original = dest.read_bytes()
         res = _commit_output(
-            str(temp), str(dest), 100, keep_if_larger=True, min_savings=5.0
+            str(temp), str(dest), 100, keep_if_larger=True, min_savings=5.0, verify='json'
         )
         assert res is not None
         assert res.replaced is False
@@ -83,13 +83,13 @@ class TestCommitOutput:
 
     def test_dryrun_does_not_replace(self, tmp_path):
         dest = tmp_path / 'orig.bin'
-        dest.write_bytes(b'xxxx')
+        dest.write_bytes(b'1234')
         temp = tmp_path / 'new.bin'
-        temp.write_bytes(b'y')
-        res = _commit_output(str(temp), str(dest), 4, dryrun=True)
+        temp.write_bytes(b'1')
+        res = _commit_output(str(temp), str(dest), 4, dryrun=True, verify='json')
         assert res is not None
         assert res.replaced is False
-        assert dest.read_bytes() == b'xxxx'
+        assert dest.read_bytes() == b'1234'
         assert res.outsize == 1
 
 
@@ -129,8 +129,6 @@ class TestZipRepack:
         )
         names = [e[0] for e in events]
         assert names[0] == 'extract'
-        if 'files' not in names:
-            return
         assert 'files' in names
         assert names.count('file') == 2
         assert 'write' in names
@@ -171,8 +169,7 @@ class TestZipRepack:
         actual = dr.repack_zip_file(zip_path, def_options={
             'quiet': True, 'dryrun': False,
         })
-        if predicted.inner_count == 0 and actual.inner_count == 0:
-            return
+        assert predicted.inner_count > 0 and actual.inner_count > 0
         assert predicted.total_outsize == actual.total_outsize
         assert predicted.total_outsize < predicted.total_insize
 
@@ -191,8 +188,6 @@ class TestZipRepack:
             FileRepacker(quiet=True).repack_zip_file(
                 zip_path, def_options={'quiet': True, 'dryrun': True},
             )
-        if not seen:
-            return
         assert seen == [False]
 
     def test_missing_7zz_does_not_delete_zip(self, tmp_path):
@@ -201,7 +196,7 @@ class TestZipRepack:
             zf.writestr('test.txt', 'hello-world')
         original = open(zip_path, 'rb').read()
 
-        with patch('filerepack.repack.resolve_szip', return_value=None):
+        with patch('filerepack.archives.resolve_szip', return_value=None):
             dr = FileRepacker(quiet=True)
             results = dr.repack_zip_file(zip_path, def_options={'quiet': True})
 
@@ -237,7 +232,7 @@ class TestOoxmlAndExtractLimits:
             zf.writestr('a.txt', 'hello-world')
         original = open(zip_path, 'rb').read()
         with patch(
-            'filerepack.repack.zip_uncompressed_size',
+            'filerepack.archives.zip_uncompressed_size',
             return_value=10 * 1024 ** 3,
         ):
             dr = FileRepacker(quiet=True)
@@ -246,93 +241,84 @@ class TestOoxmlAndExtractLimits:
         assert results.total_outsize == results.total_insize
 
     def test_docx_prefers_infozip(self, tmp_path):
+        import pytest
+        from filerepack.repack import _run_command
+        from filerepack.tools import resolve_szip, resolve_tool
+
+        zip_tool = resolve_tool('zip')
+        if not zip_tool or not resolve_szip():
+            pytest.skip('7zz/7z and Info-ZIP required')
         path = str(tmp_path / 'doc.docx')
         self._minimal_docx(path)
-        calls = []
-
-        def fake_run(cmd, **kwargs):
-            calls.append(cmd[0] if cmd else '')
-            for arg in cmd:
-                if arg.endswith('.zip') and arg != path:
-                    with zipfile.ZipFile(arg, 'w') as zf:
-                        zf.writestr('[Content_Types].xml', '<Types/>')
-                        zf.writestr('word/document.xml', 'x')
-                    from subprocess import CompletedProcess
-                    return CompletedProcess(cmd, 0, stdout='', stderr='')
-            from subprocess import CompletedProcess
-            return CompletedProcess(cmd, 0, stdout='', stderr='')
-
-        with patch('filerepack.repack.resolve_tool', return_value='/usr/bin/zip'):
-            with patch('filerepack.repack.resolve_szip', return_value='/usr/bin/7zz'):
-                with patch('filerepack.repack._run_command', side_effect=fake_run):
-                    FileRepacker(quiet=True).repack_zip_file(
-                        path, def_options={'quiet': True, 'pack_images': False},
-                    )
-        assert any('zip' in c for c in calls)
+        with patch('filerepack.archives._run_command', wraps=_run_command) as run:
+            FileRepacker(quiet=True).repack_zip_file(
+                path, def_options={'quiet': True, 'pack_images': False},
+            )
+        assert any(call.args[0][0] == zip_tool for call in run.call_args_list)
 
 
 class TestPackerFailures:
     def test_pack_jpg_missing_tool(self, tmp_path):
         jpg = tmp_path / 'a.jpg'
         jpg.write_bytes(b'\xff\xd8\xff' + b'\x00' * 32)
-        with patch('filerepack.repack.resolve_tool', return_value=None):
+        with patch('filerepack.images.resolve_tool', return_value=None):
             assert pack_jpg(str(jpg)) is None
         assert jpg.exists()
 
     def test_pack_png_missing_lossless_tool(self, tmp_path):
         png = tmp_path / 'a.png'
         png.write_bytes(b'\x89PNG\r\n\x1a\n' + b'\x00' * 32)
-        with patch('filerepack.repack.resolve_tool', return_value=None):
+        with patch('filerepack.images.resolve_tool', return_value=None):
             assert pack_png(str(png)) is None
         assert png.exists()
 
     def test_pack_wmv_ffmpeg_failure_keeps_source(self, tmp_path):
         wmv = tmp_path / 'clip.wmv'
         wmv.write_bytes(b'fake-wmv-content-not-empty')
-        with patch('filerepack.repack.resolve_tool', return_value='/bin/ffmpeg'):
-            with patch('filerepack.repack._encode_video', return_value=False):
+        with patch('filerepack.media.resolve_tool', return_value='/bin/ffmpeg'):
+            with patch('filerepack.media._encode_video', return_value=False):
                 assert pack_wmv(str(wmv)) is None
         assert wmv.exists()
 
     def test_pack_brotli_missing_tool(self, tmp_path):
         path = tmp_path / 'a.br'
         path.write_bytes(b'\xce' + b'\x00' * 16)
-        with patch('filerepack.repack.resolve_tool', return_value=None):
+        with patch('filerepack.streams.resolve_tool', return_value=None):
             assert pack_brotli(str(path)) is None
         assert path.exists()
 
     def test_pack_flac_missing_tool(self, tmp_path):
         path = tmp_path / 'a.flac'
         path.write_bytes(b'fLaC' + b'\x00' * 16)
-        with patch('filerepack.repack.resolve_tool', return_value=None):
+        with patch('filerepack.media.resolve_tool', return_value=None):
             assert pack_flac(str(path)) is None
         assert path.exists()
 
     def test_pack_avif_missing_tool(self, tmp_path):
         path = tmp_path / 'a.avif'
         path.write_bytes(b'\x00\x00\x00\x1cftypavif')
-        with patch('filerepack.repack.resolve_tool', return_value=None):
+        with patch('filerepack.images.resolve_tool', return_value=None):
             assert pack_avif(str(path)) is None
         assert path.exists()
 
     def test_pack_heic_missing_tool(self, tmp_path):
         path = tmp_path / 'a.heic'
         path.write_bytes(b'\x00\x00\x00\x18ftypheic')
-        with patch('filerepack.repack.resolve_tool', return_value=None):
+        with patch('filerepack.images.resolve_tool', return_value=None):
             assert pack_heic(str(path)) is None
         assert path.exists()
 
     def test_pack_lz4_missing_tool(self, tmp_path):
         path = tmp_path / 'a.lz4'
         path.write_bytes(b'\x04\x22\x4d\x18' + b'\x00' * 16)
-        with patch('filerepack.codecs.resolve_tool', return_value=None):
+        with patch('filerepack.streams.resolve_tool', return_value=None):
             assert pack_lz4(str(path)) is None
         assert path.exists()
 
     def test_pack_jxl_missing_tool(self, tmp_path):
         path = tmp_path / 'a.jxl'
         path.write_bytes(b'\xff\x0a' + b'\x00' * 16)
-        with patch('filerepack.codecs.resolve_tool', return_value=None):
+        with patch('filerepack.images.resolve_tool', return_value=None):
             assert pack_jxl(str(path)) is None
         assert path.exists()
 
@@ -374,7 +360,7 @@ class TestMp3AiPsd:
     def test_pack_mp3_missing_tool(self, tmp_path):
         path = tmp_path / 'a.mp3'
         path.write_bytes(b'ID3' + b'\x00' * 16)
-        with patch('filerepack.codecs.resolve_tool', return_value=None):
+        with patch('filerepack.media.resolve_tool', return_value=None):
             assert pack_mp3(str(path)) is None
         assert path.exists()
 
@@ -387,7 +373,7 @@ class TestMp3AiPsd:
     def test_pack_ai_pdf_calls_pdf_packer(self, tmp_path):
         path = tmp_path / 'logo.ai'
         path.write_bytes(b'%PDF-1.5\n%\xe2\xe3\xcf\xd3\n')
-        with patch('filerepack.repack.pack_pdf', return_value=None) as mocked:
+        with patch('filerepack.documents.pack_pdf', return_value=None) as mocked:
             assert pack_ai(str(path)) is None
             mocked.assert_called_once()
 
@@ -457,21 +443,21 @@ class TestVerifyOutput:
     def test_jpeg_header(self, tmp_path):
         path = tmp_path / 't.jpg'
         path.write_bytes(b'\xff\xd8\xff\xe0' + b'\x00' * 8)
-        assert verify_output(str(path), 'jpg')
+        assert not verify_output(str(path), 'jpg')
         path.write_bytes(b'not-a-jpeg')
         assert not verify_output(str(path), 'jpg')
 
     def test_dcm_magic(self, tmp_path):
         path = tmp_path / 't.dcm'
         path.write_bytes(b'\x00' * 128 + b'DICM' + b'\x00' * 4)
-        assert verify_output(str(path), 'dcm')
+        assert not verify_output(str(path), 'dcm')
         path.write_bytes(b'\x00' * 132)
         assert not verify_output(str(path), 'dcm')
 
     def test_flac_header(self, tmp_path):
         path = tmp_path / 't.flac'
         path.write_bytes(b'fLaC' + b'\x00' * 8)
-        assert verify_output(str(path), 'flac')
+        assert not verify_output(str(path), 'flac')
 
     def test_new_magics(self, tmp_path):
         cases = [
@@ -486,4 +472,4 @@ class TestVerifyOutput:
         for kind, data in cases:
             path = tmp_path / f't.{kind}'
             path.write_bytes(data)
-            assert verify_output(str(path), kind), kind
+            assert not verify_output(str(path), kind), kind

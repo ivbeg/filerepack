@@ -29,11 +29,11 @@ class TestPackJson:
 
 
 class TestPackXml:
-    def test_pretty_xml_shrinks_keeps_text(self, tmp_path):
+    def test_pretty_xml_keeps_unknown_text_and_compacts_tag_syntax(self, tmp_path):
         path = tmp_path / 'a.xml'
         path.write_text(
             '<?xml version="1.0"?>\n'
-            '<root xmlns:w="http://example.test/w">\n'
+            '<root  xmlns:w = "http://example.test/w">\n'
             '  <w:t>Hello world</w:t>\n'
             '</root>\n',
             encoding='utf-8',
@@ -43,7 +43,8 @@ class TestPackXml:
         assert result.replaced
         text = path.read_text(encoding='utf-8')
         assert 'Hello world' in text
-        assert '\n  <' not in text
+        assert '\n  <' in text
+        assert '<root xmlns:w="http://example.test/w">' in text
 
     def test_xml_space_preserve_same_line_spaces(self, tmp_path):
         path = tmp_path / 'a.xml'

@@ -1,0 +1,370 @@
+{
+  "files": [
+    {
+      "name": "attachment_test_msg.msg",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/hsmf/attachment_test_msg.msg",
+      "sha256": "4f5ab34d4e6bbb04945319dc0decdcfce785779bda618c89ca2eb0fe82e9caf0",
+      "bytes": 52224,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "example_received_unicode.msg",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/hsmf/example_received_unicode.msg",
+      "sha256": "d1aa06234247d23f1ebe0338488c02c20b98cb2e164c38c2aeef28820bfe95da",
+      "bytes": 56832,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "Test_Visio-Some_Random_Text.vsd",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/diagram/Test_Visio-Some_Random_Text.vsd",
+      "sha256": "31de63a4d06b699c2f4b64d66efd8c2e6e91ebcfb88f72dd2556026f8ce3807e",
+      "bytes": 45568,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "Sample.pub",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/publisher/Sample.pub",
+      "sha256": "6fefdef46b87c767150878dc384549cb2d2ec2ac54de25f8ddb3a5628301107e",
+      "bytes": 72192,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "TestZeroLengthCodePage.mpp",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/hpsf/TestZeroLengthCodePage.mpp",
+      "sha256": "9b18f64acb87a8fb00e157db010f0d6fd247aff0667f104f43b6aebee939cdac",
+      "bytes": 77824,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "sample-5017-pics.hwp",
+      "source": "https://raw.githubusercontent.com/mete0r/pyhwp/83239f0d3bdf438b2c9f7dcff455a6e841154a39/tests/hwp5_tests/fixtures/sample-5017-pics.hwp",
+      "sha256": "898dd6b821caaca62a6a449e8c90ecad0c20d669603e968558636296bbaf82a2",
+      "bytes": 216576,
+      "license": "AGPL-3.0"
+    },
+    {
+      "name": "multicolumns.hwp",
+      "source": "https://raw.githubusercontent.com/mete0r/pyhwp/83239f0d3bdf438b2c9f7dcff455a6e841154a39/tests/hwp5_tests/fixtures/multicolumns.hwp",
+      "sha256": "b6798c22e2fab6467360b6a020050eba5db9b90daca7fc6520a158055ec949fa",
+      "bytes": 11776,
+      "license": "AGPL-3.0"
+    },
+    {
+      "name": "SimpleComponent.msi",
+      "source": "https://raw.githubusercontent.com/wixtoolset/wix3/ddc834a9b51b906f703f48fa6d8590681a76ad67/test/data/Integration/BuildingPackages/Components/ComponentTests/SimpleComponent/expected.msi",
+      "sha256": "88d2e1b583f5c82308afa9a5fb96efd1c5bd5add3023c7324d78f14198ff5f8d",
+      "bytes": 15360,
+      "license": "MS-RL"
+    },
+    {
+      "name": "pagedefs.hwp",
+      "source": "https://raw.githubusercontent.com/mete0r/pyhwp/83239f0d3bdf438b2c9f7dcff455a6e841154a39/tests/hwp5_tests/fixtures/pagedefs.hwp",
+      "sha256": "9c4428dcc55b1d1872c2ae7e494f8bc8a080673a9c0a2965eb2f090a1635a81b",
+      "bytes": 14848,
+      "license": "AGPL-3.0"
+    },
+    {
+      "name": "sample-5017.hwp",
+      "source": "https://raw.githubusercontent.com/mete0r/pyhwp/83239f0d3bdf438b2c9f7dcff455a6e841154a39/tests/hwp5_tests/fixtures/sample-5017.hwp",
+      "sha256": "ff3faae938610fcfbedc21c27c507ca0cc038b44872b65d10fcad0b55af67ba2",
+      "bytes": 40448,
+      "license": "AGPL-3.0"
+    },
+    {
+      "name": "28774.xls",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/28774.xls",
+      "sha256": "8df7675609a8ec61d6cf7dda78b1dac4bc87d8cb012c306dde8eca835d4205fa",
+      "bytes": 27136,
+      "git_blob_sha1": "476f3bafe91d744e6ed9b7a73c6d529e0dc6d6a8",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "29675.xls",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/29675.xls",
+      "sha256": "af354cbb6d39adaf4aeadce855e79ffb0a14ae6e9681d6005ec58f1527c9e3a8",
+      "bytes": 13824,
+      "git_blob_sha1": "a80df1ffb90b17602528dc3580342a8d612bd564",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "two_images.doc",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/document/two_images.doc",
+      "sha256": "a2c2f835d2ab986ae367a787fcad04c2fa24c5135ae477bf934e7c074895312e",
+      "bytes": 24064,
+      "git_blob_sha1": "f94867d22998f641523c16a1859f8edd6aefd780",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "58804_1.doc",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/document/58804_1.doc",
+      "sha256": "2ed323f50ec9213bb0651f7c536754cfd787445e3797115d73e57db6fe55971b",
+      "bytes": 61440,
+      "git_blob_sha1": "c792079748c42f02c0344a07f3d61a255e3f72ab",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "DrawingContinue.xls",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/DrawingContinue.xls",
+      "sha256": "98be3273c7b9e09a521aba736aac866688e5b06d954edfe73eaff2c1b9a25555",
+      "bytes": 68608,
+      "git_blob_sha1": "131c18cc9b09c2d6286e9a2da104bd0d504bfb51",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "FloatingPictures.doc",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/document/FloatingPictures.doc",
+      "sha256": "41cc0cd8f2d7390266f844f5bddbcd29d08ac5338abc33832d9c9a6ed5d0f85d",
+      "bytes": 335360,
+      "git_blob_sha1": "15b06cf3f079bb8d59ae3141b2371c527af73fd3",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "msobrightnesscontrast.doc",
+      "source": "https://raw.githubusercontent.com/LibreOffice/core/cf80890d16f7ef318155efe5843f99153d199e07/sw/qa/extras/ww8export/data/msobrightnesscontrast.doc",
+      "sha256": "80849cd4d607b70420aa8b4f4af5a03b6f7e899bf25775f34a5c450ee82ea4de",
+      "bytes": 27648,
+      "git_blob_sha1": "675d6d3702e45539d16a9fee32a20854be7921f4",
+      "license": "MPL-2.0"
+    },
+    {
+      "name": "tdf104596_wrapInHeaderTable.doc",
+      "source": "https://raw.githubusercontent.com/LibreOffice/core/cf80890d16f7ef318155efe5843f99153d199e07/sw/qa/extras/ww8export/data/tdf104596_wrapInHeaderTable.doc",
+      "sha256": "47ff8c99d08ba375f35d4cb21cc975bb62ff1917818777566c3e4e2f37f09fe3",
+      "bytes": 29184,
+      "git_blob_sha1": "17fba79453a98df06b03da6a4c5aff6807ecaae7",
+      "license": "MPL-2.0"
+    },
+    {
+      "name": "tdf132094_transparentPageImage.doc",
+      "source": "https://raw.githubusercontent.com/LibreOffice/core/cf80890d16f7ef318155efe5843f99153d199e07/sw/qa/extras/ww8export/data/tdf132094_transparentPageImage.doc",
+      "sha256": "6fbcd400c0c7fcf7b9eb4d44c312d112269723b73613115a47eea21c88c0a793",
+      "bytes": 78336,
+      "git_blob_sha1": "1b8a29e0ecd7293dedf751cc2e752ede9ee6461b",
+      "license": "MPL-2.0"
+    },
+    {
+      "name": "tdf162541_notLayoutInCell_paraLeft.doc",
+      "source": "https://raw.githubusercontent.com/LibreOffice/core/cf80890d16f7ef318155efe5843f99153d199e07/sw/qa/extras/ww8export/data/tdf162541_notLayoutInCell_paraLeft.doc",
+      "sha256": "2c9b82bbec2f664f3a2a4c43d1ee68b1e42b253959eabca21c5c2baaab600050",
+      "bytes": 72704,
+      "git_blob_sha1": "2ce0cab293c28a204b9f104e6c64809d7085e32e",
+      "license": "MPL-2.0"
+    },
+    {
+      "name": "tdf162542_notLayoutInCell_charLeft_wrapThrough.doc",
+      "source": "https://raw.githubusercontent.com/LibreOffice/core/cf80890d16f7ef318155efe5843f99153d199e07/sw/qa/extras/ww8export/data/tdf162542_notLayoutInCell_charLeft_wrapThrough.doc",
+      "sha256": "e1ffc2182f058a8d84af221897b1f181a90baac19022d26353538ea9cd27afc5",
+      "bytes": 73216,
+      "git_blob_sha1": "e6100c7eabcfe386f2fee3def87072bada474716",
+      "license": "MPL-2.0"
+    },
+    {
+      "name": "tdf79553_lineNumbers.doc",
+      "source": "https://raw.githubusercontent.com/LibreOffice/core/cf80890d16f7ef318155efe5843f99153d199e07/sw/qa/extras/ww8export/data/tdf79553_lineNumbers.doc",
+      "sha256": "568ef1ffd86dbdc7ef668feb0a67c0c713ffd4579a1689d8b28316bac1dfbaaa",
+      "bytes": 77312,
+      "git_blob_sha1": "260f5ce18ba0296ed6737277adf6e2cf49de049b",
+      "license": "MPL-2.0"
+    },
+    {
+      "name": "file-with-png-image.xls",
+      "source": "https://raw.githubusercontent.com/LibreOffice/core/cf80890d16f7ef318155efe5843f99153d199e07/sc/qa/unit/data/xls/file-with-png-image.xls",
+      "sha256": "d427f083b912e73e453e0a110d1b807e8adb26c93f40d2a7ba9019abe299275e",
+      "bytes": 49152,
+      "git_blob_sha1": "36fe4734df1a604fad534bbf45c424080d0a72d6",
+      "license": "MPL-2.0"
+    },
+    {
+      "name": "nissl-lab-TestSectionDictionary.doc",
+      "bytes": 83456,
+      "source": "https://raw.githubusercontent.com/nissl-lab/npoi/832eb28f142d54fb8a87b65fa61b5916a763b528/testcases/test-data/hpsf/TestSectionDictionary.doc",
+      "git_blob_sha1": "6114a76572d64e4c2a737eaae149246175b18854",
+      "license": "Apache-2.0",
+      "repository": "nissl-lab/npoi",
+      "commit": "832eb28f142d54fb8a87b65fa61b5916a763b528",
+      "sha256": "9c5f2ee44e43effff471751b50657e42156cd8063076a4f52a49869d15b50bc5"
+    },
+    {
+      "name": "nissl-lab-multimedia.doc",
+      "bytes": 4835840,
+      "source": "https://raw.githubusercontent.com/nissl-lab/npoi/832eb28f142d54fb8a87b65fa61b5916a763b528/testcases/test-data/poifs/multimedia.doc",
+      "git_blob_sha1": "51b356d4afdff75c5006dd098bddca9fd190d06d",
+      "license": "Apache-2.0",
+      "repository": "nissl-lab/npoi",
+      "commit": "832eb28f142d54fb8a87b65fa61b5916a763b528",
+      "sha256": "0d836ded8d8036f196f10d5848c4972e64564845e8e73ffe87635005c85f77b5"
+    },
+    {
+      "name": "testControlCharacters.doc",
+      "source": "https://raw.githubusercontent.com/apache/tika/de6af231dcb721856b719966bc010f909358319c/tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-microsoft-module/src/test/resources/test-documents/testControlCharacters.doc",
+      "sha256": "b4cd7937aecf63a0a2e4dd80949e726c854e49e770f351c4af1a0f0a3906a075",
+      "git_blob_sha1": "aacb46f5e34bc6cb84d9f32e412e309e78d41153",
+      "bytes": 448000,
+      "license": "Apache-2.0",
+      "repository": "apache/tika",
+      "commit": "de6af231dcb721856b719966bc010f909358319c"
+    },
+    {
+      "name": "fdo66692-2.doc",
+      "source": "https://raw.githubusercontent.com/LibreOffice/core/cf80890d16f7ef318155efe5843f99153d199e07/sw/qa/core/data/ww8/pass/fdo66692-2.doc",
+      "sha256": "108e6436a6679d4b8f58ecc021af6f782a628ffdaba2e1182a71a2fdfb52e76d",
+      "bytes": 91136,
+      "git_blob_sha1": "5042eeeb206ca26aaba9f9c2a03920430e66be56",
+      "license": "MPL-2.0"
+    },
+    {
+      "name": "tdf131707_flyWrap.doc",
+      "source": "https://raw.githubusercontent.com/LibreOffice/core/cf80890d16f7ef318155efe5843f99153d199e07/sw/qa/extras/layout/data/tdf131707_flyWrap.doc",
+      "sha256": "8d1475eb1cf6d0db8ea9a3e39bf4512c3c3781709e399ac9a403c8aed9891176",
+      "bytes": 41472,
+      "git_blob_sha1": "c32e5dafd924b35bd2de1321542f105e7637a8d4",
+      "license": "MPL-2.0"
+    },
+    {
+      "name": "testPPT_2imgs.ppt",
+      "source": "https://raw.githubusercontent.com/apache/tika/de6af231dcb721856b719966bc010f909358319c/tika-parsers/tika-parsers-standard/tika-parsers-standard-modules/tika-parser-microsoft-module/src/test/resources/test-documents/testPPT_2imgs.ppt",
+      "sha256": "761184c9e17d320c1d43882726825396753b9020cc067ac8b281306825f18710",
+      "git_blob_sha1": "ce68bcfd65228a640dd8262addca1addb4eaa3a7",
+      "bytes": 124928,
+      "license": "Apache-2.0",
+      "repository": "apache/tika",
+      "commit": "de6af231dcb721856b719966bc010f909358319c"
+    },
+    {
+      "name": "0018-doc.doc",
+      "source": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC-tiny.zip",
+      "archive_path": "0018-doc.doc",
+      "archive_sha256": "9c39cd014fdd19f907fd32c7708568d6d286d28d88b45f401d51484bf09ff22c",
+      "archive_sidecar": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC-tiny_zip_hashes.txt",
+      "archive_sidecar_sha256": "0de4cc856302f39db5b1a6a50d67ca014cca3ea996bf150e4386338c43c208fe",
+      "dataset_description": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC.pdf",
+      "dataset_description_sha256": "c8438aac82b7ba059d1ad897f18e6affd301020c6839fc32aab903f71f1abce0",
+      "sha256": "08d37431abe3548fac67b88337f2ce8986b8caf4f2cea64e4be4ae9da45b83cc",
+      "bytes": 245760,
+      "zip_crc32": "431e638f",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement",
+      "repository": "NapierOne",
+      "collection_date": "January-March 2021",
+      "original_source_mapping": "NapierOne documentation says mapping from renamed dataset file to original filename is held by the researchers and available on request; not included here."
+    },
+    {
+      "name": "0029-doc.doc",
+      "source": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC-tiny.zip",
+      "archive_path": "0029-doc.doc",
+      "archive_sha256": "9c39cd014fdd19f907fd32c7708568d6d286d28d88b45f401d51484bf09ff22c",
+      "archive_sidecar": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC-tiny_zip_hashes.txt",
+      "archive_sidecar_sha256": "0de4cc856302f39db5b1a6a50d67ca014cca3ea996bf150e4386338c43c208fe",
+      "dataset_description": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC.pdf",
+      "dataset_description_sha256": "c8438aac82b7ba059d1ad897f18e6affd301020c6839fc32aab903f71f1abce0",
+      "sha256": "8179fbe2c8b371aa00d832de56717bd7b77b73b0fa22595aa6dc6da691178379",
+      "bytes": 153088,
+      "zip_crc32": "f2544f59",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement",
+      "repository": "NapierOne",
+      "collection_date": "January-March 2021",
+      "original_source_mapping": "NapierOne documentation says mapping from renamed dataset file to original filename is held by the researchers and available on request; not included here."
+    },
+    {
+      "name": "0066-doc.doc",
+      "source": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC-tiny.zip",
+      "archive_path": "0066-doc.doc",
+      "archive_sha256": "9c39cd014fdd19f907fd32c7708568d6d286d28d88b45f401d51484bf09ff22c",
+      "archive_sidecar": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC-tiny_zip_hashes.txt",
+      "archive_sidecar_sha256": "0de4cc856302f39db5b1a6a50d67ca014cca3ea996bf150e4386338c43c208fe",
+      "dataset_description": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC.pdf",
+      "dataset_description_sha256": "c8438aac82b7ba059d1ad897f18e6affd301020c6839fc32aab903f71f1abce0",
+      "sha256": "0e6914c32c1985ffc64b31b5eeaf42e26a4e2762ddbd4062dacbcb6c0f2f30ee",
+      "bytes": 718336,
+      "zip_crc32": "a49d5a6c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement",
+      "repository": "NapierOne",
+      "collection_date": "January-March 2021",
+      "original_source_mapping": "NapierOne documentation says mapping from renamed dataset file to original filename is held by the researchers and available on request; not included here."
+    },
+    {
+      "name": "0113-doc.doc",
+      "source": "NapierOne/Data/DOC/DOC-small.zip",
+      "archive_path": "0113-doc.doc",
+      "archive_sha256": "427b94336bd0310cd1e3d0d2aaa358c462ef5232519f3a311e79c8887160e297",
+      "archive_sidecar": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC-small_zip_hashes.txt",
+      "archive_sidecar_sha256": "6ba24b14edb3793916c24ee679a8cde8a9393162a183557ea8425a3186614b55",
+      "dataset_description": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC.pdf",
+      "dataset_description_sha256": "c8438aac82b7ba059d1ad897f18e6affd301020c6839fc32aab903f71f1abce0",
+      "sha256": "4294f0fb82ffe3abedeff56525aba4d7e72ef301acc49e379a2882aeba3ce333",
+      "bytes": 332800,
+      "zip_crc32": "ae78e215",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement",
+      "repository": "NapierOne",
+      "collection_date": "January-March 2021",
+      "original_source_mapping": "NapierOne documentation says mapping from renamed dataset file to original filename is held by the researchers and available on request; not included here."
+    },
+    {
+      "name": "0771-doc.doc",
+      "source": "NapierOne/Data/DOC/DOC-small.zip",
+      "archive_path": "0771-doc.doc",
+      "archive_sha256": "427b94336bd0310cd1e3d0d2aaa358c462ef5232519f3a311e79c8887160e297",
+      "archive_sidecar": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC-small_zip_hashes.txt",
+      "archive_sidecar_sha256": "6ba24b14edb3793916c24ee679a8cde8a9393162a183557ea8425a3186614b55",
+      "dataset_description": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC.pdf",
+      "dataset_description_sha256": "c8438aac82b7ba059d1ad897f18e6affd301020c6839fc32aab903f71f1abce0",
+      "sha256": "d207d92337c3383707f1c25d1891958e7fdf4732e9813b12fb31fea5bfed8863",
+      "bytes": 3295232,
+      "zip_crc32": "cadf019f",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement",
+      "repository": "NapierOne",
+      "collection_date": "January-March 2021",
+      "original_source_mapping": "NapierOne documentation says mapping from renamed dataset file to original filename is held by the researchers and available on request; not included here."
+    },
+    {
+      "name": "0670-doc.doc",
+      "source": "NapierOne/Data/DOC/DOC-small.zip",
+      "archive_path": "0670-doc.doc",
+      "archive_sha256": "427b94336bd0310cd1e3d0d2aaa358c462ef5232519f3a311e79c8887160e297",
+      "archive_sidecar": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC-small_zip_hashes.txt",
+      "archive_sidecar_sha256": "6ba24b14edb3793916c24ee679a8cde8a9393162a183557ea8425a3186614b55",
+      "dataset_description": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC.pdf",
+      "dataset_description_sha256": "c8438aac82b7ba059d1ad897f18e6affd301020c6839fc32aab903f71f1abce0",
+      "sha256": "95258c32de7696f8397bc66b2b6b5519d86373fd25234bf44689431673193cab",
+      "bytes": 1050112,
+      "zip_crc32": "c5df5b74",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement",
+      "repository": "NapierOne",
+      "collection_date": "January-March 2021",
+      "original_source_mapping": "NapierOne documentation says mapping from renamed dataset file to original filename is held by the researchers and available on request; not included here."
+    },
+    {
+      "name": "1825-doc.doc",
+      "source": "NapierOne/Data/DOC/DOC-total.zip",
+      "archive_path": "1825-doc.doc",
+      "archive_sha256": "8f5a1f24eb55170285dc06e1d6a237e10666175f603e037747da6bc453f3f6f8",
+      "archive_sidecar": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC-total_zip_hashes.txt",
+      "archive_sidecar_sha256": "031c8922829112900ff3b1e2a6b10b0b296aa9eeecd5cef389c461c24dd2dfe5",
+      "dataset_description": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC.pdf",
+      "dataset_description_sha256": "c8438aac82b7ba059d1ad897f18e6affd301020c6839fc32aab903f71f1abce0",
+      "sha256": "eb57b841379e18772f1eece64acff1d02dc72c595ac6e46b99086ce1cf0ce10e",
+      "bytes": 2206208,
+      "zip_crc32": "4885f9c4",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement",
+      "repository": "NapierOne",
+      "collection_date": "January-March 2021",
+      "original_source_mapping": "NapierOne documentation says mapping from renamed dataset file to original filename is held by the researchers and available on request; not included here."
+    },
+    {
+      "name": "4128-doc.doc",
+      "source": "NapierOne/Data/DOC/DOC-total.zip",
+      "archive_path": "4128-doc.doc",
+      "archive_sha256": "8f5a1f24eb55170285dc06e1d6a237e10666175f603e037747da6bc453f3f6f8",
+      "archive_sidecar": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC-total_zip_hashes.txt",
+      "archive_sidecar_sha256": "031c8922829112900ff3b1e2a6b10b0b296aa9eeecd5cef389c461c24dd2dfe5",
+      "dataset_description": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC.pdf",
+      "dataset_description_sha256": "c8438aac82b7ba059d1ad897f18e6affd301020c6839fc32aab903f71f1abce0",
+      "sha256": "1bb7778bdeb9478dca021425c375c94f5e7b3f817456e244e86c80a846e911c3",
+      "bytes": 1656320,
+      "zip_crc32": "b19e7fc6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement",
+      "repository": "NapierOne",
+      "collection_date": "January-March 2021",
+      "original_source_mapping": "NapierOne documentation says mapping from renamed dataset file to original filename is held by the researchers and available on request; not included here."
+    }
+  ]
+}

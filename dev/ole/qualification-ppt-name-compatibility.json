@@ -1,0 +1,221 @@
+{
+  "date": "2026-10-08",
+  "python": "3.13.7",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "writer_sha256": "f1d7e12353c04f63fd662634f79e780e756834c636cd96ab7aff170f48c3909a",
+  "unicode_version": "16.0.0",
+  "unicode_data_sha256": "ff58e5823bd095166564a006e47d111130813dcf8bf234ef79fa51a870edb48f",
+  "comparison_units_checked": 65536,
+  "samples": [
+    {
+      "file": "crimemapping_v2.ppt",
+      "source_bytes": 11301376,
+      "source_sha256": "ebdcda7f9fd78bb18a75d12b611da64e2f86a8ef3429043eff8708c5d2c99394",
+      "eligible": true,
+      "source_root_name_normalized": true,
+      "logical_objects": 10,
+      "live_streams": 7,
+      "native_candidate_bytes": 11301376,
+      "native_logical_manifest_equal": true,
+      "native_root_is_canonical": true,
+      "compaction": {
+        "replaced": false,
+        "output_bytes": 11301376,
+        "reason": "No size reduction: verified candidate is 11301376 bytes (source: 11301376 bytes); OLE compaction only reclaims unused container space; live document streams, text and images are retained",
+        "details": {
+          "strategy": "ole-compaction"
+        },
+        "logical_manifest_equal": true,
+        "copy_unchanged": true
+      },
+      "recompression": {
+        "replaced": false,
+        "output_bytes": 11301376,
+        "reason": "No size reduction: verified candidate is 11301376 bytes (source: 11301376 bytes)",
+        "details": {
+          "strategy": "ole-compaction",
+          "compaction_bytes": 11301376,
+          "additional_savings_bytes": 0,
+          "recompression_skip": "PPT OLE records: unqualified record type/version: 1008",
+          "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+          "worker_usage": {
+            "decoded": 0,
+            "written": 11301376,
+            "nodes": 3780,
+            "peak_worker_rss_bytes": 128401408,
+            "seconds": 2.3538551250094315
+          }
+        },
+        "logical_manifest_equal": true,
+        "copy_unchanged": true
+      },
+      "source_unchanged": true
+    },
+    {
+      "file": "mapping_rus_v1.ppt",
+      "source_bytes": 25570304,
+      "source_sha256": "997276d3ebbef628f74e7fbcf10875c60a3bd9a92b2a2ce1038b1b0508861a2a",
+      "eligible": true,
+      "source_root_name_normalized": true,
+      "logical_objects": 10,
+      "live_streams": 7,
+      "native_candidate_bytes": 25570304,
+      "native_logical_manifest_equal": true,
+      "native_root_is_canonical": true,
+      "compaction": {
+        "replaced": false,
+        "output_bytes": 25570304,
+        "reason": "No size reduction: verified candidate is 25570304 bytes (source: 25570304 bytes); OLE compaction only reclaims unused container space; live document streams, text and images are retained",
+        "details": {
+          "strategy": "ole-compaction"
+        },
+        "logical_manifest_equal": true,
+        "copy_unchanged": true
+      },
+      "recompression": {
+        "replaced": false,
+        "output_bytes": 25570304,
+        "reason": "No size reduction: verified candidate is 25570304 bytes (source: 25570304 bytes)",
+        "details": {
+          "strategy": "ole-compaction",
+          "compaction_bytes": 25570304,
+          "additional_savings_bytes": 0,
+          "recompression_skip": "PPT OLE records: unqualified record type/version: 1008",
+          "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+          "worker_usage": {
+            "decoded": 0,
+            "written": 25570304,
+            "nodes": 8132,
+            "peak_worker_rss_bytes": 238977024,
+            "seconds": 3.165434875001665
+          }
+        },
+        "logical_manifest_equal": true,
+        "copy_unchanged": true
+      },
+      "source_unchanged": true
+    },
+    {
+      "file": "mapping_rus_v1.root-normalized.ppt",
+      "source_bytes": 25570304,
+      "source_sha256": "3c8a2cea248bce6bc3fa75005def4d4f446d53912223e016a751ba024f4ed6d8",
+      "eligible": true,
+      "source_root_name_normalized": false,
+      "logical_objects": 10,
+      "live_streams": 7,
+      "native_candidate_bytes": 25570304,
+      "native_logical_manifest_equal": true,
+      "native_root_is_canonical": true,
+      "compaction": {
+        "replaced": false,
+        "output_bytes": 25570304,
+        "reason": "No size reduction: verified candidate is 25570304 bytes (source: 25570304 bytes); OLE compaction only reclaims unused container space; live document streams, text and images are retained",
+        "details": {
+          "strategy": "ole-compaction"
+        },
+        "logical_manifest_equal": true,
+        "copy_unchanged": true
+      },
+      "recompression": {
+        "replaced": false,
+        "output_bytes": 25570304,
+        "reason": "No size reduction: verified candidate is 25570304 bytes (source: 25570304 bytes)",
+        "details": {
+          "strategy": "ole-compaction",
+          "compaction_bytes": 25570304,
+          "additional_savings_bytes": 0,
+          "recompression_skip": "PPT OLE records: unqualified record type/version: 1008",
+          "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+          "worker_usage": {
+            "decoded": 0,
+            "written": 25570304,
+            "nodes": 8132,
+            "peak_worker_rss_bytes": 226459648,
+            "seconds": 3.8195098750002217
+          }
+        },
+        "logical_manifest_equal": true,
+        "copy_unchanged": true
+      },
+      "source_unchanged": true
+    },
+    {
+      "file": "ruslocal_v1.ppt",
+      "source_bytes": 19887104,
+      "source_sha256": "f6e47aa2a7626d15d8bdb5afd2e99783906fcc44df067dd18e12758bc5767f41",
+      "eligible": true,
+      "source_root_name_normalized": true,
+      "logical_objects": 10,
+      "live_streams": 7,
+      "native_candidate_bytes": 19887104,
+      "native_logical_manifest_equal": true,
+      "native_root_is_canonical": true,
+      "compaction": {
+        "replaced": false,
+        "output_bytes": 19887104,
+        "reason": "No size reduction: verified candidate is 19887104 bytes (source: 19887104 bytes); OLE compaction only reclaims unused container space; live document streams, text and images are retained",
+        "details": {
+          "strategy": "ole-compaction"
+        },
+        "logical_manifest_equal": true,
+        "copy_unchanged": true
+      },
+      "recompression": {
+        "replaced": false,
+        "output_bytes": 19887104,
+        "reason": "No size reduction: verified candidate is 19887104 bytes (source: 19887104 bytes)",
+        "details": {
+          "strategy": "ole-compaction",
+          "compaction_bytes": 19887104,
+          "additional_savings_bytes": 0,
+          "recompression_skip": "PPT OLE records: unqualified record type/version: 1008",
+          "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+          "worker_usage": {
+            "decoded": 0,
+            "written": 19887104,
+            "nodes": 6166,
+            "peak_worker_rss_bytes": 195592192,
+            "seconds": 2.1666104169999016
+          }
+        },
+        "logical_manifest_equal": true,
+        "copy_unchanged": true
+      },
+      "source_unchanged": true
+    }
+  ],
+  "limits": "Checks use local copies; rendering/Office application resave is not asserted.",
+  "installed_writer": "/Users/ibegtin/.cargo/bin/filerepack-ole",
+  "installed_cli_dryrun": {
+    "file": "mapping_rus_v1.ppt",
+    "verified": true,
+    "source_unchanged": true,
+    "reason_code": "no_benefit"
+  },
+  "checks": {
+    "ole_regression_suite": {
+      "passed": 596,
+      "seconds": 505.89
+    },
+    "native_recompression_aliases_including_legacy_names": {
+      "passed": 6
+    },
+    "python_3_9_name_comparison": {
+      "passed": 13
+    },
+    "rust_tests": {
+      "passed": 3
+    },
+    "unicode_utf16_units": 65536,
+    "ruff": "passed",
+    "mypy": {
+      "source_files": 173,
+      "status": "passed"
+    },
+    "strict_openspec": {
+      "passed": 103,
+      "failed": 0
+    },
+    "spec_ownership": "passed"
+  }
+}

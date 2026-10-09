@@ -1,0 +1,3108 @@
+{
+  "schema_version": 1,
+  "source": "LibreOffice core",
+  "commit": "cf80890d16f7ef318155efe5843f99153d199e07",
+  "license": "MPL-2.0",
+  "selection": {
+    "extensions": [
+      "doc",
+      "xls",
+      "ppt"
+    ],
+    "minimum_bytes": 512,
+    "maximum_bytes": 2097152,
+    "directories": [
+      "sw/qa/extras/ww8export/data",
+      "sw/qa/extras/ww8import/data",
+      "sc/qa/unit/data/xls",
+      "sd/qa/unit/data/ppt"
+    ]
+  },
+  "inventory_sha256": "880497cb0d5c92a17d05f34eb900de1d121f70617273797061e7d6c9a6bb6a5f",
+  "python": "3.13.7",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "scope": "read-only eligibility; no savings or application acceptance inferred",
+  "counts": {
+    "document": {
+      "selected": 179,
+      "source_verified": 179,
+      "container": 112,
+      "host": 110,
+      "officeart": 6,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 110,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "spreadsheet": {
+      "selected": 69,
+      "source_verified": 69,
+      "container": 29,
+      "host": 27,
+      "officeart": 1,
+      "dedup": 1,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "slideshow": {
+      "selected": 29,
+      "source_verified": 29,
+      "container": 22,
+      "host": 14,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    }
+  },
+  "rejection_reasons": {
+    "source": {},
+    "container": {
+      "OLE: consecutive red directory nodes": 69,
+      "OLE: storage contains stream allocation fields": 11,
+      "OLE: invalid file size or 128 MiB limit exceeded": 5,
+      "OLE: invalid directory type/name": 3,
+      "OLE: unsupported Unicode name comparison": 4,
+      "OLE: invalid reserved header or mini-stream cutoff": 1,
+      "OLE: unsupported root storage": 21
+    },
+    "host": {
+      "Unsupported Word binary version": 2,
+      "Missing BIFF8 Workbook globals BOF": 2,
+      "Empty/unknown PowerPoint VBA project flags": 6,
+      "PowerPoint VBA history/multiple-info layout is not qualified": 2
+    },
+    "officeart": {
+      "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: unqualified/duplicate FOPT property: 0x186": 2,
+      "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore": 26,
+      "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: this floating profile requires a delayed BStore": 4,
+      "OfficeArt: unqualified/duplicate Word property: 0x2405; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186": 14,
+      "OfficeArt: unqualified/duplicate Word property: 0x484b; OfficeArt: this floating profile requires a delayed BStore": 3,
+      "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: missing/invalid floating OfficeArtContent": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: unqualified/duplicate FOPT property: 0x186": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: unqualified/duplicate FOPT property: 0x186": 6,
+      "OfficeArt: unqualified/duplicate Word property: 0xc615; OfficeArt: unqualified/duplicate FOPT property: 0x186": 2,
+      "OfficeArt: no qualified OfficeArt picture payloads": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: unqualified/duplicate FOPT property: 0x186": 3,
+      "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: this floating profile requires a delayed BStore": 8,
+      "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: missing/invalid floating OfficeArtContent": 2,
+      "OfficeArt: no inline picture Data stream; OfficeArt: missing/invalid floating OfficeArtContent": 5,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a50; OfficeArt: unqualified/duplicate FOPT property: 0x186": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2431; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0x2431; OfficeArt: missing/invalid floating OfficeArtContent": 2,
+      "OfficeArt: no qualified inline pictures; OfficeArt: unqualified/duplicate FOPT property: 0x186": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: this floating profile requires a delayed BStore": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0xa413; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a50; OfficeArt: this floating profile requires a delayed BStore": 3,
+      "OfficeArt: unqualified/duplicate Word property: 0x286f; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2405; OfficeArt: unqualified/duplicate FOPT property: 0x186": 1,
+      "OfficeArt: host macros are not qualified": 5,
+      "OfficeArt: unqualified/duplicate Word property: 0x6467; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: missing/invalid floating OfficeArtContent": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0x2416; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2437; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x87c": 14,
+      "OfficeArt: unqualified BIFF type/version/length: 0x7d": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ae": 4,
+      "OfficeArt: expected one global drawing group": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ba": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1b6": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1a9": 1,
+      "PPT OLE records: unqualified record type/version: 1058": 5,
+      "PPT OLE records: unqualified record type/version: 1008": 7,
+      "PPT OLE records: unqualified record type/version: 1017": 1,
+      "PPT OLE records: unqualified record type/version: 1053": 1
+    },
+    "dedup": {
+      "OfficeArt: unqualified BIFF type/version/length: 0x87c": 14,
+      "OfficeArt: unqualified BIFF type/version/length: 0x7d": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ae": 4,
+      "OfficeArt: only qualified macro-free XLS/PPT shared stores": 14,
+      "OfficeArt: expected one global drawing group": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ba": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1b6": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1a9": 1,
+      "PPT OLE records: unqualified record type/version: 1008": 2,
+      "PPT OLE records: unqualified record type/version: 1053": 1
+    }
+  },
+  "files": [
+    {
+      "name": "all_gaps_word.doc",
+      "category": "document",
+      "sha256": "31ec70e050c0cb48f751a155da88a8d5c69c511ccb7d061ceea53140aa60267f",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "arabic-zero-numbering.doc",
+      "category": "document",
+      "sha256": "2a2e09e695f235893d18b91e2a823306c0c05ef8c757170affb9dc70adb25db3",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "bnc636128.doc",
+      "category": "document",
+      "sha256": "0088e74d79878d7ac8a80c4ce55f5d5adcac1180bc3134181a5de1510937cb2f",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "bnc787942.doc",
+      "category": "document",
+      "sha256": "8a9a2f1feabe784035fbedaf1685039760e4afd35964edd6b73f116ad4628d7d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "bnc821208.doc",
+      "category": "document",
+      "sha256": "b78f3263362f7ecd148a2a39a91f13e858104dd5aa498a3fb2d7141a09c3e17f",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "bnc863018b.doc",
+      "category": "document",
+      "sha256": "0e494d369ec22baa9426233eb926959864aff3755ce6dcb382a2c59e4660b7c2",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "bordercolours.doc",
+      "category": "document",
+      "sha256": "9defc97a54a97ed6bc0484c114f71434a57afeef9375e3ba46f5bcf6f6e24686",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2405; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "btlr-cell.doc",
+      "category": "document",
+      "sha256": "c96e972379e7c3b282aa605ff400a0bd00979a343e70b2b642e8fad402b7fff0",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "clearing-break.doc",
+      "category": "document",
+      "sha256": "af2b6cccae3f265ae2a65574c6e5e10d335c0b098017521a1ae700160492a889",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "commented-table.doc",
+      "category": "document",
+      "sha256": "33d235c3dcf3f6ac41e0a2a867c06b86503c2b815eebf7c9e1fa4dd26838f2ff",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "comments-nested.doc",
+      "category": "document",
+      "sha256": "172311dc0f42673c95c61f2dda4f7b4555f8c2a6bc9dd10783036e4c8606c818",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "continuous-sections.doc",
+      "category": "document",
+      "sha256": "4a40cd7f2880a6d981caf1dad004ee060be07148a98f92db3484238d6166513f",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x484b; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "cp1000044.doc",
+      "category": "document",
+      "sha256": "ecabaad7dc53313ffa5a94935a34501e936a66781d80d71e92856a3dfb9b0ee1",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "fdo36868.doc",
+      "category": "document",
+      "sha256": "8e57c84c712a95a3c6a0fd7c2c9c6cefeb252b63e6d3aca9f1290c68b60a4df0",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "fdo53985.doc",
+      "category": "document",
+      "sha256": "5093dd6b25c28ef93d0e739bdf8af1745c4919d6c60f37a874e84f68a317371c",
+      "container": true,
+      "piece_prm": {
+        "pieces": 2,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "fdo56513.doc",
+      "category": "document",
+      "sha256": "13a73fd154f9a8e457aaae317252f2a7dbfa3caa6c67a454e6dd388a2d251908",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "fdo59530.doc",
+      "category": "document",
+      "sha256": "703de8f8ea839b58539c5ccf32c2add43d70fd959ebb06cd4d2742a5b7e5887b",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "fdo68963.doc",
+      "category": "document",
+      "sha256": "ed1530d16e6571759df77be5a7661fdb2c39a3ceedba9657cc180e98638685ca",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "fdo68967.doc",
+      "category": "document",
+      "sha256": "1f0614163a2d7947debebfe5c8a5b5c4e5aac12d7e375fce3ce486d86659e530",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "fdo77454.doc",
+      "category": "document",
+      "sha256": "42a0da1e4589e2754bffef6e4dcc36b3c28ec32a31b090ce64996283e45e5907",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "fdo77844.doc",
+      "category": "document",
+      "sha256": "ab33d2ddc8dec14148924d6a781c5b0fc88ec267007876b5329405a95df7be0e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xc615; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "fdo80333.doc",
+      "category": "document",
+      "sha256": "b94209fda88c04935d0f3d9405131986fc8fd4e9018da8e7e1b7c9b644ed9dad",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "fdo81102.doc",
+      "category": "document",
+      "sha256": "f814573a6ca75caf8721e1e44fef87adec40cd9267f2f23559761919c294b47f",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "gutter-left.doc",
+      "category": "document",
+      "sha256": "f8d17c38b9b43c0e73c6e057eaa4b7ae2e4adb9ee431c2aebdc121656e3c825a",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "gutter-top.doc",
+      "category": "document",
+      "sha256": "03857e40caa0b0b8c4e8d9d31fa769d0a8d92df246bf028e3cd6a632f009f7f3",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "i120158.doc",
+      "category": "document",
+      "sha256": "f0e4f66622c0b5f8ee1af1931d5a216be84768f5bbe53b20f6e9a7deec563609",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "image-comment-at-char.doc",
+      "category": "document",
+      "sha256": "a2ffbc4e799b7c5052d83d9e38646d1c96d177583420f5f5f5d7256add7a186e",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "inlinePageBreakFirstLine.doc",
+      "category": "document",
+      "sha256": "2a337581ce05381d62d7ef4207d470424c5635fbc039f428124c58d857144d6f",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x484b; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "list-nolevel.doc",
+      "category": "document",
+      "sha256": "37f4ee843cedeae2ee43c79b64d5e00116db6a1a7426c3d345f3f8a0eb258fcf",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "listWithLgl.doc",
+      "category": "document",
+      "sha256": "b69c35b243f68b3988cb966424aa83b456986faaec851d04e579af23819e9c46",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "mailmerge.doc",
+      "category": "document",
+      "sha256": "402853b3507bb0b7aa71471785d1fa411b39aa5ca2621b59ceee74d57e2b9f1b",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "msobrightnesscontrast.doc",
+      "category": "document",
+      "sha256": "80849cd4d607b70420aa8b4f4af5a03b6f7e899bf25775f34a5c450ee82ea4de",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      }
+    },
+    {
+      "name": "n325936.doc",
+      "category": "document",
+      "sha256": "ae97b39ed15695127dee72ff6c4da418cb57446854ffe8ff5471ee4c287e7f4b",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no qualified OfficeArt picture payloads"
+    },
+    {
+      "name": "n652364.doc",
+      "category": "document",
+      "sha256": "a56e6cb0ad1f4bbd2326f31bf4473d517fb138d2e0a97a505cc588c71b7f9945",
+      "container_skip": "OLE: invalid directory type/name"
+    },
+    {
+      "name": "n750255.doc",
+      "category": "document",
+      "sha256": "20e4fc35b68ab20fd915d75af5feabbb5bc9be2b7fe00652f6eacd4fbc69127b",
+      "container_skip": "OLE: invalid directory type/name"
+    },
+    {
+      "name": "n757118.doc",
+      "category": "document",
+      "sha256": "fc03c247000ba902796343170526d2116023445208ba9e17e11ad2f27179a018",
+      "container_skip": "OLE: invalid directory type/name"
+    },
+    {
+      "name": "n757905.doc",
+      "category": "document",
+      "sha256": "bb84a22dec9d097f14263beac8e84036cdfebdf38d8f24c4224b5bbed81c7c37",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "n757910.doc",
+      "category": "document",
+      "sha256": "eca0f6a4523ed6b2f47b9c0782619c659aaf006ebb2a916db56edba989e95d14",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "n760294.doc",
+      "category": "document",
+      "sha256": "5ad70d6cf3288609171efe9992d320e479bfa9c78f9e6bee669613060c7a45ce",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "n816603.doc",
+      "category": "document",
+      "sha256": "77df6fe10f3c94b5e376ada719f803b6dd5ace1fb40a8cb0c90d9e0e9aba38ff",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "n823651.doc",
+      "category": "document",
+      "sha256": "5e6d1f4c60e264a8825e990ff02bd8c088004a705c402637c42c7ed4965f7484",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "new-page-styles.doc",
+      "category": "document",
+      "sha256": "fa00d75fe43bdb6237ed8eedcb64cf284f558bdca6eb8efcebc950466a6f7959",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "nonInlinePageBreakFirstLine.doc",
+      "category": "document",
+      "sha256": "8a908eb1116ab3a99a50fcd52c3dd766fc8775251878c102402f5feb2304853d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x484b; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "ooo92948-1.doc",
+      "category": "document",
+      "sha256": "fb915dd6c230c1aad64add48f41cd57cc2dc4f63051ce06ee2709d6349a281d7",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "page-border.doc",
+      "category": "document",
+      "sha256": "33a15e0e53dfa1b47bdcc9362584465abfcc5dd899a9ce247f7b1172c8628873",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "rtl-gutter.doc",
+      "category": "document",
+      "sha256": "6178eadd6f5e7914f367211ac981df389faca8b61066439e18ac54586ceeddd8",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "shapes-line-ellipse.doc",
+      "category": "document",
+      "sha256": "5185c20776e162e8df2b506717552b8e8685c1b687dbb2dc6f8374cd01f55b1e",
+      "container_skip": "OLE: unsupported Unicode name comparison"
+    },
+    {
+      "name": "tdf100961_fixedDateTime.doc",
+      "category": "document",
+      "sha256": "66affec24cb5b663d23ec02689ad8d1fb834e17fd13c34591e21ed8766916cc2",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf101826_xattrTextBoxFill.doc",
+      "category": "document",
+      "sha256": "cab742e55b62e7a638ada283e877144a574e0412032ac5d797c1eb8cfedcfb9a",
+      "container_skip": "OLE: unsupported Unicode name comparison"
+    },
+    {
+      "name": "tdf102334.doc",
+      "category": "document",
+      "sha256": "d871e119e614af5bd3c2aa7217bd92935ff967a566bde80c732c208319b9339b",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf104239_chapterNumberTortureTest.doc",
+      "category": "document",
+      "sha256": "a68c85aebb62026a10932f430c224bda1a4ad7ccb880f4589b072a0bd4aaa07d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf104239_chapterNumbering.doc",
+      "category": "document",
+      "sha256": "0136caf692938d6d5aaf56ad68a0d5fe268de4bce4671aa3a26e91d27375ca4b",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf104239_chapterNumberingLevels.doc",
+      "category": "document",
+      "sha256": "97138c4114092dad56e2ca454a108ee7046952db51625d0f3bb52936a1cd94f3",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf104239_numbering.doc",
+      "category": "document",
+      "sha256": "62713fa50eeb1d50caa33de1cc3e618cc7aa7687a2f4d41275296c05925d676f",
+      "container": true,
+      "piece_prm": {
+        "pieces": 5,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tdf104239_sharedOutlineNumId.doc",
+      "category": "document",
+      "sha256": "f8f7c49a6c22d4cf9c04174f1d217be7c3ecdaa960278d08ce9a2b3016e1d00c",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf104334.doc",
+      "category": "document",
+      "sha256": "6b8e63be7ebae9e2c6e37bdb26eedc8de6cae86991612b6550f130c698c6ea8b",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf104596_wrapInHeaderTable.doc",
+      "category": "document",
+      "sha256": "47ff8c99d08ba375f35d4cb21cc975bb62ff1917818777566c3e4e2f37f09fe3",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      }
+    },
+    {
+      "name": "tdf104805.doc",
+      "category": "document",
+      "sha256": "73c2cb5571493771512fed9cd1be76384b99b5f442ce6cf0288969c5794afdba",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf105570.doc",
+      "category": "document",
+      "sha256": "06515a60ea6232125a6e163bb378bb9382b63c492425f7a6e11ddc4a6cf158ee",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf106291.doc",
+      "category": "document",
+      "sha256": "eee4557d5d5293aa3cbb6f872298e66925fc2393b50eb4d899bb622f49244e58",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tdf106541_cancelOutline.doc",
+      "category": "document",
+      "sha256": "8b7bb75a3beb223f530903972ad0103ff150fbe708d56ad755e118c195879076",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tdf106541_inheritChapterNumbering.doc",
+      "category": "document",
+      "sha256": "97ca7c5a4da856219796a3420040558cfd815fa62355c90c43eee51700882143",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf106541_inheritChapterNumberingB.doc",
+      "category": "document",
+      "sha256": "53738e135e8a34740f89b837bbc981f92a3957f376d8fbe07475a0ab94de96e2",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a50; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf106541_inheritOutlineNumbering.doc",
+      "category": "document",
+      "sha256": "809c712b37d9df94e6d286e3cb615e11289dc4b347e6259b5c0774fc3e0adb3d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf107773.doc",
+      "category": "document",
+      "sha256": "3003a89a5be63092fa6172cda29b19af45fedc4aa1da44b85674d2e9337ebc10",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf108072.doc",
+      "category": "document",
+      "sha256": "3240f2edeeaa033d842c6701588c5d999df3a69e99938224b56f1935776419e3",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf108518_CRnumformatting.doc",
+      "category": "document",
+      "sha256": "a5a5542bb1f46e9063778179b63e04b4d81a146b8d82a12004eb7edd8915db75",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2431; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf111480.doc",
+      "category": "document",
+      "sha256": "a564add7e77428814b72a2b2174db06f69301729b68f1a7a11ff83a4890997b2",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf112074_RTLtableJustification.doc",
+      "category": "document",
+      "sha256": "29589d1602c961a9689eafab3b91606491b5a12ae4bb5d4151cfabeabfb83dbc",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2431; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tdf112118.doc",
+      "category": "document",
+      "sha256": "b8bd188050fc9a9151174914935396a814676c33f0f65bb802be185504fe8ec9",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no qualified inline pictures; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf112346.doc",
+      "category": "document",
+      "sha256": "8a66cf7adeb3ef8abfbd2d93317348658020a3b035c48b6b8180e06f1b974bcc",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf112517_maxSprms.doc",
+      "category": "document",
+      "sha256": "af837ff88fe936058a0cee9879ea02c532d18d116b0260e834043ba0f5d6d59d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf112535.doc",
+      "category": "document",
+      "sha256": "cc22db7c8216e112d28b3ff76a8c37903c260518365cd1acbf8f141b8a0bb683",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf112618_textbox_no_bg.doc",
+      "category": "document",
+      "sha256": "2d0ea8b1dd2aa35b1e2fa1336e22945edf158dabedc84b5c27429b386ab2f435",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf114308.doc",
+      "category": "document",
+      "sha256": "c0e1d89690c6a2216fb6766cb69f711a02e2a8676eefd4819592bedbf5de6d0c",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf115896_layoutInCell.doc",
+      "category": "document",
+      "sha256": "4e4f4469359869d309e54bd2f17ecb54326dc084e003d17f1145e0df963c4e4a",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf116194.doc",
+      "category": "document",
+      "sha256": "0a618ab42702fbb29bc84b5dbf05cd42fbf0dd638eb5da56357a21519bdc3986",
+      "container_skip": "OLE: invalid reserved header or mini-stream cutoff"
+    },
+    {
+      "name": "tdf117636.doc",
+      "category": "document",
+      "sha256": "8a27fc0f97538f2837891f7904ee5a9a7d61985a6a4342cb87abcbad5d49e038",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf117885.doc",
+      "category": "document",
+      "sha256": "218e398e5275a81475575f6ce7c2bddd9143357b29e93cc028c34e2aa48eb68f",
+      "container_skip": "OLE: unsupported Unicode name comparison"
+    },
+    {
+      "name": "tdf117994_CRnumformatting.doc",
+      "category": "document",
+      "sha256": "aacd52a4d3a5d024f220f59caf5b9ca080d31e6e990afdf73aedc255f27a6a91",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf118375_240degClockwise.doc",
+      "category": "document",
+      "sha256": "77d05e05b6117b97d5862008f9a1a20e3ca12150afaf34e33d0fb2f66e0cc9a8",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tdf118412.doc",
+      "category": "document",
+      "sha256": "a343fd0955df10175f064a3619b77358c605326d80a32b3e95741f35b4b62cd6",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xa413; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf119232_startEvenPage.doc",
+      "category": "document",
+      "sha256": "aaa8d57ad7b2414635f4f8200c5a93bcfcd874e6a238446dff36ed72afcffeba",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf120003.doc",
+      "category": "document",
+      "sha256": "e587d0fbb9bc18a4ff7b208ce9fc44d3b02f509e600de39bddc8d0e6757ad2d8",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf120225_textControlCrossRef.doc",
+      "category": "document",
+      "sha256": "1f8b6e6b8e4d4df67c4159b9a2a2d6816fec4f943a6d49c0f761449d672edca4",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xc615; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf120394.doc",
+      "category": "document",
+      "sha256": "196b2d77757cbc66600f6551431683d0302600423d9a2f707ba0459b31c4721d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a50; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf120711.doc",
+      "category": "document",
+      "sha256": "87aa6f632df577b3b7260b2004d36ad2631eefc3ebaa3a76db365e153503b6d7",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf121110_absJustify.doc",
+      "category": "document",
+      "sha256": "36546121f8cbde6386a72ef0e546807ac39a474a6f265a5a5dce445c24943aa2",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tdf122425_2.doc",
+      "category": "document",
+      "sha256": "70d8e8ffb628b81f099250d902e00552c1f01b8f2caafae7934b8e19df2da91e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf122429_header.doc",
+      "category": "document",
+      "sha256": "b4a89d178e4fdce03cf09283ee6ed9f09d4955942a3b100f627345ba8472fbe1",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf123433_fillStyleStop.doc",
+      "category": "document",
+      "sha256": "bee4c3d17ba7b3cc998384bcafbe2aa0e14a7ff3547d0f1efb4baaedcfcd18ca",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf124937.doc",
+      "category": "document",
+      "sha256": "83dfe96bde61386fa22e457084b52c1561d8234e4fbb9c82547abb9d7dbf60c4",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x286f; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf127166_prstDash_Word97.doc",
+      "category": "document",
+      "sha256": "16b5ee3fac83abbc0d7bb5807d8d34bec193a60255faddcb745db0650d3eeeb5",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tdf128501.doc",
+      "category": "document",
+      "sha256": "c5cd2dfd5a253e28d71cc5c87d7214b3e431dedb3d1438662ee0938c26fcdb41",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "tdf128605.doc",
+      "category": "document",
+      "sha256": "cd4c189a6376b0dcd1e2d58c1193a4910507701759760edf4933b8cc654d5d21",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf128608_tableParaBackColor.doc",
+      "category": "document",
+      "sha256": "cd8100d942a748db76c18a4c715269e9afec7f7cffc9ec54e0f8dd14b39607b9",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf128700_relativeTableWidth.doc",
+      "category": "document",
+      "sha256": "a97de801e0d448ef6ebe7f4ddedf6f47c29e1c7fcb910fbd8f6256bf0e00620b",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2405; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf130262.doc",
+      "category": "document",
+      "sha256": "18b0a041da41a92c8d97dbb8061f4b0570b8a25e974f045e97042b073ff4e4d0",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf132094_transparentPageImage.doc",
+      "category": "document",
+      "sha256": "6fbcd400c0c7fcf7b9eb4d44c312d112269723b73613115a47eea21c88c0a793",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      }
+    },
+    {
+      "name": "tdf133453_realFontSize.doc",
+      "category": "document",
+      "sha256": "64f257f10bb1729f7a04607db8d866ef1859fcaa07bbe6188ee84ed1d7822fed",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf133504_wrapNotBeside.doc",
+      "category": "document",
+      "sha256": "6457cdb6c3d566a54d1b854858d9ab46355bb0a3075672c1cf2ccced3e2b035a",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf134570.doc",
+      "category": "document",
+      "sha256": "b416b9597f9b2a1cbe7d952e29a7e00febc46abe18135916d4b85b6563b75441",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf135672_tableGrows.doc",
+      "category": "document",
+      "sha256": "bcf4775398fadca146467390c01246bbb0fe15179c22e0d8dbc6698fd88aca70",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf138345_paraCharHighlight.doc",
+      "category": "document",
+      "sha256": "b10ed74e0cd63a5ab58e5b32cc1d395b2343516f6a45b7831d522272fb298522",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf139495_tinyHeader.doc",
+      "category": "document",
+      "sha256": "c4c2950804457a23e4bbca8c9f55bcccea35144df1c2dff4ec445eaf404d336e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tdf141649_conditionalText.doc",
+      "category": "document",
+      "sha256": "56f7a4135f99e691cee72e8b205b9e9befbb17270eea9130a647928417e42f59",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf142760.doc",
+      "category": "document",
+      "sha256": "96bf219b792ccd048d1d6e95fe94fedc02c074ca65956a8217dc808d8a96cd31",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a50; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf147861_customField.doc",
+      "category": "document",
+      "sha256": "5854f73f2548ab75189eaf9a70a164b1c30a1c0e0a582cff9d5926446667ac07",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tdf148380_createField.doc",
+      "category": "document",
+      "sha256": "431fa7ddcd3f10cc539a5bc1c91a7dc0b67fa3b49f56d09b2f3a6941f9f00789",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf148380_fldLocked.doc",
+      "category": "document",
+      "sha256": "7c87767c72f6adf43fa5b228a6cc1e8236217bee731f02046e1a5582dbec7432",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tdf150197_anlv2ListFormat.doc",
+      "category": "document",
+      "sha256": "1ec87d2069c7a1975795dd08cad810a09e1225e8700e7431665f0504f97a4743",
+      "container": true,
+      "piece_prm_skip": "('0Table',)",
+      "host_skip": "Unsupported Word binary version"
+    },
+    {
+      "name": "tdf151548_formFieldMacros.doc",
+      "category": "document",
+      "sha256": "73b8d9a6152118aac71f5155b65da53cc94fb0df1188214870030b67488ec88d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified"
+    },
+    {
+      "name": "tdf155465_paraAdjustDistribute.doc",
+      "category": "document",
+      "sha256": "0f8911fb4fcb493515d1d5768eac9e83856bda090b92cb69f2f204bba49ca2ee",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf160049_anchorMargin.doc",
+      "category": "document",
+      "sha256": "4e7c7aa288ec5db0cd5019ca6aaeb1834d1f1705f58d9745fb09a974cab1fd43",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf162541_notLayoutInCell_paraLeft.doc",
+      "category": "document",
+      "sha256": "2c9b82bbec2f664f3a2a4c43d1ee68b1e42b253959eabca21c5c2baaab600050",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      }
+    },
+    {
+      "name": "tdf162542_notLayoutInCell_charLeft_wrapThrough.doc",
+      "category": "document",
+      "sha256": "e1ffc2182f058a8d84af221897b1f181a90baac19022d26353538ea9cd27afc5",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      }
+    },
+    {
+      "name": "tdf164800_hiddenPara.doc",
+      "category": "document",
+      "sha256": "d13ecc0da081d04d75d345ae1945d54ad87681dcd2b6068c299fc8705395fe97",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf166503_DoNotUseHTMLParagraphAutoSpacing.doc",
+      "category": "document",
+      "sha256": "a082ed660ec9a3986eb08559e047b3c61b2cdef68421a1502a7a0033b5211310",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf173671_textlineTop.doc",
+      "category": "document",
+      "sha256": "3add7651ec1cfbc0792cce70aa3f79acb9c45d56d17e8d5a906661adc772341b",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf36117_verticalAdjustment.doc",
+      "category": "document",
+      "sha256": "77d15d1f409e94dbb5ba4a4823d7fea1ff894c9a05f959d077a52a34f00ea21e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x6467; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf36711_inlineFrames.doc",
+      "category": "document",
+      "sha256": "fed7c116677579cf5eedaa913efe9d6ddc30e0f2053b532461b6d30051646397",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf37153_considerWrapOnObjPos.doc",
+      "category": "document",
+      "sha256": "a83c4b1687afa7917e0cd51d4f8e4230f65bfed397f64f54be0c43a1c6ce20ef",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf37778_readonlySection.doc",
+      "category": "document",
+      "sha256": "36aa7bbfa8cc6d892db69aa30a19d4aef0cd21a9c7a95b36c6a8283b6ed819ce",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf38778_properties_in_run_for_field.doc",
+      "category": "document",
+      "sha256": "da3871b6b9782dbbfe5830f117ce56f438cb68736b896016b09cf6a655f9f1e7",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf49102_mergedCellNumbering.doc",
+      "category": "document",
+      "sha256": "54caf656de15de36bcaf418f86d49d15b24a090f1f60aecb84a4a55a47d8cbdb",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf54862.doc",
+      "category": "document",
+      "sha256": "134bfa2de4db1348f425ad38b1fcb1a1c51e65ee9023cc2a97d1f3ca19ad4904",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf55528_relativeTableWidth.doc",
+      "category": "document",
+      "sha256": "7d0f208aee5ef1495da15bba9e5800e971265534d320df71e04dff309b9f2565",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tdf56321_flipImage_both.doc",
+      "category": "document",
+      "sha256": "6ddad0e144e9ee423f1378b05df4295b8b194099e2718e736766fd746c24e66c",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf56738.doc",
+      "category": "document",
+      "sha256": "ad956863fdc1a10b0159fa2e9144737d3654f75f266af73e2de3d07e956db679",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf59896.doc",
+      "category": "document",
+      "sha256": "0b6cd5d0304e8397263e194671772d32d412798c00808f6661de6d26fa449b8b",
+      "container": true,
+      "piece_prm_skip": "('0Table',)",
+      "host_skip": "Unsupported Word binary version"
+    },
+    {
+      "name": "tdf60378_mergedBorders.doc",
+      "category": "document",
+      "sha256": "8cd852dacc055450e941ba801ae072918047972cd093e4253e6a89119d5f7bd8",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf72511_editengLRSpace.doc",
+      "category": "document",
+      "sha256": "8c3f0286154f6336cfa9dcd0889efc1a889ba061880abb5a1196cc2dabebac54",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf73056_cellMargins.doc",
+      "category": "document",
+      "sha256": "01b7f3f03cb8f2fd4ac602ced8a3d4150e47851f0f903f1e629078e47906555f",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2431; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tdf74328.doc",
+      "category": "document",
+      "sha256": "a9eccebc5d61dfdf3283403f3664878f79bcb98649479ffa43c681a7275d865e",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf75539_relativeWidth.doc",
+      "category": "document",
+      "sha256": "cdb0dbd1d6418093549414d79a31a480eab1cf4b4a01698f2405a72d46807143",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf75748_inheritChapterNumberingC.doc",
+      "category": "document",
+      "sha256": "a79e08c21927980dc8c9253125b55327f5018b7908074f1b1831f826d4832ee8",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf76349_textboxMargins.doc",
+      "category": "document",
+      "sha256": "4be0115f223c72e2560583c5962f327003fbe590ccc97e882a824c38a6526f46",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf79553_lineNumbers.doc",
+      "category": "document",
+      "sha256": "568ef1ffd86dbdc7ef668feb0a67c0c713ffd4579a1689d8b28316bac1dfbaaa",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 1,
+        "rasters": 0,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      }
+    },
+    {
+      "name": "tdf79639.doc",
+      "category": "document",
+      "sha256": "ee6c3d6c3c64c8c949286280fb8ebc3daa570b2a9e97d9d3480f4d91ff74631b",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf79738_footerLineNumbering.doc",
+      "category": "document",
+      "sha256": "7c0f77b581d332eaabcc4bf13246a7924eb517eeae5a3a9addfc16d0a334aa68",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf80635_marginLeft.doc",
+      "category": "document",
+      "sha256": "3ae40111228ad11cb4e629fa7d569a4fec0d5cf26d588cf50f52c61219ebcfbc",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf80635_marginRightRTL.doc",
+      "category": "document",
+      "sha256": "7c05cfebfd0185a8331434d5468cd9fb577f19a3eb5fa4c87bc8e3dc7ca0ae0d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tdf80635_pageLeft.doc",
+      "category": "document",
+      "sha256": "4a004260e09b3c49bca4f4f09a9316fa475154976856dc2cf8edb296e0cafc59",
+      "container_skip": "OLE: unsupported Unicode name comparison"
+    },
+    {
+      "name": "tdf80635_pageRightRTL.doc",
+      "category": "document",
+      "sha256": "8596c75c1432882812a1676fd3e18a966752474b32b0ef5478b847e5b427e067",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tdf81705_outlineLevel.doc",
+      "category": "document",
+      "sha256": "8d9a09bf6ec284bacfb0deab4482e1e88f1f9f6cf56cd1bae616c3cf51a3d28b",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf89377_tableWithBreakBeforeParaStyle.doc",
+      "category": "document",
+      "sha256": "0a25bf2bce4a34510e442689287894f6f6be58cfea5a575e25cb69ae5d0bbe5d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf90408.doc",
+      "category": "document",
+      "sha256": "0a6c69cacf4e4b60a316fc75c98be21baf565ea202d1da714d56377b1ac67075",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf90408B.doc",
+      "category": "document",
+      "sha256": "9b3a0cd3b2487f8b6731dc608bc5d3b6a3eb4af1db81b1a708d3f85099731fc6",
+      "container": true,
+      "piece_prm": {
+        "pieces": 2,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf91632_layoutInCellD.doc",
+      "category": "document",
+      "sha256": "97a5342a8e98cd0868cccbdfb58dcff027a8965bec2ccf21534a4144453e4377",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no qualified OfficeArt picture payloads"
+    },
+    {
+      "name": "tdf91687.doc",
+      "category": "document",
+      "sha256": "2b96991610bdb417e4d728b11c6bd6b93b0ebf5cf3e32a65fe42e7751f121984",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf92281.doc",
+      "category": "document",
+      "sha256": "0c30cd7cc56683b45a3eff12c02187b2484e003468449b071c981c4da7f44d05",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf94326_notOutlineNumbering.doc",
+      "category": "document",
+      "sha256": "8a5374da051d135d6146d0156a1d8ea946ca8ca1640755337d23486f9c4799a3",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf95321.doc",
+      "category": "document",
+      "sha256": "4aa826b6ff4941205082f11540eb34d021d3b7d11dd130f6ac4f4963a8d30f46",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf95576.doc",
+      "category": "document",
+      "sha256": "0c08fbed8f93b28e9561e9c6f29e511c7d737087fc6ce48fefc22511685ecce3",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf96277.doc",
+      "category": "document",
+      "sha256": "fff8faf05badc012b4795d10b6c6893b4f81df22b92f54aa9eda0b5e50f87ed3",
+      "container": true,
+      "piece_prm": {
+        "pieces": 4,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a50; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf98284_softLockedFields.doc",
+      "category": "document",
+      "sha256": "fc3c64414ecbebfe91db42111c67d07155162063a083f4f7ede25658dba826c2",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf98620_rtlJustify.doc",
+      "category": "document",
+      "sha256": "93f7fcc406a0a8df0236a770cefaa1e1d5e283f2b786630d802b34de71cd1aa8",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf99100.doc",
+      "category": "document",
+      "sha256": "7b435df82ac1d61ae03c90112fa086a6e8b008c50d1fbfdc73c1b916c9ca0936",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf99120.doc",
+      "category": "document",
+      "sha256": "c9ddaa3426cb663306a0c2da638a7c067e13148d27dfe1ab065e92286ea0d195",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf99197_defaultLTR.doc",
+      "category": "document",
+      "sha256": "846d0b4236f9cccf7faa153be1efc94c25d7405e8a4d0000f75d88daeb0bc25e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "testTdf107931_KERN_DocEnabled_disabledDefStyle.doc",
+      "category": "document",
+      "sha256": "728aa42bfc170c77eb8ac38d45ee2c1984df70fe7b5522d05b9a4f06cb87349c",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "testTdf107931_KERN_enabledDefStyle.doc",
+      "category": "document",
+      "sha256": "e3b982d4c1596f64f2359eabfa70a98983a8a5a6d5997c31ea508cb3541cf0ed",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "transparent-text.doc",
+      "category": "document",
+      "sha256": "e2e07b9b860d80dbe5e620d1d6dc22def550fc52ba8807a9bd501afc40880d39",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tscp.doc",
+      "category": "document",
+      "sha256": "d4f6d82c259b9a9d8dea7dac90f2b7aacd2e9a0cdc0f586c23d7a088b4a32052",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "zoom.doc",
+      "category": "document",
+      "sha256": "6ecc9bee5262dc8fb7fab7c21697db59c572e39efeca8661194b1c03bf1d3f82",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "zoomtype.doc",
+      "category": "document",
+      "sha256": "a58409623052da49a5e9f2806b3b29ffd8e1c7aa3f4d1e77cfb4ce900816860a",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "bnc875715.doc",
+      "category": "document",
+      "sha256": "4a8de0f362a73a29b4eae71847c3bdce48ea541c18d6259bc7716465b0cb680e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "changes-in-footnote.doc",
+      "category": "document",
+      "sha256": "96acd04bd4a8c196e8d18df0f7b15aadd40c3c7a67b60828f95203877eb848c1",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "floating-table-section-columns.doc",
+      "category": "document",
+      "sha256": "8fe636827e1acd8add5183d4730cee820284fea653d6fa49893ea773b1f319d1",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x242a; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "image-lazy-read-0size.doc",
+      "category": "document",
+      "sha256": "e98b07ccbd24da0a035694e50b79acf834eb78342b2aff03a9a86b513932fb96",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "image-lazy-read.doc",
+      "category": "document",
+      "sha256": "dea504488cf5b7f6062f3528e5f5024c767c862ccf47034a9b81234e610fd270",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "n816593.doc",
+      "category": "document",
+      "sha256": "40779f6f43e8f0d9de46da7398aa22bdf78d75e7ce44341c23da755aae72dd50",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf106799.doc",
+      "category": "document",
+      "sha256": "b0e9a34e838347f3e96b44015db10b6db26717fcd195bd08742780efbb31e2bd",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf121734.doc",
+      "category": "document",
+      "sha256": "50010975e32b7b8ca10b81f93618d358470fa7ced1ad6ceb4654a9ec18fec424",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2416; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf122425_1.doc",
+      "category": "document",
+      "sha256": "ca56e87416e836959b0afd4b38d97b64226fc0261f39ae60347ecbe231bb4e76",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2437; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tdf124601.doc",
+      "category": "document",
+      "sha256": "3e105980f47af62c81c1c451b0339e34d3fdfe6972c1fe5c664e7b25d966f84d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tdf125281.doc",
+      "category": "document",
+      "sha256": "4a9f7637ec3a941d466316978266d4f3cfdc6ee26db154f1fdc4f26eb8f60f42",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf127048.doc",
+      "category": "document",
+      "sha256": "1e54caf9bda84498c3e357a9c44fd9e049c7e342cf7c67703eee96e4fd926eab",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf160301.doc",
+      "category": "document",
+      "sha256": "04954c251425b8a033057cc28bb3ca0c0e82a267c04a5f16980f66ff85d9a388",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified"
+    },
+    {
+      "name": "XlStartupExternal.xls",
+      "category": "spreadsheet",
+      "sha256": "78470f2b78f1b0f4a867254201bd25e279a0e51efa59fd9b4d8f919f68725000",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "array_formula_with_macros.xls",
+      "category": "spreadsheet",
+      "sha256": "23b1bc5a7f30d4a4fd377e51cc619dc0f0b22d4289f2ca4de69b967b6fb20c88",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "bug-fixes.xls",
+      "category": "spreadsheet",
+      "sha256": "796d59094a17040519e0fc10965b5e8094f036c8d20fe32b125e8e56fca4150b",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "cell-anchored-group.xls",
+      "category": "spreadsheet",
+      "sha256": "5a00bbf0b7014fd5ac6103eb74d55bcac97ebe9a7c9cfe08261594bb79996e66",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "cell-borders.xls",
+      "category": "spreadsheet",
+      "sha256": "4722bfa239b04667d88a30a99ccb4eb09223dfa52373ccd3cfadcb4c26c34ceb",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x7d",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x7d"
+    },
+    {
+      "name": "cell-multi-line.xls",
+      "category": "spreadsheet",
+      "sha256": "1edfbb525b7f63e9b5342337a2f4595b943eee2d2d3c7ffa1766e307b893a74c",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "cellformat.xls",
+      "category": "spreadsheet",
+      "sha256": "198d430b62a84d30b27e9c281c5e9d61990dd98728433421f65663f6d7359f58",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "chartx.xls",
+      "category": "spreadsheet",
+      "sha256": "defe65bce2ee4b2fca1063b0d9452677c030eebbded97517b933246d46ca0fc7",
+      "container": true,
+      "host_skip": "Missing BIFF8 Workbook globals BOF"
+    },
+    {
+      "name": "chartx2.xls",
+      "category": "spreadsheet",
+      "sha256": "defe65bce2ee4b2fca1063b0d9452677c030eebbded97517b933246d46ca0fc7",
+      "container": true,
+      "host_skip": "Missing BIFF8 Workbook globals BOF"
+    },
+    {
+      "name": "database.xls",
+      "category": "spreadsheet",
+      "sha256": "5eb0136a73561039faaf4181537575a2e00205b10aa876a76f0fa3177c3f63bd",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "embedded-chart.xls",
+      "category": "spreadsheet",
+      "sha256": "18f8f4292446f1be6f6aefeef4a805f63ee3bfd21e68b1e65cec8f99f85a16f3",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae"
+    },
+    {
+      "name": "emptyAnchor.xls",
+      "category": "spreadsheet",
+      "sha256": "7b06e2cf962b34775bf932822a03405ae0115cddbb034068494042321ff531fe",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "enhanced-protection.xls",
+      "category": "spreadsheet",
+      "sha256": "6dd64f00ccd52ece3adb25bac7477ea9ad0b0b060a3501726b616cd9d98f23a2",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "external-ref.xls",
+      "category": "spreadsheet",
+      "sha256": "bb4236efcf7f6949823fb0c136dcf28945b3b93890c6362b988ca3159906cd8b",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "external_named_function.xls",
+      "category": "spreadsheet",
+      "sha256": "92d9f461971ccd60572f610342202cfba91a6233df0dd0d34124426207613fae",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "fdo55572-1.xls",
+      "category": "spreadsheet",
+      "sha256": "df2e903d1fe9b16b3669129df132fad95160a4ce62817da2b21b57548c230023",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "file-with-png-image.xls",
+      "category": "spreadsheet",
+      "sha256": "d427f083b912e73e453e0a110d1b807e8adb26c93f40d2a7ba9019abe299275e",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart": {
+        "adapter": "XlsArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "dedup": {
+        "entries": 1,
+        "unique_identities": 1,
+        "consumers": 1,
+        "removable_entries": 0
+      }
+    },
+    {
+      "name": "formats.xls",
+      "category": "spreadsheet",
+      "sha256": "9bc5f2007aedd1041728d6670b188eceedd6273f9b49507fa2904e76e6b4ee97",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "formula-reference.xls",
+      "category": "spreadsheet",
+      "sha256": "a520ce8e1e28ef5dbf5a83842f818f89f7ea6d90783f0cefa8247c3c99c25ef4",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae"
+    },
+    {
+      "name": "formula_with_macros.xls",
+      "category": "spreadsheet",
+      "sha256": "a70ebab10a7824d3873b6ef46e9909baf19171b20e8c6ddd4f16759e4de6c883",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "forum-en-29552.xls",
+      "category": "spreadsheet",
+      "sha256": "fe4deecc36a50b69537117479ee59f7a541d83fed5208691852e8d82edc7bc7d",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "forum-fr-59757.xls",
+      "category": "spreadsheet",
+      "sha256": "766c318a07a365bc28666c8de3928ff0df716e391b4f0b0313366f48b00745c5",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae"
+    },
+    {
+      "name": "forum-mso-de-37362.xls",
+      "category": "spreadsheet",
+      "sha256": "5e50a6f86f0a59ad476c242859a8dc4a5d36df647481336f78ac32ee92671b9e",
+      "container": true,
+      "host": [
+        "xls",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "forum-mso-de-48440.xls",
+      "category": "spreadsheet",
+      "sha256": "943f4c8820d0c29661dc43f5f04468fe6ee192a6304b5df7c3f55214b8ee73d1",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "forum-mso-de-49320.xls",
+      "category": "spreadsheet",
+      "sha256": "9c509f2e4db89748d4c5d067e6cdba88ee42ecb1f7e16aa7cf1b275f990b0f75",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "forum-mso-en4-102737.xls",
+      "category": "spreadsheet",
+      "sha256": "0f043630dcc57e65e2f6879fe376e809cfab7905d3bbb577c21b47ad68b21e19",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "forum-mso-en4-109082.xls",
+      "category": "spreadsheet",
+      "sha256": "ae887733acda30f31fec7a441253d2d3c5773339d19d37c27c1485c261fb2b7c",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "forum-mso-en4-147004.xls",
+      "category": "spreadsheet",
+      "sha256": "97da380131b4edc59956cff29566b7b194548cdc0fc29b4ac5c7245f5aa7fcac",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "forum-mso-en4-243595.xls",
+      "category": "spreadsheet",
+      "sha256": "30a5cbb77bb2a7472f25866f91dbeccd46a76e566ec9419c26d8bf4410536a77",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "forum-mso-en4-258437.xls",
+      "category": "spreadsheet",
+      "sha256": "4e2f5fce9f853e070e98f0a58aec5b64ac829ca0ff0a9fc38319b0ebfb98ca5b",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "forum-mso-en4-368528.xls",
+      "category": "spreadsheet",
+      "sha256": "7f8a179ca9b007c77f4423fc9e3e78f867935d63aa151231ec60611d5c9df8a0",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "hiddenShape.xls",
+      "category": "spreadsheet",
+      "sha256": "d775d89a4109a97dd7d66f493e23c95d195a456b19096b7ef2d1ebdf0f8b52d9",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "inline-array.xls",
+      "category": "spreadsheet",
+      "sha256": "4e1123c891dce17a0e182774b83404d4ba32e2e06cce61e9a267cec87a6bfcbc",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: expected one global drawing group",
+      "dedup_skip": "OfficeArt: expected one global drawing group"
+    },
+    {
+      "name": "matrix.xls",
+      "category": "spreadsheet",
+      "sha256": "1fe46579e8860913a5f9f3a06696c417ea94d4b20fb6859a429bc4a2232d1a7d",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "named-ranges-global.xls",
+      "category": "spreadsheet",
+      "sha256": "a5069de4c36773b313db643b266a275bd4a0a0d0d968f52c854a5710e26e693b",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "named-ranges-local.xls",
+      "category": "spreadsheet",
+      "sha256": "77fd6feb517dabe99b7ffc104c7346a68ccca03008de003488e1fa2794d0354d",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "pictureOrder.xls",
+      "category": "spreadsheet",
+      "sha256": "15e331568dc62cebe96e9fc01d3b9c5bb4aed139ef4b38fa0ee5e18a1a836238",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ba",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ba"
+    },
+    {
+      "name": "pivot-getpivotdata.xls",
+      "category": "spreadsheet",
+      "sha256": "0f8c3544d7867db98c65a42d012af05ae7cd1378484a9e92a093518366bd9738",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "pivot_row_header.xls",
+      "category": "spreadsheet",
+      "sha256": "383427fa6b436569174d1653d7c8fb988073157441762760c77008f7577a6b47",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "pivottable_bool_field_filter.xls",
+      "category": "spreadsheet",
+      "sha256": "3eb9c3e217ba34177847b668b4b005f1bc207bb7d0541dff2a6a67791bfa2ce1",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "pivottable_date_field_filter.xls",
+      "category": "spreadsheet",
+      "sha256": "46bd42a11e55dc6d200113d50cedb7472fef5289720b4179a0298ad2afe5519c",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "pivottable_dates_grouping.xls",
+      "category": "spreadsheet",
+      "sha256": "9f0f311ee9dc2960e5f4c2fc109e3e8e075bbcb1d25e3291e9f02423dd3ff0b8",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "pivottable_double_field_filter.xls",
+      "category": "spreadsheet",
+      "sha256": "c93706612800ee57c7ffdf9c862d16ad7675a484ec6c18ca56d40b0daded1169",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "pivottable_empty_item.xls",
+      "category": "spreadsheet",
+      "sha256": "d6fad9fe6fedf39e0bc483289d16bfcac9009b0e7e28f5a68d13e394d4476d26",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "pivottable_ext_grouping.xls",
+      "category": "spreadsheet",
+      "sha256": "6c83c3e8e4619ee6786f10e66898320c3494e352b3389812b4801ae1511e3e02",
+      "container": true,
+      "host": [
+        "xls",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "pivottable_ext_source_fields.xls",
+      "category": "spreadsheet",
+      "sha256": "900c40e1676b72943e60c56e61c13356f0002166cb70be60eb4d342853c91436",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "pivottable_number_grouping.xls",
+      "category": "spreadsheet",
+      "sha256": "6b4f96a131c3840938e2f757f30931ca6a824407b44f7512faab915ff270c0ff",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "pivottable_page_field_filter.xls",
+      "category": "spreadsheet",
+      "sha256": "a142030521f41907a9fbfa8b6f6d5f77442a802dc7a158c28238381b10481ca3",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "pivottable_rowcolpage_field_filter.xls",
+      "category": "spreadsheet",
+      "sha256": "ef4b6dc5cdd331a9fbae2d84226c0dd68fd4a416d8f1247bfb3abf998a6615d3",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "pivottable_string_field_filter.xls",
+      "category": "spreadsheet",
+      "sha256": "880952facd1dedd8d85bef53a4568bc2af0eed254132929b76b9023f42e5b2cf",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "sum_ex.xls",
+      "category": "spreadsheet",
+      "sha256": "897063b74be8d4e8efc8e8930cda611b0daa6ccbb0a70af022e8cb40618b996c",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "systematic.xls",
+      "category": "spreadsheet",
+      "sha256": "abab8ced8dd7926a525f01d3d66a0d0933f4b2910557338a5ded60b5e835b89b",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tdf112501.xls",
+      "category": "spreadsheet",
+      "sha256": "d6df371b6a719111ce678d837e0af3f8c5f111df0082bcf0da7dfc1e5718179e",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tdf120177.xls",
+      "category": "spreadsheet",
+      "sha256": "2356a0e99d84a3149cd591e96c2b20190c113fc3ebcffe210beed67f1910e918",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1b6",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1b6"
+    },
+    {
+      "name": "tdf128976.xls",
+      "category": "spreadsheet",
+      "sha256": "d700ef1d310617a022a5f5ee90007dd4d65e7b388c986f8d6bdfa5c6aba52bc8",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tdf129127.xls",
+      "category": "spreadsheet",
+      "sha256": "61fd1442e947277ccec585f15abdc60413650b2da55b5a1340b1e9afa908696a",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf158483.xls",
+      "category": "spreadsheet",
+      "sha256": "4174ce9db6cf0acf46cf94b2c3116843055120c79ae03dd993eb30808d5e0236",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "tdf165080.xls",
+      "category": "spreadsheet",
+      "sha256": "8e87e5f797e589dd6abd30e6a9df474fd5b39892ca1d8648e97f4d239029c5ba",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tdf166445.xls",
+      "category": "spreadsheet",
+      "sha256": "e2396e2955843337c6a9f876ec3662f9d8c4cc5ac991e3c69f02c048d3be0d1e",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf168589.xls",
+      "category": "spreadsheet",
+      "sha256": "129a40fbf91a1f2feea35c8887709dccc96a60e7d3e2615cb71457b93e3887f7",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf170189.xls",
+      "category": "spreadsheet",
+      "sha256": "e03b4b11db8aae26460cb0b56785e890fa324ccbf66b3299a624522792203927",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf170285_controlsInGroupShape.xls",
+      "category": "spreadsheet",
+      "sha256": "c80436f4274987ba17d0a901c73ad6885ac8b2f603bb5223553b79d7c3f41226",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tdf171083.xls",
+      "category": "spreadsheet",
+      "sha256": "36abdcfd941242099b2faa43f90135c6f6902c45461df38f271b016fe8cd7760",
+      "container": true,
+      "host": [
+        "xls",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tdf79542_radioGroupBox.xls",
+      "category": "spreadsheet",
+      "sha256": "1ceb6f4febd5e048c7e6088bc69de9f180ff8772f09897683f40e1a56f5e57cd",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tdf81470.xls",
+      "category": "spreadsheet",
+      "sha256": "658371014c5560f0c7c1d6d1f990144def403e9e377bf191ea0853ad7793312f",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1a9",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1a9"
+    },
+    {
+      "name": "tdf90299.xls",
+      "category": "spreadsheet",
+      "sha256": "eedfad5752271e091d145aaad285dbc11604932065ec22b45c2505b82746cdc0",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "universal-content.xls",
+      "category": "spreadsheet",
+      "sha256": "3f84bf513e191642835acbd56a40361bdcf1e4ef1a094b5a444b80f240fd889c",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "user_defined_function.xls",
+      "category": "spreadsheet",
+      "sha256": "041258374b3d6c0b8df0619247526b3d2ba9b27bc6137df14fa6774aa373682f",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae"
+    },
+    {
+      "name": "validation.xls",
+      "category": "spreadsheet",
+      "sha256": "dd0113ffb8dfd579169fc01a5d7e06e70e2f98dbde79c1be6291a92b85986efb",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "FillPatterns.ppt",
+      "category": "slideshow",
+      "sha256": "913f83c38c7e665105aac2df8f229be42986ccb1c5e6d8f55e9c6562b946817f",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "crop.ppt",
+      "category": "slideshow",
+      "sha256": "8c3cafad29a2bf79dce6ade642e8cbae7ae441cbb0b47281b7d85d1d7ed646e0",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "fdo68594.ppt",
+      "category": "slideshow",
+      "sha256": "f78b61654eba07f73e510a1b3142fa5832c7f262c27d332fc2bc6e638b54694e",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "hanging-indent.ppt",
+      "category": "slideshow",
+      "sha256": "545aa479718848510fbe23edbd3c7c504023f93fb722e6ead3f10bd34fdccffc",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "indent_multiple_spacings.ppt",
+      "category": "slideshow",
+      "sha256": "b6030e42e9c895adc92b5fb4fe271d5bb935e5f3750b6abf0e1518c1d0aac5ea",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "loopNoPause.ppt",
+      "category": "slideshow",
+      "sha256": "9aa0e0ca94ad3320a5f0d6309efbf5c32c4759e55f33ab451c4b5372495dd31c",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "novell6655408.ppt",
+      "category": "slideshow",
+      "sha256": "3f7e07a43f2ac7ce8f0dce01582cd1fc59e8ee1b63628c85c8598633cff244cd",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008"
+    },
+    {
+      "name": "ppt-indentation-bullets.ppt",
+      "category": "slideshow",
+      "sha256": "59091fa1e735abdf2d16bfeb92128c5c92b2c53eafeba5cbb5a243ebf8065359",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf105150.ppt",
+      "category": "slideshow",
+      "sha256": "4d1ab705d6346dda4e77eecbc5f5c10577022bb884e226d961b6a17479e9652f",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf115394.ppt",
+      "category": "slideshow",
+      "sha256": "c7b3c0f8b546c0b0bf49a2c248d0f453bcec1d3527c11359c90761a6282d1320",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1017",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tdf116899.ppt",
+      "category": "slideshow",
+      "sha256": "686c15912f0c781bab452d1455420472d1b8e54ee9bfbe8ee03720a6a54071e4",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tdf119629.ppt",
+      "category": "slideshow",
+      "sha256": "0ed17e23703361131de3e83f23b5a7162e19c7183b94d02b19d5089a039680ba",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tdf122899_Arc_90_to_91_clockwise.ppt",
+      "category": "slideshow",
+      "sha256": "ddde4ad33a16b3318305c1d751e07877eb8282190debd3eb903fb476ecb4fbb3",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "tdf126761.ppt",
+      "category": "slideshow",
+      "sha256": "6faf1d3218f8e3a4836a5274df4a2b765295febcbb9c643b2f59f980c9f797fa",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tdf136911.ppt",
+      "category": "slideshow",
+      "sha256": "e770c37f6512796d8920372fe2dc7b5958fc87d992a585b197c71a19ae11b363",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "tdf143315-WordartWithoutBullet.ppt",
+      "category": "slideshow",
+      "sha256": "b5f12ceb8829d662cef27d8b5b9e8c6b79e24cc4ecaaf7c001619cdd50d4f8c4",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tdf157636.ppt",
+      "category": "slideshow",
+      "sha256": "69f314f05f96ffc3af22d9aa525aca1517e96fd52a9aa54be56b20947f4b197e",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1053",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1053"
+    },
+    {
+      "name": "tdf165262.ppt",
+      "category": "slideshow",
+      "sha256": "1f159de4bb760505f1cab5450870aad4b9ce0a020807d7968a4f8500ac563928",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tdf166030.ppt",
+      "category": "slideshow",
+      "sha256": "8fd65a4507143d0d57f5b61dc53e925860e996edd208fcd9db21db8c81c51504",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tdf168736-1.ppt",
+      "category": "slideshow",
+      "sha256": "21d21fed7b01ef914f38f1f344509020605c7391ca5df9ce8bf68937d59e8bde",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "tdf168736-2.ppt",
+      "category": "slideshow",
+      "sha256": "69fde38629ac5a98c2af4ad60a021a7bd36022c4420814e9210bca28c167cbcf",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified"
+    },
+    {
+      "name": "tdf168786.ppt",
+      "category": "slideshow",
+      "sha256": "9f7073ce9a408564f8b24041bc11ea80251f488d56dc7a62eb187d660418af79",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "tdf169705.ppt",
+      "category": "slideshow",
+      "sha256": "262df470f0a25ef8439a0e9cedbb73deacce97ff65f45752423c2ca2e2313dc7",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008"
+    },
+    {
+      "name": "tdf48083.ppt",
+      "category": "slideshow",
+      "sha256": "94d2b41028637c428abb3d4c1a1a71ba5d3922f122de8daad5860a476c13aaee",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified"
+    },
+    {
+      "name": "tdf49561.ppt",
+      "category": "slideshow",
+      "sha256": "a7f47bced272ef51dc756950886903fae5dda727bc2b24118989b76796cc0e17",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "tdf49856.ppt",
+      "category": "slideshow",
+      "sha256": "6d1962d4dbf397bf1bdf5ff298a29cad5c52654e7d40ffe67726438dcbc2a95f",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf77747.ppt",
+      "category": "slideshow",
+      "sha256": "f72ef10404ec2e3921cd326ee213dc64130a1589ad5ceb85fc05e4e9835a19c6",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tdf79082.ppt",
+      "category": "slideshow",
+      "sha256": "03127bb326a384c8c799208883989aecbf70d5a493e097ce50c03feb6b28e23e",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tdf93124.ppt",
+      "category": "slideshow",
+      "sha256": "4b9d5c59610f35af329f055626357c7276617d646b35557d59b1177a974396fa",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    }
+  ]
+}

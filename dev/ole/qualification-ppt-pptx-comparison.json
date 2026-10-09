@@ -1,0 +1,113 @@
+{
+  "date": "2026-10-08",
+  "scope": "Read-only source comparison and private development candidates; production code is unchanged. Refiltered PPTs are rejected by the existing exact-filtered runtime contract. This is not an implemented or resource-qualified new production strategy.",
+  "sources": {
+    "ppt": {
+      "path": "/Users/ibegtin/workspace/ivbeg/filerepack/temp/_raw/mapping_rus_v1.ppt",
+      "bytes": 25570304,
+      "sha256": "997276d3ebbef628f74e7fbcf10875c60a3bd9a92b2a2ce1038b1b0508861a2a"
+    },
+    "pptx": {
+      "path": "/Users/ibegtin/workspace/ivbeg/filerepack/temp/_raw/mapping_rus_v1.pptx",
+      "bytes": 20936497,
+      "sha256": "76168aea7df76cb98e3de1788abd94b6a3b013939eb62c1c35dc5698c22a8526"
+    }
+  },
+  "source_assets": {
+    "media_count": 50,
+    "png_count": 49,
+    "jpeg_count": 1,
+    "encoded_image_bytes": 20013077,
+    "all_pptx_images_are_exact_encoded_matches_to_ppt": true,
+    "duplicate_encoded_or_decoded_images": 0,
+    "ppt_photoshop_storage_count": 7,
+    "pptx_photoshop_storage_count": 1,
+    "decoded_storage_bytes": 2368000,
+    "decoded_storage_sha256": "11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc",
+    "decoded_storage_exact_in_every_copy": true
+  },
+  "current_ppt_runtime": {
+    "source_bytes": 25570304,
+    "candidate_bytes": 24022016,
+    "saved_bytes": 1548288,
+    "selected_png_count": 37,
+    "png_original_sample_selection_allowance_bytes": 67108864,
+    "codec_contract": "Exact filtered PNG scanlines; no refiltering"
+  },
+  "pptx_runtime": {
+    "candidate_bytes": 15885563,
+    "saved_bytes": 5050934,
+    "elapsed_seconds": 22.813040291992365,
+    "member_compressed_savings": {
+      "media": 5036016,
+      "embedding": 8610,
+      "other": 4132
+    },
+    "png_payload_saved_bytes": 4961468,
+    "media_jpeg_payload_saved_bytes": 25702,
+    "all_png_filter_sequences_changed": true,
+    "all_png_pixel_samples_and_pillow_presentation_metadata_equal": true,
+    "non_idat_chunks_changed_in_48_pngs": "iCCP was recompressed while preserving the exact decoded ICC profile; every other non-IDAT chunk is exact",
+    "restoring_exact_original_png_non_idat_chunks_costs_bytes": 3072,
+    "encoder": "oxipng 10.2.0",
+    "candidate_sha256": "b4bfb077520afb1af7d2a4fb178dddf978fb35be4408da0bad1c10ba55c662ff"
+  },
+  "ppt_development_experiments": [
+    {
+      "mode": "current-selection",
+      "candidate": "/Users/ibegtin/workspace/ivbeg/filerepack/temp/mapping-pptx-compare-mxr1wi94/experimental-current-selection.ppt",
+      "source_bytes": 25570304,
+      "candidate_bytes": 21758464,
+      "whole_file_saving": 3811840,
+      "picture_stream_saving": 3781313,
+      "changed_png_count": 37,
+      "candidate_sha256": "f78c62120ae43569af3a7c08576fe3d15b93c13c87d5896cb50ed8537635180f",
+      "exact_original_non_idat_chunks": true,
+      "pixel_samples_identical": true,
+      "blip_uids_and_tags_identical": true,
+      "host_graph_identical": true,
+      "unrelated_record_bytes_and_streams_identical": true,
+      "existing_runtime_contract_rejects": true,
+      "slides_render": {
+        "equal_rgb_pages": true,
+        "pages": 45
+      },
+      "notes_render": {
+        "equal_rgb_pages": true,
+        "pages": 45
+      }
+    },
+    {
+      "mode": "all-png",
+      "candidate": "/Users/ibegtin/workspace/ivbeg/filerepack/temp/mapping-pptx-compare-mxr1wi94/experimental-all-png.ppt",
+      "source_bytes": 25570304,
+      "candidate_bytes": 20572160,
+      "whole_file_saving": 4998144,
+      "picture_stream_saving": 4958396,
+      "changed_png_count": 49,
+      "candidate_sha256": "19c5ccf375ca7716e79ca0f401225f5e045abc137a5ffc0043f13a35e668294b",
+      "exact_original_non_idat_chunks": true,
+      "pixel_samples_identical": true,
+      "blip_uids_and_tags_identical": true,
+      "host_graph_identical": true,
+      "unrelated_record_bytes_and_streams_identical": true,
+      "existing_runtime_contract_rejects": true,
+      "slides_render": {
+        "equal_rgb_pages": true,
+        "pages": 45
+      },
+      "notes_render": {
+        "equal_rgb_pages": true,
+        "pages": 45
+      }
+    }
+  ],
+  "sources_unchanged": true,
+  "evidence_files": [
+    "/Users/ibegtin/workspace/ivbeg/filerepack/temp/mapping-pptx-compare-mxr1wi94/repack.json",
+    "/Users/ibegtin/workspace/ivbeg/filerepack/temp/mapping-pptx-compare-mxr1wi94/member-comparison.json",
+    "/Users/ibegtin/workspace/ivbeg/filerepack/temp/mapping-ppt-pptx-source-comparison.json",
+    "/Users/ibegtin/workspace/ivbeg/filerepack/temp/mapping-pptx-compare-mxr1wi94/experimental-ppt-comparison.json"
+  ],
+  "render_qualification": "Local LibreOffice only; both private PPT candidates reproduce all 45 slides and all 45 notes pages at 72 dpi RGB, with identical PNG samples/chunks and independently validated host/CFB metadata. Hard runtime resource bounds and cross-platform/Microsoft PowerPoint acceptance are not qualified."
+}

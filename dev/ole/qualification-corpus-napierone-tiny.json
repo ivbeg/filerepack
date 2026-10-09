@@ -1,0 +1,4297 @@
+{
+  "schema_version": 1,
+  "source": "https://registry.opendata.aws/napierone/",
+  "inventory_sha256": "68602d6fea0d67d1bc7d9680870bfa0dabec72bf55e73c9a585468e740d9b13c",
+  "scope": "read-only eligibility; no savings or application acceptance inferred",
+  "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement",
+  "counts": {
+    "document": {
+      "selected": 100,
+      "source_verified": 100,
+      "container": 92,
+      "host": 92,
+      "officeart": 19,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 92,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "spreadsheet": {
+      "selected": 100,
+      "source_verified": 100,
+      "container": 81,
+      "host": 77,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "slideshow": {
+      "selected": 100,
+      "source_verified": 100,
+      "container": 86,
+      "host": 56,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    }
+  },
+  "rejection_reasons": {
+    "source": {},
+    "container": {
+      "OLE: unsupported Unicode name comparison": 19,
+      "OLE: unsupported root storage": 6,
+      "OLE: invalid directory type/name": 15,
+      "OLE: consecutive red directory nodes": 1
+    },
+    "host": {
+      "BIFF record limit/truncation": 4,
+      "Unexpected PowerPoint VBA storage for empty project flags": 12,
+      "PowerPoint VBA history/multiple-info layout is not qualified": 12,
+      "Empty/unknown PowerPoint VBA project flags": 2,
+      "Truncated PowerPoint record": 4
+    },
+    "officeart": {
+      "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: this floating profile requires a delayed BStore": 3,
+      "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore": 9,
+      "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore": 2,
+      "format buffer exceeds memory budget": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: this floating profile requires a delayed BStore": 7,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore": 36,
+      "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: unqualified OfficeArt type/version": 4,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a50; OfficeArt: unqualified/duplicate FOPT property: 0x186": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0xc60d; OfficeArt: this floating profile requires a delayed BStore": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0x2405; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2431; OfficeArt: this floating profile requires a delayed BStore": 2,
+      "OfficeArt: host macros are not qualified": 3,
+      "OfficeArt: unqualified/duplicate Word property: 0x2431; OfficeArt: unqualified/duplicate FOPT property: 0x186": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: unqualified/duplicate FOPT property: 0x81": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: unqualified OfficeArt type/version": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x87c": 3,
+      "OfficeArt: unqualified BIFF type/version/length: 0x293": 45,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ae": 26,
+      "OfficeArt: unqualified BIFF type/version/length: 0x92": 1,
+      "PPT OLE records: unqualified record type/version: 1008": 49,
+      "PPT OLE records: unqualified record type/version: 61730": 1,
+      "PPT OLE records: unqualified record type/version: 1058": 4,
+      "PPT OLE records: unqualified record type/version: 4041": 1,
+      "PPT OLE records: unqualified programmable extension": 1
+    },
+    "dedup": {
+      "OfficeArt: unqualified BIFF type/version/length: 0x87c": 3,
+      "OfficeArt: unqualified BIFF type/version/length: 0x293": 45,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ae": 26,
+      "OfficeArt: only qualified macro-free XLS/PPT shared stores": 5,
+      "OfficeArt: unqualified BIFF type/version/length: 0x92": 1,
+      "PPT OLE records: unqualified record type/version: 1008": 47,
+      "PPT OLE records: unqualified record type/version: 61730": 1,
+      "PPT OLE records: unqualified record type/version: 1058": 3,
+      "PPT OLE records: unqualified record type/version: 4041": 1,
+      "PPT OLE records: unqualified programmable extension": 1
+    }
+  },
+  "files": [
+    {
+      "name": "0001-doc.doc",
+      "category": "document",
+      "sha256": "77a487d6461cd59ea0d3605f0ec644bbd2e681cbc9e9fcf8184a5927c2a7e4ec",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0001-doc.doc",
+      "bytes": 88064
+    },
+    {
+      "name": "0002-doc.doc",
+      "category": "document",
+      "sha256": "6067c7965401f31dd75da6e396f715e44c6869a2796127cbb87cd8a3fd5ea8e3",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0002-doc.doc",
+      "bytes": 41472
+    },
+    {
+      "name": "0003-doc.doc",
+      "category": "document",
+      "sha256": "c5ec900d6b7895626534e529de976fc3e2ff6f0d9a87e7877a6804f420b8ec38",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0003-doc.doc",
+      "bytes": 275968
+    },
+    {
+      "name": "0004-doc.doc",
+      "category": "document",
+      "sha256": "18c6c93347028aaf7f43d6d493444f0593db0efb0282c7ddeb85a6c838b21c7b",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0004-doc.doc",
+      "bytes": 80384
+    },
+    {
+      "name": "0005-doc.doc",
+      "category": "document",
+      "sha256": "0a1df603665e1124c41615cbbbfd7081cd9d7393a958160711f09c3699acbd64",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "format buffer exceeds memory budget",
+      "archive_path": "0005-doc.doc",
+      "bytes": 10125824
+    },
+    {
+      "name": "0006-doc.doc",
+      "category": "document",
+      "sha256": "b624447cd1b83555d9f68cb6d50be81dfe0a4d45bc435fca8ea604aa9c528c6c",
+      "container": true,
+      "piece_prm": {
+        "pieces": 6,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0006-doc.doc",
+      "bytes": 98816
+    },
+    {
+      "name": "0007-doc.doc",
+      "category": "document",
+      "sha256": "dda6a81df794d512fcfea36eeeb5fb7d251957dd4d627c6a50ce414730facb3f",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0007-doc.doc",
+      "bytes": 201728
+    },
+    {
+      "name": "0008-doc.doc",
+      "category": "document",
+      "sha256": "3a85de47704512fea5c7704c40a419088e039f3f44c99d30c97e3629f09ff950",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0008-doc.doc",
+      "bytes": 65024
+    },
+    {
+      "name": "0009-doc.doc",
+      "category": "document",
+      "sha256": "3b1052c2ed892237d70aa21a9ed021f932aa479bfdd540f96073caf381bc687c",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0009-doc.doc",
+      "bytes": 457728
+    },
+    {
+      "name": "0010-doc.doc",
+      "category": "document",
+      "sha256": "834bda051fd2562da3f17f09c87065096cf7c1852f59206ddbc40783fc352021",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0010-doc.doc",
+      "bytes": 52224
+    },
+    {
+      "name": "0011-doc.doc",
+      "category": "document",
+      "sha256": "98040aa87d4b54f9d3242c8994bbad57948fc2534d073a57b364338829c70699",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0011-doc.doc",
+      "bytes": 166400
+    },
+    {
+      "name": "0012-doc.doc",
+      "category": "document",
+      "sha256": "647044bdc39a412e72d3cd0e3ff820fac08eb018b003a1d1abc995862c8f8bed",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0012-doc.doc",
+      "bytes": 43520
+    },
+    {
+      "name": "0013-doc.doc",
+      "category": "document",
+      "sha256": "514a51cec2e673769119ce475a1c1cd48967ad966ccf594ffc83bb513666c91f",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0013-doc.doc",
+      "bytes": 69632
+    },
+    {
+      "name": "0014-doc.doc",
+      "category": "document",
+      "sha256": "abe413043d636af0f6ccc3605a1614524739f7b2d61bc1dd1c445d164a546f32",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0014-doc.doc",
+      "bytes": 81920
+    },
+    {
+      "name": "0015-doc.doc",
+      "category": "document",
+      "sha256": "be3dd4a84b3422d2c98748255ad2476e70430959fe0de42d0f354fe629e8312b",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0015-doc.doc",
+      "bytes": 223744
+    },
+    {
+      "name": "0016-doc.doc",
+      "category": "document",
+      "sha256": "1cec4c664dac05ae585e8c15b1e997c1f0150d360937ecd9bb6ad18e83e01582",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0016-doc.doc",
+      "bytes": 136704
+    },
+    {
+      "name": "0017-doc.doc",
+      "category": "document",
+      "sha256": "1ee0e9a5bbebfdb4e60d3314886287656aaed152221fce3687ca8197618cb286",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0017-doc.doc",
+      "bytes": 129536
+    },
+    {
+      "name": "0018-doc.doc",
+      "category": "document",
+      "sha256": "08d37431abe3548fac67b88337f2ce8986b8caf4f2cea64e4be4ae9da45b83cc",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 1,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0018-doc.doc",
+      "bytes": 245760
+    },
+    {
+      "name": "0019-doc.doc",
+      "category": "document",
+      "sha256": "57f4ff72cad8c6212522a41b0bdcf0df0706cdf778a59133a7981eb238d0b9cb",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0019-doc.doc",
+      "bytes": 105984
+    },
+    {
+      "name": "0020-doc.doc",
+      "category": "document",
+      "sha256": "b19e4e2224542d51a9ebc75c852fd8e20433c9445c8b899e3057f794cb38e585",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 1,
+        "rasters": 0,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0020-doc.doc",
+      "bytes": 198144
+    },
+    {
+      "name": "0021-doc.doc",
+      "category": "document",
+      "sha256": "4f12f2cdda51334374b10b893b8b11e70dccef6e04e9e54f029eb6229c3450f1",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0021-doc.doc",
+      "bytes": 66048
+    },
+    {
+      "name": "0022-doc.doc",
+      "category": "document",
+      "sha256": "c95cd8e56ea67caec10299e7d17f491d0fea298f7f067c3b71bd189d85b6912b",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0022-doc.doc",
+      "bytes": 123904
+    },
+    {
+      "name": "0023-doc.doc",
+      "category": "document",
+      "sha256": "0c80b24f2a30b264848c7f668fe5d10c454c7e47fa2920574108f83679bcf530",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: unqualified OfficeArt type/version",
+      "archive_path": "0023-doc.doc",
+      "bytes": 750080
+    },
+    {
+      "name": "0024-doc.doc",
+      "category": "document",
+      "sha256": "80fc14896a61cb5ddccade79a63d25517cb904fcdcd061f591502bdf4d7498bc",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0024-doc.doc",
+      "bytes": 40448
+    },
+    {
+      "name": "0025-doc.doc",
+      "category": "document",
+      "sha256": "b4beafa77eb98c65f673d25dfa8bcb96d0817c76760245e567825da31ecc5bea",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0025-doc.doc",
+      "bytes": 40448
+    },
+    {
+      "name": "0026-doc.doc",
+      "category": "document",
+      "sha256": "07c07c35e81cb0d2b6c14b1bcff5e7955ea1e7da3893d02a50ac9363a1c4eb8e",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0026-doc.doc",
+      "bytes": 70656
+    },
+    {
+      "name": "0027-doc.doc",
+      "category": "document",
+      "sha256": "bd4f7959f298aadae38587b8e71aeda299c8f63d77bad4a6e00e0fb07aa74a89",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0027-doc.doc",
+      "bytes": 245248
+    },
+    {
+      "name": "0028-doc.doc",
+      "category": "document",
+      "sha256": "e25d2311632c0afbada4674e22ed893df6cf45e990bd0ad9e815dfd5eda59151",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 3,
+        "rasters": 0,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0028-doc.doc",
+      "bytes": 155136
+    },
+    {
+      "name": "0029-doc.doc",
+      "category": "document",
+      "sha256": "8179fbe2c8b371aa00d832de56717bd7b77b73b0fa22595aa6dc6da691178379",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 1,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0029-doc.doc",
+      "bytes": 153088
+    },
+    {
+      "name": "0030-doc.doc",
+      "category": "document",
+      "sha256": "5c9e11fc3916b3c3374ced650fe992927fb3550e69a90373417c063eab923d18",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0030-doc.doc",
+      "bytes": 188416
+    },
+    {
+      "name": "0031-doc.doc",
+      "category": "document",
+      "sha256": "3055ec5c0c422d5a0df623d97c74ed072c4f318f45282d72442be517aebca062",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0031-doc.doc",
+      "bytes": 173568
+    },
+    {
+      "name": "0032-doc.doc",
+      "category": "document",
+      "sha256": "74ee1443f433faa4fc70fe87e38cf1824d8b278e85e42d99b99871842d721add",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: unqualified OfficeArt type/version",
+      "archive_path": "0032-doc.doc",
+      "bytes": 916992
+    },
+    {
+      "name": "0033-doc.doc",
+      "category": "document",
+      "sha256": "05a671d891b7b318b7637827a102fe580a249a824b603669c3661d1a63aed32c",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0033-doc.doc",
+      "bytes": 39936
+    },
+    {
+      "name": "0034-doc.doc",
+      "category": "document",
+      "sha256": "dc66c77ebd86fbff72bc6045f8bf5eb8d0e43be98d9a13e0ffd648b3d06c36e9",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0034-doc.doc",
+      "bytes": 57344
+    },
+    {
+      "name": "0035-doc.doc",
+      "category": "document",
+      "sha256": "052feec9eb9f7c524468efdfdbfd6acd53ff74139a4ea00e8c6995ae0449d228",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xd613; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0035-doc.doc",
+      "bytes": 59904
+    },
+    {
+      "name": "0036-doc.doc",
+      "category": "document",
+      "sha256": "e548cfbf4a41e3bf9e326441529df98abb3ff974620b7863cca10afea01b0f78",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0036-doc.doc",
+      "bytes": 56320
+    },
+    {
+      "name": "0037-doc.doc",
+      "category": "document",
+      "sha256": "db7f3568f4c42e2e0e816743a418a30e8c323667c3f11c1c04fd9f91be42b295",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0037-doc.doc",
+      "bytes": 294912
+    },
+    {
+      "name": "0038-doc.doc",
+      "category": "document",
+      "sha256": "e8f42f43308feb544a38bbda4741ec86b98ef3f7b82c1bf24ac23147086d479a",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0038-doc.doc",
+      "bytes": 162304
+    },
+    {
+      "name": "0039-doc.doc",
+      "category": "document",
+      "sha256": "429cadbb397fbdca11044e86c4d6d21599bc3c26b06c8568537ecacf94d368db",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0039-doc.doc",
+      "bytes": 79872
+    },
+    {
+      "name": "0040-doc.doc",
+      "category": "document",
+      "sha256": "506ac21e4ab31247c0813dcb6ea3e1f2641edcb1a9a0832aff0d9582b173d1e2",
+      "container": true,
+      "piece_prm": {
+        "pieces": 4,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: unqualified OfficeArt type/version",
+      "archive_path": "0040-doc.doc",
+      "bytes": 819712
+    },
+    {
+      "name": "0041-doc.doc",
+      "category": "document",
+      "sha256": "b872b2ffb4b3f33f4301591492c66ded6e6ba3c60b2f7322f8931be4231a10f6",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0041-doc.doc",
+      "bytes": 167424
+    },
+    {
+      "name": "0042-doc.doc",
+      "category": "document",
+      "sha256": "7f03799faac3700d20d06712fceaeebee14396c39de38654e31059a0e946ade2",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: unqualified OfficeArt type/version",
+      "archive_path": "0042-doc.doc",
+      "bytes": 1077760
+    },
+    {
+      "name": "0043-doc.doc",
+      "category": "document",
+      "sha256": "b30f87a71d7c03f0dab70a667abb3997ca3bf4398689ff99ce381646a199b592",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0043-doc.doc",
+      "bytes": 32256
+    },
+    {
+      "name": "0044-doc.doc",
+      "category": "document",
+      "sha256": "43f92a7f01c5eebf91721ab11c91245ad332f082fb2bd2568dd456efe8b2491c",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a50; OfficeArt: unqualified/duplicate FOPT property: 0x186",
+      "archive_path": "0044-doc.doc",
+      "bytes": 145408
+    },
+    {
+      "name": "0045-doc.doc",
+      "category": "document",
+      "sha256": "edb7f4898287175cc021b953305253de79e58b44e225c613ecc03f1c5fc0f9f5",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0045-doc.doc",
+      "bytes": 36352
+    },
+    {
+      "name": "0046-doc.doc",
+      "category": "document",
+      "sha256": "e323fa0a2512bc3b499265b28178c9bb18683ac5b233b09972a9327eab08701e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0046-doc.doc",
+      "bytes": 35328
+    },
+    {
+      "name": "0047-doc.doc",
+      "category": "document",
+      "sha256": "c2ada454e79d27355fffa7ab0e6952199ae8ae63930e56d03d84dcaed849babe",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xc60d; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0047-doc.doc",
+      "bytes": 1441792
+    },
+    {
+      "name": "0048-doc.doc",
+      "category": "document",
+      "sha256": "fc3fb108d65cb07924d02562c123647a7f249ec16d445ab882fa84f8ed0706d1",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0048-doc.doc",
+      "bytes": 159744
+    },
+    {
+      "name": "0049-doc.doc",
+      "category": "document",
+      "sha256": "218cf680aef6671f142032f293ac8f1b9938b45a9887b20a980d505b80718be4",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0049-doc.doc",
+      "bytes": 79872
+    },
+    {
+      "name": "0050-doc.doc",
+      "category": "document",
+      "sha256": "8c6cd009ad8eda43829452cac32fb1df6b752407c4020dcaf38fe86748867720",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0050-doc.doc",
+      "bytes": 158720
+    },
+    {
+      "name": "0051-doc.doc",
+      "category": "document",
+      "sha256": "8862e9a4252d90809e8a4355a4c6ad30c9181cfc8588ac610ec1182027db84b7",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2405; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0051-doc.doc",
+      "bytes": 1560064
+    },
+    {
+      "name": "0052-doc.doc",
+      "category": "document",
+      "sha256": "48fc340b3afbbfcb3804867ccec5e72e162288be518a85a1f29a67d76533624c",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 1,
+        "rasters": 0,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0052-doc.doc",
+      "bytes": 61440
+    },
+    {
+      "name": "0053-doc.doc",
+      "category": "document",
+      "sha256": "836302c61f7730841b9f005d12d1131cd9fcb2346585adff0aa58e7d732eae6d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0053-doc.doc",
+      "bytes": 123904
+    },
+    {
+      "name": "0054-doc.doc",
+      "category": "document",
+      "sha256": "f12c1eaaa68827080a7c86c0ae1d14a1b18ceacbab4b12af1fc645ec4cc5e0b1",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 2,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0054-doc.doc",
+      "bytes": 402432
+    },
+    {
+      "name": "0055-doc.doc",
+      "category": "document",
+      "sha256": "e1bca68c454cad62daafc4f450b1494061c8925c67065abd7a5760126c9481d7",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2431; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0055-doc.doc",
+      "bytes": 410624
+    },
+    {
+      "name": "0056-doc.doc",
+      "category": "document",
+      "sha256": "6d7f65b7c7862a8abf026bd498cd0f76d6c4c95d3797a6b6034557cbd92fa8c7",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 1,
+        "rasters": 0,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0056-doc.doc",
+      "bytes": 64512
+    },
+    {
+      "name": "0057-doc.doc",
+      "category": "document",
+      "sha256": "5ab2020a9f5c216ccbeeaf362ca0ee2b1d3b8eabf1fac005cb0884e0d9b667e5",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0057-doc.doc",
+      "bytes": 50176
+    },
+    {
+      "name": "0058-doc.doc",
+      "category": "document",
+      "sha256": "57f3e755acde157a7d50c796dce28576d4577d850ca5ed4f16c5c47010a5af5f",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0058-doc.doc",
+      "bytes": 815616
+    },
+    {
+      "name": "0059-doc.doc",
+      "category": "document",
+      "sha256": "a9eb6aafc1b3fdb31c452099e75be681924557b20b92db848c146cc960d19824",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0059-doc.doc",
+      "bytes": 216064
+    },
+    {
+      "name": "0060-doc.doc",
+      "category": "document",
+      "sha256": "fc782f1ad5a9ed42a2e04e703c10e45336e9f7d8d99ecbe6ee1d4e1dc1f6ff94",
+      "container": true,
+      "piece_prm": {
+        "pieces": 5,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified",
+      "archive_path": "0060-doc.doc",
+      "bytes": 147968
+    },
+    {
+      "name": "0061-doc.doc",
+      "category": "document",
+      "sha256": "9626a9b14825b92f3b560072529b4ee93ec665d1a98e9d0f4b9b27421cb66a71",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0061-doc.doc",
+      "bytes": 163328
+    },
+    {
+      "name": "0062-doc.doc",
+      "category": "document",
+      "sha256": "4745daab9b98e91309aaea3c4a52e6f4eb8dbe3f50e140ea17e73e43c5164d3f",
+      "container": true,
+      "piece_prm": {
+        "pieces": 23,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2431; OfficeArt: unqualified/duplicate FOPT property: 0x186",
+      "archive_path": "0062-doc.doc",
+      "bytes": 102912
+    },
+    {
+      "name": "0063-doc.doc",
+      "category": "document",
+      "sha256": "dc47283c63d809ff5951f7476593ae7c0a55b9315634ce320aee6d8825fe2220",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0063-doc.doc",
+      "bytes": 151040
+    },
+    {
+      "name": "0064-doc.doc",
+      "category": "document",
+      "sha256": "5a4dfbfdb6174cf03af24550763f0301f05e9805798ff689bdbc6b92cee8bbf1",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0064-doc.doc",
+      "bytes": 93696
+    },
+    {
+      "name": "0065-doc.doc",
+      "category": "document",
+      "sha256": "328375f5efd9cdafe7642d1d08334dd06aceea5f0f92d75fd1fad28ed02a4be2",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0065-doc.doc",
+      "bytes": 66048
+    },
+    {
+      "name": "0066-doc.doc",
+      "category": "document",
+      "sha256": "0e6914c32c1985ffc64b31b5eeaf42e26a4e2762ddbd4062dacbcb6c0f2f30ee",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0066-doc.doc",
+      "bytes": 718336
+    },
+    {
+      "name": "0067-doc.doc",
+      "category": "document",
+      "sha256": "79808ced66f452cf991922bc333dbb8c4af60c2f16bcaad6d7f83821778ee610",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0067-doc.doc",
+      "bytes": 718336
+    },
+    {
+      "name": "0068-doc.doc",
+      "category": "document",
+      "sha256": "b832730085130e7dbabe7273e5aa78e60a1ffce933a67d586718ce26d47f6d0b",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0068-doc.doc",
+      "bytes": 57856
+    },
+    {
+      "name": "0069-doc.doc",
+      "category": "document",
+      "sha256": "846d756c7cc280266592958161540a2816be51604130af368c54cad9a09a2ff4",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0069-doc.doc",
+      "bytes": 78336
+    },
+    {
+      "name": "0070-doc.doc",
+      "category": "document",
+      "sha256": "be7146c492fa54978a749cbd96bef8a5ef86a586165f34e34722f8e4e798f39a",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0070-doc.doc",
+      "bytes": 34304
+    },
+    {
+      "name": "0071-doc.doc",
+      "category": "document",
+      "sha256": "937e9afd424c72f41abece7781fb2fa7cfb9f97aff80f15e1a747d6a7d57083c",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0071-doc.doc",
+      "bytes": 51712
+    },
+    {
+      "name": "0072-doc.doc",
+      "category": "document",
+      "sha256": "24044dd332ed4441c02bee6d80fdb9b47509489d88036fd47445be562a7089a4",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0072-doc.doc",
+      "bytes": 51712
+    },
+    {
+      "name": "0073-doc.doc",
+      "category": "document",
+      "sha256": "23eff8de9ee34619aa2293d976de4f3deaea5904ff0963e02262475b3d276135",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0073-doc.doc",
+      "bytes": 51712
+    },
+    {
+      "name": "0074-doc.doc",
+      "category": "document",
+      "sha256": "37ae75d5e359d3bbe25042fe29733336158c58255a1d5988abb21cc76df99fe8",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0074-doc.doc",
+      "bytes": 51712
+    },
+    {
+      "name": "0075-doc.doc",
+      "category": "document",
+      "sha256": "f5e53144e79529a87fcdd301b44131ac2c9bcbf541f137743479d75955498028",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0075-doc.doc",
+      "bytes": 51712
+    },
+    {
+      "name": "0076-doc.doc",
+      "category": "document",
+      "sha256": "de5dc0a1a08fc164afd0f6e5c67e13810d21aeb44949d3ff805b210d6497b79e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0076-doc.doc",
+      "bytes": 51712
+    },
+    {
+      "name": "0077-doc.doc",
+      "category": "document",
+      "sha256": "4c5b8611c751f651b395647f49f0b4fd2f001537c397e337aa6879868800bd51",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0077-doc.doc",
+      "bytes": 51712
+    },
+    {
+      "name": "0078-doc.doc",
+      "category": "document",
+      "sha256": "69271f3f976e2d97b49ea89cdab0b5ef9d19a9579132d8fc0298e41666cf4d1e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0078-doc.doc",
+      "bytes": 51712
+    },
+    {
+      "name": "0079-doc.doc",
+      "category": "document",
+      "sha256": "e8f02f2e4ca4ec901cf24561898920a8f920aa242056dfd463e48bc92eb2a107",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0079-doc.doc",
+      "bytes": 51712
+    },
+    {
+      "name": "0080-doc.doc",
+      "category": "document",
+      "sha256": "f4969821e0a5a2dd2367bbbae5131e3d77056a824527ad432a888c821b0fb0e0",
+      "container": true,
+      "piece_prm": {
+        "pieces": 4,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0080-doc.doc",
+      "bytes": 54272
+    },
+    {
+      "name": "0081-doc.doc",
+      "category": "document",
+      "sha256": "65a5ff3b31ca27428faa7f9e10f6936970864a6055eedd070d0cede5cbcf1e51",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0081-doc.doc",
+      "bytes": 52224
+    },
+    {
+      "name": "0082-doc.doc",
+      "category": "document",
+      "sha256": "9b9ddfc472910b32ddba01fecb75016ad32edfb64f198720435c4b9094fea3d5",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0082-doc.doc",
+      "bytes": 52224
+    },
+    {
+      "name": "0083-doc.doc",
+      "category": "document",
+      "sha256": "a740fa296d85a7f28a9196bd426f8d2f5bd77e47a2cab846ae01702e3bed8e5b",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0083-doc.doc",
+      "bytes": 52224
+    },
+    {
+      "name": "0084-doc.doc",
+      "category": "document",
+      "sha256": "8260f9a7a2f7b7b371e56742118b3eabe45215cdeb7a05c83ff1a49382e01c24",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: unqualified/duplicate FOPT property: 0x81",
+      "archive_path": "0084-doc.doc",
+      "bytes": 53760
+    },
+    {
+      "name": "0085-doc.doc",
+      "category": "document",
+      "sha256": "3256cc9611412c21a03df65f4d0c160331cb327539d4907af6d43d213bb066ce",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: unqualified OfficeArt type/version",
+      "archive_path": "0085-doc.doc",
+      "bytes": 426496
+    },
+    {
+      "name": "0086-doc.doc",
+      "category": "document",
+      "sha256": "7fccdd8576a0441c0723b25ce27dcd731b946cab7a86d10575f47745c3dc5ec7",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0086-doc.doc",
+      "bytes": 120320
+    },
+    {
+      "name": "0087-doc.doc",
+      "category": "document",
+      "sha256": "0e806ec5b75025a369eeb80d42f53390d831dc085f01e588a304f2fc45f8167a",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xc60d; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0087-doc.doc",
+      "bytes": 140288
+    },
+    {
+      "name": "0088-doc.doc",
+      "category": "document",
+      "sha256": "9dcb69bb3d782f3eb616a7d320559823d5aeb0432b55404fd300e11a0890a351",
+      "container": true,
+      "piece_prm": {
+        "pieces": 5,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0088-doc.doc",
+      "bytes": 46080
+    },
+    {
+      "name": "0089-doc.doc",
+      "category": "document",
+      "sha256": "16a1cdd69c11e43d1eeab5818042fa399884159ceabfdab60c260afa2a99ef63",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 1,
+        "rasters": 0,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0089-doc.doc",
+      "bytes": 73216
+    },
+    {
+      "name": "0090-doc.doc",
+      "category": "document",
+      "sha256": "92a2edeb4c3c8109ae716cee51e5bbb44e57bb0aa5d8365777d67eecc87c1ca8",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2431; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0090-doc.doc",
+      "bytes": 32256
+    },
+    {
+      "name": "0091-doc.doc",
+      "category": "document",
+      "sha256": "7bc3d8a792bd0eeaddcae86a6e94f86c115c5ca264440a0154d4ffb2c272038e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0091-doc.doc",
+      "bytes": 52736
+    },
+    {
+      "name": "0092-doc.doc",
+      "category": "document",
+      "sha256": "dc249aa85b5895e46bf5a1cedd46cece1b82bd069b43cb10b6b635afa4d3147e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: unqualified/duplicate FOPT property: 0x81",
+      "archive_path": "0092-doc.doc",
+      "bytes": 74240
+    },
+    {
+      "name": "0093-doc.doc",
+      "category": "document",
+      "sha256": "40c2ffd85bfd13c69b4a79620fa262bc11cd0570c7d7ed6c318264695f09cbe3",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 1,
+        "rasters": 0,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0093-doc.doc",
+      "bytes": 93696
+    },
+    {
+      "name": "0094-doc.doc",
+      "category": "document",
+      "sha256": "7ad78e480f30403f9d79ea7b852b74b86f515f3df865cd4a254ea63c0d0a4319",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0094-doc.doc",
+      "bytes": 118272
+    },
+    {
+      "name": "0095-doc.doc",
+      "category": "document",
+      "sha256": "5ea242a7ce4033c5f91e7ffc982eff78978cae8b06f49afd215ebd7f547c3652",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0095-doc.doc",
+      "bytes": 85504
+    },
+    {
+      "name": "0096-doc.doc",
+      "category": "document",
+      "sha256": "3da818b1eb6c89bec735d8dc9f27e97a95298b639fd6ef0a60c560fde277f52b",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 1,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      },
+      "archive_path": "0096-doc.doc",
+      "bytes": 75776
+    },
+    {
+      "name": "0097-doc.doc",
+      "category": "document",
+      "sha256": "2731d6a3a25e7e99a925d098a07d859b263b6d3eb8fc6692bda90fd79b81328b",
+      "container": true,
+      "piece_prm": {
+        "pieces": 4,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0097-doc.doc",
+      "bytes": 71168
+    },
+    {
+      "name": "0098-doc.doc",
+      "category": "document",
+      "sha256": "8b6267b3b44276c82bca4b68eb4108d4d1c94b6a03a583cd6318460d83c451fb",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0098-doc.doc",
+      "bytes": 1093120
+    },
+    {
+      "name": "0099-doc.doc",
+      "category": "document",
+      "sha256": "e280b1c8cce8c398c4ea03bf1307ef0be3716e8d2114d7e4b4ee69a76e31e9bc",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0099-doc.doc",
+      "bytes": 35840
+    },
+    {
+      "name": "0100-doc.doc",
+      "category": "document",
+      "sha256": "0e5bd8857d2be4254a99ec6abe5af39e3a0f43d5ab61206f8b6b9b7e225fa05e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 4,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore",
+      "archive_path": "0100-doc.doc",
+      "bytes": 95744
+    },
+    {
+      "name": "0001-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "5349101e36bc81d55299cb6d98eaad7e3b4ea38d36a321a49f3b2c3dd2c5449e",
+      "container_skip": "OLE: unsupported root storage",
+      "archive_path": "0001-xls.xls",
+      "bytes": 77824
+    },
+    {
+      "name": "0002-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "4d6b514d2770620dee69c72329c343fd52db1f88bec1726edaf1a0e503e3bfc7",
+      "container_skip": "OLE: unsupported root storage",
+      "archive_path": "0002-xls.xls",
+      "bytes": 699904
+    },
+    {
+      "name": "0003-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "2dedddbde9075d09fc1d10c4ffa36cb3d8d9bfc9a7d14562a6af51cd547cfcc9",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "archive_path": "0003-xls.xls",
+      "bytes": 257536
+    },
+    {
+      "name": "0004-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "ba1a2b9eab6e1bbebcdc2f757e9054a5b122f6915dc02f7d619bdaf1562072e8",
+      "container_skip": "OLE: unsupported root storage",
+      "archive_path": "0004-xls.xls",
+      "bytes": 1182208
+    },
+    {
+      "name": "0005-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "2c532188c40a365361bc85364523e7bc103a1a928f3fc43c708ce1255c35b9cc",
+      "container_skip": "OLE: unsupported root storage",
+      "archive_path": "0005-xls.xls",
+      "bytes": 877056
+    },
+    {
+      "name": "0006-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "1c382a517c82d2106ac67c2d096be563f0ecc630131bda627f05db4f2ed4269c",
+      "container": true,
+      "host_skip": "BIFF record limit/truncation",
+      "archive_path": "0006-xls.xls",
+      "bytes": 6924288
+    },
+    {
+      "name": "0007-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "c09d6323468bb9c99f3eb69beba6308fef81cbc2cd8f97bc56eac58b81f6bc81",
+      "container": true,
+      "host_skip": "BIFF record limit/truncation",
+      "archive_path": "0007-xls.xls",
+      "bytes": 3888640
+    },
+    {
+      "name": "0008-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "f3d67e98914854a6833b0dcbe1014246579f01a797c5ecf6d2ce1ba94c87e3cb",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "archive_path": "0008-xls.xls",
+      "bytes": 3311616
+    },
+    {
+      "name": "0009-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "483221c5804c3be6319d5f569beeea7c9494f398b47da5e4c190cce106a3bb65",
+      "container": true,
+      "host_skip": "BIFF record limit/truncation",
+      "archive_path": "0009-xls.xls",
+      "bytes": 6964224
+    },
+    {
+      "name": "0010-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "a0415990e1e59b9ddb36ba199846eca9d220cb3d4f2db0fa08d879d288f9ebc1",
+      "container": true,
+      "host_skip": "BIFF record limit/truncation",
+      "archive_path": "0010-xls.xls",
+      "bytes": 6927360
+    },
+    {
+      "name": "0011-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "8dd21d34f06768a7a8f8b350d0c9213c645e5a3d4e3b10770ed3c097f3db081c",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0011-xls.xls",
+      "bytes": 145920
+    },
+    {
+      "name": "0012-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "1be45979ab24de6783b525e47547978b162b532e672bdc158e8742adf085e63c",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0012-xls.xls",
+      "bytes": 31744
+    },
+    {
+      "name": "0013-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "46872bbcdc011292c3fcffa5b4fdd37b9d8f56be0c5d95349035c6f918be4086",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0013-xls.xls",
+      "bytes": 34304
+    },
+    {
+      "name": "0014-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "f59f18d862a91c47844e3b439d1312a5c6781742e8b4b073c636a6ffc7adac8c",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0014-xls.xls",
+      "bytes": 31232
+    },
+    {
+      "name": "0015-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "66d62a7daa44c03c7b5f2eb1cc6f1f92f22b43b380735ea80eda32badc0a8dc5",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0015-xls.xls",
+      "bytes": 34816
+    },
+    {
+      "name": "0016-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "d5b9e3cd2373ce5884e1fefcd3dcd46afb46c648784747ccf3f30c311f5a82e4",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0016-xls.xls",
+      "bytes": 42496
+    },
+    {
+      "name": "0017-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "ca1df94abdf5a35470d26e9529691fc658b3a1ba6a40a006a5a7285ef6d76ba1",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0017-xls.xls",
+      "bytes": 42496
+    },
+    {
+      "name": "0018-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "c35ed9118ba25e343cfe300e04e95246395e838e482cb933e79d72a636fd2f20",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0018-xls.xls",
+      "bytes": 48128
+    },
+    {
+      "name": "0019-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "3e7f6f79066bf9bb58a34c76af1f429807fbcf8663bf2c187479e0a97a403f53",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0019-xls.xls",
+      "bytes": 27648
+    },
+    {
+      "name": "0020-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "6a14de7ebf6b42265e6ee89be9325179d33d20830a47e7cf1ef8e97eb52bf967",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0020-xls.xls",
+      "bytes": 27648
+    },
+    {
+      "name": "0021-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "1fbad96c3e4e1e8b2c892ea1ffc8b8c72f5dffb3ff3c524190e9cbe7e2234f51",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0021-xls.xls",
+      "bytes": 29696
+    },
+    {
+      "name": "0022-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "56020e92bc2aeb1fa9b51f4873c6ca11dcd0cf4b932bd1ab994e6a6e943a301c",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0022-xls.xls",
+      "bytes": 31232
+    },
+    {
+      "name": "0023-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "68bde0d8ca3c1e03cce5decf16c2cc99f9d12599c6545b9ef004fa38cf96326e",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0023-xls.xls",
+      "bytes": 20992
+    },
+    {
+      "name": "0024-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "5db2c68bfecb8359c2de10cd07f439d15ed0d6a50b46eea9167d887bcaafe026",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0024-xls.xls",
+      "bytes": 28160
+    },
+    {
+      "name": "0025-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "1d1fcf54833ff3b92720b0755e8665cb24c2bfc8b997f7b73cbf1a1d015730ab",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0025-xls.xls",
+      "bytes": 22528
+    },
+    {
+      "name": "0026-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "bfb03a61fbacd07b9ffc1b580f376fd73b49196b23a6bc7c1c65b278b69ecf45",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0026-xls.xls",
+      "bytes": 36352
+    },
+    {
+      "name": "0027-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "a3b431bc47ece5764124e7e21be6927f87f555942038a1a1143e09aa0b89cb8d",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0027-xls.xls",
+      "bytes": 34816
+    },
+    {
+      "name": "0028-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "04301bc2f84bf3e2af28770804cf4b48984086eacf9e5e6098f457407ad2d0ca",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0028-xls.xls",
+      "bytes": 32256
+    },
+    {
+      "name": "0029-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "966e3f310423fd8b0308f8057ba5f522b3a561753e4e119b12106e062a437041",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0029-xls.xls",
+      "bytes": 32256
+    },
+    {
+      "name": "0030-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "bb203610b1364edf1e711181b295dbfc90a1065a18938f89bb93100a4e6b7cf1",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0030-xls.xls",
+      "bytes": 49152
+    },
+    {
+      "name": "0031-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "48647d1ed867efaab1ecbf27999d4d8d778c7739a5c7100246cbb3272d886c1f",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0031-xls.xls",
+      "bytes": 33792
+    },
+    {
+      "name": "0032-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "59801a3b4ba356f525e68ff79525a4fce7ec0ee2e9fded569a17629744b43a74",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0032-xls.xls",
+      "bytes": 40960
+    },
+    {
+      "name": "0033-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "dd424f6d6efbb754032a18fa0f0f096adb97610208c0f02a2259ab1102f76a3e",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0033-xls.xls",
+      "bytes": 19456
+    },
+    {
+      "name": "0034-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "5eaa5aa91eb58c2a956fb5300410a2f3c46f622205c590445cf0a174c72298eb",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0034-xls.xls",
+      "bytes": 47616
+    },
+    {
+      "name": "0035-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "eec740b662c3ace9779ecde204db0919003939574fa6ff9cda939cb9eb46c597",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0035-xls.xls",
+      "bytes": 36352
+    },
+    {
+      "name": "0036-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "8f0546ce65b4f36a3a715c729183fa66c4668ee4920e13d7424790d9b69e5762",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0036-xls.xls",
+      "bytes": 31744
+    },
+    {
+      "name": "0037-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "67af86bf10d22c2aa6594d05c608d6c86a9fb1dc12cbe871bf3c6cd9c19848f1",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0037-xls.xls",
+      "bytes": 22528
+    },
+    {
+      "name": "0038-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "4150b18945efec2b80151a3023f0bbdb075fa49d9883110c16c87828bed75524",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0038-xls.xls",
+      "bytes": 21504
+    },
+    {
+      "name": "0039-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "af302848420210603c6635237ab2b8b2e6ceb66bc6c05416d615df1a4198dfd4",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0039-xls.xls",
+      "bytes": 51712
+    },
+    {
+      "name": "0040-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "9fc93c0e8340198914429be45e70188945705afeb2b9ac9bee0746695095e42e",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0040-xls.xls",
+      "bytes": 71680
+    },
+    {
+      "name": "0041-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "8c37c42acfb8a8b2c3b1a7a6e12579249fde97f7dd48921bfb65dd89bc67522e",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0041-xls.xls",
+      "bytes": 18432
+    },
+    {
+      "name": "0042-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "2156cb7b81210063c7f1326f6f6a3850f9ed25223a98619704ab30c9fc839e70",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0042-xls.xls",
+      "bytes": 20992
+    },
+    {
+      "name": "0043-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "0ead6a58770bb5aa59de38be9d42854eff4ac0e0ec117dffd6d070b1e3388138",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0043-xls.xls",
+      "bytes": 20480
+    },
+    {
+      "name": "0044-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "996967cb23ad1faf6fad274e196caa3f7ba38bbda4e173a19d69496f7ac1c191",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0044-xls.xls",
+      "bytes": 26624
+    },
+    {
+      "name": "0045-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "745241a48e157f7bc5f4fb6b491501b7db53461fc4f745ddd312d52b8d1578b7",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0045-xls.xls",
+      "bytes": 31232
+    },
+    {
+      "name": "0046-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "ce7c28f24faa1376ace814be1438c5fbfee9f74823edca58ad83b64cc4b4bcc6",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0046-xls.xls",
+      "bytes": 42496
+    },
+    {
+      "name": "0047-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "55979b90cded4e72bd8f8e41e7c7a74980e429a056afd7302cd7b879375d335c",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0047-xls.xls",
+      "bytes": 34304
+    },
+    {
+      "name": "0048-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "c77ef73e8d8109a9110fdfefae18a5173bc63e2831e76eec5a9599edafdc6f2e",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0048-xls.xls",
+      "bytes": 41984
+    },
+    {
+      "name": "0049-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "07f1f8e8496c4e2e4315097f6d51f7f004029f445503976ff10134fef7183721",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0049-xls.xls",
+      "bytes": 20992
+    },
+    {
+      "name": "0050-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "60171fc4388aa949e81f4a53aba9828b826d83f427183458c4bbee3c18ba1001",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0050-xls.xls",
+      "bytes": 27136
+    },
+    {
+      "name": "0051-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "4592f46cdd7888f8ea711dbef31e4493f7fb67233f33585955555c3f7165ecce",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0051-xls.xls",
+      "bytes": 18432
+    },
+    {
+      "name": "0052-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "b402c04dcccd57cfb334715c592cb45836b3cdc4f3223bef729425ecd548f88d",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0052-xls.xls",
+      "bytes": 51712
+    },
+    {
+      "name": "0053-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "90b7cd87b678b5e5c2063e20e0c9321abcf84a67ab5efea6dc6f742a5b2891e2",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0053-xls.xls",
+      "bytes": 51712
+    },
+    {
+      "name": "0054-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "6a934d6e9f55f75699a5c4cb906e337a714e607bc6b8ac4c5809da5d6e0f516a",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0054-xls.xls",
+      "bytes": 33280
+    },
+    {
+      "name": "0055-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "dda389e57a6e3ef7c9b98bf795a1bf630998f343c105a59ed5bd20f0db5b6d88",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0055-xls.xls",
+      "bytes": 27648
+    },
+    {
+      "name": "0056-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "46485e022279ccaccd9df01147ae8b6446cf299f7a4216712804190cd659a5fe",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0056-xls.xls",
+      "bytes": 31744
+    },
+    {
+      "name": "0057-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "794a47061c969f4cf66ed1b7640bc892858da184e959f567de19255bfc6d48ad",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0057-xls.xls",
+      "bytes": 20480
+    },
+    {
+      "name": "0058-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "c1d5cd8ea21f3eb02f70dcb2da165929a45699631bb7eacb2f44ebda57b1cb3a",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0058-xls.xls",
+      "bytes": 48128
+    },
+    {
+      "name": "0059-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "f48549b439b5bb9f3ef560d73bbb27784e4372533ab3a8402f3eb7e41246f1bf",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0059-xls.xls",
+      "bytes": 8473600
+    },
+    {
+      "name": "0060-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "3b99a40d36772664f33dd62304c1cab7e75c4fd3be6fadd7724f620252da01c7",
+      "container_skip": "OLE: unsupported root storage",
+      "archive_path": "0060-xls.xls",
+      "bytes": 262144
+    },
+    {
+      "name": "0061-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "e7f4a459b54a9e700f6d50c65dabf6ede92becbee8c37e1e511cd0778e28657d",
+      "container": true,
+      "host": [
+        "xls",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores",
+      "archive_path": "0061-xls.xls",
+      "bytes": 20992
+    },
+    {
+      "name": "0062-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "6624195618f91765d89f8239d6952f641ed56b436bb2ca28f86cdcbdf9b72407",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0062-xls.xls",
+      "bytes": 22016
+    },
+    {
+      "name": "0063-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "d765d5d08f45d4e3d9e0f2c5c73a41dc9bba287ecb3d49fa487fe4112b93addd",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0063-xls.xls",
+      "bytes": 28160
+    },
+    {
+      "name": "0064-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "dcdb854e0db6cedace2bebf116eb8f77acaf6480aab0404b4b89c9ce5b113ecf",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0064-xls.xls",
+      "bytes": 71168
+    },
+    {
+      "name": "0065-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "de10f466f7e7681c75fbe05cb3510125874250db00b439aec4ff3414e3d482e8",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0065-xls.xls",
+      "bytes": 25600
+    },
+    {
+      "name": "0066-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "468ee5a75e0082ed0ab58eb1b03b85b9882359f1db454a796586940f97eda247",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0066-xls.xls",
+      "bytes": 29184
+    },
+    {
+      "name": "0067-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "03acb204c521455e55f55ed0a08d699412c9b6e6b6517d45cbafb24d300b9be6",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0067-xls.xls",
+      "bytes": 265728
+    },
+    {
+      "name": "0068-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "be250df22294619961545df925c0fc1f0c2f5a21d9eda54707c25091b7d02ca7",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0068-xls.xls",
+      "bytes": 58880
+    },
+    {
+      "name": "0069-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "f2062a0e0e0578af5bc1f078b77309f43eb63defe68000ff44ed96110ea36954",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0069-xls.xls",
+      "bytes": 94720
+    },
+    {
+      "name": "0070-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "b0cc1a5e883662235cf4692cae498a3f9f31888e94f1aead657293fc998edb4a",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0070-xls.xls",
+      "bytes": 26624
+    },
+    {
+      "name": "0071-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "2b83d66ac08c81d33d823d11cc77cf399a527acf08aa9f08a89044f37a9a5054",
+      "container_skip": "OLE: unsupported root storage",
+      "archive_path": "0071-xls.xls",
+      "bytes": 17920
+    },
+    {
+      "name": "0072-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "7eb1a6a08460c4dd8efe24c07f66d449ba6e9fb09cfc541c678c95faffe345a8",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "archive_path": "0072-xls.xls",
+      "bytes": 34816
+    },
+    {
+      "name": "0073-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "e679fda279db21657665cbfa4bfc16b277eb2bbfd847d6a2d741a28efc0fd13e",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0073-xls.xls",
+      "bytes": 1646592
+    },
+    {
+      "name": "0074-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "02eae6795bd561934206f6f344852f47bb338e04aa84fbca98e70ccd1f22d584",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0074-xls.xls",
+      "bytes": 26624
+    },
+    {
+      "name": "0075-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "1fade9e49a3b2c1593aea18231256bcd667e26a9ddddb0b8d4df624a79f13d3e",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0075-xls.xls",
+      "bytes": 40960
+    },
+    {
+      "name": "0076-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "cad274c6188b2b89d1335132b53118a32644ba02e80b75051519267e1ad7608b",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0076-xls.xls",
+      "bytes": 17408
+    },
+    {
+      "name": "0077-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "c63456d78365c3384d80ef197e6939b89006d46ba227a130d8ebee6acb5426cf",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0077-xls.xls",
+      "bytes": 30720
+    },
+    {
+      "name": "0078-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "c088de4fc3a16c7ec602f16dd2d45039a5196d8e7010456acc9d3d51c59e5eaf",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0078-xls.xls",
+      "bytes": 26112
+    },
+    {
+      "name": "0079-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "36736f364fe3478e6ea3fc8a61397697638845643361c3647d775cf6be21cee8",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0079-xls.xls",
+      "bytes": 60416
+    },
+    {
+      "name": "0080-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "e2c158c47ff2999ba5ab3d65d91cb17176acb37297ffa50f38923257c1c036c4",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0080-xls.xls",
+      "bytes": 65536
+    },
+    {
+      "name": "0081-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "fa456656ce99589906c350e9bc08ce243572f0247fd1ae4d35cf0cadc8eaefaf",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0081-xls.xls",
+      "bytes": 29696
+    },
+    {
+      "name": "0082-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "b1ed3e529f5d24db358dae451a4ddc044994ca67276a465234d21a5aaa39b71f",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0082-xls.xls",
+      "bytes": 46592
+    },
+    {
+      "name": "0083-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "76b59c0654f03b41a77e51634ccb2793fe3de2bca7c77065b64df59bd6773f3e",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0083-xls.xls",
+      "bytes": 22528
+    },
+    {
+      "name": "0084-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "ddbcb57b18c61d10d06424e9806b9b3b8f46b471c986125fed0da71896ee562d",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0084-xls.xls",
+      "bytes": 57856
+    },
+    {
+      "name": "0085-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "4593d65bfdcbb1f51941359197c741f58becc2397e0beee63cc2ecce9805b2c4",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0085-xls.xls",
+      "bytes": 78336
+    },
+    {
+      "name": "0086-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "f6e82baaa79a241fc6e05e8034d3c481a168d0755506376f255a419fb044b8b3",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0086-xls.xls",
+      "bytes": 18432
+    },
+    {
+      "name": "0087-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "63328acea4a59ff02fc71633f0ae3839341d706f3ec68733815e9b899cb1e653",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "archive_path": "0087-xls.xls",
+      "bytes": 146432
+    },
+    {
+      "name": "0088-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "7205084a99e97bc257caef8503826dcfef0e46f22d3cfd7e923ecd55b4e05312",
+      "container": true,
+      "host": [
+        "xls",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores",
+      "archive_path": "0088-xls.xls",
+      "bytes": 823808
+    },
+    {
+      "name": "0089-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "8f23936c82138fbb1e62710a3f1757382546cab893ab347bd40a3a4f3e7d2ad2",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0089-xls.xls",
+      "bytes": 1646592
+    },
+    {
+      "name": "0090-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "ffdc32cde7a2f4212851f8a7afbf42d2585a960be79fbff3f7a2321da611b557",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0090-xls.xls",
+      "bytes": 25088
+    },
+    {
+      "name": "0091-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "efaf5d2ce9a7399bfa053710208079a45e330d4b7432a4bf259038942c431650",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0091-xls.xls",
+      "bytes": 33280
+    },
+    {
+      "name": "0092-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "b0ca26133bd22b8f1729fa2b7212450654f8465509e7bcba292d75ec69c108e7",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0092-xls.xls",
+      "bytes": 36864
+    },
+    {
+      "name": "0093-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "7625fe88090e91abb730efbd467f75332b097249e120ead0ec12310843fc4cbb",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0093-xls.xls",
+      "bytes": 33280
+    },
+    {
+      "name": "0094-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "213c07d0710c223269d538be70898809469e849b0a890782d61ab3c49f95b57b",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0094-xls.xls",
+      "bytes": 20992
+    },
+    {
+      "name": "0095-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "46e697aa25f3d7722ea51ea0e3aa9689e9f3e8119d55447aea27b50f24b8c5d6",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0095-xls.xls",
+      "bytes": 54272
+    },
+    {
+      "name": "0096-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "71ae311d43752d36fbe5c7054138d51c38f4f2c8e99172d73a9b8eb3fce91a1d",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0096-xls.xls",
+      "bytes": 35840
+    },
+    {
+      "name": "0097-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "0cbd275fa208145d51cc145437f5922ac57f3758d78a6cabc7ef75a0c78c70cb",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "archive_path": "0097-xls.xls",
+      "bytes": 26112
+    },
+    {
+      "name": "0098-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "314d93f2cc962e48aac99081fba753484e3573ddc52fed95f1a03936f7450d9c",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0098-xls.xls",
+      "bytes": 28672
+    },
+    {
+      "name": "0099-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "35d486334179b8717af8529f1fb7e446fa9a1b4314bd2b0cb4a06a6c8151177b",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0099-xls.xls",
+      "bytes": 25088
+    },
+    {
+      "name": "0100-xls.xls",
+      "category": "spreadsheet",
+      "sha256": "794218186deae154cb1830a336f5362dcd5283107860d1755a1f3ed53e810936",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "archive_path": "0100-xls.xls",
+      "bytes": 19456
+    },
+    {
+      "name": "0001-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "8b91f5ade3abced266b806116ca39004a688334e92a74f65fcc9a920e9bb48ff",
+      "container": true,
+      "host_skip": "Unexpected PowerPoint VBA storage for empty project flags",
+      "archive_path": "0001-ppt.ppt",
+      "bytes": 655872
+    },
+    {
+      "name": "0002-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "3c21061831ca9fe604087b83b30e62c936b0853216c97a1b0ce67215fb716247",
+      "container": true,
+      "host_skip": "Unexpected PowerPoint VBA storage for empty project flags",
+      "archive_path": "0002-ppt.ppt",
+      "bytes": 194048
+    },
+    {
+      "name": "0003-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "1fb803c0094a336f36a9a7abaa0aa4fbf8bd1c2ab4e3d193e4021690421729bf",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0003-ppt.ppt",
+      "bytes": 1480192
+    },
+    {
+      "name": "0004-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "a284b7c46ede389e224c3a10355487493cb089992d8e294586e238566352c682",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0004-ppt.ppt",
+      "bytes": 1099776
+    },
+    {
+      "name": "0005-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "4983fb1b6a3891a6e9eed31c37a2528489139de93ccc4b7297c85cf756d76951",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0005-ppt.ppt",
+      "bytes": 3759104
+    },
+    {
+      "name": "0006-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "91892ccbf5ce3648b3b9f4b3a19308d7e6ee531a1e62f5e4af2e9a8a170b6c74",
+      "container": true,
+      "host_skip": "Unexpected PowerPoint VBA storage for empty project flags",
+      "archive_path": "0006-ppt.ppt",
+      "bytes": 7773184
+    },
+    {
+      "name": "0007-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "88bd933e5c67946998bde7f18b8e275e26dec55d55b61d0375bb2ca31d3aea50",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0007-ppt.ppt",
+      "bytes": 637952
+    },
+    {
+      "name": "0008-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "c400e11074320f5d8890539b33ccee80b9d9983267a991383233977bc682e3d1",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified",
+      "archive_path": "0008-ppt.ppt",
+      "bytes": 1991168
+    },
+    {
+      "name": "0009-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "cfff1da9d811c4ed50f3c6500004611360494c0738c1cf1377ef08bd89fc7429",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0009-ppt.ppt",
+      "bytes": 4834304
+    },
+    {
+      "name": "0010-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "8abf338d6d085e7a89b9f7a179ffc50f6bc188692f4e60a9719c28ce0ee9de46",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified",
+      "archive_path": "0010-ppt.ppt",
+      "bytes": 805376
+    },
+    {
+      "name": "0011-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "cb8e21cb2a59b7ebb6b7b66d4b271395f02af833307eefdb43961067b61dc072",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0011-ppt.ppt",
+      "bytes": 1512448
+    },
+    {
+      "name": "0012-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "d96c2a4be105c805df37946163f6ef13e88d88d4a1a8b27c3d80b541c97d8080",
+      "container": true,
+      "host_skip": "Unexpected PowerPoint VBA storage for empty project flags",
+      "archive_path": "0012-ppt.ppt",
+      "bytes": 3630592
+    },
+    {
+      "name": "0013-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "19d323212128d7a444b1fb9e854af37c8ca073fafeb1218699ef5bf9bd4496bf",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified",
+      "archive_path": "0013-ppt.ppt",
+      "bytes": 460800
+    },
+    {
+      "name": "0014-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "617cfbbd214cf4ee2a9737d5181e246b3ad21d10127e7213e5341fd229cbc050",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0014-ppt.ppt",
+      "bytes": 3283456
+    },
+    {
+      "name": "0015-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "248ab67265d0eecef144a603dcd6bf44894a8016af11c4571ae4e91455a353b9",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 61730",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 61730",
+      "archive_path": "0015-ppt.ppt",
+      "bytes": 179712
+    },
+    {
+      "name": "0016-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "c12808d0bc5a179971d1982cc1802e87fb2a2f56f9f6923560be8d1aa20be61d",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0016-ppt.ppt",
+      "bytes": 256512
+    },
+    {
+      "name": "0017-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "18532826bd841a064b0ccbca58ec01b529f89465806310bf7b836211bfaff7d5",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0017-ppt.ppt",
+      "bytes": 1241600
+    },
+    {
+      "name": "0018-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "25f0948dd4093346bc17a41c2fd2445d094857badf1d485bd5345352878780c1",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0018-ppt.ppt",
+      "bytes": 1994752
+    },
+    {
+      "name": "0019-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "caeb57fc754f832bce97672655047edb1400b756b58e3be0b2a9769c5a922273",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0019-ppt.ppt",
+      "bytes": 210432
+    },
+    {
+      "name": "0020-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "1227b330d985c7fe9fa284639dcaf21ad73beed2c10d64b67b3fa8e614456ab9",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0020-ppt.ppt",
+      "bytes": 610816
+    },
+    {
+      "name": "0021-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "17d345f94057ac2b4b5e88ca43169552dba13c0acc584968321664f3a8a958d1",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0021-ppt.ppt",
+      "bytes": 5095424
+    },
+    {
+      "name": "0022-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "52decaeb6a90e479934ed228be45d726fe904f5073cb4f89b385dfdbca7dba72",
+      "container": true,
+      "host_skip": "Unexpected PowerPoint VBA storage for empty project flags",
+      "archive_path": "0022-ppt.ppt",
+      "bytes": 596992
+    },
+    {
+      "name": "0023-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "0bcc1fae9a222ca8b2bb1bc4e24492c58ae8f31217a5d0b21a8f882a0424f77b",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags",
+      "archive_path": "0023-ppt.ppt",
+      "bytes": 2084352
+    },
+    {
+      "name": "0024-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "7d8736507e68b35feadb9149b5d82f463812b0604a8e1b22eeb20a9c3569c15f",
+      "container": true,
+      "host_skip": "Truncated PowerPoint record",
+      "archive_path": "0024-ppt.ppt",
+      "bytes": 4229120
+    },
+    {
+      "name": "0025-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "51f23718ca1af089697a2f1f01d47efba20d09d66d4bc6b4bb0276b59b2096ce",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0025-ppt.ppt",
+      "bytes": 212992
+    },
+    {
+      "name": "0026-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "248df2fe72ea5a516865e3bafda2a73b17f87843d4208d8b59e34f4504a1b8a1",
+      "container": true,
+      "host_skip": "Unexpected PowerPoint VBA storage for empty project flags",
+      "archive_path": "0026-ppt.ppt",
+      "bytes": 1161728
+    },
+    {
+      "name": "0027-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "c611ccf5360b80c23c40452ed5671c36ea5173c0697ff007a8ada038e1e327e9",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0027-ppt.ppt",
+      "bytes": 154624
+    },
+    {
+      "name": "0028-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "316f5ba8f37276427fbd71b3f0316e13cb40861a3bf1de5ef539d157cbc85178",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0028-ppt.ppt",
+      "bytes": 3475968
+    },
+    {
+      "name": "0029-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "b4c38a5709a8fea9cb14c31510d52b1ac13a8d479c9f71de4dd056347509fe3e",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0029-ppt.ppt",
+      "bytes": 2321408
+    },
+    {
+      "name": "0030-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "a4f7130d3de132882767bc39363e70611472ffd2cd9ae7ebc4399848fc6ae675",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0030-ppt.ppt",
+      "bytes": 5562368
+    },
+    {
+      "name": "0031-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "c17111c2ccf012c6cdadeb3c8712643b924fc65c32ce54d7babf8582af781ee9",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "archive_path": "0031-ppt.ppt",
+      "bytes": 627200
+    },
+    {
+      "name": "0032-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "e1410f31743f2b023519b305b73904399e7779b843f58e520e4038435be2ef7e",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0032-ppt.ppt",
+      "bytes": 2173440
+    },
+    {
+      "name": "0033-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "3d53ee8c0c6b84e30a50b3d74e5ecf9ba607849ff23377ba20aaf7cc8ecad290",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0033-ppt.ppt",
+      "bytes": 209408
+    },
+    {
+      "name": "0034-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "e4360f891b617484e840168191abb13aa4c31b735d3b5961c3acafb333c80031",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0034-ppt.ppt",
+      "bytes": 1458688
+    },
+    {
+      "name": "0035-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "cfbcfb9ac05012c1871b56bb6193c5f860910c007da651e871fe4e113874c8d7",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0035-ppt.ppt",
+      "bytes": 751104
+    },
+    {
+      "name": "0036-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "3a5bd5a1efa8edb9f2b857e1b64f90552997ac0bcd01b08b581641c8fc8c795f",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0036-ppt.ppt",
+      "bytes": 244224
+    },
+    {
+      "name": "0037-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "19ff5860b350ff87cd3474c32e759b073ca497b01476c9fd192a6df56c40867f",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified",
+      "archive_path": "0037-ppt.ppt",
+      "bytes": 522240
+    },
+    {
+      "name": "0038-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "6f0b084108e0985e93780b19da5d5692f5d1d63e345a0ffc60bd208e63481346",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0038-ppt.ppt",
+      "bytes": 2779648
+    },
+    {
+      "name": "0039-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "8bc66e86fe5faceacaa2cd7303af709952c592b2e027ec0ce26b4592c7d66b61",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified",
+      "archive_path": "0039-ppt.ppt",
+      "bytes": 1411584
+    },
+    {
+      "name": "0040-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "35fbb2d57cd88fa3962ea26bfabc028ef6257144309af0ea8deb49dd8571fbb5",
+      "container": true,
+      "host_skip": "Truncated PowerPoint record",
+      "archive_path": "0040-ppt.ppt",
+      "bytes": 4435968
+    },
+    {
+      "name": "0041-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "87cfd63c31ab19b1f51db674387953096ec1107efb79ca73dd460c9520e7ac04",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0041-ppt.ppt",
+      "bytes": 908288
+    },
+    {
+      "name": "0042-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "474fc5c9d39b94beb6e1fe32f613973d1e165c7ca9def5cd6ef623a8933d503d",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0042-ppt.ppt",
+      "bytes": 614912
+    },
+    {
+      "name": "0043-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "197c7f73f75aa6160c95158f1609c1e50a22e5e983061cb2f3ff816befabdeff",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores",
+      "archive_path": "0043-ppt.ppt",
+      "bytes": 105472
+    },
+    {
+      "name": "0044-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "764ea3a29ce5260d966afe608f6b1a2bcd5150257f43d588885d5ac66d23b12d",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0044-ppt.ppt",
+      "bytes": 384000
+    },
+    {
+      "name": "0045-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "862765c3aa86ae804ad8d7d2ece87a9c337157ca381984c5cbd5207e7bb1d298",
+      "container": true,
+      "host_skip": "Unexpected PowerPoint VBA storage for empty project flags",
+      "archive_path": "0045-ppt.ppt",
+      "bytes": 122368
+    },
+    {
+      "name": "0046-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "353b01d30eba28c71da47bb9ecff5762622225bb82da31067241508555d03c85",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified",
+      "archive_path": "0046-ppt.ppt",
+      "bytes": 160256
+    },
+    {
+      "name": "0047-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "54b89f66a53433a945ea88e6b8bdf95bd1ef2501b65682822ef22bce1d164612",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0047-ppt.ppt",
+      "bytes": 1153024
+    },
+    {
+      "name": "0048-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "52a2d5b584762415026bf475d7e37a1af3636ac56a6b3143d91ff3d5fc2809fc",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0048-ppt.ppt",
+      "bytes": 4012032
+    },
+    {
+      "name": "0049-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "f9022eef3fe5348aca9bf80366c23bd8144ce5dc0eb589ffd3cd90a6fd4efe67",
+      "container": true,
+      "host_skip": "Unexpected PowerPoint VBA storage for empty project flags",
+      "archive_path": "0049-ppt.ppt",
+      "bytes": 647680
+    },
+    {
+      "name": "0050-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "54072df5d5ecdb7d4ec83d0b2ae41c79395935d4e2d50f05babead08d9d52672",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0050-ppt.ppt",
+      "bytes": 344064
+    },
+    {
+      "name": "0051-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "05193599eea909d941056a244730473c60dcf259e4d59f499de0f07c87504598",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0051-ppt.ppt",
+      "bytes": 1602048
+    },
+    {
+      "name": "0052-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "8bc5e4dd19117ba97ee2c1c55e9448cf27964cf10528cb9331756a8d1b9fff64",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "archive_path": "0052-ppt.ppt",
+      "bytes": 624640
+    },
+    {
+      "name": "0053-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "d98423c4638bb6906614a8092d6f4d12c92b66834a22c80d0b558120d6bbf324",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0053-ppt.ppt",
+      "bytes": 688640
+    },
+    {
+      "name": "0054-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "5a067f40dd18d9e500684df809ff3297544375c52246225efc451f0402f6e6f5",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0054-ppt.ppt",
+      "bytes": 3631104
+    },
+    {
+      "name": "0055-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "6e4399ee21eefaa74d831e83d329a63051ca0b344a016a35d05d020542d28c0d",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0055-ppt.ppt",
+      "bytes": 1387008
+    },
+    {
+      "name": "0056-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "f379d096e4f3b9af85163c4877d23215161174b1d4feb2a773288b852b89335d",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 4041",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 4041",
+      "archive_path": "0056-ppt.ppt",
+      "bytes": 318464
+    },
+    {
+      "name": "0057-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "2fd62d579f5c4241620269a6012c55915bc44f49c2e08808e5476675115b23fe",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0057-ppt.ppt",
+      "bytes": 316928
+    },
+    {
+      "name": "0058-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "54fce0534a227181f35843338d4e54f5297ecf814cbe7885dc4a48339e854978",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0058-ppt.ppt",
+      "bytes": 176640
+    },
+    {
+      "name": "0059-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "20359003ee6b2cc2ce26695c14e222ad2fe7c971993ef3d1737246126c82702f",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0059-ppt.ppt",
+      "bytes": 800256
+    },
+    {
+      "name": "0060-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "961dbb85293ff2bd848a308037dce6e969e7d6d2145604292d7b2a4a2eb88a5c",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "archive_path": "0060-ppt.ppt",
+      "bytes": 390656
+    },
+    {
+      "name": "0061-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "58c6af62960555ab243ba34be1869b31dc5bcf50f234a9e63562ca4fc07eafbb",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores",
+      "archive_path": "0061-ppt.ppt",
+      "bytes": 178688
+    },
+    {
+      "name": "0062-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "6f78a7b84aaff47c0c28b454c4b152d273cfb22a63a1efca93c6c3ed9557fb57",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0062-ppt.ppt",
+      "bytes": 2350592
+    },
+    {
+      "name": "0063-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "f9b858f2a3adf499c02dfe4937253ac4fd3552df4fb122ae63ed66008c9c335d",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags",
+      "archive_path": "0063-ppt.ppt",
+      "bytes": 13113344
+    },
+    {
+      "name": "0064-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "9b9580cd7c3f7534ac21a3a293235796e23ad305595f4f0aabdc36d0e07bc025",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0064-ppt.ppt",
+      "bytes": 3321856
+    },
+    {
+      "name": "0065-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "5718065bace553b7ab7635a3abdfeab07c76deb4339891bc3d028437faa1be25",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0065-ppt.ppt",
+      "bytes": 1875968
+    },
+    {
+      "name": "0066-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "cbbdeda1f3b1e098f8999008a1bd28dad1c6a958c78937a26e7f0d27b47250b3",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0066-ppt.ppt",
+      "bytes": 4145664
+    },
+    {
+      "name": "0067-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "f916be510d1d31f22834c600f8f7f91a2e005925e3e6ce3b9de51a2fabd353b0",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores",
+      "archive_path": "0067-ppt.ppt",
+      "bytes": 385536
+    },
+    {
+      "name": "0068-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "bec603cb19831ca31db5aa8472b45fcf8016f9fdd230f26c8e211e89fd434666",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0068-ppt.ppt",
+      "bytes": 991232
+    },
+    {
+      "name": "0069-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "5d270c999c99e92cd5607b12f5c93ff2b12bf2727607dc3b174b98bf6903d68b",
+      "container": true,
+      "host_skip": "Unexpected PowerPoint VBA storage for empty project flags",
+      "archive_path": "0069-ppt.ppt",
+      "bytes": 322560
+    },
+    {
+      "name": "0070-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "18fbf6b2b1c6db0404faa9ad97445c75fbacc2c75b9ea8a30702a5709b6c7973",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0070-ppt.ppt",
+      "bytes": 322560
+    },
+    {
+      "name": "0071-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "201bbd436a18a8989ba3728928397784ea92dcdb14e690d02558416e1f8693fd",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0071-ppt.ppt",
+      "bytes": 70656
+    },
+    {
+      "name": "0072-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "0e6d034ffc957f598eabfa8a3e4b78b6d75fc4920a1643d7102482627f24a197",
+      "container": true,
+      "host_skip": "Unexpected PowerPoint VBA storage for empty project flags",
+      "archive_path": "0072-ppt.ppt",
+      "bytes": 226816
+    },
+    {
+      "name": "0073-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "149fc86a858101a991ab3fbb4cc5d7b676f08f39d97d3f0f6af0dd5f78321f0b",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0073-ppt.ppt",
+      "bytes": 278016
+    },
+    {
+      "name": "0074-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "8226db969c1d77be3e66950dce489a0943dbe7be54375dd6be1b8f5fc3a96704",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified",
+      "archive_path": "0074-ppt.ppt",
+      "bytes": 317440
+    },
+    {
+      "name": "0075-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "2a08ac75c4f986b7b69031747da02096d612471219e304b739a3f8564c8d5292",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified",
+      "archive_path": "0075-ppt.ppt",
+      "bytes": 3224064
+    },
+    {
+      "name": "0076-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "5922c861e66c3a4523fefab75dfe64c47ea2c741d5741c5ee21dbea507a3c073",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified",
+      "archive_path": "0076-ppt.ppt",
+      "bytes": 588800
+    },
+    {
+      "name": "0077-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "12de6d2cb293980f1d187a06d28ecb67d26532849f7b2796636f35cdea2c5ac5",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0077-ppt.ppt",
+      "bytes": 6945280
+    },
+    {
+      "name": "0078-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "1df833084d7a88dc504f98f684ca1526312f402ea3e789ee2872d2d9bce252bb",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified",
+      "archive_path": "0078-ppt.ppt",
+      "bytes": 1745920
+    },
+    {
+      "name": "0079-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "f5b895a6e353283e1e3977f52d840eda536db2d2ee8fd9862f55b64400218954",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0079-ppt.ppt",
+      "bytes": 162816
+    },
+    {
+      "name": "0080-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "6ed65bc824a828e3a53f0ee16e4bc163f7de6a95b145d214357146727bae7758",
+      "container_skip": "OLE: invalid directory type/name",
+      "archive_path": "0080-ppt.ppt",
+      "bytes": 162816
+    },
+    {
+      "name": "0081-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "c500bf646cd1a7ba0bc09fa9548d099d2d23772163b8dca34aa36fd1406e36fc",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0081-ppt.ppt",
+      "bytes": 2436608
+    },
+    {
+      "name": "0082-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "c2ae86dbf40aee531d551ec8ab8cb05904b3b34cfc4e52b5c2607be9de784019",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0082-ppt.ppt",
+      "bytes": 1043968
+    },
+    {
+      "name": "0083-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "67c984d3e403a309b27b0445029723da0539dbfae97ae255676da4c33076278c",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0083-ppt.ppt",
+      "bytes": 1128448
+    },
+    {
+      "name": "0084-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "b1e1a76c15fad358b2511925fbfa5c087f92346dd80d061e507eee820fc1b5f9",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0084-ppt.ppt",
+      "bytes": 1803776
+    },
+    {
+      "name": "0085-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "414b2aedffefbf5ad67c871ece2d190fa30b5db4593e5155b37e91a1ea18e318",
+      "container": true,
+      "host_skip": "Truncated PowerPoint record",
+      "archive_path": "0085-ppt.ppt",
+      "bytes": 210944
+    },
+    {
+      "name": "0086-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "780eefe83af7042990eb1e729535857987182f41c332b00195053963e5597448",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0086-ppt.ppt",
+      "bytes": 5106176
+    },
+    {
+      "name": "0087-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "a1158183d6dc6153f21c5ee30709d25557119a50668d92be5cc6d970285f28e2",
+      "container_skip": "OLE: consecutive red directory nodes",
+      "archive_path": "0087-ppt.ppt",
+      "bytes": 1957888
+    },
+    {
+      "name": "0088-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "99a013625d8824dae57d744e942e4cac17c50cce8dae71952e350f871f6e3d09",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified programmable extension",
+      "dedup_skip": "PPT OLE records: unqualified programmable extension",
+      "archive_path": "0088-ppt.ppt",
+      "bytes": 430080
+    },
+    {
+      "name": "0089-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "8b1c259fd08d0c9237c8523d610c84bcad6a93894864912421f576f617c15c1c",
+      "container": true,
+      "host_skip": "Unexpected PowerPoint VBA storage for empty project flags",
+      "archive_path": "0089-ppt.ppt",
+      "bytes": 269824
+    },
+    {
+      "name": "0090-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "f7cba0698ddc2fb67544fd037d4d0aa942c8f4ea4f80d004db25de3e452059c5",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified",
+      "archive_path": "0090-ppt.ppt",
+      "bytes": 406016
+    },
+    {
+      "name": "0091-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "755bdd1d42baf5e15e522d33d11959f33e84585ca7bfc516ba041b146afa9526",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0091-ppt.ppt",
+      "bytes": 314880
+    },
+    {
+      "name": "0092-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "20333abd674e7136fd7493a4d12884040eef40d7f80f9b57ab138f5cf348e63e",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified",
+      "archive_path": "0092-ppt.ppt",
+      "bytes": 89600
+    },
+    {
+      "name": "0093-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "c09001f93196e2f21ba40370992f8fc3d74314976fc29a027936a85c49b38409",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0093-ppt.ppt",
+      "bytes": 883712
+    },
+    {
+      "name": "0094-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "4d1932e9de053fe0c21cc0441a8a2884d80d8d0f94cd9b83b4b450cfdd61c37a",
+      "container_skip": "OLE: unsupported Unicode name comparison",
+      "archive_path": "0094-ppt.ppt",
+      "bytes": 1441280
+    },
+    {
+      "name": "0095-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "4e9e17e27d566fc84aaadd1f4c30fd42bc18b257d787e9cd832fae406bdd3e10",
+      "container": true,
+      "host_skip": "Truncated PowerPoint record",
+      "archive_path": "0095-ppt.ppt",
+      "bytes": 580608
+    },
+    {
+      "name": "0096-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "5070e50497ec3f91b6929e4ab31a7240789a77152f40d0d5663820946451d64e",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0096-ppt.ppt",
+      "bytes": 1660416
+    },
+    {
+      "name": "0097-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "decf9479d3dedbf1be7d57239eaef1e42292ee99593d6c51a77d0afc12bb6be0",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0097-ppt.ppt",
+      "bytes": 1660416
+    },
+    {
+      "name": "0098-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "8ac7fa06b1a1b619cf5a3e3e970c799573e2afd8ea5ac035e538c40aecc79b07",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0098-ppt.ppt",
+      "bytes": 1254400
+    },
+    {
+      "name": "0099-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "842517cbdae99b0bd932dc3f4a8006ca56c7198ec42cfe6ef19c02d153fc52d3",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "archive_path": "0099-ppt.ppt",
+      "bytes": 1254400
+    },
+    {
+      "name": "0100-ppt.ppt",
+      "category": "slideshow",
+      "sha256": "808ef3300a25971c76a4703a22fc159db3b2ea98121393f6b92b70c40d66b44c",
+      "container": true,
+      "host_skip": "Unexpected PowerPoint VBA storage for empty project flags",
+      "archive_path": "0100-ppt.ppt",
+      "bytes": 2173952
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "total": {
+    "files": 217344,
+    "bytes": 18732461826418,
+    "missing_sizes": 0,
+    "projects": 565,
+    "owners": 383,
+    "checksum_files": 217076,
+    "unique_known_checksum_size": 206491,
+    "unique_known_bytes": 18699807106312,
+    "available_files": 217301
+  },
+  "row_count": 217344,
+  "source_file_count_sum": 217344,
+  "source_bytes_sum": 18732461826418,
+  "format_file_count_sum": 217344,
+  "format_bytes_sum": 18732461826418,
+  "claims": "Extension inventory and API-declared bytes/checksums; not content validation or a platform probability sample."
+}

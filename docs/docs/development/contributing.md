@@ -4,7 +4,9 @@ description: "Development setup, tests, and documentation updates"
 ---
 # Contributing
 
-Python 3.9+ is required.
+The supported CI matrix is Python 3.9–3.13. A newer Python version becomes
+qualified after its core, installed-artifact and representative optional-reader
+lanes pass; a permissive package version constraint alone is not qualification.
 
 ```bash
 python -m venv .venv
@@ -17,8 +19,8 @@ make lint
 - Tests live in `test/` and run with pytest.
 - ruff: max line length 100, max complexity 15 (`make lint`).
 - mypy is run on `filerepack/` and `test/`.
-- Do not unlink user files before a successful rewrite; packers must write to a temp path and `os.replace`.
-- New formats go through the `_PACKERS` registry and `STANDALONE_EXTS` (or `ARCHIVE_EXTS`).
+- Stage, verify and accept candidates through `filerepack.candidates`; publish through destination-local `filerepack.transactions` with source/output generation guards.
+- Register typed format metadata, dispatch and a preserving validator; run `python dev/generate_capability_docs.py` and the drift tests. Mark unqualified writers unavailable or experimental.
 
 ## Documentation
 
@@ -39,3 +41,24 @@ Update those pages when adding a format or flag.
 
 See also [CONTRIBUTING.md](https://github.com/ivbeg/filerepack/blob/master/CONTRIBUTING.md)
 in the repository root.
+
+## Evidence and specification checks
+
+Run `python dev/check_coverage.py coverage.json` after pytest with
+`--cov=filerepack --cov-report=json`. Current minimum line coverage is 90% for
+transactions/candidates/destinations, 85% for option validation and reports,
+and 70% for the broad verifier module. Raise these floors when the measured
+core matrix supports the increase. The verifier target is 90%; optional native
+worker tests and independent reader checks remain necessary at any percentage.
+Line and branch coverage are collected; isolated child work is not automatically
+measured by the parent coverage process.
+
+Run `python dev/check_spec_ownership.py` and
+`openspec validate --all --strict --no-interactive` before integrating a change.
+Canonical specifications describe verified working-tree contracts. The baseline
+audit records historical wording corrections and requirements still pending.
+Checklists describe implementation evidence; deployment must be confirmed
+separately before archiving a change.
+
+See [quality evidence](/development/quality-evidence) for current qualification
+and benchmark limitations.

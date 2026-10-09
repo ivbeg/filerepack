@@ -49,13 +49,16 @@ const sidebars = {
         'commands/shared-options',
         'commands/repack',
         'commands/bulk',
+        'commands/inspect',
+        'commands/reports-and-resume',
         'commands/doctor',
       ],
     },
     {
       type: 'category',
       label: 'Formats and tools',
-      items: ['formats/index', 'tools/index'],
+      items: ['formats/index', 'formats/scientific', 'formats/model-weights',
+              'formats/tracev3', 'formats/capabilities', 'tools/index'],
     },
     {
       type: 'category',
@@ -65,7 +68,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Development',
-      items: ['development/contributing'],
+      items: ['development/contributing', 'development/quality-evidence'],
     },
     'license',
   ],

@@ -3,7 +3,7 @@
 """Extract and recompress attached pictures in audio tags."""
 
 import os
-from typing import Any, Callable, List, Optional, Tuple
+from typing import Any, Callable, List, Optional, Protocol, Tuple, cast
 
 from .containers import pack_members, staging_dir
 
@@ -15,6 +15,13 @@ _MIME_EXT = {
     'image/webp': '.webp',
     'image/gif': '.gif',
 }
+
+
+class _PictureFrame(Protocol):
+    """Mutagen frame fields supplied dynamically by its ID3 specification."""
+
+    data: bytes
+    mime: str
 
 
 def mutagen_available() -> bool:
@@ -53,10 +60,11 @@ def _mp3_covers(path: str, options: Optional[dict]) -> bool:
     for frame in tags.getall('APIC'):
         if not isinstance(frame, APIC):
             continue
-        packed = _pack_picture(bytes(frame.data), str(frame.mime), options)
+        picture = cast(_PictureFrame, frame)
+        packed = _pack_picture(bytes(picture.data), str(picture.mime), options)
         if packed is None:
             continue
-        frame.data = packed
+        picture.data = packed
         changed = True
     if changed:
         tags.save(path)

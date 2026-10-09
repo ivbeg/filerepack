@@ -7,6 +7,7 @@ from filerepack.progress import ProgressReporter, stderr_is_tty
 from filerepack.repack import FileRepacker
 from filerepack.__main__ import _want_progress, app, _set_output_format, _set_verbosity
 from typer.testing import CliRunner
+from test.helpers import plain_output
 
 runner = CliRunner()
 
@@ -114,10 +115,11 @@ class TestRepackProgressCallback:
 class TestRepackCLIProgress:
     def test_help_lists_progress(self):
         result = runner.invoke(app, ["repack", "--help"])
+        help_text = plain_output(result)
         assert result.exit_code == 0
-        assert "--progress" in result.output
-        assert "--no-progress" in result.output
-        assert "--progress-interval" in result.output
+        assert "--progress" in help_text
+        assert "--no-progress" in help_text
+        assert "--progress-interval" in help_text
 
     def test_json_stays_clean_with_progress(self, tmp_path):
         path = tmp_path / "a.gz"

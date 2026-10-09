@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-08",
+  "scope": "Local macOS Python 3.9.6/3.13.7 publication correction",
+  "native_creation_provenance_only": true,
+  "source": {
+    "path": "/Users/ibegtin/workspace/ivbeg/filerepack/temp/_raw/Apps4Russia_proposal_all.ppt",
+    "bytes": 2694144,
+    "sha256": "971add29b0d952bf8873afb5c33cab50ad6c1ee47497cd31d67cb3e510fdb13a",
+    "mode": "0o700",
+    "mtime_ns": 1369205602000000000,
+    "xattrs_sha256": {},
+    "generation_unchanged": true
+  },
+  "public_cli": {
+    "path": "/Users/ibegtin/workspace/ivbeg/filerepack/outputs/apps4russia-roundtrip-preserved/Apps4Russia_proposal_all.ppt",
+    "bytes": 2082816,
+    "sha256": "c633b3ef87a05e2bde3b5d2f4c1e79e05c4e837306fe266fb7a990d385429362",
+    "mode": "0o700",
+    "mtime_ns": 1369205602000000000,
+    "xattrs_sha256": {
+      "com.apple.provenance": "01a26d0c3f40ebe23c824ff90ca6cdd8c5f5ee9bb812557380daab1ab759c2cf"
+    },
+    "source_attributes_preserved": true,
+    "independent_content_equal": true,
+    "same_bytes_as_rendered_candidate": true,
+    "slide_and_notes_render_evidence": "qualification-ppt-roundtrip-runtime.json"
+  },
+  "tests": {
+    "python_3_13": {
+      "passed": 186,
+      "skipped": 2
+    },
+    "python_3_9": {
+      "passed": 186,
+      "skipped": 2
+    },
+    "skips": "No writable second filesystem for two native /dev/shm cases",
+    "controlled_faults": [
+      "non-Darwin",
+      "later-added provenance",
+      "changed creation-time value",
+      "different source provenance",
+      "other protected attribute",
+      "ignored original attribute write"
+    ],
+    "affected_ole_cli": {
+      "passed": 255,
+      "skipped": 0,
+      "files": [
+        "test_ole.py",
+        "test_ole_recompress.py",
+        "test_ole_ppt_roundtrip.py",
+        "test_cli_status.py"
+      ]
+    }
+  },
+  "private_inplace_with_backup": {
+    "status": "replaced",
+    "source_bytes": 2694144,
+    "final_bytes": 2082816,
+    "sha256": "c633b3ef87a05e2bde3b5d2f4c1e79e05c4e837306fe266fb7a990d385429362",
+    "backup_sha256": "971add29b0d952bf8873afb5c33cab50ad6c1ee47497cd31d67cb3e510fdb13a",
+    "mode_preserved": true,
+    "mtime_preserved": true,
+    "all_source_attributes_preserved": true,
+    "independent_content_equal": true,
+    "private_files_removed": true
+  },
+  "checks": {
+    "ruff": "passed",
+    "mypy_transactions": "passed",
+    "spec_ownership": "passed"
+  }
+}

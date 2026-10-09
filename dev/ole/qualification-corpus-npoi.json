@@ -1,0 +1,696 @@
+{
+  "schema_version": 1,
+  "source": "NPOI variants distinct from the pinned Apache POI/LibreOffice corpus",
+  "commit": {
+    "nissl-lab/npoi": "832eb28f142d54fb8a87b65fa61b5916a763b528",
+    "dotnetcore/NPOI": "9fc667e32476f1a251730141df12e1927349c75c"
+  },
+  "license": "Apache-2.0",
+  "selection": {
+    "extensions": [
+      "doc",
+      "xls",
+      "ppt"
+    ],
+    "minimum_bytes": 512,
+    "maximum_bytes": 8388608,
+    "directories": [
+      "nissl-lab/npoi:testcases/test-data",
+      "dotnetcore/NPOI:test/test-data"
+    ],
+    "distinct_git_blobs_against_inventories": {
+      "corpus-libreoffice-inventory.json": "880497cb0d5c92a17d05f34eb900de1d121f70617273797061e7d6c9a6bb6a5f",
+      "corpus-poi-large-inventory.json": "2f25bc83559e10c5a6c73fe5df12687ba818aa60110bafa040372b0a88ee764a",
+      "corpus-inventory.json": "af7633e00aef14c3043f79fd3f6eb6667c32debe9f45cd8d5ba76bae4d753c42"
+    }
+  },
+  "inventory_sha256": "6c9c433b540d5292c1dc7b49101ae1ad18c1c470ac207da2b1dfa1e71295bd62",
+  "python": "3.13.7",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "scope": "read-only eligibility; no savings or application acceptance inferred",
+  "counts": {
+    "document": {
+      "selected": 14,
+      "source_verified": 14,
+      "container": 11,
+      "host": 8,
+      "officeart": 2,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 9,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "spreadsheet": {
+      "selected": 38,
+      "source_verified": 38,
+      "container": 29,
+      "host": 24,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "slideshow": {
+      "selected": 4,
+      "source_verified": 4,
+      "container": 2,
+      "host": 0,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    }
+  },
+  "rejection_reasons": {
+    "source": {},
+    "container": {
+      "OLE: FAT sector marker mismatch": 1,
+      "OLE: invalid directory type/name": 1,
+      "OLE: unsupported CFB header": 1,
+      "OLE: consecutive red directory nodes": 2,
+      "OLE: unsupported root storage": 8,
+      "OLE: invalid file size or 128 MiB limit exceeded": 1
+    },
+    "host": {
+      "Truncated OLE property section": 1,
+      "Unsupported Word binary version": 1,
+      "Missing/truncated WordDocument FIB": 1,
+      "PowerPoint VBA history/multiple-info layout is not qualified": 1,
+      "Truncated PowerPoint record": 1,
+      "BIFF record limit/truncation": 3,
+      "Unknown/embedded VBA project layout; signature status is not qualified": 1,
+      "Encrypted/obfuscated Excel workbook (FilePass)": 1
+    },
+    "officeart": {
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ae": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0x6870; OfficeArt: missing/invalid floating OfficeArtContent": 1,
+      "OfficeArt: no inline picture Data stream; OfficeArt: missing/invalid floating OfficeArtContent": 3,
+      "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x92": 2,
+      "OfficeArt: expected one global drawing group": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: missing/invalid floating OfficeArtContent": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x293": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x87c": 17,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1b": 1
+    },
+    "dedup": {
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ae": 2,
+      "OfficeArt: unqualified BIFF type/version/length: 0x92": 2,
+      "OfficeArt: expected one global drawing group": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x293": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x87c": 17,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1b": 1
+    }
+  },
+  "files": [
+    {
+      "name": "nissl-lab-TestBug44375.xls",
+      "category": "spreadsheet",
+      "sha256": "0260f4ff37a49f271a37b77ed93696c91db3be6a3b0bdd484bfe42bef90d03ce",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae"
+    },
+    {
+      "name": "nissl-lab-TestBug52372.doc",
+      "category": "document",
+      "sha256": "86334c353554e6c93ea463351c959aaca0bdb9e02f71ec1f812e908e3ca3fac3",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host_skip": "Truncated OLE property section"
+    },
+    {
+      "name": "nissl-lab-TestChineseProperties.doc",
+      "category": "document",
+      "sha256": "59bd71be14fef14b69d760204daaf7614d335163448d5448fa2b844adade9687",
+      "container": true,
+      "piece_prm": {
+        "pieces": 6,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x6870; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "nissl-lab-TestEditTime.doc",
+      "category": "document",
+      "sha256": "1ffa8265eca76f979656498d72fd5671b99cb92f1994b4519e7de88616efc4be",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "nissl-lab-TestGermanWord90.doc",
+      "category": "document",
+      "sha256": "028ba45aa75057a34eb6557b9766a5afe58df49fa8e8bd939227e29488573b57",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "nissl-lab-TestHPSFWritingFunctionality.doc",
+      "category": "document",
+      "sha256": "e3f787303b6f77e034cc5979793c0578902a563a9155e14214f2406f126fcac6",
+      "container_skip": "OLE: FAT sector marker mismatch"
+    },
+    {
+      "name": "nissl-lab-TestInvertedClassID.doc",
+      "category": "document",
+      "sha256": "ddd8224f87c71daaa4cd9dcd1af79718c256520e9ac23db5e35ecbc602d3288e",
+      "container_skip": "OLE: invalid directory type/name"
+    },
+    {
+      "name": "nissl-lab-TestMickey.doc",
+      "category": "document",
+      "sha256": "407c896983b5a885af800c45be40c4dc49d41eb3ea7b8433ef3677c4fb51e14e",
+      "container": true,
+      "piece_prm_skip": "('0Table',)",
+      "host_skip": "Unsupported Word binary version"
+    },
+    {
+      "name": "nissl-lab-TestNon4ByteBoundary.doc",
+      "category": "document",
+      "sha256": "01e9c68e492e5dbdc42e5f7a1e6c2ee53a1afed7462a733596dc8f44f1798928",
+      "container_skip": "OLE: unsupported CFB header"
+    },
+    {
+      "name": "nissl-lab-TestRobert_Flaherty.doc",
+      "category": "document",
+      "sha256": "af214ab59769b4ccbda71b365edb9d06b4ff1cf9ada4215300669c0e09daac4c",
+      "container": true,
+      "host_skip": "Missing/truncated WordDocument FIB"
+    },
+    {
+      "name": "nissl-lab-TestSectionDictionary.doc",
+      "category": "document",
+      "sha256": "9c5f2ee44e43effff471751b50657e42156cd8063076a4f52a49869d15b50bc5",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 1,
+        "rasters": 0,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      }
+    },
+    {
+      "name": "nissl-lab-TestShiftJIS.doc",
+      "category": "document",
+      "sha256": "966ba605722430a97c27ee24c82411dd1b4f2c59c3125664b0dc2cc4edfcfe92",
+      "container": true,
+      "piece_prm": {
+        "pieces": 20,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "nissl-lab-TestThumbnail.xls",
+      "category": "spreadsheet",
+      "sha256": "2848f3f7bdac3307955aa475f6a43275a2ba6bfbaee5693f9cb1166ecece2645",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92"
+    },
+    {
+      "name": "nissl-lab-TestUnicode.xls",
+      "category": "spreadsheet",
+      "sha256": "d6e56522b14ff1be8c51270dfc612eebe5ee13b0588b189817ecd0f6193b6dc7",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: expected one global drawing group",
+      "dedup_skip": "OfficeArt: expected one global drawing group"
+    },
+    {
+      "name": "nissl-lab-TestWriteWellKnown.doc",
+      "category": "document",
+      "sha256": "77d5f023ec54defd2ec3a2a6d85fa58df54f61276d3774df2ce058eb4a0ed93a",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "nissl-lab-Test_Humor-Generation.ppt",
+      "category": "slideshow",
+      "sha256": "b79cbd3aac94e4c62507a89d84d6399554612f57dacd615f6257d0ac9200e032",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "nissl-lab-20-Force-on-a-current-S00.doc",
+      "category": "document",
+      "sha256": "cecacf88f03237b59e187cce039522ede4e1013a7dead9e9f28c5d24ef4903c6",
+      "container": true,
+      "piece_prm": {
+        "pieces": 13,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "nissl-lab-multimedia.doc",
+      "category": "document",
+      "sha256": "0d836ded8d8036f196f10d5848c4972e64564845e8e73ffe87635005c85f77b5",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart": {
+        "adapter": "FloatingWordArt",
+        "metafiles": 0,
+        "rasters": 7,
+        "table_owned_references": 0,
+        "data_blocks": 0,
+        "data_gaps": 0
+      }
+    },
+    {
+      "name": "nissl-lab-PictureLengthZero.ppt",
+      "category": "slideshow",
+      "sha256": "0b52ea07b84a2677c45a7b230efa5d9369b3feb5ce1872efb91e6fb3fe6fcd19",
+      "container": true,
+      "host_skip": "PowerPoint VBA history/multiple-info layout is not qualified"
+    },
+    {
+      "name": "nissl-lab-SampleShow.ppt",
+      "category": "slideshow",
+      "sha256": "6209f35d7e28f8619bd4372f56c958cd483e3acea1fca7197c08bc2d75924cdc",
+      "container": true,
+      "host_skip": "Truncated PowerPoint record"
+    },
+    {
+      "name": "nissl-lab-WithLinks.ppt",
+      "category": "slideshow",
+      "sha256": "b372c22d2c09a5cd894a86b81a0b353e110583fb91fa752ef62aa901074b1f57",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "nissl-lab-22742.xls",
+      "category": "spreadsheet",
+      "sha256": "4df0a3b1857d6e191d6afe21c06ea4eff997cb827eda3f2c316b46f06e0abcbe",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x293"
+    },
+    {
+      "name": "nissl-lab-47245_test.xls",
+      "category": "spreadsheet",
+      "sha256": "462fd8af9780b15f75c51114d85765984beb27cccd3cd1b830465676c3b37c55",
+      "container": true,
+      "host_skip": "BIFF record limit/truncation"
+    },
+    {
+      "name": "nissl-lab-52447.xls",
+      "category": "spreadsheet",
+      "sha256": "eb9d1e0494c97a9d98d07b47985403a8173668f6bcc8e05f8f3de637b34aedf6",
+      "container": true,
+      "host_skip": "BIFF record limit/truncation"
+    },
+    {
+      "name": "nissl-lab-59858.xls",
+      "category": "spreadsheet",
+      "sha256": "b2a2900b68bcc501a1e0e21730756d69336ae2371422efa2fd851740f2974151",
+      "container": true,
+      "host_skip": "Unknown/embedded VBA project layout; signature status is not qualified"
+    },
+    {
+      "name": "nissl-lab-97_password.xls",
+      "category": "spreadsheet",
+      "sha256": "e45be0418493c21df4125c3dc9d1c0926a58aef98fecb27ebfb63fcd180e6bb2",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "nissl-lab-97_plain.xls",
+      "category": "spreadsheet",
+      "sha256": "e3a90092f93b29feadb3b77474907cf8f2b533eab465fda7cb5c67a3ab85a4fd",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "nissl-lab-97_rc4cryptoapi_password.xls",
+      "category": "spreadsheet",
+      "sha256": "b60721706507cc89d7f82a9ea14aaf41704d709ffa81c11e0257ffef93f4cf79",
+      "container": true,
+      "host_skip": "Encrypted/obfuscated Excel workbook (FilePass)"
+    },
+    {
+      "name": "nissl-lab-ATM.xls",
+      "category": "spreadsheet",
+      "sha256": "b83be662990ecd88211a32444c4eb82fde3a0e38776b84b9f5a12e95be47f5ca",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "nissl-lab-BooleanFunctionsTestCaseData.xls",
+      "category": "spreadsheet",
+      "sha256": "7da4c712f624b68425697655bbe1feef4367b42b99ca510313306b0163a9712d",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "nissl-lab-DGet.xls",
+      "category": "spreadsheet",
+      "sha256": "310efe676a10b337e0ddc9982cd7fcc7c0763e3788aacd5a84cc662e1cac2de8",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "nissl-lab-DStar.xls",
+      "category": "spreadsheet",
+      "sha256": "906a4451d380f37a99be4840c4318d08b9982a5ecdb12a3c9dce92f613938aca",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "nissl-lab-FW 8.6 Table Relationship2.xls",
+      "category": "spreadsheet",
+      "sha256": "a4f34ddf8acdce6f54cd0be1c777adb197cb4f4744815300f14775ea724de50d",
+      "container": true,
+      "host_skip": "BIFF record limit/truncation"
+    },
+    {
+      "name": "nissl-lab-Forecast.xls",
+      "category": "spreadsheet",
+      "sha256": "bfa0ab3af17e2893af4555711e6eb9768131101f4b57f9cf06c502ef29083992",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "nissl-lab-FormulaEvalTestData.xls",
+      "category": "spreadsheet",
+      "sha256": "c8654e69e0fbcc5204e43ba259f0a3fb5201d1f240f10cecf1a53192a9b76ecd",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "nissl-lab-Images.xls",
+      "category": "spreadsheet",
+      "sha256": "1e00f8bb1b497962bda5911b7cba8948ba849d479f9610ef385996a3b11c6572",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "nissl-lab-IndexFunctionTestCaseData.xls",
+      "category": "spreadsheet",
+      "sha256": "7b15325f253f8691846b5eca1bbeca37246eb7b92a8647dca012faca685ab14b",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "nissl-lab-LookupFunctionsTestCaseData.xls",
+      "category": "spreadsheet",
+      "sha256": "28d726848683d76f61ca2c77b45d0f70d29516652bb0cb96676f4f7314e906b7",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "nissl-lab-MatchFunctionTestCaseData.xls",
+      "category": "spreadsheet",
+      "sha256": "9bc3b981777309e45260d4441c30cb181d41024de9aef19272fa6793fd7a843a",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "nissl-lab-NpoiBug5139.xls",
+      "category": "spreadsheet",
+      "sha256": "5a106ab45e0e8a9a230dc3443daa45e2f46d7ef25107f6cf1c4e36fea9e5b022",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "nissl-lab-SubtotalsNested.xls",
+      "category": "spreadsheet",
+      "sha256": "e6b8e0fb8c832609142a145b569554a1b444a62344fcae0f3b4ec7adbb118cb7",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "nissl-lab-ca_apparel_browse_tree_guide._TTH_.xls",
+      "category": "spreadsheet",
+      "sha256": "248f69e8224cbd5327a98b1171a8c757655e1e2b790fe8855cafebb764966afc",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92"
+    },
+    {
+      "name": "nissl-lab-chartdemo.xls",
+      "category": "spreadsheet",
+      "sha256": "a52b58ea74049e441a2cc46fe754a1795c379dd72f36e17f6966cdec20c0f3a7",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "nissl-lab-countifExamples.xls",
+      "category": "spreadsheet",
+      "sha256": "c3d87f6929174072c49fdfd30b433e6ca9009d0c2fc479b3ad6afb0d8bfb707c",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "nissl-lab-excelant.xls",
+      "category": "spreadsheet",
+      "sha256": "d79987413591a74a812cfe5faa8a2ad62c426b13cf48428d4217fb6467e53c55",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "nissl-lab-hinstall.xls",
+      "category": "spreadsheet",
+      "sha256": "a8653a9ecdaa21f2bf01465769d84fb98bd708d2c616c4b37876306fa9292b97",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "nissl-lab-hparams.xls",
+      "category": "spreadsheet",
+      "sha256": "227dade062b1f3e5fba56b7ebf5b51f30e3e1c4b25a1a6184ece5e5b04856374",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "nissl-lab-mirrTest.xls",
+      "category": "spreadsheet",
+      "sha256": "83d958fc3af7e90438b0a2a2d2621c7065dba8827aa8bb86ca35e3584664b288",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "nissl-lab-npoiBug5010.xls",
+      "category": "spreadsheet",
+      "sha256": "53df5d91c9c41e2c5a2f7896d5080d3e0113b3ad637230e2fef36900ec513bf8",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "nissl-lab-optional_label_options.xls",
+      "category": "spreadsheet",
+      "sha256": "090a399f95f2bf6251377ab8030afb586728b3ff9e8cd9be3ae25c38c80c6c88",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1b",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1b"
+    },
+    {
+      "name": "nissl-lab-test_FailAddingComment.xls",
+      "category": "spreadsheet",
+      "sha256": "49b9bbb9cda4016f78a2504250fdf229b9f81f3e38f28b98370d6b8431540ec2",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "dotnetcore-DGet.xls",
+      "category": "spreadsheet",
+      "sha256": "1b1c657ef8cd2ecf5361f97a42779b8e0a2be1c7532632fcb0fa34c0f05f6eef",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "dotnetcore-DStar.xls",
+      "category": "spreadsheet",
+      "sha256": "db98d59978d8c135ce05d3b18d0bef2342f62e5f5ed5f09bb832f25c0720a673",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "dotnetcore-FormulaEvalTestData.xls",
+      "category": "spreadsheet",
+      "sha256": "45a05d67d5c6f6d7dbd6b6d6416e1474caf09652c7218176ffa5df49ff703643",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "dotnetcore-Intersection-52111.xls",
+      "category": "spreadsheet",
+      "sha256": "61ee5ab912481e7165fc475dc57309b3e359d8d4de9a93483364bc079bd5c385",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae"
+    },
+    {
+      "name": "dotnetcore-LookupFunctionsTestCaseData.xls",
+      "category": "spreadsheet",
+      "sha256": "4c3224c5ba39ccaa0c98560d4be4255b84c6600c6f02a48a28634cf4dceb0aca",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    }
+  ]
+}

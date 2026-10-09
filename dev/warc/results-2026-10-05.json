@@ -1,0 +1,1326 @@
+{
+  "python": "3.13.7",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "zlib": "1.2.12",
+  "libdeflate": "/opt/homebrew/lib/libdeflate.dylib",
+  "timing_note": "zstd includes process startup; other encoders exclude worker startup",
+  "buffered_record_cap": 524288,
+  "errors": [
+    {
+      "query": "https://index.commoncrawl.org/CC-MAIN-2026-39-index?url=www.python.org%2F&output=json&filter=status%3A200",
+      "error": "HTTP Error 504: Gateway Time-out"
+    },
+    {
+      "query": "https://index.commoncrawl.org/CC-MAIN-2026-39-index?url=developer.mozilla.org%2Fen-US%2Fdocs%2FWeb%2FJavaScript&output=json&filter=status%3A200",
+      "error": "HTTP Error 504: Gateway Time-out"
+    },
+    {
+      "query": "https://index.commoncrawl.org/CC-MAIN-2026-39-index?url=www.bbc.com%2F&output=json&filter=status%3A200",
+      "error": "HTTP Error 504: Gateway Time-out"
+    },
+    {
+      "query": "https://index.commoncrawl.org/CC-MAIN-2026-39-index?url=www.w3.org%2FTR%2Fhtml52%2F&output=json&filter=status%3A200",
+      "error": "HTTP Error 504: Gateway Time-out"
+    }
+  ],
+  "samples": [
+    {
+      "sample": "../filerepack-testdata/corpus/generated/native/weak.warc.gz",
+      "source_bytes": 33471,
+      "source_members": 3,
+      "source_sha256": "5b0cd2d67264d4334c9bee3b96bc4f42cf0fe04718d07b4709cc17c05fcb7a30",
+      "records": [
+        {
+          "record": 0,
+          "decoded_bytes": 211417,
+          "sha256": "68865bc86d17a9ff2354b757869c0a548c6c2697726f533430d280b5ac99bdb3",
+          "bytes": {
+            "zlib9": 13825,
+            "zlib9_mem9": 13825,
+            "zlib9_filtered": 13766,
+            "zlib8": 13825,
+            "zlib6": 14170,
+            "original": 16651,
+            "libdeflate9": 12416,
+            "libdeflate12": 12478,
+            "zopfli5": 13256,
+            "zopfli15": 12576,
+            "zstd3": 9558,
+            "zstd9": 5985,
+            "zstd19": 5977
+          },
+          "encode_seconds": {
+            "zlib9": 0.008144999999785796,
+            "zlib9_mem9": 0.007957124995300546,
+            "zlib9_filtered": 0.007934875000501052,
+            "zlib8": 0.004031459000543691,
+            "zlib6": 0.001020666997646913,
+            "libdeflate9": 0.009096541005419567,
+            "libdeflate12": 0.021785874996567145,
+            "zopfli5": 0.35028549999697134,
+            "zopfli15": 0.6129024580004625,
+            "zstd3": 0.009345500002382323,
+            "zstd9": 0.006329833006020635,
+            "zstd19": 0.06889529200270772
+          },
+          "skipped": {}
+        },
+        {
+          "record": 1,
+          "decoded_bytes": 211417,
+          "sha256": "7a98e05fdb7aeb33df3de3d554c3627ad23b67f246b18beac69896d971757cb8",
+          "bytes": {
+            "zlib9": 13825,
+            "zlib9_mem9": 13825,
+            "zlib9_filtered": 13767,
+            "zlib8": 13825,
+            "zlib6": 14171,
+            "original": 16652,
+            "libdeflate9": 12417,
+            "libdeflate12": 12475,
+            "zopfli5": 13256,
+            "zopfli15": 12595,
+            "zstd3": 9559,
+            "zstd9": 5984,
+            "zstd19": 5960
+          },
+          "encode_seconds": {
+            "zlib9": 0.007896750001236796,
+            "zlib9_mem9": 0.0080203329998767,
+            "zlib9_filtered": 0.007917833005194552,
+            "zlib8": 0.004032500000903383,
+            "zlib6": 0.0011430000013206154,
+            "libdeflate9": 0.008908874995540828,
+            "libdeflate12": 0.022050083003705367,
+            "zopfli5": 0.3493342500005383,
+            "zopfli15": 0.6076991660083877,
+            "zstd3": 0.005500541999936104,
+            "zstd9": 0.0060417499917093664,
+            "zstd19": 0.06854424999619368
+          },
+          "skipped": {}
+        },
+        {
+          "record": 2,
+          "decoded_bytes": 202,
+          "sha256": "85adb376ba34fad7d9e0a1c239390df4bc16aeba8025381a0234bc6b567e3648",
+          "bytes": {
+            "zlib9": 165,
+            "zlib9_mem9": 165,
+            "zlib9_filtered": 166,
+            "zlib8": 165,
+            "zlib6": 165,
+            "original": 168,
+            "libdeflate9": 165,
+            "libdeflate12": 165,
+            "zopfli5": 163,
+            "zopfli15": 163,
+            "zstd3": 161,
+            "zstd9": 158,
+            "zstd19": 153
+          },
+          "encode_seconds": {
+            "zlib9": 4.395800351630896e-05,
+            "zlib9_mem9": 2.187499194405973e-05,
+            "zlib9_filtered": 1.662501017563045e-05,
+            "zlib8": 1.0749994544312358e-05,
+            "zlib6": 9.334005881100893e-06,
+            "libdeflate9": 0.0010630420001689345,
+            "libdeflate12": 0.0011448750010458753,
+            "zopfli5": 0.007799708997481503,
+            "zopfli15": 0.008285374991828576,
+            "zstd3": 0.00531675000092946,
+            "zstd9": 0.004775958994287066,
+            "zstd19": 0.004522957999142818
+          },
+          "skipped": {}
+        }
+      ],
+      "provenance": {
+        "source": "local"
+      }
+    },
+    {
+      "sample": "../filerepack-testdata/corpus/generated/native/capture.warc",
+      "source_bytes": 423036,
+      "source_members": 0,
+      "source_sha256": "6f63c37b6dfcc7f44bb3cad341b10f017d571b401f3f9a2fabb6cc5fd73f7533",
+      "records": [
+        {
+          "record": 0,
+          "decoded_bytes": 211417,
+          "sha256": "68865bc86d17a9ff2354b757869c0a548c6c2697726f533430d280b5ac99bdb3",
+          "bytes": {
+            "zlib9": 13825,
+            "zlib9_mem9": 13825,
+            "zlib9_filtered": 13766,
+            "zlib8": 13825,
+            "zlib6": 14170,
+            "libdeflate9": 12416,
+            "libdeflate12": 12478,
+            "zopfli5": 13256,
+            "zopfli15": 12576,
+            "zstd3": 9558,
+            "zstd9": 5985,
+            "zstd19": 5977
+          },
+          "encode_seconds": {
+            "zlib9": 0.0079633750137873,
+            "zlib9_mem9": 0.007986208001966588,
+            "zlib9_filtered": 0.007926625010441057,
+            "zlib8": 0.004048167000291869,
+            "zlib6": 0.0010380000021541491,
+            "libdeflate9": 0.00880729100026656,
+            "libdeflate12": 0.02183037500071805,
+            "zopfli5": 0.3495527920022141,
+            "zopfli15": 0.6091161670046858,
+            "zstd3": 0.005550375004531816,
+            "zstd9": 0.006097833989770152,
+            "zstd19": 0.06737762500415556
+          },
+          "skipped": {}
+        },
+        {
+          "record": 1,
+          "decoded_bytes": 211417,
+          "sha256": "7a98e05fdb7aeb33df3de3d554c3627ad23b67f246b18beac69896d971757cb8",
+          "bytes": {
+            "zlib9": 13825,
+            "zlib9_mem9": 13825,
+            "zlib9_filtered": 13767,
+            "zlib8": 13825,
+            "zlib6": 14171,
+            "libdeflate9": 12417,
+            "libdeflate12": 12475,
+            "zopfli5": 13256,
+            "zopfli15": 12595,
+            "zstd3": 9559,
+            "zstd9": 5984,
+            "zstd19": 5960
+          },
+          "encode_seconds": {
+            "zlib9": 0.007902166005806066,
+            "zlib9_mem9": 0.008008457996766083,
+            "zlib9_filtered": 0.007947874997626059,
+            "zlib8": 0.004145750004681759,
+            "zlib6": 0.0010390829993411899,
+            "libdeflate9": 0.008833833009703085,
+            "libdeflate12": 0.02177683300396893,
+            "zopfli5": 0.35008366699912585,
+            "zopfli15": 0.6056007499864791,
+            "zstd3": 0.005436749997898005,
+            "zstd9": 0.00617749999219086,
+            "zstd19": 0.06561091699404642
+          },
+          "skipped": {}
+        },
+        {
+          "record": 2,
+          "decoded_bytes": 202,
+          "sha256": "85adb376ba34fad7d9e0a1c239390df4bc16aeba8025381a0234bc6b567e3648",
+          "bytes": {
+            "zlib9": 165,
+            "zlib9_mem9": 165,
+            "zlib9_filtered": 166,
+            "zlib8": 165,
+            "zlib6": 165,
+            "libdeflate9": 165,
+            "libdeflate12": 165,
+            "zopfli5": 163,
+            "zopfli15": 163,
+            "zstd3": 161,
+            "zstd9": 158,
+            "zstd19": 153
+          },
+          "encode_seconds": {
+            "zlib9": 3.166700480505824e-05,
+            "zlib9_mem9": 1.995800994336605e-05,
+            "zlib9_filtered": 1.720800355542451e-05,
+            "zlib8": 1.129199517890811e-05,
+            "zlib6": 9.83300560619682e-06,
+            "libdeflate9": 0.0011081249976996332,
+            "libdeflate12": 0.0012721249950118363,
+            "zopfli5": 0.007566082989796996,
+            "zopfli15": 0.008284709008876234,
+            "zstd3": 0.005270458001177758,
+            "zstd9": 0.00462479199632071,
+            "zstd19": 0.0044397079909686
+          },
+          "skipped": {}
+        }
+      ],
+      "provenance": {
+        "source": "local"
+      }
+    },
+    {
+      "sample": "warcio:example.warc.gz",
+      "source_bytes": 3816,
+      "source_members": 6,
+      "source_sha256": "5144459799b3bcb894d5143e0d8171c20c591a41733608e8392346e95e0bcf6b",
+      "records": [
+        {
+          "record": 0,
+          "decoded_bytes": 488,
+          "sha256": "1832d45708b43e65d716ac3cbff36c5d6453c62cdeab3808e045bb4489ad24a0",
+          "bytes": {
+            "zlib9": 353,
+            "zlib9_mem9": 353,
+            "zlib9_filtered": 369,
+            "zlib8": 353,
+            "zlib6": 353,
+            "original": 353,
+            "libdeflate9": 352,
+            "libdeflate12": 352,
+            "zopfli5": 351,
+            "zopfli15": 351,
+            "zstd3": 367,
+            "zstd9": 364,
+            "zstd19": 357
+          },
+          "encode_seconds": {
+            "zlib9": 4.345799970906228e-05,
+            "zlib9_mem9": 2.4791006580926478e-05,
+            "zlib9_filtered": 2.4499997380189598e-05,
+            "zlib8": 1.6707999748177826e-05,
+            "zlib6": 1.3875003787688911e-05,
+            "libdeflate9": 0.0010622499976307154,
+            "libdeflate12": 0.0011249579983996227,
+            "zopfli5": 0.019743208002182655,
+            "zopfli15": 0.020054791995789856,
+            "zstd3": 0.004984667000826448,
+            "zstd9": 0.004471209002076648,
+            "zstd19": 0.004272790989489295
+          },
+          "skipped": {}
+        },
+        {
+          "record": 1,
+          "decoded_bytes": 709,
+          "sha256": "6f051eca81969fa58e50c7763234a4063f3d2d42a66377ddc74f633d580f7465",
+          "bytes": {
+            "zlib9": 431,
+            "zlib9_mem9": 431,
+            "zlib9_filtered": 453,
+            "zlib8": 431,
+            "zlib6": 431,
+            "original": 431,
+            "libdeflate9": 437,
+            "libdeflate12": 431,
+            "zopfli5": 429,
+            "zopfli15": 428,
+            "zstd3": 445,
+            "zstd9": 444,
+            "zstd19": 439
+          },
+          "encode_seconds": {
+            "zlib9": 6.249999569263309e-05,
+            "zlib9_mem9": 3.0166993383318186e-05,
+            "zlib9_filtered": 4.016599268652499e-05,
+            "zlib8": 1.9790997612290084e-05,
+            "zlib6": 1.608299498911947e-05,
+            "libdeflate9": 0.0010611659963615239,
+            "libdeflate12": 0.0011542499996721745,
+            "zopfli5": 0.02412779199949,
+            "zopfli15": 0.024912208013120107,
+            "zstd3": 0.005255166994174942,
+            "zstd9": 0.004733207999379374,
+            "zstd19": 0.004563791997497901
+          },
+          "skipped": {}
+        },
+        {
+          "record": 2,
+          "decoded_bytes": 1369,
+          "sha256": "6b9b0cf6664f9340154733ce2aeb2574943db2ae141b1461a3cca80443759211",
+          "bytes": {
+            "zlib9": 1228,
+            "zlib9_mem9": 1228,
+            "zlib9_filtered": 1243,
+            "zlib8": 1228,
+            "zlib6": 1228,
+            "original": 1228,
+            "libdeflate9": 1227,
+            "libdeflate12": 1227,
+            "zopfli5": 1123,
+            "zopfli15": 1123,
+            "zstd3": 1237,
+            "zstd9": 1231,
+            "zstd19": 1222
+          },
+          "encode_seconds": {
+            "zlib9": 8.99170117918402e-05,
+            "zlib9_mem9": 5.295799928717315e-05,
+            "zlib9_filtered": 6.049999501556158e-05,
+            "zlib8": 4.062500374857336e-05,
+            "zlib6": 3.266699786763638e-05,
+            "libdeflate9": 0.0010498750052647665,
+            "libdeflate12": 0.0011902499973075464,
+            "zopfli5": 0.07896729100320954,
+            "zopfli15": 0.08058983299997635,
+            "zstd3": 0.00513262499589473,
+            "zstd9": 0.004474374989513308,
+            "zstd19": 0.004590917000314221
+          },
+          "skipped": {}
+        },
+        {
+          "record": 3,
+          "decoded_bytes": 922,
+          "sha256": "158fc01b35cfaa3b356f5928b77ea1adcfbc0ad304265f141f9e1da0748a9cf7",
+          "bytes": {
+            "zlib9": 609,
+            "zlib9_mem9": 609,
+            "zlib9_filtered": 624,
+            "zlib8": 609,
+            "zlib6": 609,
+            "original": 609,
+            "libdeflate9": 613,
+            "libdeflate12": 607,
+            "zopfli5": 603,
+            "zopfli15": 602,
+            "zstd3": 628,
+            "zstd9": 624,
+            "zstd19": 619
+          },
+          "encode_seconds": {
+            "zlib9": 6.249999569263309e-05,
+            "zlib9_mem9": 3.2625001040287316e-05,
+            "zlib9_filtered": 3.462500171735883e-05,
+            "zlib8": 2.5083994842134416e-05,
+            "zlib6": 1.9208004232496023e-05,
+            "libdeflate9": 0.0010540420043980703,
+            "libdeflate12": 0.0012199999910080805,
+            "zopfli5": 0.03699104199768044,
+            "zopfli15": 0.03765458300767932,
+            "zstd3": 0.00501970799814444,
+            "zstd9": 0.004308541989303194,
+            "zstd19": 0.005279499993775971
+          },
+          "skipped": {}
+        },
+        {
+          "record": 4,
+          "decoded_bytes": 946,
+          "sha256": "b7bd032f46dedda38c551edf093edc57e44511436a612db842a10ae41f8c08fc",
+          "bytes": {
+            "zlib9": 586,
+            "zlib9_mem9": 586,
+            "zlib9_filtered": 602,
+            "zlib8": 586,
+            "zlib6": 586,
+            "original": 586,
+            "libdeflate9": 590,
+            "libdeflate12": 585,
+            "zopfli5": 580,
+            "zopfli15": 579,
+            "zstd3": 606,
+            "zstd9": 599,
+            "zstd19": 598
+          },
+          "encode_seconds": {
+            "zlib9": 5.8833000366576016e-05,
+            "zlib9_mem9": 3.15000070258975e-05,
+            "zlib9_filtered": 3.316599759273231e-05,
+            "zlib8": 2.3625005269423127e-05,
+            "zlib6": 1.9583007087931037e-05,
+            "libdeflate9": 0.0010285419994033873,
+            "libdeflate12": 0.0011559170088730752,
+            "zopfli5": 0.03492591599933803,
+            "zopfli15": 0.035901334005757235,
+            "zstd3": 0.005113709004945122,
+            "zstd9": 0.004776125002535991,
+            "zstd19": 0.005754375000833534
+          },
+          "skipped": {}
+        },
+        {
+          "record": 5,
+          "decoded_bytes": 922,
+          "sha256": "c1c713d80134a5dae1e3df0d1aa94aee578007104d28430c1f2fddb552e30f2a",
+          "bytes": {
+            "zlib9": 609,
+            "zlib9_mem9": 609,
+            "zlib9_filtered": 624,
+            "zlib8": 609,
+            "zlib6": 609,
+            "original": 609,
+            "libdeflate9": 613,
+            "libdeflate12": 606,
+            "zopfli5": 603,
+            "zopfli15": 601,
+            "zstd3": 627,
+            "zstd9": 624,
+            "zstd19": 618
+          },
+          "encode_seconds": {
+            "zlib9": 6.662499799858779e-05,
+            "zlib9_mem9": 3.6666999221779406e-05,
+            "zlib9_filtered": 3.749999450519681e-05,
+            "zlib8": 2.4666995159350336e-05,
+            "zlib6": 1.983299443963915e-05,
+            "libdeflate9": 0.0010542089876253158,
+            "libdeflate12": 0.0011693329870468006,
+            "zopfli5": 0.03661983298661653,
+            "zopfli15": 0.03791166699375026,
+            "zstd3": 0.00503241601109039,
+            "zstd9": 0.004517124994890764,
+            "zstd19": 0.00471541698789224
+          },
+          "skipped": {}
+        }
+      ],
+      "provenance": {
+        "source_url": "https://raw.githubusercontent.com/webrecorder/warcio/master/test/data/example.warc.gz"
+      }
+    },
+    {
+      "sample": "warcio:example-resource.warc.gz",
+      "source_bytes": 1779,
+      "source_members": 3,
+      "source_sha256": "9d3f830f757a3733d56de5b76b5a3ccabb5de4cfdfed2559205b9c719ee6cbdb",
+      "records": [
+        {
+          "record": 0,
+          "decoded_bytes": 500,
+          "sha256": "d5f97451b429895733bba25fc8abcbb4fa3dd64c4b134f0b1f5b05673ab48482",
+          "bytes": {
+            "zlib9": 361,
+            "zlib9_mem9": 361,
+            "zlib9_filtered": 382,
+            "zlib8": 361,
+            "zlib6": 361,
+            "original": 361,
+            "libdeflate9": 361,
+            "libdeflate12": 362,
+            "zopfli5": 363,
+            "zopfli15": 363,
+            "zstd3": 378,
+            "zstd9": 372,
+            "zstd19": 369
+          },
+          "encode_seconds": {
+            "zlib9": 4.5791995944455266e-05,
+            "zlib9_mem9": 2.9125003493390977e-05,
+            "zlib9_filtered": 2.62079993262887e-05,
+            "zlib8": 1.691700890660286e-05,
+            "zlib6": 1.4292003470472991e-05,
+            "libdeflate9": 0.00103554199449718,
+            "libdeflate12": 0.0011405419936636463,
+            "zopfli5": 0.03785170899936929,
+            "zopfli15": 0.03903249998984393,
+            "zstd3": 0.005640709001454525,
+            "zstd9": 0.005523917003301904,
+            "zstd19": 0.004903458000626415
+          },
+          "skipped": {}
+        },
+        {
+          "record": 1,
+          "decoded_bytes": 650,
+          "sha256": "42144cd240835037f78285a248cd8c75d4a015f32996dcdf10d20ee9c969d66a",
+          "bytes": {
+            "zlib9": 441,
+            "zlib9_mem9": 441,
+            "zlib9_filtered": 464,
+            "zlib8": 441,
+            "zlib6": 441,
+            "original": 441,
+            "libdeflate9": 444,
+            "libdeflate12": 439,
+            "zopfli5": 433,
+            "zopfli15": 433,
+            "zstd3": 453,
+            "zstd9": 451,
+            "zstd19": 446
+          },
+          "encode_seconds": {
+            "zlib9": 6.733300688210875e-05,
+            "zlib9_mem9": 2.8166992706246674e-05,
+            "zlib9_filtered": 4.187499871477485e-05,
+            "zlib8": 1.912500010803342e-05,
+            "zlib6": 1.5541998436674476e-05,
+            "libdeflate9": 0.0010956670012092218,
+            "libdeflate12": 0.0011307500099064782,
+            "zopfli5": 0.02399775000230875,
+            "zopfli15": 0.024886750004952773,
+            "zstd3": 0.0051944169972557575,
+            "zstd9": 0.004698458011262119,
+            "zstd19": 0.004611459007719532
+          },
+          "skipped": {}
+        },
+        {
+          "record": 2,
+          "decoded_bytes": 1884,
+          "sha256": "50ae333c01f146a799e6febd0dba548d35f0d551d5be638da23bd5e86612a2f1",
+          "bytes": {
+            "zlib9": 977,
+            "zlib9_mem9": 977,
+            "zlib9_filtered": 1012,
+            "zlib8": 977,
+            "zlib6": 977,
+            "original": 977,
+            "libdeflate9": 979,
+            "libdeflate12": 968,
+            "zopfli5": 965,
+            "zopfli15": 963,
+            "zstd3": 1019,
+            "zstd9": 999,
+            "zstd19": 985
+          },
+          "encode_seconds": {
+            "zlib9": 8.05000017862767e-05,
+            "zlib9_mem9": 5.508400499820709e-05,
+            "zlib9_filtered": 5.562500155065209e-05,
+            "zlib8": 3.937499423045665e-05,
+            "zlib6": 3.6958997952751815e-05,
+            "libdeflate9": 0.0010632089979480952,
+            "libdeflate12": 0.0012699169892584905,
+            "zopfli5": 0.05996174999745563,
+            "zopfli15": 0.061583500006236136,
+            "zstd3": 0.0051309580012457445,
+            "zstd9": 0.004531833998044021,
+            "zstd19": 0.004694041999755427
+          },
+          "skipped": {}
+        }
+      ],
+      "provenance": {
+        "source_url": "https://raw.githubusercontent.com/webrecorder/warcio/master/test/data/example-resource.warc.gz"
+      }
+    },
+    {
+      "sample": "warcio:post-test.warc.gz",
+      "source_bytes": 3593,
+      "source_members": 6,
+      "source_sha256": "4a889c4d15f5624557f5fad4026b4346f33c514f0aae1e18c7823b4c6943dce4",
+      "records": [
+        {
+          "record": 0,
+          "decoded_bytes": 1130,
+          "sha256": "83ff31c93b0f5c6e1217e63e060e03ccd9a2356ae67f50ec5aa8334125cd42d7",
+          "bytes": {
+            "zlib9": 669,
+            "zlib9_mem9": 669,
+            "zlib9_filtered": 698,
+            "zlib8": 669,
+            "zlib6": 669,
+            "original": 720,
+            "libdeflate9": 672,
+            "libdeflate12": 668,
+            "zopfli5": 663,
+            "zopfli15": 663,
+            "zstd3": 702,
+            "zstd9": 685,
+            "zstd19": 680
+          },
+          "encode_seconds": {
+            "zlib9": 6.391700298991054e-05,
+            "zlib9_mem9": 3.7541991332545877e-05,
+            "zlib9_filtered": 3.925000783056021e-05,
+            "zlib8": 2.7583009796217084e-05,
+            "zlib6": 2.1458996343426406e-05,
+            "libdeflate9": 0.0010693329968489707,
+            "libdeflate12": 0.0012493749964050949,
+            "zopfli5": 0.038260916000581346,
+            "zopfli15": 0.03960733299027197,
+            "zstd3": 0.005104833006043918,
+            "zstd9": 0.004830292004044168,
+            "zstd19": 0.004378375000669621
+          },
+          "skipped": {}
+        },
+        {
+          "record": 1,
+          "decoded_bytes": 599,
+          "sha256": "f8d671834ef975f764bbd06b4bd2780859b84b4661fe0e5ed2dc79b25c09fd76",
+          "bytes": {
+            "zlib9": 425,
+            "zlib9_mem9": 425,
+            "zlib9_filtered": 434,
+            "zlib8": 425,
+            "zlib6": 425,
+            "original": 476,
+            "libdeflate9": 430,
+            "libdeflate12": 426,
+            "zopfli5": 420,
+            "zopfli15": 420,
+            "zstd3": 433,
+            "zstd9": 432,
+            "zstd19": 429
+          },
+          "encode_seconds": {
+            "zlib9": 6.70830049784854e-05,
+            "zlib9_mem9": 2.745899837464094e-05,
+            "zlib9_filtered": 2.941599814221263e-05,
+            "zlib8": 1.8582999473437667e-05,
+            "zlib6": 1.5999990864656866e-05,
+            "libdeflate9": 0.001031583989970386,
+            "libdeflate12": 0.0011161669972352684,
+            "zopfli5": 0.023514417000114918,
+            "zopfli15": 0.02428741700714454,
+            "zstd3": 0.005234458003542386,
+            "zstd9": 0.0045440419926308095,
+            "zstd19": 0.004598542000167072
+          },
+          "skipped": {}
+        },
+        {
+          "record": 2,
+          "decoded_bytes": 1138,
+          "sha256": "3478f678948891aafa96457f2ab78597682ef059ccddb43614386a6939b7ed80",
+          "bytes": {
+            "zlib9": 672,
+            "zlib9_mem9": 672,
+            "zlib9_filtered": 701,
+            "zlib8": 672,
+            "zlib6": 672,
+            "original": 723,
+            "libdeflate9": 672,
+            "libdeflate12": 670,
+            "zopfli5": 666,
+            "zopfli15": 666,
+            "zstd3": 704,
+            "zstd9": 687,
+            "zstd19": 680
+          },
+          "encode_seconds": {
+            "zlib9": 6.379198748618364e-05,
+            "zlib9_mem9": 3.8583006244152784e-05,
+            "zlib9_filtered": 3.96659888792783e-05,
+            "zlib8": 2.5540997739881277e-05,
+            "zlib6": 2.116599353030324e-05,
+            "libdeflate9": 0.001035875000525266,
+            "libdeflate12": 0.0011664579942589626,
+            "zopfli5": 0.039279541990254074,
+            "zopfli15": 0.040307374991243705,
+            "zstd3": 0.00534216700179968,
+            "zstd9": 0.004683083010604605,
+            "zstd19": 0.004738292002002709
+          },
+          "skipped": {}
+        },
+        {
+          "record": 3,
+          "decoded_bytes": 595,
+          "sha256": "138ad1c73021575993d0906c31098556b5a7da458620d79bf8fe60f0f267e5fa",
+          "bytes": {
+            "zlib9": 425,
+            "zlib9_mem9": 425,
+            "zlib9_filtered": 434,
+            "zlib8": 425,
+            "zlib6": 425,
+            "original": 476,
+            "libdeflate9": 427,
+            "libdeflate12": 424,
+            "zopfli5": 420,
+            "zopfli15": 420,
+            "zstd3": 432,
+            "zstd9": 431,
+            "zstd19": 430
+          },
+          "encode_seconds": {
+            "zlib9": 6.925000343471766e-05,
+            "zlib9_mem9": 2.912498894147575e-05,
+            "zlib9_filtered": 3.024999750778079e-05,
+            "zlib8": 1.8499995348975062e-05,
+            "zlib6": 1.562500256113708e-05,
+            "libdeflate9": 0.001062750001437962,
+            "libdeflate12": 0.0011288749956293032,
+            "zopfli5": 0.10687912499997765,
+            "zopfli15": 0.10970012500183657,
+            "zstd3": 0.005442167006549425,
+            "zstd9": 0.004767666003317572,
+            "zstd19": 0.005403584000305273
+          },
+          "skipped": {}
+        },
+        {
+          "record": 4,
+          "decoded_bytes": 1145,
+          "sha256": "eda5fb2a3932d6e749073f7af0bf89cc583590a59665211dc2a90978e164453e",
+          "bytes": {
+            "zlib9": 671,
+            "zlib9_mem9": 671,
+            "zlib9_filtered": 703,
+            "zlib8": 671,
+            "zlib6": 671,
+            "original": 723,
+            "libdeflate9": 675,
+            "libdeflate12": 671,
+            "zopfli5": 667,
+            "zopfli15": 667,
+            "zstd3": 700,
+            "zstd9": 685,
+            "zstd19": 683
+          },
+          "encode_seconds": {
+            "zlib9": 9.191699791699648e-05,
+            "zlib9_mem9": 4.3916996219195426e-05,
+            "zlib9_filtered": 3.979199391324073e-05,
+            "zlib8": 2.7874993975274265e-05,
+            "zlib6": 2.0709005184471607e-05,
+            "libdeflate9": 0.001057834000675939,
+            "libdeflate12": 0.0011850829905597493,
+            "zopfli5": 0.038828040997032076,
+            "zopfli15": 0.04008458300086204,
+            "zstd3": 0.005303625002852641,
+            "zstd9": 0.004571041994495317,
+            "zstd19": 0.00448829100059811
+          },
+          "skipped": {}
+        },
+        {
+          "record": 5,
+          "decoded_bytes": 604,
+          "sha256": "d4a7469aa7b63e358cb8d2b146e6c3d50feb27e4db7b69e627716a52c81d8057",
+          "bytes": {
+            "zlib9": 424,
+            "zlib9_mem9": 424,
+            "zlib9_filtered": 434,
+            "zlib8": 424,
+            "zlib6": 424,
+            "original": 475,
+            "libdeflate9": 431,
+            "libdeflate12": 425,
+            "zopfli5": 416,
+            "zopfli15": 416,
+            "zstd3": 435,
+            "zstd9": 434,
+            "zstd19": 430
+          },
+          "encode_seconds": {
+            "zlib9": 6.858300184831023e-05,
+            "zlib9_mem9": 3.1791991204954684e-05,
+            "zlib9_filtered": 3.0499999411404133e-05,
+            "zlib8": 2.0749997929669917e-05,
+            "zlib6": 1.649999467190355e-05,
+            "libdeflate9": 0.00103720799961593,
+            "libdeflate12": 0.0011228329967707396,
+            "zopfli5": 0.023543292001704685,
+            "zopfli15": 0.024446124996757135,
+            "zstd3": 0.005240790997049771,
+            "zstd9": 0.004469207997317426,
+            "zstd19": 0.0045083750010235235
+          },
+          "skipped": {}
+        }
+      ],
+      "provenance": {
+        "source_url": "https://raw.githubusercontent.com/webrecorder/warcio/master/test/data/post-test.warc.gz"
+      }
+    },
+    {
+      "sample": "warcio:example-iana.org-chunked.warc",
+      "source_bytes": 8831,
+      "source_members": 0,
+      "source_sha256": "539c746feb63bd12da81375485e906115b874899d68e4f190f5d70d1785c3933",
+      "records": [
+        {
+          "record": 0,
+          "decoded_bytes": 405,
+          "sha256": "82607ccb6a5232e975c76c3fd13e8712c1eb7bc0d2ae1340c0eb6b15ea9accec",
+          "bytes": {
+            "zlib9": 304,
+            "zlib9_mem9": 304,
+            "zlib9_filtered": 315,
+            "zlib8": 304,
+            "zlib6": 304,
+            "libdeflate9": 305,
+            "libdeflate12": 303,
+            "zopfli5": 299,
+            "zopfli15": 297,
+            "zstd3": 313,
+            "zstd9": 311,
+            "zstd19": 306
+          },
+          "encode_seconds": {
+            "zlib9": 4.545900446828455e-05,
+            "zlib9_mem9": 2.300000051036477e-05,
+            "zlib9_filtered": 2.2042004275135696e-05,
+            "zlib8": 1.4874996850267053e-05,
+            "zlib6": 1.4125005691312253e-05,
+            "libdeflate9": 0.0010559590009506792,
+            "libdeflate12": 0.001194208991364576,
+            "zopfli5": 0.02945091700530611,
+            "zopfli15": 0.031477166994591244,
+            "zstd3": 0.005513083000550978,
+            "zstd9": 0.004605082998750731,
+            "zstd19": 0.004359291997388937
+          },
+          "skipped": {}
+        },
+        {
+          "record": 1,
+          "decoded_bytes": 7974,
+          "sha256": "16c387b3c6cd80afa791a1ef02664110ba9b354910c2925baa7412207703d730",
+          "bytes": {
+            "zlib9": 2613,
+            "zlib9_mem9": 2613,
+            "zlib9_filtered": 2689,
+            "zlib8": 2613,
+            "zlib6": 2631,
+            "libdeflate9": 2616,
+            "libdeflate12": 2555,
+            "zopfli5": 2544,
+            "zopfli15": 2543,
+            "zstd3": 2744,
+            "zstd9": 2642,
+            "zstd19": 2579
+          },
+          "encode_seconds": {
+            "zlib9": 0.00025833299150690436,
+            "zlib9_mem9": 0.00020924999262206256,
+            "zlib9_filtered": 0.00021358398953452706,
+            "zlib8": 0.00015150000399444252,
+            "zlib6": 9.324999700766057e-05,
+            "libdeflate9": 0.0011908749875146896,
+            "libdeflate12": 0.002657958000781946,
+            "zopfli5": 0.04072029099916108,
+            "zopfli15": 0.04800429100578185,
+            "zstd3": 0.005940457995166071,
+            "zstd9": 0.005036792004830204,
+            "zstd19": 0.006261208007344976
+          },
+          "skipped": {}
+        },
+        {
+          "record": 2,
+          "decoded_bytes": 452,
+          "sha256": "81f763b3330d9e737f4fb22d8991e14364057c8b466e51844919c69c67908ad7",
+          "bytes": {
+            "zlib9": 338,
+            "zlib9_mem9": 338,
+            "zlib9_filtered": 337,
+            "zlib8": 338,
+            "zlib6": 338,
+            "libdeflate9": 338,
+            "libdeflate12": 337,
+            "zopfli5": 331,
+            "zopfli15": 329,
+            "zstd3": 344,
+            "zstd9": 344,
+            "zstd19": 341
+          },
+          "encode_seconds": {
+            "zlib9": 4.5958004193380475e-05,
+            "zlib9_mem9": 2.3833999875932932e-05,
+            "zlib9_filtered": 2.316599420737475e-05,
+            "zlib8": 1.6167003195732832e-05,
+            "zlib6": 1.3832992408424616e-05,
+            "libdeflate9": 0.0010856250009965152,
+            "libdeflate12": 0.0011142079893033952,
+            "zopfli5": 0.034521624998888,
+            "zopfli15": 0.03671824999037199,
+            "zstd3": 0.005363709002267569,
+            "zstd9": 0.004405458996188827,
+            "zstd19": 0.00447225000243634
+          },
+          "skipped": {}
+        }
+      ],
+      "provenance": {
+        "source_url": "https://raw.githubusercontent.com/webrecorder/warcio/master/test/data/example-iana.org-chunked.warc"
+      }
+    },
+    {
+      "sample": "warcio:example-bad-non-chunked.warc.gz",
+      "source_bytes": 2113,
+      "source_members": 1,
+      "source_sha256": "2fb33d4b5c6fb2739fbe7d46c60e72b432a44facb456134f0125d5e8faf6d74a",
+      "records": [
+        {
+          "record": 0,
+          "decoded_bytes": 488,
+          "sha256": "1832d45708b43e65d716ac3cbff36c5d6453c62cdeab3808e045bb4489ad24a0",
+          "bytes": {
+            "zlib9": 353,
+            "zlib9_mem9": 353,
+            "zlib9_filtered": 369,
+            "zlib8": 353,
+            "zlib6": 353,
+            "libdeflate9": 352,
+            "libdeflate12": 352,
+            "zopfli5": 351,
+            "zopfli15": 351,
+            "zstd3": 367,
+            "zstd9": 364,
+            "zstd19": 357
+          },
+          "encode_seconds": {
+            "zlib9": 4.587500006891787e-05,
+            "zlib9_mem9": 3.5958000808022916e-05,
+            "zlib9_filtered": 2.5042012566700578e-05,
+            "zlib8": 1.6416990547440946e-05,
+            "zlib6": 1.3958007912151515e-05,
+            "libdeflate9": 0.0010762499878183007,
+            "libdeflate12": 0.0011163750023115426,
+            "zopfli5": 0.01916716599953361,
+            "zopfli15": 0.019821250010863878,
+            "zstd3": 0.005364541997550987,
+            "zstd9": 0.00457954200101085,
+            "zstd19": 0.004612750009982847
+          },
+          "skipped": {}
+        },
+        {
+          "record": 1,
+          "decoded_bytes": 709,
+          "sha256": "6f051eca81969fa58e50c7763234a4063f3d2d42a66377ddc74f633d580f7465",
+          "bytes": {
+            "zlib9": 431,
+            "zlib9_mem9": 431,
+            "zlib9_filtered": 453,
+            "zlib8": 431,
+            "zlib6": 431,
+            "libdeflate9": 437,
+            "libdeflate12": 431,
+            "zopfli5": 429,
+            "zopfli15": 428,
+            "zstd3": 445,
+            "zstd9": 444,
+            "zstd19": 439
+          },
+          "encode_seconds": {
+            "zlib9": 6.049999501556158e-05,
+            "zlib9_mem9": 2.8708003810606897e-05,
+            "zlib9_filtered": 3.879200085066259e-05,
+            "zlib8": 1.9041995983570814e-05,
+            "zlib6": 1.579101081006229e-05,
+            "libdeflate9": 0.0010385409987065941,
+            "libdeflate12": 0.001170707997516729,
+            "zopfli5": 0.023970666996319778,
+            "zopfli15": 0.024864499995601363,
+            "zstd3": 0.005235457996604964,
+            "zstd9": 0.00465545900806319,
+            "zstd19": 0.004780041999765672
+          },
+          "skipped": {}
+        },
+        {
+          "record": 2,
+          "decoded_bytes": 1369,
+          "sha256": "6b9b0cf6664f9340154733ce2aeb2574943db2ae141b1461a3cca80443759211",
+          "bytes": {
+            "zlib9": 1228,
+            "zlib9_mem9": 1228,
+            "zlib9_filtered": 1243,
+            "zlib8": 1228,
+            "zlib6": 1228,
+            "libdeflate9": 1227,
+            "libdeflate12": 1227,
+            "zopfli5": 1123,
+            "zopfli15": 1123,
+            "zstd3": 1237,
+            "zstd9": 1231,
+            "zstd19": 1222
+          },
+          "encode_seconds": {
+            "zlib9": 8.98750004125759e-05,
+            "zlib9_mem9": 5.254099960438907e-05,
+            "zlib9_filtered": 6.158300675451756e-05,
+            "zlib8": 3.9999998989515007e-05,
+            "zlib6": 3.470800584182143e-05,
+            "libdeflate9": 0.0010427920060465112,
+            "libdeflate12": 0.0011550839990377426,
+            "zopfli5": 0.07820787499076687,
+            "zopfli15": 0.08056745800422505,
+            "zstd3": 0.005125499999849126,
+            "zstd9": 0.005784749999293126,
+            "zstd19": 0.005264958992484026
+          },
+          "skipped": {}
+        },
+        {
+          "record": 3,
+          "decoded_bytes": 804,
+          "sha256": "94000d9c96bda9bd3eac8eebd727cc6c774034a57f3ccf6ac60e1c1c4cbe2152",
+          "bytes": {
+            "zlib9": 526,
+            "zlib9_mem9": 526,
+            "zlib9_filtered": 539,
+            "zlib8": 526,
+            "zlib6": 526,
+            "libdeflate9": 528,
+            "libdeflate12": 524,
+            "zopfli5": 521,
+            "zopfli15": 520,
+            "zstd3": 541,
+            "zstd9": 537,
+            "zstd19": 532
+          },
+          "encode_seconds": {
+            "zlib9": 6.083300104364753e-05,
+            "zlib9_mem9": 3.058300353586674e-05,
+            "zlib9_filtered": 3.0625000363215804e-05,
+            "zlib8": 1.983299443963915e-05,
+            "zlib6": 1.7833008314482868e-05,
+            "libdeflate9": 0.0010738330020103604,
+            "libdeflate12": 0.0011890830064658076,
+            "zopfli5": 0.060136582993436605,
+            "zopfli15": 0.061505707999458537,
+            "zstd3": 0.005209333001403138,
+            "zstd9": 0.004541583999525756,
+            "zstd19": 0.004561624999041669
+          },
+          "skipped": {}
+        },
+        {
+          "record": 4,
+          "decoded_bytes": 946,
+          "sha256": "c8f1cb71ce06e712913e2903fc7954e66c4bea17707e3475db06df96402466bf",
+          "bytes": {
+            "zlib9": 585,
+            "zlib9_mem9": 585,
+            "zlib9_filtered": 600,
+            "zlib8": 585,
+            "zlib6": 585,
+            "libdeflate9": 588,
+            "libdeflate12": 585,
+            "zopfli5": 581,
+            "zopfli15": 580,
+            "zstd3": 605,
+            "zstd9": 598,
+            "zstd19": 595
+          },
+          "encode_seconds": {
+            "zlib9": 6.158300675451756e-05,
+            "zlib9_mem9": 3.275000199209899e-05,
+            "zlib9_filtered": 3.404199378564954e-05,
+            "zlib8": 2.229200617875904e-05,
+            "zlib6": 1.7708007362671196e-05,
+            "libdeflate9": 0.0011064999998779967,
+            "libdeflate12": 0.0011937919916817918,
+            "zopfli5": 0.034743917000014335,
+            "zopfli15": 0.03613575000781566,
+            "zstd3": 0.0051809169963235036,
+            "zstd9": 0.0046531249972758815,
+            "zstd19": 0.004565708004520275
+          },
+          "skipped": {}
+        },
+        {
+          "record": 5,
+          "decoded_bytes": 804,
+          "sha256": "c358f34be5018cb4d81de64795d54e3ce8a46d90f090886019adab2a6dc091c7",
+          "bytes": {
+            "zlib9": 526,
+            "zlib9_mem9": 526,
+            "zlib9_filtered": 538,
+            "zlib8": 526,
+            "zlib6": 526,
+            "libdeflate9": 528,
+            "libdeflate12": 524,
+            "zopfli5": 518,
+            "zopfli15": 518,
+            "zstd3": 541,
+            "zstd9": 538,
+            "zstd19": 532
+          },
+          "encode_seconds": {
+            "zlib9": 5.4666001233272254e-05,
+            "zlib9_mem9": 3.05419962387532e-05,
+            "zlib9_filtered": 2.9750008252449334e-05,
+            "zlib8": 2.1790998289361596e-05,
+            "zlib6": 1.695798709988594e-05,
+            "libdeflate9": 0.0010390829993411899,
+            "libdeflate12": 0.0011409580038161948,
+            "zopfli5": 0.03106666699750349,
+            "zopfli15": 0.03438458401069511,
+            "zstd3": 0.005277917007333599,
+            "zstd9": 0.004781333002028987,
+            "zstd19": 0.004759832998388447
+          },
+          "skipped": {}
+        }
+      ],
+      "provenance": {
+        "source_url": "https://raw.githubusercontent.com/webrecorder/warcio/master/test/data/example-bad-non-chunked.warc.gz"
+      }
+    },
+    {
+      "sample": "commoncrawl:CC-MAIN-2026-39:docs.python.org/3/library/json.html:20260905082018",
+      "source_bytes": 18809,
+      "source_members": 1,
+      "source_sha256": "730fc66b7040d661995b541d05734dd92e4eba3de8d80337822795362d28ae86",
+      "records": [
+        {
+          "record": 0,
+          "decoded_bytes": 113192,
+          "sha256": "1dc0b6fc311dd3c9cec3bae9c325201329236f39edf31a427da15f891d07b86c",
+          "bytes": {
+            "zlib9": 18568,
+            "zlib9_mem9": 18568,
+            "zlib9_filtered": 19197,
+            "zlib8": 18573,
+            "zlib6": 18809,
+            "original": 18809,
+            "libdeflate9": 18364,
+            "libdeflate12": 17934,
+            "zopfli5": 17866,
+            "zopfli15": 17862,
+            "zstd3": 18469,
+            "zstd9": 16084,
+            "zstd19": 15348
+          },
+          "encode_seconds": {
+            "zlib9": 0.0027797500079032034,
+            "zlib9_mem9": 0.0028841250023106113,
+            "zlib9_filtered": 0.0030143750045681372,
+            "zlib8": 0.002416707997326739,
+            "zlib6": 0.0014732499985257164,
+            "libdeflate9": 0.003105750001850538,
+            "libdeflate12": 0.029969999988679774,
+            "zopfli5": 0.2476260419934988,
+            "zopfli15": 0.3648805000120774,
+            "zstd3": 0.005624958997941576,
+            "zstd9": 0.005981834008707665,
+            "zstd19": 0.04923791700275615
+          },
+          "skipped": {}
+        }
+      ],
+      "provenance": {
+        "index": {
+          "urlkey": "org,python,docs)/3/library/json.html",
+          "timestamp": "20260905082018",
+          "url": "https://docs.python.org/3/library/json.html",
+          "mime": "text/html",
+          "mime-detected": "text/html",
+          "status": "200",
+          "digest": "OCZJJUT6UOULIY6T3WYXQU3VEVLVT2OV",
+          "length": "18809",
+          "offset": "157157793",
+          "filename": "crawl-data/CC-MAIN-2026-39/segments/1788492699577.65/warc/CC-MAIN-20260905073245-20260905103245-00943.warc.gz",
+          "languages": "eng",
+          "recordid": "01a070a7-7600-7085-ae29-3146db0139b2",
+          "encoding": "UTF-8"
+        },
+        "source_url": "https://data.commoncrawl.org/crawl-data/CC-MAIN-2026-39/segments/1788492699577.65/warc/CC-MAIN-20260905073245-20260905103245-00943.warc.gz"
+      }
+    },
+    {
+      "sample": "commoncrawl:CC-MAIN-2026-39:www.wikipedia.org/:20260904180601",
+      "source_bytes": 31800,
+      "source_members": 1,
+      "source_sha256": "7f10d8bf2b609efc108112b5ced41a0ce3b23d6c7c504e3958b16db136a87d63",
+      "records": [
+        {
+          "record": 0,
+          "decoded_bytes": 122641,
+          "sha256": "468d73fef2b473e673483d92cc69bf23775b47bc229544285f1e72ecf7b72903",
+          "bytes": {
+            "zlib9": 31717,
+            "zlib9_mem9": 31939,
+            "zlib9_filtered": 34438,
+            "zlib8": 31717,
+            "zlib6": 31800,
+            "original": 31800,
+            "libdeflate9": 31061,
+            "libdeflate12": 29949,
+            "zopfli5": 29698,
+            "zopfli15": 29680,
+            "zstd3": 34395,
+            "zstd9": 31516,
+            "zstd19": 29337
+          },
+          "encode_seconds": {
+            "zlib9": 0.0032376669987570494,
+            "zlib9_mem9": 0.003304583005956374,
+            "zlib9_filtered": 0.0034907919907709584,
+            "zlib8": 0.00299799999629613,
+            "zlib6": 0.002204709002398886,
+            "libdeflate9": 0.0035002920049009845,
+            "libdeflate12": 0.026659542010747828,
+            "zopfli5": 0.41152416699333116,
+            "zopfli15": 0.529570541009889,
+            "zstd3": 0.006650708004599437,
+            "zstd9": 0.007115124986739829,
+            "zstd19": 0.03848654200555757
+          },
+          "skipped": {}
+        }
+      ],
+      "provenance": {
+        "index": {
+          "urlkey": "org,wikipedia)/",
+          "timestamp": "20260904180601",
+          "url": "https://www.wikipedia.org/",
+          "mime": "text/html",
+          "mime-detected": "text/html",
+          "status": "200",
+          "digest": "H72AFQKKVLFZSBXGIWIG32A5T6NRYZZW",
+          "length": "31800",
+          "offset": "878915438",
+          "filename": "crawl-data/CC-MAIN-2026-39/segments/1788492699484.2/warc/CC-MAIN-20260904161806-20260904191806-00993.warc.gz",
+          "languages": "eng",
+          "recordid": "01a06d99-58eb-76d1-b5b9-a09b30649a96",
+          "encoding": "UTF-8"
+        },
+        "source_url": "https://data.commoncrawl.org/crawl-data/CC-MAIN-2026-39/segments/1788492699484.2/warc/CC-MAIN-20260904161806-20260904191806-00993.warc.gz"
+      }
+    },
+    {
+      "sample": "commoncrawl:CC-MAIN-2026-39:www.wikipedia.org/:20260904205954",
+      "source_bytes": 31801,
+      "source_members": 1,
+      "source_sha256": "31516c23dfe5007560757e3e8a0ae8b4885bdc69d3b5400cb42ed9dfcc48a4a5",
+      "records": [
+        {
+          "record": 0,
+          "decoded_bytes": 122642,
+          "sha256": "94b3467d4ee43a2f60bd21166946e07763a59ed3631fa22e11c6453c405121c1",
+          "bytes": {
+            "zlib9": 31718,
+            "zlib9_mem9": 31941,
+            "zlib9_filtered": 34438,
+            "zlib8": 31718,
+            "zlib6": 31801,
+            "original": 31801,
+            "libdeflate9": 31061,
+            "libdeflate12": 29949,
+            "zopfli5": 29674,
+            "zopfli15": 29650,
+            "zstd3": 34393,
+            "zstd9": 31514,
+            "zstd19": 29333
+          },
+          "encode_seconds": {
+            "zlib9": 0.003228624991606921,
+            "zlib9_mem9": 0.0033252920111408457,
+            "zlib9_filtered": 0.0034879169979831204,
+            "zlib8": 0.0031433749973075464,
+            "zlib6": 0.0022789159993408248,
+            "libdeflate9": 0.0036824169947067276,
+            "libdeflate12": 0.026401583003462292,
+            "zopfli5": 0.23505079100141302,
+            "zopfli15": 0.3602861250110436,
+            "zstd3": 0.005943209005636163,
+            "zstd9": 0.006685125001240522,
+            "zstd19": 0.03834899999492336
+          },
+          "skipped": {}
+        }
+      ],
+      "provenance": {
+        "index": {
+          "urlkey": "org,wikipedia)/",
+          "timestamp": "20260904205954",
+          "url": "https://www.wikipedia.org/",
+          "mime": "text/html",
+          "mime-detected": "text/html",
+          "status": "200",
+          "digest": "H72AFQKKVLFZSBXGIWIG32A5T6NRYZZW",
+          "length": "31801",
+          "offset": "875781894",
+          "filename": "crawl-data/CC-MAIN-2026-39/segments/1788492699512.14/warc/CC-MAIN-20260904192038-20260904222038-00993.warc.gz",
+          "languages": "eng",
+          "recordid": "01a06e38-898d-7b03-9a55-777b95758333",
+          "encoding": "UTF-8"
+        },
+        "source_url": "https://data.commoncrawl.org/crawl-data/CC-MAIN-2026-39/segments/1788492699512.14/warc/CC-MAIN-20260904192038-20260904222038-00993.warc.gz"
+      }
+    }
+  ]
+}

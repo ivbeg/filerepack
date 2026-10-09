@@ -1,0 +1,1019 @@
+{
+  "schema_version": 1,
+  "source": "https://github.com/apache/tika",
+  "commit": "de6af231dcb721856b719966bc010f909358319c",
+  "license": "Apache-2.0",
+  "selection": "All exact-name DOC/XLS/PPT objects in the pinned Apache Tika repository, 512 bytes\u20138 MiB, excluding byte-identical objects in existing OLE inventories and extended fixtures. Downloads verified against Git blob SHA-1 and length.",
+  "inventory_sha256": "eb226e2300ad993170ea60bf276ab6a82616cb946efc63cf9da98462baa9e087",
+  "python": "3.13.7",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "scope": "read-only eligibility; no savings or application acceptance inferred",
+  "counts": {
+    "document": {
+      "selected": 39,
+      "source_verified": 39,
+      "container": 27,
+      "host": 26,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 27,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "spreadsheet": {
+      "selected": 28,
+      "source_verified": 28,
+      "container": 20,
+      "host": 17,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "slideshow": {
+      "selected": 18,
+      "source_verified": 18,
+      "container": 16,
+      "host": 9,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    }
+  },
+  "rejection_reasons": {
+    "source": {},
+    "container": {
+      "OLE: unsupported root storage": 5,
+      "OLE: invalid file size or 128 MiB limit exceeded": 3,
+      "OLE: consecutive red directory nodes": 6,
+      "OLE: storage contains stream allocation fields": 4,
+      "OLE: invalid directory type/name": 2,
+      "OLE: invalid stream directory metadata": 1,
+      "OLE: unsupported Unicode name comparison": 1
+    },
+    "host": {
+      "PowerPoint VBA length/termination mismatch": 1,
+      "Unknown DocumentSummaryInformation protection format": 1,
+      "Missing BIFF8 Workbook globals BOF": 1,
+      "Encrypted/obfuscated Excel workbook (FilePass)": 1,
+      "Empty/unknown PowerPoint VBA project flags": 5,
+      "Encrypted PowerPoint document": 1,
+      "Signed/encrypted/rights-managed OLE document": 1
+    },
+    "officeart": {
+      "OfficeArt: unqualified BIFF type/version/length: 0xde": 1,
+      "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore": 9,
+      "PPT OLE records: unqualified record type/version: 1058": 6,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore": 2,
+      "OfficeArt: unqualified BIFF type/version/length: 0x87c": 11,
+      "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore": 2,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ae": 2,
+      "OfficeArt: unqualified BIFF type/version/length: 0x7d": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x14": 1,
+      "OfficeArt: host macros are not qualified": 3,
+      "OfficeArt: unqualified/duplicate Word property: 0x2431; OfficeArt: unqualified OfficeArt type/version": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: missing/invalid floating OfficeArtContent": 1,
+      "PPT OLE records: unqualified record type/version: 1008": 2,
+      "OfficeArt: unqualified/duplicate Word property: 0x6870; OfficeArt: this floating profile requires a delayed BStore": 3,
+      "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: missing/invalid floating OfficeArtContent": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x845e; OfficeArt: unqualified/duplicate FOPT property: 0x186": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: unqualified/duplicate FOPT property: 0x81": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2461; OfficeArt: floating FBSE name/count": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: unqualified/duplicate FOPT property: 0x81": 1,
+      "OfficeArt: unqualified/duplicate Word property: 0xc615; OfficeArt: unqualified/duplicate FOPT property: 0x186": 1
+    },
+    "dedup": {
+      "OfficeArt: unqualified BIFF type/version/length: 0xde": 1,
+      "OfficeArt: only qualified macro-free XLS/PPT shared stores": 8,
+      "OfficeArt: unqualified BIFF type/version/length: 0x87c": 11,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ae": 2,
+      "OfficeArt: unqualified BIFF type/version/length: 0x7d": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x14": 1,
+      "PPT OLE records: unqualified record type/version: 1058": 1
+    }
+  },
+  "files": [
+    {
+      "name": "tika-spreadsheet-1a4af467dc-coffee.xls",
+      "category": "spreadsheet",
+      "sha256": "1a0527ca82389dd27aae22a17d61427c20c6a6837331edc73f9e4eded8b8a640",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tika-slideshow-7af9008dda-testPPT_macros.ppt",
+      "category": "slideshow",
+      "sha256": "faa438447d932770bf49a16856cf23c7f98be47f94d96030f294859595d87a3b",
+      "container": true,
+      "host_skip": "PowerPoint VBA length/termination mismatch"
+    },
+    {
+      "name": "tika-spreadsheet-347d8a662f-test.xls",
+      "category": "spreadsheet",
+      "sha256": "8f279fb44b131070347d82320c5e7900b0e4d77ead38371b1f26ce95092b211b",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0xde",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0xde"
+    },
+    {
+      "name": "tika-document-ef9ddbaf66-file2_attachANotB.doc",
+      "category": "document",
+      "sha256": "be665e40974379b6504635031a1babf96bfbad3c01d5fd52ffe007e08ac899e6",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "tika-document-93198c87cb-test.doc",
+      "category": "document",
+      "sha256": "c1a64465a40dc19cfe5854e59a2da043e06019c810d9b91167ea7c5a7221de1a",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tika-document-3956ab1288-test2.doc",
+      "category": "document",
+      "sha256": "bc38e6031943ec3e47b463e11ffc2d2a63aa670ee44894a74912bc0afcc54fcc",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tika-document-473eada534-testLargeOLEDoc.doc",
+      "category": "document",
+      "sha256": "ca25e3451b9cb521670bda677fd6f82786b4d45dfd6c5bc9d32a1bc6e28d4259",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tika-document-3519e75ab3-testOptionalHyphen.doc",
+      "category": "document",
+      "sha256": "a033be4d6f83322060bb052ebaa8b202181657243234cbb2643641ee339dfaf4",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-slideshow-ad1db44220-testOptionalHyphen.ppt",
+      "category": "slideshow",
+      "sha256": "4cc11cd69e90576f3cc443ea3f2723e1b485460c5f8036815d19c2aa3ccff53c",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tika-document-953fe78b28-Doc1_ole.doc",
+      "category": "document",
+      "sha256": "880b15cbec25f290ac44548a11349577e334bd1d9292e4ecb260bc1603dde1aa",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-spreadsheet-569e21d2e8-jxl.xls",
+      "category": "spreadsheet",
+      "sha256": "5f25e6782386acd7c3b737ec0860a76ab487fe46e2c611b78e52e61d8d1bc30d",
+      "container": true,
+      "host_skip": "Unknown DocumentSummaryInformation protection format"
+    },
+    {
+      "name": "tika-spreadsheet-3f1009c709-test-columnar.xls",
+      "category": "spreadsheet",
+      "sha256": "e035f3afafd2b04232ea38b6625003f584b93315d593fbc7506d679330899cfb",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tika-document-391f222551-testComment.doc",
+      "category": "document",
+      "sha256": "132a7833d2f1686b7bbcf05bb59b9a97184a4fbedacc6a640a623bd79dcac545",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-slideshow-082117a136-testComment.ppt",
+      "category": "slideshow",
+      "sha256": "9d1d7001c4e0fbbbe89ea9e603f5dd99d7642507da6a8091ad615776def94cf5",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tika-spreadsheet-87104d4480-testComment.xls",
+      "category": "spreadsheet",
+      "sha256": "0d87908acdca3bb81261d434bf776ed6710bae1f5ec558e6cf1b1a98a24e8fca",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tika-document-6b937c6f0f-testDocumentLink.doc",
+      "category": "document",
+      "sha256": "0c7092c09279f10763f258d26d1a076fd19d5366811219c4e4921e26510e4d62",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-spreadsheet-52762a4c37-testEXCEL-charts.xls",
+      "category": "spreadsheet",
+      "sha256": "33f08ed32503437615af7ca8d5413ffa22df33ceb6765c51e200039f71452f6a",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae"
+    },
+    {
+      "name": "tika-spreadsheet-6929989068-testEXCEL-formats.xls",
+      "category": "spreadsheet",
+      "sha256": "54b63031a0728f5f422496c044accdd3a7878e911b869902ac6686cb274f8a51",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x7d",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x7d"
+    },
+    {
+      "name": "tika-spreadsheet-2b447af7e1-testEXCEL_1img.xls",
+      "category": "spreadsheet",
+      "sha256": "8f370fc03672eafa10eb2eed026b1c6e05464e27849076cf0b6d95d167c9a732",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tika-spreadsheet-ed69b3d30f-testEXCEL_5.xls",
+      "category": "spreadsheet",
+      "sha256": "5f3f309a41e3998d6e292db59bc566fbf1c46e40db182b92ccbb199a2add391c",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tika-spreadsheet-dac9ed3cb3-testEXCEL_95.xls",
+      "category": "spreadsheet",
+      "sha256": "08d3b02a0c9c80332ae75d98a9a76b65cb5c798630df6b1ea34dab5b387249d0",
+      "container": true,
+      "host_skip": "Missing BIFF8 Workbook globals BOF"
+    },
+    {
+      "name": "tika-spreadsheet-c5c10f0fb2-testEXCEL_big_numbers.xls",
+      "category": "spreadsheet",
+      "sha256": "9ca5cbf77b71c2a6e22f7d40269b861726f2cf06b8884a3afa47d48c13ab6445",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tika-spreadsheet-6284f9fd7f-testEXCEL_custom_props.xls",
+      "category": "spreadsheet",
+      "sha256": "fff0cbf96e178190c6d749d4894cc62b6d6feadc2d85f9758b3b936ff24ef4a0",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tika-spreadsheet-d2f4a520da-testEXCEL_dateFormats.xls",
+      "category": "spreadsheet",
+      "sha256": "263b6be7f66a069992a383d7fb9ea0c0b342e59cbe04206758eb4374f7c8b74b",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tika-spreadsheet-aee4277414-testEXCEL_embeddedPDF_mac.xls",
+      "category": "spreadsheet",
+      "sha256": "6cf496703dfcd836fc71b214042a57cc6446df68a2cda7f29720170351d0eb50",
+      "container_skip": "OLE: invalid directory type/name"
+    },
+    {
+      "name": "tika-spreadsheet-546deef091-testEXCEL_embeddedPDF_windows.xls",
+      "category": "spreadsheet",
+      "sha256": "fee22ff555abf884a52abb489f1d8f8e0e3c5a9618d8b0843acde620e560339e",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tika-spreadsheet-b72cc0b69c-testEXCEL_embeded.xls",
+      "category": "spreadsheet",
+      "sha256": "373d3d9301394c0ec88b9ee12cfc525f72d0c77ccca721b2c417bbff3cc110d0",
+      "container_skip": "OLE: unsupported root storage"
+    },
+    {
+      "name": "tika-spreadsheet-e624857b79-testEXCEL_extra_metadata.xls",
+      "category": "spreadsheet",
+      "sha256": "5f154c194cf66bccfd342868769dbe812d1cde003c2185136aee15cac36cf0db",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x14",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x14"
+    },
+    {
+      "name": "tika-spreadsheet-2c87e1c95e-testEXCEL_headers_footers.xls",
+      "category": "spreadsheet",
+      "sha256": "9ccba88419a56401bd0252445440964989425132251672bcafc06fe2297ff1df",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tika-spreadsheet-ba4f16d02e-testEXCEL_hyperlinks.xls",
+      "category": "spreadsheet",
+      "sha256": "780345567ca0026705d3617ae0b631c3a84fcbf506e5f2a5b64ed829a8851b40",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tika-spreadsheet-fd29a768be-testEXCEL_labels-govdocs-515858.xls",
+      "category": "spreadsheet",
+      "sha256": "f07b662feb8bb20ef63855aaf234a8a18d3b251e588301785cf87de27b888932",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae"
+    },
+    {
+      "name": "tika-spreadsheet-b97f9b2a4b-testEXCEL_macro.xls",
+      "category": "spreadsheet",
+      "sha256": "c89ad115e042403052f01f8381dac2c5f2a5a324def46d1f2a9f98bd113a906a",
+      "container": true,
+      "host": [
+        "xls",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tika-spreadsheet-16435efaa3-testEXCEL_phonetic.xls",
+      "category": "spreadsheet",
+      "sha256": "d452191b738b1ed5dbae5474e766fec20667934c6171c01860f564d0d945ee75",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tika-spreadsheet-8d7e1ec808-testEXCEL_protected_passtika.xls",
+      "category": "spreadsheet",
+      "sha256": "79e11c5245f4e5e5892a5864e8d10f581cf50b7aa4cbfb4924ff2b934684bcdc",
+      "container": true,
+      "host_skip": "Encrypted/obfuscated Excel workbook (FilePass)"
+    },
+    {
+      "name": "tika-spreadsheet-17e4b8a2d7-testEXCEL_textbox.xls",
+      "category": "spreadsheet",
+      "sha256": "eefca2e963fcd71c9c45fe71cd2082fc3c2bcfb6a13df9d777900f1a4ae31762",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tika-spreadsheet-c38f64c662-testExcel_embeddedPDF.xls",
+      "category": "spreadsheet",
+      "sha256": "762a3f521e7dde83c4acd9e7bd99041f5bd34aa9e72f9edbe7e5f1836f7a90bb",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tika-document-77446f3166-testException1.doc",
+      "category": "document",
+      "sha256": "2f6152a79832bc165167a9d6cafdda8e616625e607526db24276c7e058985484",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2431; OfficeArt: unqualified OfficeArt type/version"
+    },
+    {
+      "name": "tika-slideshow-2b5a3c3dfa-testMSChart-govdocs-428996.ppt",
+      "category": "slideshow",
+      "sha256": "6c44c2fad90688a99d45f806db9c34fb04dfe60368bfd966656f0f7cf18c10cc",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "tika-spreadsheet-7984de8111-testMSChart-govdocs-428996.xls",
+      "category": "spreadsheet",
+      "sha256": "bcdb4ffbdb49c67a4c53ce6e0588bf4fad0f03ff4432e5146ae92ac08c695ed5",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tika-document-bede30e985-testMSEquation-govdocs-863534.doc",
+      "category": "document",
+      "sha256": "88619cf1ad37819c2eda2ab13be06a0f377c574e8cf3a3346dbe5af33fd0e704",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tika-slideshow-b48cfaf2bd-testPPT.ppt",
+      "category": "slideshow",
+      "sha256": "499ccd0de7c0778afa4f6ed08793afd2406b62547373a619a5a78658ae65c4b7",
+      "container_skip": "OLE: invalid directory type/name"
+    },
+    {
+      "name": "tika-slideshow-ce68bcfd65-testPPT_2imgs.ppt",
+      "category": "slideshow",
+      "sha256": "761184c9e17d320c1d43882726825396753b9020cc067ac8b281306825f18710",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ]
+    },
+    {
+      "name": "tika-slideshow-3129be17a4-testPPT_EmbeddedPDF.ppt",
+      "category": "slideshow",
+      "sha256": "dbdc3a4bb57dc0afd495edf5134760fdcf345b2e86ceb020495eba689fe29a97",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "PPT OLE records: unqualified record type/version: 1058"
+    },
+    {
+      "name": "tika-slideshow-4abb8ac3b3-testPPT_autodate.ppt",
+      "category": "slideshow",
+      "sha256": "6ce1d3db26b2c4e9e03efcaa80bdc32aa55547184df50acd41b19ab06e0e83cb",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tika-slideshow-7f092c705f-testPPT_comment.ppt",
+      "category": "slideshow",
+      "sha256": "c90dea3b2f5e883f3c48b8d8a1c71c38720add8336bdcf217c029728878eb890",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tika-slideshow-82dd1e2e3f-testPPT_custom_props.ppt",
+      "category": "slideshow",
+      "sha256": "800e2d63a6f80e39c2a8e336da39d6c21eb7ab994c205ec01d34cf66c8c4cd32",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tika-slideshow-b0de26d48c-testPPT_embedded2.ppt",
+      "category": "slideshow",
+      "sha256": "a77966b619f2c54653383038cdcf388db7e66ed42a87b899e479d0c8104e7265",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "tika-slideshow-44d47eeebd-testPPT_embeded.ppt",
+      "category": "slideshow",
+      "sha256": "b45d23e75ba0c8a1608f6784f2a412bf98203bbcd1340cc7f0fdaca5c3b9e541",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "tika-slideshow-161d0a43fd-testPPT_masterFooter.ppt",
+      "category": "slideshow",
+      "sha256": "52c57f5bb8294daf234c62730d0fa97589a872d29bb936cc24a2d83b3fd5e1aa",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1008",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tika-slideshow-d042aacc1b-testPPT_masterText2.ppt",
+      "category": "slideshow",
+      "sha256": "d6562bf5295e32ab39e8846658903eb2a6ef31092ee0fa4570a82769b756f2dc",
+      "container": true,
+      "host": [
+        "ppt",
+        false
+      ],
+      "officeart_skip": "PPT OLE records: unqualified record type/version: 1058",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    },
+    {
+      "name": "tika-slideshow-ae67450f24-testPPT_protected_passtika.ppt",
+      "category": "slideshow",
+      "sha256": "152e2429873512d3e3719889a5db2aac3496d5c80e01acedf13e0a6c3cc7e59b",
+      "container": true,
+      "host_skip": "Encrypted PowerPoint document"
+    },
+    {
+      "name": "tika-slideshow-cc82e66795-testPPT_skipBadCompressedObject.ppt",
+      "category": "slideshow",
+      "sha256": "a066ef34216c1a2694c356d87e305d237d7f0eefb022a0333f8a957f48a9e01a",
+      "container_skip": "OLE: invalid stream directory metadata"
+    },
+    {
+      "name": "tika-slideshow-6f727158ba-testPPT_various.ppt",
+      "category": "slideshow",
+      "sha256": "54790b849e108dca237b44ebffc53dcc3920e159e84f6d590bff2db906412687",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "tika-document-9309c484f9-testWORDML_tableInsideParagraph.doc",
+      "category": "document",
+      "sha256": "8b2fd1269898c195da52512bd18a5d3aeed167269b896fe6b3fce39a967c927f",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "tika-document-4f4cee0db1-testWORD_1img.doc",
+      "category": "document",
+      "sha256": "6c94d2c13ebed034f3046969761e6f2a2acf361baf73a8f5086f1453a366e88a",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tika-document-c8f509aea4-testWORD_2006ml.doc",
+      "category": "document",
+      "sha256": "06b4d4ea1ad7dfb75024ccd956ebc316d8d32361e3e5c7617678a0b4a9343f72",
+      "container_skip": "OLE: unsupported Unicode name comparison"
+    },
+    {
+      "name": "tika-document-c3ea03e358-testWORD_3imgs.doc",
+      "category": "document",
+      "sha256": "5ceb1e33c8a5fa1bcd7ebe8202efc8061dd6dd4dc138c1e15091471438ab7254",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tika-document-293d00aa01-testWORD_boldHyperlink.doc",
+      "category": "document",
+      "sha256": "ad9890445a2b6d6ce5259748c49923a0fd13768f95b67abaee2b22afe86bc4f7",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x6870; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-document-7f20ed95d6-testWORD_bold_character_runs.doc",
+      "category": "document",
+      "sha256": "ceef10bcf49319a0ed608144cc66bd429cb601cec227fac8fdaf6329121c91c1",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-document-8f8ed77dc4-testWORD_bold_character_runs2.doc",
+      "category": "document",
+      "sha256": "16b1b2e99dc5facd3a254d711c796d5934b38ef5a7393ad9b12af11d2cbeda11",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-document-7445be4b49-testWORD_closingSmartQInHyperLink.doc",
+      "category": "document",
+      "sha256": "3536a1e171981a55f9811c5440029004d610c54c7cc72adcc9d30a636b377b99",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x6870; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-document-9a46d0f21f-testWORD_custom_props.doc",
+      "category": "document",
+      "sha256": "0954ac51bbf4a478e322c29a81b2d735c513f3faca0cf7641c753d9e622bec29",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-document-75a4d9818d-testWORD_embedded_pdf.doc",
+      "category": "document",
+      "sha256": "1979c16391c17f5ca2c3d40008b10e8649dce4f9a8dd30b2432fe9416c201952",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: missing/invalid floating OfficeArtContent"
+    },
+    {
+      "name": "tika-document-103c1a5ff7-testWORD_embedded_rtf.doc",
+      "category": "document",
+      "sha256": "6c66cbe7708d3dfa78dd36fe15eb04b7dd69539ea61e1935b914112320ea2dcc",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-document-d26c3d39b2-testWORD_features.doc",
+      "category": "document",
+      "sha256": "ea797cd1488187880e153c51e889d8835ac525c08db83dd486165cd6d2d23422",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tika-document-1069b60893-testWORD_header_hyperlink.doc",
+      "category": "document",
+      "sha256": "1dbf0873c9dd8d62ae2359ed3dbeae7a0d8aada3abac042ba4acd25242ea792d",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-document-24edb8f718-testWORD_italicsSurroundingHyperlink.doc",
+      "category": "document",
+      "sha256": "c3339d6335588c11fa7815c835c872e2346bf5bcda9df2420b37da5ed2b18d88",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x6870; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-document-838d86ba69-testWORD_macros.doc",
+      "category": "document",
+      "sha256": "5bf327a892944e5ed1dbcc0db2b332aba6ec17b0f8bcde9f86f691216b44d5c9",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified"
+    },
+    {
+      "name": "tika-document-6e8d839dd6-testWORD_multi_authors.doc",
+      "category": "document",
+      "sha256": "91cdb6173904530195ca983bea25c1c0bc61dd16ffa4c22f0fb87b0d82514190",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-document-d2019d6a6d-testWORD_no_format.doc",
+      "category": "document",
+      "sha256": "2345333163a5b9b6233d82a40022660dcca833d661c2fa80b5274be47672f56c",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified"
+    },
+    {
+      "name": "tika-document-459888426a-testWORD_numbered_list.doc",
+      "category": "document",
+      "sha256": "4854e5fea6b92c2b99b418df5d12113cb2e35f2208784c7a59f3c1f9b3e6dea9",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x845e; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tika-document-4763c76c23-testWORD_override_list_numbering.doc",
+      "category": "document",
+      "sha256": "7e4d98a6230b59f46c1761c0146449fffb0d5ffd00bca14a6a76d8829ebe7ccb",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-document-e20203312e-testWORD_phonetic.doc",
+      "category": "document",
+      "sha256": "d802dd16c86a2faf5ed2cb04d7493ab0183b5213bf5b954f49fe24c3a24c2961",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2403; OfficeArt: unqualified/duplicate FOPT property: 0x81"
+    },
+    {
+      "name": "tika-document-b1983b53b0-testWORD_protected_drm.doc",
+      "category": "document",
+      "sha256": "6f8b55671b60f80f71a8466a041b1afb8189c67c08d0602507eaac6e46d9a91f",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host_skip": "Signed/encrypted/rights-managed OLE document"
+    },
+    {
+      "name": "tika-document-919126c83f-testWORD_specialControlCharacter1415.doc",
+      "category": "document",
+      "sha256": "8f203e199a34e2beee0c59f320de98a7ff4765c19282ba1c9dec7a55c6c46121",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: no inline picture Data stream; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-document-8898c6e157-testWORD_tabular_symbol.doc",
+      "category": "document",
+      "sha256": "48dfcb2d8fdb247d65a8029940bf47d0ad2b1b85283a461b3369ce1df8f5ba17",
+      "container_skip": "OLE: consecutive red directory nodes"
+    },
+    {
+      "name": "tika-document-4341c2270a-testWORD_various.doc",
+      "category": "document",
+      "sha256": "87a69bd33b7d6134f802b54d95ae0cadb7a9f4bda0d8bab96daa9abde42be180",
+      "container_skip": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "tika-document-6958362e6b-testWPSAttachment.doc",
+      "category": "document",
+      "sha256": "f59f67ea70ed5565211e5bfc4deeb75d1481837f38a76bae212a905c32b19591",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2461; OfficeArt: floating FBSE name/count"
+    },
+    {
+      "name": "tika-slideshow-e75b17dffc-testWPSAttachment.ppt",
+      "category": "slideshow",
+      "sha256": "5a40e78b18aa6692676c494c74376076c895427789b51047d8cb722d79f68163",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "tika-spreadsheet-27a451b7c5-testWPSAttachment.xls",
+      "category": "spreadsheet",
+      "sha256": "d96a564495fe65b273ade75023497a01a992493693896bf49f81c7586dd78507",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c"
+    },
+    {
+      "name": "tika-document-eb48990e9b-test_TIKA-1251.doc",
+      "category": "document",
+      "sha256": "0f2419a0fadc0acf266d300ac8bb9eb980067ffad4f47d22c947ebbfde541310",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x2406; OfficeArt: unqualified/duplicate FOPT property: 0x81"
+    },
+    {
+      "name": "tika-document-a894ba3579-test_recursive_embedded.doc",
+      "category": "document",
+      "sha256": "01dea6383aa123ecfc6c970faa9b7b922792f718d3715a1aa1f3b1a6a3f3a81b",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0xc615; OfficeArt: unqualified/duplicate FOPT property: 0x186"
+    },
+    {
+      "name": "tika-document-e6cf1e8889-testWordPerfect_42.doc",
+      "category": "document",
+      "sha256": "eaf0c297a08d0be2f9aca0a022136f2c3f5a8d4097c9e0d49bfb77b92690bb96",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded"
+    },
+    {
+      "name": "tika-document-75c53b3399-2pic.doc",
+      "category": "document",
+      "sha256": "e9b1b4f84a75589354d2e278ff51ec7a04a8348203b74c01186e302f1ac6725e",
+      "container": true,
+      "piece_prm": {
+        "pieces": 1,
+        "picture_location_pieces": 0
+      },
+      "host": [
+        "doc",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified/duplicate Word property: 0x4a51; OfficeArt: this floating profile requires a delayed BStore"
+    },
+    {
+      "name": "tika-spreadsheet-6798ae2632-pic.xls",
+      "category": "spreadsheet",
+      "sha256": "8fb45ccb850257acd24dbcd64f7f018c127d625b575dea8bcd8fbd87fd141580",
+      "container_skip": "OLE: unsupported root storage"
+    }
+  ]
+}

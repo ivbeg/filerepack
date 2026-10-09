@@ -1,0 +1,973 @@
+{
+  "schema_version": 1,
+  "source": "https://registry.opendata.aws/napierone/",
+  "inventory_sha256": "32c51dc83572a7f38028abdc8b0a14c4c70e5f7401b8eeb5cc8ef2b77c8cb1c4",
+  "scope": "read-only eligibility; originals extracted from SHA-256 verified archive; no savings or application acceptance inferred",
+  "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement",
+  "counts": {
+    "document": {
+      "selected": 0,
+      "source_verified": 0,
+      "container": 0,
+      "host": 0,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "spreadsheet": {
+      "selected": 100,
+      "source_verified": 100,
+      "container": 0,
+      "host": 0,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "slideshow": {
+      "selected": 0,
+      "source_verified": 0,
+      "container": 0,
+      "host": 0,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    }
+  },
+  "rejection_reasons": {
+    "source": {},
+    "container": {
+      "OLE: not a CFB container": 100
+    },
+    "host": {},
+    "officeart": {},
+    "dedup": {}
+  },
+  "archives": {
+    "XLS-NOMAGIC-tiny": {
+      "key": "NapierOne/Data/XLS/XLS-NOMAGIC-tiny.zip",
+      "url": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/XLS/XLS-NOMAGIC-tiny.zip",
+      "bytes": 14626276,
+      "sha256": "b469fb23cd5e85d86e41a5073d837953093307d34d0929a1a39e72facc463fdd",
+      "hash_sidecar_url": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/XLS/XLS-NOMAGIC-tiny_zip_hashes.txt",
+      "hash_sidecar_sha256": "c6daaf5921aa2ec133eaf3bee12d0eed0533d0ea1b6bd4a5ca29977f32b463a4",
+      "subset_description_url": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/XLS/XLS-NOMAGIC.pdf",
+      "subset_description_sha256": "54321e23eae144ed313b411e217ae0b91994aa8aaada482a9d2bc7480713ed20",
+      "office_members": 100,
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    }
+  },
+  "files": [
+    {
+      "name": "0001-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "fa878ef1e51c604dc1cfb80701a1d9a56d1a3ae00c85ff7d9f1c468da9b67a6b",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0001-xls-nomagic.xls",
+      "bytes": 77824,
+      "zip_crc32": "9c5f4301"
+    },
+    {
+      "name": "0002-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "e3f7cda07be49b203777b33a4f105b9d02d4c8ca9400fa5ef302cb8070ae3401",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0002-xls-nomagic.xls",
+      "bytes": 699904,
+      "zip_crc32": "a9ab1a82"
+    },
+    {
+      "name": "0003-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "a240380526b241414ca0ed2cd81eaee64fe9024399705d972492389bd45357d9",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0003-xls-nomagic.xls",
+      "bytes": 257536,
+      "zip_crc32": "4b132b3d"
+    },
+    {
+      "name": "0004-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "7289ab1aa5eb95b4ef65b10c47f23480545babfb59b19e9eda2cffc85f1ae7e9",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0004-xls-nomagic.xls",
+      "bytes": 1182208,
+      "zip_crc32": "98b5eb99"
+    },
+    {
+      "name": "0005-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "c69a681f13d9a569630d978312972d035d4951749daaf22dbdd607ed6da0ef6e",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0005-xls-nomagic.xls",
+      "bytes": 877056,
+      "zip_crc32": "8033065f"
+    },
+    {
+      "name": "0006-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "696ccf6538d13be4f4595d97058581acc7fc613e2c866acd4e476e1450179ce2",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0006-xls-nomagic.xls",
+      "bytes": 6924288,
+      "zip_crc32": "bc7e488f"
+    },
+    {
+      "name": "0007-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "138f9fbd6e16b63da66775be933e01ea31dc5211c2114f58757edd1e6dfaba31",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0007-xls-nomagic.xls",
+      "bytes": 3888640,
+      "zip_crc32": "2e7a7254"
+    },
+    {
+      "name": "0008-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "095f22f064976eda7e24a2f120fcad79c9ebb7c5c0cc8a11069598ccf5713abb",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0008-xls-nomagic.xls",
+      "bytes": 3311616,
+      "zip_crc32": "ec3311ef"
+    },
+    {
+      "name": "0009-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "b677c18b0c3edb3de0e7692ed1af1749937b25b48f711cb5d12ac0061f22c957",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0009-xls-nomagic.xls",
+      "bytes": 6964224,
+      "zip_crc32": "66bce926"
+    },
+    {
+      "name": "0010-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "17ddc043af0c0e0e66778c59cf523869ac5a1fa15ae7acf5002ddacf96083893",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0010-xls-nomagic.xls",
+      "bytes": 6927360,
+      "zip_crc32": "278eba91"
+    },
+    {
+      "name": "0011-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "514a5ce060f7fbd538ba83d83eab544492631ac06a244b7b9177062602b8caab",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0011-xls-nomagic.xls",
+      "bytes": 145920,
+      "zip_crc32": "69e488bf"
+    },
+    {
+      "name": "0012-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "e7c7cea391da26ca47ec1971e63f8531d35fe61ed563d929f7402d98de54a7cb",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0012-xls-nomagic.xls",
+      "bytes": 31744,
+      "zip_crc32": "3c2a9c03"
+    },
+    {
+      "name": "0013-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "37a4f6b4163e5b0b8c14fa6b6433ad6a4e1c6fc0329cd545814f5ca68c3fa1bc",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0013-xls-nomagic.xls",
+      "bytes": 34304,
+      "zip_crc32": "e09e33e5"
+    },
+    {
+      "name": "0014-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "74621ff8fba0f03d78d0a2758a84df69db77dc31a911987c9b9b2899ce287b11",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0014-xls-nomagic.xls",
+      "bytes": 31232,
+      "zip_crc32": "284d3d9b"
+    },
+    {
+      "name": "0015-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "be380d8c802b444c3bd2e870b8cc9ca799c0b3c60a50806b5aea767e05cd7ed8",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0015-xls-nomagic.xls",
+      "bytes": 34816,
+      "zip_crc32": "4766814c"
+    },
+    {
+      "name": "0016-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "80f7a4e3643ca9bad7dfa8d417d340d07c41f1f741737724a8973d6fe15349df",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0016-xls-nomagic.xls",
+      "bytes": 42496,
+      "zip_crc32": "9f2250cc"
+    },
+    {
+      "name": "0017-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "5724ee2531705950a03e98ad315a166d0d18150b662459b3673f243bd6ca1450",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0017-xls-nomagic.xls",
+      "bytes": 42496,
+      "zip_crc32": "e33771c4"
+    },
+    {
+      "name": "0018-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "13f2a39184cc560dd48be74ae4d1279805b095a30f3108a6c961dac58c9f053e",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0018-xls-nomagic.xls",
+      "bytes": 48128,
+      "zip_crc32": "263794a1"
+    },
+    {
+      "name": "0019-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "8faaf82a4aa64d8ece4941aae2ac6cf2418f6c5e8353c62ce6e4a7324d6142a5",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0019-xls-nomagic.xls",
+      "bytes": 27648,
+      "zip_crc32": "3778efda"
+    },
+    {
+      "name": "0020-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "232c96e5273b0e31d696a18df2fdcd2fecaa71fe714e04636f7ba8e508b3bcb7",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0020-xls-nomagic.xls",
+      "bytes": 27648,
+      "zip_crc32": "de5d8d63"
+    },
+    {
+      "name": "0021-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "89058cfa8d032a62522955d15f9c5d8a1471302714a2b2e8a610433a7ef88f7d",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0021-xls-nomagic.xls",
+      "bytes": 29696,
+      "zip_crc32": "4dc15ec2"
+    },
+    {
+      "name": "0022-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "ea401229c1e33dabdb5c90030c2591bff05df62dd3e0a2d5829fc1ea8d64c39f",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0022-xls-nomagic.xls",
+      "bytes": 31232,
+      "zip_crc32": "257b9c97"
+    },
+    {
+      "name": "0023-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "9d8acf299ff372048f359d47ef281698444b6df0b4d2f39c72bec4322c83ca32",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0023-xls-nomagic.xls",
+      "bytes": 20992,
+      "zip_crc32": "de23b45e"
+    },
+    {
+      "name": "0024-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "25b20cbf97232181598cf60e99453a7a5f749eee1205c47047eec0c2d49cc215",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0024-xls-nomagic.xls",
+      "bytes": 28160,
+      "zip_crc32": "a70e73b9"
+    },
+    {
+      "name": "0025-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "98e6107508731c17f317e7c61d248938283b69119ead5357665ff55213a44df4",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0025-xls-nomagic.xls",
+      "bytes": 22528,
+      "zip_crc32": "69eadadf"
+    },
+    {
+      "name": "0026-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "573d5660dfdf51ce2fa416a46913a53ee9c9135708ead366e40a6656e7e5ac92",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0026-xls-nomagic.xls",
+      "bytes": 36352,
+      "zip_crc32": "be910dec"
+    },
+    {
+      "name": "0027-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "bca7bc02b80ae824e3b477c1f58ae9019b841a0147a358f3297dca26e0fdd498",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0027-xls-nomagic.xls",
+      "bytes": 34816,
+      "zip_crc32": "db7379f6"
+    },
+    {
+      "name": "0028-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "e40e0e1bb6dac4b1643e4b69f0ce7801080505409a3be94f2805e52f6e37d648",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0028-xls-nomagic.xls",
+      "bytes": 32256,
+      "zip_crc32": "eab1174f"
+    },
+    {
+      "name": "0029-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "c67c2f3cedc77eba0cc0f54442261e5cd8db1dcf39fd94587d50e25ec45361a4",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0029-xls-nomagic.xls",
+      "bytes": 32256,
+      "zip_crc32": "f0e9fece"
+    },
+    {
+      "name": "0030-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "5cd0b68d2056de99eb454f1c24231155dd6f83be6909e5fee9a597b9142b6146",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0030-xls-nomagic.xls",
+      "bytes": 49152,
+      "zip_crc32": "62b0ea0d"
+    },
+    {
+      "name": "0031-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "7fb2695c9ed2e4d34a6d8a6d43500fc4060d6c8233a6d295cb7dd0c1f95fcdc2",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0031-xls-nomagic.xls",
+      "bytes": 33792,
+      "zip_crc32": "d5e69c8c"
+    },
+    {
+      "name": "0032-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "9f1ba71d5fd65d96f38e20b8a784338a33d21217ac5bda2242bc606c3a63e5c6",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0032-xls-nomagic.xls",
+      "bytes": 40960,
+      "zip_crc32": "da19b6fb"
+    },
+    {
+      "name": "0033-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "7cb92164a51b3f05b5cb282b873de988724012b12ea2a74e7e6d8fbb11bf6d9d",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0033-xls-nomagic.xls",
+      "bytes": 19456,
+      "zip_crc32": "a9c28b09"
+    },
+    {
+      "name": "0034-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "cc4aa9b9de040698749ada53cb44faa5e8c63a4d93d77a0a926af24012dd43ed",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0034-xls-nomagic.xls",
+      "bytes": 47616,
+      "zip_crc32": "400996ef"
+    },
+    {
+      "name": "0035-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "597cea3b17ab05431bb4a84f983b1e4cfd752a34da56b87e7749264807bc594a",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0035-xls-nomagic.xls",
+      "bytes": 36352,
+      "zip_crc32": "b06eb924"
+    },
+    {
+      "name": "0036-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "413d8b96a5d61e6f217c51fb6f723a0cd2b2e8ff0020540ca51e2c6982ff37c7",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0036-xls-nomagic.xls",
+      "bytes": 31744,
+      "zip_crc32": "e83b567a"
+    },
+    {
+      "name": "0037-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "2b2528c40c29308d57fb658d015456f8c8407e2ade84a06c69acd6005a27be36",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0037-xls-nomagic.xls",
+      "bytes": 22528,
+      "zip_crc32": "014ecf70"
+    },
+    {
+      "name": "0038-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "5f1c7b6ac8ae866dd39d2f0d8440453452ef3b1df3eb74aa52ff0a58651a3c03",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0038-xls-nomagic.xls",
+      "bytes": 21504,
+      "zip_crc32": "e7912849"
+    },
+    {
+      "name": "0039-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "7f6578af44cec75f7a44b8421cdcb26be9b6d5fb9ccfedb4cbc57fdcb0732959",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0039-xls-nomagic.xls",
+      "bytes": 51712,
+      "zip_crc32": "df342ec0"
+    },
+    {
+      "name": "0040-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "245ae516b2e33479083a580f0adeabb718888a9bd4aa921a510f63e307e8be44",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0040-xls-nomagic.xls",
+      "bytes": 71680,
+      "zip_crc32": "491675ee"
+    },
+    {
+      "name": "0041-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "a1bc7d3aff8c15d427600063efb9ed6a850f776c9c98109487776f5bfaeacc54",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0041-xls-nomagic.xls",
+      "bytes": 18432,
+      "zip_crc32": "78fbb1d6"
+    },
+    {
+      "name": "0042-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "46237e2ed79bb7457a0a68773b4840ea2d6a5687ce21a6cb111cb6dd867823f1",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0042-xls-nomagic.xls",
+      "bytes": 20992,
+      "zip_crc32": "d63bd715"
+    },
+    {
+      "name": "0043-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "2fca6c4c4b458d6859eface3db19c673aaf502679d36eebbbf9af6587b47fa22",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0043-xls-nomagic.xls",
+      "bytes": 20480,
+      "zip_crc32": "563223a3"
+    },
+    {
+      "name": "0044-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "d5c909c56a35ee33bde16bed7de75be913d66566801ebe4df637f639f254dd9f",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0044-xls-nomagic.xls",
+      "bytes": 26624,
+      "zip_crc32": "adbe150a"
+    },
+    {
+      "name": "0045-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "322fc8fe2b41fe1793f7fbf4c061f8463b1573b5171e765e5d3000594abd50b4",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0045-xls-nomagic.xls",
+      "bytes": 31232,
+      "zip_crc32": "250228ac"
+    },
+    {
+      "name": "0046-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "3b2b25b08e73f8f42b6ac3c3e58e2b99a59911d953e98cfe4d3d7f9b57847c87",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0046-xls-nomagic.xls",
+      "bytes": 42496,
+      "zip_crc32": "56175e64"
+    },
+    {
+      "name": "0047-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "76a667f050f3067e13b7a8dc4af455db88e2c0814d84072f40710b37e6e9df76",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0047-xls-nomagic.xls",
+      "bytes": 34304,
+      "zip_crc32": "f3d76a5d"
+    },
+    {
+      "name": "0048-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "6aa6f6d86e2ef4f81aefb5bc2ab462b7d08bd43035d3e89d30559b56d6a92057",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0048-xls-nomagic.xls",
+      "bytes": 41984,
+      "zip_crc32": "07182b12"
+    },
+    {
+      "name": "0049-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "6f969a69235eb95ca8e4341e3ccb21431a39ff1c5562d0b8044bdb171bc44333",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0049-xls-nomagic.xls",
+      "bytes": 20992,
+      "zip_crc32": "4944abde"
+    },
+    {
+      "name": "0050-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "6d5c50e5cd39fe1807251e5b5a14dfebdd904b1cfedf7a122edaaddabe2f1813",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0050-xls-nomagic.xls",
+      "bytes": 27136,
+      "zip_crc32": "85f92469"
+    },
+    {
+      "name": "0051-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "e1284cdde8173db6b8e652bf9c52aecb458763d573bba4b139205042a5e142db",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0051-xls-nomagic.xls",
+      "bytes": 18432,
+      "zip_crc32": "73c3ac3d"
+    },
+    {
+      "name": "0052-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "b03a6648011e789d64da010638bae0620a449f502a161b4aeb57b1be3c1f97ec",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0052-xls-nomagic.xls",
+      "bytes": 51712,
+      "zip_crc32": "f3773eb2"
+    },
+    {
+      "name": "0053-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "ee7be1587a3205d7de73a406fa7517c929bc738f5009daca26bd7e64f3603189",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0053-xls-nomagic.xls",
+      "bytes": 51712,
+      "zip_crc32": "10b2d0ff"
+    },
+    {
+      "name": "0054-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "e6ce40da1880efefc82f787f2e545a350a0911bb44be53b819c97c03ad8ba547",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0054-xls-nomagic.xls",
+      "bytes": 33280,
+      "zip_crc32": "eec9c103"
+    },
+    {
+      "name": "0055-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "22fcec92b00d03d989c5464fe5e3070e9a5decc0fb3d57263d52170cf6b59b94",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0055-xls-nomagic.xls",
+      "bytes": 27648,
+      "zip_crc32": "2932c138"
+    },
+    {
+      "name": "0056-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "c65da5fc278802ac57f4fb92f6108b7f64c884d064c9af275af7594f0f97b7e8",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0056-xls-nomagic.xls",
+      "bytes": 31744,
+      "zip_crc32": "3b11377f"
+    },
+    {
+      "name": "0057-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "2c1e1be4275682c5588eb68582a3c18ceac549698b2ffdf762ef72861aefab69",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0057-xls-nomagic.xls",
+      "bytes": 20480,
+      "zip_crc32": "a8f12711"
+    },
+    {
+      "name": "0058-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "2fb92dca721cdb7dd2a753a8d4b88dd04c309e1c704bc7382ef9207a0bf35685",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0058-xls-nomagic.xls",
+      "bytes": 48128,
+      "zip_crc32": "47f1286d"
+    },
+    {
+      "name": "0059-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "08ac3f2fcdc952a5b9ef24ed09ef1fa4d3c92c31b7e5551e74a2758512b04584",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0059-xls-nomagic.xls",
+      "bytes": 8473600,
+      "zip_crc32": "67134b94"
+    },
+    {
+      "name": "0060-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "1fa75baefdd710a14a34dc00961ae1513e165753d2b7be09feb7bbfdd833e010",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0060-xls-nomagic.xls",
+      "bytes": 262144,
+      "zip_crc32": "31dd2861"
+    },
+    {
+      "name": "0061-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "1e0ac284a301b0c598b0dd91b6f8cdfc0f57e78867eae75f7aabe22744b05a7b",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0061-xls-nomagic.xls",
+      "bytes": 20992,
+      "zip_crc32": "9f1825be"
+    },
+    {
+      "name": "0062-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "3562d8844ff26026c2233dbefd82ed819e9c184f37dc8e0cd482c553e99818b4",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0062-xls-nomagic.xls",
+      "bytes": 22016,
+      "zip_crc32": "73b94673"
+    },
+    {
+      "name": "0063-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "59236a9b8b1dc66e3fe78706cf41def3e951b963357f7075cc8bd44d2ec8d8c1",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0063-xls-nomagic.xls",
+      "bytes": 28160,
+      "zip_crc32": "396be3d9"
+    },
+    {
+      "name": "0064-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "49b29802719f0dfa4379ef8151ab586c1801154465325e85331d41c503cb369c",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0064-xls-nomagic.xls",
+      "bytes": 71168,
+      "zip_crc32": "f1e3bf6a"
+    },
+    {
+      "name": "0065-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "6b03cd9757b0a0431ca0dbf3521d2112b5b7cee302d98dc8ef5cef0c2bdde4a9",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0065-xls-nomagic.xls",
+      "bytes": 25600,
+      "zip_crc32": "d637c735"
+    },
+    {
+      "name": "0066-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "252a17fcf51d800a8812a5d4258b846d0ea15513e13477b508d4598d5b0a8906",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0066-xls-nomagic.xls",
+      "bytes": 29184,
+      "zip_crc32": "41e185ad"
+    },
+    {
+      "name": "0067-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "176469762b0f4afd837f05c6d72a465e29634271c5ebedaa4c1bae6c4bd0ffa3",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0067-xls-nomagic.xls",
+      "bytes": 265728,
+      "zip_crc32": "fcef0592"
+    },
+    {
+      "name": "0068-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "7d9249d69e9178fa847b6a82dc3fb7105479bf05f6463965a57bb7fc38e74228",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0068-xls-nomagic.xls",
+      "bytes": 58880,
+      "zip_crc32": "105010eb"
+    },
+    {
+      "name": "0069-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "52583d10993e2a8dc616a44db76ecb861a308d574374e0b859a40fe3f0a5a49f",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0069-xls-nomagic.xls",
+      "bytes": 94720,
+      "zip_crc32": "ed1f84ce"
+    },
+    {
+      "name": "0070-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "99e7b4d482d2fe17d0d9cfb83422583920d853c08cb9f0133cf224536ca2b6ad",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0070-xls-nomagic.xls",
+      "bytes": 26624,
+      "zip_crc32": "71b725c5"
+    },
+    {
+      "name": "0071-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "b6982dc061906852ab9286d09246d53e74dcdfebd2602e14b3e5318f89e951be",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0071-xls-nomagic.xls",
+      "bytes": 17920,
+      "zip_crc32": "a3a73ec8"
+    },
+    {
+      "name": "0072-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "3f736bc290dc268d0ca7875b8a3d8129f5efd5070423d0db261b0a0ef21ec751",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0072-xls-nomagic.xls",
+      "bytes": 34816,
+      "zip_crc32": "64960afd"
+    },
+    {
+      "name": "0073-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "39ac8b9ed16e68f0f4f4c073f7e0493a46e3162b3b00b8313161c60dc5580cc0",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0073-xls-nomagic.xls",
+      "bytes": 1646592,
+      "zip_crc32": "6e375835"
+    },
+    {
+      "name": "0074-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "0006805f7d493d9b777f18f68104ed8999faec977df60511692a8abf8213f3c4",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0074-xls-nomagic.xls",
+      "bytes": 26624,
+      "zip_crc32": "754ce9c8"
+    },
+    {
+      "name": "0075-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "77241efa57c100846249311cb288367bbcd592cc40aef7220cb544761c57714c",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0075-xls-nomagic.xls",
+      "bytes": 40960,
+      "zip_crc32": "107e771b"
+    },
+    {
+      "name": "0076-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "35566f50208fb01bc7298c062643767fc8802872f0d76bcbf2654466c3a1b29b",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0076-xls-nomagic.xls",
+      "bytes": 17408,
+      "zip_crc32": "a8b81fba"
+    },
+    {
+      "name": "0077-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "a07bb7256c2c08fdef542698844e3e9ec866219e57fccfd3c7b41cebd0d95d1d",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0077-xls-nomagic.xls",
+      "bytes": 30720,
+      "zip_crc32": "4562bc1f"
+    },
+    {
+      "name": "0078-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "66e6c2df1da8f5d4b4a33a552157b1d677955c4e41e5c6f30860c7f18b6f5fbb",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0078-xls-nomagic.xls",
+      "bytes": 26112,
+      "zip_crc32": "c7a72406"
+    },
+    {
+      "name": "0079-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "99e05d291cb39c44638af7071414f0556e5fb32bf09fad56163e5477156a80ba",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0079-xls-nomagic.xls",
+      "bytes": 60416,
+      "zip_crc32": "739a67c1"
+    },
+    {
+      "name": "0080-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "85e5bde3e216446fb522f0f2d21a5d27605379cf0c9ab5d620c30201b3448274",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0080-xls-nomagic.xls",
+      "bytes": 65536,
+      "zip_crc32": "308cf27e"
+    },
+    {
+      "name": "0081-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "224f96b9c6c0d79989257d83f752a4a6dcc6bed9b36b10507c8776fe1fe1fe93",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0081-xls-nomagic.xls",
+      "bytes": 29696,
+      "zip_crc32": "43e864db"
+    },
+    {
+      "name": "0082-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "a02600768b8eaebe8f3957384af2587d7aba096bd6b1838f20f41b2460accf5a",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0082-xls-nomagic.xls",
+      "bytes": 46592,
+      "zip_crc32": "f23983e9"
+    },
+    {
+      "name": "0083-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "582d55850ee0d1bece2dd2d15c7c4dc8e2a4ff155f67cc454d0a561d9edc680e",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0083-xls-nomagic.xls",
+      "bytes": 22528,
+      "zip_crc32": "008b862a"
+    },
+    {
+      "name": "0084-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "2fffa681bf6d68d9eabf784f99e72651ad18dfda0494b8594895cebc7b5c3185",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0084-xls-nomagic.xls",
+      "bytes": 57856,
+      "zip_crc32": "f9858ec6"
+    },
+    {
+      "name": "0085-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "236dc86a256fc1715dac9807b5028a1408e3ddc67a1f62d4f2d5a52a61694f66",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0085-xls-nomagic.xls",
+      "bytes": 78336,
+      "zip_crc32": "902b31c2"
+    },
+    {
+      "name": "0086-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "660b5ecb2f6785c3c38f72ca5311232cfa00d0a1c9cc448f3e6cf17fd202c875",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0086-xls-nomagic.xls",
+      "bytes": 18432,
+      "zip_crc32": "8b2aaca3"
+    },
+    {
+      "name": "0087-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "4f424d14fa0f65e5ed7d937cf92b39ed537b4ce2748ea7c0138d7e07c6b49f92",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0087-xls-nomagic.xls",
+      "bytes": 146432,
+      "zip_crc32": "34269ed0"
+    },
+    {
+      "name": "0088-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "3dddd4ad627f8c5fed54b27135372a46cb635e18438325a66ba2f53441759472",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0088-xls-nomagic.xls",
+      "bytes": 823808,
+      "zip_crc32": "c3277848"
+    },
+    {
+      "name": "0089-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "90ddf02ce4f5c685dd52892405231cf546111307ef3646859e7c78124828095b",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0089-xls-nomagic.xls",
+      "bytes": 1646592,
+      "zip_crc32": "50774c31"
+    },
+    {
+      "name": "0090-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "22b5ab1b14c6325443abf9c3979487b705b001515e7f56c37456bd857f84c8b1",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0090-xls-nomagic.xls",
+      "bytes": 25088,
+      "zip_crc32": "217212f1"
+    },
+    {
+      "name": "0091-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "d0b63d99b272606e25eb1afd56adefa33ab95f8ccb5f99e3678a44988a35592c",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0091-xls-nomagic.xls",
+      "bytes": 33280,
+      "zip_crc32": "e7350871"
+    },
+    {
+      "name": "0092-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "eaccb95d3ea7697f4192d818c24d916da2c8371c5b8732f6e1092bfe3be7d9cd",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0092-xls-nomagic.xls",
+      "bytes": 36864,
+      "zip_crc32": "97f2d8fa"
+    },
+    {
+      "name": "0093-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "02cd8f399fb2eec657c5aa74dc598d00ad50b84ba004c8fddfd0bca332eefa8d",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0093-xls-nomagic.xls",
+      "bytes": 33280,
+      "zip_crc32": "ea99fc4b"
+    },
+    {
+      "name": "0094-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "99f7fffd8c2054b47642d64b9a0b6138925ef19470c9670df049c6fc86fb9268",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0094-xls-nomagic.xls",
+      "bytes": 20992,
+      "zip_crc32": "5c61db4d"
+    },
+    {
+      "name": "0095-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "d2ac174b170a7675bae3acb0319deeb043d60d425a1694e3e2eb5a398863b2e2",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0095-xls-nomagic.xls",
+      "bytes": 54272,
+      "zip_crc32": "3bfeed4d"
+    },
+    {
+      "name": "0096-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "f593868e5bb16b47cad0c95e9f1e8fe2bc29cacea99a70ba4b7b5434cb400cbf",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0096-xls-nomagic.xls",
+      "bytes": 35840,
+      "zip_crc32": "7bb56450"
+    },
+    {
+      "name": "0097-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "797cc2bbead976b3be311b146063ff27ff9c8e0290851f1a0c589d3d07d7d102",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0097-xls-nomagic.xls",
+      "bytes": 26112,
+      "zip_crc32": "bb846a8f"
+    },
+    {
+      "name": "0098-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "b8772ec5ea94588974daa634fe32ac8af9d74d2ce0617491641dd5f2a01ebb48",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0098-xls-nomagic.xls",
+      "bytes": 28672,
+      "zip_crc32": "ec3daf01"
+    },
+    {
+      "name": "0099-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "0375da118c47b6355e628c4111dd58416331bb8aae66a16b54527c52d47fc49d",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0099-xls-nomagic.xls",
+      "bytes": 25088,
+      "zip_crc32": "6793dc33"
+    },
+    {
+      "name": "0100-xls-nomagic.xls",
+      "category": "spreadsheet",
+      "sha256": "c714203c0f9729eff50294eb09e8f5cfec9df45f1989924829102757426da4fa",
+      "container_skip": "OLE: not a CFB container",
+      "source_path": "0100-xls-nomagic.xls",
+      "bytes": 19456,
+      "zip_crc32": "c9c858be"
+    }
+  ]
+}

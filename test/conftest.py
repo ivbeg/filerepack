@@ -4,6 +4,10 @@ import os
 import tempfile
 import pytest
 
+# Typer enables color when GITHUB_ACTIONS is set, which splits option names
+# such as `--dryrun` with ANSI codes. Disable that before Typer is imported.
+os.environ.setdefault("_TYPER_FORCE_DISABLE_TERMINAL", "1")
+
 
 @pytest.fixture
 def temp_dir():

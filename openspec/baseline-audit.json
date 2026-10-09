@@ -1,0 +1,2600 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-09",
+  "deployment": "not confirmed; no changes archived",
+  "entries": [
+    {
+      "source": "openspec/changes/archive/2026-08-14-add-dataclass-results/specs/architecture/spec.md",
+      "capability": "architecture",
+      "requirement": "Typed Result Structures",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "8bcbb03e8bcd266d15b7915ecb2347c4b531709a55b5457a35c252863c6e670d",
+      "canonical_requirement_sha256": "29d9eda3608fccdce6da1b15a1296a2a1f3027b19529b6dc33fd5dd496153f13",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-add-dataclass-results/specs/architecture/spec.md",
+      "capability": "architecture",
+      "requirement": "Dataclass Definitions",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "13609b6f9d4e2fabea0fe5fc7cb5dd79800de8fc94c769f3b0599d1130b70ac9",
+      "canonical_requirement_sha256": "5e40ad8230a3c48907dd58a29d4adffde641f88a11202b17db9f6f05aaef9d7d",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-add-test-suite/specs/testing/spec.md",
+      "capability": "testing",
+      "requirement": "Unit Test Coverage",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "63f3eebd43ed3acd0798303b9cff733197086d7e77c18c160a16d6d329181629",
+      "canonical_requirement_sha256": "d7478aaa5a080f16547ef4bf4c5e50c3a3e9d5aad4332853f73053441fcb20f7",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-add-test-suite/specs/testing/spec.md",
+      "capability": "testing",
+      "requirement": "CLI Integration Tests",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "e8ae04ab2c4dd836f44e05fe0988cac4151abc73ad3f3c68a5dba9d760b53966",
+      "canonical_requirement_sha256": "96481f12e1e5b07cd611aa6bcbc8cafa60334a6f471886c0b0d46af8f098c9e0",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-add-test-suite/specs/testing/spec.md",
+      "capability": "testing",
+      "requirement": "Test Infrastructure",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "5327326aa177d86366fe4e4882bdfeff22757c7df6e5d0e3b5f34fbad63fb6ad",
+      "canonical_requirement_sha256": "0729c92915ea5ba8de7d9bb125f62e5067681d99ec569fe38bcdb0499cfc1292",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-add-type-hints/specs/code-quality/spec.md",
+      "capability": "code-quality",
+      "requirement": "Type Annotations",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "ce0621a019fb19f8c88a73436a050da94dea47580f90d0cfd7b8e62279ab5961",
+      "canonical_requirement_sha256": "bc3b030396727a2b8ffc3f99b93ac56d4f6c589334f0c8ae13a4939eeb3976f5",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-add-type-hints/specs/code-quality/spec.md",
+      "capability": "code-quality",
+      "requirement": "Static Type Checking",
+      "disposition": "verified",
+      "source_requirement_sha256": "aaa075d9756e2b9adb49f4177189f5cf77a6235d4077ec25f1157a6a99e80d4c",
+      "canonical_requirement_sha256": "aaa075d9756e2b9adb49f4177189f5cf77a6235d4077ec25f1157a6a99e80d4c",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-fix-config-inaccuracies/specs/configuration/spec.md",
+      "capability": "configuration",
+      "requirement": "Accurate Package Metadata",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "e2f41457452c36a514b102bfe8dc8234d708cb56367547b3a51c92720f66c8fb",
+      "canonical_requirement_sha256": "d0b48a4a1c4bb66135c25165efb6934ab3f18ae29e28c459f350d365bdab017f",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-fix-config-inaccuracies/specs/configuration/spec.md",
+      "capability": "configuration",
+      "requirement": "No Stale References",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "d12d2ef46aaaf89ee36e2852f4828fac44143f29ec3d62c655de72a746b8d6ac",
+      "canonical_requirement_sha256": "91d60bce773ccc0a9b5ef83a13913e8c170ba892ad561dee7e6dd1b4ea808701",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-fix-mutable-defaults/specs/code-quality/spec.md",
+      "capability": "code-quality",
+      "requirement": "Immutable Default Arguments",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "366dc9e72921de502f2177537cceb9bb857d0e4f29410f0368f2d993ead7b35f",
+      "canonical_requirement_sha256": "f59b2596aaf08cf8427f9e67be20f52e97b3fee89bf06107adb1311e36fd2c7c",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-fix-shell-injection-vulnerability/specs/security/spec.md",
+      "capability": "security",
+      "requirement": "Safe Command Execution",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "598c78fc3b0d5a078d2bddb2d714ddd01a09a8fcf6066fb9954784bf6e3e62a2",
+      "canonical_requirement_sha256": "01b3e27ac41cac2798af1b850f265009d6c04c268698be13e96de73114f5f622",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-fix-shell-injection-vulnerability/specs/security/spec.md",
+      "capability": "security",
+      "requirement": "Command Execution Helper",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "3942bf037f2cc8bf3602473e6a2cd8f4806e027c7192540f02a602973c9b3659",
+      "canonical_requirement_sha256": "b360eab0f2699ecb99e1595bf51449a868ef5e89122d1c7983ceb021b63ba7e7",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-fix-shell-injection-vulnerability/specs/security/spec.md",
+      "capability": "security",
+      "requirement": "Path Validation",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "aae618aa445a4cf1216fbd8fe65a63aec67d8b39b595b7c735b1cf0939b5965b",
+      "canonical_requirement_sha256": "bc214cf9cfb9e81f0469bf1136b1df8b73c2fb5c3b0b81a77c49dc4b6e283fe6",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-fix-thread-safety/specs/concurrency/spec.md",
+      "capability": "concurrency",
+      "requirement": "Process-Invariant Working Directory",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "f412678158c2867c35a96cef43d3c6587cdfdfbe435ff2e84e7af285a8af9fce",
+      "canonical_requirement_sha256": "77eec7f3bc2da15f42ce251390a7aa9c960f477ba54cfb43cf1e490b3bb77004",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-fix-thread-safety/specs/concurrency/spec.md",
+      "capability": "concurrency",
+      "requirement": "Absolute Path Usage",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "389d219c2e2c612feed90805feea94b4d89182ee57fae30606731c3725d95ad7",
+      "canonical_requirement_sha256": "297f829eecce7884fb54f32625712cccaab52e879afbefd8384bf4db3d0faf11",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-migrate-ci-github-actions/specs/infrastructure/spec.md",
+      "capability": "infrastructure",
+      "requirement": "GitHub Actions CI",
+      "disposition": "verified",
+      "source_requirement_sha256": "9d3a14585b53255403fbd4d7362638f1a322bb215ab7d658a0e3f262fbf27887",
+      "canonical_requirement_sha256": "9d3a14585b53255403fbd4d7362638f1a322bb215ab7d658a0e3f262fbf27887",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-migrate-ci-github-actions/specs/infrastructure/spec.md",
+      "capability": "infrastructure",
+      "requirement": "Multi-Version Testing",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "bef329307e90f9c2542492a22ebf1d4590658bafb767a98c735368ce42a2ad30",
+      "canonical_requirement_sha256": "f8a635595caf41728980f41188dfbf091881e74ca254541f1835c39a212bafcf",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-migrate-ci-github-actions/specs/infrastructure/spec.md",
+      "capability": "infrastructure",
+      "requirement": "Linting and Type Checking",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "50085198f657ef825e591bf492605489a39a7923bfceaa01bbe6fe9b31ccb4ba",
+      "canonical_requirement_sha256": "0480a6932a21ebc6238045e65e0f9455f6db5e436252e6a8f5470c28b965f1c5",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-modernize-packaging/specs/infrastructure/spec.md",
+      "capability": "infrastructure",
+      "requirement": "pyproject.toml Configuration",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "27a1e825990b3412160963047f49911ee1677edb4399af1ca210f9e0db639d6a",
+      "canonical_requirement_sha256": "5b119c9931d21e83e8bc4fb9841a459dbf4c18ac2bacbdb59da0744faa838f44",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-modernize-packaging/specs/infrastructure/spec.md",
+      "capability": "infrastructure",
+      "requirement": "Development Dependencies",
+      "disposition": "verified",
+      "source_requirement_sha256": "65cf81b42d5e925bc9d4ccb8f23f4617dc646ae2a75bf3ccc54fd497e2850fa4",
+      "canonical_requirement_sha256": "65cf81b42d5e925bc9d4ccb8f23f4617dc646ae2a75bf3ccc54fd497e2850fa4",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-modernize-packaging/specs/infrastructure/spec.md",
+      "capability": "infrastructure",
+      "requirement": "Tool Configuration",
+      "disposition": "verified",
+      "source_requirement_sha256": "816f11398ac3d6cdb6a1cd2080ea86d01674c0f78bba7f8178729c314de1234b",
+      "canonical_requirement_sha256": "816f11398ac3d6cdb6a1cd2080ea86d01674c0f78bba7f8178729c314de1234b",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-refactor-code-duplication/specs/architecture/spec.md",
+      "capability": "architecture",
+      "requirement": "DRY Principle",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "699dcf541e6d5fe3859f8f827c0a35c5929b6b479ab889742d57e066815c627b",
+      "canonical_requirement_sha256": "8efaf6fea1caba1d49edf706224315142e9cc562e5114f98464c78430eb4b193",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-refactor-code-duplication/specs/architecture/spec.md",
+      "capability": "architecture",
+      "requirement": "Dead Code Removal",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "e6b56d4419df21f412dfbef611e31cbcaa33866ee46f56b7dd405efdbdb40473",
+      "canonical_requirement_sha256": "7fd6c6405526d68bd170138d450757b5ada85b26b9397f15bb8e571e4b755fc0",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-refactor-code-duplication/specs/architecture/spec.md",
+      "capability": "architecture",
+      "requirement": "Code Compactness",
+      "disposition": "verified",
+      "source_requirement_sha256": "0d5ddecf2ca4288dd486e142ab81f58c83a3200c11b50610fdf8dc8ab1adab86",
+      "canonical_requirement_sha256": "0d5ddecf2ca4288dd486e142ab81f58c83a3200c11b50610fdf8dc8ab1adab86",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-remove-redundant-files/specs/code-quality/spec.md",
+      "capability": "code-quality",
+      "requirement": "No Redundant CLI Entry Points",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "bb489e5d54fd495ef5773a8c095d026f30724807bac79d4eddc7cc2d82e0f367",
+      "canonical_requirement_sha256": "c37c4ecd5025f0ec60acc87f6f6b8b7d4026fa28f4d073eff844451e39afc4fb",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-remove-redundant-files/specs/code-quality/spec.md",
+      "capability": "code-quality",
+      "requirement": "Single README Format",
+      "disposition": "verified",
+      "source_requirement_sha256": "eb8f0261c36554f45a8cf8c8b1a2b56f5b83a31f1df6331e92f43f429117f0f7",
+      "canonical_requirement_sha256": "eb8f0261c36554f45a8cf8c8b1a2b56f5b83a31f1df6331e92f43f429117f0f7",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/archive/2026-08-14-remove-redundant-files/specs/code-quality/spec.md",
+      "capability": "code-quality",
+      "requirement": "Clean Build Artifacts",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "ad2e4116ca62c1131b4019c48f4970686e64b4bb7532ec8cdc81d708ffd61496",
+      "canonical_requirement_sha256": "f4d55b704fab8bd78c717625cd22a9877d2c53aad411e79e6ce1b4a15a7e08c6",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/add-archive-member-selection/specs/member-selection/spec.md",
+      "capability": "member-selection",
+      "requirement": "Normalized Member Exclusion Patterns",
+      "disposition": "verified",
+      "source_requirement_sha256": "a8ce103df6f194d3b74e9d444b2a2738df26ef3ddd511f59db084cf6c350ff8d",
+      "canonical_requirement_sha256": "a8ce103df6f194d3b74e9d444b2a2738df26ef3ddd511f59db084cf6c350ff8d",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-archive-member-selection/specs/member-selection/spec.md",
+      "capability": "member-selection",
+      "requirement": "Excluded Member Payload Preservation",
+      "disposition": "verified",
+      "source_requirement_sha256": "35ea9bc0c54437ecc022c54272fd1705ffe017c085ff51157f498985761a7866",
+      "canonical_requirement_sha256": "35ea9bc0c54437ecc022c54272fd1705ffe017c085ff51157f498985761a7866",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-archive-member-selection/specs/member-selection/spec.md",
+      "capability": "member-selection",
+      "requirement": "Independent Category and Optimization Depth Policy",
+      "disposition": "verified",
+      "source_requirement_sha256": "282e1faf924484550abe28e495234bebd1e28057c8e2447b7684d3ea6f76b3ad",
+      "canonical_requirement_sha256": "282e1faf924484550abe28e495234bebd1e28057c8e2447b7684d3ea6f76b3ad",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-audit-reports/specs/audit-reporting/spec.md",
+      "capability": "audit-reporting",
+      "requirement": "Versioned Complete Audit Records",
+      "disposition": "verified",
+      "source_requirement_sha256": "c7bfb591abc96a6edd0eaccde46a4f2da9355f0b7d74bb311d3abd379343e4f6",
+      "canonical_requirement_sha256": "c7bfb591abc96a6edd0eaccde46a4f2da9355f0b7d74bb311d3abd379343e4f6",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-audit-reports/specs/audit-reporting/spec.md",
+      "capability": "audit-reporting",
+      "requirement": "Bounded and Recoverable Report Persistence",
+      "disposition": "verified",
+      "source_requirement_sha256": "73e05fe8cf44b9418745eff0b08e9d55cdb8480d3878a1d1c354133deb928791",
+      "canonical_requirement_sha256": "73e05fe8cf44b9418745eff0b08e9d55cdb8480d3878a1d1c354133deb928791",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-audit-reports/specs/audit-reporting/spec.md",
+      "capability": "audit-reporting",
+      "requirement": "Report Destination and Path Disclosure Policy",
+      "disposition": "verified",
+      "source_requirement_sha256": "0c2c06ca8b89c00cd77883336e5d403c39f686b2e5545a0014f36839c86b4daa",
+      "canonical_requirement_sha256": "0c2c06ca8b89c00cd77883336e5d403c39f686b2e5545a0014f36839c86b4daa",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-audited-format-support/specs/audited-formats/spec.md",
+      "capability": "audited-formats",
+      "requirement": "Audited extension routing",
+      "disposition": "verified",
+      "source_requirement_sha256": "d8f90f7e3109e3bb866741c133774b9fbb56b340a4e1a87d468deefed2bfd6d9",
+      "canonical_requirement_sha256": "d8f90f7e3109e3bb866741c133774b9fbb56b340a4e1a87d468deefed2bfd6d9",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-audited-format-support/specs/audited-formats/spec.md",
+      "capability": "audited-formats",
+      "requirement": "Verified offline databases",
+      "disposition": "verified",
+      "source_requirement_sha256": "da54654d9d4f0acb76e01e8a5d647663598801294e0240ab488d3a91abad7c96",
+      "canonical_requirement_sha256": "da54654d9d4f0acb76e01e8a5d647663598801294e0240ab488d3a91abad7c96",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-audited-format-support/specs/audited-formats/spec.md",
+      "capability": "audited-formats",
+      "requirement": "Preserving animation compression",
+      "disposition": "verified",
+      "source_requirement_sha256": "6d40723046a4a0cb8f9daae675bf38ddf34440929cc1a93e7b25adc4ca4f35f6",
+      "canonical_requirement_sha256": "6d40723046a4a0cb8f9daae675bf38ddf34440929cc1a93e7b25adc4ca4f35f6",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-car-recompression/specs/car-recompression/spec.md",
+      "capability": "car-recompression",
+      "requirement": "Preserving CAR recompression",
+      "disposition": "verified",
+      "source_requirement_sha256": "bd404b0e747e7075113a6efc6d39fcaea636d0c96486de089a76daee12db4032",
+      "canonical_requirement_sha256": "bd404b0e747e7075113a6efc6d39fcaea636d0c96486de089a76daee12db4032",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-car-recompression/specs/car-recompression/spec.md",
+      "capability": "car-recompression",
+      "requirement": "Qualified structural and preservation gates",
+      "disposition": "verified",
+      "source_requirement_sha256": "d8c028077ca54b3ec60a4f8b3ed0a5cd614f108a20f9b150edfb9f94f14e80de",
+      "canonical_requirement_sha256": "d8c028077ca54b3ec60a4f8b3ed0a5cd614f108a20f9b150edfb9f94f14e80de",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-car-recompression/specs/car-recompression/spec.md",
+      "capability": "car-recompression",
+      "requirement": "Bounded CAR lifecycle",
+      "disposition": "verified",
+      "source_requirement_sha256": "00b13e2e5c183f494e33a6040b3b3e1ee2c399c4c2d063256199a49d7234b1f4",
+      "canonical_requirement_sha256": "00b13e2e5c183f494e33a6040b3b3e1ee2c399c4c2d063256199a49d7234b1f4",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/encoder-quality/spec.md",
+      "capability": "encoder-quality",
+      "requirement": "Optional jpegtran for Lossless JPEG",
+      "disposition": "verified",
+      "source_requirement_sha256": "93f6ce7f2d03d71340e469a7acbf168370fa545131b2fbaa13034f3804608407",
+      "canonical_requirement_sha256": "93f6ce7f2d03d71340e469a7acbf168370fa545131b2fbaa13034f3804608407",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/encoder-quality/spec.md",
+      "capability": "encoder-quality",
+      "requirement": "Optional zopflipng on PNG Ultra",
+      "disposition": "verified",
+      "source_requirement_sha256": "8df21eb2de022cd6b28de4abba803e82bce6850c26bbc311004c3388874f9f37",
+      "canonical_requirement_sha256": "8df21eb2de022cd6b28de4abba803e82bce6850c26bbc311004c3388874f9f37",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/encoder-quality/spec.md",
+      "capability": "encoder-quality",
+      "requirement": "Encoder Tool Discovery",
+      "disposition": "verified",
+      "source_requirement_sha256": "0b5a05aba2c88ee0770c6a8a29742db20d02fd15c97a4fd948eb6d35266d3088",
+      "canonical_requirement_sha256": "0b5a05aba2c88ee0770c6a8a29742db20d02fd15c97a4fd948eb6d35266d3088",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "capability": "formats",
+      "requirement": "SQLite .db Alias",
+      "disposition": "verified",
+      "source_requirement_sha256": "0f116da08fef247f9158f3da4a2e4eb9a0909fc58ba160f0aff56c0461fc869b",
+      "canonical_requirement_sha256": "0f116da08fef247f9158f3da4a2e4eb9a0909fc58ba160f0aff56c0461fc869b",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "capability": "formats",
+      "requirement": "Image Extension Aliases",
+      "disposition": "verified",
+      "source_requirement_sha256": "babe9b258e7752c6cd2951d75f2946a5967bb891e0dc035e9f8d564fe73e0041",
+      "canonical_requirement_sha256": "babe9b258e7752c6cd2951d75f2946a5967bb891e0dc035e9f8d564fe73e0041",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "capability": "formats",
+      "requirement": "ImageMagick Raster Formats",
+      "disposition": "verified",
+      "source_requirement_sha256": "87f0362ebf2011c847a7493e918e1885377323f3ff302e0c3f3785053543a703",
+      "canonical_requirement_sha256": "87f0362ebf2011c847a7493e918e1885377323f3ff302e0c3f3785053543a703",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "capability": "formats",
+      "requirement": "Ogg Vorbis and Opus",
+      "disposition": "verified",
+      "source_requirement_sha256": "1f8a0ed72f90969eb8d3ff3683eb30ee994a9971795969ba64f238074a61ae6d",
+      "canonical_requirement_sha256": "1f8a0ed72f90969eb8d3ff3683eb30ee994a9971795969ba64f238074a61ae6d",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "capability": "formats",
+      "requirement": "M4B Alias",
+      "disposition": "verified",
+      "source_requirement_sha256": "8b061c4c1c58b7636b0afd44c8f4a303abb1382e5dc67394b6109dbb7fa960c9",
+      "canonical_requirement_sha256": "8b061c4c1c58b7636b0afd44c8f4a303abb1382e5dc67394b6109dbb7fa960c9",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "capability": "formats",
+      "requirement": "Additional ZIP Aliases",
+      "disposition": "verified",
+      "source_requirement_sha256": "40f989d14b5b66a0cb3de682816677f48b5c8309cf9163933f52b4780a317f46",
+      "canonical_requirement_sha256": "40f989d14b5b66a0cb3de682816677f48b5c8309cf9163933f52b4780a317f46",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "capability": "formats",
+      "requirement": "ISO CPIO AR Only With Round-Trip",
+      "disposition": "verified",
+      "source_requirement_sha256": "f5f314b825022ee8037c65114b614118f2b40f8a93e48fcc8c8ea4e893effc91",
+      "canonical_requirement_sha256": "f5f314b825022ee8037c65114b614118f2b40f8a93e48fcc8c8ea4e893effc91",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/nested-assets/spec.md",
+      "capability": "nested-assets",
+      "requirement": "Virtual Nested Asset Containers",
+      "disposition": "verified",
+      "source_requirement_sha256": "fb9b96d3d45f3ee3c216e6d184c6b00f736febdedcee0fc134fca1a1fbaeafde",
+      "canonical_requirement_sha256": "fb9b96d3d45f3ee3c216e6d184c6b00f736febdedcee0fc134fca1a1fbaeafde",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/nested-assets/spec.md",
+      "capability": "nested-assets",
+      "requirement": "Audio Cover Art Extraction",
+      "disposition": "verified",
+      "source_requirement_sha256": "33954465a92a725e982e5dfc467539af07e44dab39cd5a6a2a1d6b8a2fd04fe5",
+      "canonical_requirement_sha256": "33954465a92a725e982e5dfc467539af07e44dab39cd5a6a2a1d6b8a2fd04fe5",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/nested-assets/spec.md",
+      "capability": "nested-assets",
+      "requirement": "XML Data URI Extraction",
+      "disposition": "verified",
+      "source_requirement_sha256": "ed205c72b0c07cda1028672676419c30354fd064be76edd051dadc6d8e8d04e9",
+      "canonical_requirement_sha256": "ed205c72b0c07cda1028672676419c30354fd064be76edd051dadc6d8e8d04e9",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/xml-json/spec.md",
+      "capability": "xml-json",
+      "requirement": "SVG Packer Fallback",
+      "disposition": "verified",
+      "source_requirement_sha256": "9526db7044159e7a981bfbfa74b75df7455ff47488f7c683363b620efcd01637",
+      "canonical_requirement_sha256": "9526db7044159e7a981bfbfa74b75df7455ff47488f7c683363b620efcd01637",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-cpio-member-recompression/specs/cpbz2-recompression/spec.md",
+      "capability": "cpbz2-recompression",
+      "requirement": "CPBZ2 Stream Identification",
+      "disposition": "verified",
+      "source_requirement_sha256": "a849240e4bc43610c120dfa48fbd6c370a4186a63d66745ef569ff8e04e61e8a",
+      "canonical_requirement_sha256": "a849240e4bc43610c120dfa48fbd6c370a4186a63d66745ef569ff8e04e61e8a",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-cpio-member-recompression/specs/cpbz2-recompression/spec.md",
+      "capability": "cpbz2-recompression",
+      "requirement": "Exact CPIO Payload Preservation",
+      "disposition": "verified",
+      "source_requirement_sha256": "9f3a9efba2ab4676c4b67d72bb3f53d13d7d8c5340fe83f312009b40f9af55cb",
+      "canonical_requirement_sha256": "9f3a9efba2ab4676c4b67d72bb3f53d13d7d8c5340fe83f312009b40f9af55cb",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-cpio-member-recompression/specs/cpbz2-recompression/spec.md",
+      "capability": "cpbz2-recompression",
+      "requirement": "Shared Publication Policies",
+      "disposition": "verified",
+      "source_requirement_sha256": "70b5ee077cf3ce477827fa1b100fd9b524d6ee8ae6baeab7d050f182ddc0873d",
+      "canonical_requirement_sha256": "70b5ee077cf3ce477827fa1b100fd9b524d6ee8ae6baeab7d050f182ddc0873d",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-cpio-member-recompression/specs/cpio-member-recompression/spec.md",
+      "capability": "cpio-member-recompression",
+      "requirement": "CPIO Container Recognition",
+      "disposition": "verified",
+      "source_requirement_sha256": "dc5912fa7026ef294ba2622593fc4db81cadf3bff490a76164a498934f724b29",
+      "canonical_requirement_sha256": "dc5912fa7026ef294ba2622593fc4db81cadf3bff490a76164a498934f724b29",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-cpio-member-recompression/specs/cpio-member-recompression/spec.md",
+      "capability": "cpio-member-recompression",
+      "requirement": "Bounded CPIO Profile Parsing",
+      "disposition": "verified",
+      "source_requirement_sha256": "60563e7605c2aa8213a11b912225a7cf2ac53e1d75a098249d304bbc02030f76",
+      "canonical_requirement_sha256": "60563e7605c2aa8213a11b912225a7cf2ac53e1d75a098249d304bbc02030f76",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-cpio-member-recompression/specs/cpio-member-recompression/spec.md",
+      "capability": "cpio-member-recompression",
+      "requirement": "Safe CPIO Member Optimization",
+      "disposition": "verified",
+      "source_requirement_sha256": "1b1ad71871521c403812faa044d575573662b495ad46f23f3d93b940d100d188",
+      "canonical_requirement_sha256": "1b1ad71871521c403812faa044d575573662b495ad46f23f3d93b940d100d188",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-cpio-member-recompression/specs/cpio-member-recompression/spec.md",
+      "capability": "cpio-member-recompression",
+      "requirement": "Independently Verified CPIO Publication",
+      "disposition": "verified",
+      "source_requirement_sha256": "a4f3d5152ea3aed0981514639324d98cb5995e0305bab6775075da0b62c1e3f7",
+      "canonical_requirement_sha256": "a4f3d5152ea3aed0981514639324d98cb5995e0305bab6775075da0b62c1e3f7",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-dicom-support/specs/dicom/spec.md",
+      "capability": "dicom",
+      "requirement": "DICOM Format Identification",
+      "disposition": "verified",
+      "source_requirement_sha256": "06723efe2609d8eee8e865db4aa9e5cdc435f41c9f9dd8b1394ad0bbf62daa58",
+      "canonical_requirement_sha256": "06723efe2609d8eee8e865db4aa9e5cdc435f41c9f9dd8b1394ad0bbf62daa58",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-dicom-support/specs/dicom/spec.md",
+      "capability": "dicom",
+      "requirement": "Lossless DICOM Recompression",
+      "disposition": "verified",
+      "source_requirement_sha256": "f9658bc3fdcd89ef3edc77053985425b0346061667a0b2beabec0cd17a2084b0",
+      "canonical_requirement_sha256": "f9658bc3fdcd89ef3edc77053985425b0346061667a0b2beabec0cd17a2084b0",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-dicom-support/specs/dicom/spec.md",
+      "capability": "dicom",
+      "requirement": "DICOM Tool Discovery",
+      "disposition": "verified",
+      "source_requirement_sha256": "10006165d33d13b3215de252737bf3430c26207defae5e1caf764b535573d2a5",
+      "canonical_requirement_sha256": "10006165d33d13b3215de252737bf3430c26207defae5e1caf764b535573d2a5",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-gguf-recompression/specs/gguf-recompression/spec.md",
+      "capability": "gguf-recompression",
+      "requirement": "Bounded content-based GGUF inspection",
+      "disposition": "verified",
+      "source_requirement_sha256": "9ffcd9afd0600ec06cdacb12eef6058026ff6edb8f836e58e5d2163a59132ff8",
+      "canonical_requirement_sha256": "9ffcd9afd0600ec06cdacb12eef6058026ff6edb8f836e58e5d2163a59132ff8",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-gguf-recompression/specs/gguf-recompression/spec.md",
+      "capability": "gguf-recompression",
+      "requirement": "Feasibility-gated GGUF writer registration",
+      "disposition": "pending",
+      "source_requirement_sha256": "a33bf9b19835a477c87114c676019cda81d61f46764428c05fd0eb24e601675a",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-gguf-recompression/specs/gguf-recompression/spec.md",
+      "capability": "gguf-recompression",
+      "requirement": "Exact GGUF tensor and model preservation",
+      "disposition": "pending",
+      "source_requirement_sha256": "ebde544288b9d4c35426bea55e7ee4c28349989a29ecc57f458bbe525be8c788",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-gguf-recompression/specs/gguf-recompression/spec.md",
+      "capability": "gguf-recompression",
+      "requirement": "Complete model-set qualification",
+      "disposition": "pending",
+      "source_requirement_sha256": "b532b35981b74c733bf604106e593e2ac4335f33dc0b839ec7b22661035d6f64",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-gguf-recompression/specs/gguf-recompression/spec.md",
+      "capability": "gguf-recompression",
+      "requirement": "Verified transactional GGUF publication",
+      "disposition": "pending",
+      "source_requirement_sha256": "d26c560c5a5e6f7abcf26418be01d2bbb6acdaf188aa68d51adfd83219be592b",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
+      "capability": "hwp-stream-recompression",
+      "requirement": "Opt-in qualified HWP stream selection",
+      "disposition": "verified",
+      "source_requirement_sha256": "760b522d67870d84f9e5d75aa9934dfb8fa830cfb5223e1b2ad666bcc4b9d716",
+      "canonical_requirement_sha256": "760b522d67870d84f9e5d75aa9934dfb8fa830cfb5223e1b2ad666bcc4b9d716",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
+      "capability": "hwp-stream-recompression",
+      "requirement": "Exact HWP raw-DEFLATE content preservation",
+      "disposition": "verified",
+      "source_requirement_sha256": "8c97cbb26deb80ea66885b5cdf4023b575cb38761f463472befb645c13d5e71d",
+      "canonical_requirement_sha256": "8c97cbb26deb80ea66885b5cdf4023b575cb38761f463472befb645c13d5e71d",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
+      "capability": "hwp-stream-recompression",
+      "requirement": "Qualified BinData compression identity",
+      "disposition": "verified",
+      "source_requirement_sha256": "039263656df4828a82e526a294d9e0341796e55fac2110234b1a588104bfbe87",
+      "canonical_requirement_sha256": "039263656df4828a82e526a294d9e0341796e55fac2110234b1a588104bfbe87",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
+      "capability": "hwp-stream-recompression",
+      "requirement": "Independent HWP intended-change manifest",
+      "disposition": "verified",
+      "source_requirement_sha256": "a6f4dcb30e71f1124408ba8390f25e40b00f72ce7620a7ad79acdc2adf276cbd",
+      "canonical_requirement_sha256": "a6f4dcb30e71f1124408ba8390f25e40b00f72ce7620a7ad79acdc2adf276cbd",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
+      "capability": "hwp-stream-recompression",
+      "requirement": "Shared bounded HWP execution and physical selection",
+      "disposition": "verified",
+      "source_requirement_sha256": "9430e0869f0172a348ab41432e917bcbe731fd0304418123ae0f0dccece9b95a",
+      "canonical_requirement_sha256": "9430e0869f0172a348ab41432e917bcbe731fd0304418123ae0f0dccece9b95a",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-inspection-command/specs/inspection/spec.md",
+      "capability": "inspection",
+      "requirement": "Read Only Inspection Command",
+      "disposition": "verified",
+      "source_requirement_sha256": "6b5f50d32d342bcc5224c38d93a0b05e16ee0d453b02a1dec45bb4c6f2bd47ec",
+      "canonical_requirement_sha256": "6b5f50d32d342bcc5224c38d93a0b05e16ee0d453b02a1dec45bb4c6f2bd47ec",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-inspection-command/specs/inspection/spec.md",
+      "capability": "inspection",
+      "requirement": "Capability and Eligibility Planning",
+      "disposition": "verified",
+      "source_requirement_sha256": "963baa4b00509a33ce13300ca7e55a2c8556229ab7986294b3acd03048d710aa",
+      "canonical_requirement_sha256": "963baa4b00509a33ce13300ca7e55a2c8556229ab7986294b3acd03048d710aa",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-inspection-command/specs/inspection/spec.md",
+      "capability": "inspection",
+      "requirement": "Estimated and Measured Information Separation",
+      "disposition": "verified",
+      "source_requirement_sha256": "f856529c3b6b0e696629a8bb85937e1897e3607a0b151aee3f5a8e811cd06692",
+      "canonical_requirement_sha256": "f856529c3b6b0e696629a8bb85937e1897e3607a0b151aee3f5a8e811cd06692",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-mat-recompression/specs/mat-recompression/spec.md",
+      "capability": "mat-recompression",
+      "requirement": "MAT dialect specific dispatch",
+      "disposition": "pending",
+      "source_requirement_sha256": "d13587b9cc2db515ee7b52175d1eda8dc46d5f9062d90cd0b0b6932cce94eea6",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-mat-recompression/specs/mat-recompression/spec.md",
+      "capability": "mat-recompression",
+      "requirement": "Existing compressed element preservation",
+      "disposition": "pending",
+      "source_requirement_sha256": "ccd9913fe0262364a620372f12ea3c75d4b9806bb9436d23acfd2d050724247e",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-mat-recompression/specs/mat-recompression/spec.md",
+      "capability": "mat-recompression",
+      "requirement": "Complete MAT framing validation",
+      "disposition": "pending",
+      "source_requirement_sha256": "564b223fdf44ec590f68058b3ba31e644c4e0bef98cd7a2e72b15d272291b534",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-mat-recompression/specs/mat-recompression/spec.md",
+      "capability": "mat-recompression",
+      "requirement": "MATLAB v7.3 graph and user block preservation",
+      "disposition": "pending",
+      "source_requirement_sha256": "b8b10d69355b86d7fb904992d8a4ac35690dcad6522fdecd716afe49373e1239",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-mat-recompression/specs/mat-recompression/spec.md",
+      "capability": "mat-recompression",
+      "requirement": "Verified MAT acceptance and publication",
+      "disposition": "pending",
+      "source_requirement_sha256": "72646570fa81d92e666565640d7b7af8fbe74665750a90b494af443ab1ecfd4e",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-mat-recompression/specs/mat-recompression/spec.md",
+      "capability": "mat-recompression",
+      "requirement": "Independent per dialect release evidence",
+      "disposition": "pending",
+      "source_requirement_sha256": "7ce7d751c7da5d86a838115c39fea3e4689d8dceb57b905f166c9a8f0b7c98d8",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-nib-compaction/specs/nib-compaction/spec.md",
+      "capability": "nib-compaction",
+      "requirement": "Qualified compiled nib routing",
+      "disposition": "verified",
+      "source_requirement_sha256": "a92cb906305716a0c47e7c589c367550387947c07af8d381c7dc4b5b255d0bb5",
+      "canonical_requirement_sha256": "a92cb906305716a0c47e7c589c367550387947c07af8d381c7dc4b5b255d0bb5",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-nib-compaction/specs/nib-compaction/spec.md",
+      "capability": "nib-compaction",
+      "requirement": "Identity-preserving archive compaction",
+      "disposition": "verified",
+      "source_requirement_sha256": "eb5018e15c00682fb59ff455af3138d49267100271ca024ade10a1657ce23954",
+      "canonical_requirement_sha256": "eb5018e15c00682fb59ff455af3138d49267100271ca024ade10a1657ce23954",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-nib-compaction/specs/nib-compaction/spec.md",
+      "capability": "nib-compaction",
+      "requirement": "Independent bounded verification and publication",
+      "disposition": "verified",
+      "source_requirement_sha256": "b254714db9ee784e05ab77581905a8c515e221ad22bac34488449f26f97230e4",
+      "canonical_requirement_sha256": "b254714db9ee784e05ab77581905a8c515e221ad22bac34488449f26f97230e4",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-officeart-image-deduplication/specs/officeart-deduplication/spec.md",
+      "capability": "officeart-deduplication",
+      "requirement": "Explicit byte-identical OfficeArt deduplication",
+      "disposition": "verified",
+      "source_requirement_sha256": "a9aa7f8c575c5c4ce51e0b92ec66ce71bd04417b149ff641a2e450e44e394b15",
+      "canonical_requirement_sha256": "a9aa7f8c575c5c4ce51e0b92ec66ce71bd04417b149ff641a2e450e44e394b15",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-officeart-image-deduplication/specs/officeart-deduplication/spec.md",
+      "capability": "officeart-deduplication",
+      "requirement": "Exhaustive deduplication consumer mapping",
+      "disposition": "verified",
+      "source_requirement_sha256": "a428ee8ecc347f32af59e803338d755ed978ef38b76f18d1914b9662dfc0d61f",
+      "canonical_requirement_sha256": "a428ee8ecc347f32af59e803338d755ed978ef38b76f18d1914b9662dfc0d61f",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-officeart-image-deduplication/specs/officeart-deduplication/spec.md",
+      "capability": "officeart-deduplication",
+      "requirement": "Independent image removal verification",
+      "disposition": "verified",
+      "source_requirement_sha256": "d2d282d6058dace5e5345aecb29a120665f91a6bc01e69bac91a0ec2e979b3ea",
+      "canonical_requirement_sha256": "d2d282d6058dace5e5345aecb29a120665f91a6bc01e69bac91a0ec2e979b3ea",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-officeart-image-deduplication/specs/officeart-deduplication/spec.md",
+      "capability": "officeart-deduplication",
+      "requirement": "Bounded deduplication with actual savings reporting",
+      "disposition": "verified",
+      "source_requirement_sha256": "810627ab12a0b7b99fa576f5cc1f23d0fbe44259fdcff1a3e0759ef9372aeeb3",
+      "canonical_requirement_sha256": "810627ab12a0b7b99fa576f5cc1f23d0fbe44259fdcff1a3e0759ef9372aeeb3",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Shared codec with authoritative host discovery",
+      "disposition": "verified",
+      "source_requirement_sha256": "0c794c320999a17d553f9426d5fbcadf357a7a20dc96dd130bd7511466d82841",
+      "canonical_requirement_sha256": "0c794c320999a17d553f9426d5fbcadf357a7a20dc96dd130bd7511466d82841",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Exact metafile preservation and separate verification",
+      "disposition": "verified",
+      "source_requirement_sha256": "935ae4a5cf700aba004a9657446cf9900cf8b16abc050ec67fe2002e988faf54",
+      "canonical_requirement_sha256": "935ae4a5cf700aba004a9657446cf9900cf8b16abc050ec67fe2002e988faf54",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Bounded encoding and measured candidate selection",
+      "disposition": "verified",
+      "source_requirement_sha256": "7e9159c60d5505b63d505b3cdd3d1b64b52a33edacc4e81612a4f91bba711b76",
+      "canonical_requirement_sha256": "7e9159c60d5505b63d505b3cdd3d1b64b52a33edacc4e81612a4f91bba711b76",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Raster image qualification is explicit",
+      "disposition": "verified",
+      "source_requirement_sha256": "f0afea3453e6ffac88eeeaef562338bc21f0028534e52dc67e2f7bd19d32e602",
+      "canonical_requirement_sha256": "f0afea3453e6ffac88eeeaef562338bc21f0028534e52dc67e2f7bd19d32e602",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Existing transaction and diagnostic policies apply",
+      "disposition": "verified",
+      "source_requirement_sha256": "ebcfbd94f47c7fbb53cc827f407db7b0061e90909409047f2cb60b0a69fba2e2",
+      "canonical_requirement_sha256": "ebcfbd94f47c7fbb53cc827f407db7b0061e90909409047f2cb60b0a69fba2e2",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Qualified OfficeArt raster selection",
+      "disposition": "verified",
+      "source_requirement_sha256": "3dfe696ba471cf027ec3cdf5f216284eb3ca72681ceecb1a52b0e49ea01e89c9",
+      "canonical_requirement_sha256": "3dfe696ba471cf027ec3cdf5f216284eb3ca72681ceecb1a52b0e49ea01e89c9",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Exact PNG IDAT preservation contract",
+      "disposition": "verified",
+      "source_requirement_sha256": "98d9639b7c573fde580a2c5c6ea074034722fd164937b186a5b3eb6e4e407618",
+      "canonical_requirement_sha256": "98d9639b7c573fde580a2c5c6ea074034722fd164937b186a5b3eb6e4e407618",
+      "note": "Working-tree evidence; not release/deployment evidence. 2026-10-08: separately qualified exact-unfiltered PPT PNG profile; original filtered codec and immutable host boundaries remain. See dev/ole/qualification-ppt-png-refiltering.json. DOC exception reconciled on 2026-10-08 under the separately qualified DOC PNG refiltering requirement."
+    },
+    {
+      "source": "openspec/changes/add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Exact JPEG coefficient and metadata contract",
+      "disposition": "verified",
+      "source_requirement_sha256": "26392b648898114a4af7556080391b1102367f50414c28662eaff27a044b363e",
+      "canonical_requirement_sha256": "26392b648898114a4af7556080391b1102367f50414c28662eaff27a044b363e",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Independent raster and host union verification",
+      "disposition": "verified",
+      "source_requirement_sha256": "20e6174e859c5f77de6ba57d21194a38b8f37904e2a598baee8a81b5bae6ab70",
+      "canonical_requirement_sha256": "20e6174e859c5f77de6ba57d21194a38b8f37904e2a598baee8a81b5bae6ab70",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Bounded optional raster execution and measured selection",
+      "disposition": "verified",
+      "source_requirement_sha256": "ad5926a3381f6707a487fafc968dd9de8a6905519ead980efe85bc01b7b27dbb",
+      "canonical_requirement_sha256": "ad5926a3381f6707a487fafc968dd9de8a6905519ead980efe85bc01b7b27dbb",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ole-container-compaction/specs/ole-compaction/spec.md",
+      "capability": "ole-compaction",
+      "requirement": "Qualified CFB Office Detection",
+      "disposition": "verified",
+      "source_requirement_sha256": "1fa69831ccb5c04467e0fdd265ef4ea81606ba6ad2997da2f1fbdb3eecd8ea69",
+      "canonical_requirement_sha256": "1fa69831ccb5c04467e0fdd265ef4ea81606ba6ad2997da2f1fbdb3eecd8ea69",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ole-container-compaction/specs/ole-compaction/spec.md",
+      "capability": "ole-compaction",
+      "requirement": "Complete OLE Eligibility Gate",
+      "disposition": "verified",
+      "source_requirement_sha256": "b323c92e8612d4cf21820558dcedbb8caf7106b1dba4ac83c6de999608d24a96",
+      "canonical_requirement_sha256": "b323c92e8612d4cf21820558dcedbb8caf7106b1dba4ac83c6de999608d24a96",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ole-container-compaction/specs/ole-compaction/spec.md",
+      "capability": "ole-compaction",
+      "requirement": "Stream-Preserving Container Compaction",
+      "disposition": "verified",
+      "source_requirement_sha256": "49e9012a1061c4e8a58d8a900581e205434a73ad80ad027095002c5137f37dcf",
+      "canonical_requirement_sha256": "49e9012a1061c4e8a58d8a900581e205434a73ad80ad027095002c5137f37dcf",
+      "note": "Working-tree evidence; not release/deployment evidence. 2026-10-08: qualify exact nonzero root creation FILETIME preservation through native DOC/XLS/PPT compaction, record/embedded modes and dry-run; reject creation/modification timestamp mutations. Evidence: test/test_ole.py and dev/ole/README.md."
+    },
+    {
+      "source": "openspec/changes/add-ole-container-compaction/specs/ole-compaction/spec.md",
+      "capability": "ole-compaction",
+      "requirement": "Independent Structural and Preservation Validation",
+      "disposition": "verified",
+      "source_requirement_sha256": "ebd8582294c7986ae8e61c6a75ff5052da00f10d9114d90fe4e60282ffd4f128",
+      "canonical_requirement_sha256": "ebd8582294c7986ae8e61c6a75ff5052da00f10d9114d90fe4e60282ffd4f128",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ole-container-compaction/specs/ole-compaction/spec.md",
+      "capability": "ole-compaction",
+      "requirement": "Shared OLE Execution and Reporting Contract",
+      "disposition": "verified",
+      "source_requirement_sha256": "ef3d027a6cb53ae827f3b1ca78d464859625a3ce8e348dd27fa9eb2f951e04b2",
+      "canonical_requirement_sha256": "ef3d027a6cb53ae827f3b1ca78d464859625a3ce8e348dd27fa9eb2f951e04b2",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
+      "capability": "ole-embedded-recompression",
+      "requirement": "Explicit embedded payload optimization mode",
+      "disposition": "verified",
+      "source_requirement_sha256": "abd495606ef4269466bab2c0d5c86a924295b3d937103fc0205cff4ae5b334d1",
+      "canonical_requirement_sha256": "abd495606ef4269466bab2c0d5c86a924295b3d937103fc0205cff4ae5b334d1",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
+      "capability": "ole-embedded-recompression",
+      "requirement": "Authoritative embedded object discovery",
+      "disposition": "verified",
+      "source_requirement_sha256": "87b53a72fd60b452d2456c492ce800c66ff4d5c56d8d5a6b431eb428abde843b",
+      "canonical_requirement_sha256": "87b53a72fd60b452d2456c492ce800c66ff4d5c56d8d5a6b431eb428abde843b",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
+      "capability": "ole-embedded-recompression",
+      "requirement": "Wrapper and substorage identity preservation",
+      "disposition": "verified",
+      "source_requirement_sha256": "f785e7bd17e2a0724b30b1778a2870d553a3bb45481959414e0b3f7f34592500",
+      "canonical_requirement_sha256": "f785e7bd17e2a0724b30b1778a2870d553a3bb45481959414e0b3f7f34592500",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
+      "capability": "ole-embedded-recompression",
+      "requirement": "Independent recursive intended-change verification",
+      "disposition": "verified",
+      "source_requirement_sha256": "442ef79e98268ff0c563a3bb578dc4864412b0506ed08cb992050e7a92857c4e",
+      "canonical_requirement_sha256": "442ef79e98268ff0c563a3bb578dc4864412b0506ed08cb992050e7a92857c4e",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
+      "capability": "ole-embedded-recompression",
+      "requirement": "Shared recursive execution and parent savings",
+      "disposition": "verified",
+      "source_requirement_sha256": "e0501741b494c053a4cd91463b146e1f210576ec169b68cb068532073dff1f4e",
+      "canonical_requirement_sha256": "e0501741b494c053a4cd91463b146e1f210576ec169b68cb068532073dff1f4e",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ole-maximum-compression-effort/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Versioned OLE maximum effort mapping",
+      "disposition": "verified",
+      "source_requirement_sha256": "eb8bba93191281fdecc5ea2e8e7c9a632c408f5420e3ad29ac134bd86d52df94",
+      "canonical_requirement_sha256": "eb8bba93191281fdecc5ea2e8e7c9a632c408f5420e3ad29ac134bd86d52df94",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ole-maximum-compression-effort/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Best verified OLE trial retention",
+      "disposition": "verified",
+      "source_requirement_sha256": "670cc21ed5aa6b6f1acfa1c4acfbf32e872b6edca59d99d4471b85eb88c12f82",
+      "canonical_requirement_sha256": "670cc21ed5aa6b6f1acfa1c4acfbf32e872b6edca59d99d4471b85eb88c12f82",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ole-maximum-compression-effort/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Effort compatibility and cumulative bounds",
+      "disposition": "verified",
+      "source_requirement_sha256": "4ff76d57a2e9647913e1fb49568d979723f553bb07079e787be834ee328951ba",
+      "canonical_requirement_sha256": "4ff76d57a2e9647913e1fb49568d979723f553bb07079e787be834ee328951ba",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ole-maximum-compression-effort/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Measured maximum effort evidence",
+      "disposition": "verified",
+      "source_requirement_sha256": "0da21e8d6dadc9ae86bc51fb3584d02ba9008083aa431634f699848dae85feaa",
+      "canonical_requirement_sha256": "0da21e8d6dadc9ae86bc51fb3584d02ba9008083aa431634f699848dae85feaa",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-onnx-recompression/specs/onnx-recompression/spec.md",
+      "capability": "onnx-recompression",
+      "requirement": "Bounded passive ONNX inspection",
+      "disposition": "verified",
+      "source_requirement_sha256": "476cab513c6fb3c5d3549589333573547d43014e5b0a83883f456404a7f6d4d5",
+      "canonical_requirement_sha256": "476cab513c6fb3c5d3549589333573547d43014e5b0a83883f456404a7f6d4d5",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-onnx-recompression/specs/onnx-recompression/spec.md",
+      "capability": "onnx-recompression",
+      "requirement": "Safe external-data resolution",
+      "disposition": "verified",
+      "source_requirement_sha256": "98aaa0ce6ba1105958f8e753f91156d41312d7a76661834163f8adb1e12a0bcc",
+      "canonical_requirement_sha256": "98aaa0ce6ba1105958f8e753f91156d41312d7a76661834163f8adb1e12a0bcc",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-onnx-recompression/specs/onnx-recompression/spec.md",
+      "capability": "onnx-recompression",
+      "requirement": "Feasibility-gated ONNX writer registration",
+      "disposition": "pending",
+      "source_requirement_sha256": "8fa1b9e38d92943597c0ddc19e060ec56056b31cab74f91f986bcd9a9d28f38a",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-onnx-recompression/specs/onnx-recompression/spec.md",
+      "capability": "onnx-recompression",
+      "requirement": "Exact ONNX model and tensor preservation",
+      "disposition": "pending",
+      "source_requirement_sha256": "82c569c8c94310768eddd552bb2594fb225a6f77c47fc783c7a47f242d942664",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-onnx-recompression/specs/onnx-recompression/spec.md",
+      "capability": "onnx-recompression",
+      "requirement": "Atomic verified model publication",
+      "disposition": "pending",
+      "source_requirement_sha256": "2b1d1a44fb1d36444ad4cd924114e39cb02c2429ccf8febedf978f11a68dc1e9",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-operation-resource-budgets/specs/operation-budgets/spec.md",
+      "capability": "operation-budgets",
+      "requirement": "Shared Root Input Resource Context",
+      "disposition": "pending",
+      "source_requirement_sha256": "9204164eba3180a4e3607ebb417eaecd22c42d86614a939d38566967b73618b6",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-operation-resource-budgets/specs/operation-budgets/spec.md",
+      "capability": "operation-budgets",
+      "requirement": "Bounded Decoding and Process Lifetime",
+      "disposition": "pending",
+      "source_requirement_sha256": "b05999a0e21edc422772b5a8297165d847c1d4f07d90b1dc90db5efd977e218d",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-operation-resource-budgets/specs/operation-budgets/spec.md",
+      "capability": "operation-budgets",
+      "requirement": "Extraction Path and Link Containment",
+      "disposition": "pending",
+      "source_requirement_sha256": "5698392ea5d7d4db8d1671dd9612f28554c61518fd15793254c295e42f4e3cc3",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-operation-resource-budgets/specs/operation-budgets/spec.md",
+      "capability": "operation-budgets",
+      "requirement": "Explicit Extraction Limit Compatibility",
+      "disposition": "pending",
+      "source_requirement_sha256": "e3c15790033d17c89bb0dccd0b265cffc29053555ccfe438216637dd07a0fe4e",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-optimization-profiles/specs/optimization-profiles/spec.md",
+      "capability": "optimization-profiles",
+      "requirement": "Versioned Named Optimization Profiles",
+      "disposition": "verified",
+      "source_requirement_sha256": "8750565d3f8a57453984b214e1ab948c7d427516e128c9151bfc554117222fe7",
+      "canonical_requirement_sha256": "8750565d3f8a57453984b214e1ab948c7d427516e128c9151bfc554117222fe7",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-optimization-profiles/specs/optimization-profiles/spec.md",
+      "capability": "optimization-profiles",
+      "requirement": "Deterministic Explicit Option Precedence",
+      "disposition": "verified",
+      "source_requirement_sha256": "9de275e35ccd2de6b946c899dfff44f018f33b8fe6cbe962082b4716cd97d8b9",
+      "canonical_requirement_sha256": "9de275e35ccd2de6b946c899dfff44f018f33b8fe6cbe962082b4716cd97d8b9",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-optimization-profiles/specs/optimization-profiles/spec.md",
+      "capability": "optimization-profiles",
+      "requirement": "Profile Aware Execution Resource Controls",
+      "disposition": "pending",
+      "source_requirement_sha256": "a6891a620150d3868dbc590d60e50a0ac6a7c6493f787c4826f8bf2063ba45bf",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
+      "capability": "ppt-ole-recompression",
+      "requirement": "Explicit PPT record recompression mode",
+      "disposition": "verified",
+      "source_requirement_sha256": "df2f26c795e332d500559e96c5fbbbe7cd2e02b32f37713c2b52ccedffc199a4",
+      "canonical_requirement_sha256": "df2f26c795e332d500559e96c5fbbbe7cd2e02b32f37713c2b52ccedffc199a4",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
+      "capability": "ppt-ole-recompression",
+      "requirement": "Qualified single-edit embedded-object selection",
+      "disposition": "verified",
+      "source_requirement_sha256": "4bf5287e1c2829c7bc54a5c38db30675bc75676a78a658931478a90c6989345f",
+      "canonical_requirement_sha256": "4bf5287e1c2829c7bc54a5c38db30675bc75676a78a658931478a90c6989345f",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
+      "capability": "ppt-ole-recompression",
+      "requirement": "Exact decoded-storage preservation and checked relocation",
+      "disposition": "verified",
+      "source_requirement_sha256": "45f04e28ba7b9c3b9571abebf826164549051221fce170b9a962296ece1a908b",
+      "canonical_requirement_sha256": "45f04e28ba7b9c3b9571abebf826164549051221fce170b9a962296ece1a908b",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
+      "capability": "ppt-ole-recompression",
+      "requirement": "Independent intended-change verification",
+      "disposition": "verified",
+      "source_requirement_sha256": "f17fb0a6e25ba03990c2fff08f072c75b82f78f1015603fd65990c30512ca942",
+      "canonical_requirement_sha256": "f17fb0a6e25ba03990c2fff08f072c75b82f78f1015603fd65990c30512ca942",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
+      "capability": "ppt-ole-recompression",
+      "requirement": "Bounded encoders and compatible native replacement",
+      "disposition": "verified",
+      "source_requirement_sha256": "21b3508428724b47e428173f780ba72078189fe6f06b9f4081c1d9d296a562a6",
+      "canonical_requirement_sha256": "21b3508428724b47e428173f780ba72078189fe6f06b9f4081c1d9d296a562a6",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
+      "capability": "ppt-ole-recompression",
+      "requirement": "Transaction and physical-savings acceptance",
+      "disposition": "verified",
+      "source_requirement_sha256": "ce26c06e5aae38afea448992fe532b36ae46dd359744f6999d1dd8e3de87b6b3",
+      "canonical_requirement_sha256": "ce26c06e5aae38afea448992fe532b36ae46dd359744f6999d1dd8e3de87b6b3",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-preserving-format-support/specs/format-expansion/spec.md",
+      "capability": "format-expansion",
+      "requirement": "Additional format routing",
+      "disposition": "verified",
+      "source_requirement_sha256": "abc53bd7bec527cdb550cc7cc466ad5fbb4bb95ddf659ca7d1cd6ab2e1d5dedc",
+      "canonical_requirement_sha256": "abc53bd7bec527cdb550cc7cc466ad5fbb4bb95ddf659ca7d1cd6ab2e1d5dedc",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-preserving-format-support/specs/format-expansion/spec.md",
+      "capability": "format-expansion",
+      "requirement": "Text and QGIS preservation",
+      "disposition": "verified",
+      "source_requirement_sha256": "d52168fd1fcbc1b7d4af4f2d08685e4b89c97f3ebb6759b437662ef1ef3bdaed",
+      "canonical_requirement_sha256": "d52168fd1fcbc1b7d4af4f2d08685e4b89c97f3ebb6759b437662ef1ef3bdaed",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-preserving-format-support/specs/format-expansion/spec.md",
+      "capability": "format-expansion",
+      "requirement": "Verified native lossless optimization",
+      "disposition": "verified",
+      "source_requirement_sha256": "90dfeaa80979476bdb88e461ea2e3ce70f770b792306b8a3da0fb51ca2748b5a",
+      "canonical_requirement_sha256": "90dfeaa80979476bdb88e461ea2e3ce70f770b792306b8a3da0fb51ca2748b5a",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-preserving-format-support/specs/format-expansion/spec.md",
+      "capability": "format-expansion",
+      "requirement": "Existing transaction contracts",
+      "disposition": "verified",
+      "source_requirement_sha256": "badd5b1acd9dbd3ac7ddce876a0e0081adbbab9caba72bb97c9af6dc99d7372a",
+      "canonical_requirement_sha256": "badd5b1acd9dbd3ac7ddce876a0e0081adbbab9caba72bb97c9af6dc99d7372a",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-pytorch-checkpoint-recompression/specs/pytorch-checkpoint-recompression/spec.md",
+      "capability": "pytorch-checkpoint-recompression",
+      "requirement": "Native reader feasibility before checkpoint writers",
+      "disposition": "pending",
+      "source_requirement_sha256": "f02e80078b886026490420bd729049168eaf5472afaec35f2a5b845f209962e7",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-pytorch-checkpoint-recompression/specs/pytorch-checkpoint-recompression/spec.md",
+      "capability": "pytorch-checkpoint-recompression",
+      "requirement": "Passive checkpoint content classification",
+      "disposition": "pending",
+      "source_requirement_sha256": "0d84a70033621a802f8defbed6cbe537d658813861dc974f34f4a292f116fa9e",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-pytorch-checkpoint-recompression/specs/pytorch-checkpoint-recompression/spec.md",
+      "capability": "pytorch-checkpoint-recompression",
+      "requirement": "Exact checkpoint record preservation",
+      "disposition": "pending",
+      "source_requirement_sha256": "1731dc924f1fc2fe4244dee2dcd035b17c638645e309c1b8531c43bf3f30e1b8",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-pytorch-checkpoint-recompression/specs/pytorch-checkpoint-recompression/spec.md",
+      "capability": "pytorch-checkpoint-recompression",
+      "requirement": "Mmap preserving default compatibility",
+      "disposition": "pending",
+      "source_requirement_sha256": "2ec804866f6dda9a9c7c3707d099027a298b5a5e184893799cdd212621a8613d",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-pytorch-checkpoint-recompression/specs/pytorch-checkpoint-recompression/spec.md",
+      "capability": "pytorch-checkpoint-recompression",
+      "requirement": "Explicit load only compatibility",
+      "disposition": "pending",
+      "source_requirement_sha256": "e0e31b9e8cee674435ce393e43bd65f948605c6a05b1f39237af1e77f37c14c8",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-pytorch-checkpoint-recompression/specs/pytorch-checkpoint-recompression/spec.md",
+      "capability": "pytorch-checkpoint-recompression",
+      "requirement": "Protected nested checkpoint routing",
+      "disposition": "pending",
+      "source_requirement_sha256": "a4304fa94fc29a34306312c55807244c71bce0d7da953152a4b28b5fb35a9cb7",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-pytorch-checkpoint-recompression/specs/pytorch-checkpoint-recompression/spec.md",
+      "capability": "pytorch-checkpoint-recompression",
+      "requirement": "Verified transactional checkpoint results",
+      "disposition": "pending",
+      "source_requirement_sha256": "78c330d50950f234ec3294a7f0747669f0c592fbe2b41255f764b0fd464cc49c",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-pytorch-distributed-checkpoint-recompression/specs/pytorch-distributed-checkpoint-recompression/spec.md",
+      "capability": "pytorch-distributed-checkpoint-recompression",
+      "requirement": "DCP is handled as a complete checkpoint set",
+      "disposition": "verified",
+      "source_requirement_sha256": "d0a75d1ad5c88514cccc4e53798885d2be5c948cf3428f6faf425c942b8ba0af",
+      "canonical_requirement_sha256": "d0a75d1ad5c88514cccc4e53798885d2be5c948cf3428f6faf425c942b8ba0af",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-pytorch-distributed-checkpoint-recompression/specs/pytorch-distributed-checkpoint-recompression/spec.md",
+      "capability": "pytorch-distributed-checkpoint-recompression",
+      "requirement": "Feasibility-gated DCP writer registration",
+      "disposition": "pending",
+      "source_requirement_sha256": "961103195b257356e4704ec080f74908fefd8bba3565d448a3e2c876bbb78556",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-pytorch-distributed-checkpoint-recompression/specs/pytorch-distributed-checkpoint-recompression/spec.md",
+      "capability": "pytorch-distributed-checkpoint-recompression",
+      "requirement": "Passive and bounded checkpoint inspection",
+      "disposition": "verified",
+      "source_requirement_sha256": "4ee8cd8806b4bdb8d62e26b6238ad5af6cf24f1d218f02d6a82812b277bdd400",
+      "canonical_requirement_sha256": "4ee8cd8806b4bdb8d62e26b6238ad5af6cf24f1d218f02d6a82812b277bdd400",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-pytorch-distributed-checkpoint-recompression/specs/pytorch-distributed-checkpoint-recompression/spec.md",
+      "capability": "pytorch-distributed-checkpoint-recompression",
+      "requirement": "Exact DCP state and shard preservation",
+      "disposition": "pending",
+      "source_requirement_sha256": "90e2d65794d47966814838c32e4a31518983f120cb3dc6f6927309f98fe9f110",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-pytorch-distributed-checkpoint-recompression/specs/pytorch-distributed-checkpoint-recompression/spec.md",
+      "capability": "pytorch-distributed-checkpoint-recompression",
+      "requirement": "Atomic whole-directory DCP publication",
+      "disposition": "pending",
+      "source_requirement_sha256": "2bf9d0c75dd9392b812fd9853d5ec8d96f881e56df33f215edc2a42a7da21d97",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-r-serialization-recompression/specs/r-serialization-recompression/spec.md",
+      "capability": "r-serialization-recompression",
+      "requirement": "Content identified R serialization profiles",
+      "disposition": "pending",
+      "source_requirement_sha256": "d0229e663204afd26ba5a1f226d2bdf7474c0c752ea746d90661a32d8c2a7bea",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-r-serialization-recompression/specs/r-serialization-recompression/spec.md",
+      "capability": "r-serialization-recompression",
+      "requirement": "Exact serialization preservation",
+      "disposition": "pending",
+      "source_requirement_sha256": "3acb263c93785b3355498e858670a5e100fa5365af8c117b8c8f16d89175fa83",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-r-serialization-recompression/specs/r-serialization-recompression/spec.md",
+      "capability": "r-serialization-recompression",
+      "requirement": "Explicit wrapper compatibility policy",
+      "disposition": "pending",
+      "source_requirement_sha256": "429e77381d2f5a61b8a2619c0117144f7699ed04c69b0c486fc000c50eda443a",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-r-serialization-recompression/specs/r-serialization-recompression/spec.md",
+      "capability": "r-serialization-recompression",
+      "requirement": "Complete bounded envelope verification",
+      "disposition": "pending",
+      "source_requirement_sha256": "744fb0775fb3177df0bbfc4020600447ca089bb4f064ca561ebc03b90eeec019",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-r-serialization-recompression/specs/r-serialization-recompression/spec.md",
+      "capability": "r-serialization-recompression",
+      "requirement": "Verified size based publication",
+      "disposition": "pending",
+      "source_requirement_sha256": "7be1abbcb03ad99eb45d23e87e9ef361ae88a54bcca958359655a58b4da63d9f",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-r-serialization-recompression/specs/r-serialization-recompression/spec.md",
+      "capability": "r-serialization-recompression",
+      "requirement": "Native reader and corpus release evidence",
+      "disposition": "pending",
+      "source_requirement_sha256": "70a80440ada7f086a7737891831a57d3ba126c937db31115c4dd8f13c99478fe",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-resumable-bulk/specs/resumable-bulk/spec.md",
+      "capability": "resumable-bulk",
+      "requirement": "Versioned Atomic Bulk Checkpoints",
+      "disposition": "verified",
+      "source_requirement_sha256": "8075e3dc7d741f07a280a0aafaff373fcef2653cc1db8db99d220707c5560360",
+      "canonical_requirement_sha256": "8075e3dc7d741f07a280a0aafaff373fcef2653cc1db8db99d220707c5560360",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-resumable-bulk/specs/resumable-bulk/spec.md",
+      "capability": "resumable-bulk",
+      "requirement": "Content and Execution Verified Resume",
+      "disposition": "verified",
+      "source_requirement_sha256": "fa46026d21c1fc150eca9c7e34ec87db0778205ae1787346e4ad2831e07b2048",
+      "canonical_requirement_sha256": "fa46026d21c1fc150eca9c7e34ec87db0778205ae1787346e4ad2831e07b2048",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-resumable-bulk/specs/resumable-bulk/spec.md",
+      "capability": "resumable-bulk",
+      "requirement": "Resume Outcome and Savings Accounting",
+      "disposition": "verified",
+      "source_requirement_sha256": "3c2041fca4ac1b8c91449f1d759074fffa249ec05da044c34d27fd279d7c6878",
+      "canonical_requirement_sha256": "3c2041fca4ac1b8c91449f1d759074fffa249ec05da044c34d27fd279d7c6878",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-safetensors-recompression/specs/safetensors-recompression/spec.md",
+      "capability": "safetensors-recompression",
+      "requirement": "Bounded content-based Safetensors inspection",
+      "disposition": "verified",
+      "source_requirement_sha256": "11c346a49fd3f921db128a7b047b7434801afaad407de389131af88e2a7c7408",
+      "canonical_requirement_sha256": "11c346a49fd3f921db128a7b047b7434801afaad407de389131af88e2a7c7408",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-safetensors-recompression/specs/safetensors-recompression/spec.md",
+      "capability": "safetensors-recompression",
+      "requirement": "Feasibility-gated writer registration",
+      "disposition": "pending",
+      "source_requirement_sha256": "6cb01ee640a71876160520cbef4cbd1d3d7cf5eeaa200098d086936e0bbe6c90",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-safetensors-recompression/specs/safetensors-recompression/spec.md",
+      "capability": "safetensors-recompression",
+      "requirement": "Exact tensor representation preservation",
+      "disposition": "pending",
+      "source_requirement_sha256": "9d8a0d8c2900a6602b448202e0d62805303ae623f509a56888c1f63af2f798b5",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-safetensors-recompression/specs/safetensors-recompression/spec.md",
+      "capability": "safetensors-recompression",
+      "requirement": "Verified transactional publication",
+      "disposition": "pending",
+      "source_requirement_sha256": "328c27f32b85dc66388835f29cb1e1335189779443ebf9c1a75c12d4eff1bc85",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-spss-system-file-recompression/specs/spss-system-file-recompression/spec.md",
+      "capability": "spss-system-file-recompression",
+      "requirement": "System file feasibility and content profiles",
+      "disposition": "pending",
+      "source_requirement_sha256": "3cd97e9bd0c73675859514f7e5a185ffb63d378635a40ae8139be9bdfa3d5608",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-spss-system-file-recompression/specs/spss-system-file-recompression/spec.md",
+      "capability": "spss-system-file-recompression",
+      "requirement": "Byte identical system file dictionary",
+      "disposition": "pending",
+      "source_requirement_sha256": "77f17869ff0849a3ff12f01946bb109272fc2c7935cc567a08910d88d6a82e47",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-spss-system-file-recompression/specs/spss-system-file-recompression/spec.md",
+      "capability": "spss-system-file-recompression",
+      "requirement": "Exact decoded case elements",
+      "disposition": "pending",
+      "source_requirement_sha256": "b2e188475787900bccad59df3919f4db507ae20890a83ee0e64d26bfc81bd591",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-spss-system-file-recompression/specs/spss-system-file-recompression/spec.md",
+      "capability": "spss-system-file-recompression",
+      "requirement": "Same kind system file compression",
+      "disposition": "pending",
+      "source_requirement_sha256": "09007507f76d7589d6b52c2b351fa0d880084cf21813ae89faf2954446a96174",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-spss-system-file-recompression/specs/spss-system-file-recompression/spec.md",
+      "capability": "spss-system-file-recompression",
+      "requirement": "Complete bounded system file validation",
+      "disposition": "pending",
+      "source_requirement_sha256": "701b444d966ed32e5427652bb678a8da9e9dd142a117bf242651c3c5df2d7b8e",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-spss-system-file-recompression/specs/spss-system-file-recompression/spec.md",
+      "capability": "spss-system-file-recompression",
+      "requirement": "Safe system file outcomes",
+      "disposition": "pending",
+      "source_requirement_sha256": "23a3b584b0a618239b33f654977e56c335a944a3f0bc1e17057cad3f2ca0d5f5",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-structural-output-validation/specs/nested-assets/spec.md",
+      "capability": "nested-assets",
+      "requirement": "Lossless PDF Stream Walking",
+      "disposition": "verified",
+      "source_requirement_sha256": "16a23d20871a8c4c73977a49815742c8dc828ea21fd783f4c23642542ce0357e",
+      "canonical_requirement_sha256": "16a23d20871a8c4c73977a49815742c8dc828ea21fd783f4c23642542ce0357e",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-structural-output-validation/specs/output-validation/spec.md",
+      "capability": "output-validation",
+      "requirement": "Declared Structural Candidate Validation",
+      "disposition": "verified",
+      "source_requirement_sha256": "a2c7a186a99dfdc0b83fbaa77abf75220f6c51acb41684072e3ce08a2da85adb",
+      "canonical_requirement_sha256": "a2c7a186a99dfdc0b83fbaa77abf75220f6c51acb41684072e3ce08a2da85adb",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-structural-output-validation/specs/output-validation/spec.md",
+      "capability": "output-validation",
+      "requirement": "Lossless Preservation Verification",
+      "disposition": "pending",
+      "source_requirement_sha256": "6c522c07adebda8c146473d28a179393d58979d17ec17b360c37eec1a9f00bf0",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-structural-output-validation/specs/output-validation/spec.md",
+      "capability": "output-validation",
+      "requirement": "Smallest Valid PDF Candidate Selection",
+      "disposition": "verified",
+      "source_requirement_sha256": "2423c4001663b2aa687a1e20320628baf4945b4f3eb4f48dac25978a0d8f8527",
+      "canonical_requirement_sha256": "2423c4001663b2aa687a1e20320628baf4945b4f3eb4f48dac25978a0d8f8527",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-structural-output-validation/specs/pdf/spec.md",
+      "capability": "pdf",
+      "requirement": "Whole File PDF Protection Gate",
+      "disposition": "verified",
+      "source_requirement_sha256": "3f27477bd7857b42993be8696459e53ba3cc6b022e367478a4d71f3d0694663a",
+      "canonical_requirement_sha256": "3f27477bd7857b42993be8696459e53ba3cc6b022e367478a4d71f3d0694663a",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-tracev3-recompression/specs/tracev3-recompression/spec.md",
+      "capability": "tracev3-recompression",
+      "requirement": "Lossless tracev3 recompression",
+      "disposition": "verified",
+      "source_requirement_sha256": "a056c2ee2ffca5d8ebeec74015a42ad9b61ff6f6d3541aca103d4c1895ef0704",
+      "canonical_requirement_sha256": "a056c2ee2ffca5d8ebeec74015a42ad9b61ff6f6d3541aca103d4c1895ef0704",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-tracev3-recompression/specs/tracev3-recompression/spec.md",
+      "capability": "tracev3-recompression",
+      "requirement": "Fail closed on unsupported or unsafe tracev3 inputs",
+      "disposition": "verified",
+      "source_requirement_sha256": "092fc70b0209bf84b6c26d62c2af1a60f2dce208a6d027c1e95c53f1c9285bf9",
+      "canonical_requirement_sha256": "092fc70b0209bf84b6c26d62c2af1a60f2dce208a6d027c1e95c53f1c9285bf9",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-warc-recompression/specs/warc-recompression/spec.md",
+      "capability": "warc-recompression",
+      "requirement": "Preserving record compression",
+      "disposition": "verified",
+      "source_requirement_sha256": "c78a7d4131d7d9262372ebe90776fc365370305a095b5423c56171ac58e0d374",
+      "canonical_requirement_sha256": "c78a7d4131d7d9262372ebe90776fc365370305a095b5423c56171ac58e0d374",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-warc-recompression/specs/warc-recompression/spec.md",
+      "capability": "warc-recompression",
+      "requirement": "WARC-aware routing and conversion",
+      "disposition": "verified",
+      "source_requirement_sha256": "7841062c7dc3aed765aa250b99aac0afb95c84653683006a6f828b330a7dbed7",
+      "canonical_requirement_sha256": "7841062c7dc3aed765aa250b99aac0afb95c84653683006a6f828b330a7dbed7",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-warc-recompression/specs/warc-recompression/spec.md",
+      "capability": "warc-recompression",
+      "requirement": "Independent verification and safe publication",
+      "disposition": "verified",
+      "source_requirement_sha256": "99c572dd4aad42e89ef3ccda0a384aa11a79775cf22ce9de94f4401723e6ad61",
+      "canonical_requirement_sha256": "99c572dd4aad42e89ef3ccda0a384aa11a79775cf22ce9de94f4401723e6ad61",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-warc-recompression/specs/warc-recompression/spec.md",
+      "capability": "warc-recompression",
+      "requirement": "Index awareness",
+      "disposition": "verified",
+      "source_requirement_sha256": "14423e780e7ea2353de72b552adbe9820953e20de8704ef772121997b4562016",
+      "canonical_requirement_sha256": "14423e780e7ea2353de72b552adbe9820953e20de8704ef772121997b4562016",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-zarr-store-recompression/specs/directory-store-transactions/spec.md",
+      "capability": "directory-store-transactions",
+      "requirement": "Distinct absent store destination",
+      "disposition": "pending",
+      "source_requirement_sha256": "6cd3965efc7ade81e21715d0092eb8cacdc07ede34872dcfdae9a996e63cb139",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-zarr-store-recompression/specs/directory-store-transactions/spec.md",
+      "capability": "directory-store-transactions",
+      "requirement": "Owned destination local directory staging",
+      "disposition": "pending",
+      "source_requirement_sha256": "60fc47dbc94a0d07b55fc6800afcb02a08dfe41b302c08ff30262e47c27e2a87",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-zarr-store-recompression/specs/directory-store-transactions/spec.md",
+      "capability": "directory-store-transactions",
+      "requirement": "Stable source generation checks",
+      "disposition": "pending",
+      "source_requirement_sha256": "7427ab1b0789dc39a04badfab35e457a10311798bc3da9add912cdea619d54bf",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-zarr-store-recompression/specs/directory-store-transactions/spec.md",
+      "capability": "directory-store-transactions",
+      "requirement": "Verified atomic no replace directory publication",
+      "disposition": "pending",
+      "source_requirement_sha256": "a263270a0a9d83a2fc9b4e34e00c7ca80430f1000d19ac76c1758804cc5ae355",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-zarr-store-recompression/specs/directory-store-transactions/spec.md",
+      "capability": "directory-store-transactions",
+      "requirement": "Cancellation and no benefit preserve user trees",
+      "disposition": "pending",
+      "source_requirement_sha256": "572ace62109e0212fd04b2b0e7065a1f61f69132bed2bcde25aa1bdd397fa6bb",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-zarr-store-recompression/specs/zarr-store-recompression/spec.md",
+      "capability": "zarr-store-recompression",
+      "requirement": "Explicit complete local Zarr v2 roots",
+      "disposition": "pending",
+      "source_requirement_sha256": "3cbb99bc14fb2ea2ce2ea53c7d70e10cc485e78adc760517060a8823091b5b43",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-zarr-store-recompression/specs/zarr-store-recompression/spec.md",
+      "capability": "zarr-store-recompression",
+      "requirement": "Safe codec compatibility policy",
+      "disposition": "pending",
+      "source_requirement_sha256": "1822a2b34a647e7a6b49fb11d94aff13577c3fc7cf5cd0b42bb2d0961589374c",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-zarr-store-recompression/specs/zarr-store-recompression/spec.md",
+      "capability": "zarr-store-recompression",
+      "requirement": "Exact chunk and array semantics",
+      "disposition": "pending",
+      "source_requirement_sha256": "17f1ffc5b40d7aa497aeafd444dc296fcd5214dc347c891adddf495ea21b6b94",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-zarr-store-recompression/specs/zarr-store-recompression/spec.md",
+      "capability": "zarr-store-recompression",
+      "requirement": "One consistent compressor per array",
+      "disposition": "pending",
+      "source_requirement_sha256": "e0d4f6d0c22d8c077420c8fa5be5d8d299401f18563b6e8d521d04c547cbba38",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-zarr-store-recompression/specs/zarr-store-recompression/spec.md",
+      "capability": "zarr-store-recompression",
+      "requirement": "Consistent consolidated metadata",
+      "disposition": "pending",
+      "source_requirement_sha256": "62716c2ebe53f993a2b78d67085d67d2248acfc647d3f591e0f57902a4edc1a4",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-zarr-store-recompression/specs/zarr-store-recompression/spec.md",
+      "capability": "zarr-store-recompression",
+      "requirement": "Verified store acceptance and reporting",
+      "disposition": "pending",
+      "source_requirement_sha256": "c6fabbfa98ff5a2e66dfc8f06ee41f9b2e14c4bb6a0507061df9984daceb68f1",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/add-zarr-store-recompression/specs/zarr-store-recompression/spec.md",
+      "capability": "zarr-store-recompression",
+      "requirement": "Complete store release evidence",
+      "disposition": "pending",
+      "source_requirement_sha256": "19861436f107567df9e9dc174e69e14573c8fd380adac191422521ae5e0fe711",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-doc-xls-officeart-coverage/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Populated BIFF8 OfficeArt host qualification",
+      "disposition": "pending",
+      "source_requirement_sha256": "b5c3e72239bcc56a1d68792d61ef008c27cc7db4e245d3d737e79af9de934804",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-doc-xls-officeart-coverage/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Complete BIFF8 offset relocation",
+      "disposition": "pending",
+      "source_requirement_sha256": "70b53f9fa344a4ac8055fa886e01b0ee05f5ea323774d590a304537d727b6928",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-doc-xls-officeart-coverage/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Expanded Word picture reference qualification",
+      "disposition": "pending",
+      "source_requirement_sha256": "f7791dbbe77dd547f2532192cc76cb2b8549c2dff6c54f1e7b772a0e9884cb64",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-doc-xls-officeart-coverage/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Mixed Word Data preservation",
+      "disposition": "pending",
+      "source_requirement_sha256": "4ba8dc6aa3f1571e06c8a992ba997590d1b471a5f56d48d26c613143544c5f1c",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-doc-xls-officeart-coverage/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Coverage evidence and compatible fallback",
+      "disposition": "pending",
+      "source_requirement_sha256": "8e03086317fd52124c14f1ab0ed4d1df847d305e7ec1eb1f6f76b038c014780e",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-hdf5-netcdf-recompression/specs/hdf5-recompression/spec.md",
+      "capability": "hdf5-recompression",
+      "requirement": "Complete HDF5 graph preservation",
+      "disposition": "pending",
+      "source_requirement_sha256": "b055aaa773359467616e7f9af26c4d7718a4ae038cd344c75b1fe7a986eec84a",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-hdf5-netcdf-recompression/specs/hdf5-recompression/spec.md",
+      "capability": "hdf5-recompression",
+      "requirement": "Typed HDF5 values and metadata",
+      "disposition": "pending",
+      "source_requirement_sha256": "dd431cbc544bfa266e23569e59e6e551b7a1696b9743097beee06b6ca9ff8017",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-hdf5-netcdf-recompression/specs/hdf5-recompression/spec.md",
+      "capability": "hdf5-recompression",
+      "requirement": "HDF5 container and reader compatibility",
+      "disposition": "pending",
+      "source_requirement_sha256": "2c3925a5864d409743994804051e186b89fcebcceb9ec28baef91e79b6fa7ef7",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-hdf5-netcdf-recompression/specs/hdf5-recompression/spec.md",
+      "capability": "hdf5-recompression",
+      "requirement": "Inspected lossless dataset compression",
+      "disposition": "pending",
+      "source_requirement_sha256": "f089b06a5cba30a386f8ae3fe732bf07121f8cec79afbcc224fea0ea06618473",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-hdf5-netcdf-recompression/specs/hdf5-recompression/spec.md",
+      "capability": "hdf5-recompression",
+      "requirement": "Bounded offline HDF5 processing",
+      "disposition": "pending",
+      "source_requirement_sha256": "52cd92926d55c3aa005ac7cf0f04bbdeb15d4769e34dcf621aa22e9c9cc3e96c",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-hdf5-netcdf-recompression/specs/hdf5-recompression/spec.md",
+      "capability": "hdf5-recompression",
+      "requirement": "HDF5 profile release evidence",
+      "disposition": "pending",
+      "source_requirement_sha256": "8e8d4a06d5102c2eafc8a5d79afedb9c0df86ffe17258a903f2621233e83529a",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-hdf5-netcdf-recompression/specs/netcdf-recompression/spec.md",
+      "capability": "netcdf-recompression",
+      "requirement": "Same kind NetCDF compression",
+      "disposition": "pending",
+      "source_requirement_sha256": "ab48676645715e9cd7dc85aafbb27a6b7c560456e813d9141bc0f15ce874d390",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-hdf5-netcdf-recompression/specs/netcdf-recompression/spec.md",
+      "capability": "netcdf-recompression",
+      "requirement": "Raw scientific data preservation",
+      "disposition": "pending",
+      "source_requirement_sha256": "6ade7ebc774e84eabae89d6973edfa8b9ef6e28c96f0721b38c42361f6e425ea",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-hdf5-netcdf-recompression/specs/netcdf-recompression/spec.md",
+      "capability": "netcdf-recompression",
+      "requirement": "NetCDF attribute and fill semantics",
+      "disposition": "pending",
+      "source_requirement_sha256": "dba2c11e8a4047df37acef6710c6eea9925133e8eea79530d658598626eae8d3",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-hdf5-netcdf-recompression/specs/netcdf-recompression/spec.md",
+      "capability": "netcdf-recompression",
+      "requirement": "Lossless storage policy",
+      "disposition": "pending",
+      "source_requirement_sha256": "1216fa5b0dc46d66530aa60232845b7516d7b1a9549074d4ace73c13e2482ac8",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-hdf5-netcdf-recompression/specs/netcdf-recompression/spec.md",
+      "capability": "netcdf-recompression",
+      "requirement": "Bounded verified NetCDF publication",
+      "disposition": "pending",
+      "source_requirement_sha256": "35a2f3a4e9f604f9a8323d559d081d7c6575309b93615e1377c50e2884803b9c",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-hdf5-netcdf-recompression/specs/netcdf-recompression/spec.md",
+      "capability": "netcdf-recompression",
+      "requirement": "Per model compatibility and benefit evidence",
+      "disposition": "pending",
+      "source_requirement_sha256": "4c1b94bf8acf71731a5c0d18b24197596baa386772afbdff181c6af89ef64757",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-lossless-pdf-stream-walking/specs/nested-assets/spec.md",
+      "capability": "nested-assets",
+      "requirement": "Extended Lossless PDF Resource Traversal",
+      "disposition": "verified",
+      "source_requirement_sha256": "2b22fb092ca79718f98cb84ad2658598bfcc0db2dda73354b4e801450a3780f9",
+      "canonical_requirement_sha256": "2b22fb092ca79718f98cb84ad2658598bfcc0db2dda73354b4e801450a3780f9",
+      "note": "Working-tree qualified 2026-10-08: bounded Flate/Form traversal plus DCT/JPX sample precision, host semantics, standalone OpenJPEG inventory and Poppler 72-dpi comparisons. No release/deployment claim."
+    },
+    {
+      "source": "openspec/changes/extend-lossless-pdf-stream-walking/specs/nested-assets/spec.md",
+      "capability": "nested-assets",
+      "requirement": "PDF Flate Image Semantic Preservation",
+      "disposition": "verified",
+      "source_requirement_sha256": "b5aa9d9d9195fb69a8764a5b3414d2062c3a8e887c8a2e30dcb160891f833cae",
+      "canonical_requirement_sha256": "b5aa9d9d9195fb69a8764a5b3414d2062c3a8e887c8a2e30dcb160891f833cae",
+      "note": "Working-tree qualified 2026-10-08: bounded Flate/Form traversal plus DCT/JPX sample precision, host semantics, standalone OpenJPEG inventory and Poppler 72-dpi comparisons. No release/deployment claim."
+    },
+    {
+      "source": "openspec/changes/extend-lossless-pdf-stream-walking/specs/nested-assets/spec.md",
+      "capability": "nested-assets",
+      "requirement": "Shared PDF Image Optimization and Final Acceptance",
+      "disposition": "verified",
+      "source_requirement_sha256": "9e0b43bf46e298dd8e85f80f6f758b5f31f805baa144595d99214318566da10d",
+      "canonical_requirement_sha256": "9e0b43bf46e298dd8e85f80f6f758b5f31f805baa144595d99214318566da10d",
+      "note": "Working-tree qualified 2026-10-08: bounded Flate/Form traversal plus DCT/JPX sample precision, host semantics, standalone OpenJPEG inventory and Poppler 72-dpi comparisons. No release/deployment claim."
+    },
+    {
+      "source": "openspec/changes/extend-ole-host-format-support/specs/ole-host-profiles/spec.md",
+      "capability": "ole-host-profiles",
+      "requirement": "Qualified additional CFB host profiles",
+      "disposition": "pending",
+      "source_requirement_sha256": "0caca1a3a4c08b7a8d773fc84e50942890ecf33ae62aee0455571513de72e61c",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-ole-host-format-support/specs/ole-host-profiles/spec.md",
+      "capability": "ole-host-profiles",
+      "requirement": "Host-specific protection and writer eligibility",
+      "disposition": "pending",
+      "source_requirement_sha256": "f04962bbd27995bfbce35ff6c99cde663d59d538a727eebc79410041e3968e6d",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-ole-host-format-support/specs/ole-host-profiles/spec.md",
+      "capability": "ole-host-profiles",
+      "requirement": "Identical streams and complete metadata across new hosts",
+      "disposition": "pending",
+      "source_requirement_sha256": "7322f07ceac8bc06afaa6ccc49206fee374d07bbe43b3b965e4717caa71c8249",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-ole-host-format-support/specs/ole-host-profiles/spec.md",
+      "capability": "ole-host-profiles",
+      "requirement": "Compatible execution and per-host evidence",
+      "disposition": "pending",
+      "source_requirement_sha256": "0f52ebf29c37ca64f56271e7273b722df3b986dbc7b4c6d3f5258ce49cb9ef3e",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-tiff-recompression/specs/tiff-recompression/spec.md",
+      "capability": "tiff-recompression",
+      "requirement": "Complete TIFF graph and image inventory",
+      "disposition": "pending",
+      "source_requirement_sha256": "c8d1308af1cc21998f14d31e70792f00ed785d99edfaad515584535a8e3a471e",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-tiff-recompression/specs/tiff-recompression/spec.md",
+      "capability": "tiff-recompression",
+      "requirement": "Exact native TIFF samples",
+      "disposition": "pending",
+      "source_requirement_sha256": "819bf2ba007c544ee6c6c1a44f45faf7ea7ed84f7f8d1db4f6152dc9f2c25509",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-tiff-recompression/specs/tiff-recompression/spec.md",
+      "capability": "tiff-recompression",
+      "requirement": "TIFF semantic metadata retention",
+      "disposition": "pending",
+      "source_requirement_sha256": "ca1dc8bfc7a9c484f38d56f2cae9ba5e8bcf8f5348f11561ef5caee5a306d321",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-tiff-recompression/specs/tiff-recompression/spec.md",
+      "capability": "tiff-recompression",
+      "requirement": "Enumerated reversible storage changes",
+      "disposition": "pending",
+      "source_requirement_sha256": "2c008233ab197bef1b4c90ab168bef33edd41969ce770a7c253777f97daca0a0",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-tiff-recompression/specs/tiff-recompression/spec.md",
+      "capability": "tiff-recompression",
+      "requirement": "Verified geospatial and layout profiles",
+      "disposition": "pending",
+      "source_requirement_sha256": "dee02398c53e78543e586cf93df31444094467919abb9fb127b61ba2fef65da7",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-tiff-recompression/specs/tiff-recompression/spec.md",
+      "capability": "tiff-recompression",
+      "requirement": "Bounded TIFF validation and publication",
+      "disposition": "pending",
+      "source_requirement_sha256": "b8eeb74651177e2802db8c0f7e989286fe5788a7f8f444147baa042d083cf6b5",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/extend-tiff-recompression/specs/tiff-recompression/spec.md",
+      "capability": "tiff-recompression",
+      "requirement": "TIFF profile evidence",
+      "disposition": "pending",
+      "source_requirement_sha256": "3a5fcee5a6fae3901a90786df29a96af7c493bcf50fc9a846aeedf071088714a",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/fix-archive-member-preservation/specs/archive-repacking/spec.md",
+      "capability": "archive-repacking",
+      "requirement": "Complete Archive Member Enumeration",
+      "disposition": "verified",
+      "source_requirement_sha256": "eb2925d4a51ce7c8704e10600a603b569957d42e5219ba13a61704d14936e21b",
+      "canonical_requirement_sha256": "eb2925d4a51ce7c8704e10600a603b569957d42e5219ba13a61704d14936e21b",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/fix-archive-member-preservation/specs/archive-repacking/spec.md",
+      "capability": "archive-repacking",
+      "requirement": "Archive Member Manifest Preservation",
+      "disposition": "verified",
+      "source_requirement_sha256": "837bd761fa4f01266df9229fd2d10dcd9df384cbe4be4a8f90c43867bf6d7f3a",
+      "canonical_requirement_sha256": "837bd761fa4f01266df9229fd2d10dcd9df384cbe4be4a8f90c43867bf6d7f3a",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/fix-compressed-tar-roundtrip/specs/archive-repacking/spec.md",
+      "capability": "archive-repacking",
+      "requirement": "Single Compressed Tar Payload",
+      "disposition": "verified",
+      "source_requirement_sha256": "7ebe0571f6627bd4db90cc5305e4802ffe20016fb5c3b078cdcf1ed96ed4bb28",
+      "canonical_requirement_sha256": "7ebe0571f6627bd4db90cc5305e4802ffe20016fb5c3b078cdcf1ed96ed4bb28",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/fix-compressed-tar-roundtrip/specs/archive-repacking/spec.md",
+      "capability": "archive-repacking",
+      "requirement": "Verified Archive Alias Structure",
+      "disposition": "verified",
+      "source_requirement_sha256": "79b7b30a2f76302fba7146f31071a7d0a1caa3774df896df614bcfe7c7f14e41",
+      "canonical_requirement_sha256": "79b7b30a2f76302fba7146f31071a7d0a1caa3774df896df614bcfe7c7f14e41",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/fix-dicom-safety-validation/specs/dicom/spec.md",
+      "capability": "dicom",
+      "requirement": "Unsafe DICOM Instances Are Skipped",
+      "disposition": "verified",
+      "source_requirement_sha256": "588169b042fa2e342e31f2ec61c218183e0cee0d28de2f62ae35eb31158e67b0",
+      "canonical_requirement_sha256": "588169b042fa2e342e31f2ec61c218183e0cee0d28de2f62ae35eb31158e67b0",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/fix-dicom-safety-validation/specs/dicom/spec.md",
+      "capability": "dicom",
+      "requirement": "DICOM Output Verification",
+      "disposition": "verified",
+      "source_requirement_sha256": "c21f0ec2c7a78717aaf8564ae6e25accf86a0b1e19bbc6964e1cd5625e4c8c17",
+      "canonical_requirement_sha256": "c21f0ec2c7a78717aaf8564ae6e25accf86a0b1e19bbc6964e1cd5625e4c8c17",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/fix-distribution-test-support/specs/distribution-validation/spec.md",
+      "capability": "distribution-validation",
+      "requirement": "Complete Source Distribution Test Suite",
+      "disposition": "verified",
+      "source_requirement_sha256": "4ec8cd7c6a743fee2cb91f900d1291d29770fa64fecd965e96959fbcad966736",
+      "canonical_requirement_sha256": "4ec8cd7c6a743fee2cb91f900d1291d29770fa64fecd965e96959fbcad966736",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/fix-distribution-test-support/specs/distribution-validation/spec.md",
+      "capability": "distribution-validation",
+      "requirement": "Installed Artifact Smoke Validation",
+      "disposition": "verified",
+      "source_requirement_sha256": "20916ef28f45daf374c24321469a89dfe851994e83ac81e57f74c3c2864cde8c",
+      "canonical_requirement_sha256": "20916ef28f45daf374c24321469a89dfe851994e83ac81e57f74c3c2864cde8c",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/fix-markup-preservation/specs/xml-json/spec.md",
+      "capability": "xml-json",
+      "requirement": "JSON Identification and Minification",
+      "disposition": "verified",
+      "source_requirement_sha256": "87c167c28a4ddca550e9e4f272ebd7bf775ff1dc05093503a96eb495ab6bab90",
+      "canonical_requirement_sha256": "87c167c28a4ddca550e9e4f272ebd7bf775ff1dc05093503a96eb495ab6bab90",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/fix-markup-preservation/specs/xml-json/spec.md",
+      "capability": "xml-json",
+      "requirement": "XML Identification and Minification",
+      "disposition": "verified",
+      "source_requirement_sha256": "90d9f3116c0683aa325a85d77779174845eca5f2915c4e8916972ba8b87f8641",
+      "canonical_requirement_sha256": "90d9f3116c0683aa325a85d77779174845eca5f2915c4e8916972ba8b87f8641",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/fix-output-destination-safety/specs/publish-destinations/spec.md",
+      "capability": "publish-destinations",
+      "requirement": "Validation Before Filesystem Mutation",
+      "disposition": "verified",
+      "source_requirement_sha256": "983b858e5cf2fdc6ede8bbb3c83eb9158b07337a0b28c9a52aee5bcb727465d0",
+      "canonical_requirement_sha256": "983b858e5cf2fdc6ede8bbb3c83eb9158b07337a0b28c9a52aee5bcb727465d0",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/fix-output-destination-safety/specs/publish-destinations/spec.md",
+      "capability": "publish-destinations",
+      "requirement": "Collision Safe Output Publication",
+      "disposition": "verified",
+      "source_requirement_sha256": "2bf9796df6cbae735099aab9928b015ea4080983382d5257f3db935af4898c1b",
+      "canonical_requirement_sha256": "2bf9796df6cbae735099aab9928b015ea4080983382d5257f3db935af4898c1b",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/fix-output-destination-safety/specs/publish-destinations/spec.md",
+      "capability": "publish-destinations",
+      "requirement": "Consistent Library Output Destinations",
+      "disposition": "verified",
+      "source_requirement_sha256": "574c36914ef8f59218ee796017618b298fd27e6a9fe4a62077880cadeef99dc1",
+      "canonical_requirement_sha256": "574c36914ef8f59218ee796017618b298fd27e6a9fe4a62077880cadeef99dc1",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/improve-lossy-pdf-compression/specs/pdf/spec.md",
+      "capability": "pdf",
+      "requirement": "Lossless PDF Uses qpdf",
+      "disposition": "verified",
+      "source_requirement_sha256": "87708ae69bb96a256e1eff52c2c8350ff515780079dc1e5f8baebbcda7a2bed4",
+      "canonical_requirement_sha256": "87708ae69bb96a256e1eff52c2c8350ff515780079dc1e5f8baebbcda7a2bed4",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/improve-lossy-pdf-compression/specs/pdf/spec.md",
+      "capability": "pdf",
+      "requirement": "Lossy PDF Uses Ghostscript Profiles",
+      "disposition": "verified",
+      "source_requirement_sha256": "0a639878f8ce856cb8b491d6c30cef25e617b121f65a00b5ecd169f9eafc3fff",
+      "canonical_requirement_sha256": "0a639878f8ce856cb8b491d6c30cef25e617b121f65a00b5ecd169f9eafc3fff",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/improve-lossy-pdf-compression/specs/pdf/spec.md",
+      "capability": "pdf",
+      "requirement": "JPEG Quality Applies to PDF Images",
+      "disposition": "verified",
+      "source_requirement_sha256": "14874e62c4eb4b9edd825badcca63607f27c2c04975737bbf12ea0b592a38368",
+      "canonical_requirement_sha256": "14874e62c4eb4b9edd825badcca63607f27c2c04975737bbf12ea0b592a38368",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/improve-lossy-pdf-compression/specs/pdf/spec.md",
+      "capability": "pdf",
+      "requirement": "Illustrator PDF Wrappers Follow PDF Options",
+      "disposition": "verified",
+      "source_requirement_sha256": "44fef62fbaeaa46167681f537b078cb48055e602578f928ac7ce030235bc1e4a",
+      "canonical_requirement_sha256": "44fef62fbaeaa46167681f537b078cb48055e602578f928ac7ce030235bc1e4a",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/improve-warc-recompression/specs/warc-recompression/spec.md",
+      "capability": "warc-recompression",
+      "requirement": "Per-record gzip candidate selection",
+      "disposition": "verified",
+      "source_requirement_sha256": "7500c80b050aa353a00baf6a7fbdecc1180204a8ba94492816f5ea0aeda46257",
+      "canonical_requirement_sha256": "7500c80b050aa353a00baf6a7fbdecc1180204a8ba94492816f5ea0aeda46257",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/improve-warc-recompression/specs/warc-recompression/spec.md",
+      "capability": "warc-recompression",
+      "requirement": "Bounded ultra WARC compression",
+      "disposition": "verified",
+      "source_requirement_sha256": "554b037fefab0a0185ede9c8a3ed863a878c072a3facdcc5ec3b0debe37eb52f",
+      "canonical_requirement_sha256": "554b037fefab0a0185ede9c8a3ed863a878c072a3facdcc5ec3b0debe37eb52f",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/refactor-format-capability-registry/specs/format-capabilities/spec.md",
+      "capability": "format-capabilities",
+      "requirement": "Typed Consistent Format Metadata",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "63a52798b1f2bff1b02f58d7d9197dd834e3112c003364ff182993fd2ff9e788",
+      "canonical_requirement_sha256": "5d92750b5da175aef240b42af6b92ba05d8a6bf76d206da4b08061927a5fcdb3",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/refactor-format-capability-registry/specs/format-capabilities/spec.md",
+      "capability": "format-capabilities",
+      "requirement": "Executable and Per Format Capability Diagnostics",
+      "disposition": "pending",
+      "source_requirement_sha256": "fb0061aedee91ef7a1fc9ab791aec2b439ba2d782bdde60b6bb6bd0b6f1ee0f8",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/refactor-format-capability-registry/specs/format-capabilities/spec.md",
+      "capability": "format-capabilities",
+      "requirement": "Supported Python Tool Configuration",
+      "disposition": "verified",
+      "source_requirement_sha256": "ae4fc3f4281b3f5611038965c60ee132c6c56c7ad2587083b317a3d58a15a208",
+      "canonical_requirement_sha256": "ae4fc3f4281b3f5611038965c60ee132c6c56c7ad2587083b317a3d58a15a208",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/refactor-repack-transactions/specs/repack-transactions/spec.md",
+      "capability": "repack-transactions",
+      "requirement": "Destination Local Atomic Publication",
+      "disposition": "verified",
+      "source_requirement_sha256": "5fb6305c0cbd144f846866c6c27642d8d5c9662daa7d692eae97e764a7e1b331",
+      "canonical_requirement_sha256": "5fb6305c0cbd144f846866c6c27642d8d5c9662daa7d692eae97e764a7e1b331",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/refactor-repack-transactions/specs/repack-transactions/spec.md",
+      "capability": "repack-transactions",
+      "requirement": "Filesystem Preservation and Source Generation",
+      "disposition": "verified",
+      "source_requirement_sha256": "703f66e3b2cf7bfe288407097fe0bdc124d4b8de6b5847d001533014f5611710",
+      "canonical_requirement_sha256": "703f66e3b2cf7bfe288407097fe0bdc124d4b8de6b5847d001533014f5611710",
+      "note": "Working-tree evidence; not release/deployment evidence. 2026-10-08 continuation fixes false publication refusal for system-assigned macOS stage provenance: only the creation-time value is retained when absent from the source; all source values and all other attributes remain exact. Controlled platform, late-addition, changed-value, foreign-attribute and ignored-write faults exercise refusal and cleanup. Native original-PPT publication evidence is recorded in dev/ole/qualification-ppt-macos-publication.json."
+    },
+    {
+      "source": "openspec/changes/refactor-repack-transactions/specs/repack-transactions/spec.md",
+      "capability": "repack-transactions",
+      "requirement": "Typed Shared Transaction Interfaces",
+      "disposition": "verified",
+      "source_requirement_sha256": "c98ce933dac7eaf16a11cd0d5b83fa85431b15f503343f3440d00ab9560be928",
+      "canonical_requirement_sha256": "c98ce933dac7eaf16a11cd0d5b83fa85431b15f503343f3440d00ab9560be928",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/refactor-repack-transactions/specs/repack-transactions/spec.md",
+      "capability": "repack-transactions",
+      "requirement": "Explicit Publication Durability Guarantees",
+      "disposition": "verified",
+      "source_requirement_sha256": "f9aa025f4ffb93a5bfc4b5d658daca781c8295b726dc678bb0ee3a2c5e29c25e",
+      "canonical_requirement_sha256": "f9aa025f4ffb93a5bfc4b5d658daca781c8295b726dc678bb0ee3a2c5e29c25e",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-bulk-execution-lifecycle/specs/bulk-execution/spec.md",
+      "capability": "bulk-execution",
+      "requirement": "Bounded Bulk Discovery and Scheduling",
+      "disposition": "verified",
+      "source_requirement_sha256": "7f5e52ab797e00fe81f6245a956fa290b5baf4599be0a77bb1f96c21f5b42b68",
+      "canonical_requirement_sha256": "7f5e52ab797e00fe81f6245a956fa290b5baf4599be0a77bb1f96c21f5b42b68",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-bulk-execution-lifecycle/specs/bulk-execution/spec.md",
+      "capability": "bulk-execution",
+      "requirement": "Coordinator Owned Destination Reservations",
+      "disposition": "verified",
+      "source_requirement_sha256": "f720d0f1e32ddeaef04af078881c1b1df559ac5b7733b2574f6b763722166dc1",
+      "canonical_requirement_sha256": "f720d0f1e32ddeaef04af078881c1b1df559ac5b7733b2574f6b763722166dc1",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-bulk-execution-lifecycle/specs/bulk-execution/spec.md",
+      "capability": "bulk-execution",
+      "requirement": "Accounted Fail Fast and Cancellation",
+      "disposition": "verified",
+      "source_requirement_sha256": "89199a8cff9a0f6b3ab46b64d214a3e26c584b2e0ad10f46669307eabfe294ea",
+      "canonical_requirement_sha256": "89199a8cff9a0f6b3ab46b64d214a3e26c584b2e0ad10f46669307eabfe294ea",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-container-format-policies/specs/container-policies/spec.md",
+      "capability": "container-policies",
+      "requirement": "Specialized Package Structure",
+      "disposition": "verified",
+      "source_requirement_sha256": "f54f97244f6d737de29450af4efca23decfd0b53fb35214bdf7bd47fe5b89dff",
+      "canonical_requirement_sha256": "f54f97244f6d737de29450af4efca23decfd0b53fb35214bdf7bd47fe5b89dff",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-container-format-policies/specs/container-policies/spec.md",
+      "capability": "container-policies",
+      "requirement": "Integrity Protected Package Handling",
+      "disposition": "verified",
+      "source_requirement_sha256": "f774db6d55c92a3148a4288d904fa2d4993cd5929444a2e8fc9c566fcebf2563",
+      "canonical_requirement_sha256": "f774db6d55c92a3148a4288d904fa2d4993cd5929444a2e8fc9c566fcebf2563",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-container-format-policies/specs/container-policies/spec.md",
+      "capability": "container-policies",
+      "requirement": "Proven Container Write Support",
+      "disposition": "pending",
+      "source_requirement_sha256": "6e45cc7284ed6ae92b4b78e6efe3650184a0578357f5a953dd5d30dadb567dff",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/update-data-format-preservation/specs/data-preservation/spec.md",
+      "capability": "data-preservation",
+      "requirement": "Data Schema and Metadata Fidelity",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "1ece515355870ac5ef04b21449105aff9709b635c7d8c89ccb616fba1a581aa4",
+      "canonical_requirement_sha256": "5b680ebd9b8522ad5bc5bb4c175fd559ee60d35d7e44cdcbe94c5b173badab54",
+      "note": "Historical/broader wording narrowed to the tested current contract; full original scope remains separately auditable."
+    },
+    {
+      "source": "openspec/changes/update-data-format-preservation/specs/data-preservation/spec.md",
+      "capability": "data-preservation",
+      "requirement": "Arrow IPC Framing Preservation",
+      "disposition": "verified",
+      "source_requirement_sha256": "f3877b849b6ff1a71a80fe801ff1a765fc3f50af2e3ab78e616e4613d4c805fd",
+      "canonical_requirement_sha256": "f3877b849b6ff1a71a80fe801ff1a765fc3f50af2e3ab78e616e4613d4c805fd",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-data-format-preservation/specs/data-preservation/spec.md",
+      "capability": "data-preservation",
+      "requirement": "SQLite Offline and Snapshot Policy",
+      "disposition": "verified",
+      "source_requirement_sha256": "a5d94a397180aadd07dc9d8da794f9b56c676e021bce2d49d14510a2ebf93a8d",
+      "canonical_requirement_sha256": "a5d94a397180aadd07dc9d8da794f9b56c676e021bce2d49d14510a2ebf93a8d",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-data-format-preservation/specs/data-preservation/spec.md",
+      "capability": "data-preservation",
+      "requirement": "Bounded Data Processing",
+      "disposition": "pending",
+      "source_requirement_sha256": "edccff304f5dfbf8141ad6f410021f5c198f74e064ebbcfbe31075607d066205",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/update-media-preservation-policy/specs/encoder-quality/spec.md",
+      "capability": "encoder-quality",
+      "requirement": "Keep Metadata Flag",
+      "disposition": "verified",
+      "source_requirement_sha256": "e6d81e652f8dd780e3b3f347fbcee2406e8ce55322d29c822e732624e6bae850",
+      "canonical_requirement_sha256": "e6d81e652f8dd780e3b3f347fbcee2406e8ce55322d29c822e732624e6bae850",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-media-preservation-policy/specs/media-preservation/spec.md",
+      "capability": "media-preservation",
+      "requirement": "Explicit Video Fidelity Modes",
+      "disposition": "verified",
+      "source_requirement_sha256": "6b32fd8991a0cd1a8f1f51d1ea13fc60f76c59d67e4e3b226386a2dfc3a05f03",
+      "canonical_requirement_sha256": "6b32fd8991a0cd1a8f1f51d1ea13fc60f76c59d67e4e3b226386a2dfc3a05f03",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-media-preservation-policy/specs/media-preservation/spec.md",
+      "capability": "media-preservation",
+      "requirement": "Complete Supported Media Inventory",
+      "disposition": "verified",
+      "source_requirement_sha256": "eda8487a8aaf5e73a42828a96e7d04615fd35a9fcc8c0e5b9331a604ca5892ac",
+      "canonical_requirement_sha256": "eda8487a8aaf5e73a42828a96e7d04615fd35a9fcc8c0e5b9331a604ca5892ac",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-media-preservation-policy/specs/media-preservation/spec.md",
+      "capability": "media-preservation",
+      "requirement": "Image and Lossless Media Content Fidelity",
+      "disposition": "verified-adjusted",
+      "source_requirement_sha256": "4edc84cf6cc8f5fd8f31d1e5ec3b5c2e4659e186f505423b8a4ea2d7314e8978",
+      "canonical_requirement_sha256": "dc568c8b859a05cbc98b455961c6d7d761613ed8e4d92ff6d83adabb4500d99e",
+      "note": "Requalified 2026-10-08: PNG encoded precision/color type, bounded unsigned 8-bit JPEG2000 components and semantic boxes, decoded-frame/presentation/media/native-TIFF checks. Every other encoded image precision profile remains open under structural-output-validation task 1.2b; no universal codec qualification is claimed."
+    },
+    {
+      "source": "openspec/changes/update-media-preservation-policy/specs/media-preservation/spec.md",
+      "capability": "media-preservation",
+      "requirement": "Inherited Embedded Asset Policy",
+      "disposition": "verified",
+      "source_requirement_sha256": "2f97940419f91f0443359ce023bb57317470a4266e5034ada5d39c52cb933b61",
+      "canonical_requirement_sha256": "2f97940419f91f0443359ce023bb57317470a4266e5034ada5d39c52cb933b61",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-quality-and-specification-gates/specs/quality-gates/spec.md",
+      "capability": "quality-gates",
+      "requirement": "Preservation Oriented Writer Evidence",
+      "disposition": "pending",
+      "source_requirement_sha256": "1118e8af30763566b27d4f809287f2cca26bdae56a0fabeadbadd5ea7d1bab4c",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/update-quality-and-specification-gates/specs/quality-gates/spec.md",
+      "capability": "quality-gates",
+      "requirement": "Explicit Integration Availability and Platform Coverage",
+      "disposition": "pending",
+      "source_requirement_sha256": "2de349c79d61d25c8b769f8f26d312b3ba70490df473f864b3d5c8d21e668dec",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/update-quality-and-specification-gates/specs/quality-gates/spec.md",
+      "capability": "quality-gates",
+      "requirement": "Measured Coverage and Performance Gates",
+      "disposition": "pending",
+      "source_requirement_sha256": "1edf84d551ba6fdbdd2c08c392f120dc83a8f7d8d03b05d7a682554290cd2b87",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/update-quality-and-specification-gates/specs/spec-governance/spec.md",
+      "capability": "spec-governance",
+      "requirement": "Verified Canonical Specification Baseline",
+      "disposition": "pending",
+      "source_requirement_sha256": "f9bce0cc885442a85dc78dcded228c8efff1b77c51d8e0e188e0888cfaf19f46",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/update-quality-and-specification-gates/specs/spec-governance/spec.md",
+      "capability": "spec-governance",
+      "requirement": "Current Guidance and Deployment Aware Archival",
+      "disposition": "pending",
+      "source_requirement_sha256": "79a7130e585a865e3beb0e60fb854155d3ac035997d48e32a105d68328b0aba1",
+      "canonical_requirement_sha256": null,
+      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+    },
+    {
+      "source": "openspec/changes/update-repack-outcomes/specs/cli-reporting/spec.md",
+      "capability": "cli-reporting",
+      "requirement": "Machine Readable Standard Output",
+      "disposition": "verified",
+      "source_requirement_sha256": "6f36315fd4c6597385fd89a48cdf42732192a154d31f64e1a3e9f78be9c282c8",
+      "canonical_requirement_sha256": "6f36315fd4c6597385fd89a48cdf42732192a154d31f64e1a3e9f78be9c282c8",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-repack-outcomes/specs/cli-reporting/spec.md",
+      "capability": "cli-reporting",
+      "requirement": "Isolated Invocation Logging State",
+      "disposition": "verified",
+      "source_requirement_sha256": "fd45dcaca449bee8f0bf60579b1d5f15c04bcbbe15c2f02e010cf8a333571715",
+      "canonical_requirement_sha256": "fd45dcaca449bee8f0bf60579b1d5f15c04bcbbe15c2f02e010cf8a333571715",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-repack-outcomes/specs/repack-outcomes/spec.md",
+      "capability": "repack-outcomes",
+      "requirement": "Typed Terminal Repack Outcomes",
+      "disposition": "verified",
+      "source_requirement_sha256": "8c5657ead476018988da2f99cf81935761d436d0e63b8125f8f290c1127a4e77",
+      "canonical_requirement_sha256": "8c5657ead476018988da2f99cf81935761d436d0e63b8125f8f290c1127a4e77",
+      "note": "Working-tree evidence; not release/deployment evidence. 2026-10-08: human repack/bulk completion and error labels follow existing statuses/exit codes; no-benefit results are successful, optional skips are informational, quiet retains errors and report/checkpoint/scan failures cannot claim successful completion. Evidence: test/test_cli_status.py and test/test_ole_diagnostics.py."
+    },
+    {
+      "source": "openspec/changes/update-repack-outcomes/specs/repack-outcomes/spec.md",
+      "capability": "repack-outcomes",
+      "requirement": "Reconciled Outcome Summaries",
+      "disposition": "verified",
+      "source_requirement_sha256": "71ad60e1cc5df66dc2463421261bbb92811d7c3e207b3d9a31dbb7b00e61e277",
+      "canonical_requirement_sha256": "71ad60e1cc5df66dc2463421261bbb92811d7c3e207b3d9a31dbb7b00e61e277",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/update-repack-outcomes/specs/repack-outcomes/spec.md",
+      "capability": "repack-outcomes",
+      "requirement": "Deterministic CLI Outcome Exit Codes",
+      "disposition": "verified",
+      "source_requirement_sha256": "887c10d343b102553b8241f4ffab4c6f73a7ae87051715cbbcfce80be9ae7726",
+      "canonical_requirement_sha256": "887c10d343b102553b8241f4ffab4c6f73a7ae87051715cbbcfce80be9ae7726",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-cpbz2-recompression/specs/cpbz2-recompression/spec.md",
+      "capability": "cpbz2-recompression",
+      "requirement": "CPBZ2 Legacy Extension Filter Compatibility",
+      "disposition": "verified",
+      "source_requirement_sha256": "a47ae500138018060e399605e34612907ba539b4f0f0af822bb265ee10dd5a71",
+      "canonical_requirement_sha256": "a47ae500138018060e399605e34612907ba539b4f0f0af822bb265ee10dd5a71",
+      "note": "Working-tree evidence; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/encoder-quality/spec.md",
+      "capability": "encoder-quality",
+      "requirement": "Keep Metadata Flag",
+      "disposition": "superseded",
+      "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/nested-assets/spec.md",
+      "capability": "nested-assets",
+      "requirement": "Lossless PDF Stream Walking",
+      "disposition": "superseded",
+      "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/xml-json/spec.md",
+      "capability": "xml-json",
+      "requirement": "JSON Identification and Minification",
+      "disposition": "superseded",
+      "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
+    },
+    {
+      "source": "openspec/changes/add-chisel-parity/specs/xml-json/spec.md",
+      "capability": "xml-json",
+      "requirement": "XML Identification and Minification",
+      "disposition": "superseded",
+      "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
+    },
+    {
+      "source": "openspec/changes/add-cpbz2-recompression/specs/cpbz2-recompression/spec.md",
+      "capability": "cpbz2-recompression",
+      "requirement": "CPBZ2 Stream Identification",
+      "disposition": "superseded",
+      "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
+    },
+    {
+      "source": "openspec/changes/add-cpbz2-recompression/specs/cpbz2-recompression/spec.md",
+      "capability": "cpbz2-recompression",
+      "requirement": "Exact CPIO Payload Preservation",
+      "disposition": "superseded",
+      "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
+    },
+    {
+      "source": "openspec/changes/add-cpbz2-recompression/specs/cpbz2-recompression/spec.md",
+      "capability": "cpbz2-recompression",
+      "requirement": "Shared Publication Policies",
+      "disposition": "superseded",
+      "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
+    },
+    {
+      "source": "openspec/changes/add-dicom-support/specs/dicom/spec.md",
+      "capability": "dicom",
+      "requirement": "Unsafe DICOM Instances Are Skipped",
+      "disposition": "superseded",
+      "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
+    },
+    {
+      "source": "openspec/changes/add-dicom-support/specs/dicom/spec.md",
+      "capability": "dicom",
+      "requirement": "DICOM Output Verification",
+      "disposition": "superseded",
+      "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
+    },
+    {
+      "source": "openspec/changes/extend-ppt-notes-picture-coverage/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Independent notes-bearing PPT Pictures qualification",
+      "disposition": "verified",
+      "source_requirement_sha256": "f52c4039d48643ee653c89cf43915ec6570e2fd0fa805173ace724bba1e0c7d1",
+      "canonical_requirement_sha256": "f52c4039d48643ee653c89cf43915ec6570e2fd0fa805173ace724bba1e0c7d1",
+      "note": "2026-10-08 approved implementation: generated notes/master/shared-picture and negative-mutation tests; independent outer olefile checks; three pinned supplied originals and normalized duplicate; exact LibreOffice slide/notes rendering including normative-master controls; native physical savings within default budgets. Local Python 3.9/3.13 macOS qualification only; remote CI and Microsoft PowerPoint are not asserted. See dev/ole/qualification-ppt-notes-runtime.json and dev/ole/README.md. 2026-10-08: separately qualified exact-unfiltered PPT PNG profile; original filtered codec and immutable host boundaries remain. See dev/ole/qualification-ppt-png-refiltering.json."
+    },
+    {
+      "source": "openspec/changes/extend-ppt-notes-picture-coverage/specs/ppt-ole-recompression/spec.md",
+      "capability": "ppt-ole-recompression",
+      "requirement": "Notes-aware immutable PPT host graph",
+      "disposition": "verified",
+      "source_requirement_sha256": "1e0a566ba96931588302b6fc03826d5aa487cab3bfc2a9c12a10db0a6ae0909f",
+      "canonical_requirement_sha256": "1e0a566ba96931588302b6fc03826d5aa487cab3bfc2a9c12a10db0a6ae0909f",
+      "note": "2026-10-08 approved implementation: generated notes/master/shared-picture and negative-mutation tests; independent outer olefile checks; three pinned supplied originals and normalized duplicate; exact LibreOffice slide/notes rendering including normative-master controls; native physical savings within default budgets. Local Python 3.9/3.13 macOS qualification only; remote CI and Microsoft PowerPoint are not asserted. See dev/ole/qualification-ppt-notes-runtime.json and dev/ole/README.md."
+    },
+    {
+      "source": "openspec/changes/extend-ppt-png-refiltering/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Qualified PPT PNG refiltering",
+      "disposition": "verified",
+      "source_requirement_sha256": "c97502b53dd0cbeb9c3379260159bbf20870ffe40329f6fc82ef1c288ce55d9a",
+      "canonical_requirement_sha256": "c97502b53dd0cbeb9c3379260159bbf20870ffe40329f6fc82ef1c288ce55d9a",
+      "note": "2026-10-08 user-approved implementation: independent exact-sample filter controls, hostile/missing encoder and budget checks; digest/snapshot-bound completed worker verification; all three supplied PPTs under unchanged default limits, 88 equal slide and 88 equal notes RGB pages, unchanged Photoshop objects and source hashes. Local macOS qualification; remote CI and Microsoft PowerPoint editing are not asserted. See dev/ole/qualification-ppt-png-refiltering.json and dev/ole/README.md. Final resource profile: native png-unfilter-v1 controls, bounded one-second optional trials with final-verification reserve; root limits remain unchanged."
+    },
+    {
+      "source": "openspec/changes/extend-ppt-png-refiltering/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Sequential PPT PNG root reservation",
+      "disposition": "verified",
+      "source_requirement_sha256": "8831678c45f3c884ec0811153d4dc503d896433e3465d97fe8200b50afef434e",
+      "canonical_requirement_sha256": "8831678c45f3c884ec0811153d4dc503d896433e3465d97fe8200b50afef434e",
+      "note": "2026-10-08 user-approved implementation: independent exact-sample filter controls, hostile/missing encoder and budget checks; digest/snapshot-bound completed worker verification; all three supplied PPTs under unchanged default limits, 88 equal slide and 88 equal notes RGB pages, unchanged Photoshop objects and source hashes. Local macOS qualification; remote CI and Microsoft PowerPoint editing are not asserted. See dev/ole/qualification-ppt-png-refiltering.json and dev/ole/README.md. Final resource profile: native png-unfilter-v1 controls, bounded one-second optional trials with final-verification reserve; root limits remain unchanged."
+    },
+    {
+      "source": "openspec/changes/extend-ppt-roundtrip-picture-coverage/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Audited additional PPT round-trip Pictures forms",
+      "disposition": "verified",
+      "source_requirement_sha256": "1718ff19c3ff78f872d3c26869967e409323037b771e8cedefddd6f6b6b9866a",
+      "canonical_requirement_sha256": "1718ff19c3ff78f872d3c26869967e409323037b771e8cedefddd6f6b6b9866a",
+      "note": "2026-10-08 user-approved implementation: generated header/owner/layout/reference/property/tag faults and immutable-byte verification; local Python 3.9.6/3.13.7 native tests, public dry-run, aliases and no-benefit fallback. Supplied original yields a verified 2,082,816-byte candidate; 11 slide and 11 notes RGB pages plus legacy-master control agree. Defaults and strict filesystem guards retained. Distinct output uses an exact-byte copy with mode 0644: original mode 0700 causes macOS to add protected provenance, so exact-original metadata publication is refused. Original bytes/mode/attributes remain unchanged. Remote CI and Microsoft PowerPoint are not asserted. See dev/ole/qualification-ppt-roundtrip-runtime.json. Follow-up on 2026-10-08 corrects the earlier mode-based diagnosis: provenance is assigned at native stage creation. Direct output from the unchanged actual original now retains mode 0700 and mtime, allowing only creation-time native provenance absent from the source; all original values remain exact. Private in-place/backup and independent content checks also pass; see dev/ole/qualification-ppt-macos-publication.json. Verified fly-from-bottom extension: bounded coordinate keyframes, null-bullet text, font defaults and composite references; opengovernment source/candidate animation bytes and POI save/reopen content match, with 19 equal slides/notes pages. Evidence: dev/ole/qualification-ppt-opengovernment-fly-animation.json."
+    },
+    {
+      "source": "openspec/changes/extend-word-property-coverage/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Audited Word table-style and display-property coverage",
+      "disposition": "verified",
+      "source_requirement_sha256": "b7d401dbc379f14995b066c78cfdd7422d278a8dc7cca7c2803e15ad375ab17b",
+      "canonical_requirement_sha256": "b7d401dbc379f14995b066c78cfdd7422d278a8dc7cca7c2803e15ad375ab17b",
+      "note": "Working-tree qualification: controlled Word preservation/corruption regressions and dev/ole/qualification-word-properties-2026-10-08.json; identical 34/48 LibreOffice pages, unchanged source hashes. Microsoft Office and remote platforms unmeasured; not release/deployment evidence."
+    },
+    {
+      "source": "openspec/changes/extend-doc-png-refiltering/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Qualified DOC PNG refiltering",
+      "disposition": "verified",
+      "source_requirement_sha256": "540536b19b3dec48a5e010d3194dafd5745337e63d21d533baa9f084c9c36927",
+      "canonical_requirement_sha256": "540536b19b3dec48a5e010d3194dafd5745337e63d21d533baa9f084c9c36927",
+      "note": "Local user-approved DOC qualification: controlled sample/metadata/history/reference/encoder/budget checks; complete independent preservation and 34/48 identical LibreOffice RGB pages, unchanged originals. See dev/ole/qualification-word-png-refilter-2026-10-08.json. Microsoft Office and remote platforms unmeasured; no release/deployment claim."
+    },
+    {
+      "source": "openspec/changes/extend-ppt-animation-storage-sharing/specs/ppt-ole-recompression/spec.md",
+      "capability": "ppt-ole-recompression",
+      "requirement": "Preserve independent PPT objects when storage sharing fails qualification",
+      "disposition": "verified",
+      "source_requirement_sha256": "bc33875623fcee868ff450cf5d57169d5518250ddab39f29bf806a5d5dcec50d",
+      "canonical_requirement_sha256": "bc33875623fcee868ff450cf5d57169d5518250ddab39f29bf806a5d5dcec50d",
+      "note": "Local generated/native/source qualification, identical slide/notes pixels and independent reader/save/edit controls. Physical storage sharing explicitly rejected after resolving one of seven objects. No runtime alias/nested-color exception, release or deployment."
+    },
+    {
+      "source": "openspec/changes/extend-ppt-animation-storage-sharing/specs/officeart-recompression/spec.md",
+      "capability": "officeart-recompression",
+      "requirement": "Audited sound-free PPT animation Pictures qualification",
+      "disposition": "verified",
+      "source_requirement_sha256": "b4e5f58c083acc8510e98570fa69a256a4ab7c2e77b73650fbab8c50b8704ea9",
+      "canonical_requirement_sha256": "b4e5f58c083acc8510e98570fa69a256a4ab7c2e77b73650fbab8c50b8704ea9",
+      "note": "Local generated/native/source qualification, identical slide/notes pixels and independent reader/save/edit controls. Physical storage sharing explicitly rejected after resolving one of seven objects. No runtime alias/nested-color exception, release or deployment. Verified fly-from-bottom extension: bounded coordinate keyframes, null-bullet text, font defaults and composite references; opengovernment source/candidate animation bytes and POI save/reopen content match, with 19 equal slides/notes pages. Evidence: dev/ole/qualification-ppt-opengovernment-fly-animation.json."
+    }
+  ],
+  "updated_date": "2026-10-09"
+}

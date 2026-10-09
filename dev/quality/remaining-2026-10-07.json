@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-07",
+  "open_changes": 22,
+  "open_items": 72,
+  "changes": [
+    {
+      "change": "add-archive-member-selection",
+      "tasks": [
+        {
+          "id": "2.1",
+          "task": "Test dotfiles, Unicode, spaces, option-like names, directory exclusions, `*`/`**`/`?`, literal ZIP backslashes, and nested archive roots on POSIX/Windows."
+        }
+      ]
+    },
+    {
+      "change": "add-gguf-recompression",
+      "tasks": [
+        {
+          "id": "1.1",
+          "task": "Obtain complete GGUF samples across supported versions, tensor types, and single/sharded layouts from multiple projects."
+        },
+        {
+          "id": "1.2",
+          "task": "Record metadata, alignment, tensor payload composition, native-reader behavior, mmap behavior, and bounded same-format savings."
+        },
+        {
+          "id": "1.3",
+          "task": "Document unchanged, unsupported, failed, and resource-limited cases; stop writer work if no profile passes the gate."
+        },
+        {
+          "id": "2.3",
+          "task": "Build full-file fixtures and reader checks for supported single-file and sharded model profiles."
+        },
+        {
+          "id": "3.1",
+          "task": "Implement only a profile proven to preserve tensor bytes and native-reader/mmap behavior."
+        },
+        {
+          "id": "3.2",
+          "task": "Add full structural and reader verification before shared size acceptance."
+        },
+        {
+          "id": "3.3",
+          "task": "Integrate resource limits, transactional publication, archive routing, and precise version reporting."
+        }
+      ]
+    },
+    {
+      "change": "add-mat-recompression",
+      "tasks": [
+        {
+          "id": "1.1",
+          "task": "Acquire complete real MAT files from additional origins and reproduce the two probes."
+        },
+        {
+          "id": "1.3",
+          "task": "Prepare trusted v4/v6/v7/v7.3, endian, small-tag, padding, sparse, complex, cell, struct, logical, Unicode, empty and unsupported-object fixtures."
+        },
+        {
+          "id": "3.2",
+          "task": "Obtain native MATLAB read-back for the declared v7.3 fixture subset and record reader floor."
+        },
+        {
+          "id": "4.2",
+          "task": "Record native MATLAB and applicable secondary-reader results, provenance, size/time/memory measurements and unsupported variants for each enabled profile."
+        }
+      ]
+    },
+    {
+      "change": "add-officeart-image-deduplication",
+      "tasks": [
+        {
+          "id": "1.2",
+          "task": "Acquire real duplicate-image fixtures and controlled distinct-UID/metadata/content variants."
+        }
+      ]
+    },
+    {
+      "change": "add-onnx-recompression",
+      "tasks": [
+        {
+          "id": "1.1",
+          "task": "Collect complete self-contained ONNX files and external-data bundles from multiple projects, recording versions and provenance."
+        },
+        {
+          "id": "1.2",
+          "task": "Measure model protobuf and tensor storage composition, external references, reader acceptance, and bounded same-format savings."
+        },
+        {
+          "id": "1.3",
+          "task": "Record unchanged, unsupported, failed, and resource-limited cases; keep any profile without a passing gate inspection-only."
+        },
+        {
+          "id": "2.3",
+          "task": "Compare graph structure, opsets, metadata, tensor descriptors, and all raw tensor bytes for candidates."
+        },
+        {
+          "id": "2.4",
+          "task": "Establish ONNX checker/runtime reader coverage for self-contained models and complete external-data bundles."
+        },
+        {
+          "id": "3.1",
+          "task": "Implement only independently qualified self-contained or whole-bundle profiles."
+        },
+        {
+          "id": "3.2",
+          "task": "Verify structural validity and reader acceptance before shared size acceptance."
+        },
+        {
+          "id": "3.3",
+          "task": "Integrate resource budgets, protected nested routing, and atomic transactional publication of complete bundles."
+        }
+      ]
+    },
+    {
+      "change": "add-operation-resource-budgets",
+      "tasks": [
+        {
+          "id": "1.2",
+          "task": "Propagate context into archives, streams, PSD, XML/PDF/covers, and validators."
+        },
+        {
+          "id": "1.3",
+          "task": "Replace unbounded decoding with capped streaming or bounded verified adapters."
+        }
+      ]
+    },
+    {
+      "change": "add-optimization-profiles",
+      "tasks": [
+        {
+          "id": "1.3",
+          "task": "Route thread/deadline/temp limits through shared root contexts and batch scheduler allocations."
+        },
+        {
+          "id": "2.3",
+          "task": "Exercise nested option inheritance and cumulative worker/tool-thread/temp/deadline enforcement."
+        }
+      ]
+    },
+    {
+      "change": "add-pytorch-checkpoint-recompression",
+      "tasks": [
+        {
+          "id": "1.2",
+          "task": "Measure reader acceptance of ZIP methods per record class, ZIP64, alignment, mmap and Python/LibTorch versions; record rejected combinations explicitly."
+        },
+        {
+          "id": "1.3",
+          "task": "Compare tensor bits, dtype/shape/strides, storage offsets/sharing and load results; benchmark real gains and read/memory/time costs with all attempts included."
+        }
+      ]
+    },
+    {
+      "change": "add-pytorch-distributed-checkpoint-recompression",
+      "tasks": [
+        {
+          "id": "1.1",
+          "task": "Identify complete DCP checkpoints and obtain samples from independent projects beyond the current two-project inventory."
+        },
+        {
+          "id": "1.2",
+          "task": "Record metadata/shard layouts, PyTorch versions, storage backends, reader/reshard behavior, and resource use."
+        },
+        {
+          "id": "1.3",
+          "task": "Measure bounded same-format candidates across complete sets and document unchanged, unsupported, failed, and limited cases."
+        },
+        {
+          "id": "2.1",
+          "task": "Define content-based identification of supported DCP directory layouts and complete shard inventories."
+        },
+        {
+          "id": "2.3",
+          "task": "Add tests for missing/extra shards, rank mismatch, malformed metadata, unsupported versions, and resource limits."
+        },
+        {
+          "id": "3.1",
+          "task": "Implement only a full-directory writer profile proven to preserve state representation and shard identity."
+        },
+        {
+          "id": "3.2",
+          "task": "Validate complete outputs with controlled DCP load and reshard tests for documented versions/topologies."
+        },
+        {
+          "id": "3.3",
+          "task": "Integrate protected routing, shared acceptance/budgets, and atomic directory publication."
+        }
+      ]
+    },
+    {
+      "change": "add-r-serialization-recompression",
+      "tasks": [
+        {
+          "id": "3.2",
+          "task": "Verify trusted fixtures in native R across the declared reader matrix and demonstrate smaller real files without object reserialization."
+        }
+      ]
+    },
+    {
+      "change": "add-safetensors-recompression",
+      "tasks": [
+        {
+          "id": "1.1",
+          "task": "Collect complete Safetensors samples from independent projects and record provenance, sizes, versions, and resource limits."
+        },
+        {
+          "id": "1.2",
+          "task": "Measure baseline payload/header composition and candidate same-format rewrites without changing tensor values or representation."
+        },
+        {
+          "id": "1.3",
+          "task": "Record unchanged, unsupported, failed, and resource-limited attempts; stop writer work if no useful profile passes the release gate."
+        },
+        {
+          "id": "2.3",
+          "task": "Compare all tensor bytes and metadata mappings before and after any candidate rewrite."
+        },
+        {
+          "id": "3.1",
+          "task": "Implement only the measured profile and register only its exact supported variants."
+        },
+        {
+          "id": "3.2",
+          "task": "Verify outputs with independent Safetensors readers and structural checks."
+        },
+        {
+          "id": "3.3",
+          "task": "Integrate with shared size acceptance, resource budgets, transactional publication, and protected archive routing."
+        }
+      ]
+    },
+    {
+      "change": "add-spss-system-file-recompression",
+      "tasks": [
+        {
+          "id": "1.1",
+          "task": "Inspect complete SAV sources, compression modes and dictionary records; acquire independent-origin real ZSAV files with recorded provenance."
+        },
+        {
+          "id": "2.3",
+          "task": "Add independently gated existing-ZSAV block envelope recompression and offset rebuild."
+        },
+        {
+          "id": "3.2",
+          "task": "Obtain trusted native-reader dictionary/case checks per advertised profile and document actual reader lineages, version coverage and compatibility limitations."
+        }
+      ]
+    },
+    {
+      "change": "add-structural-output-validation",
+      "tasks": [
+        {
+          "id": "1.2b",
+          "task": "Complete preservation adapters for all remaining data/media/image writer contracts, including required metadata and encoded sample-depth qualification."
+        },
+        {
+          "id": "1.3b",
+          "task": "Finish Avro/HDF5/NetCDF/font/SQLite and remaining image/audio/video preservation contracts and their real positive/adversarial corpus. Structural validation alone does not complete these guarantees."
+        },
+        {
+          "id": "2.1",
+          "task": "Establish every advertised lossless format's complete preservation contract across the positive/adversarial corpus; remaining contracts are listed above."
+        }
+      ]
+    },
+    {
+      "change": "add-zarr-store-recompression",
+      "tasks": [
+        {
+          "id": "1.1",
+          "task": "Obtain complete local stores from multiple origins; record versions, complete key manifests, source checksums and actual stored bytes rather than partial API totals."
+        },
+        {
+          "id": "1.2",
+          "task": "Benchmark same-family codec levels and explicit compatible upgrades; report gains, unchanged stores, read cost, time and peak scratch/memory."
+        },
+        {
+          "id": "4.3",
+          "task": "Check complete stores with ordinary/consolidated native readers and record the tested codec/platform matrix, metadata guarantees and exclusions."
+        }
+      ]
+    },
+    {
+      "change": "extend-doc-xls-officeart-coverage",
+      "tasks": [
+        {
+          "id": "1.2",
+          "task": "Acquire pinned, licensed real populated BIFF8 and inherited/mixed/floating Word fixtures with provenance."
+        }
+      ]
+    },
+    {
+      "change": "extend-hdf5-netcdf-recompression",
+      "tasks": [
+        {
+          "id": "1.2",
+          "task": "Measure native candidates, all unchanged/unsupported inputs, memory/time and representative read cost without inferring gain from declared corpus bytes."
+        },
+        {
+          "id": "4.2",
+          "task": "Verify trusted scientific-reader fixtures with auto transformations disabled; cover every advertised model and supported optional tool/platform combination."
+        }
+      ]
+    },
+    {
+      "change": "extend-tiff-recompression",
+      "tasks": [
+        {
+          "id": "1.1",
+          "task": "Sample complete real TIFF files from multiple Commons creators/collections and scientific/geospatial sources, with versions, checksums and provenance."
+        },
+        {
+          "id": "1.2",
+          "task": "Measure lossless native candidates and read cost across current compression methods; include all unchanged, rejected and unsupported files."
+        },
+        {
+          "id": "1.3",
+          "task": "Prepare multipage/SubIFD/pyramid, classic/BigTIFF, endian, palette, alpha, high-depth, signed/float, planar, ICC/EXIF/XMP and GeoTIFF/COG fixtures."
+        },
+        {
+          "id": "2.5",
+          "task": "Enable GeoTIFF/COG subprofiles only with semantic and layout validation."
+        },
+        {
+          "id": "3.2",
+          "task": "Verify exact native samples and metadata with independent read-only adapters and document tested backend/platform and reader coverage."
+        }
+      ]
+    },
+    {
+      "change": "refactor-format-capability-registry",
+      "tasks": [
+        {
+          "id": "1.3",
+          "task": "Validate executable overrides and probe versions/read/write capabilities with timeouts."
+        }
+      ]
+    },
+    {
+      "change": "refactor-repack-transactions",
+      "tasks": [
+        {
+          "id": "2.1b",
+          "task": "Establish Linux/Windows and actual second-filesystem publication evidence; the `/dev/shm` cases skip explicitly on the current macOS host."
+        },
+        {
+          "id": "3.1",
+          "task": "Complete remaining implementation/platform checks, reconcile the canonical baseline, integrate and record deployment before archival."
+        }
+      ]
+    },
+    {
+      "change": "update-container-format-policies",
+      "tasks": [
+        {
+          "id": "3.1",
+          "task": "Audit headers, checksums, signatures, compression constraints and metadata for broad ZIP aliases and implement validated format-specific policies."
+        },
+        {
+          "id": "3.2",
+          "task": "Require proven write support for CAB/WIM and every advertised family."
+        },
+        {
+          "id": "3.3",
+          "task": "Probe actual available writer commands; a backend E_NOTIMPL must never be called successful repacking."
+        },
+        {
+          "id": "3.5",
+          "task": "Verify ODF/EPUB with representative application-produced fixtures and application readers, beyond the current standards-shaped package tests."
+        }
+      ]
+    },
+    {
+      "change": "update-data-format-preservation",
+      "tasks": [
+        {
+          "id": "3.4",
+          "task": "Stream/batch remaining data paths and enforce the operation memory/resource policy, including large Parquet row groups and backend buffers."
+        },
+        {
+          "id": "3.5",
+          "task": "Measure remaining writers' peak memory, verify optional backends/unsupported cases and update data documentation."
+        },
+        {
+          "id": "3.6",
+          "task": "Use independent readers to compare remaining writers' values/schema/metadata and file-versus-stream form."
+        }
+      ]
+    },
+    {
+      "change": "update-quality-and-specification-gates",
+      "tasks": [
+        {
+          "id": "1.1",
+          "task": "Build a preservation corpus covering every advertised writer or label support unavailable/experimental."
+        },
+        {
+          "id": "1.7",
+          "task": "Update openspec/project.md and contributor/docs guidance; confirm deployment before archiving old changes."
+        }
+      ]
+    }
+  ],
+  "updated_date": "2026-10-08"
+}

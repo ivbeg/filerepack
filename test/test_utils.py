@@ -181,7 +181,7 @@ class TestOutputCsv:
         data = {'files': []}
         output_csv(data)
         captured = capsys.readouterr()
-        assert captured.out == ''
+        assert captured.out.startswith('file,original_size,final_size,')
 
     def test_output_with_dict_rows(self, capsys):
         data = {'files': [{

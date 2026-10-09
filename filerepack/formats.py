@@ -6,81 +6,26 @@ from dataclasses import dataclass
 from typing import FrozenSet, List, Optional, Tuple
 
 from .consts import ARCHIVE_EXTS, STANDALONE_EXTS, SUPPORTED_EXTS
+from .format_registry import COMPOUND_FAMILY, SPECIAL_FAMILY, STANDALONE_ALIASES
 
 # Longest first so ``tar.lzma`` wins over ``tar.lz`` / ``lzma``.
 COMPOUND_SUFFIXES: Tuple[str, ...] = (
-    'tar.lzma', 'tar.lz4', 'tar.zst', 'tar.bz2', 'tar.gz',
+    'cpio.bz2', 'tar.lzma', 'tar.lz4', 'tar.zst', 'tar.bz2', 'tar.gzip', 'tar.gz',
     'tar.xz', 'tar.br', 'tar.lzo', 'tar.lz', 'tar.z',
 )
 
-COMPOUND_FAMILY = {
-    'tar.gz': 'tar.gz',
-    'tar.bz2': 'tar.bz2',
-    'tar.xz': 'tar.xz',
-    'tar.zst': 'tar.zst',
-    'tar.br': 'tar.br',
-    'tar.lz4': 'tar.lz4',
-    'tar.lzo': 'tar.lzo',
-    'tar.lz': 'tar.lz',
-    'tar.lzma': 'tar.lzma',
-    'tar.z': 'tar.z',
-}
 
 # Short aliases and non-ZIP archive families.
-SPECIAL_FAMILY = {
-    '7z': '7z', 'cb7': '7z',
-    'rar': 'rar', 'cbr': 'rar',
-    'tar': 'tar', 'cbt': 'tar',
-    'tgz': 'tar.gz', 'taz': 'tar.gz', 'gem': 'tar.gz', 'crate': 'tar.gz',
-    'unitypackage': 'tar.gz',
-    'tbz': 'tar.bz2', 'tbz2': 'tar.bz2',
-    'txz': 'tar.xz',
-    'tzst': 'tar.zst',
-    'tlz': 'tar.lz',
-    'tzo': 'tar.lzo',
-    'cab': 'cab',
-    'wim': 'wim',
-}
 
 # Standalone extension → packer key (so --include-ext dcm matches .dicom).
-STANDALONE_ALIASES = {
-    'dicom': 'dcm',
-    'dic': 'dcm',
-    'db': 'sqlite',
-    'apng': 'png',
-    'cur': 'ico',
-    'jif': 'jpg',
-    'jfi': 'jpg',
-    'jfif': 'jpg',
-    'jpe': 'jpg',
-    'jpeg': 'jpg',
-    'thm': 'jpg',
-    'm4b': 'm4a',
-    'dib': 'bmp',
-    'targa': 'tga',
-    'ppm': 'pnm',
-    'pgm': 'pnm',
-    'pbm': 'pnm',
-    'dcx': 'pcx',
-    'opus': 'ogg',
-    'xhtml': 'xml',
-    'kml': 'xml',
-    'gpx': 'xml',
-    'dae': 'xml',
-    'rss': 'xml',
-    'atom': 'xml',
-    'xmp': 'xml',
-    'xsl': 'xml',
-    'xslt': 'xml',
-    'fb2': 'xml',
-}
 
 STREAM_PEEK_EXTS: FrozenSet[str] = frozenset({
-    'gz', 'xz', 'bz2', 'zst', 'br', 'lz4', 'lz', 'lzma', 'lzo', 'z',
+    'gz', 'gzip', 'xz', 'bz2', 'zst', 'br', 'lz4', 'lz', 'lzma', 'lzo', 'z',
 })
 
 _STREAM_TO_TAR_FAMILY = {
     'gz': 'tar.gz',
+    'gzip': 'tar.gz',
     'xz': 'tar.xz',
     'bz2': 'tar.bz2',
     'zst': 'tar.zst',
@@ -125,12 +70,31 @@ def compound_suffix(name: str) -> Optional[str]:
     return None
 
 
+def _r_suffix(name: str) -> Optional[str]:
+    base = _basename_lower(name)
+    for extension in ('rds', 'rda', 'rdata'):
+        for codec in ('gz', 'gzip', 'bz2', 'xz'):
+            suffix = extension + '.' + codec
+            if base.endswith('.' + suffix):
+                return suffix
+    return None
+
+
 def filename_exts(name: str) -> List[str]:
     """Extension keys that filters like ``--include-ext`` may match."""
     keys: List[str] = []
+    if _basename_lower(name).endswith(('.warc.gz', '.warc.gzip')):
+        keys.extend(['warc.gz', 'warc'])
+    r_suffix = _r_suffix(name)
+    if r_suffix:
+        keys.extend([r_suffix, r_suffix.split(".")[0], "r-serialization"])
     compound = compound_suffix(name)
     if compound:
         keys.append(compound)
+        if compound == 'tar.gzip':
+            keys.append('tar.gz')
+        if compound == 'cpio.bz2':
+            keys.extend(['cpio', 'cpbz2', 'bz2'])
         aliased = SPECIAL_FAMILY.get(_last_ext(name))
         if aliased and aliased not in keys:
             keys.append(aliased)
@@ -140,6 +104,8 @@ def filename_exts(name: str) -> List[str]:
         mapped = SPECIAL_FAMILY.get(ext)
         if mapped and mapped not in keys:
             keys.append(mapped)
+        if ext == 'cpbz2' and 'bz2' not in keys:
+            keys.append('bz2')
         alias = STANDALONE_ALIASES.get(ext)
         if alias and alias not in keys:
             keys.append(alias)
@@ -165,21 +131,15 @@ def _looks_like_tar(header: bytes) -> bool:
 
 def peek_stream_is_tar(path: str, codec: str) -> bool:
     """True when a compressed stream's payload starts with a tar header."""
+    import subprocess
+    import sys
+    from .commands import capture_prefix
     try:
-        if codec == 'gz':
-            import gzip
-            with gzip.open(path, 'rb') as fh:
-                return _looks_like_tar(fh.read(512))
-        if codec == 'bz2':
-            import bz2
-            with bz2.open(path, 'rb') as fh:
-                return _looks_like_tar(fh.read(512))
-        if codec == 'xz' or codec == 'lzma':
-            import lzma
-            fmt = None if codec == 'xz' else lzma.FORMAT_ALONE
-            with lzma.open(path, 'rb', format=fmt) as fh:
-                return _looks_like_tar(fh.read(512))
-    except (OSError, EOFError, ValueError):
+        if codec in ('gz', 'bz2', 'xz', 'lzma'):
+            return _looks_like_tar(capture_prefix(
+                [sys.executable, '-m', 'filerepack.peek_worker', codec, path],
+            ))
+    except (OSError, EOFError, ValueError, subprocess.TimeoutExpired):
         return False
     return _peek_cli_tar(path, codec)
 
@@ -187,6 +147,7 @@ def peek_stream_is_tar(path: str, codec: str) -> bool:
 def _peek_cli_tar(path: str, codec: str) -> bool:
     """Decompress the first 512 bytes via CLI; do not read the whole stream."""
     import subprocess
+    from .commands import capture_prefix
     from .tools import resolve_tool
 
     decode = {
@@ -206,21 +167,8 @@ def _peek_cli_tar(path: str, codec: str) -> bool:
     if tool is None:
         return False
     try:
-        proc = subprocess.Popen(
-            [tool] + flags + [path],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.DEVNULL,
-        )
-        try:
-            header = proc.stdout.read(512) if proc.stdout else b''
-        finally:
-            proc.kill()
-            try:
-                proc.wait(timeout=5)
-            except subprocess.TimeoutExpired:
-                proc.wait()
-        return _looks_like_tar(header)
-    except (OSError, subprocess.SubprocessError):
+        return _looks_like_tar(capture_prefix([tool] + flags + [path]))
+    except (OSError, ValueError, subprocess.SubprocessError):
         return False
 
 
@@ -233,10 +181,20 @@ def _is_odf_zip(path: str) -> bool:
         return False
 
 
-def identify_filename(
+def identify_filename(  # noqa: C901
     name: str, peek_path: Optional[str] = None,
 ) -> Optional[FileKind]:
     """Return how *name* should be processed, or None if unsupported."""
+    if peek_path:
+        from .checkpoint import looks_like_checkpoint
+        if looks_like_checkpoint(peek_path):
+            return FileKind(key=_last_ext(name) or 'checkpoint', family='standalone',
+                            packer='checkpoint')
+    if _basename_lower(name).endswith(('.warc.gz', '.warc.gzip')):
+        return FileKind(key='warc.gz', family='standalone', packer='warc')
+    r_suffix = _r_suffix(name)
+    if r_suffix:
+        return FileKind(key=r_suffix, family="standalone", packer="r-serialization")
     compound = compound_suffix(name)
     if compound:
         return FileKind(key=compound, family=COMPOUND_FAMILY[compound])
@@ -256,6 +214,13 @@ def identify_filename(
         return None
 
     if ext in STANDALONE_EXTS:
+        if peek_path and ext in ('gz', 'gzip') and peek_gzip_is_warc(peek_path):
+            return FileKind(key=ext, family='standalone', packer='warc')
+        if peek_path and ext == 'bz2':
+            from .cpio import cpio_magic
+
+            if cpio_magic(peek_path, compressed=True):
+                return FileKind(key='cpio.bz2', family='cpio.bz2')
         if peek_path and ext in STREAM_PEEK_EXTS:
             if peek_stream_is_tar(peek_path, ext):
                 tar_family = _STREAM_TO_TAR_FAMILY.get(ext)
@@ -265,6 +230,19 @@ def identify_filename(
         return FileKind(key=ext, family='standalone', packer=packer)
 
     return None
+
+
+def peek_gzip_is_warc(path: str) -> bool:
+    """Identify WARC-bearing gzip files even when their name omits `.warc`."""
+    import subprocess
+    import sys
+    from .commands import capture_prefix
+
+    try:
+        return capture_prefix([sys.executable, '-m', 'filerepack.peek_worker', 'gz', path],
+                              maximum=5).startswith(b'WARC/')
+    except (OSError, EOFError, ValueError, subprocess.TimeoutExpired):
+        return False
 
 
 def is_supported_filename(name: str, peek_path: Optional[str] = None) -> bool:

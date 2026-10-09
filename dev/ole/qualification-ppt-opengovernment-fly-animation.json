@@ -1,0 +1,383 @@
+{
+  "date": "2026-10-09",
+  "scope": "Local macOS Python 3.13/native/POI/LibreOffice",
+  "source_sha256": "646a7dbba22c0a30f8a116503a364067908a76e340961d588c6244292b330a8d",
+  "candidate_sha256": "841e6157e336e1b8abb152e4c15ae937e8f236db99b1b48ba80b5129d5672665",
+  "source_bytes": 10278912,
+  "candidate_bytes": 9250816,
+  "whole_file_saved_bytes": 1028096,
+  "savings_percent": 10.001992428770672,
+  "complete_officeart_contract_equal": true,
+  "unaffected_streams_exact": true,
+  "immutable_animation_notes_tags_storage_layout_spans": 122,
+  "animation_atoms": 13,
+  "source_mode": "0o700",
+  "source_mtime_ns": 1334320598000000000,
+  "candidate_mode": "0o700",
+  "mtime_preserved": true,
+  "native_sha256": "5f682b0bfae895b7c83445933e01beb48c7e67537a9739647a3f29a9b5112d3d",
+  "poi_version": "5.4.1",
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "poi_reader_save_reopen": [
+    "2026-10-09T04:57:30.415969Z main ERROR Log4j API could not find a logging provider.",
+    "file=opengovernment_rewired.ppt slides=19 masters=4 notes=19 pictures=20 animation_and_tag_records=169 tag_lists=25 shape_client_data=113 storages=4 resolved=4 save_reopen_equal=true",
+    "file=opengovernment_rewired.ppt slides=19 masters=4 notes=19 pictures=20 animation_and_tag_records=169 tag_lists=25 shape_client_data=113 storages=4 resolved=4 save_reopen_equal=true",
+    "source_candidate_equal=true decoded_pixels_animation_tags_and_embeddings=true"
+  ],
+  "slides_render": {
+    "equal_page_rgb": true,
+    "page_count": 19,
+    "pages": [
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "aff0ba0fafaae662e9b98b80081112183a02e6a511c82081b0ea6847d8b0908d"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "13739da14f967ce6044181ce38dd1e1e7ac89b0296f0f396dadcbbc151c35bc7"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "aed4c0a67472bd9f2f91683aa83f85860aadb68fa8ca0ec2941389e8850bac82"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "a993ba38669d62b2db928820d01a34d54fb318d86558e9168cec4706a7fd9290"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "215eafe34f471a7506ea7ac37b56e9e97744ced58d20378bbf0cea269833bde2"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "d4f9beeacd04aa2868b04eae1f6a122ade6d60142d4e2e36fb69184ddf4c2a10"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "31a19005837fc433a310c37f930f58d071942bc7a4b96162f8c0e1f190931e9e"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "d4fde2c6a4b4f7cca4cd46bd99e4ef676b19c907f06cab775b56c6be974a0322"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "f264782f6e9eb0eba52b35a99986e7c17402dbf53ec3ba186769b63040cd7a58"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "54d07f2c34ac74a5f36519f4ad994d38600e2d88e2b384789aa0a181ab0dd680"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "44522e2ab01a3e3001e896c9482a6741050b0c13fc5591887e3b838cf3ad89f1"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "0e18e589ad87327d2d2b71b5dd433bdc3552517f05684c2c058324d5b50968a5"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "420aeab3294ecb3e5181acaa0f197a2ba6bba8599c4cecaf7246c36b07470de2"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "a810996ffb37d740288454cc3283c072e4e262b5f3fbe4998bc40bb7deb28144"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "efc669e848354f8169312994f30c573529efd8655a78905fcf1c2a107c7d9075"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "96ffb5cd7c83de101ba511c274f69fbaf82c14b2ba27a2a8768e7a46f166f164"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "f6cde4b889c7d41003bba44cf6a72e126537ca6fd71c888493c9e8e250b82aaa"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "b001bc1c285d28b3ab69411cfecd1d3fcd275c017ac112d7554f2cbf8f701422"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "abf5a5eeee8c919af027e45752eaf0a682576f3fef50cd03f42ee72a228b62cb"
+      }
+    ]
+  },
+  "notes_render": {
+    "equal_page_rgb": true,
+    "page_count": 19,
+    "pages": [
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "ea3edd544103580e00016ee62136d2442287d8ccaec31818cd19a87b28c31a75"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "7fc24ada5d4f4a0e9a658ef9b65d74c957d56ed05b898fc9ab35616f9fadb413"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "7b4e1e298235eb57e0ea6734063ca819cb37030334c5fcf06587edf216884ad8"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "e23bdd7ef5ec44bbeb9996305ad7fa468ca5d5fd0b6d99d9f74922b2f0636153"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "ecc0f38f51772ba25ff787501fd1fc9cc2a951296b7745985c6e04a757ea629d"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "9d15b97dbb13380c89d7f403cd4f31e3c1eb902433b5e268729828ceadb00b3a"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "4cfcdf11f64aa52b296af51e3d748d3a28a85906cac630a4999502d9d491a02f"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "52ca7d91438c986517dec0595f9bc8736b3fecafa56e531bf65c43f04bc35ab3"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "85aa4f04829a6c1608b2f583bdd3db1ed07938ceb59b539ba92de73990fc882f"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "0073fb2c0e4d16a0d7c68a765900da0b4f4f7e3deceb92c6991af56a2bbdcc23"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "cc6bcc51dd88a2a9067bbeffc5bad8195388ee91dd2bf9b68505df7aa7dd6083"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "57ad02a80cfccbcda0353c856e0c78aecb32bffb91533c9d2f52efb93f7c6ea6"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "b4470e22f067c986edd0bb0179e34a5cd428be78df183931cdc46cb96284a3f9"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "1373d594300d478558bc397ad992e11a8f66ca1a8b61de7359278e35acb197be"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "efce65cfde668d2132bbeb2a3eef43dc9763ba46b432b4162526c671926dfec4"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "67a3eeac8c8fbd88620ee71b62275d8f0d6eea1f9d21fe38b96dcdc4585131ab"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "6d6513ed47e07007f9a3bc0c54c646fe45eaf6d03f445ce9c1650cdb5bbeb75e"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "6347a512b316f69b0fb358eb26c0283a308dcd7e21b919b3fa602d9c93ed7e1b"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "704aae0c631519b63a470568c7444043f74cb0013b5d3a3b50dda1a2d73bc19c"
+      }
+    ]
+  },
+  "source_unchanged": true,
+  "candidate_unchanged_by_qa": true,
+  "verification_limits": {
+    "static_rendering": "19 slides and 19 notes, no animation playback measurement",
+    "animation_data": "all source/candidate legacy animation and programmable tag bytes exact; POI source/candidate/save/reopen records and 113 shape client-data hashes equal"
+  },
+  "poi_dependencies": [
+    {
+      "name": "SparseBitSet-1.3.jar",
+      "sha256": "f76b85adb0c00721ae267b7cfde4da7f71d3121cc2160c9fc00c0c89f8c53c8a"
+    },
+    {
+      "name": "commons-codec-1.18.0.jar",
+      "sha256": "ba005f304cef92a3dede24a38ad5ac9b8afccf0d8f75839d6c1338634cf7f6e4"
+    },
+    {
+      "name": "commons-collections4-4.4.jar",
+      "sha256": "1df8b9430b5c8ed143d7815e403e33ef5371b2400aadbe9bda0883762e0846d1"
+    },
+    {
+      "name": "commons-io-2.18.0.jar",
+      "sha256": "f3ca0f8d63c40e23a56d54101c60d5edee136b42d84bfb85bc7963093109cf8b"
+    },
+    {
+      "name": "commons-math3-3.6.1.jar",
+      "sha256": "1e56d7b058d28b65abd256b8458e3885b674c1d588fa43cd7d1cbb9c7ef2b308"
+    },
+    {
+      "name": "log4j-api-2.24.3.jar",
+      "sha256": "5b4a0a0cd0e751ded431c162442bdbdd53328d1f8bb2bae5fc1bbeee0f66d80f"
+    },
+    {
+      "name": "poi-5.4.1.jar",
+      "sha256": "da5abf42da4604c5a7bca38956af6e9d6f196d9b6d4cb7eabee4f480b580d505"
+    },
+    {
+      "name": "poi-scratchpad-5.4.1.jar",
+      "sha256": "6497ba15c1cba7062aa71661a8d776d321b1f998bb2bfa19b57d7e35606381f1"
+    }
+  ],
+  "reader_control_sha256": "d2d35d7d85b1c51bd7bf0b4d328fbda39ed7f09ac4e062dfd439059c223e9f9b",
+  "python_checks": {
+    "full_ole_cli_transactions": "1208 passed, 2 skipped in 169.33s",
+    "final_focused": "180 passed in 38.98s",
+    "ruff": "passed",
+    "mypy": "passed",
+    "spec_ownership": "189 canonical requirements; 254 uniquely owned live deltas; 290 source blocks audited",
+    "python": "3.13; 3.9 syntax target checked by Ruff/Mypy, no 3.9 runtime available for this run",
+    "installed_wheel_focused": "180 passed in 35.30s; runtime imports confined to artifact environment and changed runtime sources byte-identical to checkout"
+  },
+  "native_and_qa_assets_are_development_only": true,
+  "wheel": {
+    "name": "filerepack-0.3.0-py3-none-any.whl",
+    "sha256": "5fee5bbf971cd65b8b7a94eab246befeb82b134ee62ddc3ab6bcff2ae2d304ed",
+    "runtime_source_bytes_match_checkout": true
+  },
+  "installed_cli": {
+    "original_bytes": 10278912,
+    "candidate_bytes": 9394176,
+    "strategy": "ole-officeart-recompression",
+    "additional_savings_bytes": 869888,
+    "raster_skips": [
+      "OfficeArt PNG refiltering trial time limit reached; prior codecs retained",
+      "OfficeArt PNG refiltering trial declined; prior codecs retained"
+    ],
+    "source_unchanged": true
+  },
+  "installed_cli_idle_retry": {
+    "original_bytes": 10278912,
+    "candidate_bytes": 9394176,
+    "strategy": "ole-officeart-recompression",
+    "additional_savings_bytes": 869888,
+    "raster_skips": [
+      "OfficeArt PNG refiltering trial time limit reached; prior codecs retained",
+      "OfficeArt PNG refiltering trial declined; prior codecs retained"
+    ],
+    "source_unchanged": true
+  }
+}

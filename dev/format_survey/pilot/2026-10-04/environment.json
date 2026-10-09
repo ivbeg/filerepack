@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "runtime_sha256": "f71f4f1bb92c2acc9f27ea243c0ea52780d35b50a6650319490f68282d0dab8e",
+  "started_at_utc": "2026-10-04T04:00:43Z",
+  "packages": {
+    "Pillow": "11.3.0",
+    "pyarrow": "21.0.0",
+    "duckdb": "1.4.2",
+    "pikepdf": null,
+    "psutil": "7.2.2",
+    "typer": "0.20.0"
+  },
+  "tools": {
+    "7zz": {
+      "path": "7zz",
+      "version": "7-Zip (z) 25.01 (arm64) : Copyright (c) 1999-2025 Igor Pavlov : 2025-08-03\n 64-bit arm_v:8.5-A locale=C.UTF-8 Threads:14 OPEN_MAX:1048575, ASM\n\n\nFormats:\n   C...F..........c.a.m+..  7z       7z            7 z BC AF ' 1C\n    ......................  APFS     apfs img      offset=32 N X S B 00\n    ......................  APM      apm           E R\n    ......................  Ar       ar a deb udeb lib ! < a r c h > 0A\n    ......................  Arj      arj           ` EA\n    K.....O.....X.........  Base64   b64           \n    ......O...............  COFF     obj           \n    ...F..................  Cab      cab           M S C F 00 00 00 00\n    ......................  Chm      chm chi chq chw I T S F 03 00 00 00 ` 00 00 00\n    ......................  Compound msi msp doc xls ppt D0 CF 11 E0 A1 B1 1A E1\n    ....M.................  Cpio     cpio          0 7 0 7 0  ||  C7 q  ||  q C7\n    ......................  CramFS   cramfs        offset=16 C o m p r e s s e d 20 R O M F S\n    .....G..B.............  Dmg      dmg           k o l y 00 00 00 04 00 00 02 00\n    .........E............  ELF      elf            E L F\n    ......................  Ext      ext ext2 ext3 ext4 img offset=1080 S EF\n    ......................  FAT      fat img       offset=510 U AA\n    ......................  FLV      flv           F L V 01\n    ......................  GPT      gpt mbr       offset=512 E F I 20 P A R T 00 00 01 00\n    ....M.................  HFS      hfs hfsx      offset=1024 B D  ||  H + 00 04  ||  H X 00 05\n    ...F..................  Hxs      hxs hxi hxr hxq hxw lit I T O L I T L S 01 00 00 00 ( 00 00 00\n    ......O...............  IHex     ihex          \n    ......................  Iso      iso img       offset=32769 C D 0 0 1\n    ......................  LP       lpimg img     offset=4096 g D l a 4 00 00 00\n    ......................  Lzh      lzh lha       offset=2 - l h\n    .......P..............  MBR      mbr           \n    ....M....E............  MachO    macho"
+    },
+    "qpdf": {
+      "path": "qpdf",
+      "version": "qpdf version 12.2.0\nRun qpdf --copyright to see copyright and license information."
+    },
+    "jpegtran": {
+      "path": "jpegtran",
+      "version": "libjpeg-turbo version 3.2.0 (build 20260630)"
+    },
+    "jpegoptim": {
+      "path": "jpegoptim",
+      "version": "jpegoptim v1.5.6  aarch64-apple-darwin25.0.0 (Sep 15 2025)\nCopyright (C) 1996-2025, Timo Kokkonen\n\nThis program comes with ABSOLUTELY NO WARRANTY. This is free software,\nand you are welcome to redistribute it under certain conditions.\nSee the GNU General Public License for more details.\n\n\nlibjpeg version: 8d  15-Jan-2012\nCopyright (C) 1991-2026 The libjpeg-turbo Project and many others"
+    },
+    "oxipng": {
+      "path": "oxipng",
+      "version": "oxipng 10.2.0"
+    },
+    "optipng": {
+      "path": "optipng",
+      "version": "OptiPNG version 7.9.1\nCopyright (C) 2001-2025 Cosmin Truta and the Contributing Authors.\n\nThis program is open-source software. See LICENSE for more details.\n\nPortions of this software are based in part on the work of:\n  Jean-loup Gailly and Mark Adler (zlib)\n  Glenn Randers-Pehrson and the PNG Development Group (libpng)\n  Miyasaka Masaru (BMP support)\n  David Koblas (GIF support)\n\nUsing libpng version 1.6.58 and zlib version 1.2.12"
+    },
+    "svgo": {
+      "path": "svgo",
+      "version": "4.0.0"
+    },
+    "scour": {
+      "path": "scour",
+      "version": "0.38.2"
+    },
+    "cwebp": {
+      "path": "cwebp",
+      "version": "1.6.0\nlibsharpyuv: 0.4.2"
+    },
+    "dwebp": {
+      "path": "dwebp",
+      "version": "1.6.0"
+    },
+    "pdfinfo": {
+      "path": "pdfinfo",
+      "version": "pdfinfo version 26.05.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC"
+    },
+    "pdftoppm": {
+      "path": "pdftoppm",
+      "version": "pdftoppm version 26.05.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC"
+    },
+    "rsvg-convert": null
+  },
+  "options": {
+    "keep_meta": true,
+    "lossy": false,
+    "convert_container": false,
+    "keep_if_larger": true
+  },
+  "harness_sha256": "79f1eca7cb17deeeb7ab01bd0899194a3d72077ef1136e45f91024cb26c50fe2",
+  "harness_files": [
+    "collect.py",
+    "run.py",
+    "verify.py"
+  ]
+}

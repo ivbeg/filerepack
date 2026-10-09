@@ -1,0 +1,204 @@
+[
+  {
+    "format": "ipynb",
+    "profile": "preserve",
+    "samples": 16,
+    "input_bytes": 1050268,
+    "verified_saved_bytes": 36355,
+    "weighted_savings_pct": 3.4614974463660704,
+    "verified_shrinks": 16,
+    "unchanged": 0,
+    "unverified": 0,
+    "preservation_failures": 0,
+    "elapsed_seconds": 3.1096226250000036,
+    "statuses": {
+      "verified_shrink": 16
+    }
+  },
+  {
+    "format": "jpg",
+    "profile": "preserve",
+    "samples": 16,
+    "input_bytes": 5311821,
+    "verified_saved_bytes": 383130,
+    "weighted_savings_pct": 7.21278070175934,
+    "verified_shrinks": 10,
+    "unchanged": 6,
+    "unverified": 0,
+    "preservation_failures": 0,
+    "elapsed_seconds": 5.236592042000002,
+    "statuses": {
+      "unchanged": 6,
+      "verified_shrink": 10
+    }
+  },
+  {
+    "format": "json",
+    "profile": "preserve",
+    "samples": 16,
+    "input_bytes": 3116223,
+    "verified_saved_bytes": 306024,
+    "weighted_savings_pct": 9.820349827339058,
+    "verified_shrinks": 14,
+    "unchanged": 2,
+    "unverified": 0,
+    "preservation_failures": 0,
+    "elapsed_seconds": 3.705029041000003,
+    "statuses": {
+      "verified_shrink": 14,
+      "unchanged": 2
+    }
+  },
+  {
+    "format": "npz",
+    "profile": "deep",
+    "samples": 5,
+    "input_bytes": 242949,
+    "verified_saved_bytes": 26972,
+    "weighted_savings_pct": 11.101918509646058,
+    "verified_shrinks": 4,
+    "unchanged": 1,
+    "unverified": 0,
+    "preservation_failures": 0,
+    "elapsed_seconds": 1.2980595000000008,
+    "statuses": {
+      "verified_shrink": 4,
+      "unchanged": 1
+    }
+  },
+  {
+    "format": "npz",
+    "profile": "shallow",
+    "samples": 5,
+    "input_bytes": 242949,
+    "verified_saved_bytes": 26972,
+    "weighted_savings_pct": 11.101918509646058,
+    "verified_shrinks": 4,
+    "unchanged": 1,
+    "unverified": 0,
+    "preservation_failures": 0,
+    "elapsed_seconds": 1.3059485010000103,
+    "statuses": {
+      "verified_shrink": 4,
+      "unchanged": 1
+    }
+  },
+  {
+    "format": "parquet",
+    "profile": "preserve",
+    "samples": 16,
+    "input_bytes": 2088609,
+    "verified_saved_bytes": 175897,
+    "weighted_savings_pct": 8.421729485988044,
+    "verified_shrinks": 3,
+    "unchanged": 13,
+    "unverified": 0,
+    "preservation_failures": 0,
+    "elapsed_seconds": 4.841607500000066,
+    "statuses": {
+      "unchanged": 13,
+      "verified_shrink": 3
+    }
+  },
+  {
+    "format": "pdf",
+    "profile": "preserve",
+    "samples": 16,
+    "input_bytes": 5087097,
+    "verified_saved_bytes": 1526630,
+    "weighted_savings_pct": 30.009846480222414,
+    "verified_shrinks": 10,
+    "unchanged": 6,
+    "unverified": 0,
+    "preservation_failures": 0,
+    "elapsed_seconds": 16.707599500999997,
+    "statuses": {
+      "unchanged": 6,
+      "verified_shrink": 10
+    }
+  },
+  {
+    "format": "png",
+    "profile": "preserve",
+    "samples": 16,
+    "input_bytes": 5619188,
+    "verified_saved_bytes": 5278849,
+    "weighted_savings_pct": 93.94327080709881,
+    "verified_shrinks": 16,
+    "unchanged": 0,
+    "unverified": 0,
+    "preservation_failures": 0,
+    "elapsed_seconds": 6.888624957,
+    "statuses": {
+      "verified_shrink": 16
+    }
+  },
+  {
+    "format": "svg",
+    "profile": "preserve",
+    "samples": 16,
+    "input_bytes": 1179676,
+    "verified_saved_bytes": 0,
+    "weighted_savings_pct": 0.0,
+    "verified_shrinks": 0,
+    "unchanged": 2,
+    "unverified": 14,
+    "preservation_failures": 0,
+    "elapsed_seconds": 6.197134124000005,
+    "statuses": {
+      "verification_unavailable": 14,
+      "unchanged": 2
+    }
+  },
+  {
+    "format": "webp",
+    "profile": "preserve",
+    "samples": 16,
+    "input_bytes": 1282268,
+    "verified_saved_bytes": 0,
+    "weighted_savings_pct": 0.0,
+    "verified_shrinks": 0,
+    "unchanged": 16,
+    "unverified": 0,
+    "preservation_failures": 0,
+    "elapsed_seconds": 80.12155045499998,
+    "statuses": {
+      "unchanged": 16
+    }
+  },
+  {
+    "format": "zip",
+    "profile": "deep",
+    "samples": 16,
+    "input_bytes": 4696276,
+    "verified_saved_bytes": 2487,
+    "weighted_savings_pct": 0.052956853472836775,
+    "verified_shrinks": 6,
+    "unchanged": 6,
+    "unverified": 4,
+    "preservation_failures": 0,
+    "elapsed_seconds": 8.405612712000014,
+    "statuses": {
+      "verification_unavailable": 4,
+      "verified_shrink": 6,
+      "unchanged": 6
+    }
+  },
+  {
+    "format": "zip",
+    "profile": "shallow",
+    "samples": 16,
+    "input_bytes": 4696276,
+    "verified_saved_bytes": 3174,
+    "weighted_savings_pct": 0.06758546559018253,
+    "verified_shrinks": 10,
+    "unchanged": 6,
+    "unverified": 0,
+    "preservation_failures": 0,
+    "elapsed_seconds": 6.897173914999996,
+    "statuses": {
+      "verified_shrink": 10,
+      "unchanged": 6
+    }
+  }
+]

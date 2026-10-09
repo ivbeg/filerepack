@@ -16,8 +16,17 @@ pip install 'filerepack[pdf]'
 filerepack repack report.pdf
 ```
 
-Encrypted or digitally signed PDFs skip stream replacement; lossless qpdf may
-still run.
+Encrypted, digitally signed, and protection-uncertain PDFs skip all rewriting,
+including qpdf and Ghostscript. Eligible image streams keep their host color,
+decode, mask, dimensions and depth attributes; unsupported sample layouts stay
+unchanged.
+
+DCT comparison supports decoded 8-bit Gray/RGB/CMYK. JPX comparison checks
+the encoded component precision and color/channel fields and currently supports
+unsigned unsampled 8-bit components. High-depth, signed and subsampled JPX
+profiles remain unavailable. A PDF dictionary claiming 8 bits cannot authorize
+an intrinsically higher-depth stream. PNG-predictor/Flate profiles have separate
+sample checks, including the qualified 16-bit gray fixtures.
 
 Adobe Illustrator `.ai` uses the same path when the file is a PDF wrapper.
 

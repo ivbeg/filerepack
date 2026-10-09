@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-09",
+  "version": "0.3.0",
+  "artifacts": [
+    {
+      "name": "filerepack-0.3.0.tar.gz",
+      "sha256": "a2d8bfa186ed286d5616897dad7f7c98e3602cb8e29cc629f5fcbbd0ef30c0d2"
+    },
+    {
+      "name": "filerepack-0.3.0-py3-none-any.whl",
+      "sha256": "5814842c41e9248e17b80fa35de8c78af15547c40cda611bdc998c9b0a41ed3f"
+    }
+  ],
+  "all_runtime_modules_in_sdist_and_wheel": true,
+  "test_helpers_in_sdist_only": true,
+  "entry_points_license_metadata": true,
+  "runtime_root": "/Users/ibegtin/workspace/ivbeg/filerepack/temp/ppt-main-integration-check/venv",
+  "installed_wheel_imports_isolated": true,
+  "installed_api_smoke": true,
+  "installed_test_paths": [
+    "test/test_ole_ppt.py",
+    "test/test_ole_ppt_notes.py",
+    "test/test_ole_ppt_roundtrip.py",
+    "test/test_ole_ppt_animation.py",
+    "test/test_ole_png_refilter.py",
+    "test/test_cli.py",
+    "test/test_transactions.py",
+    "test/test_candidate_evidence.py",
+    "test/test_output_safety.py"
+  ],
+  "installed_test_result": "482 passed, 2 skipped in 18.50s",
+  "openbudget": {
+    "original_bytes": 7742464,
+    "candidate_bytes": 6936576,
+    "savings_percent": 10.408676101044835,
+    "strategy": "ole-officeart-recompression",
+    "dryrun": true,
+    "source_unchanged": true
+  },
+  "apps4russia": {
+    "original_bytes": 2694144,
+    "candidate_bytes": 2082816,
+    "savings_percent": 22.690992018244014,
+    "strategy": "ole-officeart-recompression",
+    "dryrun": true,
+    "source_unchanged": true
+  },
+  "runtime_python_modules": 106,
+  "experimental_qa_in_wheel": false,
+  "checks": {
+    "ruff_validator": "passed",
+    "mypy_validator": "passed",
+    "spec_ownership": "189 requirements; 290 audited source blocks",
+    "git_diff_check": "passed"
+  }
+}

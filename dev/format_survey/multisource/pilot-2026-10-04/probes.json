@@ -1,0 +1,660 @@
+{
+  "limits": {
+    "per_file_bytes": 8388608,
+    "total_sample_bytes": 67108864,
+    "decoded_stream_bytes": 33554432
+  },
+  "consumed_sample_bytes": 33334691,
+  "selection_limits": {
+    "rds": 8,
+    "rdata": 6,
+    "mat": 6,
+    "h5ad": 2,
+    "loom": 2,
+    "root": 2,
+    "vtu": 2,
+    "vtp": 2,
+    "vti": 2,
+    "stl": 2,
+    "sav": 2,
+    "pt": 3,
+    "safetensors": 2,
+    "zip": 4
+  },
+  "environment": {
+    "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "zlib_runtime": "1.2.12"
+  },
+  "scope": "Signature checks and R serialization stream experiments; no object execution, no runtime handlers.",
+  "results": [
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/4UR5DY",
+      "name": "data/_out/vs.rds",
+      "format": "rds",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/13234390?format=original",
+      "metadata_size": 5452022,
+      "metadata_checksum": "md5:731475d032ec075223f3f81ce4e9d2d9",
+      "metadata_checksum_verified": true,
+      "sha256": "b6f9d6cb5d1494452ebcb4ddd0d079854a65d5acfe1576b9d6fa1148ff6af93e",
+      "downloaded_bytes": 5452022,
+      "status": "unavailable",
+      "error": "ValueError: decoded stream exceeds 32 MiB"
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/GVVAO1",
+      "name": "Analysis data/EP_analysis.rds",
+      "format": "rds",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14300924?format=original",
+      "metadata_size": 65479,
+      "metadata_checksum": "md5:5225c5b7ba2be0cbfee0bbf90b670b38",
+      "metadata_checksum_verified": true,
+      "sha256": "cec7866300bb34822a75555a1ea66aedce296309c9e72687af7d6177506ffde8",
+      "downloaded_bytes": 65479,
+      "status": "inspected",
+      "inspection": {
+        "signature": "R serialization prefix",
+        "codec": "gzip",
+        "decoded_bytes": 1758423,
+        "decoded_sha256": "e9223b7fd9bf27ddf841c237bc530e86bd4befc4a755951426ba3f8a00d377e4",
+        "representation": "X",
+        "serialization_version": 3,
+        "writer_version_code": 262914,
+        "minimum_reader_version_code": 197888,
+        "experiments": [
+          {
+            "codec": "gzip-9",
+            "output_bytes": 59640,
+            "saved_bytes_if_adopted": 5839,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.075214
+          },
+          {
+            "codec": "xz-6",
+            "output_bytes": 49032,
+            "saved_bytes_if_adopted": 16447,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.123632
+          }
+        ],
+        "reader_validation": "R runtime unavailable; no readRDS/load validation"
+      }
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/LMXE9B",
+      "name": "Data/Elections/Hessick/Public Dataset (Version 0) (RDS file for R).rds",
+      "format": "rds",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14300725?format=original",
+      "metadata_size": 702376,
+      "metadata_checksum": "md5:a73b8e1ddf9534fe6f67c4a3206010bf",
+      "metadata_checksum_verified": true,
+      "sha256": "5dbd55171d20fc34023177db0cc9a65fc0079de08936c78bef29a98dd93eee57",
+      "downloaded_bytes": 702376,
+      "status": "inspected",
+      "inspection": {
+        "signature": "R serialization prefix",
+        "codec": "uncompressed",
+        "decoded_bytes": 702376,
+        "decoded_sha256": "5dbd55171d20fc34023177db0cc9a65fc0079de08936c78bef29a98dd93eee57",
+        "representation": "X",
+        "serialization_version": 2,
+        "writer_version_code": 197889,
+        "minimum_reader_version_code": 131840,
+        "experiments": [
+          {
+            "codec": "gzip-9",
+            "output_bytes": 101106,
+            "saved_bytes_if_adopted": 601270,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.137305
+          },
+          {
+            "codec": "xz-6",
+            "output_bytes": 73936,
+            "saved_bytes_if_adopted": 628440,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.111892
+          }
+        ],
+        "reader_validation": "R runtime unavailable; no readRDS/load validation"
+      }
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/4UR5DY",
+      "name": "data/_out/vs_dta.rds",
+      "format": "rds",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/13234388?format=original",
+      "metadata_size": 7127786,
+      "metadata_checksum": "md5:6b15bc4f3ec484b35a5a37a29762bce0",
+      "metadata_checksum_verified": true,
+      "sha256": "17efe0f3756bd416d43ea346b16c720abd8028cbd16bc5754ab513c4e3b6ce5a",
+      "downloaded_bytes": 7127786,
+      "status": "unavailable",
+      "error": "ValueError: decoded stream exceeds 32 MiB"
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/J5AWOS",
+      "name": "data.RData",
+      "format": "rdata",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14298880?format=original",
+      "metadata_size": 344306,
+      "metadata_checksum": "md5:1c54db4ddd9b7e73d4e2fbe693a3fcba",
+      "metadata_checksum_verified": true,
+      "sha256": "79e7e51d210fd11332f6c96a353a06baa2402f8d1f3266c27d9ab4c76c62b7b4",
+      "downloaded_bytes": 344306,
+      "status": "inspected",
+      "inspection": {
+        "signature": "R serialization prefix",
+        "workspace_header": "RDX3\n",
+        "codec": "gzip",
+        "decoded_bytes": 3881307,
+        "decoded_sha256": "794bfbcc8ea19eac7c56a4644c67b496c47bd10c64b4a66387fb8621b9b7b4e4",
+        "representation": "X",
+        "serialization_version": 3,
+        "writer_version_code": 263169,
+        "minimum_reader_version_code": 197888,
+        "experiments": [
+          {
+            "codec": "gzip-9",
+            "output_bytes": 310506,
+            "saved_bytes_if_adopted": 33800,
+            "stream_roundtrip_equal": true,
+            "seconds": 1.283941
+          },
+          {
+            "codec": "xz-6",
+            "output_bytes": 143684,
+            "saved_bytes_if_adopted": 200622,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.682538
+          }
+        ],
+        "reader_validation": "R runtime unavailable; no readRDS/load validation"
+      }
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/LMXE9B",
+      "name": "Data/Elections/va_election_dat.RDA",
+      "format": "rdata",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14300753?format=original",
+      "metadata_size": 55064,
+      "metadata_checksum": "md5:0a7dc49c818686c478ccf61b73ac392c",
+      "metadata_checksum_verified": true,
+      "sha256": "ac967d61a4c3e86f3f3a87e11c46f0e79a453e23d0e26d6df7605d72834e3b21",
+      "downloaded_bytes": 55064,
+      "status": "inspected",
+      "inspection": {
+        "signature": "R serialization prefix",
+        "workspace_header": "RDX3\n",
+        "codec": "gzip",
+        "decoded_bytes": 582599,
+        "decoded_sha256": "e07678b65012eb0e24cfa2dfe32f0d3cda116bd91cc64d7be3392a516668d2d6",
+        "representation": "X",
+        "serialization_version": 3,
+        "writer_version_code": 262149,
+        "minimum_reader_version_code": 197888,
+        "experiments": [
+          {
+            "codec": "gzip-9",
+            "output_bytes": 52428,
+            "saved_bytes_if_adopted": 2636,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.060137
+          },
+          {
+            "codec": "xz-6",
+            "output_bytes": 32868,
+            "saved_bytes_if_adopted": 22196,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.058352
+          }
+        ],
+        "reader_validation": "R runtime unavailable; no readRDS/load validation"
+      }
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/MG5B5N",
+      "name": "catalist_year.RData",
+      "format": "rdata",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14230490?format=original",
+      "metadata_size": 1131,
+      "metadata_checksum": "md5:8dd5dc9f79a05b5cc4f1b30d0615edef",
+      "metadata_checksum_verified": true,
+      "sha256": "a3dfe50896d1acdbd014128dc89af77025431037646e82c1343d8d190acabbfb",
+      "downloaded_bytes": 1131,
+      "status": "inspected",
+      "inspection": {
+        "signature": "R serialization prefix",
+        "workspace_header": "RDX3\n",
+        "codec": "gzip",
+        "decoded_bytes": 4531,
+        "decoded_sha256": "5e9dfb9e05fe59acf60e96730fea623238205944962844d2a39e657664198241",
+        "representation": "X",
+        "serialization_version": 3,
+        "writer_version_code": 263170,
+        "minimum_reader_version_code": 197888,
+        "experiments": [
+          {
+            "codec": "gzip-9",
+            "output_bytes": 1132,
+            "saved_bytes_if_adopted": 0,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.000192
+          },
+          {
+            "codec": "xz-6",
+            "output_bytes": 1068,
+            "saved_bytes_if_adopted": 63,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.000456
+          }
+        ],
+        "reader_validation": "R runtime unavailable; no readRDS/load validation"
+      }
+    },
+    {
+      "source": "figshare",
+      "project": "34063794",
+      "name": "tbl.plot.site.Rdata",
+      "format": "rdata",
+      "url": "https://ndownloader.figshare.com/files/69625410",
+      "metadata_size": 1207408,
+      "metadata_checksum": "md5:6d5a90e848d6d2e38ad3caa5873b5146",
+      "metadata_checksum_verified": true,
+      "sha256": "215d7b33f8f570a12820c9c628466a2e30adb8b98f47e25840380757ee17ecd4",
+      "downloaded_bytes": 1207408,
+      "status": "inspected",
+      "inspection": {
+        "signature": "R serialization prefix",
+        "workspace_header": "RDX3\n",
+        "codec": "gzip",
+        "decoded_bytes": 4486563,
+        "decoded_sha256": "77644fadb4314b824b0725cd29b7db401da105c4674337b909f368ccf23002ee",
+        "representation": "X",
+        "serialization_version": 3,
+        "writer_version_code": 262913,
+        "minimum_reader_version_code": 197888,
+        "experiments": [
+          {
+            "codec": "gzip-9",
+            "output_bytes": 1186403,
+            "saved_bytes_if_adopted": 21005,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.711973
+          },
+          {
+            "codec": "xz-6",
+            "output_bytes": 979832,
+            "saved_bytes_if_adopted": 227576,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.773027
+          }
+        ],
+        "reader_validation": "R runtime unavailable; no readRDS/load validation"
+      }
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/MG5B5N",
+      "name": "cps_pooled.RData",
+      "format": "rdata",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14230485?format=original",
+      "metadata_size": 852,
+      "metadata_checksum": "md5:a8695165efa5a56c1e94e25afbaaf203",
+      "metadata_checksum_verified": true,
+      "sha256": "21fdee74f5509229493c51a183c8bb30585a3071d70644d5b45f2a3e3ab5b072",
+      "downloaded_bytes": 852,
+      "status": "inspected",
+      "inspection": {
+        "signature": "R serialization prefix",
+        "workspace_header": "RDX3\n",
+        "codec": "gzip",
+        "decoded_bytes": 2082,
+        "decoded_sha256": "6d75a0db543483e284e2915b02ff860cec67da094744df6b755ba4e4997fa717",
+        "representation": "X",
+        "serialization_version": 3,
+        "writer_version_code": 263170,
+        "minimum_reader_version_code": 197888,
+        "experiments": [
+          {
+            "codec": "gzip-9",
+            "output_bytes": 850,
+            "saved_bytes_if_adopted": 2,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.000135
+          },
+          {
+            "codec": "xz-6",
+            "output_bytes": 804,
+            "saved_bytes_if_adopted": 48,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.000462
+          }
+        ],
+        "reader_validation": "R runtime unavailable; no readRDS/load validation"
+      }
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/MG5B5N",
+      "name": "ces_house.RData",
+      "format": "rdata",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14230486?format=original",
+      "metadata_size": 321508,
+      "metadata_checksum": "md5:74a0c5ade0d254f4c52c62bf6ce1e123",
+      "metadata_checksum_verified": true,
+      "sha256": "2308dfdfbda0bb5bab000beb63ff2bf0b3fc950a1cfdba16fa618ef0fcc04398",
+      "downloaded_bytes": 321508,
+      "status": "inspected",
+      "inspection": {
+        "signature": "R serialization prefix",
+        "workspace_header": "RDX3\n",
+        "codec": "gzip",
+        "decoded_bytes": 1440591,
+        "decoded_sha256": "4ef5026e8293e3e5cbfe91996f04069689bdb507ec5e4181f2aa6b9d5314f93e",
+        "representation": "X",
+        "serialization_version": 3,
+        "writer_version_code": 263170,
+        "minimum_reader_version_code": 197888,
+        "experiments": [
+          {
+            "codec": "gzip-9",
+            "output_bytes": 305549,
+            "saved_bytes_if_adopted": 15959,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.661618
+          },
+          {
+            "codec": "xz-6",
+            "output_bytes": 215432,
+            "saved_bytes_if_adopted": 106076,
+            "stream_roundtrip_equal": true,
+            "seconds": 0.383308
+          }
+        ],
+        "reader_validation": "R runtime unavailable; no readRDS/load validation"
+      }
+    },
+    {
+      "source": "zenodo",
+      "project": "23128915",
+      "name": "shearstress_for_ar_en83.mat",
+      "format": "mat",
+      "url": "https://zenodo.org/api/records/23128916/files/shearstress_for_ar_en83.mat/content",
+      "metadata_size": 2988368,
+      "metadata_checksum": "md5:61fdb9b52f43c106fdf6ab098cb86cfc",
+      "metadata_checksum_verified": true,
+      "sha256": "b73ef8232e2d7261f4cdc6a3bc7c4869d60e02c33cc744ed50fb6b1f22a27e65",
+      "downloaded_bytes": 2988368,
+      "status": "inspected",
+      "inspection": {
+        "signature": "MAT v5 family header",
+        "endian_indicator": "494d",
+        "first_element_type": 15,
+        "first_element_size": 72,
+        "first_element_compressed": true
+      }
+    },
+    {
+      "source": "zenodo",
+      "project": "23128915",
+      "name": "shearstress_for_ar_en101.mat",
+      "format": "mat",
+      "url": "https://zenodo.org/api/records/23128916/files/shearstress_for_ar_en101.mat/content",
+      "metadata_size": 2732277,
+      "metadata_checksum": "md5:88307fba1f59e8cfd030b6bf6253691a",
+      "metadata_checksum_verified": true,
+      "sha256": "36248719b7b678afde04b7cdb1d943b21802a448a8d2548609ec303f59a5b15c",
+      "downloaded_bytes": 2732277,
+      "status": "inspected",
+      "inspection": {
+        "signature": "MAT v5 family header",
+        "endian_indicator": "494d",
+        "first_element_type": 15,
+        "first_element_size": 72,
+        "first_element_compressed": true
+      }
+    },
+    {
+      "source": "github",
+      "project": "QGIS/QGIS",
+      "name": "tests/testdata/control_files/3d/expected_export_object/expected_sparse_faces.stl",
+      "format": "stl",
+      "url": "https://raw.githubusercontent.com/QGIS/QGIS/901db8dfa858694f90969af78fc0d3f3af3e07f8/tests/testdata/control_files/3d/expected_export_object/expected_sparse_faces.stl",
+      "metadata_size": 906,
+      "metadata_checksum": "git-sha1:6c19c0630e09dab3187cb5acbdf382750722a22b",
+      "metadata_checksum_verified": true,
+      "sha256": "5093f9adb47bb949c7ae4761c7d258c75a1ea743dd8427f306c3afb2729a3913",
+      "downloaded_bytes": 906,
+      "status": "inspected",
+      "inspection": {
+        "signature": "ASCII STL prefix"
+      }
+    },
+    {
+      "source": "github",
+      "project": "QGIS/QGIS",
+      "name": "tests/testdata/control_files/3d/expected_export_object/expected_all_faces.stl",
+      "format": "stl",
+      "url": "https://raw.githubusercontent.com/QGIS/QGIS/901db8dfa858694f90969af78fc0d3f3af3e07f8/tests/testdata/control_files/3d/expected_export_object/expected_all_faces.stl",
+      "metadata_size": 1750,
+      "metadata_checksum": "git-sha1:c30da10b98f8a47ad110c2d79fb7144ffa1e9065",
+      "metadata_checksum_verified": true,
+      "sha256": "4cf2009a2464f38f2c7921def3a5954052ccf8b85be0f1f65cd60226264d38a9",
+      "downloaded_bytes": 1750,
+      "status": "inspected",
+      "inspection": {
+        "signature": "ASCII STL prefix"
+      }
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/6F7GKE",
+      "name": "PVIOLPRQ2.SAV",
+      "format": "sav",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14300617?format=original",
+      "metadata_size": 105720,
+      "metadata_checksum": null,
+      "metadata_checksum_verified": false,
+      "sha256": "90eba79c1b9d9fa6627f9e48f9bae768c2970cb94fa5dee8769803d55b4f8a3e",
+      "downloaded_bytes": 105720,
+      "status": "inspected",
+      "inspection": {
+        "signature": "SPSS header"
+      }
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/A9NUD7",
+      "name": "数据(2).sav",
+      "format": "sav",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14092649?format=original",
+      "metadata_size": 168744,
+      "metadata_checksum": null,
+      "metadata_checksum_verified": false,
+      "sha256": "4fc9aa54669c197b0e69bf834be412bd77789a9357720c06b3888afd2f68e03d",
+      "downloaded_bytes": 168744,
+      "status": "inspected",
+      "inspection": {
+        "signature": "SPSS header"
+      }
+    },
+    {
+      "source": "huggingface-datasets",
+      "project": "danil-e/pinnacle-optuna-db",
+      "name": "rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+      "format": "pt",
+      "url": "https://huggingface.co/datasets/danil-e/pinnacle-optuna-db/resolve/f386723c11fcf97dece376c4db7bb7a8eea0fbac/rl_arch/online_env_ckpt/poissonboltzmann2d_n_qpb2d_t1al_s43_seed43.pt",
+      "metadata_size": 195070,
+      "metadata_checksum": "sha256:9046ca4eb4b17565407b85d289b0b8e9eb5ba10342df98328d7569d16241d462",
+      "metadata_checksum_verified": true,
+      "sha256": "9046ca4eb4b17565407b85d289b0b8e9eb5ba10342df98328d7569d16241d462",
+      "downloaded_bytes": 195070,
+      "status": "inspected",
+      "inspection": {
+        "signature": "ZIP checkpoint layout",
+        "members": 21,
+        "stored_members": 21,
+        "pickle_member": true,
+        "reader_validation": "not performed; torch.load not invoked"
+      }
+    },
+    {
+      "source": "huggingface-datasets",
+      "project": "sagels/new-dataset",
+      "name": "share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+      "format": "pt",
+      "url": "https://huggingface.co/datasets/sagels/new-dataset/resolve/77c7e42059c28fc2269899e0aba7117757e337c9/share/sh2-04-verified-transfer-upload-1790908913-20187/data/train/rank13.pt",
+      "metadata_size": 15517,
+      "metadata_checksum": "sha256:4eb86eadfa758e7d6bdec5e75a6099291f5580ed7eab84408956ec7a3a1d3f54",
+      "metadata_checksum_verified": true,
+      "sha256": "4eb86eadfa758e7d6bdec5e75a6099291f5580ed7eab84408956ec7a3a1d3f54",
+      "downloaded_bytes": 15517,
+      "status": "inspected",
+      "inspection": {
+        "signature": "ZIP checkpoint layout",
+        "members": 8,
+        "stored_members": 8,
+        "pickle_member": true,
+        "reader_validation": "not performed; torch.load not invoked"
+      }
+    },
+    {
+      "source": "huggingface-models",
+      "project": "BAAI/bge-m3",
+      "name": "colbert_linear.pt",
+      "format": "pt",
+      "url": "https://huggingface.co/BAAI/bge-m3/resolve/5617a9f61b028005a4858fdac845db406aefb181/colbert_linear.pt",
+      "metadata_size": 2100674,
+      "metadata_checksum": "sha256:19bfbae397c2b7524158c919d0e9b19393c5639d098f0a66932c91ed8f5f9abb",
+      "metadata_checksum_verified": true,
+      "sha256": "19bfbae397c2b7524158c919d0e9b19393c5639d098f0a66932c91ed8f5f9abb",
+      "downloaded_bytes": 2100674,
+      "status": "inspected",
+      "inspection": {
+        "signature": "ZIP checkpoint layout",
+        "members": 6,
+        "stored_members": 6,
+        "pickle_member": true,
+        "reader_validation": "not performed; torch.load not invoked"
+      }
+    },
+    {
+      "source": "huggingface-models",
+      "project": "Comfy-Org/MiniMax-H3",
+      "name": "embeddings/minimaxh3_dark_magic.safetensors",
+      "format": "safetensors",
+      "url": "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/e5eb578a89295337b8ff433a035929ce0279e0b6/embeddings/minimaxh3_dark_magic.safetensors",
+      "metadata_size": 604280,
+      "metadata_checksum": "sha256:71df9fe76f9cbb34a7508fc49d46bf35ee51744aaa17789c6406e1bec49f5866",
+      "metadata_checksum_verified": true,
+      "sha256": "71df9fe76f9cbb34a7508fc49d46bf35ee51744aaa17789c6406e1bec49f5866",
+      "downloaded_bytes": 604280,
+      "status": "inspected",
+      "inspection": {
+        "signature": "safetensors header schema",
+        "tensor_count": 1,
+        "header_bytes": 112,
+        "dtypes": [
+          "BF16"
+        ]
+      }
+    },
+    {
+      "source": "huggingface-models",
+      "project": "Nebulixlabs/Quantum-Guard-Multilingual",
+      "name": "model.safetensors",
+      "format": "safetensors",
+      "url": "https://huggingface.co/Nebulixlabs/Quantum-Guard-Multilingual/resolve/f8e9024995326f361d80953bd870f2a7d59ebbf9/model.safetensors",
+      "metadata_size": 2006504,
+      "metadata_checksum": "sha256:7a8906d8dc10aa00789a198d8396a3a1a3b1f98e23473b352a016b9521a2ad4e",
+      "metadata_checksum_verified": true,
+      "sha256": "7a8906d8dc10aa00789a198d8396a3a1a3b1f98e23473b352a016b9521a2ad4e",
+      "downloaded_bytes": 2006504,
+      "status": "inspected",
+      "inspection": {
+        "signature": "safetensors header schema",
+        "tensor_count": 72,
+        "header_bytes": 6496,
+        "dtypes": [
+          "F16"
+        ]
+      }
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/CGOCUS",
+      "name": "code_v3.zip",
+      "format": "zip",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14305266?format=original",
+      "metadata_size": 5932453,
+      "metadata_checksum": "md5:825034a1026dedfb3817365530fb3df2",
+      "metadata_checksum_verified": true,
+      "sha256": "36f23b9ab25a6f804e41603705841a2a3521dc40f8a4e955ff9ec793b44a7026",
+      "downloaded_bytes": 5932453,
+      "status": "inspected",
+      "inspection": {
+        "signature": "ZIP central directory",
+        "members": 183
+      }
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/CXIPKL",
+      "name": "Data_Replication_Files_Retaliatory_Accountability.zip",
+      "format": "zip",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14300360?format=original",
+      "metadata_size": 242509,
+      "metadata_checksum": "md5:a0032654ece024decc7990185de7ff0d",
+      "metadata_checksum_verified": true,
+      "sha256": "0e10e5b3213aeb3fd7adf5b8a2ee7ee04496a918a4ad28d9b67f35e37c189454",
+      "downloaded_bytes": 242509,
+      "status": "inspected",
+      "inspection": {
+        "signature": "ZIP central directory",
+        "members": 33
+      }
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/GGLKJD",
+      "name": "Replication_Package_MotBeliefsDelayedUncertaintyResolution.zip",
+      "format": "zip",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14298988?format=original",
+      "metadata_size": 375222,
+      "metadata_checksum": "md5:b0a03008e9801ac7efc2ccc03971fb4a",
+      "metadata_checksum_verified": true,
+      "sha256": "9d21fb45e13a64b6f2f3c6d7835fa12557ad17c487d144a7593f8015856fac34",
+      "downloaded_bytes": 375222,
+      "status": "inspected",
+      "inspection": {
+        "signature": "ZIP central directory",
+        "members": 13
+      }
+    },
+    {
+      "source": "dataverse",
+      "project": "doi:10.7910/DVN/IWCTZD",
+      "name": "replication - proof.zip",
+      "format": "zip",
+      "url": "https://dataverse.harvard.edu/api/access/datafile/14300161?format=original",
+      "metadata_size": 586765,
+      "metadata_checksum": "md5:8cda4932438943d769fa0e4b0c1dec5e",
+      "metadata_checksum_verified": true,
+      "sha256": "d990c52854d072a815d4f26b578eebc73820b89cf139e8f4f30f2e2d35b71d72",
+      "downloaded_bytes": 586765,
+      "status": "inspected",
+      "inspection": {
+        "signature": "ZIP central directory",
+        "members": 143
+      }
+    }
+  ]
+}

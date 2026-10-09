@@ -1,0 +1,2668 @@
+[
+  {
+    "repository": "ome/ome-zarr-py",
+    "commit": "21cafbaccc4c054773ded14bf5d93091cb6a9072",
+    "root": "tests/data/v2/",
+    "store": "/tmp/filerepack-real-stores/ome-ome-zarr-py",
+    "complete_tree": true,
+    "expected_bytes": 1519,
+    "keys": [
+      {
+        "key": ".zattrs",
+        "bytes": 189,
+        "sha256": "8bf17e14658469425b6ef499c33f0ab1074aa27a02ac257d3c24ca4f9be6fb3f",
+        "url": "https://raw.githubusercontent.com/ome/ome-zarr-py/21cafbaccc4c054773ded14bf5d93091cb6a9072/tests/data/v2/.zattrs"
+      },
+      {
+        "key": ".zgroup",
+        "bytes": 25,
+        "sha256": "722097714561ce9cebd6019f533471cadd02b3929fa02d2b528d383d6ae96b88",
+        "url": "https://raw.githubusercontent.com/ome/ome-zarr-py/21cafbaccc4c054773ded14bf5d93091cb6a9072/tests/data/v2/.zgroup"
+      },
+      {
+        "key": "0/.zarray",
+        "bytes": 436,
+        "sha256": "c5a283e278ba4256bb0e93152ff6ea44fa14f2ea648fbc3f2742f57d2cb86153",
+        "url": "https://raw.githubusercontent.com/ome/ome-zarr-py/21cafbaccc4c054773ded14bf5d93091cb6a9072/tests/data/v2/0/.zarray"
+      },
+      {
+        "key": "0/0/0/0/0/0",
+        "bytes": 869,
+        "sha256": "e28f3ae792a17699e654391b2bb1cdf5764f2bdf039d8282513d63a76e5a8820",
+        "url": "https://raw.githubusercontent.com/ome/ome-zarr-py/21cafbaccc4c054773ded14bf5d93091cb6a9072/tests/data/v2/0/0/0/0/0/0"
+      }
+    ]
+  },
+  {
+    "repository": "zarr-developers/zarr_implementations",
+    "commit": "185c4f93e114eb91dfea4e21be45a86eadca59f2",
+    "root": "examples/zarr.zr/",
+    "store": "/tmp/filerepack-real-stores/zarr-developers-zarr_implementations",
+    "complete_tree": true,
+    "expected_bytes": 2998861,
+    "keys": [
+      {
+        "key": ".zgroup",
+        "bytes": 24,
+        "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/.zgroup"
+      },
+      {
+        "key": "blosc/.zarray",
+        "bytes": 361,
+        "sha256": "7945211cb27d7f2bba8ed927e370ab8bd78682d8d0aae8bc44e89e4f034ef16a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/.zarray"
+      },
+      {
+        "key": "blosc/0.0.0",
+        "bytes": 10016,
+        "sha256": "2b74868151fdd62f3436e1f8ad8b6ed1965333db168b50c912ef58534dd1b9ea",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.0.0"
+      },
+      {
+        "key": "blosc/0.0.1",
+        "bytes": 9908,
+        "sha256": "d8819d448443c9528cd7e3f4b887c774314adfd3ed7f4fe4fde5a3c7f2542826",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.0.1"
+      },
+      {
+        "key": "blosc/0.0.2",
+        "bytes": 10016,
+        "sha256": "08f9279d7982ba11783e134b7a621ae7876165b1cdcc60a586dc027214384d72",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.0.2"
+      },
+      {
+        "key": "blosc/0.1.0",
+        "bytes": 9991,
+        "sha256": "c676dfc68e97d6effc7a027c553dd63ad2047f10a5b4a161abf4707e49aea880",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.1.0"
+      },
+      {
+        "key": "blosc/0.1.1",
+        "bytes": 9948,
+        "sha256": "556aff50be8be3c7512c62f4405c3990ee6068f0656ed7acf96adeeacd4a73e2",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.1.1"
+      },
+      {
+        "key": "blosc/0.1.2",
+        "bytes": 10016,
+        "sha256": "87a8fa88fa07da57833fab6ae3f0227e23add0822e43ba2d73fe776f1e38b19b",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.1.2"
+      },
+      {
+        "key": "blosc/0.2.0",
+        "bytes": 10016,
+        "sha256": "ec7b07f4c1edeea50eeb7a679a6a175d0d7a13207714b210e704f7c5ec1778ad",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.2.0"
+      },
+      {
+        "key": "blosc/0.2.1",
+        "bytes": 10016,
+        "sha256": "d19c89a02207a171e89f24686999b03cb23c2614e098e6bdaa405d4b4dc3ec70",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.2.1"
+      },
+      {
+        "key": "blosc/0.2.2",
+        "bytes": 10016,
+        "sha256": "5f2a55dc077a494fab0bf43b65f69aacbfc5e805f86b8c9ec631bb605956be0a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.2.2"
+      },
+      {
+        "key": "blosc/0.3.0",
+        "bytes": 9921,
+        "sha256": "fe249a272344fb7c35215dde2f35ac3ce4759ba5c2a28e06e3bbf297f94766c5",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.3.0"
+      },
+      {
+        "key": "blosc/0.3.1",
+        "bytes": 9853,
+        "sha256": "eeb1e68bdc05c01865f5eae3957572b689286358dbc873fcc19b2da198f8d436",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.3.1"
+      },
+      {
+        "key": "blosc/0.3.2",
+        "bytes": 10016,
+        "sha256": "9444e059387a51f1b4a1eead41b9e0acdc12540e7c707457679813821b5754b6",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.3.2"
+      },
+      {
+        "key": "blosc/0.4.0",
+        "bytes": 10016,
+        "sha256": "194a70f64df768b3d6169c7597e5d47e68479f46d146fbd512200a66666f74d4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.4.0"
+      },
+      {
+        "key": "blosc/0.4.1",
+        "bytes": 10016,
+        "sha256": "222cd95d8f09b1724337d58d3f05934bc7817d0a14260d92dbb65bc04771d1c9",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.4.1"
+      },
+      {
+        "key": "blosc/0.4.2",
+        "bytes": 9793,
+        "sha256": "435aa31bfe091313ce502f4414113bcd486decfa66be365dafa1e366f64cd726",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.4.2"
+      },
+      {
+        "key": "blosc/0.5.0",
+        "bytes": 1921,
+        "sha256": "c806a94c3082c0379a27fbc6313af916dcf6345dec40245b07bf7c8db6d63d53",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.5.0"
+      },
+      {
+        "key": "blosc/0.5.1",
+        "bytes": 1928,
+        "sha256": "03959f2d6619dbb5a9de874ac1f88c2eaa5f8425270e2f99ceece444559fe250",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.5.1"
+      },
+      {
+        "key": "blosc/0.5.2",
+        "bytes": 1930,
+        "sha256": "c6f6a8d7e89f317aacf40d6bec7376641c399c0d81637bef66ad64f7e3644b59",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/0.5.2"
+      },
+      {
+        "key": "blosc/1.0.0",
+        "bytes": 10016,
+        "sha256": "94e76238e6f6ae8157b10a75395c99b503494e08961adda81fb85bc657ee08b2",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.0.0"
+      },
+      {
+        "key": "blosc/1.0.1",
+        "bytes": 9519,
+        "sha256": "56b0b430f536fda3828bae37e8c914b8243d7fcf901be9f3b5740c99c6ad2b38",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.0.1"
+      },
+      {
+        "key": "blosc/1.0.2",
+        "bytes": 10016,
+        "sha256": "7c6f463ea88f2d846112b1704ee9d9cf94fb1ef737ff2a35d06b8aa207b011d6",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.0.2"
+      },
+      {
+        "key": "blosc/1.1.0",
+        "bytes": 9717,
+        "sha256": "3e7154f437e1d8638979f7493b1d70d6f73a68eaaba7c5101816cd5ad38e724e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.1.0"
+      },
+      {
+        "key": "blosc/1.1.1",
+        "bytes": 9683,
+        "sha256": "ed0d2f7fb1deb7a6b6e036205b9e57577cc7f93cfe2ed874d4c9bff35adbcbfe",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.1.1"
+      },
+      {
+        "key": "blosc/1.1.2",
+        "bytes": 9685,
+        "sha256": "18da138df07d7c34d26c31d03ecbde4fcef521ce9603436ced010a7aff1f32d3",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.1.2"
+      },
+      {
+        "key": "blosc/1.2.0",
+        "bytes": 9944,
+        "sha256": "002a069fe80622a56b9193ed792d45103c75c55825956c337d30a583b01cdadd",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.2.0"
+      },
+      {
+        "key": "blosc/1.2.1",
+        "bytes": 9909,
+        "sha256": "13890929e6d85621ed31d73ade8ff1988baf7edf3c7f231eefd05cd6c8462798",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.2.1"
+      },
+      {
+        "key": "blosc/1.2.2",
+        "bytes": 9859,
+        "sha256": "74fb9728930cbb254501d7f006e10a729c668f54eadc4375f16187ff7cbb7345",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.2.2"
+      },
+      {
+        "key": "blosc/1.3.0",
+        "bytes": 9984,
+        "sha256": "a0da1164c6681990f86cb0e24395004240ec439fe741585a99296845cbcdabd2",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.3.0"
+      },
+      {
+        "key": "blosc/1.3.1",
+        "bytes": 9906,
+        "sha256": "8e5da6c5ea7e74b645de9fe41145bbf771dba32dddcd0126be50a8ee7f9a4918",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.3.1"
+      },
+      {
+        "key": "blosc/1.3.2",
+        "bytes": 10016,
+        "sha256": "5f0425cab3378b2718e7c03f109a59bff869fa378a5a3be9b46ddc8a1575f754",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.3.2"
+      },
+      {
+        "key": "blosc/1.4.0",
+        "bytes": 10016,
+        "sha256": "4248041d4bc57d2c796fa1ed0e56d3492931d5046b10176c447861c910103adf",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.4.0"
+      },
+      {
+        "key": "blosc/1.4.1",
+        "bytes": 10010,
+        "sha256": "56e99ac0723b26e84d327c36256b4436684cbe2495cf08e2e8b03fc36e864995",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.4.1"
+      },
+      {
+        "key": "blosc/1.4.2",
+        "bytes": 9763,
+        "sha256": "074c455ab588b9aecafcd4c64c62b1c09bf575eba87804f176b8eb8606a21b25",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.4.2"
+      },
+      {
+        "key": "blosc/1.5.0",
+        "bytes": 1932,
+        "sha256": "348434427d20504dec03392fb81e6f3efb3359693716696906e26f653d137c4c",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.5.0"
+      },
+      {
+        "key": "blosc/1.5.1",
+        "bytes": 1919,
+        "sha256": "474428d92e6d2a01cd99e03028aaf6deea7376f91742fc2e1b0dac067fd4b787",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.5.1"
+      },
+      {
+        "key": "blosc/1.5.2",
+        "bytes": 1927,
+        "sha256": "71fdd9ff7cf96482b927f56bfadbc7cfe8c4871eea181050202397a745704647",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/1.5.2"
+      },
+      {
+        "key": "blosc/2.0.0",
+        "bytes": 10016,
+        "sha256": "e47111580eba898d78eb0172961a2acf39117e6f251d05370cdff4b9e39db72c",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.0.0"
+      },
+      {
+        "key": "blosc/2.0.1",
+        "bytes": 9691,
+        "sha256": "ef9c32db2b41358fe0cb5d0db4a3d346461b92d08ea034108dda60cc771f0244",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.0.1"
+      },
+      {
+        "key": "blosc/2.0.2",
+        "bytes": 10016,
+        "sha256": "fd74f3a65cb5f4877139f2bea38cd692d5b10c0ed8ebd475c802e770770f9742",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.0.2"
+      },
+      {
+        "key": "blosc/2.1.0",
+        "bytes": 9989,
+        "sha256": "d7deeaced9ec21ddc0f82a1ead71555f03fe734716d312719749198005c13c9f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.1.0"
+      },
+      {
+        "key": "blosc/2.1.1",
+        "bytes": 9953,
+        "sha256": "f2a6af9b233f1eb837000d86630a026cbb44358b873cbe30f77c57cbf9ebfe22",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.1.1"
+      },
+      {
+        "key": "blosc/2.1.2",
+        "bytes": 9886,
+        "sha256": "506dca0e285dc491419fe119ffbba46f4eea1904ccbaaf139e92d5cf61ad8f60",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.1.2"
+      },
+      {
+        "key": "blosc/2.2.0",
+        "bytes": 9576,
+        "sha256": "431cc2651dbc0e942038ece25055cb49745be58c73afc663233bd350878f1d68",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.2.0"
+      },
+      {
+        "key": "blosc/2.2.1",
+        "bytes": 9320,
+        "sha256": "1bafcacaf1396b3b739d62226b7f7af83c54dfe6c6698e50feaf0b12608355ee",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.2.1"
+      },
+      {
+        "key": "blosc/2.2.2",
+        "bytes": 9113,
+        "sha256": "dfc18930aec3ba716ef35bdce245bc21a5d27d0324d320b9bf3ac18a0d8b8648",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.2.2"
+      },
+      {
+        "key": "blosc/2.3.0",
+        "bytes": 9937,
+        "sha256": "377021bfc1769df79c94164df710f155f33d9dd06ecabc6c5a1fa7f515faca47",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.3.0"
+      },
+      {
+        "key": "blosc/2.3.1",
+        "bytes": 9931,
+        "sha256": "aa158f6841e6b02fbca415185c26487a240a33bc236b5233cdc5066d11833adb",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.3.1"
+      },
+      {
+        "key": "blosc/2.3.2",
+        "bytes": 9988,
+        "sha256": "c369e82fd993879016bd790640d795d47ff9c6a2d9fc60d85081288f03cf4ebf",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.3.2"
+      },
+      {
+        "key": "blosc/2.4.0",
+        "bytes": 8575,
+        "sha256": "b6ceddc1e571d161947c59395fdde3fb6ee69bdc38531005a195532837cfdc22",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.4.0"
+      },
+      {
+        "key": "blosc/2.4.1",
+        "bytes": 8511,
+        "sha256": "bfa2657f3b1c9099df6c21dd64da41aee0e3e5dacff652083cd8a552fe3c578a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.4.1"
+      },
+      {
+        "key": "blosc/2.4.2",
+        "bytes": 8531,
+        "sha256": "e24e8ec236f1ffe5ac242365dae968f6dce85796b68fffb5875133be2f8ceada",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.4.2"
+      },
+      {
+        "key": "blosc/2.5.0",
+        "bytes": 1491,
+        "sha256": "5388c6c5bb7c91224ae55c51503c2d8ec47dff09aa589bb2c031c7516b75d9e8",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.5.0"
+      },
+      {
+        "key": "blosc/2.5.1",
+        "bytes": 1491,
+        "sha256": "26cbcb04d056e466daa1824c30790d376340b392c18a1167e0383597a17789f9",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.5.1"
+      },
+      {
+        "key": "blosc/2.5.2",
+        "bytes": 1505,
+        "sha256": "149cde8f6e3e990e53e9783a515e9c276772ff409a306f0d1bea16fb91cc299e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/2.5.2"
+      },
+      {
+        "key": "blosc/3.0.0",
+        "bytes": 10014,
+        "sha256": "9cd735674e6e544c271be9968ecc279277b59aab90f05986db83a0661ee3f734",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.0.0"
+      },
+      {
+        "key": "blosc/3.0.1",
+        "bytes": 10016,
+        "sha256": "b1104b4a42fdff5513905102b96bf88f1e9363eaac8e1b0ced36e5d43411f742",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.0.1"
+      },
+      {
+        "key": "blosc/3.0.2",
+        "bytes": 10016,
+        "sha256": "0a0995a8693d3fb13ddcb17ae58858bdd19d7d924292157a9536ebacbdeecfe8",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.0.2"
+      },
+      {
+        "key": "blosc/3.1.0",
+        "bytes": 10000,
+        "sha256": "0a0eb31a2990e96e44c3a836eb31c219c5deb8621ce9c8e23c2403e63c35bd5e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.1.0"
+      },
+      {
+        "key": "blosc/3.1.1",
+        "bytes": 10016,
+        "sha256": "2f0c307655ff6ca49a8850ebf3915fe313a18bc71cc045b634c4efd1922277ab",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.1.1"
+      },
+      {
+        "key": "blosc/3.1.2",
+        "bytes": 10016,
+        "sha256": "a372978129ad33fb1fadbfe6cef09298da58a2885113e8a05ca95f25feb0acc3",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.1.2"
+      },
+      {
+        "key": "blosc/3.2.0",
+        "bytes": 10016,
+        "sha256": "29546b8a46b094ef8f0b319b53d7631631b44239d66750200062740dd0335738",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.2.0"
+      },
+      {
+        "key": "blosc/3.2.1",
+        "bytes": 10016,
+        "sha256": "dd9d274b4108a84f9326e375cb6de53d8897743f23ebc024dfafdc0b00b96b18",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.2.1"
+      },
+      {
+        "key": "blosc/3.2.2",
+        "bytes": 10016,
+        "sha256": "0a98b4da322fd237f5b9d32a0420a43ffed835c75cb4b5f5f6ec511b948574db",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.2.2"
+      },
+      {
+        "key": "blosc/3.3.0",
+        "bytes": 7905,
+        "sha256": "eea359c9350eb87692ed7e234c5cbd76f01c4849ed9a8873bd1dc0f426c161e2",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.3.0"
+      },
+      {
+        "key": "blosc/3.3.1",
+        "bytes": 7741,
+        "sha256": "6fc60d9d40c06e34f517d28733e0fb95dd93e8a4a6804de0001848bbc56f1fdb",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.3.1"
+      },
+      {
+        "key": "blosc/3.3.2",
+        "bytes": 7575,
+        "sha256": "1156f959621736f0d715c4f4715c2966d9ac97e492e89d354ebe7abc64e31df0",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.3.2"
+      },
+      {
+        "key": "blosc/3.4.0",
+        "bytes": 3673,
+        "sha256": "5bdd1bb33da31093b12f068cb8dc4a957e2376d8277fc2bb7e74b13b44b6493d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.4.0"
+      },
+      {
+        "key": "blosc/3.4.1",
+        "bytes": 3632,
+        "sha256": "92d4edbbf09dbc16265a7503ed4eb043f1bc0c6b8bc7ce5e3b2547a6cb49f3a3",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.4.1"
+      },
+      {
+        "key": "blosc/3.4.2",
+        "bytes": 3589,
+        "sha256": "8d7a5ade26b6de344f1e7ce730de8ab1953f8150eaa149eb20393b96d8768da4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.4.2"
+      },
+      {
+        "key": "blosc/3.5.0",
+        "bytes": 78,
+        "sha256": "fd6b1ff7d15e88bd0b074d3bd89532f39d9b98343f9fa86ecc0e3e212cfb9e6d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.5.0"
+      },
+      {
+        "key": "blosc/3.5.1",
+        "bytes": 78,
+        "sha256": "fd6b1ff7d15e88bd0b074d3bd89532f39d9b98343f9fa86ecc0e3e212cfb9e6d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.5.1"
+      },
+      {
+        "key": "blosc/3.5.2",
+        "bytes": 78,
+        "sha256": "fd6b1ff7d15e88bd0b074d3bd89532f39d9b98343f9fa86ecc0e3e212cfb9e6d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/3.5.2"
+      },
+      {
+        "key": "blosc/4.0.0",
+        "bytes": 9982,
+        "sha256": "84f44e759796a92f96a80ab5c3ebdcded407b18417204e2deb773b1bbf7de939",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.0.0"
+      },
+      {
+        "key": "blosc/4.0.1",
+        "bytes": 9904,
+        "sha256": "666f1a1ed554a4d9ab24c1c6a79a69bbe66cc37fff069a06570d9427622b7ff0",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.0.1"
+      },
+      {
+        "key": "blosc/4.0.2",
+        "bytes": 10016,
+        "sha256": "a01d93a7df8c7bd8edaa3f394f7097e91cfef997457d1b2efcc403f2feb235e6",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.0.2"
+      },
+      {
+        "key": "blosc/4.1.0",
+        "bytes": 9981,
+        "sha256": "e7827842a103a7b695cb87f0e6cde732c3d90c629c95cf040a30f0bee86559ba",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.1.0"
+      },
+      {
+        "key": "blosc/4.1.1",
+        "bytes": 9985,
+        "sha256": "a3b6772e075f54db0797e331beb76d1c9b751c79b39a39c4117bda71cb9645e6",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.1.1"
+      },
+      {
+        "key": "blosc/4.1.2",
+        "bytes": 10016,
+        "sha256": "0cf2703f8332695d43396f962577fe2c43a4f86cc88ffeeb18eaa90803dab86a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.1.2"
+      },
+      {
+        "key": "blosc/4.2.0",
+        "bytes": 10016,
+        "sha256": "b1ed51d8db64d82d7cafde31ab066eb7db9179ee16401b6236c7cad87d96cc6d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.2.0"
+      },
+      {
+        "key": "blosc/4.2.1",
+        "bytes": 9982,
+        "sha256": "0c3c11164f67eaf21c2b88c39f33c67340e7b66b76495d69d3c42d085cbae253",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.2.1"
+      },
+      {
+        "key": "blosc/4.2.2",
+        "bytes": 9910,
+        "sha256": "fd83247d0a4be4f3ceff30b9b0bb4b7f4cc5f1d1df04a7b50199b884af43a4f7",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.2.2"
+      },
+      {
+        "key": "blosc/4.3.0",
+        "bytes": 2973,
+        "sha256": "472bc24a06faa84944fe6139701f8001dfc1bdcb71840aa93f100ff9922decce",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.3.0"
+      },
+      {
+        "key": "blosc/4.3.1",
+        "bytes": 2677,
+        "sha256": "396b28f78b42f5f3adb3b60be14f3f9e9e71fd40dbd0ee6391966ff22cf83768",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.3.1"
+      },
+      {
+        "key": "blosc/4.3.2",
+        "bytes": 2598,
+        "sha256": "842ab13cd9fe1363aa71a386d0c9f0f73b88510f9bb1dd34a023b13d5f26951a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.3.2"
+      },
+      {
+        "key": "blosc/4.4.0",
+        "bytes": 7840,
+        "sha256": "9105cb0624ad0abc5da04e03d0341ad214498f62f5a90b6a667a040ca6b20f5f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.4.0"
+      },
+      {
+        "key": "blosc/4.4.1",
+        "bytes": 7737,
+        "sha256": "5e905c0a1dc88ed31ac99f3a981449bd43b14b565f11d5fba4918e4ecd9128e3",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.4.1"
+      },
+      {
+        "key": "blosc/4.4.2",
+        "bytes": 7680,
+        "sha256": "1fb94ee82c3c9d3d40df933a42535ef3c27cc58c192f4e56c17bd3ccdbaeb34e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.4.2"
+      },
+      {
+        "key": "blosc/4.5.0",
+        "bytes": 697,
+        "sha256": "fd29c80702ff8f3dc1f994c288d67a40ae2e621ddf5bf8d9dcbf5b67d9e51b4f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.5.0"
+      },
+      {
+        "key": "blosc/4.5.1",
+        "bytes": 699,
+        "sha256": "0fb8cacd169254cd40caf523b4e2e97aae23663f0eb72e144010b3bdf6d0ca87",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.5.1"
+      },
+      {
+        "key": "blosc/4.5.2",
+        "bytes": 701,
+        "sha256": "4ba11d3e89565965d713cd5fa09254d01d7a35ccc9923f4f1e586fc0f935adc0",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/4.5.2"
+      },
+      {
+        "key": "blosc/5.0.0",
+        "bytes": 1281,
+        "sha256": "0ecb6be87b2052a82a49b569bf981356f577b9ac96d867941e6f8b03808c9771",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.0.0"
+      },
+      {
+        "key": "blosc/5.0.1",
+        "bytes": 1281,
+        "sha256": "abe13193a3e2742d704bfea6ce4b7edf5a9de2a09e16bb316798d5247f78630d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.0.1"
+      },
+      {
+        "key": "blosc/5.0.2",
+        "bytes": 1281,
+        "sha256": "c70a6a8fc26fce1d537b2ca93caa47e72d5e87245327d798c2f1ae46cf8d83a7",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.0.2"
+      },
+      {
+        "key": "blosc/5.1.0",
+        "bytes": 1281,
+        "sha256": "02b3f487952508f0ac79e8da93dae7a5385f1d8b84da7b5c61171b8cf18b6820",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.1.0"
+      },
+      {
+        "key": "blosc/5.1.1",
+        "bytes": 1208,
+        "sha256": "046aacc380e070523b96980f682355a66848be6a16a7c15dea2546d85a8ea992",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.1.1"
+      },
+      {
+        "key": "blosc/5.1.2",
+        "bytes": 1257,
+        "sha256": "5ff7401d0dd5e6c2798a971837fef4a1205f96f2c07a154067008fc8a5a2b1b7",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.1.2"
+      },
+      {
+        "key": "blosc/5.2.0",
+        "bytes": 1277,
+        "sha256": "ce6c54e5671f99e19a51076d3f2b0b9c150c7155574d5e742b6841870ae1e895",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.2.0"
+      },
+      {
+        "key": "blosc/5.2.1",
+        "bytes": 1268,
+        "sha256": "992be57df7573248b17bc6e0ed12f45dca128cb4dc42d57fd6dc2744bcb2c081",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.2.1"
+      },
+      {
+        "key": "blosc/5.2.2",
+        "bytes": 1271,
+        "sha256": "a28842ce10c20063fae64cb095158790d8315400579607881babedfbd78032d6",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.2.2"
+      },
+      {
+        "key": "blosc/5.3.0",
+        "bytes": 165,
+        "sha256": "f8f68750263dd45624d9eb8599beb2ba579f1c897aefffc5ec3c26cc8f122c44",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.3.0"
+      },
+      {
+        "key": "blosc/5.3.1",
+        "bytes": 121,
+        "sha256": "3b038b35517d87210fe2f4bd9202061938dfd09456cfb385dc8a9c3ae1aa941b",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.3.1"
+      },
+      {
+        "key": "blosc/5.3.2",
+        "bytes": 151,
+        "sha256": "3451f69308359703ee660990abf91523e2ede4ade9840d39f823f860f9ecfa57",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.3.2"
+      },
+      {
+        "key": "blosc/5.4.0",
+        "bytes": 401,
+        "sha256": "7fc897aeae9d493e6135f86819ab15aff4c0be8b6c004b6f5777d1c43f31096b",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.4.0"
+      },
+      {
+        "key": "blosc/5.4.1",
+        "bytes": 417,
+        "sha256": "9fcc1529dc7e1399f159d5546a3a116a76b84cd96488ed9437b9771e474393c5",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.4.1"
+      },
+      {
+        "key": "blosc/5.4.2",
+        "bytes": 424,
+        "sha256": "4794efb6a3ffe2f0e40859b71d2445434a48bcd4cf8eeef24e59e5cf4e50b9ae",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.4.2"
+      },
+      {
+        "key": "blosc/5.5.0",
+        "bytes": 274,
+        "sha256": "9b214611f671930ef3bc914454ad94265dcab9a45b5946ddc5c43d5dbc3879b0",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.5.0"
+      },
+      {
+        "key": "blosc/5.5.1",
+        "bytes": 274,
+        "sha256": "bdcdac115d8d341f2e409c365a9b4413d90d40eb90ebdf03b3702921a552975c",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.5.1"
+      },
+      {
+        "key": "blosc/5.5.2",
+        "bytes": 278,
+        "sha256": "ea6ccc5af42cc153e8b8cbeb6bd115db89090c3dfa8a47c5ae345bc274f8fa41",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/blosc/5.5.2"
+      },
+      {
+        "key": "gzip/.zarray",
+        "bytes": 289,
+        "sha256": "71e04c2d8c2e6fe1b2afefafc7d686956a6ec6a9980aebfe97fb966d39963efd",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/.zarray"
+      },
+      {
+        "key": "gzip/0.0.0",
+        "bytes": 7953,
+        "sha256": "0cb1c9661645595aafbc4c6d97b49e3882faaa6eb73606cece730cebda4b300e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.0.0"
+      },
+      {
+        "key": "gzip/0.0.1",
+        "bytes": 7546,
+        "sha256": "3f8fc375f7b3ecbe804862ed13f6e80ee0df21d141097320447aa19677aee687",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.0.1"
+      },
+      {
+        "key": "gzip/0.0.2",
+        "bytes": 8713,
+        "sha256": "92fbc9e0095c5900effc8980cc251e2e0f6d2fe0d4e0368bde188847d8b5460c",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.0.2"
+      },
+      {
+        "key": "gzip/0.1.0",
+        "bytes": 7520,
+        "sha256": "c1128fde483deb0d012b7f9b24d60f653c509ca628923dad328b14cdcefeb079",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.1.0"
+      },
+      {
+        "key": "gzip/0.1.1",
+        "bytes": 7428,
+        "sha256": "494b57ca1807b1812d0af6fab907a8a57d8747749676b9f56c06dda42b6ae2fb",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.1.1"
+      },
+      {
+        "key": "gzip/0.1.2",
+        "bytes": 8133,
+        "sha256": "1c29747a48431a81b57a625f97efb71e0f1cd5abc786e5970dd122c9d3173a84",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.1.2"
+      },
+      {
+        "key": "gzip/0.2.0",
+        "bytes": 9093,
+        "sha256": "65a27583eeb1aa70b4f07b602f5765bbb4f7e14ee30414480023a46f26f0cd57",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.2.0"
+      },
+      {
+        "key": "gzip/0.2.1",
+        "bytes": 9094,
+        "sha256": "d23325c995a693bc8b601bbc991f9d955430ed4837fc2a949cbeca3df21e9977",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.2.1"
+      },
+      {
+        "key": "gzip/0.2.2",
+        "bytes": 9247,
+        "sha256": "d53347227561c86050fd3c7eea338b761e0e9da4863501e22650511bd80fe28d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.2.2"
+      },
+      {
+        "key": "gzip/0.3.0",
+        "bytes": 6592,
+        "sha256": "c8ec0323d3d0f42752f693547aca298c711248c26a9b89c43c2ec5b23d2e9203",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.3.0"
+      },
+      {
+        "key": "gzip/0.3.1",
+        "bytes": 6493,
+        "sha256": "e708edb0cfa29a665d519192ea2a5a63874e624f54ac00a705e62a9c2757deb5",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.3.1"
+      },
+      {
+        "key": "gzip/0.3.2",
+        "bytes": 7307,
+        "sha256": "ed7f621552f95a96fc47a975760883ca5bbe375ef3321b5851043f9ea80e6956",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.3.2"
+      },
+      {
+        "key": "gzip/0.4.0",
+        "bytes": 8415,
+        "sha256": "7fe8122fdae42be8a98f3bffb4adee40129b515446df1e16209af9bd641c95da",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.4.0"
+      },
+      {
+        "key": "gzip/0.4.1",
+        "bytes": 8367,
+        "sha256": "b271bd45ac51fd0b3e3129026b4a1685fdf509417324431646e18a9d5a0785c5",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.4.1"
+      },
+      {
+        "key": "gzip/0.4.2",
+        "bytes": 8305,
+        "sha256": "826136aa1eeefee8521d9ea9b43b80cf0e64298e3f92987a63d32c88b4514c24",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.4.2"
+      },
+      {
+        "key": "gzip/0.5.0",
+        "bytes": 1005,
+        "sha256": "267abf2669f8d820e71f6ebd468f7cc2c5d3594c82b25d0ab455b0ae38a09248",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.5.0"
+      },
+      {
+        "key": "gzip/0.5.1",
+        "bytes": 1030,
+        "sha256": "47edb5c2d6a415a4bf9b5cc1946b5cf231935df083867076bcff456ae8af8cf4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.5.1"
+      },
+      {
+        "key": "gzip/0.5.2",
+        "bytes": 1120,
+        "sha256": "84ee6f51d822db6be65bcf1724259008ebe56e76d36c869fb45255491c1f7356",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/0.5.2"
+      },
+      {
+        "key": "gzip/1.0.0",
+        "bytes": 8546,
+        "sha256": "3338d88369a605b62240b124899124c36dabebdef8210ad415e4775a5e164599",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.0.0"
+      },
+      {
+        "key": "gzip/1.0.1",
+        "bytes": 7339,
+        "sha256": "d3f500a72144ff306faaa9e024773a73abc87ead32cb69a82c56a06d4664d756",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.0.1"
+      },
+      {
+        "key": "gzip/1.0.2",
+        "bytes": 8471,
+        "sha256": "cfb22d21c0bad0db6dc5717c636f02d097ab374ae651e73c6bd1a35b4c5e5624",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.0.2"
+      },
+      {
+        "key": "gzip/1.1.0",
+        "bytes": 7909,
+        "sha256": "ad43eba205d6184b5b5fea6fa47c1bc755e7df94cecde14046cebb8165d97d78",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.1.0"
+      },
+      {
+        "key": "gzip/1.1.1",
+        "bytes": 7733,
+        "sha256": "67bcaf27fede5f1010f0b16155aa8daf76b67f7dc76763f6da85cdb2a72cf166",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.1.1"
+      },
+      {
+        "key": "gzip/1.1.2",
+        "bytes": 8238,
+        "sha256": "50347b6d7bc6011e247bdeebca6c1ced1919e99c7ae7d99fbd02f6e0e36c5ac1",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.1.2"
+      },
+      {
+        "key": "gzip/1.2.0",
+        "bytes": 8641,
+        "sha256": "bc3e37dabd38083c023d989810b3f2c7e2de9ef862084fb11b9fd3acc37545aa",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.2.0"
+      },
+      {
+        "key": "gzip/1.2.1",
+        "bytes": 8624,
+        "sha256": "589d1062198b570bc4ee3bb08ea9510354b3da741e84a448ec96739773e0ff89",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.2.1"
+      },
+      {
+        "key": "gzip/1.2.2",
+        "bytes": 8884,
+        "sha256": "7a698c911e78259bce4e36b5e86bf6802a14bb386f515a0c5993232709366436",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.2.2"
+      },
+      {
+        "key": "gzip/1.3.0",
+        "bytes": 6420,
+        "sha256": "73e1f0c08ebefeae21b0ced262d173ea4db2618a1c6e28217215a0181f2ce65f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.3.0"
+      },
+      {
+        "key": "gzip/1.3.1",
+        "bytes": 6210,
+        "sha256": "fc420f80b5d7ee03bd2d9bc499b941a91857e834d90432e3c06077734ed5d019",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.3.1"
+      },
+      {
+        "key": "gzip/1.3.2",
+        "bytes": 7160,
+        "sha256": "512bc09599921b31d20188d69a6ddcd970450dced3f1bc953dba4f3bd8932d76",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.3.2"
+      },
+      {
+        "key": "gzip/1.4.0",
+        "bytes": 8636,
+        "sha256": "faee6ceb3cb377e4ac190fc490dd561cd5a0767b69dacc87887b64b7335f98e1",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.4.0"
+      },
+      {
+        "key": "gzip/1.4.1",
+        "bytes": 8358,
+        "sha256": "b3e3694cfa659809b19abdda7727e1e57d1edc5deee631d0f58a2469cf7acccb",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.4.1"
+      },
+      {
+        "key": "gzip/1.4.2",
+        "bytes": 8160,
+        "sha256": "30c17eac740ce4f7d04fcec8e9ee0d650908c555cfd935a2e6a00ad7fba2d119",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.4.2"
+      },
+      {
+        "key": "gzip/1.5.0",
+        "bytes": 1009,
+        "sha256": "029ed5af382348c00b89fd89a323e10b89f29a578e709ca7475ecc026170d44d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.5.0"
+      },
+      {
+        "key": "gzip/1.5.1",
+        "bytes": 996,
+        "sha256": "a5761665266faa8a2200455bff06e450aa874863837d9a61d6f5b39d4c4afbf1",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.5.1"
+      },
+      {
+        "key": "gzip/1.5.2",
+        "bytes": 1029,
+        "sha256": "11aa9a220fe3a7cb0a0820ba337482c56597eff0f407fe411bf03f14884d81e4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/1.5.2"
+      },
+      {
+        "key": "gzip/2.0.0",
+        "bytes": 8158,
+        "sha256": "bcd6e44e9c4c073b9ce98443663ccf017e9970a41aadaf969957ca77d53e9f29",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.0.0"
+      },
+      {
+        "key": "gzip/2.0.1",
+        "bytes": 7923,
+        "sha256": "b86cb4e0f083ee652587764d28f97510bc88855b7760006371b2f1160084f3a3",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.0.1"
+      },
+      {
+        "key": "gzip/2.0.2",
+        "bytes": 8691,
+        "sha256": "09603587be56436edc31ea3c1322ea88cbd6b9c1a3e61ebf783d4c8c86870c59",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.0.2"
+      },
+      {
+        "key": "gzip/2.1.0",
+        "bytes": 9062,
+        "sha256": "da7b0a0ef054696e98d9951192c9f48c5a69ac80dbcb303417b2caf78ec777c4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.1.0"
+      },
+      {
+        "key": "gzip/2.1.1",
+        "bytes": 9085,
+        "sha256": "3a9237b70e3f8ebb80e028eb0b5fac6f6288f5ccaed121d15280e4208fd200aa",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.1.1"
+      },
+      {
+        "key": "gzip/2.1.2",
+        "bytes": 8886,
+        "sha256": "ee55db55ea5d3fc30c1ace913a7802972735705a0fe8a3b9aa07d436510c781c",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.1.2"
+      },
+      {
+        "key": "gzip/2.2.0",
+        "bytes": 8542,
+        "sha256": "2662605d0eebd8adee672f11c3965afe8b0b59ba85809ac6aeeeaf1a615b66a6",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.2.0"
+      },
+      {
+        "key": "gzip/2.2.1",
+        "bytes": 7880,
+        "sha256": "eacb10b805a93514d669b5ba106490ab8dad9e31a733a163be9f33527f861609",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.2.1"
+      },
+      {
+        "key": "gzip/2.2.2",
+        "bytes": 7667,
+        "sha256": "6870560eeabb4b12aca8d553a6b2295509d100f20e3439c6d9b862c1d0563310",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.2.2"
+      },
+      {
+        "key": "gzip/2.3.0",
+        "bytes": 8038,
+        "sha256": "609ee64088c05bebe20f2150b8e7512e97f94c3bb971ef930fbfc30f8f9fe209",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.3.0"
+      },
+      {
+        "key": "gzip/2.3.1",
+        "bytes": 8329,
+        "sha256": "468c51da298db9e159508bb595d4563dca40fb9ad7caf1cd183df9d044464d27",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.3.1"
+      },
+      {
+        "key": "gzip/2.3.2",
+        "bytes": 8940,
+        "sha256": "c4f09b12bddf8254f12fd47d156f8657cd906530869bb04b5154f859bcaa44cc",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.3.2"
+      },
+      {
+        "key": "gzip/2.4.0",
+        "bytes": 7549,
+        "sha256": "199673e92e5e68db7e9c415441b4d1082559f8e0bdb449d3d557c82b1c1006bb",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.4.0"
+      },
+      {
+        "key": "gzip/2.4.1",
+        "bytes": 7332,
+        "sha256": "aebabf4bec42a711400654a1302713f31c2abee7f16587e17e29a86811ad6da1",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.4.1"
+      },
+      {
+        "key": "gzip/2.4.2",
+        "bytes": 7622,
+        "sha256": "5ad4c5c17354ff181f9f8ba9ecde87df83231aa168f9199da32687bdba75e44e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.4.2"
+      },
+      {
+        "key": "gzip/2.5.0",
+        "bytes": 867,
+        "sha256": "266abe0ea09396cf252c83c11f64b9c2d30797b69a9b27214a031ed5c311f4b2",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.5.0"
+      },
+      {
+        "key": "gzip/2.5.1",
+        "bytes": 849,
+        "sha256": "d8415bb0ae4d33b8d5775a2ba9106d19695594af6f18ed4aff8cc838bd32c97c",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.5.1"
+      },
+      {
+        "key": "gzip/2.5.2",
+        "bytes": 870,
+        "sha256": "2bee2078288bf68a4976fa81e865fed15b7ba8391443cc40240770ef29d2533b",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/2.5.2"
+      },
+      {
+        "key": "gzip/3.0.0",
+        "bytes": 7489,
+        "sha256": "1e5de3455c69244c88daec57b7d9855a2275eeabf1a42bedf2504c4f90cd38d9",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.0.0"
+      },
+      {
+        "key": "gzip/3.0.1",
+        "bytes": 8656,
+        "sha256": "249ea42415678aef23e01b4b9921e50173966bb80408a483a4dc42bd51940b1b",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.0.1"
+      },
+      {
+        "key": "gzip/3.0.2",
+        "bytes": 9125,
+        "sha256": "365ddab1045c4754b80f393d89d05f22d4e4da8e198039acf14fc074f50e555b",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.0.2"
+      },
+      {
+        "key": "gzip/3.1.0",
+        "bytes": 8076,
+        "sha256": "4f19890f7ae2e96d557badd929ead0dd32be96ce93f46f4d7c9d91a531d2585d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.1.0"
+      },
+      {
+        "key": "gzip/3.1.1",
+        "bytes": 8922,
+        "sha256": "fc37f5a39947b36aef88d94a69b203106dcfe9d021196993b4e8b609136afa31",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.1.1"
+      },
+      {
+        "key": "gzip/3.1.2",
+        "bytes": 9239,
+        "sha256": "6df104ed90343588e07ae8f6c957c5782cf2e44da9b26e66aad97685ca3c6b00",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.1.2"
+      },
+      {
+        "key": "gzip/3.2.0",
+        "bytes": 8979,
+        "sha256": "f3fde9cef5ac43383c8b0ebe163725a63737948d66534ac08770188ffdecf641",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.2.0"
+      },
+      {
+        "key": "gzip/3.2.1",
+        "bytes": 9215,
+        "sha256": "4acae13f4c353ef9de23e697175f7236370c1aea60007d9cca6591c71201d3eb",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.2.1"
+      },
+      {
+        "key": "gzip/3.2.2",
+        "bytes": 9315,
+        "sha256": "ac00019b191d84c0de9ca73614a971a1f65f5ff9762ee0ace1ff9fedcc913587",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.2.2"
+      },
+      {
+        "key": "gzip/3.3.0",
+        "bytes": 7064,
+        "sha256": "d363113ab1f5f35c2abb2b5ead647751215ebdea92fcb8d3e0de6ad134a54f6b",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.3.0"
+      },
+      {
+        "key": "gzip/3.3.1",
+        "bytes": 6806,
+        "sha256": "45d493c4da4fd06239b30455bcae766fe9132a29df48c86940aea26047984d25",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.3.1"
+      },
+      {
+        "key": "gzip/3.3.2",
+        "bytes": 6625,
+        "sha256": "bb4c7ca3605015b75902714939c8f7578f56789e83ea9f6ab41a49ba2a4e51a1",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.3.2"
+      },
+      {
+        "key": "gzip/3.4.0",
+        "bytes": 2966,
+        "sha256": "52b95fd57a42ac66f087a6d9fd63eca85cb8e3ab870b9e16cb02468348adb77c",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.4.0"
+      },
+      {
+        "key": "gzip/3.4.1",
+        "bytes": 2937,
+        "sha256": "31a0507db13ee0c28373f70779db36217bfa815e028b544e217b2c7954713a5f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.4.1"
+      },
+      {
+        "key": "gzip/3.4.2",
+        "bytes": 2902,
+        "sha256": "5d19805ef3379b1f9434c8df1160b65a9bc6bf69411668f7fd69e3ceb6ff78ba",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.4.2"
+      },
+      {
+        "key": "gzip/3.5.0",
+        "bytes": 86,
+        "sha256": "c5b3e74d51aa7b24339277bffa4edb390e87c75882b9e0798386018b04f5ad68",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.5.0"
+      },
+      {
+        "key": "gzip/3.5.1",
+        "bytes": 86,
+        "sha256": "c5b3e74d51aa7b24339277bffa4edb390e87c75882b9e0798386018b04f5ad68",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.5.1"
+      },
+      {
+        "key": "gzip/3.5.2",
+        "bytes": 86,
+        "sha256": "c5b3e74d51aa7b24339277bffa4edb390e87c75882b9e0798386018b04f5ad68",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/3.5.2"
+      },
+      {
+        "key": "gzip/4.0.0",
+        "bytes": 8438,
+        "sha256": "9ba9132fd11da348974e952d66b7103f03bb183c0107ae00805ef2501102d66a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.0.0"
+      },
+      {
+        "key": "gzip/4.0.1",
+        "bytes": 8113,
+        "sha256": "a32556045920871e596012aaf2b938f5b316f78ecb38aea01046c7768aaa29d6",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.0.1"
+      },
+      {
+        "key": "gzip/4.0.2",
+        "bytes": 8073,
+        "sha256": "7703ffa7cedfcb5afc0e28ee5043bdb2face4cf27ed0fed9ffb8f1d791148a07",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.0.2"
+      },
+      {
+        "key": "gzip/4.1.0",
+        "bytes": 8765,
+        "sha256": "393fdceaf67fd25c5f4672482c3424a20f42bd9ade450f37e51e5a69eaee9a47",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.1.0"
+      },
+      {
+        "key": "gzip/4.1.1",
+        "bytes": 8941,
+        "sha256": "9137cf053f8427ab4c8fff67f6e2a570f9d388849c646fc78f50d3aaa9abe3aa",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.1.1"
+      },
+      {
+        "key": "gzip/4.1.2",
+        "bytes": 9025,
+        "sha256": "4300f29c4546d4115ada172326533944b914c2f253fcc1e055089fbcccbb2242",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.1.2"
+      },
+      {
+        "key": "gzip/4.2.0",
+        "bytes": 9347,
+        "sha256": "2234b81536aa37aaee97664c49807acb767a1ceef52368f090a74587ce9eeab4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.2.0"
+      },
+      {
+        "key": "gzip/4.2.1",
+        "bytes": 9117,
+        "sha256": "e3c48beaf1fd5e14882df4f78259919becefb7b7b8b4e73e54939e80f3653d0e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.2.1"
+      },
+      {
+        "key": "gzip/4.2.2",
+        "bytes": 8768,
+        "sha256": "c3ba09a2015476b10f84fed2e3f7cde77fc0bf026de3955d3c73a534af7e65ec",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.2.2"
+      },
+      {
+        "key": "gzip/4.3.0",
+        "bytes": 2220,
+        "sha256": "fee8c1fd48ac915034830bcb5e38f8d932680aeb2192c2d26b48062154473922",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.3.0"
+      },
+      {
+        "key": "gzip/4.3.1",
+        "bytes": 1928,
+        "sha256": "66eaa1017de06a2b20164ec6e7001ea963b11d1963ea72713d4c1d206909a1ff",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.3.1"
+      },
+      {
+        "key": "gzip/4.3.2",
+        "bytes": 1902,
+        "sha256": "e54187b7bcd356b8f81d2920bde397422bf00fd16eabfc5039d46fb9827cb821",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.3.2"
+      },
+      {
+        "key": "gzip/4.4.0",
+        "bytes": 6827,
+        "sha256": "cbd4477f716820ea99f49f9afc0566dafee1e99304f8898b38797b6c2bcbe35b",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.4.0"
+      },
+      {
+        "key": "gzip/4.4.1",
+        "bytes": 6683,
+        "sha256": "31d14f8e7a7a1ea3c9a76baa6d4aa5e40eb425f862198ce7385fd52649e064c0",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.4.1"
+      },
+      {
+        "key": "gzip/4.4.2",
+        "bytes": 6598,
+        "sha256": "9aa5118964186d99861c7c4d6173ced4d9d036fcc900931f684972791d9491ad",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.4.2"
+      },
+      {
+        "key": "gzip/4.5.0",
+        "bytes": 571,
+        "sha256": "8849b52d2bb29b8bc999f5c51e93d48659303b6e2f336a90b583ae2bae895e6d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.5.0"
+      },
+      {
+        "key": "gzip/4.5.1",
+        "bytes": 561,
+        "sha256": "3ec46c661f10fc3193a58f04308eb4b9f5fbe7b46ca65fa23fa2d700b0f70171",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.5.1"
+      },
+      {
+        "key": "gzip/4.5.2",
+        "bytes": 560,
+        "sha256": "55c178ebd716dd4bd8df44fd8b5236ed80388d9e017008b08d20d64e764769e6",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/4.5.2"
+      },
+      {
+        "key": "gzip/5.0.0",
+        "bytes": 1247,
+        "sha256": "21f158e0ab09aa76e5cef1a36bbb62228ce6b02260da71e8e80629f0e8e07cd4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.0.0"
+      },
+      {
+        "key": "gzip/5.0.1",
+        "bytes": 1209,
+        "sha256": "475cdb71059bcb0b967e69fe71485d69da6cb4b764010f150ab6719540e3e72f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.0.1"
+      },
+      {
+        "key": "gzip/5.0.2",
+        "bytes": 1163,
+        "sha256": "72e99a14415daf2e666d03c1fcc23a49ca230fc1ecf373c45336580bd2908b18",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.0.2"
+      },
+      {
+        "key": "gzip/5.1.0",
+        "bytes": 1297,
+        "sha256": "a8623f1c3f04102b7137fc31c3ac9f681475278ad52557f10ac65429eb727cfd",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.1.0"
+      },
+      {
+        "key": "gzip/5.1.1",
+        "bytes": 1184,
+        "sha256": "7fd5ab3b4336cdb4ec0b43bc17cf4fe022ac612fea0228db82338f3322daa75d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.1.1"
+      },
+      {
+        "key": "gzip/5.1.2",
+        "bytes": 1249,
+        "sha256": "c642f40a4bf3730e1590e9d74144353f332fb1545cdff60b05e73729ec914320",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.1.2"
+      },
+      {
+        "key": "gzip/5.2.0",
+        "bytes": 1258,
+        "sha256": "03590a67d63f5c8c633d70d9d06ef3d215945d8d7dc3d4edf853bf9ced0f8718",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.2.0"
+      },
+      {
+        "key": "gzip/5.2.1",
+        "bytes": 1213,
+        "sha256": "f6a14cd4b92df2bd2a7d781a217afa900682b6f017ad5c54e15717c6fb8908a4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.2.1"
+      },
+      {
+        "key": "gzip/5.2.2",
+        "bytes": 1154,
+        "sha256": "b4198cc2c812ddd78ad1159f27a41bb49630eddbaafce967a6a9947b7255c44c",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.2.2"
+      },
+      {
+        "key": "gzip/5.3.0",
+        "bytes": 148,
+        "sha256": "a4fbece212e2e1e76ffc658994e5e9dfe41b922d76fd14ecb5d8e6809f32f643",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.3.0"
+      },
+      {
+        "key": "gzip/5.3.1",
+        "bytes": 116,
+        "sha256": "3a85bd56fd9937a77a59c7dee220142c2b65e27a5da9006623f7f4e7677494cf",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.3.1"
+      },
+      {
+        "key": "gzip/5.3.2",
+        "bytes": 131,
+        "sha256": "a0633eef279d20034f368e4a9941d82a780888abd0e93157b4338cc1a3358ee3",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.3.2"
+      },
+      {
+        "key": "gzip/5.4.0",
+        "bytes": 369,
+        "sha256": "d46f67d95891ef9c5ee59140c066a10eb38348e7a4fe6830f4cd0be431a48486",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.4.0"
+      },
+      {
+        "key": "gzip/5.4.1",
+        "bytes": 368,
+        "sha256": "ca24628c2ff8c5d78c5bc781f6391907dfd0b4a333bb475b987dbad072254645",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.4.1"
+      },
+      {
+        "key": "gzip/5.4.2",
+        "bytes": 367,
+        "sha256": "c51e0f7dac4b99b69d31f9fa06343e36611a64e2ccdd4a838499f970e42a68fa",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.4.2"
+      },
+      {
+        "key": "gzip/5.5.0",
+        "bytes": 250,
+        "sha256": "27584efd253a0ecdbea28231cfdc422cb2ba8c21a11e16d1a37f138bd7447f55",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.5.0"
+      },
+      {
+        "key": "gzip/5.5.1",
+        "bytes": 248,
+        "sha256": "b1d943d0a507d70f1a5751a5b1668546500ad528816cb92d3ac4aa81c103edda",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.5.1"
+      },
+      {
+        "key": "gzip/5.5.2",
+        "bytes": 250,
+        "sha256": "19197ddfa2fe528c8371431e6227a0e208e6194aee3462e0044daeec9324813b",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/gzip/5.5.2"
+      },
+      {
+        "key": "raw/.zarray",
+        "bytes": 245,
+        "sha256": "538f8a205a84b65fbfc87b4d3771cc843ce20622d194c1440b5ca8a8564da663",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/.zarray"
+      },
+      {
+        "key": "raw/0.0.0",
+        "bytes": 10000,
+        "sha256": "4fc3ee6b45fef3b151614a54342b2a08f2654393aa3c51ae74bfda4e4bb1e883",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.0.0"
+      },
+      {
+        "key": "raw/0.0.1",
+        "bytes": 10000,
+        "sha256": "397ce0164d246730a01c43a052609a86c47ab65f521f99b693ec298b6aea0b37",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.0.1"
+      },
+      {
+        "key": "raw/0.0.2",
+        "bytes": 10000,
+        "sha256": "3523be6c7e435d6ad08c1a0435c491675702b768a4184f96b469c1b1da34b302",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.0.2"
+      },
+      {
+        "key": "raw/0.1.0",
+        "bytes": 10000,
+        "sha256": "7941cdde3cda71d4cb2e9dc8ac05656e505aa852334245a7b2233c1d9d2a21fa",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.1.0"
+      },
+      {
+        "key": "raw/0.1.1",
+        "bytes": 10000,
+        "sha256": "31dd20e5eef465bbb4a5355373daa07636bd8a657defd855248de7ed4cef7dba",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.1.1"
+      },
+      {
+        "key": "raw/0.1.2",
+        "bytes": 10000,
+        "sha256": "75725cfc396f4166fb50c6a22d2aac3a06992069f2b3e7ca25eff30a588341c1",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.1.2"
+      },
+      {
+        "key": "raw/0.2.0",
+        "bytes": 10000,
+        "sha256": "aed6de2c970fd20637f6af58b78e32b27c8ef010f3bfef19681a074ddd64d6d7",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.2.0"
+      },
+      {
+        "key": "raw/0.2.1",
+        "bytes": 10000,
+        "sha256": "4fa84f726d3a3b70ed94ae024b0dfc79e95decfa4461cbac63871fd091742a42",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.2.1"
+      },
+      {
+        "key": "raw/0.2.2",
+        "bytes": 10000,
+        "sha256": "b47fbd9fc5d0338b8d4a6200d3696e1752a6904231ae58a829215d8e92e0483a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.2.2"
+      },
+      {
+        "key": "raw/0.3.0",
+        "bytes": 10000,
+        "sha256": "bcce8d19fba0a8b9eb0bc4e3342fda67272e2647cc040330966454442ca61dea",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.3.0"
+      },
+      {
+        "key": "raw/0.3.1",
+        "bytes": 10000,
+        "sha256": "55b9f30ed5f4df108013e077adccf0b9cfce59623ad0ceeef95149e8fc583aed",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.3.1"
+      },
+      {
+        "key": "raw/0.3.2",
+        "bytes": 10000,
+        "sha256": "784bd241c3265526b539193df7265139d39fb2b180282f29fad33021d0413094",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.3.2"
+      },
+      {
+        "key": "raw/0.4.0",
+        "bytes": 10000,
+        "sha256": "ffceedc5ea704ab1f1ffb674c11b9d606ba54f7c58438346ff57f4993c049c20",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.4.0"
+      },
+      {
+        "key": "raw/0.4.1",
+        "bytes": 10000,
+        "sha256": "630a8db6c5a5031429713a77b2993ec1dc2b3263a8fbece916c2c22ec219b8b9",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.4.1"
+      },
+      {
+        "key": "raw/0.4.2",
+        "bytes": 10000,
+        "sha256": "b16e58ac2981bdc23162e1ad9165710d7b012d1a4e086fb778e528c4a3fd98f0",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.4.2"
+      },
+      {
+        "key": "raw/0.5.0",
+        "bytes": 10000,
+        "sha256": "627d61c30c4c56bdb07821730f12404e67165dab759c64205c0eff6ece35d762",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.5.0"
+      },
+      {
+        "key": "raw/0.5.1",
+        "bytes": 10000,
+        "sha256": "1cfeba3c4271aaf84e02d92ba4a37560746094a65f2e2ea49e56d79853044399",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.5.1"
+      },
+      {
+        "key": "raw/0.5.2",
+        "bytes": 10000,
+        "sha256": "14fc543c0fcb15d5a9dd03a9e11183aaf6ca803c3388e5325ab7edae1ff738c6",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/0.5.2"
+      },
+      {
+        "key": "raw/1.0.0",
+        "bytes": 10000,
+        "sha256": "fe4a48f9b6deebe2db6ad313a72c2ef80ece40fed130f71dbc8263c04f8da1f4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.0.0"
+      },
+      {
+        "key": "raw/1.0.1",
+        "bytes": 10000,
+        "sha256": "db0e44c4c725f274a7053fb97bda48f95db08943844e10fa45c6696998761cb5",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.0.1"
+      },
+      {
+        "key": "raw/1.0.2",
+        "bytes": 10000,
+        "sha256": "c142f2db870941222210dd3228bb892f85976e8122f7119800e53a9ee066e018",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.0.2"
+      },
+      {
+        "key": "raw/1.1.0",
+        "bytes": 10000,
+        "sha256": "40df6b1ff93934a1f1b406527149c75231c283fa618a5d8a8e932e81260361c9",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.1.0"
+      },
+      {
+        "key": "raw/1.1.1",
+        "bytes": 10000,
+        "sha256": "f2bffc47a41922c0afca7fe94f29b5e3e0460ee70077bad911eacbe9a87f7fe5",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.1.1"
+      },
+      {
+        "key": "raw/1.1.2",
+        "bytes": 10000,
+        "sha256": "ffc97b2beb7ce1d8f54b73355524320be08b6dcd36751fb6a5c055373b51a494",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.1.2"
+      },
+      {
+        "key": "raw/1.2.0",
+        "bytes": 10000,
+        "sha256": "b567f00aaa858be82afed20ee91eb31ea396453569093a1692394c4d0049991e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.2.0"
+      },
+      {
+        "key": "raw/1.2.1",
+        "bytes": 10000,
+        "sha256": "ec9c3538a97b074456f1c183fada1417badbaad5596e0653ccf48eafd224b120",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.2.1"
+      },
+      {
+        "key": "raw/1.2.2",
+        "bytes": 10000,
+        "sha256": "4763e16078959f642f39eb9d0cae8e998ca8d6f3617e410fef60b7981521311e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.2.2"
+      },
+      {
+        "key": "raw/1.3.0",
+        "bytes": 10000,
+        "sha256": "e7650f9408f7ff4a44c48a318cdec421809bda74fb0994c2facb56a4da7ea367",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.3.0"
+      },
+      {
+        "key": "raw/1.3.1",
+        "bytes": 10000,
+        "sha256": "9590fc3e349b9e69aa0dafd4792d7e454cc7c693ab245df7143135d292ae82ea",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.3.1"
+      },
+      {
+        "key": "raw/1.3.2",
+        "bytes": 10000,
+        "sha256": "3b9a9532408e42ed8cf160a0d8b18eea530026cef51d3827d41eacb6c8bcdc6f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.3.2"
+      },
+      {
+        "key": "raw/1.4.0",
+        "bytes": 10000,
+        "sha256": "308bc0662bd9a80704b2f520ac33bf18f64142d41987bb1f41a79348de7203bb",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.4.0"
+      },
+      {
+        "key": "raw/1.4.1",
+        "bytes": 10000,
+        "sha256": "f5959cfb02cbfaad67a8d1463c7f8d30073635d5e034d9a3a818338c8e558e66",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.4.1"
+      },
+      {
+        "key": "raw/1.4.2",
+        "bytes": 10000,
+        "sha256": "1cb646f69c4e63950c563c413bc3f8632b3c8c1f06ee2fc9ce1dc190d7b28dee",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.4.2"
+      },
+      {
+        "key": "raw/1.5.0",
+        "bytes": 10000,
+        "sha256": "32ce51d36c3cf3a33d44af486df65c84b11b4560a22f97fb0ff6fc65b4c51923",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.5.0"
+      },
+      {
+        "key": "raw/1.5.1",
+        "bytes": 10000,
+        "sha256": "b4c0b3ff260a4ca704657ad882d725eeda1e82e924a4b978d5cc36287f4d823e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.5.1"
+      },
+      {
+        "key": "raw/1.5.2",
+        "bytes": 10000,
+        "sha256": "0767b68033e1f9d6e8d0433bd480160a1d9ea074b77388d8b53554c41c26a4be",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/1.5.2"
+      },
+      {
+        "key": "raw/2.0.0",
+        "bytes": 10000,
+        "sha256": "a639b17e2a5b8831dfd9285a8f19f3573c14eaf05c07c5a6f4660143b1a352ee",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.0.0"
+      },
+      {
+        "key": "raw/2.0.1",
+        "bytes": 10000,
+        "sha256": "5ae217519b8cfb00cc1751bdfa158283e8f251c76b5dea7fc8d3c1c1d8ca1512",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.0.1"
+      },
+      {
+        "key": "raw/2.0.2",
+        "bytes": 10000,
+        "sha256": "e2ba5c47ba1dbbec41cf5494dd0324c83b3bcc7531eeda14dd3476b8149ff6d5",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.0.2"
+      },
+      {
+        "key": "raw/2.1.0",
+        "bytes": 10000,
+        "sha256": "e2f0655470b1e736b2ceb4ccd0f9119cf2183d69a92679f9c403ee307afa0071",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.1.0"
+      },
+      {
+        "key": "raw/2.1.1",
+        "bytes": 10000,
+        "sha256": "3ee41d1a7b7fb09b4fc280409b447fb2bf79fd39725cb08d844c88c906283775",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.1.1"
+      },
+      {
+        "key": "raw/2.1.2",
+        "bytes": 10000,
+        "sha256": "603700f4806fb4d9892fa6593c7b302f1cb95da18ed2de865888f1b1f1b3d906",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.1.2"
+      },
+      {
+        "key": "raw/2.2.0",
+        "bytes": 10000,
+        "sha256": "ace8476737832253e3c07d1e396f5eae2aab31dc902967b4f0b5ddc1089b3415",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.2.0"
+      },
+      {
+        "key": "raw/2.2.1",
+        "bytes": 10000,
+        "sha256": "5444926613be760d038af40555e58bad041c13adaa618ec1efa54c62cd68ecf0",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.2.1"
+      },
+      {
+        "key": "raw/2.2.2",
+        "bytes": 10000,
+        "sha256": "4a3993c77c8f5e028fc0c1bc4f9690c4b268cae063ebffee916994eb94b384c7",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.2.2"
+      },
+      {
+        "key": "raw/2.3.0",
+        "bytes": 10000,
+        "sha256": "d5e00e96f4180aa9d3f11f4df793582d728339ceafafca424811ef96b0be3d37",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.3.0"
+      },
+      {
+        "key": "raw/2.3.1",
+        "bytes": 10000,
+        "sha256": "e61a20c2dde6e7b0e12088fc30b585c55316b46fbd79330dad202917453bc3b2",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.3.1"
+      },
+      {
+        "key": "raw/2.3.2",
+        "bytes": 10000,
+        "sha256": "72049935b940bd2f9a4861982fed29e2e58e93a0e50897dba96c13b2c29120b8",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.3.2"
+      },
+      {
+        "key": "raw/2.4.0",
+        "bytes": 10000,
+        "sha256": "f0b67b6e936503cdab304f1e97d56e4aec524935bc695f860de7d57989b49c50",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.4.0"
+      },
+      {
+        "key": "raw/2.4.1",
+        "bytes": 10000,
+        "sha256": "be7188113ebf7963e3d1e1d4834fbabf4b4cb3effd1afc3b90792453cb92f572",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.4.1"
+      },
+      {
+        "key": "raw/2.4.2",
+        "bytes": 10000,
+        "sha256": "da0e3ccbd239177d1180629aaf60a7e2209c552dcdf6bd5d38a28a02942bc662",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.4.2"
+      },
+      {
+        "key": "raw/2.5.0",
+        "bytes": 10000,
+        "sha256": "9651c57d2b3a21fa545f426492b8f1d2568c91102e25901dc4e3547152e30714",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.5.0"
+      },
+      {
+        "key": "raw/2.5.1",
+        "bytes": 10000,
+        "sha256": "9bfc14bd8562b00b109969fc3fb4c9426d807a3dbec378bb61a68d8150b7f588",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.5.1"
+      },
+      {
+        "key": "raw/2.5.2",
+        "bytes": 10000,
+        "sha256": "1e19f647a356f733aba07d7638c1351f170bb0da18187b291db93a3d5724bebb",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/2.5.2"
+      },
+      {
+        "key": "raw/3.0.0",
+        "bytes": 10000,
+        "sha256": "a0ef45d115d155599dafe4f1622d6fe4299a8da331b0b44b0d12726afd5fe875",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.0.0"
+      },
+      {
+        "key": "raw/3.0.1",
+        "bytes": 10000,
+        "sha256": "c8ca7900c51ee5c0fa5f912737ec88e8272a6528f790174022cd1a7676acc17d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.0.1"
+      },
+      {
+        "key": "raw/3.0.2",
+        "bytes": 10000,
+        "sha256": "ef55d3872bf3149f19482710d5eb38066ef63a8c5f29544d9015ea41ab7bf015",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.0.2"
+      },
+      {
+        "key": "raw/3.1.0",
+        "bytes": 10000,
+        "sha256": "b1c188027c76611b172ecd7bb75ce7ca979f64ffcb654f82701df5a5dea5af27",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.1.0"
+      },
+      {
+        "key": "raw/3.1.1",
+        "bytes": 10000,
+        "sha256": "43977dea086ab2960dae2c2c1d2d89e6af4c70103ac857049df2116692ab3144",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.1.1"
+      },
+      {
+        "key": "raw/3.1.2",
+        "bytes": 10000,
+        "sha256": "902f9e0aad1f6d7fef4b7ff48a6620b33b2373202d5d21fc5e451f730bf730c7",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.1.2"
+      },
+      {
+        "key": "raw/3.2.0",
+        "bytes": 10000,
+        "sha256": "1f607d41de7c5721ec5c5eb47fa10c59dcd0b6a4f03df6937987a613c1c5cf47",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.2.0"
+      },
+      {
+        "key": "raw/3.2.1",
+        "bytes": 10000,
+        "sha256": "004cf1e72edeace58bb30a70d2ec4043e4e09d410a83547e524b4c584c3a7a58",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.2.1"
+      },
+      {
+        "key": "raw/3.2.2",
+        "bytes": 10000,
+        "sha256": "0b7fac8ccab4eaf403a3c8bef151a36f8b419a027607e8e26c80de40458ae571",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.2.2"
+      },
+      {
+        "key": "raw/3.3.0",
+        "bytes": 10000,
+        "sha256": "3bbb2db01844a6896b015d48feea69da5433ae2c97f5c04bd404087567aaf443",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.3.0"
+      },
+      {
+        "key": "raw/3.3.1",
+        "bytes": 10000,
+        "sha256": "ae15c4e95766adbcaa0264dffc91278b8681238a04f6f4eeb29a8d058767a6d3",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.3.1"
+      },
+      {
+        "key": "raw/3.3.2",
+        "bytes": 10000,
+        "sha256": "a9345046c5f2ccf67bfca1ade35e843ea56d3b04210ed5f7a6bb56640bacd7b7",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.3.2"
+      },
+      {
+        "key": "raw/3.4.0",
+        "bytes": 10000,
+        "sha256": "09f72a63a8dbf14d5fd1ef62aa6c2364ddf16cb8ebc28a3a2dad4efa3778deb6",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.4.0"
+      },
+      {
+        "key": "raw/3.4.1",
+        "bytes": 10000,
+        "sha256": "d5e8f746d539b62421d9a47859b30a1dc6b940785bfba5ec62c34dd250632218",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.4.1"
+      },
+      {
+        "key": "raw/3.4.2",
+        "bytes": 10000,
+        "sha256": "4603597d3bbbe91f5e32a0b809f333da01f5f24ea7d15a17d86a01ce1e9805fc",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.4.2"
+      },
+      {
+        "key": "raw/3.5.0",
+        "bytes": 10000,
+        "sha256": "35877c9f79b7891d381ea43d8f5756d9dc73fa30dd414d99da75219bc204909f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.5.0"
+      },
+      {
+        "key": "raw/3.5.1",
+        "bytes": 10000,
+        "sha256": "35877c9f79b7891d381ea43d8f5756d9dc73fa30dd414d99da75219bc204909f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.5.1"
+      },
+      {
+        "key": "raw/3.5.2",
+        "bytes": 10000,
+        "sha256": "35877c9f79b7891d381ea43d8f5756d9dc73fa30dd414d99da75219bc204909f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/3.5.2"
+      },
+      {
+        "key": "raw/4.0.0",
+        "bytes": 10000,
+        "sha256": "faa4b7f73532ec0c99ede708111b33929f555e25ebfa256e889cb82153988dff",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.0.0"
+      },
+      {
+        "key": "raw/4.0.1",
+        "bytes": 10000,
+        "sha256": "a866f727a476e3ad316b0166c3681aa669a1608a7637e43a3a47ea7e809f5e33",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.0.1"
+      },
+      {
+        "key": "raw/4.0.2",
+        "bytes": 10000,
+        "sha256": "f83c75b950cd70beef710451d8d4b57f589ac96202cb111316df3df2c3c69817",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.0.2"
+      },
+      {
+        "key": "raw/4.1.0",
+        "bytes": 10000,
+        "sha256": "efe512df051bb34d3c7cfa968fd19a0573fb58033ec5cf53e2d5bdad2f16430f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.1.0"
+      },
+      {
+        "key": "raw/4.1.1",
+        "bytes": 10000,
+        "sha256": "ffad0375b9b514b426812887204f3fdc320d18a098224d95aa585f010be05010",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.1.1"
+      },
+      {
+        "key": "raw/4.1.2",
+        "bytes": 10000,
+        "sha256": "5ed9e58641d17c048d937946283f864a78e1d266505a26402f574b8299b14b73",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.1.2"
+      },
+      {
+        "key": "raw/4.2.0",
+        "bytes": 10000,
+        "sha256": "45e3076c2bf3789d38d851433f177a648844ee7c8e8d1ffc4e0f454c455194b4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.2.0"
+      },
+      {
+        "key": "raw/4.2.1",
+        "bytes": 10000,
+        "sha256": "94e208f574647b07d0a08f3d21f56c9cf63553067fd6e59c668f1e00606ef391",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.2.1"
+      },
+      {
+        "key": "raw/4.2.2",
+        "bytes": 10000,
+        "sha256": "83d03a4806a4688a295288a2a22b33cc448c092d5087f24a357e4d9ad59bdacd",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.2.2"
+      },
+      {
+        "key": "raw/4.3.0",
+        "bytes": 10000,
+        "sha256": "f31606b52ec5b1968581223e199d40286e5b1f8662e5266608f7863b863fa477",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.3.0"
+      },
+      {
+        "key": "raw/4.3.1",
+        "bytes": 10000,
+        "sha256": "9a4950cb4e9c3ebced4bb42f6ab9606f147eaf882295a801c1cf385c705d7d61",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.3.1"
+      },
+      {
+        "key": "raw/4.3.2",
+        "bytes": 10000,
+        "sha256": "2af8e43d36665578af5419e3c21af87b1cbb54283c6e73afdb7115baced9231a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.3.2"
+      },
+      {
+        "key": "raw/4.4.0",
+        "bytes": 10000,
+        "sha256": "419658d81bd64ca7872c73a4ed87e0c1fb5b4396ba810e0c11e0a85f63fe292d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.4.0"
+      },
+      {
+        "key": "raw/4.4.1",
+        "bytes": 10000,
+        "sha256": "04e1cae922a167e42ea99f6488a45b2cb2624ed8933987492c8e9783ba0abf79",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.4.1"
+      },
+      {
+        "key": "raw/4.4.2",
+        "bytes": 10000,
+        "sha256": "9f7a8a0ae3704818220d8069958cf45bb8a2c7b44c6c7cccf6ab86fa32b60f81",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.4.2"
+      },
+      {
+        "key": "raw/4.5.0",
+        "bytes": 10000,
+        "sha256": "1dfe12c227be09fcb4d6c37eb2458139212dd49b3e66df8b274f3097628a5186",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.5.0"
+      },
+      {
+        "key": "raw/4.5.1",
+        "bytes": 10000,
+        "sha256": "6520768ac7d27b0ad4a63465d5761a53638de22985845f074f4eaa20bbcc34d5",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.5.1"
+      },
+      {
+        "key": "raw/4.5.2",
+        "bytes": 10000,
+        "sha256": "72ab3581ffe000eebdb3a4d910e97a11e637b10ed0572d2afbd37e3153b22415",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/4.5.2"
+      },
+      {
+        "key": "raw/5.0.0",
+        "bytes": 10000,
+        "sha256": "cbb5471c30de3005fa5fd156f1112c852e125529cad9c5678bafdc7ce49e1d2d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.0.0"
+      },
+      {
+        "key": "raw/5.0.1",
+        "bytes": 10000,
+        "sha256": "c14bf35b4a55480bbcb770d012c53e582b99f9b1b54572db9f8fe7970215ef57",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.0.1"
+      },
+      {
+        "key": "raw/5.0.2",
+        "bytes": 10000,
+        "sha256": "fe7613d9900fea9da08c3e2bcce073897e6ee3029bc42bfdbe4b1fb4a2ffb9b2",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.0.2"
+      },
+      {
+        "key": "raw/5.1.0",
+        "bytes": 10000,
+        "sha256": "e1ff88fa3d68af464aa53c938cc3b7d342ad0e27c5f0d13fc899619e7420da4b",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.1.0"
+      },
+      {
+        "key": "raw/5.1.1",
+        "bytes": 10000,
+        "sha256": "dd751f8d87b2b1ee51a2e19bdf0363fb33cf9882892a4dd3468099cf53e454a7",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.1.1"
+      },
+      {
+        "key": "raw/5.1.2",
+        "bytes": 10000,
+        "sha256": "b622f232cc69cdba57f8f1c0cc62abb83e7ccb1ccbf64f279eb2bab006068db8",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.1.2"
+      },
+      {
+        "key": "raw/5.2.0",
+        "bytes": 10000,
+        "sha256": "19fc3d557a12815a0ee28c5ae96ccfc145cc80250bf52b79c8afe904db61324c",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.2.0"
+      },
+      {
+        "key": "raw/5.2.1",
+        "bytes": 10000,
+        "sha256": "419db9c10532d32abe92f320edaedbda61de015fba0cdd819e3fd970a9b2869d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.2.1"
+      },
+      {
+        "key": "raw/5.2.2",
+        "bytes": 10000,
+        "sha256": "4962c5ef2bb38cd2643484ee0b1985c7afce58000ce28d1f5d2a1723468d20dc",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.2.2"
+      },
+      {
+        "key": "raw/5.3.0",
+        "bytes": 10000,
+        "sha256": "c4653f2fde0fbda23ed4d981ec5c7b3f688c701613c1688d1eefce887aa8adff",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.3.0"
+      },
+      {
+        "key": "raw/5.3.1",
+        "bytes": 10000,
+        "sha256": "271cf33b2206f285612d71e94cab0d8efa51c3e5a0a4074e77683b818018a9d7",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.3.1"
+      },
+      {
+        "key": "raw/5.3.2",
+        "bytes": 10000,
+        "sha256": "52e30252bc10c0cee3d4649b1fd511a26b855b500b8be3dc40cb4724e128acdf",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.3.2"
+      },
+      {
+        "key": "raw/5.4.0",
+        "bytes": 10000,
+        "sha256": "df7e0ac089b4830a26162a4b10a85ed3a7bf5cc3deb1433d637367edf9f89f83",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.4.0"
+      },
+      {
+        "key": "raw/5.4.1",
+        "bytes": 10000,
+        "sha256": "f1c525ac68a387a1ef4771b1c0bbdf788eb36f0cf1795cb3c02e4468c381fcc5",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.4.1"
+      },
+      {
+        "key": "raw/5.4.2",
+        "bytes": 10000,
+        "sha256": "6686813e1d599bf0f1efb11be693f97748de4f7967f53f13d5dca8d7c8148a8e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.4.2"
+      },
+      {
+        "key": "raw/5.5.0",
+        "bytes": 10000,
+        "sha256": "57b0a0e12387ebdd0b1b1e5ee66e5203767c06a88636f253ac03b303e7354513",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.5.0"
+      },
+      {
+        "key": "raw/5.5.1",
+        "bytes": 10000,
+        "sha256": "560691244095db0ec43a160019d338e9e090971669f4c64a1a7b531bf3d85ced",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.5.1"
+      },
+      {
+        "key": "raw/5.5.2",
+        "bytes": 10000,
+        "sha256": "b0b561eb3c439f088ab6e5c8cf6e323256a597315a90cb017de15920c786c64e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/raw/5.5.2"
+      },
+      {
+        "key": "zlib/.zarray",
+        "bytes": 289,
+        "sha256": "f71c713f1489f93a55e7773ebe647df3c42aae77b88bdf296c43cac432d55023",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/.zarray"
+      },
+      {
+        "key": "zlib/0.0.0",
+        "bytes": 7941,
+        "sha256": "cc3bc8ffcdbadb0118b18fee62a9bc4e6e46f50e2b8de5a9cfa894f919aac381",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.0.0"
+      },
+      {
+        "key": "zlib/0.0.1",
+        "bytes": 7534,
+        "sha256": "73257b0d545906d1ac37e89d26a8a094e8cf9a23fe1652767ab3ed14dc86f1d8",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.0.1"
+      },
+      {
+        "key": "zlib/0.0.2",
+        "bytes": 8701,
+        "sha256": "5c507a2c75faa1068debda86bf5ff18faa73ea3679de656b366f40d8e16bbdf3",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.0.2"
+      },
+      {
+        "key": "zlib/0.1.0",
+        "bytes": 7508,
+        "sha256": "be0fe26b271fa1709bb80a1984af646bf9f0025e553ee09567c800ce409c1fe6",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.1.0"
+      },
+      {
+        "key": "zlib/0.1.1",
+        "bytes": 7416,
+        "sha256": "c21e58b70a247b572a3476d42d5e2f4ce2f0d85e3ac879dcddc5d43b1b837a8d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.1.1"
+      },
+      {
+        "key": "zlib/0.1.2",
+        "bytes": 8121,
+        "sha256": "a2d71c6dc62bba5ac0bea45c297b421e443d38155945711cd0e77da554c20b63",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.1.2"
+      },
+      {
+        "key": "zlib/0.2.0",
+        "bytes": 9081,
+        "sha256": "7f7feb4daad40e8b2be6aba6d84c734d50e98ed15c25542fe7d2f68bc8ccb6fd",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.2.0"
+      },
+      {
+        "key": "zlib/0.2.1",
+        "bytes": 9082,
+        "sha256": "28b4bdf0c75497fdd7406918175488077caf3c45b94593b2c7d47da0236ca010",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.2.1"
+      },
+      {
+        "key": "zlib/0.2.2",
+        "bytes": 9235,
+        "sha256": "613d0f7fe3bb170daa676076cc3076bac4e9682c3d12bd20d426b440f3436d7e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.2.2"
+      },
+      {
+        "key": "zlib/0.3.0",
+        "bytes": 6580,
+        "sha256": "ed0d51bc709679073dbeba4442287202ad59d00aa34c977f82f283d253da0481",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.3.0"
+      },
+      {
+        "key": "zlib/0.3.1",
+        "bytes": 6481,
+        "sha256": "d6ab8f007b0fbf7692eb1868f76d4de1d4f872c9890fd1e8d9458624ee9a691c",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.3.1"
+      },
+      {
+        "key": "zlib/0.3.2",
+        "bytes": 7295,
+        "sha256": "b614ea21847766248049a96e4eaf6f0d9bf1a836f414df5c278ccc36447d3b94",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.3.2"
+      },
+      {
+        "key": "zlib/0.4.0",
+        "bytes": 8403,
+        "sha256": "600a874e1dee12b9c4ca6efdd2037f94c8893ef4fdc4cc513d13a17ee9511483",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.4.0"
+      },
+      {
+        "key": "zlib/0.4.1",
+        "bytes": 8355,
+        "sha256": "de9d3dc6ca104b75286e532367e792491beacfb023525c90667466db4159b4c9",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.4.1"
+      },
+      {
+        "key": "zlib/0.4.2",
+        "bytes": 8293,
+        "sha256": "15b38a4667ee443024124af30405426a94f6fc10a8c3d4ba25624907f3403a59",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.4.2"
+      },
+      {
+        "key": "zlib/0.5.0",
+        "bytes": 993,
+        "sha256": "c2156505dadec72d5ab687a0b7925485ea37b905d43194f9ba0c5a14efd05e90",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.5.0"
+      },
+      {
+        "key": "zlib/0.5.1",
+        "bytes": 1018,
+        "sha256": "14b44532a1e75fdaa6dee90d00e85f4a9bb7c57fe6dd1c4519ba30ddca71755a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.5.1"
+      },
+      {
+        "key": "zlib/0.5.2",
+        "bytes": 1108,
+        "sha256": "a70c6e1528694cea21798d722dc169921ef216afeeeb6ca41610e0f46ef2753f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/0.5.2"
+      },
+      {
+        "key": "zlib/1.0.0",
+        "bytes": 8534,
+        "sha256": "0d00a676a4172ed76d25f234f4d9f1b543518ed89b61ce6c62654d9ca529740a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.0.0"
+      },
+      {
+        "key": "zlib/1.0.1",
+        "bytes": 7327,
+        "sha256": "c3f10f22a3578f732f70f9bfb8d5beb8caff3e905b6e4268a7b174f40fa70673",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.0.1"
+      },
+      {
+        "key": "zlib/1.0.2",
+        "bytes": 8459,
+        "sha256": "bd036c13930c6af84f8a593591cea0f535f08edfb700754dfcf47e177a996372",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.0.2"
+      },
+      {
+        "key": "zlib/1.1.0",
+        "bytes": 7897,
+        "sha256": "c838e7a164c564c58c9eff978a2ef4162193b51d00ecdda31819a4f7e2ab2c77",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.1.0"
+      },
+      {
+        "key": "zlib/1.1.1",
+        "bytes": 7721,
+        "sha256": "e7c4eb7dd435cf2f0cfad2beccde3f571220ed5fa8c1103361519cd758b1344b",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.1.1"
+      },
+      {
+        "key": "zlib/1.1.2",
+        "bytes": 8226,
+        "sha256": "985f056f3d0e5b62b5aeb1b8d14b510e61e2de2a0717497cd4548ea02fb3e955",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.1.2"
+      },
+      {
+        "key": "zlib/1.2.0",
+        "bytes": 8629,
+        "sha256": "1f905f814b40977604470e6ab86d73c98c04d2b0af740d3d2e57fb1e7cc2c5d5",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.2.0"
+      },
+      {
+        "key": "zlib/1.2.1",
+        "bytes": 8612,
+        "sha256": "1e59623828bc9371a079c9615f207302b44ed5b5fa607d3a6b972eb2b9eb59b4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.2.1"
+      },
+      {
+        "key": "zlib/1.2.2",
+        "bytes": 8872,
+        "sha256": "eb51a7d79d7f9bf665d098fbb7c8037a2db5c0af7531bddd5266ffdd5f67119c",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.2.2"
+      },
+      {
+        "key": "zlib/1.3.0",
+        "bytes": 6408,
+        "sha256": "391804e564f57eeca2059b82a8a56eaefd19ca4de73439bf4253e54db57e9f01",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.3.0"
+      },
+      {
+        "key": "zlib/1.3.1",
+        "bytes": 6198,
+        "sha256": "258c54e9fe25bd1d96b87c2484ea4776ec16f3c0ae97fe92f72e7e2f2d02cd63",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.3.1"
+      },
+      {
+        "key": "zlib/1.3.2",
+        "bytes": 7148,
+        "sha256": "e2e669c8bc59f16d0a5f2d1d3c7faf375567c4f09b1f21e3375f25a3350fe206",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.3.2"
+      },
+      {
+        "key": "zlib/1.4.0",
+        "bytes": 8624,
+        "sha256": "28043a43c0604b26e533ad10dcb8850f072931a19b68a1a3b58fac8427c16a6e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.4.0"
+      },
+      {
+        "key": "zlib/1.4.1",
+        "bytes": 8346,
+        "sha256": "84e94644ebee727862e0fc0336c22eee8b75cbd41c5e6df528abbf01206412e7",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.4.1"
+      },
+      {
+        "key": "zlib/1.4.2",
+        "bytes": 8148,
+        "sha256": "dd4c39b02f4212f24598a30ad328058801989dd777a3bccf066680a0462833cb",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.4.2"
+      },
+      {
+        "key": "zlib/1.5.0",
+        "bytes": 997,
+        "sha256": "655aa5df43202427e9b40cc8816e5078790dbcc17e2d2e3bf1a347cbc745f526",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.5.0"
+      },
+      {
+        "key": "zlib/1.5.1",
+        "bytes": 984,
+        "sha256": "d929d1901a1ee83ee046ec287a0fdaeffb93b44ba6fbba0ad807e0fb1c0b376a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.5.1"
+      },
+      {
+        "key": "zlib/1.5.2",
+        "bytes": 1017,
+        "sha256": "b087645e5477198e90714e0fa4c1363851050c406c388feb2b533604cdcb0411",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/1.5.2"
+      },
+      {
+        "key": "zlib/2.0.0",
+        "bytes": 8146,
+        "sha256": "ec0bbcf63ad949c0b81354f0db7c20c096c155ccca4bfabc1a449823e146e3c9",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.0.0"
+      },
+      {
+        "key": "zlib/2.0.1",
+        "bytes": 7911,
+        "sha256": "235109772f925e8269f5acc2b17e762babce3c3662c9455c7018a3f3ea585a07",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.0.1"
+      },
+      {
+        "key": "zlib/2.0.2",
+        "bytes": 8679,
+        "sha256": "02a58fb7e4e5eac3a6ae8de1eeff306170076961da91a77f14d5078d17c44949",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.0.2"
+      },
+      {
+        "key": "zlib/2.1.0",
+        "bytes": 9050,
+        "sha256": "e68d035d2cdf661bcd54f86335adceeb1538085a4cdea55730f1d6095ac18721",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.1.0"
+      },
+      {
+        "key": "zlib/2.1.1",
+        "bytes": 9073,
+        "sha256": "596c5bc935c3890d13731657ca5e9fbfa0a1378f4aef88e12f99b1d02fd77647",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.1.1"
+      },
+      {
+        "key": "zlib/2.1.2",
+        "bytes": 8874,
+        "sha256": "5e97852dc3e4a1bd1abc88e95d9ac3020b5fd5b03416a19bdc5df2b0df70864a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.1.2"
+      },
+      {
+        "key": "zlib/2.2.0",
+        "bytes": 8530,
+        "sha256": "627fee8df307da501f8b842b32cd0dac74a6f3ef79e8ef10a2ff9fb794bea975",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.2.0"
+      },
+      {
+        "key": "zlib/2.2.1",
+        "bytes": 7868,
+        "sha256": "9886866ce0ed0e8da682149dcaaa52847ce74ae8880eedfc241eccb198f400f9",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.2.1"
+      },
+      {
+        "key": "zlib/2.2.2",
+        "bytes": 7655,
+        "sha256": "74c4342ce5e44954b98d2c1910174f6aba57528136774e04e164b27c38f65bac",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.2.2"
+      },
+      {
+        "key": "zlib/2.3.0",
+        "bytes": 8026,
+        "sha256": "d36a31a72a9b160bccd01815c0fbfe80c438cb418880dfc3ecb6d42e05e6e67f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.3.0"
+      },
+      {
+        "key": "zlib/2.3.1",
+        "bytes": 8317,
+        "sha256": "8e6a3447d968acad0a5d28fef66bb465964f8cb22cf3a9930a43e49556c10262",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.3.1"
+      },
+      {
+        "key": "zlib/2.3.2",
+        "bytes": 8928,
+        "sha256": "53e4b66c5f26ed436c4887ed8452f2423d15b2e1e47e8ada8a78ae72ef5b3ead",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.3.2"
+      },
+      {
+        "key": "zlib/2.4.0",
+        "bytes": 7537,
+        "sha256": "e3a7f7c9b48082fddb8a4d6cac0b5e280c9cc9d254ac7df67f31dca65620e11e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.4.0"
+      },
+      {
+        "key": "zlib/2.4.1",
+        "bytes": 7320,
+        "sha256": "c034fbf2b81c6b63d992457bcdf51a8711003450ff4ca8ccdbda7a2ec346f04f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.4.1"
+      },
+      {
+        "key": "zlib/2.4.2",
+        "bytes": 7610,
+        "sha256": "ca284e7c3c2e7d17bc26d313ebc0730cbcafe9547cd24d6c66fcfc065a8e094a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.4.2"
+      },
+      {
+        "key": "zlib/2.5.0",
+        "bytes": 855,
+        "sha256": "aa9420bb92e2370026b3f26e7dbdb4f25a5c7a86267bb7d2abba4b43b1ef8944",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.5.0"
+      },
+      {
+        "key": "zlib/2.5.1",
+        "bytes": 837,
+        "sha256": "0279ec93f6ef135ecd2354a5273fdbadcb138906067bdd0b0bf3acca903f5a83",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.5.1"
+      },
+      {
+        "key": "zlib/2.5.2",
+        "bytes": 858,
+        "sha256": "ab0d714316be1437734bea7dc9adf6c30c81a772ebe81e7dd069e0f94c07eefc",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/2.5.2"
+      },
+      {
+        "key": "zlib/3.0.0",
+        "bytes": 7477,
+        "sha256": "b9f662f690c3538f1b2a8ebf35899f2f6ea2fad4675f1cb78fa1c38c75f102f7",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.0.0"
+      },
+      {
+        "key": "zlib/3.0.1",
+        "bytes": 8644,
+        "sha256": "c5d55905fcd5aa7800946a27912af38adfdad9266cff48a3756a2457ccd59479",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.0.1"
+      },
+      {
+        "key": "zlib/3.0.2",
+        "bytes": 9113,
+        "sha256": "d4b9320f115245a9608493bb6f58cdd46aafe015d2f48d98c9fa44f0241351d6",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.0.2"
+      },
+      {
+        "key": "zlib/3.1.0",
+        "bytes": 8064,
+        "sha256": "78784c4a00c0b789a5ee6e9c2c388f6d0aaa5e9f585f60ae97f9b0528335902f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.1.0"
+      },
+      {
+        "key": "zlib/3.1.1",
+        "bytes": 8910,
+        "sha256": "ab6acd8f160a8513e3a1450de40b55f95e49f91b22c991ce641177dd69e42eb4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.1.1"
+      },
+      {
+        "key": "zlib/3.1.2",
+        "bytes": 9227,
+        "sha256": "60554c4d0ae13de85674d014818d64d6da6c708836e1c56db0923e1b858b1320",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.1.2"
+      },
+      {
+        "key": "zlib/3.2.0",
+        "bytes": 8967,
+        "sha256": "77c886c28fe6026296adac13f7587597adcffa1ce43a257ecda5c0a4d075ccdf",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.2.0"
+      },
+      {
+        "key": "zlib/3.2.1",
+        "bytes": 9203,
+        "sha256": "48d9bef3349cdcff7058ef96435d40abd31e173e2e7ad0f96136d27990d00e4f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.2.1"
+      },
+      {
+        "key": "zlib/3.2.2",
+        "bytes": 9303,
+        "sha256": "c3fbf8154d55c001883307867138c7edce57295eccf9ff68d1de2a3f43336313",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.2.2"
+      },
+      {
+        "key": "zlib/3.3.0",
+        "bytes": 7052,
+        "sha256": "ebe856d176bb894c1edfbd5f22c228578aaf33f94829e62fa1963ed2a1da262b",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.3.0"
+      },
+      {
+        "key": "zlib/3.3.1",
+        "bytes": 6794,
+        "sha256": "818df2e387cd7175147c4134b825c649deace89ef65b225bc98f7a234eb03a3d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.3.1"
+      },
+      {
+        "key": "zlib/3.3.2",
+        "bytes": 6613,
+        "sha256": "a959351f8f8a0e0c15319b5bb614abe50505135a39c26d7650576f21f00161f4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.3.2"
+      },
+      {
+        "key": "zlib/3.4.0",
+        "bytes": 2954,
+        "sha256": "85f4eb7eb1ac814cc167447c847df8b3f0f201586c1381fad25f235d4fea90f0",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.4.0"
+      },
+      {
+        "key": "zlib/3.4.1",
+        "bytes": 2925,
+        "sha256": "cdbe5856e2021ee4aa01dae7551efbe3989724b4e27598124e2555ab2573f841",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.4.1"
+      },
+      {
+        "key": "zlib/3.4.2",
+        "bytes": 2890,
+        "sha256": "796e5a8e345524602f271f4d8de9d23c8aa3c2fc3c9047f74d14a04262a8d17f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.4.2"
+      },
+      {
+        "key": "zlib/3.5.0",
+        "bytes": 74,
+        "sha256": "7f143955393e0bb92f27575c9b1422aa0808969b6984d79fba38d8cafb656074",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.5.0"
+      },
+      {
+        "key": "zlib/3.5.1",
+        "bytes": 74,
+        "sha256": "7f143955393e0bb92f27575c9b1422aa0808969b6984d79fba38d8cafb656074",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.5.1"
+      },
+      {
+        "key": "zlib/3.5.2",
+        "bytes": 74,
+        "sha256": "7f143955393e0bb92f27575c9b1422aa0808969b6984d79fba38d8cafb656074",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/3.5.2"
+      },
+      {
+        "key": "zlib/4.0.0",
+        "bytes": 8426,
+        "sha256": "0f8d1c5ba1ccee773a069a0e442e16c1de71d01a94234f9ea6c98fd9d193e2f4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.0.0"
+      },
+      {
+        "key": "zlib/4.0.1",
+        "bytes": 8101,
+        "sha256": "1edf14620066091af785d78da9d73d47b6529666f253749f28026f43441ae4ba",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.0.1"
+      },
+      {
+        "key": "zlib/4.0.2",
+        "bytes": 8061,
+        "sha256": "29d933b6131e3b23f743f52f1acdc36820eb3cfea934437095bd520b53870712",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.0.2"
+      },
+      {
+        "key": "zlib/4.1.0",
+        "bytes": 8753,
+        "sha256": "a81912942643f3728b470693e5685b672012553e04e487c666529897a06d6969",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.1.0"
+      },
+      {
+        "key": "zlib/4.1.1",
+        "bytes": 8929,
+        "sha256": "d45264274fef2a8b89d3768b94663e34f67f48624770ff55c8013a6dc481a19e",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.1.1"
+      },
+      {
+        "key": "zlib/4.1.2",
+        "bytes": 9013,
+        "sha256": "a471200427e758284afa7f7b8d37fc58af863a4fde780553f7b8593752f519e8",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.1.2"
+      },
+      {
+        "key": "zlib/4.2.0",
+        "bytes": 9335,
+        "sha256": "0b3d5b379aa0a9b0dc212c0139c4c8aec1865bdcf167fd2df0c6be8cbe505b80",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.2.0"
+      },
+      {
+        "key": "zlib/4.2.1",
+        "bytes": 9105,
+        "sha256": "d6444d1ccd2ff4bb26f44476f44f53488186b8f30b03f95da3519e9e7785e4e4",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.2.1"
+      },
+      {
+        "key": "zlib/4.2.2",
+        "bytes": 8756,
+        "sha256": "081fbca76ad8b6586ca4f26fa63296a61e8d69678a04fc293bf11eccc69ebfa7",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.2.2"
+      },
+      {
+        "key": "zlib/4.3.0",
+        "bytes": 2208,
+        "sha256": "6a8981afa19e7542524820a8c1565985bbbfe9db69cc068ddf27e7e96a29ddc5",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.3.0"
+      },
+      {
+        "key": "zlib/4.3.1",
+        "bytes": 1916,
+        "sha256": "6ccb8935de942bed99733232332406c1c5de70b2443230a265755c76d8659cbe",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.3.1"
+      },
+      {
+        "key": "zlib/4.3.2",
+        "bytes": 1890,
+        "sha256": "526aa9edd0f874bc2189c4c648eac1612a030a1d11156358edfc8017cac59544",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.3.2"
+      },
+      {
+        "key": "zlib/4.4.0",
+        "bytes": 6815,
+        "sha256": "19ab312e55afca2a280ed52cd201ceddeb13225583ae9f000c19209502ea5e2f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.4.0"
+      },
+      {
+        "key": "zlib/4.4.1",
+        "bytes": 6671,
+        "sha256": "caa8f1407463839b81048dd3cfca80bb04b6aa8b3924d64c72ded009baa9f53a",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.4.1"
+      },
+      {
+        "key": "zlib/4.4.2",
+        "bytes": 6586,
+        "sha256": "c97ee7bd23e6954b6567f4c87900e3347805694cf04d9c0f5f48e3c5de0a8858",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.4.2"
+      },
+      {
+        "key": "zlib/4.5.0",
+        "bytes": 559,
+        "sha256": "b5f07c6c027da2c2f56e59ce9004a1895812ce1851aa60c39c79474ab5931029",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.5.0"
+      },
+      {
+        "key": "zlib/4.5.1",
+        "bytes": 549,
+        "sha256": "ba44a73e60603e27911f61c25d5393bb075485f03e98306d22a2c860dc8d0d98",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.5.1"
+      },
+      {
+        "key": "zlib/4.5.2",
+        "bytes": 548,
+        "sha256": "43c992b8bc71955007412e9fcbb180ab22c33dd67928c4bb23546b69e5d36afe",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/4.5.2"
+      },
+      {
+        "key": "zlib/5.0.0",
+        "bytes": 1235,
+        "sha256": "15de80383deef0c1c96820ccebfcaf4efe2539a8e425659ad2a8bb1362f004d6",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.0.0"
+      },
+      {
+        "key": "zlib/5.0.1",
+        "bytes": 1197,
+        "sha256": "7d854e2ffa73fd4dbbea878f4a3a5c946f6d3373ac2da90eea0ffa88bfead05b",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.0.1"
+      },
+      {
+        "key": "zlib/5.0.2",
+        "bytes": 1151,
+        "sha256": "022b9071b1b8aed586e829f893208b9370fba492e084ae84e7461ed084ff0e2d",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.0.2"
+      },
+      {
+        "key": "zlib/5.1.0",
+        "bytes": 1285,
+        "sha256": "242b79cdf30c407b90892aae856449a942d4de878b584890e2256630cc6dda43",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.1.0"
+      },
+      {
+        "key": "zlib/5.1.1",
+        "bytes": 1172,
+        "sha256": "f56ebf2ef5b7b1df9b11f4038d56bbab073e3ab4479f7b6b8345e5d0585d62b9",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.1.1"
+      },
+      {
+        "key": "zlib/5.1.2",
+        "bytes": 1237,
+        "sha256": "9b8eeb0584faa2bce36b38953342273fb44efd457c95dc30d28afcdcc34dddfa",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.1.2"
+      },
+      {
+        "key": "zlib/5.2.0",
+        "bytes": 1246,
+        "sha256": "ccb9f89a779878896c645679dd721657bf14508f22cee4271445e45c6fc9186f",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.2.0"
+      },
+      {
+        "key": "zlib/5.2.1",
+        "bytes": 1201,
+        "sha256": "3b6f10c30daa66589cacce6f7424a05ce86afd644d0832a40e391a1261bcb8e7",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.2.1"
+      },
+      {
+        "key": "zlib/5.2.2",
+        "bytes": 1142,
+        "sha256": "32a12379abfd27e3fe1d108f6b9f888432260b1862405ac1edf8c9d79f1c5b10",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.2.2"
+      },
+      {
+        "key": "zlib/5.3.0",
+        "bytes": 136,
+        "sha256": "b0ad5cae9fa508ce1373dd720e9886c986489c14bd2654856b29105ed1b1aed3",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.3.0"
+      },
+      {
+        "key": "zlib/5.3.1",
+        "bytes": 104,
+        "sha256": "ea970bb638e8ddcf8ec0c51fb4a545962895596d37bdcbe2f5a253ee869a0067",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.3.1"
+      },
+      {
+        "key": "zlib/5.3.2",
+        "bytes": 119,
+        "sha256": "b0529fd7b01c3e2da36fa5657b629a2e6538cedda46dd31062fa5396f94533ec",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.3.2"
+      },
+      {
+        "key": "zlib/5.4.0",
+        "bytes": 357,
+        "sha256": "78bbdef0b2a7ce5871e6ca3f3b298d5b00450a130bcafcf1e78f27432d6dc3ed",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.4.0"
+      },
+      {
+        "key": "zlib/5.4.1",
+        "bytes": 356,
+        "sha256": "4b6504660c5e89c6f313c5d3af8cf2c2e0b357d93edc0199bd85740e78052f36",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.4.1"
+      },
+      {
+        "key": "zlib/5.4.2",
+        "bytes": 355,
+        "sha256": "911248e572f499070aab603b56cf88d1a75cefd5be092ae9dac1313e059ef809",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.4.2"
+      },
+      {
+        "key": "zlib/5.5.0",
+        "bytes": 238,
+        "sha256": "311b5391a8d4ca2e9381dd91a7433fde2da4ad8e3b98d3417779ed861d62ce73",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.5.0"
+      },
+      {
+        "key": "zlib/5.5.1",
+        "bytes": 236,
+        "sha256": "b60e8f31ac764fdc649a374d396b6c6904d5cb3e95da1dbf76be757d3c705142",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.5.1"
+      },
+      {
+        "key": "zlib/5.5.2",
+        "bytes": 238,
+        "sha256": "29774ca5c60273534f60627b2e2d5b27b595e9a757d8f6de65a8fbdf0cbce873",
+        "url": "https://raw.githubusercontent.com/zarr-developers/zarr_implementations/185c4f93e114eb91dfea4e21be45a86eadca59f2/examples/zarr.zr/zlib/5.5.2"
+      }
+    ]
+  }
+]

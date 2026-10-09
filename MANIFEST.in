@@ -1,0 +1,7 @@
+# Include the complete test package in source releases, including future fixtures.
+graft test
+include .coveragerc
+include CONTRIBUTING.md CHANGELOG.md
+include dev/validate_distribution.py
+recursive-include tools/ole-compactor Cargo.toml Cargo.lock LICENSE *.rs *.md
+global-exclude *.py[cod] .DS_Store

@@ -46,7 +46,10 @@ See [Formats](/formats/) for the walk order and extension lists.
 
 Rewrites go to a temp file, are verified, then `os.replace`d onto the original.
 Use `--dryrun` to measure savings without writing. `--output-dir` writes results
-elsewhere. `--backup` / `--backup-dir` copy the source first.
+elsewhere and preserves the source, publishing an unchanged copy when no
+improvement is accepted. Existing different destinations require `--overwrite`.
+`--backup` copies the source first; `--backup-dir` selects that backup directory
+and must be used with `--backup`. Required backup failure stops processing.
 
 ## Progress and machine-readable output
 

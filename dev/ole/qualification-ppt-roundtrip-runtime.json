@@ -1,0 +1,592 @@
+{
+  "date": "2026-10-08",
+  "scope": "Local macOS Python 3.13/native/LibreOffice qualification",
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "native_sha256": "5f682b0bfae895b7c83445933e01beb48c7e67537a9739647a3f29a9b5112d3d",
+  "files": [
+    {
+      "file": "temp/_raw/Apps4Russia_proposal_all.ppt",
+      "source_sha256": "971add29b0d952bf8873afb5c33cab50ad6c1ee47497cd31d67cb3e510fdb13a",
+      "candidate_sha256": "c633b3ef87a05e2bde3b5d2f4c1e79e05c4e837306fe266fb7a990d385429362",
+      "source_bytes": 2694144,
+      "candidate_bytes": 2082816,
+      "whole_file_saved_bytes": 611328,
+      "unchanged_notes_and_storage_spans": 2,
+      "equal_content_contract": true,
+      "unaffected_streams_identical": true,
+      "worker": {
+        "verify": "officeart",
+        "details": {
+          "strategy": "ole-officeart-recompression",
+          "compaction_bytes": 2688512,
+          "additional_savings_bytes": 605696,
+          "officeart": {
+            "officeart_host": "ppt",
+            "metafile_count": 0,
+            "metafile_types": [],
+            "encoders": [],
+            "raster_count": 13,
+            "raster_encoders": [
+              "png-zopfli15",
+              "png-oxipng10.2.0",
+              "png-oxipng10.2.0",
+              "png-oxipng10.2.0",
+              "png-oxipng10.2.0",
+              "png-oxipng10.2.0",
+              "png-oxipng10.2.0",
+              "png-oxipng10.2.0",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-oxipng10.2.0",
+              "png-oxipng10.2.0"
+            ],
+            "raster_skips": [
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+              "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT bounded PNG profile retains JPEG bytes"
+            ],
+            "recompressed_rasters": 13,
+            "ole_effort_version": 1,
+            "ole_effort": "default",
+            "zopfli_version": "0.4.3",
+            "effort_note": "qualified Zopfli trials available",
+            "recompressed_metafiles": 0,
+            "decoded_metafile_bytes": 0,
+            "stream_savings_bytes": 600990
+          },
+          "officeart_candidate_bytes": 2082816,
+          "officeart_host": "ppt",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 13,
+          "raster_encoders": [
+            "png-zopfli15",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-oxipng10.2.0",
+            "png-oxipng10.2.0"
+          ],
+          "raster_skips": [
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+            "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT bounded PNG profile retains JPEG bytes"
+          ],
+          "recompressed_rasters": 13,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 600990
+        },
+        "verified_content": {
+          "source_sha256": "971add29b0d952bf8873afb5c33cab50ad6c1ee47497cd31d67cb3e510fdb13a",
+          "candidate_sha256": "c633b3ef87a05e2bde3b5d2f4c1e79e05c4e837306fe266fb7a990d385429362"
+        },
+        "ok": true,
+        "evidence": [
+          {
+            "type": "tool",
+            "executable": "/Users/ibegtin/.cargo/bin/filerepack-ole",
+            "key": "ole_compactor",
+            "version": null,
+            "count": 37
+          },
+          {
+            "type": "tool",
+            "executable": "/opt/homebrew/bin/oxipng",
+            "key": "oxipng",
+            "version": null,
+            "count": 13
+          },
+          {
+            "type": "library",
+            "name": "zopfli",
+            "version": "0.4.3",
+            "count": 1
+          },
+          {
+            "type": "library",
+            "name": "olefile",
+            "version": "0.47",
+            "count": 1
+          }
+        ],
+        "usage": {
+          "decoded": 36072908,
+          "written": 63133948,
+          "nodes": 4489,
+          "peak_worker_rss_bytes": 85032960,
+          "seconds": 21.465657374999864
+        }
+      },
+      "logical_stream_sha256": {
+        "Pictures": "f9de1ab0699fd28bab2410898c35b92d44aca23eb4049a937d28c57152e0e020",
+        "Current User": "30dec8fc280af1923f5d31b7f190f153f89c20ee2dc6ff2346de5c2b364007aa",
+        "\u0005SummaryInformation": "c09d0047e6ae4b88542ba4bf21e9d073b2f3e035c8b7550d6194c6ced454763a",
+        "PowerPoint Document": "28addc2107880713a20eed4ff9119018208842d564cbb9d30c23e40f56c9adbd",
+        "\u0005DocumentSummaryInformation": "c6f912e96ea898981e3d9d86cc10e517fe932d2038d4fa7fd0ab9a7b3fcbd398"
+      },
+      "slides_render": {
+        "equal_rgb_pages": true,
+        "pages": [
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "f0a099b3595dd0cbd849df409a0669be7dda97131e2d9591a8380c6466eecedf"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "9d5b83ecf6e9a39624f207dc0d21d38ddfe400344b1f891562022ce392ae3ff9"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "4f652a0ac3dc48951fcab3234c41ff9258b822474cc5abede06074f1b72794f9"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "bce7d655dc38120b80053d555afe0caaef9257dd3c30f3c6e485e0b455eca273"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "197a216a587545868496df839005caeb276d84fd0d6ebea1664e2f0ac4bfdba2"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "6d0dd20e21f91d868880dcbab83023a5c2b538e7caf0601de74e880ca440a855"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "b0f97386ed2654b25d3d236f2b661dc41b5382378cc371e893ded402c7d9006e"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "422f789577eedd37b890f8d37e4c6b373f9be46938a5fa746a5befcf2c2a1eb8"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "ce37189efb1c8f45b3c5aadf8b4b5f712713f996aa7854c2af4bc6daa9d8fd7f"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "f22617a3d0cff89ffded599c2517a4e8cc5c77efc1fdf49109f4ff727a0d8b28"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "377fbd86695611d30b3a3a9c7a2f6621bfa017778fcbb3edc0264770b7506377"
+          }
+        ]
+      },
+      "notes_render": {
+        "equal_rgb_pages": true,
+        "pages": [
+          {
+            "size": [
+              535,
+              783
+            ],
+            "sha256": "08b63b72f6db3164f240c357e6c71d55f86903a47c47b7ecbbc52740d9c78f20"
+          },
+          {
+            "size": [
+              535,
+              783
+            ],
+            "sha256": "bb705632f8100d26c5aed272a3b546879d67eb0c2426a0735fb340cf683d6c04"
+          },
+          {
+            "size": [
+              535,
+              783
+            ],
+            "sha256": "29b759c07142688e3ad73edec986701b917ac368532bc2c9919ac9532aadbf01"
+          },
+          {
+            "size": [
+              535,
+              783
+            ],
+            "sha256": "d6ab2a9f1fe5b0587ee900f93494937b91169278f9d75b696e65abaff3493f26"
+          },
+          {
+            "size": [
+              535,
+              783
+            ],
+            "sha256": "1d88b417a192ddb9039c6db1b0430456fdcfe94a34cc605e120c424894f0e09c"
+          },
+          {
+            "size": [
+              535,
+              783
+            ],
+            "sha256": "451acb328c1b3965ab8edce0e0096481ae38571a2bb1467c157f2fa35ac8c4d5"
+          },
+          {
+            "size": [
+              535,
+              783
+            ],
+            "sha256": "5ebe3782ca90cb72cba0faba5b80da15a0f1375b67f896d12c518eda9b9883c2"
+          },
+          {
+            "size": [
+              535,
+              783
+            ],
+            "sha256": "72a554acef5d0f2d394b52a9fa6706e127a165d8d7a65693d8388289537d43ab"
+          },
+          {
+            "size": [
+              535,
+              783
+            ],
+            "sha256": "f61378f54ff026ac3c22490cbc991b0e7f9f96063ceb2362058b0278954052b4"
+          },
+          {
+            "size": [
+              535,
+              783
+            ],
+            "sha256": "135349796136ebbb8e050f16a0514c4efc7fdf0dfd1575943f5ffc0f0bac2e2b"
+          },
+          {
+            "size": [
+              535,
+              783
+            ],
+            "sha256": "d5b7fe5b98f7b7f0f8d1e32d94a1c4887bf9d425a2bb10b0ceb4e8bce0154c3c"
+          }
+        ]
+      },
+      "legacy_master_normative_render_equal": true,
+      "source_unchanged": true
+    }
+  ],
+  "public_api": {
+    "output": "/Users/ibegtin/workspace/ivbeg/filerepack/outputs/apps4russia-roundtrip/Apps4Russia_proposal_all.ppt",
+    "source_sha256": "971add29b0d952bf8873afb5c33cab50ad6c1ee47497cd31d67cb3e510fdb13a",
+    "candidate_sha256": "c633b3ef87a05e2bde3b5d2f4c1e79e05c4e837306fe266fb7a990d385429362",
+    "source_bytes": 2694144,
+    "candidate_bytes": 2082816,
+    "source_unchanged": true,
+    "complete_original_output_content_equal": true,
+    "byte_copy_used": true,
+    "copy_mode": "0o644",
+    "details": {
+      "strategy": "ole-officeart-recompression",
+      "compaction_bytes": 2688512,
+      "additional_savings_bytes": 605696,
+      "officeart": {
+        "officeart_host": "ppt",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 13,
+        "raster_encoders": [
+          "png-zopfli15",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-zopfli15",
+          "png-zopfli15",
+          "png-zopfli15",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0"
+        ],
+        "raster_skips": [
+          "PPT bounded PNG profile retains JPEG bytes",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+          "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "PPT bounded PNG profile retains JPEG bytes",
+          "PPT bounded PNG profile retains JPEG bytes"
+        ],
+        "recompressed_rasters": 13,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 600990
+      },
+      "officeart_candidate_bytes": 2082816,
+      "officeart_host": "ppt",
+      "metafile_count": 0,
+      "metafile_types": [],
+      "encoders": [],
+      "raster_count": 13,
+      "raster_encoders": [
+        "png-zopfli15",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-zopfli15",
+        "png-zopfli15",
+        "png-zopfli15",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0"
+      ],
+      "raster_skips": [
+        "PPT bounded PNG profile retains JPEG bytes",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+        "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "PPT bounded PNG profile retains JPEG bytes",
+        "PPT bounded PNG profile retains JPEG bytes"
+      ],
+      "recompressed_rasters": 13,
+      "ole_effort_version": 1,
+      "ole_effort": "default",
+      "zopfli_version": "0.4.3",
+      "effort_note": "qualified Zopfli trials available",
+      "recompressed_metafiles": 0,
+      "decoded_metafile_bytes": 0,
+      "stream_savings_bytes": 600990,
+      "worker_usage": {
+        "decoded": 36072908,
+        "written": 63133948,
+        "nodes": 4489,
+        "peak_worker_rss_bytes": 84869120,
+        "seconds": 20.37980033299982
+      },
+      "evidence": [
+        {
+          "type": "tool",
+          "executable": "/Users/ibegtin/.cargo/bin/filerepack-ole",
+          "key": "ole_compactor",
+          "version": null,
+          "count": 37
+        },
+        {
+          "type": "tool",
+          "executable": "/opt/homebrew/bin/oxipng",
+          "key": "oxipng",
+          "version": null,
+          "count": 13
+        },
+        {
+          "type": "library",
+          "name": "zopfli",
+          "version": "0.4.3",
+          "count": 1
+        },
+        {
+          "type": "library",
+          "name": "olefile",
+          "version": "0.47",
+          "count": 1
+        },
+        {
+          "type": "worker",
+          "kind": "ppt-ole",
+          "action": "rewrite",
+          "valid": true,
+          "reason": "",
+          "count": 1
+        },
+        {
+          "type": "validation",
+          "kind": "officeart",
+          "stage": "structure",
+          "valid": true,
+          "reason": "",
+          "count": 1
+        },
+        {
+          "type": "validation",
+          "kind": "officeart",
+          "stage": "preservation",
+          "valid": true,
+          "reason": "",
+          "count": 1
+        }
+      ],
+      "profile": null,
+      "profile_version": null,
+      "effective_options": {
+        "debug": false,
+        "pack_images": true,
+        "repack_archive": true,
+        "pack_archives": true,
+        "deep_walking": true,
+        "log": false,
+        "quiet": false,
+        "ultra": false,
+        "dryrun": false,
+        "keep_if_larger": true,
+        "lossy": false,
+        "convert_container": true,
+        "min_savings": null,
+        "compression_level": 9,
+        "pdf_profile": null,
+        "jpeg_quality": null,
+        "keep_meta": false,
+        "overwrite": false,
+        "backup": false,
+        "backup_dir": null,
+        "profile": null,
+        "profile_version": null,
+        "tool_threads": 1,
+        "png_quality": null,
+        "wmv_lossless": false,
+        "video_mode": null,
+        "max_extract_bytes": null,
+        "max_extract_ratio": null,
+        "durability": "atomic",
+        "pdf_linearize": false,
+        "ole_recompress": true,
+        "ole_embedded_recompress": false,
+        "ole_deduplicate_images": false,
+        "r_compression": "preserve",
+        "checkpoint_compatibility": "preserve-mmap",
+        "zarr_codec_policy": "preserve",
+        "experimental_formats": false,
+        "sqlite_offline": false,
+        "exclude_members": [],
+        "allow_categories": null,
+        "skip_categories": [],
+        "max_depth": null,
+        "format_max_decoded_bytes": 536870912,
+        "format_max_memory_bytes": 268435456,
+        "format_max_scratch_bytes": 2147483648,
+        "format_max_nodes": 100000,
+        "format_max_depth": 16,
+        "format_timeout": 120.0
+      },
+      "resources": {
+        "decoded_bytes": 36072908,
+        "scratch_written_bytes": 63133948,
+        "peak_live_scratch_bytes": 2694144
+      }
+    },
+    "original_metadata_publication": {
+      "status": "refused",
+      "reason": "Protected com.apple.provenance assigned to the newly created macOS publication stage cannot be removed",
+      "source_mode": "0700",
+      "source_attribute_keys": [],
+      "guard_unchanged": true,
+      "historical_pre_fix_result": true
+    }
+  },
+  "metadata_publication_followup": {
+    "status": "published",
+    "date": "2026-10-08",
+    "report": "qualification-ppt-macos-publication.json",
+    "public_output": "outputs/apps4russia-roundtrip-preserved/Apps4Russia_proposal_all.ppt",
+    "mode": "0700",
+    "source_generation_and_metadata_unchanged": true,
+    "all_source_attribute_values_retained": true,
+    "native_creation_time_provenance_retained_when_absent_from_source": true
+  }
+}

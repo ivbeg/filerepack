@@ -1,0 +1,181 @@
+{
+  "repository": "https://github.com/apache/poi",
+  "commit": "12c3688d130035f3dc2ca2a0f50d929456435a93",
+  "files": [
+    {
+      "name": "simple.doc",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/document/simple.doc",
+      "sha256": "4876e828e62d490fa188c7c4e47013e2e0dfdf02f5903dfd374bc0d2b2049ca1",
+      "bytes": 19456,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "pictures_escher.doc",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/document/pictures_escher.doc",
+      "sha256": "84a68678fc525e763beabab7e79240e2bbf4cd6b7766eed3364681d38fed2457",
+      "bytes": 120320,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "PasswordProtected.doc",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/document/PasswordProtected.doc",
+      "sha256": "863d2216a6f5bb4cec0ea4131a05ae0822dbce347e2940155ef638c6d64935fe",
+      "bytes": 19968,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "SimpleMacro.doc",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/document/SimpleMacro.doc",
+      "sha256": "39e9608c711d38f298ed20a5bfae12fcdaed6f4be2be4d26db670475216ca393",
+      "bytes": 36864,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "Simple.xls",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/Simple.xls",
+      "sha256": "2b5ec8298bacffdca61c50f6f7607da0a4e63cf76fa011c62f203e6a66bc072a",
+      "bytes": 13824,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "SampleSS.xls",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/SampleSS.xls",
+      "sha256": "53c9bd7337aa79fedf29cef8d81ec47fff39f80e25da9d74bc354cfdf1c43b73",
+      "bytes": 17408,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "password.xls",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/password.xls",
+      "sha256": "3ad12a829132d9c157d213c623af9c534b1449c42e93ab39b17ca53c909ac412",
+      "bytes": 22528,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "SampleShow.ppt",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/slideshow/SampleShow.ppt",
+      "sha256": "64275a6685b8f267827178037dcc59de927475e56385725916f4c6039c7ce7f6",
+      "bytes": 125440,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "SimpleMacro.ppt",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/slideshow/SimpleMacro.ppt",
+      "sha256": "c6755e4c536356082d09ae59185f527e7f8c835b4d99216696d041a024881bba",
+      "bytes": 104960,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "Password_Protected-hello.ppt",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/slideshow/Password_Protected-hello.ppt",
+      "sha256": "8d0dd9f53317a720687cf5234af0c021fab665194b09b9bb56a3f71b495bf45a",
+      "bytes": 10752,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "PngPicture.doc",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/document/PngPicture.doc",
+      "sha256": "259aa01f88c17bb4ad364d08ce62424959f51717b37d8a5578e3045f9eaede6b",
+      "bytes": 14336,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "word_with_embeded.doc",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/document/word_with_embeded.doc",
+      "sha256": "206acf1f7eb7b7d7d2075e04015d005ae9bb56f025560f2583ad3878257bc4c7",
+      "bytes": 117248,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "SimpleWithFormula.xls",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/SimpleWithFormula.xls",
+      "sha256": "73a99975b9ad250669bd49ffe2223ed50df8324775acfbc612740d38827913c9",
+      "bytes": 13824,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "WithChart.xls",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/WithChart.xls",
+      "sha256": "e72315361da2e7a59d50ad5f8b92dd7464004661014b2ab9b462c2c6a48b70f1",
+      "bytes": 20992,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "external_name.xls",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/external_name.xls",
+      "sha256": "571ad20771957c4f6af4b24daf7e1001782d035822879f8cd3e756948073340b",
+      "bytes": 173568,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "WithEmbeddedObjects.xls",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/WithEmbeddedObjects.xls",
+      "sha256": "da5ba0f448eaca147b23dd18f4020398555242b348b7ae0d917ed53240877aa7",
+      "bytes": 179712,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "pictures.ppt",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/slideshow/pictures.ppt",
+      "sha256": "5318e8486f47c7d9e838eaa4edfe385ba27d7d0ce145364792df53488430e98c",
+      "bytes": 75776,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "ole2-embedding-2003.ppt",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/slideshow/ole2-embedding-2003.ppt",
+      "sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+      "bytes": 40448,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "HeaderWithMacros.doc",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/document/HeaderWithMacros.doc",
+      "sha256": "98b991a18dddaebeda8a3efd0951abeb2a4ce4b6065ed6a2f1c7aa13dbb526f8",
+      "bytes": 22528,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "SimpleMacro.xls",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/SimpleMacro.xls",
+      "sha256": "0e92c9bb018abd8a5f9121d65827c9e3bd280777219cb77a2efd70635143c00a",
+      "bytes": 30720,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "SquareMacro.xls",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/SquareMacro.xls",
+      "sha256": "3fe72d16a8ffb870e47a5a6724329516661f5d7c1f6d98ee8e3bda20e2edd4a9",
+      "bytes": 25600,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "ppt_with_embeded.ppt",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/slideshow/ppt_with_embeded.ppt",
+      "sha256": "afa1dd5adc36765e6e40725a133b0330e5ad1febd1506ca93ceae8c5c5400b53",
+      "bytes": 180736,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "testPPT_oleWorkbook.ppt",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/slideshow/testPPT_oleWorkbook.ppt",
+      "sha256": "b5c19872ad7b0417c4c601f97bc0f8ee855fd7bbe9c196ab9dbad8316a71f44c",
+      "bytes": 98304,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "vector_image.doc",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/document/vector_image.doc",
+      "sha256": "747eb4c44a9ff7ac646f267fad6d4006b596a8beaec211fe27cb67f018800850",
+      "bytes": 24064,
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "SimpleWithImages.xls",
+      "source": "https://raw.githubusercontent.com/apache/poi/12c3688d130035f3dc2ca2a0f50d929456435a93/test-data/spreadsheet/SimpleWithImages.xls",
+      "sha256": "dd35970bf68df7bb609b681634602ead30001816009c791012d00b5563ab9314",
+      "bytes": 48128,
+      "license": "Apache-2.0"
+    }
+  ]
+}

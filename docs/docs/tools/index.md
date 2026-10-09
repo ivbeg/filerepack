@@ -31,17 +31,18 @@ the printed commands.
 |------|---------|
 | `7zz` or `7z` | ZIP, 7z, OOXML, nested archives |
 | `zip` | Preferred rewrite for OOXML (docx/xlsx/pptx, …) |
+| `filerepack-ole` | Qualified DOC/XLS/PPT/MSG/VSD/PUB/MPP/MSI/HWP CFB compaction; requires `filerepack[ole]` and independent preservation checks |
 | `jpegoptim` | JPEG (lossless strip, or `-m` with `--jpeg-quality`) |
 | `jpegtran` | lossless JPEG (`-optimize -progressive`; mozjpeg or libjpeg-turbo). `--keep-meta` uses `-copy all` |
 | `oxipng` / `optipng` | lossless PNG |
 | `zopflipng` | extra lossless PNG pass when `--ultra` is set |
 | `pngquant` | lossy PNG (`--png-quality` / `--lossy`) |
-| `qpdf` | lossless PDF (default) |
+| `qpdf` | PDF structure/protection inspection; version 11+ for lossless object/stream comparison |
 | `gs` / `gswin64c` | lossy PDF (`--lossy` / `--pdf-profile`; default `/ebook`) |
 | `gifsicle` | GIF |
 | `dwebp` + `cwebp` | WebP |
 | `svgo` or `scour` | SVG (XML minify is the fallback) |
-| `magick` / `convert`, `tiffcp` | TIFF, HEIC, JPEG 2000, EXR, ICO, ICNS, DNG (tiffcp), BMP, TGA, PNM, PCX |
+| `magick` / `convert`, `tiffcp` | HEIC, JPEG 2000, EXR, ICO, ICNS, DNG (tiffcp), BMP, TGA, PNM, PCX |
 | `avifenc` + `avifdec` | AVIF (ImageMagick fallback) |
 | `ffmpeg` | MP4, MKV, WebM, MOV, M4V, WMV, AVI, ASF, 3GP, MPEG-TS, ALAC/WavPack |
 | `pigz` | faster gzip |
@@ -49,17 +50,20 @@ the printed commands.
 | `cjxl` + `djxl` | JPEG XL |
 | `gdcmconv` / `dcmcjpls` | DICOM JPEG-LS (uncompressed / RLE images) |
 | `flac` | FLAC recompress |
-| `h5repack`, `nccopy` | HDF5 / NetCDF |
+| `h5repack` | Preserving HDF5 encoding; the `scientific` extra provides native readers |
+| `netCDF4`, `tifffile`, `imagecodecs`, `psutil` | Preserving NetCDF/TIFF adapters and worker isolation (`scientific` extra) |
 | `mac` | Monkey's Audio (`.ape`) |
 | `mp3packer` | lossless MP3 (`FILEREPACK_MP3PACKER`; not in Homebrew — see below) |
 | `optivorbis` | Ogg Vorbis/Opus (`FILEREPACK_OPTIVORBIS`; not in Homebrew — see below) |
 | `woff2_compress` / `woff2_decompress` | WOFF2 fallback |
 | `unrar`, `rar` | RAR extract / rewrite (`rar` missing → 7z) |
-| `duckdb` Python package | Parquet (`pip install 'filerepack[parquet]'`) |
+| `pyarrow>=19` Python package | Verified Parquet recompression (`pip install 'filerepack[parquet]'`) |
 | `pyarrow`, `fastavro` | ORC / Feather / Arrow / Avro (`pip install 'filerepack[data]'`) |
+| `h5py`, `netCDF4` | HDF5 / NetCDF structural validation (`pip install h5py netCDF4`) |
 | `fonttools` | WOFF / WOFF2 (`pip install 'filerepack[fonts]'`) |
 | `mutagen` | Cover art in MP3/FLAC/M4A/Ogg/APE (`pip install 'filerepack[media]'`) |
-| `pikepdf` | Lossless PDF image streams (`pip install 'filerepack[pdf]'`; `--lossy` still uses Ghostscript) |
+| `Pillow` | Required raster decoding (`pip install 'filerepack[validation]'`) |
+| `pikepdf` | PDF protection-inspection fallback and lossless PDF image streams (`pip install 'filerepack[pdf]'`; `--lossy` still uses Ghostscript) |
 
 ## macOS (Homebrew)
 
@@ -104,6 +108,21 @@ pip install 'filerepack[data]' 'filerepack[fonts]' 'filerepack[progress]' `
 
 Add `C:\Program Files\7-Zip` to PATH. filerepack looks for `7zz` then `7z`.
 `optivorbis` is not in Chocolatey; use the [GitHub CLI zip](#optivorbis-not-packaged).
+
+## filerepack-ole (built from source)
+
+From the repository checkout or extracted source distribution:
+
+```bash
+pip install 'filerepack[ole]'
+cargo install --locked --path tools/ole-compactor
+```
+
+Use Rust 1.89+ and add Cargo's bin directory to PATH. Python wheels do not bundle
+the executable. Override discovery with `FILEREPACK_OLE_COMPACTOR` or
+`[tools] ole_compactor = "/absolute/path/to/filerepack-ole"`. Production compaction
+does not require Office, LibreOffice, Java or .NET. See
+[Office usage and supported profiles](/use-cases/office-documents/).
 
 ## mp3packer (not packaged)
 

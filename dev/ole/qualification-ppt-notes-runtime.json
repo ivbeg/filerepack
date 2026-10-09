@@ -1,0 +1,1960 @@
+{
+  "date": "2026-10-08",
+  "scope": "Local macOS Python 3.13/native/LibreOffice qualification",
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "native_sha256": "f1d7e12353c04f63fd662634f79e780e756834c636cd96ab7aff170f48c3909a",
+  "files": [
+    {
+      "file": "temp/_raw/crimemapping_v2.ppt",
+      "source_sha256": "ebdcda7f9fd78bb18a75d12b611da64e2f86a8ef3429043eff8708c5d2c99394",
+      "candidate_sha256": "adcb74cb7c590acbf6c4e68f2d461d8ca556d44212553acb4e37c2d6d9929b0c",
+      "source_bytes": 11301376,
+      "candidate_bytes": 10668032,
+      "whole_file_saved_bytes": 633344,
+      "unchanged_notes_and_storage_spans": 20,
+      "equal_content_contract": true,
+      "unaffected_streams_identical": true,
+      "worker": {
+        "verify": "officeart",
+        "details": {
+          "strategy": "ole-officeart-recompression",
+          "compaction_bytes": 11301376,
+          "additional_savings_bytes": 633344,
+          "officeart": {
+            "officeart_host": "ppt",
+            "metafile_count": 0,
+            "metafile_types": [],
+            "encoders": [],
+            "raster_count": 18,
+            "raster_encoders": [
+              "png-zlib9",
+              "png-zopfli15",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zlib9",
+              "png-zlib9"
+            ],
+            "raster_skips": [
+              "PPT bounded PNG profile retains JPEG bytes"
+            ],
+            "recompressed_rasters": 18,
+            "ole_effort_version": 1,
+            "ole_effort": "default",
+            "zopfli_version": "0.4.3",
+            "effort_note": "qualified Zopfli trials available",
+            "recompressed_metafiles": 0,
+            "decoded_metafile_bytes": 0,
+            "stream_savings_bytes": 628465
+          },
+          "officeart_candidate_bytes": 10668032,
+          "officeart_host": "ppt",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 18,
+          "raster_encoders": [
+            "png-zlib9",
+            "png-zopfli15",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zlib9",
+            "png-zlib9"
+          ],
+          "raster_skips": [
+            "PPT bounded PNG profile retains JPEG bytes"
+          ],
+          "recompressed_rasters": 18,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 628465
+        },
+        "ok": true,
+        "evidence": [
+          {
+            "type": "library",
+            "name": "zopfli",
+            "version": "0.4.3",
+            "count": 1
+          },
+          {
+            "type": "library",
+            "name": "olefile",
+            "version": "0.47",
+            "count": 1
+          }
+        ],
+        "usage": {
+          "decoded": 86090407,
+          "written": 32495473,
+          "nodes": 7076,
+          "peak_worker_rss_bytes": 138985472,
+          "seconds": 50.28820987499785
+        }
+      },
+      "logical_stream_sha256": {
+        "Pictures": "5d8efeece30dfdf775e0c15ee5e05ee1904e73beaa39bfa0d964072e213f671f",
+        "Current User": "c8120bb236e2281a44bd085ef89c7891dd4e791f3c0313b66d4a740c030f03b4",
+        "MsoDataStore/ÌÛT22×ÕBÞÔÖVOHÞD1MßCÓA==/Item": "621d59cb5d2b9c36586c30dad194e23c6f3117411bca7d062903be0c53df85d5",
+        "MsoDataStore/ÌÛT22×ÕBÞÔÖVOHÞD1MßCÓA==/Properties": "5444113480740425c02074aab0d6290da8ff06d12418682dde9eaa148b1019a4",
+        "\u0005SummaryInformation": "6a1e25429a383467c135ac89c44a54d3f5189de54d324d3195bb38594f018048",
+        "PowerPoint Document": "0fd43adcaca1e377a47a5cdcc1977bf942f5ff1d8eb7f5ff76a62007dc834158",
+        "\u0005DocumentSummaryInformation": "1e03a24a4eada18aa5fd8d43d85bce2a9f03f4fd9b3a6e165a1979a13b644357"
+      },
+      "slides_render": {
+        "equal_rgb_pages": true,
+        "pages": [
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "798036c69cbcbd7d58b3581c5355a9b4fd9c8a11e55b3d0a973e2829d9906189"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "6a4c4ed2e6b18d9860eddeee1a2ea26a9f8cd1e896908c576ed17b22699f52a1"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "94085921dece2a06404a23f89865e01c0899abc789889d1d61623226f29b86f0"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "d6a8633eb2a1b22f04753da836c2b8e6bdef8542c0463c87242c77edd89e9e2a"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "024c508fd0a52aa296b5215c3df11c8d03ea5c58cd8fc73dd751ecdc8c818bf0"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "8502f5609db577ec0a688282a9a0261b7ad46a65074c78651a01975b8355f83a"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "db634304af214085d9a2a310de8569543c699bb16f2a238712f2303b62c16247"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "b3133b2de5ebf8031cf4e34977f6053a1233b56d30504811efefad262531c5f3"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "c749921265cfe1a753adcbb423564d64984de20fe0ec41ea8283e4ac77093d29"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "59db947661794fb761a0ca1ed463c43640661fb121550f467fb5a07e20392494"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "f207e06c81bddd6ee51cf4db46bdd4198e5a39b72a3d90eb73a9c4a54311e538"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "7c23baf7d7e5bf2961757db91f40b656bf03d68d55ce795784a6131f6380ee6f"
+          }
+        ]
+      },
+      "notes_render": {
+        "equal_rgb_pages": true,
+        "pages": [
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "ea3edd544103580e00016ee62136d2442287d8ccaec31818cd19a87b28c31a75"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "a9afe23a3e9dfb9ca7c0371daebb54d5180cf68a3b10282de49068a56959924f"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "b8c5e10ea788c97d08ec627b86a563c8e08e731986b1f2ca7441f4146620677a"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "9b5e2a06c12a10a2ffdec59354526bd18d28599ff503099ed11386aa0989e424"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "1d09d7dd9c0d2f7206b2e4fb48e25859e68b6b45ed8cb02a9cb6a6fc2d9ab7aa"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "be54d7b96fe5c514423fdff6c9be7d5ef4bfb1416027fea9436b0e502a2cb291"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "21ca49b10e8da031c7293e490c85107d45b4190edcc47c050ffe1b2adddd5dc9"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "07bd590d6dd60ca8aaf401c39a56269b9a2476e5c53d8c5df90cde5131525721"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "0c43c4af5d29a026d23538124181f0ddb97473c34254f9ddef580bda7fa254a8"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "d653e7908f9b6add90f4b70c7d3978d9316a2f3abe358d82c958c4d632cac303"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "4dc142021bc89c1a742e45ce113bbb11522d5b2487979e2c0904a0bd80b069e9"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "33a35c8ddf6ea4e476eaa7600e4a64a70bddbc4b3a49620a03486e7f737c2729"
+          }
+        ]
+      },
+      "legacy_master_normative_render_equal": true,
+      "source_unchanged": true
+    },
+    {
+      "file": "temp/_raw/mapping_rus_v1.ppt",
+      "source_sha256": "997276d3ebbef628f74e7fbcf10875c60a3bd9a92b2a2ce1038b1b0508861a2a",
+      "candidate_sha256": "52c4a730e7ad9a02d37b11f84fc44f036b198afb58031bf4bb26a0bd4b363b2d",
+      "source_bytes": 25570304,
+      "candidate_bytes": 24022016,
+      "whole_file_saved_bytes": 1548288,
+      "unchanged_notes_and_storage_spans": 53,
+      "equal_content_contract": true,
+      "unaffected_streams_identical": true,
+      "worker": {
+        "verify": "officeart",
+        "details": {
+          "strategy": "ole-officeart-recompression",
+          "compaction_bytes": 25570304,
+          "additional_savings_bytes": 1548288,
+          "officeart": {
+            "officeart_host": "ppt",
+            "metafile_count": 0,
+            "metafile_types": [],
+            "encoders": [],
+            "raster_count": 37,
+            "raster_encoders": [
+              "png-zlib9",
+              "png-zopfli15",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zopfli15",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9"
+            ],
+            "raster_skips": [
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained"
+            ],
+            "recompressed_rasters": 37,
+            "ole_effort_version": 1,
+            "ole_effort": "default",
+            "zopfli_version": "0.4.3",
+            "effort_note": "qualified Zopfli trials available",
+            "recompressed_metafiles": 0,
+            "decoded_metafile_bytes": 0,
+            "stream_savings_bytes": 1535892
+          },
+          "officeart_candidate_bytes": 24022016,
+          "officeart_host": "ppt",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 37,
+          "raster_encoders": [
+            "png-zlib9",
+            "png-zopfli15",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zopfli15",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9"
+          ],
+          "raster_skips": [
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained"
+          ],
+          "recompressed_rasters": 37,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 1535892
+        },
+        "ok": true,
+        "evidence": [
+          {
+            "type": "library",
+            "name": "zopfli",
+            "version": "0.4.3",
+            "count": 1
+          },
+          {
+            "type": "library",
+            "name": "olefile",
+            "version": "0.47",
+            "count": 1
+          }
+        ],
+        "usage": {
+          "decoded": 269114099,
+          "written": 73365817,
+          "nodes": 15661,
+          "peak_worker_rss_bytes": 205225984,
+          "seconds": 102.51682245799748
+        }
+      },
+      "logical_stream_sha256": {
+        "Pictures": "f240cb796e794c20588cc456170bf7f1acdab18112cdc157818e2489cf1cc9e5",
+        "Current User": "c06f207fb62de8cd458640de4573bc3c494505b2acbc3fc537a05f1ab30045b5",
+        "MsoDataStore/ÌÛT22×ÕBÞÔÖVOHÞD1MßCÓA==/Item": "621d59cb5d2b9c36586c30dad194e23c6f3117411bca7d062903be0c53df85d5",
+        "MsoDataStore/ÌÛT22×ÕBÞÔÖVOHÞD1MßCÓA==/Properties": "5444113480740425c02074aab0d6290da8ff06d12418682dde9eaa148b1019a4",
+        "\u0005SummaryInformation": "5ee306258d11bbdfc843882b533b84031c4ebf8e7dd4364bdf1f4a09fb8a513d",
+        "PowerPoint Document": "de58973a3b8702129f239077dde67875f443270f353dc9a2476dab7e8ccd2897",
+        "\u0005DocumentSummaryInformation": "1a68eb75eb2938bf6c7e6427454b69fe1f9bb02aa32201cbc21232884ec7419c"
+      },
+      "slides_render": {
+        "equal_rgb_pages": true,
+        "pages": [
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "798036c69cbcbd7d58b3581c5355a9b4fd9c8a11e55b3d0a973e2829d9906189"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "6a4c4ed2e6b18d9860eddeee1a2ea26a9f8cd1e896908c576ed17b22699f52a1"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "94085921dece2a06404a23f89865e01c0899abc789889d1d61623226f29b86f0"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "d6a8633eb2a1b22f04753da836c2b8e6bdef8542c0463c87242c77edd89e9e2a"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "024c508fd0a52aa296b5215c3df11c8d03ea5c58cd8fc73dd751ecdc8c818bf0"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "8502f5609db577ec0a688282a9a0261b7ad46a65074c78651a01975b8355f83a"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "db634304af214085d9a2a310de8569543c699bb16f2a238712f2303b62c16247"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "b3133b2de5ebf8031cf4e34977f6053a1233b56d30504811efefad262531c5f3"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "c749921265cfe1a753adcbb423564d64984de20fe0ec41ea8283e4ac77093d29"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "59db947661794fb761a0ca1ed463c43640661fb121550f467fb5a07e20392494"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "f207e06c81bddd6ee51cf4db46bdd4198e5a39b72a3d90eb73a9c4a54311e538"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "2c8105f53a5500af16e8a238e59349c7f8bb8dc162b0acbfb309d56e0416e2be"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "057ded03dc68ff172dd1e0f7c9ace52a3d172496bbd151f3eb3df835657d53ce"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "9d633c70bd2138b0f174ddc98bc6130054e1064e53527ac508db300ea4c048f5"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "0d1f7e9ba0f652bdb18068648b17874ec33155b22c1deedc97376e92d4ecb509"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "4af9b022c5485857e4f416a2991bc2ca31e37315605750605b1431980a86d765"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "c6497321d16f9fe2bef5aa9ab006caa86b63f65b8b26eac4334328c722a94c0c"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "10814d54318eb9124e3b49c28051c02ff073e76360cf6b282b49c423e85c7148"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "eef6a68914581ec2295fc3e3ccb26ddea93f6d9a17b594119548cb83ddf6ffb7"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "f0e1dc685b9b5f3003aa735b8b4eb01c4ce570cf55e9fbcf97b91294f98b099b"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "aa8361abe253e121254f975f4ed337b8f36c0d7e00da9892c333cefbebe325fe"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "5cda4bea5223c00561ddb28f4504d8209732b692a2f1c3db455ed675629a5de0"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "7e867f753741a6692b0a3c45b68698509219ac9effd0d3c0bc18f02822e48b95"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "b0c05abbbbad252ec9a87fcc80586cc9b961befd34b4928598214f2c1f260519"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "0f31ed879c948e4749326fb118f7a68a02bea92f4254382956438361d6fdd10c"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "0be5151f2aaf536788e27594ca43325a0152c0bb7242412b9754664db462d35f"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "54277ec957778424bb223ffdfa4cdcc24d49ca4f6f4b0932e320239b9cf0ecb9"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "8c38eebd40da5f69482940797349b5970c286aae5e3a2b150182875b373801c6"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "fe772ed426fe04991e33e7bd2459513e533fbc41a1d42ee1fbf9c76ba12f75c8"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "f2b75c1531c1b3a49b9b0257a900f4250aa45a261f445dfa1e7d8fff8af78b31"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "42a946b24e5db10009ec4308e78bd2b72c3aec9d0a41897d7bcc7b2975d6d44d"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "224fda1c64f7cdd4f43c55c363acd2b7046c85627e3d55b4699402ddd338350f"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "672804efcc42ab2f4b2d03a03f72d692352763604b8491044fa9ae4ce09fb794"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "8bb2dc27868b564d5a85a7199b23907771863da4513ff892bde1c493c25d5603"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "772b520dd821a7c0a889915d8f30e9fb3be7e8b10594b3fce50097627135e880"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "29614cb23c913df6e4b56c81fff4b707b4a422e712a4d0917d80e9241ccd7f3b"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "7fffa83e1970daebbb433da58b3b285a16913fb49267a28758d0457559835d1b"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "17ec71d04c875a8b5728d40a9f1ad91b4cafc5020f1bfa1e08c12e884f4e723c"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "955e7e71f14d279278921a12eaa9122784071e8f1b875a80b3b6170aa7fb1547"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "cbff9d8171bea1954b2718622d7edf6171a51253a3f87ee19d4549cc66459829"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "4d88bfb0e80a13130ce44273fb14084630ecc1a98e42173b3520b5f424f9246d"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "fd04b631d79f68ff5d4cb59ff3eb208fdeffc323a6b81acbb59c2e8ed4fdf506"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "516238ad388ab900a364854b30e6f7f32cb58e44ae58f227a4bd7d8c109ec826"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "e73d1f3c5fc4563b520023e69eca11256d7d42bd63ac772074bd10653232a4e4"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "7c23baf7d7e5bf2961757db91f40b656bf03d68d55ce795784a6131f6380ee6f"
+          }
+        ]
+      },
+      "notes_render": {
+        "equal_rgb_pages": true,
+        "pages": [
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "ea3edd544103580e00016ee62136d2442287d8ccaec31818cd19a87b28c31a75"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "a9afe23a3e9dfb9ca7c0371daebb54d5180cf68a3b10282de49068a56959924f"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "b8c5e10ea788c97d08ec627b86a563c8e08e731986b1f2ca7441f4146620677a"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "9b5e2a06c12a10a2ffdec59354526bd18d28599ff503099ed11386aa0989e424"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "1d09d7dd9c0d2f7206b2e4fb48e25859e68b6b45ed8cb02a9cb6a6fc2d9ab7aa"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "be54d7b96fe5c514423fdff6c9be7d5ef4bfb1416027fea9436b0e502a2cb291"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "21ca49b10e8da031c7293e490c85107d45b4190edcc47c050ffe1b2adddd5dc9"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "07bd590d6dd60ca8aaf401c39a56269b9a2476e5c53d8c5df90cde5131525721"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "0c43c4af5d29a026d23538124181f0ddb97473c34254f9ddef580bda7fa254a8"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "d653e7908f9b6add90f4b70c7d3978d9316a2f3abe358d82c958c4d632cac303"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "4dc142021bc89c1a742e45ce113bbb11522d5b2487979e2c0904a0bd80b069e9"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "33a35c8ddf6ea4e476eaa7600e4a64a70bddbc4b3a49620a03486e7f737c2729"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "12ff8a36f4e75ce1a7dd9f333df300c09e7b9834d2237ff391da3bf421deb0a8"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "f3d2302cc8fc5ea7d069afca31a828815901dc9533efc2beec8eb5f1f2b30504"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "3c36e13cf6f2167432609cb5102076efa9e282a407c72b973363867411188b0f"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "d1f20f64f2735c1512acaac1542a160d2fd8479b176970360c426bbcc291105e"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "935c95617f257a6816eafc41f94c43f8278560aae8dffb8ca7ea1d748d773ec4"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "1c8cb21b5c946da12274c7e4c5aa9c806479b823965182617a3fe373cecf45c8"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "b5540e68cc1c2c10953c2355756071569c2da1a750d209bb0ed7b6ffad47e9f1"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "f39f214d3454bf258ae2b686474fcb6125ca45b7e0094e2ec3b6ff15fe446de5"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "c675fc5bde80879d08d1a5b0bfc38e1f9f28dab33143f5b5f850d66490ff5cff"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "9be1a21a97062dd2ad2e9365b49edea05f35abf4df8a5e08def1c75cc7fb6c6d"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "87207a738efa34ac5bbe159fdeed246195a45d5dc19b2eec5fc7526a239b762d"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "0cb1c89f95234ad63d8a9fb4f205b2b643e06f4b9a6fd38e08e21acb0217b53e"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "2e7343d0dd104f37ae70147d4c511c8de6bfd7d1fa77a34bbebccdf1a3204336"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "6fc0e0415cb01567d69f69563845b870047008328e20b1bdecba7a4c3f6b2670"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "9494740ca46140b2ed7ce67299890d1496ebbf11808a8009ef663585ca08f50b"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "2c91feb23bbfcff6d5a57c29f5c3a628c8015c4bd954f7b7c5eee4b4f8375c8f"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "8da13d91ebe9264e548f062adbb8311fa7bc40bceef11e5212bdf996aba44281"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "2df0ac7e5b9b8b11b1d5a1a51771083a623e3ccec5d3884b322d4ee4b9eda5dc"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "cc2ef5a64e839f83d78047137d119837b4617b66234d2fce011ae9a737246a8e"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "6a1f94e7811cb109e6d29e2967a7c7810aa283dbde535cab3ed118fb543c9fc0"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "c992c83eddfea81061be5b0432405c4833dcf5d6748f36b0028a3e7c20515266"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "25a4ecf907db07261b17ebe3f0c599a13ecb603ff378be0c968112aaed4408ee"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "a58a02e750de23d20f8bf55483b202d0c8278f0b5ac7de9109aec65c47b8be71"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "b7fef4c22d95be446e97505e16a322a689113ebb0270cb81f61ac8b3c8da6960"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "9c7ef6f75e158ddd9a2bbbd17fecf0d6ff28527d3371cc395a586d2a754fc45d"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "09f95edd22b5d3b86e802c2dd683a81bd35de9406d3bd48706f00645835915cb"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "cd7194d79644cc37da307cf26f5c097e0cb2186c77012415ee9739b6a77e6f30"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "1eb16b1ac19f502571fc8655fc409d4d693cde1cfac0c9e04ab251eecfd5a426"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "897eb992faac1476f4ec0627fd67e2f6792ae600e775c024051e2105e7334678"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "11de91af53fd8fbc5871f35b4fb8b1c9d34677e802cee8e6d187d69f50bd0845"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "3f7c3ddffaeb3ca28f4c4570c2af6ff727d7c4721f194966d9225d25ddfd15ab"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "f0ba3a83f478cb3eadec8ab0a3bdf4f6aae9fc21f99629d11a7d704f69840625"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "1463b35a90eb6b75275047ff289e3639cd31df1a12d9179bcdb5d1dfe123d7b9"
+          }
+        ]
+      },
+      "legacy_master_normative_render_equal": true,
+      "source_unchanged": true
+    },
+    {
+      "file": "temp/_raw/ruslocal_v1.ppt",
+      "source_sha256": "f6e47aa2a7626d15d8bdb5afd2e99783906fcc44df067dd18e12758bc5767f41",
+      "candidate_sha256": "22d0e6a0ffb7e93b529f31ad2f1b538b7c1c4fba5e78a5c28bd39954d084b296",
+      "source_bytes": 19887104,
+      "candidate_bytes": 18439168,
+      "whole_file_saved_bytes": 1447936,
+      "unchanged_notes_and_storage_spans": 39,
+      "equal_content_contract": true,
+      "unaffected_streams_identical": true,
+      "worker": {
+        "verify": "officeart",
+        "details": {
+          "strategy": "ole-officeart-recompression",
+          "compaction_bytes": 19887104,
+          "additional_savings_bytes": 1447936,
+          "officeart": {
+            "officeart_host": "ppt",
+            "metafile_count": 0,
+            "metafile_types": [],
+            "encoders": [],
+            "raster_count": 27,
+            "raster_encoders": [
+              "png-zlib9",
+              "png-zopfli15",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zopfli15",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9"
+            ],
+            "raster_skips": [
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained"
+            ],
+            "recompressed_rasters": 27,
+            "ole_effort_version": 1,
+            "ole_effort": "default",
+            "zopfli_version": "0.4.3",
+            "effort_note": "qualified Zopfli trials available",
+            "recompressed_metafiles": 0,
+            "decoded_metafile_bytes": 0,
+            "stream_savings_bytes": 1436822
+          },
+          "officeart_candidate_bytes": 18439168,
+          "officeart_host": "ppt",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 27,
+          "raster_encoders": [
+            "png-zlib9",
+            "png-zopfli15",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zopfli15",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9"
+          ],
+          "raster_skips": [
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained"
+          ],
+          "recompressed_rasters": 27,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 1436822
+        },
+        "ok": true,
+        "evidence": [
+          {
+            "type": "library",
+            "name": "zopfli",
+            "version": "0.4.3",
+            "count": 1
+          },
+          {
+            "type": "library",
+            "name": "olefile",
+            "version": "0.47",
+            "count": 1
+          }
+        ],
+        "usage": {
+          "decoded": 263751487,
+          "written": 56562539,
+          "nodes": 11962,
+          "peak_worker_rss_bytes": 232751104,
+          "seconds": 14.209730250004213
+        }
+      },
+      "logical_stream_sha256": {
+        "Pictures": "568c8dee3869fe80a8765b1e38cbf21d35a8ea2d0262c64ee1b64a095d828daa",
+        "Current User": "bbe5614144bab0130f7f2f80338e177a02fc24ac6c6415286c1cc2765e52fbdb",
+        "MsoDataStore/ÌÛT22×ÕBÞÔÖVOHÞD1MßCÓA==/Item": "621d59cb5d2b9c36586c30dad194e23c6f3117411bca7d062903be0c53df85d5",
+        "MsoDataStore/ÌÛT22×ÕBÞÔÖVOHÞD1MßCÓA==/Properties": "5444113480740425c02074aab0d6290da8ff06d12418682dde9eaa148b1019a4",
+        "\u0005SummaryInformation": "5b8438839cff31a71831c3538f263c924b95d8261140c57b88d5f135f202a66b",
+        "PowerPoint Document": "d00b35960f347ed3681a7ac9db4355b380421435e9e770558a6137ed989bab3f",
+        "\u0005DocumentSummaryInformation": "fdfbafdeaaeb776c15da1416f8889f62b537d5b189d8b3126380c3c25bb7778d"
+      },
+      "slides_render": {
+        "equal_rgb_pages": true,
+        "pages": [
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "0ffe9bfa59c413e47afa2031b036ccc0d4aac365ebe02e977d3f0203cba51f11"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "4af9b022c5485857e4f416a2991bc2ca31e37315605750605b1431980a86d765"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "c6497321d16f9fe2bef5aa9ab006caa86b63f65b8b26eac4334328c722a94c0c"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "10814d54318eb9124e3b49c28051c02ff073e76360cf6b282b49c423e85c7148"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "eef6a68914581ec2295fc3e3ccb26ddea93f6d9a17b594119548cb83ddf6ffb7"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "f0e1dc685b9b5f3003aa735b8b4eb01c4ce570cf55e9fbcf97b91294f98b099b"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "aa8361abe253e121254f975f4ed337b8f36c0d7e00da9892c333cefbebe325fe"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "5cda4bea5223c00561ddb28f4504d8209732b692a2f1c3db455ed675629a5de0"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "7e867f753741a6692b0a3c45b68698509219ac9effd0d3c0bc18f02822e48b95"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "b0c05abbbbad252ec9a87fcc80586cc9b961befd34b4928598214f2c1f260519"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "0f31ed879c948e4749326fb118f7a68a02bea92f4254382956438361d6fdd10c"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "0be5151f2aaf536788e27594ca43325a0152c0bb7242412b9754664db462d35f"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "54277ec957778424bb223ffdfa4cdcc24d49ca4f6f4b0932e320239b9cf0ecb9"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "8c38eebd40da5f69482940797349b5970c286aae5e3a2b150182875b373801c6"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "fe772ed426fe04991e33e7bd2459513e533fbc41a1d42ee1fbf9c76ba12f75c8"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "f2b75c1531c1b3a49b9b0257a900f4250aa45a261f445dfa1e7d8fff8af78b31"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "42a946b24e5db10009ec4308e78bd2b72c3aec9d0a41897d7bcc7b2975d6d44d"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "224fda1c64f7cdd4f43c55c363acd2b7046c85627e3d55b4699402ddd338350f"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "672804efcc42ab2f4b2d03a03f72d692352763604b8491044fa9ae4ce09fb794"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "8bb2dc27868b564d5a85a7199b23907771863da4513ff892bde1c493c25d5603"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "772b520dd821a7c0a889915d8f30e9fb3be7e8b10594b3fce50097627135e880"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "29614cb23c913df6e4b56c81fff4b707b4a422e712a4d0917d80e9241ccd7f3b"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "7fffa83e1970daebbb433da58b3b285a16913fb49267a28758d0457559835d1b"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "17ec71d04c875a8b5728d40a9f1ad91b4cafc5020f1bfa1e08c12e884f4e723c"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "955e7e71f14d279278921a12eaa9122784071e8f1b875a80b3b6170aa7fb1547"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "cbff9d8171bea1954b2718622d7edf6171a51253a3f87ee19d4549cc66459829"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "4d88bfb0e80a13130ce44273fb14084630ecc1a98e42173b3520b5f424f9246d"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "fd04b631d79f68ff5d4cb59ff3eb208fdeffc323a6b81acbb59c2e8ed4fdf506"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "516238ad388ab900a364854b30e6f7f32cb58e44ae58f227a4bd7d8c109ec826"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "e73d1f3c5fc4563b520023e69eca11256d7d42bd63ac772074bd10653232a4e4"
+          },
+          {
+            "size": [
+              720,
+              540
+            ],
+            "sha256": "7c23baf7d7e5bf2961757db91f40b656bf03d68d55ce795784a6131f6380ee6f"
+          }
+        ]
+      },
+      "notes_render": {
+        "equal_rgb_pages": true,
+        "pages": [
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "ea3edd544103580e00016ee62136d2442287d8ccaec31818cd19a87b28c31a75"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "d1f20f64f2735c1512acaac1542a160d2fd8479b176970360c426bbcc291105e"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "935c95617f257a6816eafc41f94c43f8278560aae8dffb8ca7ea1d748d773ec4"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "1c8cb21b5c946da12274c7e4c5aa9c806479b823965182617a3fe373cecf45c8"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "b5540e68cc1c2c10953c2355756071569c2da1a750d209bb0ed7b6ffad47e9f1"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "f39f214d3454bf258ae2b686474fcb6125ca45b7e0094e2ec3b6ff15fe446de5"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "c675fc5bde80879d08d1a5b0bfc38e1f9f28dab33143f5b5f850d66490ff5cff"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "9be1a21a97062dd2ad2e9365b49edea05f35abf4df8a5e08def1c75cc7fb6c6d"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "87207a738efa34ac5bbe159fdeed246195a45d5dc19b2eec5fc7526a239b762d"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "0cb1c89f95234ad63d8a9fb4f205b2b643e06f4b9a6fd38e08e21acb0217b53e"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "2e7343d0dd104f37ae70147d4c511c8de6bfd7d1fa77a34bbebccdf1a3204336"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "6fc0e0415cb01567d69f69563845b870047008328e20b1bdecba7a4c3f6b2670"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "9494740ca46140b2ed7ce67299890d1496ebbf11808a8009ef663585ca08f50b"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "2c91feb23bbfcff6d5a57c29f5c3a628c8015c4bd954f7b7c5eee4b4f8375c8f"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "8da13d91ebe9264e548f062adbb8311fa7bc40bceef11e5212bdf996aba44281"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "2df0ac7e5b9b8b11b1d5a1a51771083a623e3ccec5d3884b322d4ee4b9eda5dc"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "cc2ef5a64e839f83d78047137d119837b4617b66234d2fce011ae9a737246a8e"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "6a1f94e7811cb109e6d29e2967a7c7810aa283dbde535cab3ed118fb543c9fc0"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "c992c83eddfea81061be5b0432405c4833dcf5d6748f36b0028a3e7c20515266"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "25a4ecf907db07261b17ebe3f0c599a13ecb603ff378be0c968112aaed4408ee"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "a58a02e750de23d20f8bf55483b202d0c8278f0b5ac7de9109aec65c47b8be71"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "b7fef4c22d95be446e97505e16a322a689113ebb0270cb81f61ac8b3c8da6960"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "9c7ef6f75e158ddd9a2bbbd17fecf0d6ff28527d3371cc395a586d2a754fc45d"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "09f95edd22b5d3b86e802c2dd683a81bd35de9406d3bd48706f00645835915cb"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "cd7194d79644cc37da307cf26f5c097e0cb2186c77012415ee9739b6a77e6f30"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "1eb16b1ac19f502571fc8655fc409d4d693cde1cfac0c9e04ab251eecfd5a426"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "897eb992faac1476f4ec0627fd67e2f6792ae600e775c024051e2105e7334678"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "11de91af53fd8fbc5871f35b4fb8b1c9d34677e802cee8e6d187d69f50bd0845"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "3f7c3ddffaeb3ca28f4c4570c2af6ff727d7c4721f194966d9225d25ddfd15ab"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "f0ba3a83f478cb3eadec8ab0a3bdf4f6aae9fc21f99629d11a7d704f69840625"
+          },
+          {
+            "size": [
+              559,
+              806
+            ],
+            "sha256": "7e8b6491abb346ba622dc5ce3badf6ed975a2f5a1e8e702dd2875aa725fe83b4"
+          }
+        ]
+      },
+      "legacy_master_normative_render_equal": true,
+      "source_unchanged": true
+    },
+    {
+      "file": "temp/_raw/mapping_rus_v1.root-normalized.ppt",
+      "source_sha256": "3c8a2cea248bce6bc3fa75005def4d4f446d53912223e016a751ba024f4ed6d8",
+      "candidate_sha256": "52c4a730e7ad9a02d37b11f84fc44f036b198afb58031bf4bb26a0bd4b363b2d",
+      "source_bytes": 25570304,
+      "candidate_bytes": 24022016,
+      "whole_file_saved_bytes": 1548288,
+      "unchanged_notes_and_storage_spans": 53,
+      "equal_content_contract": true,
+      "unaffected_streams_identical": true,
+      "worker": {
+        "verify": "officeart",
+        "details": {
+          "strategy": "ole-officeart-recompression",
+          "compaction_bytes": 25570304,
+          "additional_savings_bytes": 1548288,
+          "officeart": {
+            "officeart_host": "ppt",
+            "metafile_count": 0,
+            "metafile_types": [],
+            "encoders": [],
+            "raster_count": 37,
+            "raster_encoders": [
+              "png-zlib9",
+              "png-zopfli15",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zopfli15",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zopfli15",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9",
+              "png-zlib9"
+            ],
+            "raster_skips": [
+              "PPT bounded PNG profile retains JPEG bytes",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained",
+              "PPT PNG selection allowance exhausted; retained"
+            ],
+            "recompressed_rasters": 37,
+            "ole_effort_version": 1,
+            "ole_effort": "default",
+            "zopfli_version": "0.4.3",
+            "effort_note": "qualified Zopfli trials available",
+            "recompressed_metafiles": 0,
+            "decoded_metafile_bytes": 0,
+            "stream_savings_bytes": 1535892
+          },
+          "officeart_candidate_bytes": 24022016,
+          "officeart_host": "ppt",
+          "metafile_count": 0,
+          "metafile_types": [],
+          "encoders": [],
+          "raster_count": 37,
+          "raster_encoders": [
+            "png-zlib9",
+            "png-zopfli15",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zopfli15",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zopfli15",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9",
+            "png-zlib9"
+          ],
+          "raster_skips": [
+            "PPT bounded PNG profile retains JPEG bytes",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained",
+            "PPT PNG selection allowance exhausted; retained"
+          ],
+          "recompressed_rasters": 37,
+          "ole_effort_version": 1,
+          "ole_effort": "default",
+          "zopfli_version": "0.4.3",
+          "effort_note": "qualified Zopfli trials available",
+          "recompressed_metafiles": 0,
+          "decoded_metafile_bytes": 0,
+          "stream_savings_bytes": 1535892
+        },
+        "ok": true,
+        "evidence": [
+          {
+            "type": "library",
+            "name": "zopfli",
+            "version": "0.4.3",
+            "count": 1
+          },
+          {
+            "type": "library",
+            "name": "olefile",
+            "version": "0.47",
+            "count": 1
+          }
+        ],
+        "usage": {
+          "decoded": 269114099,
+          "written": 73365817,
+          "nodes": 15661,
+          "peak_worker_rss_bytes": 206258176,
+          "seconds": 89.91504412500944
+        }
+      },
+      "logical_stream_sha256": {
+        "Pictures": "f240cb796e794c20588cc456170bf7f1acdab18112cdc157818e2489cf1cc9e5",
+        "Current User": "c06f207fb62de8cd458640de4573bc3c494505b2acbc3fc537a05f1ab30045b5",
+        "MsoDataStore/ÌÛT22×ÕBÞÔÖVOHÞD1MßCÓA==/Item": "621d59cb5d2b9c36586c30dad194e23c6f3117411bca7d062903be0c53df85d5",
+        "MsoDataStore/ÌÛT22×ÕBÞÔÖVOHÞD1MßCÓA==/Properties": "5444113480740425c02074aab0d6290da8ff06d12418682dde9eaa148b1019a4",
+        "\u0005SummaryInformation": "5ee306258d11bbdfc843882b533b84031c4ebf8e7dd4364bdf1f4a09fb8a513d",
+        "PowerPoint Document": "de58973a3b8702129f239077dde67875f443270f353dc9a2476dab7e8ccd2897",
+        "\u0005DocumentSummaryInformation": "1a68eb75eb2938bf6c7e6427454b69fe1f9bb02aa32201cbc21232884ec7419c"
+      },
+      "source_unchanged": true
+    }
+  ],
+  "normalized_duplicate_logical_equivalence": true,
+  "local_regression_checks": {
+    "python_3_13": {
+      "version": "3.13.7",
+      "passed": 656,
+      "skipped": 0,
+      "seconds": 409.03,
+      "suite": "test/test_ole*.py test/test_cfb_names.py"
+    },
+    "python_3_9": {
+      "version": "3.9.6",
+      "passed": 655,
+      "skipped": 1,
+      "seconds": 296.45,
+      "suite": "test/test_ole*.py test/test_cfb_names.py",
+      "skip": "Optional HWP Zopfli binding is not included in the Python 3.9 dependency profile."
+    },
+    "integration": {
+      "passed": 418,
+      "skipped": 2,
+      "seconds": 165.38,
+      "suite": "OLE record/OfficeArt recompression, transactions, operation budgets, output safety, archive preservation"
+    },
+    "ruff": "passed: filerepack, test, dev/ole/qualify_ppt_notes.py",
+    "mypy": "passed: filerepack and test, 176 files, Python 3.9 target",
+    "docs_build": "passed: npm run build",
+    "openspec": {
+      "strict_items_passed": 104,
+      "failed": 0,
+      "canonical_requirements": 182,
+      "unique_live_delta_owners": 247,
+      "audited_source_blocks": 283
+    },
+    "scope": "Local macOS arm64 only; remote Linux/Windows CI and Microsoft PowerPoint were not executed."
+  }
+}

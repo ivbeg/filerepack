@@ -1,0 +1,69 @@
+{
+  "repository": "zarr-developers/zarr_implementations",
+  "commit": "185c4f93e114eb91dfea4e21be45a86eadca59f2",
+  "policy": "compatible-upgrade",
+  "result": {
+    "source": "/tmp/filerepack-real-stores/zarr-developers-zarr_implementations",
+    "destination": "/private/tmp/filerepack-real-stores/retry-compatible-upgrade/zarr-developers-zarr_implementations",
+    "input_bytes": 2998861,
+    "output_bytes": 2858173,
+    "replaced": true,
+    "reason": "verified atomic no-replace publication",
+    "details": {
+      "profile": "local-Zarr-v2",
+      "arrays": 4,
+      "chunks": 432,
+      "input_bytes": 2998861,
+      "consolidated": false,
+      "output_bytes": 2858173,
+      "codec_decisions": [
+        {
+          "array": "blosc/.zarray",
+          "source": {
+            "blocksize": 0,
+            "clevel": 5,
+            "cname": "lz4",
+            "id": "blosc",
+            "shuffle": 1
+          },
+          "output": {
+            "blocksize": 0,
+            "clevel": 9,
+            "cname": "zstd",
+            "id": "blosc",
+            "shuffle": 1
+          },
+          "saved_bytes": 128752
+        },
+        {
+          "array": "gzip/.zarray",
+          "source": {
+            "id": "gzip",
+            "level": 1
+          },
+          "output": {
+            "id": "gzip",
+            "level": 9
+          },
+          "saved_bytes": 5968
+        },
+        {
+          "array": "zlib/.zarray",
+          "source": {
+            "id": "zlib",
+            "level": 1
+          },
+          "output": {
+            "id": "zlib",
+            "level": 9
+          },
+          "saved_bytes": 5968
+        }
+      ],
+      "codec_decisions_total": 3
+    }
+  },
+  "native_reader_equal": true,
+  "seconds": 4.048869666992687,
+  "supersedes": "scratch-supervisor rename race before fix"
+}

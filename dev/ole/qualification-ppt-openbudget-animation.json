@@ -1,0 +1,422 @@
+{
+  "date": "2026-10-09",
+  "source_sha256": "0676c46e9ebda7a1598334e8f9d4d55ec8bdd537b31f494ef888f5e1936501d5",
+  "candidate_sha256": "ef3b1d4c592563c1f0f5daba89778419508a0ad96f4f0cc096fa11fea0d94e7d",
+  "source_bytes": 7742464,
+  "candidate_bytes": 6936576,
+  "complete_officeart_contract_equal": true,
+  "unaffected_streams_exact": true,
+  "immutable_notes_storage_animation_tag_spans": 41,
+  "source_mode": "0o700",
+  "candidate_mode": "0o700",
+  "mtime_preserved": true,
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "native_sha256": "5f682b0bfae895b7c83445933e01beb48c7e67537a9739647a3f29a9b5112d3d",
+  "diagnostics": {
+    "ppt_storage_count": 7,
+    "ppt_unique_storage_wrappers": 1,
+    "ppt_duplicate_wrapper_bytes": 4324932,
+    "storage_sharing_skip": "identical OLE storage wrappers retained: persist-offset sharing is unqualified for independent resolution of distinct persist IDs"
+  },
+  "poi_version": "5.4.1",
+  "source_reader": [
+    "2026-10-08T23:30:19.624340Z main ERROR Log4j API could not find a logging provider.",
+    "file=openbudget.ppt slides=9 masters=7 storages=7 resolved=7 payloads={3=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 4=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 5=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 6=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 7=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 8=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 9=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc}",
+    "independent_edit=true changed_persist=3 unchanged_other_payloads=6",
+    "file=source-saved.ppt slides=9 masters=7 storages=7 resolved=7 payloads={3=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 4=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 5=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 6=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 7=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 8=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 9=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc}",
+    "file=source-edited.ppt slides=9 masters=7 storages=7 resolved=7 payloads={3=7743dcea8adb7bc258f935063e88105e1206b7e9bcbc22ccdd999f521e6792fb, 4=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 5=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 6=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 7=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 8=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 9=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc}"
+  ],
+  "candidate_reader": [
+    "2026-10-08T23:30:20.727776Z main ERROR Log4j API could not find a logging provider.",
+    "file=openbudget.ppt slides=9 masters=7 storages=7 resolved=7 payloads={3=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 4=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 5=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 6=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 7=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 8=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 9=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc}",
+    "independent_edit=true changed_persist=3 unchanged_other_payloads=6",
+    "file=candidate-saved.ppt slides=9 masters=7 storages=7 resolved=7 payloads={3=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 4=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 5=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 6=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 7=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 8=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 9=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc}",
+    "file=candidate-edited.ppt slides=9 masters=7 storages=7 resolved=7 payloads={3=7743dcea8adb7bc258f935063e88105e1206b7e9bcbc22ccdd999f521e6792fb, 4=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 5=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 6=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 7=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 8=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc, 9=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc}"
+  ],
+  "sharing_control_reader": [
+    "2026-10-08T23:30:21.733943Z main ERROR Log4j API could not find a logging provider.",
+    "file=unsupported-sharing-control.ppt slides=9 masters=7 storages=1 resolved=1 payloads={9=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc}",
+    "file=sharing_control-saved.ppt slides=9 masters=7 storages=1 resolved=1 payloads={9=11e66faabae235a6e5cca4457547f6f9b62c9b4e90380e3fcaa9eb8fc1f467bc}"
+  ],
+  "storage_sharing_qualified": false,
+  "sharing_control_bytes": 3368960,
+  "sharing_control_sha256": "594c56a82588ebdafe1ecfa839e448ad84ecf6c00ce1d3ca60eff8bde81ca545",
+  "slides_render": {
+    "equal_page_rgb": true,
+    "page_count": 9,
+    "pages": [
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "62eecf418622c4f027324f226e986c61ebf09352b06fd35c1481fba7bf1d2d3d"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "24e5774d722c8b533c1eb26418e10c10ba7878aa7592c7bfc57fc4e2fd29c2be"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "94af5660983b71bb269577f75ff52fce2462471ce006114256a245b37e280678"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "197aefcc71dcaa644df2a9276944a0ae9a77cac2b0173323be325220d404f49a"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "08a29976f24c92eb94a14edf2d0bc8591abc8da250c61d40531facbae17bd5ea"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "1548d45ab863d931488278d8205732a3ef10749d2f461521b1e76c48d65ebf6a"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "2095f37a9ef86ce13e2b8d39c71808f5117f30927721ad624588f4e9b4c95dc7"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "552e1fb2cfa982153233fb451f1bf82a2361c124181842f87514c7a1d4369f6e"
+      },
+      {
+        "size": [
+          720,
+          540
+        ],
+        "sha256": "5194b680ff7733ce16ebc0138e149b4a4b5ed9b1693650236ae755e856552efb"
+      }
+    ]
+  },
+  "notes_render": {
+    "equal_page_rgb": true,
+    "page_count": 9,
+    "pages": [
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "ea3edd544103580e00016ee62136d2442287d8ccaec31818cd19a87b28c31a75"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "f06d396802bbbd28012643e96c63ab9a3c3438d51f172c25994fda6ac91b64c7"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "208ea991658073d0d5cf178a62c9d390e79cde2e978eee0f8d21b132b03988d0"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "9edf0b922796b64e1fce47e3cf91ab2a2e78eb93ab1a00e968d467bf93c6102d"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "50154820748d383fd5d0d404d898da591f808bf66cf83f58fe91d6779789feeb"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "be6312faa98cc7ab4a4fc768756f3162bcb086479beaf635d6969968dd1e7f0f"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "85f4fd1cd7f50f108938c7efd9bd47dea7f927832e1ebe18c54e39e4e6171c5e"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "725cd86d9596a854c931776743efd79de4b8be872fbf596959e554740c6493d9"
+      },
+      {
+        "size": [
+          559,
+          806
+        ],
+        "sha256": "aa5a8e2e8a62a55b58ab353839892de35bd4b97a5e1663a5ee1453616e28fb6c"
+      }
+    ]
+  },
+  "source_unchanged": true,
+  "poi_dependencies": [
+    {
+      "name": "SparseBitSet-1.3.jar",
+      "sha256": "f76b85adb0c00721ae267b7cfde4da7f71d3121cc2160c9fc00c0c89f8c53c8a"
+    },
+    {
+      "name": "commons-codec-1.18.0.jar",
+      "sha256": "ba005f304cef92a3dede24a38ad5ac9b8afccf0d8f75839d6c1338634cf7f6e4"
+    },
+    {
+      "name": "commons-collections4-4.4.jar",
+      "sha256": "1df8b9430b5c8ed143d7815e403e33ef5371b2400aadbe9bda0883762e0846d1"
+    },
+    {
+      "name": "commons-io-2.18.0.jar",
+      "sha256": "f3ca0f8d63c40e23a56d54101c60d5edee136b42d84bfb85bc7963093109cf8b"
+    },
+    {
+      "name": "commons-math3-3.6.1.jar",
+      "sha256": "1e56d7b058d28b65abd256b8458e3885b674c1d588fa43cd7d1cbb9c7ef2b308"
+    },
+    {
+      "name": "log4j-api-2.24.3.jar",
+      "sha256": "5b4a0a0cd0e751ded431c162442bdbdd53328d1f8bb2bae5fc1bbeee0f66d80f"
+    },
+    {
+      "name": "poi-5.4.1.jar",
+      "sha256": "da5abf42da4604c5a7bca38956af6e9d6f196d9b6d4cb7eabee4f480b580d505"
+    },
+    {
+      "name": "poi-scratchpad-5.4.1.jar",
+      "sha256": "6497ba15c1cba7062aa71661a8d776d321b1f998bb2bfa19b57d7e35606381f1"
+    }
+  ],
+  "public_output": {
+    "published": true,
+    "details": {
+      "strategy": "ole-officeart-recompression",
+      "compaction_bytes": 7728128,
+      "additional_savings_bytes": 791552,
+      "ppt_storage_count": 7,
+      "ppt_unique_storage_wrappers": 1,
+      "ppt_duplicate_wrapper_bytes": 4324932,
+      "storage_sharing_skip": "identical OLE storage wrappers retained: distinct persist IDs do not preserve independent object resolution in qualified readers",
+      "officeart": {
+        "officeart_host": "ppt",
+        "metafile_count": 0,
+        "metafile_types": [],
+        "encoders": [],
+        "raster_count": 12,
+        "raster_encoders": [
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0",
+          "png-oxipng10.2.0"
+        ],
+        "raster_skips": [],
+        "recompressed_rasters": 12,
+        "ole_effort_version": 1,
+        "ole_effort": "default",
+        "zopfli_version": "0.4.3",
+        "effort_note": "qualified Zopfli trials available",
+        "recompressed_metafiles": 0,
+        "decoded_metafile_bytes": 0,
+        "stream_savings_bytes": 784741
+      },
+      "officeart_candidate_bytes": 6936576,
+      "officeart_host": "ppt",
+      "metafile_count": 0,
+      "metafile_types": [],
+      "encoders": [],
+      "raster_count": 12,
+      "raster_encoders": [
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0",
+        "png-oxipng10.2.0"
+      ],
+      "raster_skips": [],
+      "recompressed_rasters": 12,
+      "ole_effort_version": 1,
+      "ole_effort": "default",
+      "zopfli_version": "0.4.3",
+      "effort_note": "qualified Zopfli trials available",
+      "recompressed_metafiles": 0,
+      "decoded_metafile_bytes": 0,
+      "stream_savings_bytes": 784741,
+      "worker_usage": {
+        "decoded": 100702860,
+        "written": 176461601,
+        "nodes": 8290,
+        "peak_worker_rss_bytes": 105922560,
+        "seconds": 20.76148320899847
+      },
+      "evidence": [
+        {
+          "type": "tool",
+          "executable": "/Users/ibegtin/.cargo/bin/filerepack-ole",
+          "key": "ole_compactor",
+          "version": "filerepack-ole 0.4.0 (cfb 0.14.0)",
+          "count": 37
+        },
+        {
+          "type": "tool",
+          "executable": "/opt/homebrew/bin/oxipng",
+          "key": "oxipng",
+          "version": "oxipng 10.2.0",
+          "count": 13
+        },
+        {
+          "type": "library",
+          "name": "zopfli",
+          "version": "0.4.3",
+          "count": 1
+        },
+        {
+          "type": "library",
+          "name": "olefile",
+          "version": "0.47",
+          "count": 1
+        },
+        {
+          "type": "worker",
+          "kind": "ppt-ole",
+          "action": "rewrite",
+          "valid": true,
+          "reason": "",
+          "count": 1
+        },
+        {
+          "type": "validation",
+          "kind": "officeart",
+          "stage": "structure",
+          "valid": true,
+          "reason": "",
+          "count": 1
+        },
+        {
+          "type": "validation",
+          "kind": "officeart",
+          "stage": "preservation",
+          "valid": true,
+          "reason": "",
+          "count": 1
+        }
+      ],
+      "profile": null,
+      "profile_version": null,
+      "effective_options": {
+        "debug": false,
+        "pack_images": true,
+        "repack_archive": true,
+        "pack_archives": true,
+        "deep_walking": true,
+        "log": false,
+        "quiet": false,
+        "ultra": false,
+        "dryrun": false,
+        "keep_if_larger": true,
+        "lossy": false,
+        "convert_container": true,
+        "min_savings": null,
+        "compression_level": 9,
+        "pdf_profile": null,
+        "jpeg_quality": null,
+        "keep_meta": false,
+        "overwrite": false,
+        "backup": false,
+        "backup_dir": null,
+        "profile": null,
+        "profile_version": null,
+        "tool_threads": 1,
+        "png_quality": null,
+        "wmv_lossless": false,
+        "video_mode": null,
+        "max_extract_bytes": null,
+        "max_extract_ratio": null,
+        "durability": "atomic",
+        "pdf_linearize": false,
+        "ole_recompress": true,
+        "ole_embedded_recompress": false,
+        "ole_deduplicate_images": false,
+        "r_compression": "preserve",
+        "checkpoint_compatibility": "preserve-mmap",
+        "zarr_codec_policy": "preserve",
+        "experimental_formats": false,
+        "sqlite_offline": false,
+        "exclude_members": [],
+        "allow_categories": null,
+        "skip_categories": [],
+        "max_depth": null,
+        "format_max_decoded_bytes": 536870912,
+        "format_max_memory_bytes": 268435456,
+        "format_max_scratch_bytes": 2147483648,
+        "format_max_nodes": 100000,
+        "format_max_depth": 16,
+        "format_timeout": 120.0
+      },
+      "resources": {
+        "decoded_bytes": 100702860,
+        "scratch_written_bytes": 176461601,
+        "peak_live_scratch_bytes": 7742464
+      }
+    },
+    "whole_file_saved_bytes": 805888,
+    "savings_percent": 10.408676101044835
+  },
+  "validation": {
+    "ole_cli_regression_tests_passed": 876,
+    "final_generated_animation_controls": 43,
+    "generated_controls_python": [
+      "3.9.6",
+      "3.13.7"
+    ],
+    "focused_shared_suite_passed_on_both": 162,
+    "ruff": "passed",
+    "mypy_runtime": "passed",
+    "strict_openspec_items_passed": 109,
+    "canonical_requirements": 189,
+    "reviewed_source_blocks": 290,
+    "final_independent_contract_rechecked": true,
+    "both_ppt_and_pptx_original_hashes_unchanged": true
+  }
+}

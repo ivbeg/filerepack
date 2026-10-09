@@ -1,0 +1,27 @@
+The files 0018-doc.doc, 0029-doc.doc and 0066-doc.doc come from the DOC-tiny
+subset of NapierOne, a mixed-file data set created by the School of Computing
+at Edinburgh Napier University in 2021. The subset documentation identifies the
+source material as documents recovered from gov.uk websites between January and
+March 2021. Original-file URL mapping is held by the data-set researchers and is
+available on request; the pinned provenance records the exact source archive,
+member path, archive SHA-256, member SHA-256 and CRC-32 instead.
+
+The files 0113-doc.doc, 0670-doc.doc and 0771-doc.doc are additional unchanged
+samples from DOC-small.zip in the same dataset. Their individual archive/member
+hashes and sizes are pinned in provenance.json.
+
+The files 1825-doc.doc and 4128-doc.doc come from the DOC-total archive of the
+same dataset and collection. Their provenance records the archive/member
+identity and checksums. 1825-doc.doc contains one EMF and one raster; 4128-doc.doc
+contains one EMF and nine rasters. Recompression saves 270,848 and 184,320 bytes
+respectively beyond strict CFB compaction, and their LibreOffice page renders
+match the originals.
+
+Required attribution for the government information:
+Contains public sector information licensed under the Open Government Licence v3.0.
+https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+
+Please also acknowledge Edinburgh Napier University and cite:
+Davies, S. R., Macfarlane, R., & Buchanan, W. J. (2022). NapierOne: A modern
+mixed file data set alternative to Govdocs1. Forensic Science International:
+Digital Investigation, 40, 301330. https://doi.org/10.1016/j.fsidi.2021.301330

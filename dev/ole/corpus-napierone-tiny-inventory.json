@@ -1,0 +1,3045 @@
+{
+  "schema_version": 1,
+  "source": "https://registry.opendata.aws/napierone/",
+  "dataset": "NapierOne",
+  "accessed": "2026-10-05",
+  "selection": "All 100 regular office-file members of each DOC-tiny, XLS-tiny and PPT-tiny archive. Embedded subset-description PDFs are excluded from the office-file survey. Main unencrypted/normal datasets only; NOMAGIC and PASSWORD variants excluded.",
+  "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement",
+  "archives": {
+    "DOC": {
+      "key": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "url": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 22295533,
+      "sha256": "9c39cd014fdd19f907fd32c7708568d6d286d28d88b45f401d51484bf09ff22c",
+      "hash_sidecar_url": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC-tiny_zip_hashes.txt",
+      "hash_sidecar_sha256": "0de4cc856302f39db5b1a6a50d67ca014cca3ea996bf150e4386338c43c208fe",
+      "subset_description_url": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/DOC/DOC.pdf",
+      "subset_description_sha256": "c8438aac82b7ba059d1ad897f18e6affd301020c6839fc32aab903f71f1abce0",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    "XLS": {
+      "key": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "url": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 14624572,
+      "sha256": "43a6307553e065636c7b9adc0e40c898a31492636a65a0ceb40d0d438a154090",
+      "hash_sidecar_url": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/XLS/XLS-tiny_zip_hashes.txt",
+      "hash_sidecar_sha256": "417672d0b974d1241dfcb0febfb7532b7c320bddbcaee6314a3d1c40d8189d55",
+      "subset_description_url": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/XLS/XLS.pdf",
+      "subset_description_sha256": "3702932eec95cb7fa57e72df625082b73d87f0fedea9f4e2c249545609395e9e",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    "PPT": {
+      "key": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "url": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 129951756,
+      "sha256": "7746d7c6c140565867769e2f5f5e4d10d1f24c0946401bd8b2d3a10be56dd44d",
+      "hash_sidecar_url": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/PPT/PPT-tiny_zip_hashes.txt",
+      "hash_sidecar_sha256": "b27c49765fc017550a29c3456549ad5e8c841f0ea502f6ae948de27d04f576e7",
+      "subset_description_url": "https://s3.eu-north-1.amazonaws.com/napierone.com/NapierOne/Data/PPT/PPT.pdf",
+      "subset_description_sha256": "6d2fbc793acfafc72b7128e09551c4f2e29f698418e52d3b89ebb44735a1eed9",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    }
+  },
+  "files": [
+    {
+      "name": "0001-doc.doc",
+      "category": "document",
+      "source_path": "0001-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 88064,
+      "sha256": "77a487d6461cd59ea0d3605f0ec644bbd2e681cbc9e9fcf8184a5927c2a7e4ec",
+      "zip_crc32": "9c476a5c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0002-doc.doc",
+      "category": "document",
+      "source_path": "0002-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 41472,
+      "sha256": "6067c7965401f31dd75da6e396f715e44c6869a2796127cbb87cd8a3fd5ea8e3",
+      "zip_crc32": "93e3c3f7",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0003-doc.doc",
+      "category": "document",
+      "source_path": "0003-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 275968,
+      "sha256": "c5ec900d6b7895626534e529de976fc3e2ff6f0d9a87e7877a6804f420b8ec38",
+      "zip_crc32": "1d16c259",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0004-doc.doc",
+      "category": "document",
+      "source_path": "0004-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 80384,
+      "sha256": "18c6c93347028aaf7f43d6d493444f0593db0efb0282c7ddeb85a6c838b21c7b",
+      "zip_crc32": "913c4c60",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0005-doc.doc",
+      "category": "document",
+      "source_path": "0005-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 10125824,
+      "sha256": "0a1df603665e1124c41615cbbbfd7081cd9d7393a958160711f09c3699acbd64",
+      "zip_crc32": "1302b4e7",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0006-doc.doc",
+      "category": "document",
+      "source_path": "0006-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 98816,
+      "sha256": "b624447cd1b83555d9f68cb6d50be81dfe0a4d45bc435fca8ea604aa9c528c6c",
+      "zip_crc32": "f78b4646",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0007-doc.doc",
+      "category": "document",
+      "source_path": "0007-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 201728,
+      "sha256": "dda6a81df794d512fcfea36eeeb5fb7d251957dd4d627c6a50ce414730facb3f",
+      "zip_crc32": "f1f08fbc",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0008-doc.doc",
+      "category": "document",
+      "source_path": "0008-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 65024,
+      "sha256": "3a85de47704512fea5c7704c40a419088e039f3f44c99d30c97e3629f09ff950",
+      "zip_crc32": "398c5231",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0009-doc.doc",
+      "category": "document",
+      "source_path": "0009-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 457728,
+      "sha256": "3b1052c2ed892237d70aa21a9ed021f932aa479bfdd540f96073caf381bc687c",
+      "zip_crc32": "e50d41d8",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0010-doc.doc",
+      "category": "document",
+      "source_path": "0010-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 52224,
+      "sha256": "834bda051fd2562da3f17f09c87065096cf7c1852f59206ddbc40783fc352021",
+      "zip_crc32": "0df691ab",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0011-doc.doc",
+      "category": "document",
+      "source_path": "0011-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 166400,
+      "sha256": "98040aa87d4b54f9d3242c8994bbad57948fc2534d073a57b364338829c70699",
+      "zip_crc32": "9401538a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0012-doc.doc",
+      "category": "document",
+      "source_path": "0012-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 43520,
+      "sha256": "647044bdc39a412e72d3cd0e3ff820fac08eb018b003a1d1abc995862c8f8bed",
+      "zip_crc32": "d8391421",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0013-doc.doc",
+      "category": "document",
+      "source_path": "0013-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 69632,
+      "sha256": "514a51cec2e673769119ce475a1c1cd48967ad966ccf594ffc83bb513666c91f",
+      "zip_crc32": "246a4b7b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0014-doc.doc",
+      "category": "document",
+      "source_path": "0014-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 81920,
+      "sha256": "abe413043d636af0f6ccc3605a1614524739f7b2d61bc1dd1c445d164a546f32",
+      "zip_crc32": "362f93a4",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0015-doc.doc",
+      "category": "document",
+      "source_path": "0015-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 223744,
+      "sha256": "be3dd4a84b3422d2c98748255ad2476e70430959fe0de42d0f354fe629e8312b",
+      "zip_crc32": "fdb24742",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0016-doc.doc",
+      "category": "document",
+      "source_path": "0016-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 136704,
+      "sha256": "1cec4c664dac05ae585e8c15b1e997c1f0150d360937ecd9bb6ad18e83e01582",
+      "zip_crc32": "2ff238af",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0017-doc.doc",
+      "category": "document",
+      "source_path": "0017-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 129536,
+      "sha256": "1ee0e9a5bbebfdb4e60d3314886287656aaed152221fce3687ca8197618cb286",
+      "zip_crc32": "997d7e6c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0018-doc.doc",
+      "category": "document",
+      "source_path": "0018-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 245760,
+      "sha256": "08d37431abe3548fac67b88337f2ce8986b8caf4f2cea64e4be4ae9da45b83cc",
+      "zip_crc32": "431e638f",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0019-doc.doc",
+      "category": "document",
+      "source_path": "0019-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 105984,
+      "sha256": "57f4ff72cad8c6212522a41b0bdcf0df0706cdf778a59133a7981eb238d0b9cb",
+      "zip_crc32": "f0a66075",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0020-doc.doc",
+      "category": "document",
+      "source_path": "0020-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 198144,
+      "sha256": "b19e4e2224542d51a9ebc75c852fd8e20433c9445c8b899e3057f794cb38e585",
+      "zip_crc32": "78aac202",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0021-doc.doc",
+      "category": "document",
+      "source_path": "0021-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 66048,
+      "sha256": "4f12f2cdda51334374b10b893b8b11e70dccef6e04e9e54f029eb6229c3450f1",
+      "zip_crc32": "d16aeecb",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0022-doc.doc",
+      "category": "document",
+      "source_path": "0022-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 123904,
+      "sha256": "c95cd8e56ea67caec10299e7d17f491d0fea298f7f067c3b71bd189d85b6912b",
+      "zip_crc32": "c3e0f615",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0023-doc.doc",
+      "category": "document",
+      "source_path": "0023-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 750080,
+      "sha256": "0c80b24f2a30b264848c7f668fe5d10c454c7e47fa2920574108f83679bcf530",
+      "zip_crc32": "0ee536ad",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0024-doc.doc",
+      "category": "document",
+      "source_path": "0024-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 40448,
+      "sha256": "80fc14896a61cb5ddccade79a63d25517cb904fcdcd061f591502bdf4d7498bc",
+      "zip_crc32": "f41e2fcf",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0025-doc.doc",
+      "category": "document",
+      "source_path": "0025-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 40448,
+      "sha256": "b4beafa77eb98c65f673d25dfa8bcb96d0817c76760245e567825da31ecc5bea",
+      "zip_crc32": "1fef1c4b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0026-doc.doc",
+      "category": "document",
+      "source_path": "0026-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 70656,
+      "sha256": "07c07c35e81cb0d2b6c14b1bcff5e7955ea1e7da3893d02a50ac9363a1c4eb8e",
+      "zip_crc32": "28b553e6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0027-doc.doc",
+      "category": "document",
+      "source_path": "0027-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 245248,
+      "sha256": "bd4f7959f298aadae38587b8e71aeda299c8f63d77bad4a6e00e0fb07aa74a89",
+      "zip_crc32": "a36e716f",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0028-doc.doc",
+      "category": "document",
+      "source_path": "0028-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 155136,
+      "sha256": "e25d2311632c0afbada4674e22ed893df6cf45e990bd0ad9e815dfd5eda59151",
+      "zip_crc32": "12e6628e",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0029-doc.doc",
+      "category": "document",
+      "source_path": "0029-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 153088,
+      "sha256": "8179fbe2c8b371aa00d832de56717bd7b77b73b0fa22595aa6dc6da691178379",
+      "zip_crc32": "f2544f59",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0030-doc.doc",
+      "category": "document",
+      "source_path": "0030-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 188416,
+      "sha256": "5c9e11fc3916b3c3374ced650fe992927fb3550e69a90373417c063eab923d18",
+      "zip_crc32": "aceaee8a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0031-doc.doc",
+      "category": "document",
+      "source_path": "0031-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 173568,
+      "sha256": "3055ec5c0c422d5a0df623d97c74ed072c4f318f45282d72442be517aebca062",
+      "zip_crc32": "9adf9cfd",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0032-doc.doc",
+      "category": "document",
+      "source_path": "0032-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 916992,
+      "sha256": "74ee1443f433faa4fc70fe87e38cf1824d8b278e85e42d99b99871842d721add",
+      "zip_crc32": "44cd840c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0033-doc.doc",
+      "category": "document",
+      "source_path": "0033-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 39936,
+      "sha256": "05a671d891b7b318b7637827a102fe580a249a824b603669c3661d1a63aed32c",
+      "zip_crc32": "3fef5900",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0034-doc.doc",
+      "category": "document",
+      "source_path": "0034-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 57344,
+      "sha256": "dc66c77ebd86fbff72bc6045f8bf5eb8d0e43be98d9a13e0ffd648b3d06c36e9",
+      "zip_crc32": "37593d26",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0035-doc.doc",
+      "category": "document",
+      "source_path": "0035-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 59904,
+      "sha256": "052feec9eb9f7c524468efdfdbfd6acd53ff74139a4ea00e8c6995ae0449d228",
+      "zip_crc32": "3b312858",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0036-doc.doc",
+      "category": "document",
+      "source_path": "0036-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 56320,
+      "sha256": "e548cfbf4a41e3bf9e326441529df98abb3ff974620b7863cca10afea01b0f78",
+      "zip_crc32": "27ed2042",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0037-doc.doc",
+      "category": "document",
+      "source_path": "0037-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 294912,
+      "sha256": "db7f3568f4c42e2e0e816743a418a30e8c323667c3f11c1c04fd9f91be42b295",
+      "zip_crc32": "e24048f6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0038-doc.doc",
+      "category": "document",
+      "source_path": "0038-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 162304,
+      "sha256": "e8f42f43308feb544a38bbda4741ec86b98ef3f7b82c1bf24ac23147086d479a",
+      "zip_crc32": "f19ae2b8",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0039-doc.doc",
+      "category": "document",
+      "source_path": "0039-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 79872,
+      "sha256": "429cadbb397fbdca11044e86c4d6d21599bc3c26b06c8568537ecacf94d368db",
+      "zip_crc32": "e963bf97",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0040-doc.doc",
+      "category": "document",
+      "source_path": "0040-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 819712,
+      "sha256": "506ac21e4ab31247c0813dcb6ea3e1f2641edcb1a9a0832aff0d9582b173d1e2",
+      "zip_crc32": "5471c9aa",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0041-doc.doc",
+      "category": "document",
+      "source_path": "0041-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 167424,
+      "sha256": "b872b2ffb4b3f33f4301591492c66ded6e6ba3c60b2f7322f8931be4231a10f6",
+      "zip_crc32": "fda173b9",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0042-doc.doc",
+      "category": "document",
+      "source_path": "0042-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 1077760,
+      "sha256": "7f03799faac3700d20d06712fceaeebee14396c39de38654e31059a0e946ade2",
+      "zip_crc32": "75958aa1",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0043-doc.doc",
+      "category": "document",
+      "source_path": "0043-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 32256,
+      "sha256": "b30f87a71d7c03f0dab70a667abb3997ca3bf4398689ff99ce381646a199b592",
+      "zip_crc32": "4cc74b75",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0044-doc.doc",
+      "category": "document",
+      "source_path": "0044-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 145408,
+      "sha256": "43f92a7f01c5eebf91721ab11c91245ad332f082fb2bd2568dd456efe8b2491c",
+      "zip_crc32": "14541e3c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0045-doc.doc",
+      "category": "document",
+      "source_path": "0045-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 36352,
+      "sha256": "edb7f4898287175cc021b953305253de79e58b44e225c613ecc03f1c5fc0f9f5",
+      "zip_crc32": "79f1312e",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0046-doc.doc",
+      "category": "document",
+      "source_path": "0046-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 35328,
+      "sha256": "e323fa0a2512bc3b499265b28178c9bb18683ac5b233b09972a9327eab08701e",
+      "zip_crc32": "d12aedfb",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0047-doc.doc",
+      "category": "document",
+      "source_path": "0047-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 1441792,
+      "sha256": "c2ada454e79d27355fffa7ab0e6952199ae8ae63930e56d03d84dcaed849babe",
+      "zip_crc32": "7c091d28",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0048-doc.doc",
+      "category": "document",
+      "source_path": "0048-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 159744,
+      "sha256": "fc3fb108d65cb07924d02562c123647a7f249ec16d445ab882fa84f8ed0706d1",
+      "zip_crc32": "540e57c2",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0049-doc.doc",
+      "category": "document",
+      "source_path": "0049-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 79872,
+      "sha256": "218cf680aef6671f142032f293ac8f1b9938b45a9887b20a980d505b80718be4",
+      "zip_crc32": "44133929",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0050-doc.doc",
+      "category": "document",
+      "source_path": "0050-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 158720,
+      "sha256": "8c6cd009ad8eda43829452cac32fb1df6b752407c4020dcaf38fe86748867720",
+      "zip_crc32": "9490edfc",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0051-doc.doc",
+      "category": "document",
+      "source_path": "0051-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 1560064,
+      "sha256": "8862e9a4252d90809e8a4355a4c6ad30c9181cfc8588ac610ec1182027db84b7",
+      "zip_crc32": "3a43786c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0052-doc.doc",
+      "category": "document",
+      "source_path": "0052-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 61440,
+      "sha256": "48fc340b3afbbfcb3804867ccec5e72e162288be518a85a1f29a67d76533624c",
+      "zip_crc32": "d8199bce",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0053-doc.doc",
+      "category": "document",
+      "source_path": "0053-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 123904,
+      "sha256": "836302c61f7730841b9f005d12d1131cd9fcb2346585adff0aa58e7d732eae6d",
+      "zip_crc32": "fb0fe708",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0054-doc.doc",
+      "category": "document",
+      "source_path": "0054-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 402432,
+      "sha256": "f12c1eaaa68827080a7c86c0ae1d14a1b18ceacbab4b12af1fc645ec4cc5e0b1",
+      "zip_crc32": "1e6df0ca",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0055-doc.doc",
+      "category": "document",
+      "source_path": "0055-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 410624,
+      "sha256": "e1bca68c454cad62daafc4f450b1494061c8925c67065abd7a5760126c9481d7",
+      "zip_crc32": "9c0e45ce",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0056-doc.doc",
+      "category": "document",
+      "source_path": "0056-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 64512,
+      "sha256": "6d7f65b7c7862a8abf026bd498cd0f76d6c4c95d3797a6b6034557cbd92fa8c7",
+      "zip_crc32": "5c9f965f",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0057-doc.doc",
+      "category": "document",
+      "source_path": "0057-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 50176,
+      "sha256": "5ab2020a9f5c216ccbeeaf362ca0ee2b1d3b8eabf1fac005cb0884e0d9b667e5",
+      "zip_crc32": "5fdad919",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0058-doc.doc",
+      "category": "document",
+      "source_path": "0058-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 815616,
+      "sha256": "57f3e755acde157a7d50c796dce28576d4577d850ca5ed4f16c5c47010a5af5f",
+      "zip_crc32": "557f3d4e",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0059-doc.doc",
+      "category": "document",
+      "source_path": "0059-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 216064,
+      "sha256": "a9eb6aafc1b3fdb31c452099e75be681924557b20b92db848c146cc960d19824",
+      "zip_crc32": "81408b79",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0060-doc.doc",
+      "category": "document",
+      "source_path": "0060-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 147968,
+      "sha256": "fc782f1ad5a9ed42a2e04e703c10e45336e9f7d8d99ecbe6ee1d4e1dc1f6ff94",
+      "zip_crc32": "b6352123",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0061-doc.doc",
+      "category": "document",
+      "source_path": "0061-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 163328,
+      "sha256": "9626a9b14825b92f3b560072529b4ee93ec665d1a98e9d0f4b9b27421cb66a71",
+      "zip_crc32": "f7329200",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0062-doc.doc",
+      "category": "document",
+      "source_path": "0062-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 102912,
+      "sha256": "4745daab9b98e91309aaea3c4a52e6f4eb8dbe3f50e140ea17e73e43c5164d3f",
+      "zip_crc32": "8d0fc052",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0063-doc.doc",
+      "category": "document",
+      "source_path": "0063-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 151040,
+      "sha256": "dc47283c63d809ff5951f7476593ae7c0a55b9315634ce320aee6d8825fe2220",
+      "zip_crc32": "536c3df8",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0064-doc.doc",
+      "category": "document",
+      "source_path": "0064-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 93696,
+      "sha256": "5a4dfbfdb6174cf03af24550763f0301f05e9805798ff689bdbc6b92cee8bbf1",
+      "zip_crc32": "d9fb3dfe",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0065-doc.doc",
+      "category": "document",
+      "source_path": "0065-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 66048,
+      "sha256": "328375f5efd9cdafe7642d1d08334dd06aceea5f0f92d75fd1fad28ed02a4be2",
+      "zip_crc32": "bd3e8ac7",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0066-doc.doc",
+      "category": "document",
+      "source_path": "0066-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 718336,
+      "sha256": "0e6914c32c1985ffc64b31b5eeaf42e26a4e2762ddbd4062dacbcb6c0f2f30ee",
+      "zip_crc32": "a49d5a6c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0067-doc.doc",
+      "category": "document",
+      "source_path": "0067-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 718336,
+      "sha256": "79808ced66f452cf991922bc333dbb8c4af60c2f16bcaad6d7f83821778ee610",
+      "zip_crc32": "7bc31414",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0068-doc.doc",
+      "category": "document",
+      "source_path": "0068-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 57856,
+      "sha256": "b832730085130e7dbabe7273e5aa78e60a1ffce933a67d586718ce26d47f6d0b",
+      "zip_crc32": "3692dcbe",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0069-doc.doc",
+      "category": "document",
+      "source_path": "0069-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 78336,
+      "sha256": "846d756c7cc280266592958161540a2816be51604130af368c54cad9a09a2ff4",
+      "zip_crc32": "8b50f59b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0070-doc.doc",
+      "category": "document",
+      "source_path": "0070-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 34304,
+      "sha256": "be7146c492fa54978a749cbd96bef8a5ef86a586165f34e34722f8e4e798f39a",
+      "zip_crc32": "753ccba5",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0071-doc.doc",
+      "category": "document",
+      "source_path": "0071-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 51712,
+      "sha256": "937e9afd424c72f41abece7781fb2fa7cfb9f97aff80f15e1a747d6a7d57083c",
+      "zip_crc32": "0073b5ab",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0072-doc.doc",
+      "category": "document",
+      "source_path": "0072-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 51712,
+      "sha256": "24044dd332ed4441c02bee6d80fdb9b47509489d88036fd47445be562a7089a4",
+      "zip_crc32": "0626b853",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0073-doc.doc",
+      "category": "document",
+      "source_path": "0073-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 51712,
+      "sha256": "23eff8de9ee34619aa2293d976de4f3deaea5904ff0963e02262475b3d276135",
+      "zip_crc32": "cec6db31",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0074-doc.doc",
+      "category": "document",
+      "source_path": "0074-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 51712,
+      "sha256": "37ae75d5e359d3bbe25042fe29733336158c58255a1d5988abb21cc76df99fe8",
+      "zip_crc32": "8fb8e5d6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0075-doc.doc",
+      "category": "document",
+      "source_path": "0075-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 51712,
+      "sha256": "f5e53144e79529a87fcdd301b44131ac2c9bcbf541f137743479d75955498028",
+      "zip_crc32": "d073dc61",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0076-doc.doc",
+      "category": "document",
+      "source_path": "0076-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 51712,
+      "sha256": "de5dc0a1a08fc164afd0f6e5c67e13810d21aeb44949d3ff805b210d6497b79e",
+      "zip_crc32": "26b74641",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0077-doc.doc",
+      "category": "document",
+      "source_path": "0077-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 51712,
+      "sha256": "4c5b8611c751f651b395647f49f0b4fd2f001537c397e337aa6879868800bd51",
+      "zip_crc32": "1c0ff9f1",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0078-doc.doc",
+      "category": "document",
+      "source_path": "0078-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 51712,
+      "sha256": "69271f3f976e2d97b49ea89cdab0b5ef9d19a9579132d8fc0298e41666cf4d1e",
+      "zip_crc32": "e1d47fc2",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0079-doc.doc",
+      "category": "document",
+      "source_path": "0079-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 51712,
+      "sha256": "e8f02f2e4ca4ec901cf24561898920a8f920aa242056dfd463e48bc92eb2a107",
+      "zip_crc32": "027e98dc",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0080-doc.doc",
+      "category": "document",
+      "source_path": "0080-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 54272,
+      "sha256": "f4969821e0a5a2dd2367bbbae5131e3d77056a824527ad432a888c821b0fb0e0",
+      "zip_crc32": "0af35542",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0081-doc.doc",
+      "category": "document",
+      "source_path": "0081-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 52224,
+      "sha256": "65a5ff3b31ca27428faa7f9e10f6936970864a6055eedd070d0cede5cbcf1e51",
+      "zip_crc32": "36402fa3",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0082-doc.doc",
+      "category": "document",
+      "source_path": "0082-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 52224,
+      "sha256": "9b9ddfc472910b32ddba01fecb75016ad32edfb64f198720435c4b9094fea3d5",
+      "zip_crc32": "c5b4347f",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0083-doc.doc",
+      "category": "document",
+      "source_path": "0083-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 52224,
+      "sha256": "a740fa296d85a7f28a9196bd426f8d2f5bd77e47a2cab846ae01702e3bed8e5b",
+      "zip_crc32": "e62cc221",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0084-doc.doc",
+      "category": "document",
+      "source_path": "0084-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 53760,
+      "sha256": "8260f9a7a2f7b7b371e56742118b3eabe45215cdeb7a05c83ff1a49382e01c24",
+      "zip_crc32": "dc021bf9",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0085-doc.doc",
+      "category": "document",
+      "source_path": "0085-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 426496,
+      "sha256": "3256cc9611412c21a03df65f4d0c160331cb327539d4907af6d43d213bb066ce",
+      "zip_crc32": "b4f393f5",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0086-doc.doc",
+      "category": "document",
+      "source_path": "0086-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 120320,
+      "sha256": "7fccdd8576a0441c0723b25ce27dcd731b946cab7a86d10575f47745c3dc5ec7",
+      "zip_crc32": "fbc8c5f3",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0087-doc.doc",
+      "category": "document",
+      "source_path": "0087-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 140288,
+      "sha256": "0e806ec5b75025a369eeb80d42f53390d831dc085f01e588a304f2fc45f8167a",
+      "zip_crc32": "9a36c9f0",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0088-doc.doc",
+      "category": "document",
+      "source_path": "0088-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 46080,
+      "sha256": "9dcb69bb3d782f3eb616a7d320559823d5aeb0432b55404fd300e11a0890a351",
+      "zip_crc32": "361464fc",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0089-doc.doc",
+      "category": "document",
+      "source_path": "0089-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 73216,
+      "sha256": "16a1cdd69c11e43d1eeab5818042fa399884159ceabfdab60c260afa2a99ef63",
+      "zip_crc32": "d17ed555",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0090-doc.doc",
+      "category": "document",
+      "source_path": "0090-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 32256,
+      "sha256": "92a2edeb4c3c8109ae716cee51e5bbb44e57bb0aa5d8365777d67eecc87c1ca8",
+      "zip_crc32": "84fd79d9",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0091-doc.doc",
+      "category": "document",
+      "source_path": "0091-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 52736,
+      "sha256": "7bc3d8a792bd0eeaddcae86a6e94f86c115c5ca264440a0154d4ffb2c272038e",
+      "zip_crc32": "fc3bed89",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0092-doc.doc",
+      "category": "document",
+      "source_path": "0092-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 74240,
+      "sha256": "dc249aa85b5895e46bf5a1cedd46cece1b82bd069b43cb10b6b635afa4d3147e",
+      "zip_crc32": "24e9e8ff",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0093-doc.doc",
+      "category": "document",
+      "source_path": "0093-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 93696,
+      "sha256": "40c2ffd85bfd13c69b4a79620fa262bc11cd0570c7d7ed6c318264695f09cbe3",
+      "zip_crc32": "eb009d5f",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0094-doc.doc",
+      "category": "document",
+      "source_path": "0094-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 118272,
+      "sha256": "7ad78e480f30403f9d79ea7b852b74b86f515f3df865cd4a254ea63c0d0a4319",
+      "zip_crc32": "1da0bbf6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0095-doc.doc",
+      "category": "document",
+      "source_path": "0095-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 85504,
+      "sha256": "5ea242a7ce4033c5f91e7ffc982eff78978cae8b06f49afd215ebd7f547c3652",
+      "zip_crc32": "ca042e02",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0096-doc.doc",
+      "category": "document",
+      "source_path": "0096-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 75776,
+      "sha256": "3da818b1eb6c89bec735d8dc9f27e97a95298b639fd6ef0a60c560fde277f52b",
+      "zip_crc32": "64022f9e",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0097-doc.doc",
+      "category": "document",
+      "source_path": "0097-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 71168,
+      "sha256": "2731d6a3a25e7e99a925d098a07d859b263b6d3eb8fc6692bda90fd79b81328b",
+      "zip_crc32": "49722b32",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0098-doc.doc",
+      "category": "document",
+      "source_path": "0098-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 1093120,
+      "sha256": "8b6267b3b44276c82bca4b68eb4108d4d1c94b6a03a583cd6318460d83c451fb",
+      "zip_crc32": "2ae250c6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0099-doc.doc",
+      "category": "document",
+      "source_path": "0099-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 35840,
+      "sha256": "e280b1c8cce8c398c4ea03bf1307ef0be3716e8d2114d7e4b4ee69a76e31e9bc",
+      "zip_crc32": "3db58f60",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0100-doc.doc",
+      "category": "document",
+      "source_path": "0100-doc.doc",
+      "archive": "NapierOne/Data/DOC/DOC-tiny.zip",
+      "bytes": 95744,
+      "sha256": "0e5bd8857d2be4254a99ec6abe5af39e3a0f43d5ab61206f8b6b9b7e225fa05e",
+      "zip_crc32": "133832bd",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0001-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0001-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 77824,
+      "sha256": "5349101e36bc81d55299cb6d98eaad7e3b4ea38d36a321a49f3b2c3dd2c5449e",
+      "zip_crc32": "ac3693ec",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0002-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0002-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 699904,
+      "sha256": "4d6b514d2770620dee69c72329c343fd52db1f88bec1726edaf1a0e503e3bfc7",
+      "zip_crc32": "813959d4",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0003-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0003-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 257536,
+      "sha256": "2dedddbde9075d09fc1d10c4ffa36cb3d8d9bfc9a7d14562a6af51cd547cfcc9",
+      "zip_crc32": "86f32ab2",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0004-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0004-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 1182208,
+      "sha256": "ba1a2b9eab6e1bbebcdc2f757e9054a5b122f6915dc02f7d619bdaf1562072e8",
+      "zip_crc32": "303196e0",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0005-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0005-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 877056,
+      "sha256": "2c532188c40a365361bc85364523e7bc103a1a928f3fc43c708ce1255c35b9cc",
+      "zip_crc32": "94a078d1",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0006-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0006-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 6924288,
+      "sha256": "1c382a517c82d2106ac67c2d096be563f0ecc630131bda627f05db4f2ed4269c",
+      "zip_crc32": "e96b4b3e",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0007-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0007-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 3888640,
+      "sha256": "c09d6323468bb9c99f3eb69beba6308fef81cbc2cd8f97bc56eac58b81f6bc81",
+      "zip_crc32": "3c413bb2",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0008-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0008-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 3311616,
+      "sha256": "f3d67e98914854a6833b0dcbe1014246579f01a797c5ecf6d2ce1ba94c87e3cb",
+      "zip_crc32": "a70e3f9d",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0009-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0009-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 6964224,
+      "sha256": "483221c5804c3be6319d5f569beeea7c9494f398b47da5e4c190cce106a3bb65",
+      "zip_crc32": "0ad32a97",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0010-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0010-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 6927360,
+      "sha256": "a0415990e1e59b9ddb36ba199846eca9d220cb3d4f2db0fa08d879d288f9ebc1",
+      "zip_crc32": "ffeae308",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0011-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0011-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 145920,
+      "sha256": "8dd21d34f06768a7a8f8b350d0c9213c645e5a3d4e3b10770ed3c097f3db081c",
+      "zip_crc32": "b17d1220",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0012-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0012-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 31744,
+      "sha256": "1be45979ab24de6783b525e47547978b162b532e672bdc158e8742adf085e63c",
+      "zip_crc32": "69ff357c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0013-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0013-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 34304,
+      "sha256": "46872bbcdc011292c3fcffa5b4fdd37b9d8f56be0c5d95349035c6f918be4086",
+      "zip_crc32": "929b0a6d",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0014-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0014-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 31232,
+      "sha256": "f59f18d862a91c47844e3b439d1312a5c6781742e8b4b073c636a6ffc7adac8c",
+      "zip_crc32": "5b9f0fc6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0015-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0015-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 34816,
+      "sha256": "66d62a7daa44c03c7b5f2eb1cc6f1f92f22b43b380735ea80eda32badc0a8dc5",
+      "zip_crc32": "bf2de99b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0016-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0016-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 42496,
+      "sha256": "d5b9e3cd2373ce5884e1fefcd3dcd46afb46c648784747ccf3f30c311f5a82e4",
+      "zip_crc32": "e760de2b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0017-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0017-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 42496,
+      "sha256": "ca1df94abdf5a35470d26e9529691fc658b3a1ba6a40a006a5a7285ef6d76ba1",
+      "zip_crc32": "9b75ff23",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0018-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0018-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 48128,
+      "sha256": "c35ed9118ba25e343cfe300e04e95246395e838e482cb933e79d72a636fd2f20",
+      "zip_crc32": "083db74e",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0019-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0019-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 27648,
+      "sha256": "3e7f6f79066bf9bb58a34c76af1f429807fbcf8663bf2c187479e0a97a403f53",
+      "zip_crc32": "112ea974",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0020-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0020-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 27648,
+      "sha256": "6a14de7ebf6b42265e6ee89be9325179d33d20830a47e7cf1ef8e97eb52bf967",
+      "zip_crc32": "f80bcbcd",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0021-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0021-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 29696,
+      "sha256": "1fbad96c3e4e1e8b2c892ea1ffc8b8c72f5dffb3ff3c524190e9cbe7e2234f51",
+      "zip_crc32": "22f9282f",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0022-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0022-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 31232,
+      "sha256": "56020e92bc2aeb1fa9b51f4873c6ca11dcd0cf4b932bd1ab994e6a6e943a301c",
+      "zip_crc32": "56a9aeca",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0023-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0023-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 20992,
+      "sha256": "68bde0d8ca3c1e03cce5decf16c2cc99f9d12599c6545b9ef004fa38cf96326e",
+      "zip_crc32": "0e7e043f",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0024-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0024-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 28160,
+      "sha256": "5db2c68bfecb8359c2de10cd07f439d15ed0d6a50b46eea9167d887bcaafe026",
+      "zip_crc32": "c0303cb8",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0025-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0025-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 22528,
+      "sha256": "1d1fcf54833ff3b92720b0755e8665cb24c2bfc8b997f7b73cbf1a1d015730ab",
+      "zip_crc32": "dbff4e13",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0026-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0026-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 36352,
+      "sha256": "bfb03a61fbacd07b9ffc1b580f376fd73b49196b23a6bc7c1c65b278b69ecf45",
+      "zip_crc32": "4b4f09f7",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0027-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0027-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 34816,
+      "sha256": "a3b431bc47ece5764124e7e21be6927f87f555942038a1a1143e09aa0b89cb8d",
+      "zip_crc32": "23381121",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0028-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0028-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 32256,
+      "sha256": "04301bc2f84bf3e2af28770804cf4b48984086eacf9e5e6098f457407ad2d0ca",
+      "zip_crc32": "f00b9941",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0029-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0029-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 32256,
+      "sha256": "966e3f310423fd8b0308f8057ba5f522b3a561753e4e119b12106e062a437041",
+      "zip_crc32": "ea5370c0",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0030-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0030-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 49152,
+      "sha256": "bb203610b1364edf1e711181b295dbfc90a1065a18938f89bb93100a4e6b7cf1",
+      "zip_crc32": "9e17d6f9",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0031-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0031-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 33792,
+      "sha256": "48647d1ed867efaab1ecbf27999d4d8d778c7739a5c7100246cbb3272d886c1f",
+      "zip_crc32": "187c127c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0032-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0032-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 40960,
+      "sha256": "59801a3b4ba356f525e68ff79525a4fce7ec0ee2e9fded569a17629744b43a74",
+      "zip_crc32": "315ea083",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0033-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0033-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 19456,
+      "sha256": "dd424f6d6efbb754032a18fa0f0f096adb97610208c0f02a2259ab1102f76a3e",
+      "zip_crc32": "c06b9a70",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0034-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0034-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 47616,
+      "sha256": "5eaa5aa91eb58c2a956fb5300410a2f3c46f622205c590445cf0a174c72298eb",
+      "zip_crc32": "b5f40245",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0035-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0035-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 36352,
+      "sha256": "eec740b662c3ace9779ecde204db0919003939574fa6ff9cda939cb9eb46c597",
+      "zip_crc32": "45b0bd3f",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0036-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0036-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 31744,
+      "sha256": "8f0546ce65b4f36a3a715c729183fa66c4668ee4920e13d7424790d9b69e5762",
+      "zip_crc32": "bdeeff05",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0037-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0037-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 22528,
+      "sha256": "67af86bf10d22c2aa6594d05c608d6c86a9fb1dc12cbe871bf3c6cd9c19848f1",
+      "zip_crc32": "b35b5bbc",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0038-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0038-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 21504,
+      "sha256": "4150b18945efec2b80151a3023f0bbdb075fa49d9883110c16c87828bed75524",
+      "zip_crc32": "b1784f44",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0039-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0039-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 51712,
+      "sha256": "af302848420210603c6635237ab2b8b2e6ceb66bc6c05416d615df1a4198dfd4",
+      "zip_crc32": "d5e2dc7c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0040-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0040-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 71680,
+      "sha256": "9fc93c0e8340198914429be45e70188945705afeb2b9ac9bee0746695095e42e",
+      "zip_crc32": "a4dd7dbc",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0041-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0041-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 18432,
+      "sha256": "8c37c42acfb8a8b2c3b1a7a6e12579249fde97f7dd48921bfb65dd89bc67522e",
+      "zip_crc32": "7a021359",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0042-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0042-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 20992,
+      "sha256": "2156cb7b81210063c7f1326f6f6a3850f9ed25223a98619704ab30c9fc839e70",
+      "zip_crc32": "06666774",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0043-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0043-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 20480,
+      "sha256": "0ead6a58770bb5aa59de38be9d42854eff4ac0e0ec117dffd6d070b1e3388138",
+      "zip_crc32": "438d3a5a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0044-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0044-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 26624,
+      "sha256": "996967cb23ad1faf6fad274e196caa3f7ba38bbda4e173a19d69496f7ac1c191",
+      "zip_crc32": "317246b9",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0045-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0045-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 31232,
+      "sha256": "745241a48e157f7bc5f4fb6b491501b7db53461fc4f745ddd312d52b8d1578b7",
+      "zip_crc32": "56d01af1",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0046-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0046-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 42496,
+      "sha256": "ce7c28f24faa1376ace814be1438c5fbfee9f74823edca58ad83b64cc4b4bcc6",
+      "zip_crc32": "2e55d083",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0047-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0047-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 34304,
+      "sha256": "55979b90cded4e72bd8f8e41e7c7a74980e429a056afd7302cd7b879375d335c",
+      "zip_crc32": "81d253d5",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0048-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0048-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 41984,
+      "sha256": "c77ef73e8d8109a9110fdfefae18a5173bc63e2831e76eec5a9599edafdc6f2e",
+      "zip_crc32": "af4ef60a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0049-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0049-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 20992,
+      "sha256": "07f1f8e8496c4e2e4315097f6d51f7f004029f445503976ff10134fef7183721",
+      "zip_crc32": "99191bbf",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0050-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0050-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 27136,
+      "sha256": "60171fc4388aa949e81f4a53aba9828b826d83f427183458c4bbee3c18ba1001",
+      "zip_crc32": "759334ee",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0051-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0051-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 18432,
+      "sha256": "4592f46cdd7888f8ea711dbef31e4493f7fb67233f33585955555c3f7165ecce",
+      "zip_crc32": "713a0eb2",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0052-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0052-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 51712,
+      "sha256": "b402c04dcccd57cfb334715c592cb45836b3cdc4f3223bef729425ecd548f88d",
+      "zip_crc32": "f9a1cc0e",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0053-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0053-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 51712,
+      "sha256": "90b7cd87b678b5e5c2063e20e0c9321abcf84a67ab5efea6dc6f742a5b2891e2",
+      "zip_crc32": "1a642243",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0054-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0054-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 33280,
+      "sha256": "6a934d6e9f55f75699a5c4cb906e337a714e607bc6b8ac4c5809da5d6e0f516a",
+      "zip_crc32": "53413dae",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0055-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0055-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 27648,
+      "sha256": "dda389e57a6e3ef7c9b98bf795a1bf630998f343c105a59ed5bd20f0db5b6d88",
+      "zip_crc32": "0f648796",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0056-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0056-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 31744,
+      "sha256": "46485e022279ccaccd9df01147ae8b6446cf299f7a4216712804190cd659a5fe",
+      "zip_crc32": "6ec49e00",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0057-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0057-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 20480,
+      "sha256": "794a47061c969f4cf66ed1b7640bc892858da184e959f567de19255bfc6d48ad",
+      "zip_crc32": "bd4e3ee8",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0058-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0058-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 48128,
+      "sha256": "c1d5cd8ea21f3eb02f70dcb2da165929a45699631bb7eacb2f44ebda57b1cb3a",
+      "zip_crc32": "69fb0b82",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0059-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0059-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 8473600,
+      "sha256": "f48549b439b5bb9f3ef560d73bbb27784e4372533ab3a8402f3eb7e41246f1bf",
+      "zip_crc32": "007326cb",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0060-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0060-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 262144,
+      "sha256": "3b99a40d36772664f33dd62304c1cab7e75c4fd3be6fadd7724f620252da01c7",
+      "zip_crc32": "0182b9cf",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0061-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0061-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 20992,
+      "sha256": "e7f4a459b54a9e700f6d50c65dabf6ede92becbee8c37e1e511cd0778e28657d",
+      "zip_crc32": "4f4595df",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0062-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0062-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 22016,
+      "sha256": "6624195618f91765d89f8239d6952f641ed56b436bb2ca28f86cdcbdf9b72407",
+      "zip_crc32": "51febf95",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0063-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0063-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 28160,
+      "sha256": "d765d5d08f45d4e3d9e0f2c5c73a41dc9bba287ecb3d49fa487fe4112b93addd",
+      "zip_crc32": "5e55acd8",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0064-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0064-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 71168,
+      "sha256": "dcdb854e0db6cedace2bebf116eb8f77acaf6480aab0404b4b89c9ce5b113ecf",
+      "zip_crc32": "e7ff8eaa",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0065-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0065-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 25600,
+      "sha256": "de10f466f7e7681c75fbe05cb3510125874250db00b439aec4ff3414e3d482e8",
+      "zip_crc32": "3b5b0cf6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0066-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0066-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 29184,
+      "sha256": "468ee5a75e0082ed0ab58eb1b03b85b9882359f1db454a796586940f97eda247",
+      "zip_crc32": "ff029a51",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0067-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0067-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 265728,
+      "sha256": "03acb204c521455e55f55ed0a08d699412c9b6e6b6517d45cbafb24d300b9be6",
+      "zip_crc32": "2c5d59dc",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0068-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0068-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 58880,
+      "sha256": "be250df22294619961545df925c0fc1f0c2f5a21d9eda54707c25091b7d02ca7",
+      "zip_crc32": "9e8d9324",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0069-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0069-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 94720,
+      "sha256": "f2062a0e0e0578af5bc1f078b77309f43eb63defe68000ff44ed96110ea36954",
+      "zip_crc32": "0024039d",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0070-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0070-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 26624,
+      "sha256": "b0cc1a5e883662235cf4692cae498a3f9f31888e94f1aead657293fc998edb4a",
+      "zip_crc32": "ed7b7676",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0071-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0071-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 17920,
+      "sha256": "2b83d66ac08c81d33d823d11cc77cf399a527acf08aa9f08a89044f37a9a5054",
+      "zip_crc32": "9ca9f760",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0072-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0072-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 34816,
+      "sha256": "7eb1a6a08460c4dd8efe24c07f66d449ba6e9fb09cfc541c678c95faffe345a8",
+      "zip_crc32": "9cdd622a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0073-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0073-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 1646592,
+      "sha256": "e679fda279db21657665cbfa4bfc16b277eb2bbfd847d6a2d741a28efc0fd13e",
+      "zip_crc32": "e36ad171",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0074-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0074-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 26624,
+      "sha256": "02eae6795bd561934206f6f344852f47bb338e04aa84fbca98e70ccd1f22d584",
+      "zip_crc32": "e980ba7b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0075-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0075-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 40960,
+      "sha256": "1fade9e49a3b2c1593aea18231256bcd667e26a9ddddb0b8d4df624a79f13d3e",
+      "zip_crc32": "fb396163",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0076-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0076-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 17408,
+      "sha256": "cad274c6188b2b89d1335132b53118a32644ba02e80b75051519267e1ad7608b",
+      "zip_crc32": "74363ba5",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0077-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0077-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 30720,
+      "sha256": "c63456d78365c3384d80ef197e6939b89006d46ba227a130d8ebee6acb5426cf",
+      "zip_crc32": "d55c16b6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0078-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0078-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 26112,
+      "sha256": "c088de4fc3a16c7ec602f16dd2d45039a5196d8e7010456acc9d3d51c59e5eaf",
+      "zip_crc32": "e8ce63d0",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0079-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0079-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 60416,
+      "sha256": "36736f364fe3478e6ea3fc8a61397697638845643361c3647d775cf6be21cee8",
+      "zip_crc32": "be2d21c3",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0080-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0080-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 65536,
+      "sha256": "e2c158c47ff2999ba5ab3d65d91cb17176acb37297ffa50f38923257c1c036c4",
+      "zip_crc32": "a1048cac",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0081-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0081-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 29696,
+      "sha256": "fa456656ce99589906c350e9bc08ce243572f0247fd1ae4d35cf0cadc8eaefaf",
+      "zip_crc32": "2cd01236",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0082-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0082-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 46592,
+      "sha256": "b1ed3e529f5d24db358dae451a4ddc044994ca67276a465234d21a5aaa39b71f",
+      "zip_crc32": "ff8bd523",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0083-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0083-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 22528,
+      "sha256": "76b59c0654f03b41a77e51634ccb2793fe3de2bca7c77065b64df59bd6773f3e",
+      "zip_crc32": "b29e12e6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0084-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0084-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 57856,
+      "sha256": "ddbcb57b18c61d10d06424e9806b9b3b8f46b471c986125fed0da71896ee562d",
+      "zip_crc32": "86d8ac6e",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0085-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0085-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 78336,
+      "sha256": "4593d65bfdcbb1f51941359197c741f58becc2397e0beee63cc2ecce9805b2c4",
+      "zip_crc32": "210959ca",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0086-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0086-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 18432,
+      "sha256": "f6e82baaa79a241fc6e05e8034d3c481a168d0755506376f255a419fb044b8b3",
+      "zip_crc32": "89d30e2c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0087-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0087-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 146432,
+      "sha256": "63328acea4a59ff02fc71633f0ae3839341d706f3ec68733815e9b899cb1e653",
+      "zip_crc32": "9c8bea89",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0088-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0088-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 823808,
+      "sha256": "7205084a99e97bc257caef8503826dcfef0e46f22d3cfd7e923ecd55b4e05312",
+      "zip_crc32": "f848e1b2",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0089-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0089-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 1646592,
+      "sha256": "8f23936c82138fbb1e62710a3f1757382546cab893ab347bd40a3a4f3e7d2ad2",
+      "zip_crc32": "dd2ac575",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0090-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0090-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 25088,
+      "sha256": "ffdc32cde7a2f4212851f8a7afbf42d2585a960be79fbff3f7a2321da611b557",
+      "zip_crc32": "8e9b3eea",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0091-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0091-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 33280,
+      "sha256": "efaf5d2ce9a7399bfa053710208079a45e330d4b7432a4bf259038942c431650",
+      "zip_crc32": "5abdf4dc",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0092-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0092-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 36864,
+      "sha256": "b0ca26133bd22b8f1729fa2b7212450654f8465509e7bcba292d75ec69c108e7",
+      "zip_crc32": "b460fc6b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0093-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0093-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 33280,
+      "sha256": "7625fe88090e91abb730efbd467f75332b097249e120ead0ec12310843fc4cbb",
+      "zip_crc32": "571100e6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0094-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0094-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 20992,
+      "sha256": "213c07d0710c223269d538be70898809469e849b0a890782d61ab3c49f95b57b",
+      "zip_crc32": "8c3c6b2c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0095-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0095-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 54272,
+      "sha256": "46e697aa25f3d7722ea51ea0e3aa9689e9f3e8119d55447aea27b50f24b8c5d6",
+      "zip_crc32": "788f7170",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0096-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0096-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 35840,
+      "sha256": "71ae311d43752d36fbe5c7054138d51c38f4f2c8e99172d73a9b8eb3fce91a1d",
+      "zip_crc32": "41c8e597",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0097-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0097-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 26112,
+      "sha256": "0cbd275fa208145d51cc145437f5922ac57f3758d78a6cabc7ef75a0c78c70cb",
+      "zip_crc32": "94ed2d59",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0098-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0098-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 28672,
+      "sha256": "314d93f2cc962e48aac99081fba753484e3573ddc52fed95f1a03936f7450d9c",
+      "zip_crc32": "615db0ad",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0099-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0099-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 25088,
+      "sha256": "35d486334179b8717af8529f1fb7e446fa9a1b4314bd2b0cb4a06a6c8151177b",
+      "zip_crc32": "c87af028",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0100-xls.xls",
+      "category": "spreadsheet",
+      "source_path": "0100-xls.xls",
+      "archive": "NapierOne/Data/XLS/XLS-tiny.zip",
+      "bytes": 19456,
+      "sha256": "794218186deae154cb1830a336f5362dcd5283107860d1755a1f3ed53e810936",
+      "zip_crc32": "a06149c7",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0001-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0001-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 655872,
+      "sha256": "8b91f5ade3abced266b806116ca39004a688334e92a74f65fcc9a920e9bb48ff",
+      "zip_crc32": "bace3be2",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0002-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0002-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 194048,
+      "sha256": "3c21061831ca9fe604087b83b30e62c936b0853216c97a1b0ce67215fb716247",
+      "zip_crc32": "c661f514",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0003-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0003-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1480192,
+      "sha256": "1fb803c0094a336f36a9a7abaa0aa4fbf8bd1c2ab4e3d193e4021690421729bf",
+      "zip_crc32": "a325b9c2",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0004-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0004-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1099776,
+      "sha256": "a284b7c46ede389e224c3a10355487493cb089992d8e294586e238566352c682",
+      "zip_crc32": "c1e81037",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0005-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0005-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 3759104,
+      "sha256": "4983fb1b6a3891a6e9eed31c37a2528489139de93ccc4b7297c85cf756d76951",
+      "zip_crc32": "7d06b309",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0006-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0006-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 7773184,
+      "sha256": "91892ccbf5ce3648b3b9f4b3a19308d7e6ee531a1e62f5e4af2e9a8a170b6c74",
+      "zip_crc32": "05097fb3",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0007-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0007-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 637952,
+      "sha256": "88bd933e5c67946998bde7f18b8e275e26dec55d55b61d0375bb2ca31d3aea50",
+      "zip_crc32": "4c9731f4",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0008-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0008-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1991168,
+      "sha256": "c400e11074320f5d8890539b33ccee80b9d9983267a991383233977bc682e3d1",
+      "zip_crc32": "94088fa9",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0009-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0009-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 4834304,
+      "sha256": "cfff1da9d811c4ed50f3c6500004611360494c0738c1cf1377ef08bd89fc7429",
+      "zip_crc32": "eb5107d2",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0010-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0010-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 805376,
+      "sha256": "8abf338d6d085e7a89b9f7a179ffc50f6bc188692f4e60a9719c28ce0ee9de46",
+      "zip_crc32": "d872bd3a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0011-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0011-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1512448,
+      "sha256": "cb8e21cb2a59b7ebb6b7b66d4b271395f02af833307eefdb43961067b61dc072",
+      "zip_crc32": "04fe945a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0012-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0012-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 3630592,
+      "sha256": "d96c2a4be105c805df37946163f6ef13e88d88d4a1a8b27c3d80b541c97d8080",
+      "zip_crc32": "313b13f3",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0013-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0013-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 460800,
+      "sha256": "19d323212128d7a444b1fb9e854af37c8ca073fafeb1218699ef5bf9bd4496bf",
+      "zip_crc32": "be008652",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0014-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0014-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 3283456,
+      "sha256": "617cfbbd214cf4ee2a9737d5181e246b3ad21d10127e7213e5341fd229cbc050",
+      "zip_crc32": "7c427354",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0015-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0015-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 179712,
+      "sha256": "248ab67265d0eecef144a603dcd6bf44894a8016af11c4571ae4e91455a353b9",
+      "zip_crc32": "564bbaef",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0016-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0016-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 256512,
+      "sha256": "c12808d0bc5a179971d1982cc1802e87fb2a2f56f9f6923560be8d1aa20be61d",
+      "zip_crc32": "727ddb86",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0017-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0017-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1241600,
+      "sha256": "18532826bd841a064b0ccbca58ec01b529f89465806310bf7b836211bfaff7d5",
+      "zip_crc32": "b5d59989",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0018-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0018-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1994752,
+      "sha256": "25f0948dd4093346bc17a41c2fd2445d094857badf1d485bd5345352878780c1",
+      "zip_crc32": "d14d7c51",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0019-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0019-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 210432,
+      "sha256": "caeb57fc754f832bce97672655047edb1400b756b58e3be0b2a9769c5a922273",
+      "zip_crc32": "6b513260",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0020-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0020-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 610816,
+      "sha256": "1227b330d985c7fe9fa284639dcaf21ad73beed2c10d64b67b3fa8e614456ab9",
+      "zip_crc32": "a80d4fb9",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0021-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0021-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 5095424,
+      "sha256": "17d345f94057ac2b4b5e88ca43169552dba13c0acc584968321664f3a8a958d1",
+      "zip_crc32": "59d02e0c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0022-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0022-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 596992,
+      "sha256": "52decaeb6a90e479934ed228be45d726fe904f5073cb4f89b385dfdbca7dba72",
+      "zip_crc32": "fb195b11",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0023-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0023-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 2084352,
+      "sha256": "0bcc1fae9a222ca8b2bb1bc4e24492c58ae8f31217a5d0b21a8f882a0424f77b",
+      "zip_crc32": "1d7b80d3",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0024-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0024-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 4229120,
+      "sha256": "7d8736507e68b35feadb9149b5d82f463812b0604a8e1b22eeb20a9c3569c15f",
+      "zip_crc32": "7ed95f48",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0025-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0025-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 212992,
+      "sha256": "51f23718ca1af089697a2f1f01d47efba20d09d66d4bc6b4bb0276b59b2096ce",
+      "zip_crc32": "34505679",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0026-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0026-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1161728,
+      "sha256": "248df2fe72ea5a516865e3bafda2a73b17f87843d4208d8b59e34f4504a1b8a1",
+      "zip_crc32": "2e2d809a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0027-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0027-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 154624,
+      "sha256": "c611ccf5360b80c23c40452ed5671c36ea5173c0697ff007a8ada038e1e327e9",
+      "zip_crc32": "c3aabe7c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0028-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0028-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 3475968,
+      "sha256": "316f5ba8f37276427fbd71b3f0316e13cb40861a3bf1de5ef539d157cbc85178",
+      "zip_crc32": "c7f6b9f8",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0029-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0029-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 2321408,
+      "sha256": "b4c38a5709a8fea9cb14c31510d52b1ac13a8d479c9f71de4dd056347509fe3e",
+      "zip_crc32": "148cfaf2",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0030-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0030-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 5562368,
+      "sha256": "a4f7130d3de132882767bc39363e70611472ffd2cd9ae7ebc4399848fc6ae675",
+      "zip_crc32": "fc547181",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0031-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0031-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 627200,
+      "sha256": "c17111c2ccf012c6cdadeb3c8712643b924fc65c32ce54d7babf8582af781ee9",
+      "zip_crc32": "df144dc9",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0032-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0032-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 2173440,
+      "sha256": "e1410f31743f2b023519b305b73904399e7779b843f58e520e4038435be2ef7e",
+      "zip_crc32": "7cd97f7c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0033-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0033-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 209408,
+      "sha256": "3d53ee8c0c6b84e30a50b3d74e5ecf9ba607849ff23377ba20aaf7cc8ecad290",
+      "zip_crc32": "92225e71",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0034-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0034-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1458688,
+      "sha256": "e4360f891b617484e840168191abb13aa4c31b735d3b5961c3acafb333c80031",
+      "zip_crc32": "8ab30e4b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0035-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0035-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 751104,
+      "sha256": "cfbcfb9ac05012c1871b56bb6193c5f860910c007da651e871fe4e113874c8d7",
+      "zip_crc32": "14b66350",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0036-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0036-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 244224,
+      "sha256": "3a5bd5a1efa8edb9f2b857e1b64f90552997ac0bcd01b08b581641c8fc8c795f",
+      "zip_crc32": "1042255c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0037-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0037-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 522240,
+      "sha256": "19ff5860b350ff87cd3474c32e759b073ca497b01476c9fd192a6df56c40867f",
+      "zip_crc32": "f23eb732",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0038-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0038-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 2779648,
+      "sha256": "6f0b084108e0985e93780b19da5d5692f5d1d63e345a0ffc60bd208e63481346",
+      "zip_crc32": "47b59f39",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0039-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0039-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1411584,
+      "sha256": "8bc66e86fe5faceacaa2cd7303af709952c592b2e027ec0ce26b4592c7d66b61",
+      "zip_crc32": "1589618e",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0040-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0040-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 4435968,
+      "sha256": "35fbb2d57cd88fa3962ea26bfabc028ef6257144309af0ea8deb49dd8571fbb5",
+      "zip_crc32": "a59f4bc4",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0041-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0041-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 908288,
+      "sha256": "87cfd63c31ab19b1f51db674387953096ec1107efb79ca73dd460c9520e7ac04",
+      "zip_crc32": "5227f6ba",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0042-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0042-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 614912,
+      "sha256": "474fc5c9d39b94beb6e1fe32f613973d1e165c7ca9def5cd6ef623a8933d503d",
+      "zip_crc32": "098747ad",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0043-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0043-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 105472,
+      "sha256": "197c7f73f75aa6160c95158f1609c1e50a22e5e983061cb2f3ff816befabdeff",
+      "zip_crc32": "2c8611c5",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0044-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0044-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 384000,
+      "sha256": "764ea3a29ce5260d966afe608f6b1a2bcd5150257f43d588885d5ac66d23b12d",
+      "zip_crc32": "11fc73d2",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0045-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0045-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 122368,
+      "sha256": "862765c3aa86ae804ad8d7d2ece87a9c337157ca381984c5cbd5207e7bb1d298",
+      "zip_crc32": "ef5bc10a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0046-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0046-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 160256,
+      "sha256": "353b01d30eba28c71da47bb9ecff5762622225bb82da31067241508555d03c85",
+      "zip_crc32": "a7eb1b1a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0047-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0047-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1153024,
+      "sha256": "54b89f66a53433a945ea88e6b8bdf95bd1ef2501b65682822ef22bce1d164612",
+      "zip_crc32": "41dc6253",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0048-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0048-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 4012032,
+      "sha256": "52a2d5b584762415026bf475d7e37a1af3636ac56a6b3143d91ff3d5fc2809fc",
+      "zip_crc32": "63472518",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0049-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0049-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 647680,
+      "sha256": "f9022eef3fe5348aca9bf80366c23bd8144ce5dc0eb589ffd3cd90a6fd4efe67",
+      "zip_crc32": "d7cfc7b2",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0050-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0050-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 344064,
+      "sha256": "54072df5d5ecdb7d4ec83d0b2ae41c79395935d4e2d50f05babead08d9d52672",
+      "zip_crc32": "ff8b4a53",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0051-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0051-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1602048,
+      "sha256": "05193599eea909d941056a244730473c60dcf259e4d59f499de0f07c87504598",
+      "zip_crc32": "a9158dfd",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0052-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0052-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 624640,
+      "sha256": "8bc5e4dd19117ba97ee2c1c55e9448cf27964cf10528cb9331756a8d1b9fff64",
+      "zip_crc32": "61b9445f",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0053-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0053-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 688640,
+      "sha256": "d98423c4638bb6906614a8092d6f4d12c92b66834a22c80d0b558120d6bbf324",
+      "zip_crc32": "9d4dd2e9",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0054-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0054-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 3631104,
+      "sha256": "5a067f40dd18d9e500684df809ff3297544375c52246225efc451f0402f6e6f5",
+      "zip_crc32": "a1336e30",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0055-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0055-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1387008,
+      "sha256": "6e4399ee21eefaa74d831e83d329a63051ca0b344a016a35d05d020542d28c0d",
+      "zip_crc32": "80de2b16",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0056-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0056-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 318464,
+      "sha256": "f379d096e4f3b9af85163c4877d23215161174b1d4feb2a773288b852b89335d",
+      "zip_crc32": "f1defa84",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0057-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0057-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 316928,
+      "sha256": "2fd62d579f5c4241620269a6012c55915bc44f49c2e08808e5476675115b23fe",
+      "zip_crc32": "4a104a35",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0058-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0058-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 176640,
+      "sha256": "54fce0534a227181f35843338d4e54f5297ecf814cbe7885dc4a48339e854978",
+      "zip_crc32": "2fa5af7b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0059-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0059-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 800256,
+      "sha256": "20359003ee6b2cc2ce26695c14e222ad2fe7c971993ef3d1737246126c82702f",
+      "zip_crc32": "315b04f8",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0060-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0060-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 390656,
+      "sha256": "961dbb85293ff2bd848a308037dce6e969e7d6d2145604292d7b2a4a2eb88a5c",
+      "zip_crc32": "0a46d5a0",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0061-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0061-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 178688,
+      "sha256": "58c6af62960555ab243ba34be1869b31dc5bcf50f234a9e63562ca4fc07eafbb",
+      "zip_crc32": "2111dfb3",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0062-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0062-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 2350592,
+      "sha256": "6f78a7b84aaff47c0c28b454c4b152d273cfb22a63a1efca93c6c3ed9557fb57",
+      "zip_crc32": "000a7e9d",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0063-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0063-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 13113344,
+      "sha256": "f9b858f2a3adf499c02dfe4937253ac4fd3552df4fb122ae63ed66008c9c335d",
+      "zip_crc32": "7517063a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0064-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0064-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 3321856,
+      "sha256": "9b9580cd7c3f7534ac21a3a293235796e23ad305595f4f0aabdc36d0e07bc025",
+      "zip_crc32": "2ab6d6ad",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0065-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0065-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1875968,
+      "sha256": "5718065bace553b7ab7635a3abdfeab07c76deb4339891bc3d028437faa1be25",
+      "zip_crc32": "b9f02b2a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0066-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0066-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 4145664,
+      "sha256": "cbbdeda1f3b1e098f8999008a1bd28dad1c6a958c78937a26e7f0d27b47250b3",
+      "zip_crc32": "7c32638a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0067-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0067-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 385536,
+      "sha256": "f916be510d1d31f22834c600f8f7f91a2e005925e3e6ce3b9de51a2fabd353b0",
+      "zip_crc32": "fee6c637",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0068-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0068-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 991232,
+      "sha256": "bec603cb19831ca31db5aa8472b45fcf8016f9fdd230f26c8e211e89fd434666",
+      "zip_crc32": "5e41ae1b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0069-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0069-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 322560,
+      "sha256": "5d270c999c99e92cd5607b12f5c93ff2b12bf2727607dc3b174b98bf6903d68b",
+      "zip_crc32": "276f2c23",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0070-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0070-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 322560,
+      "sha256": "18fbf6b2b1c6db0404faa9ad97445c75fbacc2c75b9ea8a30702a5709b6c7973",
+      "zip_crc32": "39111d69",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0071-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0071-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 70656,
+      "sha256": "201bbd436a18a8989ba3728928397784ea92dcdb14e690d02558416e1f8693fd",
+      "zip_crc32": "75e9ad8f",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0072-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0072-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 226816,
+      "sha256": "0e6d034ffc957f598eabfa8a3e4b78b6d75fc4920a1643d7102482627f24a197",
+      "zip_crc32": "c6ee2bba",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0073-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0073-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 278016,
+      "sha256": "149fc86a858101a991ab3fbb4cc5d7b676f08f39d97d3f0f6af0dd5f78321f0b",
+      "zip_crc32": "d31f3ac7",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0074-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0074-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 317440,
+      "sha256": "8226db969c1d77be3e66950dce489a0943dbe7be54375dd6be1b8f5fc3a96704",
+      "zip_crc32": "c57761b6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0075-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0075-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 3224064,
+      "sha256": "2a08ac75c4f986b7b69031747da02096d612471219e304b739a3f8564c8d5292",
+      "zip_crc32": "693765b8",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0076-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0076-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 588800,
+      "sha256": "5922c861e66c3a4523fefab75dfe64c47ea2c741d5741c5ee21dbea507a3c073",
+      "zip_crc32": "da94934e",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0077-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0077-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 6945280,
+      "sha256": "12de6d2cb293980f1d187a06d28ecb67d26532849f7b2796636f35cdea2c5ac5",
+      "zip_crc32": "c9c7f14b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0078-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0078-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1745920,
+      "sha256": "1df833084d7a88dc504f98f684ca1526312f402ea3e789ee2872d2d9bce252bb",
+      "zip_crc32": "853bb61c",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0079-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0079-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 162816,
+      "sha256": "f5b895a6e353283e1e3977f52d840eda536db2d2ee8fd9862f55b64400218954",
+      "zip_crc32": "32d9514b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0080-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0080-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 162816,
+      "sha256": "6ed65bc824a828e3a53f0ee16e4bc163f7de6a95b145d214357146727bae7758",
+      "zip_crc32": "b5facb20",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0081-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0081-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 2436608,
+      "sha256": "c500bf646cd1a7ba0bc09fa9548d099d2d23772163b8dca34aa36fd1406e36fc",
+      "zip_crc32": "c7eab935",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0082-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0082-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1043968,
+      "sha256": "c2ae86dbf40aee531d551ec8ab8cb05904b3b34cfc4e52b5c2607be9de784019",
+      "zip_crc32": "9813277b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0083-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0083-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1128448,
+      "sha256": "67c984d3e403a309b27b0445029723da0539dbfae97ae255676da4c33076278c",
+      "zip_crc32": "de771b9f",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0084-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0084-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1803776,
+      "sha256": "b1e1a76c15fad358b2511925fbfa5c087f92346dd80d061e507eee820fc1b5f9",
+      "zip_crc32": "458af315",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0085-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0085-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 210944,
+      "sha256": "414b2aedffefbf5ad67c871ece2d190fa30b5db4593e5155b37e91a1ea18e318",
+      "zip_crc32": "29028005",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0086-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0086-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 5106176,
+      "sha256": "780eefe83af7042990eb1e729535857987182f41c332b00195053963e5597448",
+      "zip_crc32": "b9ad205a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0087-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0087-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1957888,
+      "sha256": "a1158183d6dc6153f21c5ee30709d25557119a50668d92be5cc6d970285f28e2",
+      "zip_crc32": "4610a42a",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0088-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0088-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 430080,
+      "sha256": "99a013625d8824dae57d744e942e4cac17c50cce8dae71952e350f871f6e3d09",
+      "zip_crc32": "ee4b10f3",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0089-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0089-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 269824,
+      "sha256": "8b1c259fd08d0c9237c8523d610c84bcad6a93894864912421f576f617c15c1c",
+      "zip_crc32": "b71ff34e",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0090-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0090-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 406016,
+      "sha256": "f7cba0698ddc2fb67544fd037d4d0aa942c8f4ea4f80d004db25de3e452059c5",
+      "zip_crc32": "e93c9dc6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0091-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0091-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 314880,
+      "sha256": "755bdd1d42baf5e15e522d33d11959f33e84585ca7bfc516ba041b146afa9526",
+      "zip_crc32": "9495e03b",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0092-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0092-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 89600,
+      "sha256": "20333abd674e7136fd7493a4d12884040eef40d7f80f9b57ab138f5cf348e63e",
+      "zip_crc32": "7ebd5e29",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0093-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0093-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 883712,
+      "sha256": "c09001f93196e2f21ba40370992f8fc3d74314976fc29a027936a85c49b38409",
+      "zip_crc32": "d9a4f3dc",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0094-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0094-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1441280,
+      "sha256": "4d1932e9de053fe0c21cc0441a8a2884d80d8d0f94cd9b83b4b450cfdd61c37a",
+      "zip_crc32": "ccca2400",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0095-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0095-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 580608,
+      "sha256": "4e9e17e27d566fc84aaadd1f4c30fd42bc18b257d787e9cd832fae406bdd3e10",
+      "zip_crc32": "c0248ca8",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0096-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0096-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1660416,
+      "sha256": "5070e50497ec3f91b6929e4ab31a7240789a77152f40d0d5663820946451d64e",
+      "zip_crc32": "a027bd4e",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0097-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0097-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1660416,
+      "sha256": "decf9479d3dedbf1be7d57239eaef1e42292ee99593d6c51a77d0afc12bb6be0",
+      "zip_crc32": "fd99ece1",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0098-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0098-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1254400,
+      "sha256": "8ac7fa06b1a1b619cf5a3e3e970c799573e2afd8ea5ac035e538c40aecc79b07",
+      "zip_crc32": "026cc4da",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0099-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0099-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 1254400,
+      "sha256": "842517cbdae99b0bd932dc3f4a8006ca56c7198ec42cfe6ef19c02d153fc52d3",
+      "zip_crc32": "9467ba98",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    },
+    {
+      "name": "0100-ppt.ppt",
+      "category": "slideshow",
+      "source_path": "0100-ppt.ppt",
+      "archive": "NapierOne/Data/PPT/PPT-tiny.zip",
+      "bytes": 2173952,
+      "sha256": "808ef3300a25971c76a4703a22fc159db3b2ea98121393f6b92b70c40d66b44c",
+      "zip_crc32": "b20036b6",
+      "license": "Open Government Licence v3.0; Edinburgh Napier University License Agreement"
+    }
+  ]
+}

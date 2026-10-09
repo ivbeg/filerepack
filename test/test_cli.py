@@ -5,6 +5,7 @@ import json
 import pytest
 from typer.testing import CliRunner
 from filerepack.__main__ import app
+from test.helpers import plain_output
 
 runner = CliRunner()
 
@@ -12,9 +13,10 @@ runner = CliRunner()
 class TestRepackCLI:
     def test_help_output(self):
         result = runner.invoke(app, ['repack', '--help'])
+        help_text = plain_output(result)
         assert result.exit_code == 0
-        assert '--dryrun' in result.output
-        assert '--quiet' in result.output
+        assert '--dryrun' in help_text
+        assert '--quiet' in help_text
 
     def test_repack_nonexistent_file(self):
         result = runner.invoke(app, ['repack', '/nonexistent/file.docx'])
@@ -47,19 +49,19 @@ class TestRepackCLI:
 
     def test_max_extract_size_in_help(self):
         result = runner.invoke(app, ['repack', '--help'])
-        assert '--max-extract-size' in result.output
+        assert '--max-extract-size' in plain_output(result)
 
     def test_pdf_profile_in_help(self):
         result = runner.invoke(app, ['repack', '--help'])
-        assert '--pdf-profile' in result.output
+        assert '--pdf-profile' in plain_output(result)
         result = runner.invoke(app, ['bulk', '--help'])
-        assert '--pdf-profile' in result.output
+        assert '--pdf-profile' in plain_output(result)
 
     def test_keep_meta_in_help(self):
         result = runner.invoke(app, ['repack', '--help'])
-        assert '--keep-meta' in result.output
+        assert '--keep-meta' in plain_output(result)
         result = runner.invoke(app, ['bulk', '--help'])
-        assert '--keep-meta' in result.output
+        assert '--keep-meta' in plain_output(result)
 
     def test_invalid_pdf_profile(self, tmp_path):
         f = tmp_path / 'a.pdf'
@@ -75,7 +77,7 @@ class TestBulkCLI:
     def test_help_output(self):
         result = runner.invoke(app, ['bulk', '--help'])
         assert result.exit_code == 0
-        assert '--dryrun' in result.output
+        assert '--dryrun' in plain_output(result)
 
     def test_bulk_nonexistent_dir(self):
         result = runner.invoke(app, ['bulk', '/nonexistent/dir'])
@@ -86,15 +88,13 @@ class TestBulkCLI:
         photo = tmp_path / 'photo.jpg'
         photo.write_bytes(b'\xff\xd8\xff' + b'\x00' * 32)
         result = runner.invoke(app, ['bulk', str(tmp_path), '--dryrun', '--quiet'])
-        assert result.exit_code == 0
-        assert 'Found 1 files' in result.output or result.exit_code == 0
+        assert result.exit_code == 1  # malformed inputs are failed terminal outcomes
 
     def test_bulk_finds_tgz(self, tmp_path):
         archive = tmp_path / 'bundle.tgz'
         archive.write_bytes(b'\x1f\x8b' + b'\x00' * 32)
         result = runner.invoke(app, ['bulk', str(tmp_path), '--dryrun', '--quiet'])
-        assert result.exit_code == 0
-        assert 'Found 1 files' in result.output or result.exit_code == 0
+        assert result.exit_code == 1  # malformed inputs are failed terminal outcomes
 
     def test_invalid_jobs(self, tmp_path):
         result = runner.invoke(app, ['bulk', str(tmp_path), '--jobs', 'nope'])

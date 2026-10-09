@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "inventory_sha256": "31b05f0ea1b04f76ca21346da9fe9cc19a5d424ef190f12ec2a21d2d5b32effa",
+  "scope": "read-only eligibility; source bytes pinned by Debian source revision and SHA-256; no savings or application acceptance inferred",
+  "counts": {
+    "document": {
+      "selected": 0,
+      "source_verified": 0,
+      "container": 0,
+      "host": 0,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "spreadsheet": {
+      "selected": 26,
+      "source_verified": 26,
+      "container": 23,
+      "host": 20,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "slideshow": {
+      "selected": 0,
+      "source_verified": 0,
+      "container": 0,
+      "host": 0,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    }
+  },
+  "rejection_reasons": {
+    "source": {},
+    "container": {
+      "OLE: unsupported root storage": 2,
+      "OLE: invalid file size or 128 MiB limit exceeded": 1
+    },
+    "host": {
+      "Truncated OLE property section": 3
+    },
+    "officeart": {
+      "OfficeArt: unqualified BIFF type/version/length: 0x92": 14,
+      "OfficeArt: unqualified BIFF type/version/length: 0x4d": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ba": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ae": 1,
+      "OfficeArt: host macros are not qualified": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x18": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x87c": 1
+    },
+    "dedup": {
+      "OfficeArt: unqualified BIFF type/version/length: 0x92": 14,
+      "OfficeArt: unqualified BIFF type/version/length: 0x4d": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ba": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x1ae": 1,
+      "OfficeArt: only qualified macro-free XLS/PPT shared stores": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x18": 1,
+      "OfficeArt: unqualified BIFF type/version/length: 0x87c": 1
+    }
+  },
+  "source": {
+    "source": "https://sources.debian.org/src/gnumeric/1.12.57-1.1/samples/",
+    "package_revision": "gnumeric 1.12.57-1.1",
+    "license_url": "https://sources.debian.org/data/main/g/gnumeric/1.12.57-1.1/debian/copyright",
+    "license_sha256": "0ce3fba0a630604c65fd3ad2c945cfd9c85fc573a7d68a73edac9af7993840b3",
+    "scope": "All .xls files linked below samples/ and descendants; source paths pinned by Debian source revision and SHA-256."
+  },
+  "files": [
+    {
+      "name": "samples__array-intersection.xls",
+      "category": "spreadsheet",
+      "sha256": "6c3b0a6920aee4b0eaf5c6db9a78db2a24c46175494d459267d9038b369ac7c6",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/array-intersection.xls",
+      "bytes": 6656,
+      "zip_crc32": "cc891d40"
+    },
+    {
+      "name": "samples__arrays.xls",
+      "category": "spreadsheet",
+      "sha256": "fe5b5f05a93cae216b768ee10ea061ea8cc96b5835855d67b2d8c28bac1ee274",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/arrays.xls",
+      "bytes": 68608,
+      "zip_crc32": "b73b8737"
+    },
+    {
+      "name": "samples__chitest.xls",
+      "category": "spreadsheet",
+      "sha256": "e4d21e747f47edcc8030b1cf7fce586d9b649cafe4051ce8dc1509df486671d6",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/chitest.xls",
+      "bytes": 32256,
+      "zip_crc32": "3c2473fb"
+    },
+    {
+      "name": "samples__ftest.xls",
+      "category": "spreadsheet",
+      "sha256": "27035d69127e8c2049696d6caf7ebdf889e90749430d183a5c93b0a0f81c0d26",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/ftest.xls",
+      "bytes": 32256,
+      "zip_crc32": "fa4f412b"
+    },
+    {
+      "name": "samples__linest.xls",
+      "category": "spreadsheet",
+      "sha256": "3d663ae6eddc4117fbc9d4240d6f01905c20c1210e63b605365dbafaf90e7cc7",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/linest.xls",
+      "bytes": 124928,
+      "zip_crc32": "009bcbf0"
+    },
+    {
+      "name": "samples__sumif.xls",
+      "category": "spreadsheet",
+      "sha256": "293467eb899ee37baf8624525ef2b3af39bfb71a67e57f53950bef75282ba1d4",
+      "container": true,
+      "host_skip": "Truncated OLE property section",
+      "source_path": "samples/sumif.xls",
+      "bytes": 11776,
+      "zip_crc32": "f035554f"
+    },
+    {
+      "name": "samples__ttest.xls",
+      "category": "spreadsheet",
+      "sha256": "6504b683dd53232daf871f82c2295bb7c2debe7d6da3ec2d495e0050b85268a2",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/ttest.xls",
+      "bytes": 62464,
+      "zip_crc32": "8f651110"
+    },
+    {
+      "name": "samples__vba-725220.xls",
+      "category": "spreadsheet",
+      "sha256": "344e554036d752295f9ed9730c4ced6c2c641849867311ed00632e9a9d72f8c8",
+      "container_skip": "OLE: unsupported root storage",
+      "source_path": "samples/vba-725220.xls",
+      "bytes": 33792,
+      "zip_crc32": "9667e678"
+    },
+    {
+      "name": "samples__excel__address.xls",
+      "category": "spreadsheet",
+      "sha256": "f5bd5b84a44a14e5738954c3e7a31adcfa33c9955f9fb6e836c73e94c1222ead",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/excel/address.xls",
+      "bytes": 187392,
+      "zip_crc32": "5413f918"
+    },
+    {
+      "name": "samples__excel__bitwise.xls",
+      "category": "spreadsheet",
+      "sha256": "801570696187290592c24cb5d730ffeacb52b1b25837682dd0a0488e7f252b2d",
+      "container_skip": "OLE: invalid file size or 128 MiB limit exceeded",
+      "source_path": "samples/excel/bitwise.xls",
+      "bytes": 4959,
+      "zip_crc32": "be9d64a4"
+    },
+    {
+      "name": "samples__excel__datefuns.xls",
+      "category": "spreadsheet",
+      "sha256": "d5375c30e3bcf580365c906783c659e8f653f0cf9c48adfa86c628b782110fce",
+      "container": true,
+      "host_skip": "Truncated OLE property section",
+      "source_path": "samples/excel/datefuns.xls",
+      "bytes": 13312,
+      "zip_crc32": "39a97054"
+    },
+    {
+      "name": "samples__excel__dbfuns.xls",
+      "category": "spreadsheet",
+      "sha256": "87fea444b6ee874678c3b30c83bff807ab11b8c827e1a80f60b5ae060798aa43",
+      "container_skip": "OLE: unsupported root storage",
+      "source_path": "samples/excel/dbfuns.xls",
+      "bytes": 20480,
+      "zip_crc32": "66edf273"
+    },
+    {
+      "name": "samples__excel__engfuns.xls",
+      "category": "spreadsheet",
+      "sha256": "ae10f337b8576cb6029cd5b391edb7423ff326f2e196f7fde7adf12fd1f92e72",
+      "container": true,
+      "host_skip": "Truncated OLE property section",
+      "source_path": "samples/excel/engfuns.xls",
+      "bytes": 35840,
+      "zip_crc32": "3cf55dc3"
+    },
+    {
+      "name": "samples__excel__finfuns.xls",
+      "category": "spreadsheet",
+      "sha256": "75efe2f8bc173f52907ba0a9a3066f75c8a5689ebdec7c093def20dc07e92021",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/excel/finfuns.xls",
+      "bytes": 40960,
+      "zip_crc32": "6a2d82a0"
+    },
+    {
+      "name": "samples__excel__functions.xls",
+      "category": "spreadsheet",
+      "sha256": "f50253f584419cec9f9c9dea283ce571bc717228343da1091dfaa0060685f064",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/excel/functions.xls",
+      "bytes": 51200,
+      "zip_crc32": "6afcd0c3"
+    },
+    {
+      "name": "samples__excel__infofuns.xls",
+      "category": "spreadsheet",
+      "sha256": "8f0b4a1938157da6dec6e19ddeda59b379195d1ddf43112afae87740bbfeafa8",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/excel/infofuns.xls",
+      "bytes": 25088,
+      "zip_crc32": "2041ab28"
+    },
+    {
+      "name": "samples__excel__logfuns.xls",
+      "category": "spreadsheet",
+      "sha256": "55098df5a18b535d4c0de7c0434f62468304518ef66bdf34a84bb3d7ab13d09e",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/excel/logfuns.xls",
+      "bytes": 20992,
+      "zip_crc32": "bf71b5dc"
+    },
+    {
+      "name": "samples__excel__lookfuns.xls",
+      "category": "spreadsheet",
+      "sha256": "0cda6b816753461769a9ee2afc7b7458b6e493eec45e774d0f925a1cb86bb8b6",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/excel/lookfuns.xls",
+      "bytes": 26624,
+      "zip_crc32": "2c537998"
+    },
+    {
+      "name": "samples__excel__lookfuns2.xls",
+      "category": "spreadsheet",
+      "sha256": "f8fc6a6d61bddaf52ed1d669e852a5fa13eb1503e43de6fb7bb7e46ea0c51721",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x4d",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x4d",
+      "source_path": "samples/excel/lookfuns2.xls",
+      "bytes": 21504,
+      "zip_crc32": "05970768"
+    },
+    {
+      "name": "samples__excel__mathfuns.xls",
+      "category": "spreadsheet",
+      "sha256": "10da71526d21caee54f66ac2ccd9739e4ce416701cee67b481df7823cdfce938",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ba",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ba",
+      "source_path": "samples/excel/mathfuns.xls",
+      "bytes": 51200,
+      "zip_crc32": "3c8486fb"
+    },
+    {
+      "name": "samples__excel__objs.xls",
+      "category": "spreadsheet",
+      "sha256": "df301fda7ef0c467c3370167369c070ea8f9286204a62cfae1bb56244af22de2",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x1ae",
+      "source_path": "samples/excel/objs.xls",
+      "bytes": 221696,
+      "zip_crc32": "c643017a"
+    },
+    {
+      "name": "samples__excel__operator.xls",
+      "category": "spreadsheet",
+      "sha256": "151493a4c4e0e590f99d69ade58a6c3e3235a60397f35877218fed86028feeb1",
+      "container": true,
+      "host": [
+        "xls",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores",
+      "source_path": "samples/excel/operator.xls",
+      "bytes": 662528,
+      "zip_crc32": "c3a388fe"
+    },
+    {
+      "name": "samples__excel__sort.xls",
+      "category": "spreadsheet",
+      "sha256": "119f53793eda0087570c116b12c59b9b10f7ed4d7c105a4277c54935b807fe76",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x18",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x18",
+      "source_path": "samples/excel/sort.xls",
+      "bytes": 15360,
+      "zip_crc32": "7d5984eb"
+    },
+    {
+      "name": "samples__excel__statfuns.xls",
+      "category": "spreadsheet",
+      "sha256": "def4484ba5d248853ca2e7e9568094898219310b8ca623aeef41591661c9d63c",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x87c",
+      "source_path": "samples/excel/statfuns.xls",
+      "bytes": 57856,
+      "zip_crc32": "500c4526"
+    },
+    {
+      "name": "samples__excel__textfuns.xls",
+      "category": "spreadsheet",
+      "sha256": "97e483670e3a7636dcefe020836b43dc5df5568624d60686471fd3ea3fb1c328",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/excel/textfuns.xls",
+      "bytes": 28160,
+      "zip_crc32": "f19a1a09"
+    },
+    {
+      "name": "samples__excel__yalta2008.xls",
+      "category": "spreadsheet",
+      "sha256": "627d5386c9c0367417a81400ad939496c4cd03c05cd45f9ec2f575b9602519fa",
+      "container": true,
+      "host": [
+        "xls",
+        false
+      ],
+      "officeart_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "dedup_skip": "OfficeArt: unqualified BIFF type/version/length: 0x92",
+      "source_path": "samples/excel/yalta2008.xls",
+      "bytes": 40960,
+      "zip_crc32": "4fe1c54e"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "source": "https://github.com/apache/poi",
+  "commit": "12c3688d130035f3dc2ca2a0f50d929456435a93",
+  "license": "Apache-2.0",
+  "selection": "Recursive scan of every poi* code-module tree and repository-level src tree outside the separately inventoried root test-data corpus; exact-name DOC/XLS/PPT objects 512 bytes\u20138 MiB; exclude Git blob duplicates of the existing POI census.",
+  "inventory_sha256": "34bc2b2c83df185b49086b573556fd38c6e3613a19948786447a7524f20caff2",
+  "python": "3.13.7",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "scope": "read-only eligibility; no savings or application acceptance inferred",
+  "counts": {
+    "document": {
+      "selected": 0,
+      "source_verified": 0,
+      "container": 0,
+      "host": 0,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "spreadsheet": {
+      "selected": 1,
+      "source_verified": 1,
+      "container": 1,
+      "host": 1,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    },
+    "slideshow": {
+      "selected": 1,
+      "source_verified": 1,
+      "container": 1,
+      "host": 0,
+      "officeart": 0,
+      "dedup": 0,
+      "dedup_with_removable_entries": 0,
+      "table_owned_word_references": 0,
+      "piece_prm_scanned": 0,
+      "piece_prm_picture_files": 0,
+      "piece_prm_picture_pieces": 0
+    }
+  },
+  "rejection_reasons": {
+    "source": {},
+    "container": {},
+    "host": {
+      "Empty/unknown PowerPoint VBA project flags": 1
+    },
+    "officeart": {
+      "OfficeArt: host macros are not qualified": 1
+    },
+    "dedup": {
+      "OfficeArt: only qualified macro-free XLS/PPT shared stores": 1
+    }
+  },
+  "files": [
+    {
+      "name": "empty.ppt",
+      "category": "slideshow",
+      "sha256": "12142803e51e4cff4804253f8e32857d312ddb4e8c78139bab99114062fbf210",
+      "container": true,
+      "host_skip": "Empty/unknown PowerPoint VBA project flags"
+    },
+    {
+      "name": "mortgage-calculation.xls",
+      "category": "spreadsheet",
+      "sha256": "271c06d988bfe033afdc69733c5ba09e95658ebff571bfca189b567e678631dc",
+      "container": true,
+      "host": [
+        "xls",
+        true
+      ],
+      "officeart_skip": "OfficeArt: host macros are not qualified",
+      "dedup_skip": "OfficeArt: only qualified macro-free XLS/PPT shared stores"
+    }
+  ]
+}

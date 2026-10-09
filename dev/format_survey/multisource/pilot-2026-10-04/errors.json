@@ -1,0 +1,12 @@
+[
+  {
+    "source": "internetarchive",
+    "project": "data",
+    "error": "https://archive.org/advancedsearch.php?q=mediatype%3Adata+AND+NOT+access-restricted-item%3Atrue&fl%5B%5D=identifier&rows=25&sort%5B%5D=publicdate+desc&output=json: URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
+  },
+  {
+    "source": "softwareheritage",
+    "project": "https://github.com/numpy/numpy",
+    "error": "https://archive.softwareheritage.org/api/1/directory/7e6098ac9955bce115988a5cce121c139409854a/: HTTPError: HTTP Error 429: Too Many Requests"
+  }
+]

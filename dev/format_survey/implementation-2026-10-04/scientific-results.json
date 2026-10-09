@@ -1,0 +1,399 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/h5py/h5py/0f9cbe7c3814ef8007c20ef5cfba0b134f6aa699/h5py/tests/data_files/vlen_string_dset.h5",
+    "repository": "h5py/h5py",
+    "commit": "0f9cbe7c3814ef8007c20ef5cfba0b134f6aa699",
+    "path": "h5py/tests/data_files/vlen_string_dset.h5",
+    "input": "/tmp/filerepack-extra-corpus/h5py-h5py-vlen_string_dset.h5",
+    "access": "public unauthenticated repository; licenses in respective pinned repository",
+    "sha256": "900f8baf19d3d8c4d1193ac1ac6019ee7774005e85c030af44e6757b38d29793",
+    "bytes": 6304,
+    "result": {
+      "changed": true,
+      "equal": true,
+      "details": {
+        "profile": "HDF5-native-DEFLATE",
+        "datasets": 1,
+        "reader_lineage": "h5py/libhdf5; separate from h5repack invocation"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 52,
+        "written": 7625,
+        "nodes": 16
+      }
+    },
+    "candidate_bytes": 7625,
+    "seconds": 0.5202422090078471,
+    "accepted": false,
+    "final_result": {
+      "changed": true,
+      "equal": true,
+      "details": {
+        "profile": "HDF5-native-DEFLATE",
+        "datasets": 1,
+        "reader_lineage": "h5py/libhdf5; separate from h5repack invocation"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 52,
+        "written": 7625,
+        "nodes": 16,
+        "peak_worker_rss_bytes": 47595520,
+        "seconds": 0.7162107910116902
+      }
+    },
+    "final_candidate_bytes": 7625
+  },
+  {
+    "url": "https://raw.githubusercontent.com/h5py/h5py/0f9cbe7c3814ef8007c20ef5cfba0b134f6aa699/h5py/tests/data_files/compound-dtype-complex.h5",
+    "repository": "h5py/h5py",
+    "commit": "0f9cbe7c3814ef8007c20ef5cfba0b134f6aa699",
+    "path": "h5py/tests/data_files/compound-dtype-complex.h5",
+    "input": "/tmp/filerepack-extra-corpus/h5py-h5py-compound-dtype-complex.h5",
+    "access": "public unauthenticated repository; licenses in respective pinned repository",
+    "sha256": "ebcd9658096064f16e46a2d74b9532c9e6a6ad5b67a827f2fb4f6379f6b05380",
+    "bytes": 13792,
+    "result": {
+      "changed": true,
+      "equal": true,
+      "details": {
+        "profile": "HDF5-native-DEFLATE",
+        "datasets": 6,
+        "reader_lineage": "h5py/libhdf5; separate from h5repack invocation"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 14832,
+        "written": 26664,
+        "nodes": 50
+      }
+    },
+    "candidate_bytes": 26664,
+    "seconds": 0.551676832998055,
+    "accepted": false,
+    "final_result": {
+      "changed": true,
+      "equal": true,
+      "details": {
+        "profile": "HDF5-native-DEFLATE",
+        "datasets": 6,
+        "reader_lineage": "h5py/libhdf5; separate from h5repack invocation"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 14832,
+        "written": 26664,
+        "nodes": 50,
+        "peak_worker_rss_bytes": 48070656,
+        "seconds": 0.6371443329990143
+      }
+    },
+    "final_candidate_bytes": 26664
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Unidata/netcdf4-python/046dea0752aa1c1669932be97380b265a3d824a4/test/CRM032_test1.nc",
+    "repository": "Unidata/netcdf4-python",
+    "commit": "046dea0752aa1c1669932be97380b265a3d824a4",
+    "path": "test/CRM032_test1.nc",
+    "input": "/tmp/filerepack-extra-corpus/Unidata-netcdf4-python-CRM032_test1.nc",
+    "access": "public unauthenticated repository; licenses in respective pinned repository",
+    "sha256": "3c2f4e9f96cc2a7130e490c27c2cd3a1149fba7bad59be82b88a6e7097007e6c",
+    "bytes": 174660,
+    "error": "classic CDF compression requires format conversion; retained",
+    "candidate_bytes": 174660,
+    "seconds": 0.5127778750029393,
+    "accepted": false,
+    "final_error": "classic CDF compression requires format conversion; retained",
+    "final_candidate_bytes": 174660
+  },
+  {
+    "url": "https://raw.githubusercontent.com/Unidata/netcdf4-python/046dea0752aa1c1669932be97380b265a3d824a4/test/netcdf_dummy_file.nc",
+    "repository": "Unidata/netcdf4-python",
+    "commit": "046dea0752aa1c1669932be97380b265a3d824a4",
+    "path": "test/netcdf_dummy_file.nc",
+    "input": "/tmp/filerepack-extra-corpus/Unidata-netcdf4-python-netcdf_dummy_file.nc",
+    "access": "public unauthenticated repository; licenses in respective pinned repository",
+    "sha256": "9acf3d9b627813c0889d49d05f617aace61a631775893344c220d69d4a074301",
+    "bytes": 16376,
+    "error": "classic CDF compression requires format conversion; retained",
+    "candidate_bytes": 16376,
+    "seconds": 0.5215826249914244,
+    "accepted": false,
+    "final_error": "classic CDF compression requires format conversion; retained",
+    "final_candidate_bytes": 16376
+  },
+  {
+    "url": "https://raw.githubusercontent.com/pydata/xarray-data/a35297e9da2cc99c811014f0c8a4297345a5c28d/basin_mask.nc",
+    "repository": "pydata/xarray-data",
+    "commit": "a35297e9da2cc99c811014f0c8a4297345a5c28d",
+    "path": "basin_mask.nc",
+    "input": "/tmp/filerepack-extra-corpus/pydata-xarray-data-basin_mask.nc",
+    "access": "public unauthenticated repository; licenses in respective pinned repository",
+    "sha256": "0691944602267c1063e82a45e2150372031afa3f223b38e0cf846b81d0b90a1e",
+    "bytes": 111992,
+    "result": {
+      "changed": true,
+      "equal": true,
+      "details": {
+        "profile": "NETCDF4",
+        "reader_lineage": "netCDF4/netcdf-c raw values"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 6424028,
+        "written": 95182,
+        "nodes": 54
+      }
+    },
+    "candidate_bytes": 95182,
+    "seconds": 1.24522904198966,
+    "accepted": true,
+    "final_result": {
+      "changed": true,
+      "equal": true,
+      "details": {
+        "profile": "NETCDF4",
+        "reader_lineage": "netCDF4/netcdf-c raw values"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 6424028,
+        "written": 95182,
+        "nodes": 54,
+        "peak_worker_rss_bytes": 64471040,
+        "seconds": 3.214993957997649
+      }
+    },
+    "final_candidate_bytes": 95182
+  },
+  {
+    "url": "https://raw.githubusercontent.com/pydata/xarray-data/a35297e9da2cc99c811014f0c8a4297345a5c28d/imerghh_730.hdf5",
+    "repository": "pydata/xarray-data",
+    "commit": "a35297e9da2cc99c811014f0c8a4297345a5c28d",
+    "path": "imerghh_730.hdf5",
+    "input": "/tmp/filerepack-extra-corpus/pydata-xarray-data-imerghh_730.hdf5",
+    "access": "public unauthenticated repository; licenses in respective pinned repository",
+    "sha256": "b36764f671203c2cbf9334b6ec35f6be6078ee8faf64edf3c63f4ccfffbaa42e",
+    "bytes": 7728859,
+    "error": "Can't get fill value (fill value is undefined)",
+    "candidate_bytes": 7728859,
+    "seconds": 1.154001832997892,
+    "accepted": false,
+    "final_error": "Can't get fill value (fill value is undefined)",
+    "final_candidate_bytes": 7728859
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rasterio/rasterio/3f685650aa3aaaa0642264ddc265e0d8b9ebeee7/tests/data/byte.tif",
+    "repository": "rasterio/rasterio",
+    "commit": "3f685650aa3aaaa0642264ddc265e0d8b9ebeee7",
+    "path": "tests/data/byte.tif",
+    "input": "/tmp/filerepack-extra-corpus/rasterio-rasterio-byte.tif",
+    "access": "public unauthenticated repository; licenses in respective pinned repository",
+    "sha256": "59ed6e9dd19291bbdc230092ab7f6bc46fb0537ee4c9eec15dd58021cd9c12be",
+    "bytes": 736,
+    "error": "[Errno 2] No such file or directory: '/tmp/filerepack-extra-corpus/rasterio-rasterio-byte.tif.candidate'",
+    "candidate_bytes": 736,
+    "seconds": 0.3915705830004299,
+    "accepted": false,
+    "final_result": {
+      "changed": false,
+      "reason": "no eligible TIFF suffix compression",
+      "details": {
+        "profile": "TIFF-native-data-suffix",
+        "ifds": 1,
+        "metadata_policy": "retained positions and exact non-storage tag payloads",
+        "reader_lineage": "tifffile/imagecodecs"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 400,
+        "written": 0,
+        "nodes": 17,
+        "peak_worker_rss_bytes": 40534016,
+        "seconds": 0.5228764170024078
+      }
+    },
+    "final_candidate_bytes": 736
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rasterio/rasterio/3f685650aa3aaaa0642264ddc265e0d8b9ebeee7/tests/data/RGB.byte.tif",
+    "repository": "rasterio/rasterio",
+    "commit": "3f685650aa3aaaa0642264ddc265e0d8b9ebeee7",
+    "path": "tests/data/RGB.byte.tif",
+    "input": "/tmp/filerepack-extra-corpus/rasterio-rasterio-RGB.byte.tif",
+    "access": "public unauthenticated repository; licenses in respective pinned repository",
+    "sha256": "d7cbe932c7ed74a627706a9e9df99f706df3e5abc7d45a49e9d00677a6b09eb4",
+    "bytes": 1745956,
+    "error": "[Errno 2] No such file or directory: '/tmp/filerepack-extra-corpus/rasterio-rasterio-RGB.byte.tif.candidate'",
+    "candidate_bytes": 1745956,
+    "seconds": 0.4386015000054613,
+    "accepted": false,
+    "final_result": {
+      "changed": false,
+      "reason": "no eligible TIFF suffix compression",
+      "details": {
+        "profile": "TIFF-native-data-suffix",
+        "ifds": 1,
+        "metadata_policy": "retained positions and exact non-storage tag payloads",
+        "reader_lineage": "tifffile/imagecodecs"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 1703814,
+        "written": 0,
+        "nodes": 20,
+        "peak_worker_rss_bytes": 43319296,
+        "seconds": 0.7144708749983693
+      }
+    },
+    "final_candidate_bytes": 1745956
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rasterio/rasterio/3f685650aa3aaaa0642264ddc265e0d8b9ebeee7/tests/data/float_nan.tif",
+    "repository": "rasterio/rasterio",
+    "commit": "3f685650aa3aaaa0642264ddc265e0d8b9ebeee7",
+    "path": "tests/data/float_nan.tif",
+    "input": "/tmp/filerepack-extra-corpus/rasterio-rasterio-float_nan.tif",
+    "access": "public unauthenticated repository; licenses in respective pinned repository",
+    "sha256": "ae2b8df3ff521d358c1cdd06a3d721ebb028fb19ce89f7e7e83f5efe66d39e1d",
+    "bytes": 600,
+    "error": "[Errno 2] No such file or directory: '/tmp/filerepack-extra-corpus/rasterio-rasterio-float_nan.tif.candidate'",
+    "candidate_bytes": 600,
+    "seconds": 0.40881487500155345,
+    "accepted": false,
+    "final_result": {
+      "changed": false,
+      "reason": "no eligible TIFF suffix compression",
+      "details": {
+        "profile": "TIFF-native-data-suffix",
+        "ifds": 1,
+        "metadata_policy": "retained positions and exact non-storage tag payloads",
+        "reader_lineage": "tifffile/imagecodecs"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 24,
+        "written": 0,
+        "nodes": 15,
+        "peak_worker_rss_bytes": 37126144,
+        "seconds": 0.5477252919954481
+      }
+    },
+    "final_candidate_bytes": 600
+  },
+  {
+    "url": "https://raw.githubusercontent.com/rasterio/rasterio/3f685650aa3aaaa0642264ddc265e0d8b9ebeee7/tests/data/rgb_lzw.tif",
+    "repository": "rasterio/rasterio",
+    "commit": "3f685650aa3aaaa0642264ddc265e0d8b9ebeee7",
+    "path": "tests/data/rgb_lzw.tif",
+    "input": "/tmp/filerepack-extra-corpus/rasterio-rasterio-rgb_lzw.tif",
+    "access": "public unauthenticated repository; licenses in respective pinned repository",
+    "sha256": "ca0301f13633fbcc8faa24bfe1e680e308f528212eea09ecc3fcb59647bb97db",
+    "bytes": 944928,
+    "result": {
+      "equal": true,
+      "changed": true,
+      "details": {
+        "profile": "TIFF-native-data-suffix",
+        "ifds": 1,
+        "metadata_policy": "retained positions and exact non-storage tag payloads",
+        "reader_lineage": "tifffile/imagecodecs"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 7077888,
+        "written": 793897,
+        "nodes": 42
+      }
+    },
+    "candidate_bytes": 793897,
+    "seconds": 1.3375778750050813,
+    "accepted": true,
+    "final_result": {
+      "equal": true,
+      "changed": true,
+      "details": {
+        "profile": "TIFF-native-data-suffix",
+        "ifds": 1,
+        "metadata_policy": "retained positions and exact non-storage tag payloads",
+        "reader_lineage": "tifffile/imagecodecs"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 7077888,
+        "written": 793897,
+        "nodes": 42,
+        "peak_worker_rss_bytes": 43368448,
+        "seconds": 1.0168905419996008
+      }
+    },
+    "final_candidate_bytes": 793897
+  },
+  {
+    "url": "https://raw.githubusercontent.com/imageio/imageio-binaries/f8f64710ea88e7e4a352c0f7d8c0deac9f5fd685/images/multipage.tif",
+    "repository": "imageio/imageio-binaries",
+    "commit": "f8f64710ea88e7e4a352c0f7d8c0deac9f5fd685",
+    "path": "images/multipage.tif",
+    "input": "/tmp/filerepack-extra-corpus/imageio-imageio-binaries-multipage.tif",
+    "access": "public unauthenticated repository; licenses in respective pinned repository",
+    "sha256": "4da0ad0d3df4807a9847247d1b5e565b50d46481f643afb5c37c14802c78130f",
+    "bytes": 940,
+    "error": "[Errno 2] No such file or directory: '/tmp/filerepack-extra-corpus/imageio-imageio-binaries-multipage.tif.candidate'",
+    "candidate_bytes": 940,
+    "seconds": 0.378307582999696,
+    "accepted": false,
+    "final_result": {
+      "changed": false,
+      "reason": "no eligible TIFF suffix compression",
+      "details": {
+        "profile": "TIFF-native-data-suffix",
+        "ifds": 2,
+        "metadata_policy": "retained positions and exact non-storage tag payloads",
+        "reader_lineage": "tifffile/imagecodecs"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 300,
+        "written": 0,
+        "nodes": 41,
+        "peak_worker_rss_bytes": 40599552,
+        "seconds": 0.7123759999958565
+      }
+    },
+    "final_candidate_bytes": 940
+  },
+  {
+    "url": "https://raw.githubusercontent.com/imageio/imageio-binaries/f8f64710ea88e7e4a352c0f7d8c0deac9f5fd685/images/geotiff.tif",
+    "repository": "imageio/imageio-binaries",
+    "commit": "f8f64710ea88e7e4a352c0f7d8c0deac9f5fd685",
+    "path": "images/geotiff.tif",
+    "input": "/tmp/filerepack-extra-corpus/imageio-imageio-binaries-geotiff.tif",
+    "access": "public unauthenticated repository; licenses in respective pinned repository",
+    "sha256": "d97fdf7a959eb5afe03d976e061c155356b4def524d7e09600e3ee33be252084",
+    "bytes": 650466,
+    "error": "[Errno 2] No such file or directory: '/tmp/filerepack-extra-corpus/imageio-imageio-binaries-geotiff.tif.candidate'",
+    "candidate_bytes": 650466,
+    "seconds": 0.3706718750036089,
+    "accepted": false,
+    "final_result": {
+      "changed": false,
+      "reason": "no eligible TIFF suffix compression",
+      "details": {
+        "profile": "TIFF-native-data-suffix",
+        "ifds": 1,
+        "metadata_policy": "retained positions and exact non-storage tag payloads",
+        "reader_lineage": "tifffile/imagecodecs"
+      },
+      "ok": true,
+      "usage": {
+        "decoded": 649371,
+        "written": 0,
+        "nodes": 20,
+        "peak_worker_rss_bytes": 41353216,
+        "seconds": 0.8152130420057802
+      }
+    },
+    "final_candidate_bytes": 650466
+  }
+]

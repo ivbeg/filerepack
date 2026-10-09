@@ -1,0 +1,23 @@
+section,mime,extensions,files,bytes
+mw-mediastats-table-bitmap,image/vnd.djvu,".djvu, .djv",11,116730460
+mw-mediastats-table-bitmap,image/x-xcf,.xcf,1694,14032449770
+mw-mediastats-table-bitmap,image/webp,.webp,68395,46556339019
+mw-mediastats-table-bitmap,image/gif,.gif,412629,1413588015590
+mw-mediastats-table-bitmap,image/tiff,".tiff, .tif",4862791,413643552524623
+mw-mediastats-table-bitmap,image/png,".png, .apng",5595693,24471897371163
+mw-mediastats-table-bitmap,image/jpeg,".jpeg, .jpg, .jpe, .jps",120348995,428188899509977
+mw-mediastats-table-drawing,image/svg+xml,.svg,5297238,1324829227334
+mw-mediastats-table-audio,audio/webm,.webm,305,6153097350
+mw-mediastats-table-audio,audio/midi,".mid, .midi, .kar",7121,33171516
+mw-mediastats-table-audio,audio/flac,.flac,16391,49231978239
+mw-mediastats-table-audio,audio/x-flac,.flac,18162,154203080725
+mw-mediastats-table-audio,audio/mpeg,".mpga, .mpa, .mp2, .mp3",51753,832132253821
+mw-mediastats-table-audio,audio/wav,.wav,1716284,745920250441
+mw-mediastats-table-audio,application/ogg,".ogx, .ogg, .ogm, .ogv, .oga, .spx, .opus",2618797,873435455066
+mw-mediastats-table-video,video/mp4,".mp4, .m4a, .m4p, .m4b, .m4r, .m4v",2,137513163
+mw-mediastats-table-video,video/mpeg,".mpg, .mpeg, .mpe",1140,230234370236
+mw-mediastats-table-video,application/ogg,".ogx, .ogg, .ogm, .ogv, .oga, .spx, .opus",157616,3229697095082
+mw-mediastats-table-video,video/webm,.webm,254277,42603841589062
+mw-mediastats-table-office,image/vnd.djvu,".djvu, .djv",371175,4405183167777
+mw-mediastats-table-office,application/pdf,.pdf,6905675,228970520308295
+mw-mediastats-table-3d,application/sla,.stl,11648,293685524020

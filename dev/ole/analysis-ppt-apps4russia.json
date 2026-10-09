@@ -1,0 +1,1317 @@
+{
+  "file": "temp/_raw/Apps4Russia_proposal_all.ppt",
+  "sha256": "971add29b0d952bf8873afb5c33cab50ad6c1ee47497cd31d67cb3e510fdb13a",
+  "file_bytes": 2694144,
+  "source_unchanged": true,
+  "streams": {
+    "\u0005SummaryInformation": 58108,
+    "Pictures": 2294732,
+    "Current User": 65,
+    "\u0005DocumentSummaryInformation": 4096,
+    "PowerPoint Document": 307076
+  },
+  "runtime_picture_rejection": "PPT OLE records: unqualified record type/version: 1058",
+  "record_form_blockers": [
+    {
+      "kind": 1054,
+      "version": 0,
+      "instance": 7,
+      "owner": 1016,
+      "size": 1175,
+      "count": 1
+    },
+    {
+      "kind": 1054,
+      "version": 0,
+      "instance": 8,
+      "owner": 1016,
+      "size": 1897,
+      "count": 1
+    },
+    {
+      "kind": 1054,
+      "version": 0,
+      "instance": 9,
+      "owner": 1016,
+      "size": 2245,
+      "count": 1
+    },
+    {
+      "kind": 1054,
+      "version": 0,
+      "instance": 10,
+      "owner": 1016,
+      "size": 1509,
+      "count": 1
+    },
+    {
+      "kind": 1054,
+      "version": 0,
+      "instance": 11,
+      "owner": 1016,
+      "size": 1578,
+      "count": 1
+    },
+    {
+      "kind": 1058,
+      "version": 0,
+      "instance": 0,
+      "owner": 1006,
+      "size": 8,
+      "count": 11
+    },
+    {
+      "kind": 61722,
+      "version": 0,
+      "instance": 2,
+      "owner": 61440,
+      "size": 8,
+      "count": 1
+    },
+    {
+      "kind": 61730,
+      "version": 3,
+      "instance": 2,
+      "owner": 61444,
+      "size": 7082,
+      "count": 1
+    },
+    {
+      "kind": 61730,
+      "version": 3,
+      "instance": 2,
+      "owner": 61444,
+      "size": 7254,
+      "count": 1
+    },
+    {
+      "kind": 61730,
+      "version": 3,
+      "instance": 2,
+      "owner": 61444,
+      "size": 7310,
+      "count": 1
+    },
+    {
+      "kind": 61730,
+      "version": 3,
+      "instance": 2,
+      "owner": 61444,
+      "size": 10441,
+      "count": 1
+    },
+    {
+      "kind": 61730,
+      "version": 3,
+      "instance": 2,
+      "owner": 61444,
+      "size": 11602,
+      "count": 1
+    },
+    {
+      "kind": 61730,
+      "version": 3,
+      "instance": 2,
+      "owner": 61444,
+      "size": 13198,
+      "count": 2
+    },
+    {
+      "kind": 61730,
+      "version": 3,
+      "instance": 2,
+      "owner": 61444,
+      "size": 23766,
+      "count": 1
+    },
+    {
+      "kind": 61730,
+      "version": 3,
+      "instance": 2,
+      "owner": 61444,
+      "size": 80931,
+      "count": 1
+    },
+    {
+      "kind": 61730,
+      "version": 3,
+      "instance": 3,
+      "owner": 61444,
+      "size": 2104,
+      "count": 2
+    },
+    {
+      "kind": 61730,
+      "version": 3,
+      "instance": 3,
+      "owner": 61444,
+      "size": 2105,
+      "count": 7
+    },
+    {
+      "kind": 61730,
+      "version": 3,
+      "instance": 3,
+      "owner": 61444,
+      "size": 2107,
+      "count": 1
+    }
+  ],
+  "programmable_tags": [
+    {
+      "name": "___PPT10",
+      "owner": 1008,
+      "forms": [
+        {
+          "kind": 12011,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT10",
+      "owner": 1006,
+      "forms": [
+        {
+          "kind": 4125,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11008,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11010,
+          "version": 15,
+          "instance": 0,
+          "owner": null,
+          "size": 0,
+          "count": 1
+        },
+        {
+          "kind": 12011,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        },
+        {
+          "kind": 61735,
+          "version": 0,
+          "instance": 0,
+          "owner": 61764,
+          "size": 32,
+          "count": 1
+        },
+        {
+          "kind": 61757,
+          "version": 15,
+          "instance": 0,
+          "owner": 61764,
+          "size": 13,
+          "count": 1
+        },
+        {
+          "kind": 61762,
+          "version": 0,
+          "instance": 20,
+          "owner": 61757,
+          "size": 5,
+          "count": 1
+        },
+        {
+          "kind": 61764,
+          "version": 15,
+          "instance": 1,
+          "owner": null,
+          "size": 61,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT10",
+      "owner": 1006,
+      "forms": [
+        {
+          "kind": 4125,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11008,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11010,
+          "version": 15,
+          "instance": 0,
+          "owner": null,
+          "size": 0,
+          "count": 1
+        },
+        {
+          "kind": 12011,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        },
+        {
+          "kind": 61735,
+          "version": 0,
+          "instance": 0,
+          "owner": 61764,
+          "size": 32,
+          "count": 1
+        },
+        {
+          "kind": 61757,
+          "version": 15,
+          "instance": 0,
+          "owner": 61764,
+          "size": 13,
+          "count": 1
+        },
+        {
+          "kind": 61762,
+          "version": 0,
+          "instance": 20,
+          "owner": 61757,
+          "size": 5,
+          "count": 1
+        },
+        {
+          "kind": 61764,
+          "version": 15,
+          "instance": 1,
+          "owner": null,
+          "size": 61,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT10",
+      "owner": 1006,
+      "forms": [
+        {
+          "kind": 4125,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11008,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11010,
+          "version": 15,
+          "instance": 0,
+          "owner": null,
+          "size": 0,
+          "count": 1
+        },
+        {
+          "kind": 12011,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        },
+        {
+          "kind": 61735,
+          "version": 0,
+          "instance": 0,
+          "owner": 61764,
+          "size": 32,
+          "count": 1
+        },
+        {
+          "kind": 61757,
+          "version": 15,
+          "instance": 0,
+          "owner": 61764,
+          "size": 13,
+          "count": 1
+        },
+        {
+          "kind": 61762,
+          "version": 0,
+          "instance": 20,
+          "owner": 61757,
+          "size": 5,
+          "count": 1
+        },
+        {
+          "kind": 61764,
+          "version": 15,
+          "instance": 1,
+          "owner": null,
+          "size": 61,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT10",
+      "owner": 1006,
+      "forms": [
+        {
+          "kind": 4125,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11008,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11010,
+          "version": 15,
+          "instance": 0,
+          "owner": null,
+          "size": 0,
+          "count": 1
+        },
+        {
+          "kind": 12011,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        },
+        {
+          "kind": 61735,
+          "version": 0,
+          "instance": 0,
+          "owner": 61764,
+          "size": 32,
+          "count": 1
+        },
+        {
+          "kind": 61757,
+          "version": 15,
+          "instance": 0,
+          "owner": 61764,
+          "size": 13,
+          "count": 1
+        },
+        {
+          "kind": 61762,
+          "version": 0,
+          "instance": 20,
+          "owner": 61757,
+          "size": 5,
+          "count": 1
+        },
+        {
+          "kind": 61764,
+          "version": 15,
+          "instance": 1,
+          "owner": null,
+          "size": 61,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT10",
+      "owner": 1006,
+      "forms": [
+        {
+          "kind": 4125,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11008,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11010,
+          "version": 15,
+          "instance": 0,
+          "owner": null,
+          "size": 0,
+          "count": 1
+        },
+        {
+          "kind": 12011,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        },
+        {
+          "kind": 61735,
+          "version": 0,
+          "instance": 0,
+          "owner": 61764,
+          "size": 32,
+          "count": 1
+        },
+        {
+          "kind": 61757,
+          "version": 15,
+          "instance": 0,
+          "owner": 61764,
+          "size": 13,
+          "count": 1
+        },
+        {
+          "kind": 61762,
+          "version": 0,
+          "instance": 20,
+          "owner": 61757,
+          "size": 5,
+          "count": 1
+        },
+        {
+          "kind": 61764,
+          "version": 15,
+          "instance": 1,
+          "owner": null,
+          "size": 61,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT10",
+      "owner": 1006,
+      "forms": [
+        {
+          "kind": 4125,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11008,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11010,
+          "version": 15,
+          "instance": 0,
+          "owner": null,
+          "size": 0,
+          "count": 1
+        },
+        {
+          "kind": 12011,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        },
+        {
+          "kind": 61735,
+          "version": 0,
+          "instance": 0,
+          "owner": 61764,
+          "size": 32,
+          "count": 1
+        },
+        {
+          "kind": 61757,
+          "version": 15,
+          "instance": 0,
+          "owner": 61764,
+          "size": 13,
+          "count": 1
+        },
+        {
+          "kind": 61762,
+          "version": 0,
+          "instance": 20,
+          "owner": 61757,
+          "size": 5,
+          "count": 1
+        },
+        {
+          "kind": 61764,
+          "version": 15,
+          "instance": 1,
+          "owner": null,
+          "size": 61,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT10",
+      "owner": 1006,
+      "forms": [
+        {
+          "kind": 4125,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11008,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11010,
+          "version": 15,
+          "instance": 0,
+          "owner": null,
+          "size": 0,
+          "count": 1
+        },
+        {
+          "kind": 12011,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        },
+        {
+          "kind": 61735,
+          "version": 0,
+          "instance": 0,
+          "owner": 61764,
+          "size": 32,
+          "count": 1
+        },
+        {
+          "kind": 61757,
+          "version": 15,
+          "instance": 0,
+          "owner": 61764,
+          "size": 13,
+          "count": 1
+        },
+        {
+          "kind": 61762,
+          "version": 0,
+          "instance": 20,
+          "owner": 61757,
+          "size": 5,
+          "count": 1
+        },
+        {
+          "kind": 61764,
+          "version": 15,
+          "instance": 1,
+          "owner": null,
+          "size": 61,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT10",
+      "owner": 1006,
+      "forms": [
+        {
+          "kind": 4125,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11008,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11010,
+          "version": 15,
+          "instance": 0,
+          "owner": null,
+          "size": 0,
+          "count": 1
+        },
+        {
+          "kind": 12011,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        },
+        {
+          "kind": 61735,
+          "version": 0,
+          "instance": 0,
+          "owner": 61764,
+          "size": 32,
+          "count": 1
+        },
+        {
+          "kind": 61757,
+          "version": 15,
+          "instance": 0,
+          "owner": 61764,
+          "size": 13,
+          "count": 1
+        },
+        {
+          "kind": 61762,
+          "version": 0,
+          "instance": 20,
+          "owner": 61757,
+          "size": 5,
+          "count": 1
+        },
+        {
+          "kind": 61764,
+          "version": 15,
+          "instance": 1,
+          "owner": null,
+          "size": 61,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT10",
+      "owner": 1006,
+      "forms": [
+        {
+          "kind": 4125,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11008,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11010,
+          "version": 15,
+          "instance": 0,
+          "owner": null,
+          "size": 0,
+          "count": 1
+        },
+        {
+          "kind": 12011,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        },
+        {
+          "kind": 61735,
+          "version": 0,
+          "instance": 0,
+          "owner": 61764,
+          "size": 32,
+          "count": 1
+        },
+        {
+          "kind": 61757,
+          "version": 15,
+          "instance": 0,
+          "owner": 61764,
+          "size": 13,
+          "count": 1
+        },
+        {
+          "kind": 61762,
+          "version": 0,
+          "instance": 20,
+          "owner": 61757,
+          "size": 5,
+          "count": 1
+        },
+        {
+          "kind": 61764,
+          "version": 15,
+          "instance": 1,
+          "owner": null,
+          "size": 61,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT10",
+      "owner": 1006,
+      "forms": [
+        {
+          "kind": 4125,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11008,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11010,
+          "version": 15,
+          "instance": 0,
+          "owner": null,
+          "size": 0,
+          "count": 1
+        },
+        {
+          "kind": 12011,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        },
+        {
+          "kind": 61735,
+          "version": 0,
+          "instance": 0,
+          "owner": 61764,
+          "size": 32,
+          "count": 1
+        },
+        {
+          "kind": 61757,
+          "version": 15,
+          "instance": 0,
+          "owner": 61764,
+          "size": 13,
+          "count": 1
+        },
+        {
+          "kind": 61762,
+          "version": 0,
+          "instance": 20,
+          "owner": 61757,
+          "size": 5,
+          "count": 1
+        },
+        {
+          "kind": 61764,
+          "version": 15,
+          "instance": 1,
+          "owner": null,
+          "size": 61,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT10",
+      "owner": 1006,
+      "forms": [
+        {
+          "kind": 4125,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11008,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 4,
+          "count": 1
+        },
+        {
+          "kind": 11010,
+          "version": 15,
+          "instance": 0,
+          "owner": null,
+          "size": 0,
+          "count": 1
+        },
+        {
+          "kind": 12011,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        },
+        {
+          "kind": 61735,
+          "version": 0,
+          "instance": 0,
+          "owner": 61764,
+          "size": 32,
+          "count": 1
+        },
+        {
+          "kind": 61757,
+          "version": 15,
+          "instance": 0,
+          "owner": 61764,
+          "size": 13,
+          "count": 1
+        },
+        {
+          "kind": 61762,
+          "version": 0,
+          "instance": 20,
+          "owner": 61757,
+          "size": 5,
+          "count": 1
+        },
+        {
+          "kind": 61764,
+          "version": 15,
+          "instance": 1,
+          "owner": null,
+          "size": 61,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT10",
+      "owner": 1008,
+      "forms": [
+        {
+          "kind": 12011,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT9",
+      "owner": 61457,
+      "forms": [
+        {
+          "kind": 4012,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 12,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT12",
+      "owner": 2000,
+      "forms": [
+        {
+          "kind": 1061,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 1,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "name": "___PPT10",
+      "owner": 2000,
+      "forms": [
+        {
+          "kind": 1037,
+          "version": 0,
+          "instance": 0,
+          "owner": null,
+          "size": 8,
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "graph": {
+    "slides": 11,
+    "masters": 1,
+    "notes_pages": 1,
+    "notes_containers": 2,
+    "embedded_storages": 0,
+    "notes_and_embedded_graph_checks": "passed in isolation"
+  },
+  "picture_kinds": {
+    "61469": 16,
+    "61470": 16
+  },
+  "pictures_bytes": 2294732,
+  "selected_rasters": 13,
+  "decoded_accounting_bytes": 27101072,
+  "sample_selection_bytes": 8971836,
+  "skips": [
+    "PPT bounded PNG profile retains JPEG bytes",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+    "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "OfficeArt raster: unqualified critical/unsafe PNG chunk",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "PPT bounded PNG profile retains JPEG bytes",
+    "PPT bounded PNG profile retains JPEG bytes"
+  ],
+  "verified_image_only_savings_bytes": 600990,
+  "trials": [
+    {
+      "picture_index": 1,
+      "original_bytes": 13866,
+      "candidate_bytes": 13224,
+      "saved_bytes": 642,
+      "encoder": "png-zopfli15"
+    },
+    {
+      "picture_index": 3,
+      "original_bytes": 35459,
+      "candidate_bytes": 29849,
+      "saved_bytes": 5610,
+      "encoder": "png-oxipng10.2.0"
+    },
+    {
+      "picture_index": 4,
+      "original_bytes": 35791,
+      "candidate_bytes": 30719,
+      "saved_bytes": 5072,
+      "encoder": "png-oxipng10.2.0"
+    },
+    {
+      "picture_index": 5,
+      "original_bytes": 31723,
+      "candidate_bytes": 27005,
+      "saved_bytes": 4718,
+      "encoder": "png-oxipng10.2.0"
+    },
+    {
+      "picture_index": 6,
+      "original_bytes": 338652,
+      "candidate_bytes": 247819,
+      "saved_bytes": 90833,
+      "encoder": "png-oxipng10.2.0"
+    },
+    {
+      "picture_index": 7,
+      "original_bytes": 558502,
+      "candidate_bytes": 310844,
+      "saved_bytes": 247658,
+      "encoder": "png-oxipng10.2.0"
+    },
+    {
+      "picture_index": 16,
+      "original_bytes": 273918,
+      "candidate_bytes": 183850,
+      "saved_bytes": 90068,
+      "encoder": "png-oxipng10.2.0"
+    },
+    {
+      "picture_index": 17,
+      "original_bytes": 243125,
+      "candidate_bytes": 171087,
+      "saved_bytes": 72038,
+      "encoder": "png-oxipng10.2.0"
+    },
+    {
+      "picture_index": 19,
+      "original_bytes": 4133,
+      "candidate_bytes": 3288,
+      "saved_bytes": 845,
+      "encoder": "png-zopfli15"
+    },
+    {
+      "picture_index": 20,
+      "original_bytes": 3885,
+      "candidate_bytes": 3241,
+      "saved_bytes": 644,
+      "encoder": "png-zopfli15"
+    },
+    {
+      "picture_index": 23,
+      "original_bytes": 12955,
+      "candidate_bytes": 11961,
+      "saved_bytes": 994,
+      "encoder": "png-zopfli15"
+    },
+    {
+      "picture_index": 24,
+      "original_bytes": 17306,
+      "candidate_bytes": 16182,
+      "saved_bytes": 1124,
+      "encoder": "png-oxipng10.2.0"
+    },
+    {
+      "picture_index": 31,
+      "original_bytes": 271808,
+      "candidate_bytes": 191064,
+      "saved_bytes": 80744,
+      "encoder": "png-oxipng10.2.0"
+    }
+  ],
+  "whole_file_candidate_written": false,
+  "limitation": "Isolated image feasibility; full host eligibility and final file savings unqualified."
+}

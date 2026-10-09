@@ -213,18 +213,8 @@ class TestIdentifyFilename:
         path.write_bytes(b'fake-zst')
         header = (b'\x00' * 257) + b'ustar' + (b'\x00' * 250)
 
-        class _Proc:
-            def __init__(self):
-                self.stdout = io.BytesIO(header)
-
-            def kill(self):
-                return None
-
-            def wait(self, timeout=None):
-                return 0
-
         with patch('filerepack.tools.resolve_tool', return_value='/usr/bin/zstd'):
-            with patch('subprocess.Popen', side_effect=lambda *a, **k: _Proc()):
+            with patch('filerepack.commands.capture_prefix', return_value=header):
                 assert peek_stream_is_tar(str(path), 'zst') is True
                 kind = identify_filename(str(path), peek_path=str(path))
         assert kind is not None

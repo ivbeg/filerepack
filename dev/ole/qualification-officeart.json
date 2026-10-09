@@ -1,0 +1,2175 @@
+{
+  "status": "checksum-bound development pilot; runtime integration awaits approval",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.7",
+  "zlib": "1.2.12",
+  "zopfli": "0.4.3",
+  "olefile": "0.47",
+  "corpus_commit": "12c3688d130035f3dc2ca2a0f50d929456435a93",
+  "writer": "filerepack-ole 0.2.0 (cfb 0.14.0)",
+  "peak_memory": "not measured",
+  "cases": [
+    {
+      "fixture": "vector_image.doc",
+      "fixture_sha256": "747eb4c44a9ff7ac646f267fad6d4006b596a8beaec211fe27cb67f018800850",
+      "variant": "original",
+      "encoder": "zlib9",
+      "source_bytes": 24064,
+      "compaction_bytes": 24064,
+      "candidate_bytes": 24064,
+      "additional_savings_bytes": 0,
+      "stream_savings_bytes": 0,
+      "seconds": 0.036593,
+      "compaction_seconds": 0.028314,
+      "writer_seconds": 0.029143,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": true,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 7348,
+          "encoded_bytes": 1543,
+          "output_encoded_bytes": 1543,
+          "decoded_sha256": "eaa202a7682e9f8db12bf4d6e76e0e1c6c99fbeb9a59577b96b482e1f46a8475",
+          "uid_bytes": "8765d891a7ebcde0d6554aa619baf189",
+          "geometry_sha256": "e45ad4342ca785c790b018fc4376cdd6bcd3f73c324397956366c3a445dcee57"
+        }
+      ],
+      "references": [
+        {
+          "field": 3057,
+          "target": 0,
+          "output_target": 0
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+        }
+      ],
+      "changed_payloads": 0,
+      "selected_bytes": 24064,
+      "selected_verifier": "ole",
+      "selection_reason": "no smaller compressed metafile wrappers"
+    },
+    {
+      "fixture": "vector_image.doc",
+      "fixture_sha256": "747eb4c44a9ff7ac646f267fad6d4006b596a8beaec211fe27cb67f018800850",
+      "variant": "original",
+      "encoder": "zopfli15",
+      "source_bytes": 24064,
+      "compaction_bytes": 24064,
+      "candidate_bytes": 24064,
+      "additional_savings_bytes": 0,
+      "stream_savings_bytes": 74,
+      "seconds": 0.089984,
+      "compaction_seconds": 0.028314,
+      "writer_seconds": 0.041355,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 7348,
+          "encoded_bytes": 1543,
+          "output_encoded_bytes": 1469,
+          "decoded_sha256": "eaa202a7682e9f8db12bf4d6e76e0e1c6c99fbeb9a59577b96b482e1f46a8475",
+          "uid_bytes": "8765d891a7ebcde0d6554aa619baf189",
+          "geometry_sha256": "e45ad4342ca785c790b018fc4376cdd6bcd3f73c324397956366c3a445dcee57"
+        }
+      ],
+      "references": [
+        {
+          "field": 3057,
+          "target": 0,
+          "output_target": 0
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+        }
+      ],
+      "changed_payloads": 1,
+      "selected_bytes": 24064,
+      "selected_verifier": "ole",
+      "selection_reason": "payload savings do not improve physical compaction size"
+    },
+    {
+      "fixture": "vector_image.doc",
+      "fixture_sha256": "747eb4c44a9ff7ac646f267fad6d4006b596a8beaec211fe27cb67f018800850",
+      "variant": "controlled-zlib1",
+      "encoder": "zlib9",
+      "source_bytes": 24576,
+      "compaction_bytes": 24576,
+      "candidate_bytes": 24064,
+      "additional_savings_bytes": 512,
+      "stream_savings_bytes": 311,
+      "seconds": 0.031106,
+      "compaction_seconds": 0.026345,
+      "writer_seconds": 0.026009,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 7348,
+          "encoded_bytes": 1854,
+          "output_encoded_bytes": 1543,
+          "decoded_sha256": "eaa202a7682e9f8db12bf4d6e76e0e1c6c99fbeb9a59577b96b482e1f46a8475",
+          "uid_bytes": "8765d891a7ebcde0d6554aa619baf189",
+          "geometry_sha256": "e45ad4342ca785c790b018fc4376cdd6bcd3f73c324397956366c3a445dcee57"
+        }
+      ],
+      "references": [
+        {
+          "field": 3057,
+          "target": 0,
+          "output_target": 0
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+        }
+      ],
+      "changed_payloads": 1,
+      "selected_bytes": 24064,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "vector_image.doc",
+      "fixture_sha256": "747eb4c44a9ff7ac646f267fad6d4006b596a8beaec211fe27cb67f018800850",
+      "variant": "controlled-zlib1",
+      "encoder": "zopfli15",
+      "source_bytes": 24576,
+      "compaction_bytes": 24576,
+      "candidate_bytes": 24064,
+      "additional_savings_bytes": 512,
+      "stream_savings_bytes": 385,
+      "seconds": 0.112039,
+      "compaction_seconds": 0.026345,
+      "writer_seconds": 0.051371,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 7348,
+          "encoded_bytes": 1854,
+          "output_encoded_bytes": 1469,
+          "decoded_sha256": "eaa202a7682e9f8db12bf4d6e76e0e1c6c99fbeb9a59577b96b482e1f46a8475",
+          "uid_bytes": "8765d891a7ebcde0d6554aa619baf189",
+          "geometry_sha256": "e45ad4342ca785c790b018fc4376cdd6bcd3f73c324397956366c3a445dcee57"
+        }
+      ],
+      "references": [
+        {
+          "field": 3057,
+          "target": 0,
+          "output_target": 0
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+        }
+      ],
+      "changed_payloads": 1,
+      "selected_bytes": 24064,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "vector_image.doc",
+      "fixture_sha256": "747eb4c44a9ff7ac646f267fad6d4006b596a8beaec211fe27cb67f018800850",
+      "variant": "controlled-zlib0",
+      "encoder": "zlib9",
+      "source_bytes": 30208,
+      "compaction_bytes": 30208,
+      "candidate_bytes": 24064,
+      "additional_savings_bytes": 6144,
+      "stream_savings_bytes": 5816,
+      "seconds": 0.037434,
+      "compaction_seconds": 0.027109,
+      "writer_seconds": 0.030755,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 7348,
+          "encoded_bytes": 7359,
+          "output_encoded_bytes": 1543,
+          "decoded_sha256": "eaa202a7682e9f8db12bf4d6e76e0e1c6c99fbeb9a59577b96b482e1f46a8475",
+          "uid_bytes": "8765d891a7ebcde0d6554aa619baf189",
+          "geometry_sha256": "e45ad4342ca785c790b018fc4376cdd6bcd3f73c324397956366c3a445dcee57"
+        }
+      ],
+      "references": [
+        {
+          "field": 3057,
+          "target": 0,
+          "output_target": 0
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+        }
+      ],
+      "changed_payloads": 1,
+      "selected_bytes": 24064,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "vector_image.doc",
+      "fixture_sha256": "747eb4c44a9ff7ac646f267fad6d4006b596a8beaec211fe27cb67f018800850",
+      "variant": "controlled-zlib0",
+      "encoder": "zopfli15",
+      "source_bytes": 30208,
+      "compaction_bytes": 30208,
+      "candidate_bytes": 24064,
+      "additional_savings_bytes": 6144,
+      "stream_savings_bytes": 5890,
+      "seconds": 0.096354,
+      "compaction_seconds": 0.027109,
+      "writer_seconds": 0.042655,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 7348,
+          "encoded_bytes": 7359,
+          "output_encoded_bytes": 1469,
+          "decoded_sha256": "eaa202a7682e9f8db12bf4d6e76e0e1c6c99fbeb9a59577b96b482e1f46a8475",
+          "uid_bytes": "8765d891a7ebcde0d6554aa619baf189",
+          "geometry_sha256": "e45ad4342ca785c790b018fc4376cdd6bcd3f73c324397956366c3a445dcee57"
+        }
+      ],
+      "references": [
+        {
+          "field": 3057,
+          "target": 0,
+          "output_target": 0
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "427cce382b0f845c1c54e193e50580a26f817b727b184b88866d187e855893c0"
+        }
+      ],
+      "changed_payloads": 1,
+      "selected_bytes": 24064,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "word_with_embeded.doc",
+      "fixture_sha256": "206acf1f7eb7b7d7d2075e04015d005ae9bb56f025560f2583ad3878257bc4c7",
+      "variant": "original",
+      "encoder": "zlib9",
+      "source_bytes": 117248,
+      "compaction_bytes": 117248,
+      "candidate_bytes": 116224,
+      "additional_savings_bytes": 1024,
+      "stream_savings_bytes": 599,
+      "seconds": 0.081496,
+      "compaction_seconds": 0.092126,
+      "writer_seconds": 0.069996,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 3192,
+          "encoded_bytes": 903,
+          "output_encoded_bytes": 795,
+          "decoded_sha256": "afc93a6424b044c4cef069e39819db66e670c75ae72640675b77a48a91fc2d56",
+          "uid_bytes": "f5dcce8525f1501a8743c3fb62861f1a",
+          "geometry_sha256": "9b7b7352aac5965a6b01518a4d44d79d3bf1c00371eea8cb5b6f2c8370f9d752"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 3168,
+          "encoded_bytes": 892,
+          "output_encoded_bytes": 785,
+          "decoded_sha256": "c574e1bf6c1bb7e9d47b1bb53f4419a674e8267971594323ee61428c01307786",
+          "uid_bytes": "6f41ead284a8fcb5adf0fcddebe75ce3",
+          "geometry_sha256": "9b7b7352aac5965a6b01518a4d44d79d3bf1c00371eea8cb5b6f2c8370f9d752"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 8772,
+          "encoded_bytes": 1791,
+          "output_encoded_bytes": 1466,
+          "decoded_sha256": "383b7600fb7038152260493298d2bd19a504f5a40f3a0a97bd0345243d0f7e57",
+          "uid_bytes": "4f9d44cefc69d22ed6a49e4183f7e470",
+          "geometry_sha256": "68a3c2a5d9cd3f52302c31b96e2d0e7e1cfc26b2e94a9f153298c683865a0e02"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 1652,
+          "encoded_bytes": 684,
+          "output_encoded_bytes": 625,
+          "decoded_sha256": "4cb5713205cc7510dfad8023cd8a284e0dcdeec28afe23be8c9fcf3db75b1a83",
+          "uid_bytes": "03dfa1897b7f2979189fe6e8dbb0a265",
+          "geometry_sha256": "18c64fac829df20351295ecc2f3ed1f0a6b1b790291f418000534a450bf0e014"
+        }
+      ],
+      "references": [
+        {
+          "field": 3043,
+          "target": 0,
+          "output_target": 0
+        },
+        {
+          "field": 2983,
+          "target": 1129,
+          "output_target": 1021
+        },
+        {
+          "field": 2945,
+          "target": 2247,
+          "output_target": 2032
+        },
+        {
+          "field": 2907,
+          "target": 4264,
+          "output_target": 3724
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+        }
+      ],
+      "changed_payloads": 4,
+      "selected_bytes": 116224,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "word_with_embeded.doc",
+      "fixture_sha256": "206acf1f7eb7b7d7d2075e04015d005ae9bb56f025560f2583ad3878257bc4c7",
+      "variant": "original",
+      "encoder": "zopfli15",
+      "source_bytes": 117248,
+      "compaction_bytes": 117248,
+      "candidate_bytes": 116224,
+      "additional_savings_bytes": 1024,
+      "stream_savings_bytes": 773,
+      "seconds": 0.729469,
+      "compaction_seconds": 0.092126,
+      "writer_seconds": 0.10094,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 3192,
+          "encoded_bytes": 903,
+          "output_encoded_bytes": 763,
+          "decoded_sha256": "afc93a6424b044c4cef069e39819db66e670c75ae72640675b77a48a91fc2d56",
+          "uid_bytes": "f5dcce8525f1501a8743c3fb62861f1a",
+          "geometry_sha256": "9b7b7352aac5965a6b01518a4d44d79d3bf1c00371eea8cb5b6f2c8370f9d752"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 3168,
+          "encoded_bytes": 892,
+          "output_encoded_bytes": 749,
+          "decoded_sha256": "c574e1bf6c1bb7e9d47b1bb53f4419a674e8267971594323ee61428c01307786",
+          "uid_bytes": "6f41ead284a8fcb5adf0fcddebe75ce3",
+          "geometry_sha256": "9b7b7352aac5965a6b01518a4d44d79d3bf1c00371eea8cb5b6f2c8370f9d752"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 8772,
+          "encoded_bytes": 1791,
+          "output_encoded_bytes": 1400,
+          "decoded_sha256": "383b7600fb7038152260493298d2bd19a504f5a40f3a0a97bd0345243d0f7e57",
+          "uid_bytes": "4f9d44cefc69d22ed6a49e4183f7e470",
+          "geometry_sha256": "68a3c2a5d9cd3f52302c31b96e2d0e7e1cfc26b2e94a9f153298c683865a0e02"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 1652,
+          "encoded_bytes": 684,
+          "output_encoded_bytes": 585,
+          "decoded_sha256": "4cb5713205cc7510dfad8023cd8a284e0dcdeec28afe23be8c9fcf3db75b1a83",
+          "uid_bytes": "03dfa1897b7f2979189fe6e8dbb0a265",
+          "geometry_sha256": "18c64fac829df20351295ecc2f3ed1f0a6b1b790291f418000534a450bf0e014"
+        }
+      ],
+      "references": [
+        {
+          "field": 3043,
+          "target": 0,
+          "output_target": 0
+        },
+        {
+          "field": 2983,
+          "target": 1129,
+          "output_target": 989
+        },
+        {
+          "field": 2945,
+          "target": 2247,
+          "output_target": 1964
+        },
+        {
+          "field": 2907,
+          "target": 4264,
+          "output_target": 3590
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+        }
+      ],
+      "changed_payloads": 4,
+      "selected_bytes": 116224,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "word_with_embeded.doc",
+      "fixture_sha256": "206acf1f7eb7b7d7d2075e04015d005ae9bb56f025560f2583ad3878257bc4c7",
+      "variant": "controlled-zlib1",
+      "encoder": "zlib9",
+      "source_bytes": 116736,
+      "compaction_bytes": 116736,
+      "candidate_bytes": 116224,
+      "additional_savings_bytes": 512,
+      "stream_savings_bytes": 508,
+      "seconds": 0.093794,
+      "compaction_seconds": 0.074735,
+      "writer_seconds": 0.079811,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 3192,
+          "encoded_bytes": 886,
+          "output_encoded_bytes": 795,
+          "decoded_sha256": "afc93a6424b044c4cef069e39819db66e670c75ae72640675b77a48a91fc2d56",
+          "uid_bytes": "f5dcce8525f1501a8743c3fb62861f1a",
+          "geometry_sha256": "9b7b7352aac5965a6b01518a4d44d79d3bf1c00371eea8cb5b6f2c8370f9d752"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 3168,
+          "encoded_bytes": 877,
+          "output_encoded_bytes": 785,
+          "decoded_sha256": "c574e1bf6c1bb7e9d47b1bb53f4419a674e8267971594323ee61428c01307786",
+          "uid_bytes": "6f41ead284a8fcb5adf0fcddebe75ce3",
+          "geometry_sha256": "9b7b7352aac5965a6b01518a4d44d79d3bf1c00371eea8cb5b6f2c8370f9d752"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 8772,
+          "encoded_bytes": 1739,
+          "output_encoded_bytes": 1466,
+          "decoded_sha256": "383b7600fb7038152260493298d2bd19a504f5a40f3a0a97bd0345243d0f7e57",
+          "uid_bytes": "4f9d44cefc69d22ed6a49e4183f7e470",
+          "geometry_sha256": "68a3c2a5d9cd3f52302c31b96e2d0e7e1cfc26b2e94a9f153298c683865a0e02"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 1652,
+          "encoded_bytes": 677,
+          "output_encoded_bytes": 625,
+          "decoded_sha256": "4cb5713205cc7510dfad8023cd8a284e0dcdeec28afe23be8c9fcf3db75b1a83",
+          "uid_bytes": "03dfa1897b7f2979189fe6e8dbb0a265",
+          "geometry_sha256": "18c64fac829df20351295ecc2f3ed1f0a6b1b790291f418000534a450bf0e014"
+        }
+      ],
+      "references": [
+        {
+          "field": 3043,
+          "target": 0,
+          "output_target": 0
+        },
+        {
+          "field": 2983,
+          "target": 1112,
+          "output_target": 1021
+        },
+        {
+          "field": 2945,
+          "target": 2215,
+          "output_target": 2032
+        },
+        {
+          "field": 2907,
+          "target": 4180,
+          "output_target": 3724
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+        }
+      ],
+      "changed_payloads": 4,
+      "selected_bytes": 116224,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "word_with_embeded.doc",
+      "fixture_sha256": "206acf1f7eb7b7d7d2075e04015d005ae9bb56f025560f2583ad3878257bc4c7",
+      "variant": "controlled-zlib1",
+      "encoder": "zopfli15",
+      "source_bytes": 116736,
+      "compaction_bytes": 116736,
+      "candidate_bytes": 116224,
+      "additional_savings_bytes": 512,
+      "stream_savings_bytes": 682,
+      "seconds": 0.687025,
+      "compaction_seconds": 0.074735,
+      "writer_seconds": 0.077957,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 3192,
+          "encoded_bytes": 886,
+          "output_encoded_bytes": 763,
+          "decoded_sha256": "afc93a6424b044c4cef069e39819db66e670c75ae72640675b77a48a91fc2d56",
+          "uid_bytes": "f5dcce8525f1501a8743c3fb62861f1a",
+          "geometry_sha256": "9b7b7352aac5965a6b01518a4d44d79d3bf1c00371eea8cb5b6f2c8370f9d752"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 3168,
+          "encoded_bytes": 877,
+          "output_encoded_bytes": 749,
+          "decoded_sha256": "c574e1bf6c1bb7e9d47b1bb53f4419a674e8267971594323ee61428c01307786",
+          "uid_bytes": "6f41ead284a8fcb5adf0fcddebe75ce3",
+          "geometry_sha256": "9b7b7352aac5965a6b01518a4d44d79d3bf1c00371eea8cb5b6f2c8370f9d752"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 8772,
+          "encoded_bytes": 1739,
+          "output_encoded_bytes": 1400,
+          "decoded_sha256": "383b7600fb7038152260493298d2bd19a504f5a40f3a0a97bd0345243d0f7e57",
+          "uid_bytes": "4f9d44cefc69d22ed6a49e4183f7e470",
+          "geometry_sha256": "68a3c2a5d9cd3f52302c31b96e2d0e7e1cfc26b2e94a9f153298c683865a0e02"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 1652,
+          "encoded_bytes": 677,
+          "output_encoded_bytes": 585,
+          "decoded_sha256": "4cb5713205cc7510dfad8023cd8a284e0dcdeec28afe23be8c9fcf3db75b1a83",
+          "uid_bytes": "03dfa1897b7f2979189fe6e8dbb0a265",
+          "geometry_sha256": "18c64fac829df20351295ecc2f3ed1f0a6b1b790291f418000534a450bf0e014"
+        }
+      ],
+      "references": [
+        {
+          "field": 3043,
+          "target": 0,
+          "output_target": 0
+        },
+        {
+          "field": 2983,
+          "target": 1112,
+          "output_target": 989
+        },
+        {
+          "field": 2945,
+          "target": 2215,
+          "output_target": 1964
+        },
+        {
+          "field": 2907,
+          "target": 4180,
+          "output_target": 3590
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+        }
+      ],
+      "changed_payloads": 4,
+      "selected_bytes": 116224,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "word_with_embeded.doc",
+      "fixture_sha256": "206acf1f7eb7b7d7d2075e04015d005ae9bb56f025560f2583ad3878257bc4c7",
+      "variant": "controlled-zlib0",
+      "encoder": "zlib9",
+      "source_bytes": 129536,
+      "compaction_bytes": 129536,
+      "candidate_bytes": 116224,
+      "additional_savings_bytes": 13312,
+      "stream_savings_bytes": 13157,
+      "seconds": 0.092609,
+      "compaction_seconds": 0.07915,
+      "writer_seconds": 0.078436,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 3192,
+          "encoded_bytes": 3203,
+          "output_encoded_bytes": 795,
+          "decoded_sha256": "afc93a6424b044c4cef069e39819db66e670c75ae72640675b77a48a91fc2d56",
+          "uid_bytes": "f5dcce8525f1501a8743c3fb62861f1a",
+          "geometry_sha256": "9b7b7352aac5965a6b01518a4d44d79d3bf1c00371eea8cb5b6f2c8370f9d752"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 3168,
+          "encoded_bytes": 3179,
+          "output_encoded_bytes": 785,
+          "decoded_sha256": "c574e1bf6c1bb7e9d47b1bb53f4419a674e8267971594323ee61428c01307786",
+          "uid_bytes": "6f41ead284a8fcb5adf0fcddebe75ce3",
+          "geometry_sha256": "9b7b7352aac5965a6b01518a4d44d79d3bf1c00371eea8cb5b6f2c8370f9d752"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 8772,
+          "encoded_bytes": 8783,
+          "output_encoded_bytes": 1466,
+          "decoded_sha256": "383b7600fb7038152260493298d2bd19a504f5a40f3a0a97bd0345243d0f7e57",
+          "uid_bytes": "4f9d44cefc69d22ed6a49e4183f7e470",
+          "geometry_sha256": "68a3c2a5d9cd3f52302c31b96e2d0e7e1cfc26b2e94a9f153298c683865a0e02"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 1652,
+          "encoded_bytes": 1663,
+          "output_encoded_bytes": 625,
+          "decoded_sha256": "4cb5713205cc7510dfad8023cd8a284e0dcdeec28afe23be8c9fcf3db75b1a83",
+          "uid_bytes": "03dfa1897b7f2979189fe6e8dbb0a265",
+          "geometry_sha256": "18c64fac829df20351295ecc2f3ed1f0a6b1b790291f418000534a450bf0e014"
+        }
+      ],
+      "references": [
+        {
+          "field": 3043,
+          "target": 0,
+          "output_target": 0
+        },
+        {
+          "field": 2983,
+          "target": 3429,
+          "output_target": 1021
+        },
+        {
+          "field": 2945,
+          "target": 6834,
+          "output_target": 2032
+        },
+        {
+          "field": 2907,
+          "target": 15843,
+          "output_target": 3724
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+        }
+      ],
+      "changed_payloads": 4,
+      "selected_bytes": 116224,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "word_with_embeded.doc",
+      "fixture_sha256": "206acf1f7eb7b7d7d2075e04015d005ae9bb56f025560f2583ad3878257bc4c7",
+      "variant": "controlled-zlib0",
+      "encoder": "zopfli15",
+      "source_bytes": 129536,
+      "compaction_bytes": 129536,
+      "candidate_bytes": 116224,
+      "additional_savings_bytes": 13312,
+      "stream_savings_bytes": 13331,
+      "seconds": 1.004885,
+      "compaction_seconds": 0.07915,
+      "writer_seconds": 0.085578,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 3192,
+          "encoded_bytes": 3203,
+          "output_encoded_bytes": 763,
+          "decoded_sha256": "afc93a6424b044c4cef069e39819db66e670c75ae72640675b77a48a91fc2d56",
+          "uid_bytes": "f5dcce8525f1501a8743c3fb62861f1a",
+          "geometry_sha256": "9b7b7352aac5965a6b01518a4d44d79d3bf1c00371eea8cb5b6f2c8370f9d752"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 3168,
+          "encoded_bytes": 3179,
+          "output_encoded_bytes": 749,
+          "decoded_sha256": "c574e1bf6c1bb7e9d47b1bb53f4419a674e8267971594323ee61428c01307786",
+          "uid_bytes": "6f41ead284a8fcb5adf0fcddebe75ce3",
+          "geometry_sha256": "9b7b7352aac5965a6b01518a4d44d79d3bf1c00371eea8cb5b6f2c8370f9d752"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 8772,
+          "encoded_bytes": 8783,
+          "output_encoded_bytes": 1400,
+          "decoded_sha256": "383b7600fb7038152260493298d2bd19a504f5a40f3a0a97bd0345243d0f7e57",
+          "uid_bytes": "4f9d44cefc69d22ed6a49e4183f7e470",
+          "geometry_sha256": "68a3c2a5d9cd3f52302c31b96e2d0e7e1cfc26b2e94a9f153298c683865a0e02"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 1652,
+          "encoded_bytes": 1663,
+          "output_encoded_bytes": 585,
+          "decoded_sha256": "4cb5713205cc7510dfad8023cd8a284e0dcdeec28afe23be8c9fcf3db75b1a83",
+          "uid_bytes": "03dfa1897b7f2979189fe6e8dbb0a265",
+          "geometry_sha256": "18c64fac829df20351295ecc2f3ed1f0a6b1b790291f418000534a450bf0e014"
+        }
+      ],
+      "references": [
+        {
+          "field": 3043,
+          "target": 0,
+          "output_target": 0
+        },
+        {
+          "field": 2983,
+          "target": 3429,
+          "output_target": 989
+        },
+        {
+          "field": 2945,
+          "target": 6834,
+          "output_target": 1964
+        },
+        {
+          "field": 2907,
+          "target": 15843,
+          "output_target": 3590
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            816,
+            1056
+          ],
+          "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+        }
+      ],
+      "changed_payloads": 4,
+      "selected_bytes": 116224,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "SimpleWithImages.xls",
+      "fixture_sha256": "dd35970bf68df7bb609b681634602ead30001816009c791012d00b5563ab9314",
+      "variant": "original",
+      "encoder": "zlib9",
+      "source_bytes": 48128,
+      "compaction_bytes": 48128,
+      "candidate_bytes": 48128,
+      "additional_savings_bytes": 0,
+      "stream_savings_bytes": 0,
+      "seconds": 0.041865,
+      "compaction_seconds": 0.033496,
+      "writer_seconds": 0.030027,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": true,
+      "payloads": [
+        {
+          "type": "WMF",
+          "decoded_bytes": 28674,
+          "encoded_bytes": 19006,
+          "output_encoded_bytes": 19006,
+          "decoded_sha256": "2b5571a4f84de834cf5a5eea68118748636b9104ea65a1a90ca0e241a303b3a8",
+          "uid_bytes": "0be40eea41334f83a817d1c146085fc7",
+          "geometry_sha256": "37d5005f952e2688412e550a624eaea25d46ee41721d0f7b1bb8b223290061bc"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 6184,
+          "encoded_bytes": 2906,
+          "output_encoded_bytes": 2906,
+          "decoded_sha256": "3c9e27e68d0322daaff3477a957d46ae5b32b23f058d29e65d3947b6eeafb2cb",
+          "uid_bytes": "ac323e4dbf2b8acaa9cf5ef0f8a23d9a",
+          "geometry_sha256": "8a9810145de03238fe54e4d677f05adec70b12df82b66f82678806d227526b85"
+        }
+      ],
+      "references": [
+        {
+          "record": "0x85",
+          "field": 1338,
+          "target": 36566,
+          "output_target": 36566,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x85",
+          "field": 1356,
+          "target": 37489,
+          "output_target": 37489,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x85",
+          "field": 1374,
+          "target": 37752,
+          "output_target": 37752,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x20b",
+          "field": 36602,
+          "target": 36750,
+          "output_target": 36750,
+          "target_type": "0x55"
+        },
+        {
+          "record": "0x20b",
+          "field": 37525,
+          "target": 37673,
+          "output_target": 37673,
+          "target_type": "0x55"
+        },
+        {
+          "record": "0x20b",
+          "field": 37788,
+          "target": 37936,
+          "output_target": 37936,
+          "target_type": "0x55"
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+        }
+      ],
+      "changed_payloads": 0,
+      "selected_bytes": 48128,
+      "selected_verifier": "ole",
+      "selection_reason": "no smaller compressed metafile wrappers"
+    },
+    {
+      "fixture": "SimpleWithImages.xls",
+      "fixture_sha256": "dd35970bf68df7bb609b681634602ead30001816009c791012d00b5563ab9314",
+      "variant": "original",
+      "encoder": "zopfli15",
+      "source_bytes": 48128,
+      "compaction_bytes": 48128,
+      "candidate_bytes": 47104,
+      "additional_savings_bytes": 1024,
+      "stream_savings_bytes": 796,
+      "seconds": 2.083514,
+      "compaction_seconds": 0.033496,
+      "writer_seconds": 0.028889,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "WMF",
+          "decoded_bytes": 28674,
+          "encoded_bytes": 19006,
+          "output_encoded_bytes": 18341,
+          "decoded_sha256": "2b5571a4f84de834cf5a5eea68118748636b9104ea65a1a90ca0e241a303b3a8",
+          "uid_bytes": "0be40eea41334f83a817d1c146085fc7",
+          "geometry_sha256": "37d5005f952e2688412e550a624eaea25d46ee41721d0f7b1bb8b223290061bc"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 6184,
+          "encoded_bytes": 2906,
+          "output_encoded_bytes": 2775,
+          "decoded_sha256": "3c9e27e68d0322daaff3477a957d46ae5b32b23f058d29e65d3947b6eeafb2cb",
+          "uid_bytes": "ac323e4dbf2b8acaa9cf5ef0f8a23d9a",
+          "geometry_sha256": "8a9810145de03238fe54e4d677f05adec70b12df82b66f82678806d227526b85"
+        }
+      ],
+      "references": [
+        {
+          "record": "0x85",
+          "field": 1338,
+          "target": 36566,
+          "output_target": 35770,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x85",
+          "field": 1356,
+          "target": 37489,
+          "output_target": 36693,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x85",
+          "field": 1374,
+          "target": 37752,
+          "output_target": 36956,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x20b",
+          "field": 36602,
+          "target": 36750,
+          "output_target": 35954,
+          "target_type": "0x55"
+        },
+        {
+          "record": "0x20b",
+          "field": 37525,
+          "target": 37673,
+          "output_target": 36877,
+          "target_type": "0x55"
+        },
+        {
+          "record": "0x20b",
+          "field": 37788,
+          "target": 37936,
+          "output_target": 37140,
+          "target_type": "0x55"
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+        }
+      ],
+      "changed_payloads": 2,
+      "selected_bytes": 47104,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "SimpleWithImages.xls",
+      "fixture_sha256": "dd35970bf68df7bb609b681634602ead30001816009c791012d00b5563ab9314",
+      "variant": "controlled-zlib1",
+      "encoder": "zlib9",
+      "source_bytes": 48640,
+      "compaction_bytes": 48640,
+      "candidate_bytes": 48128,
+      "additional_savings_bytes": 512,
+      "stream_savings_bytes": 818,
+      "seconds": 0.039231,
+      "compaction_seconds": 0.028459,
+      "writer_seconds": 0.027591,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "WMF",
+          "decoded_bytes": 28674,
+          "encoded_bytes": 19578,
+          "output_encoded_bytes": 19006,
+          "decoded_sha256": "2b5571a4f84de834cf5a5eea68118748636b9104ea65a1a90ca0e241a303b3a8",
+          "uid_bytes": "0be40eea41334f83a817d1c146085fc7",
+          "geometry_sha256": "37d5005f952e2688412e550a624eaea25d46ee41721d0f7b1bb8b223290061bc"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 6184,
+          "encoded_bytes": 3152,
+          "output_encoded_bytes": 2906,
+          "decoded_sha256": "3c9e27e68d0322daaff3477a957d46ae5b32b23f058d29e65d3947b6eeafb2cb",
+          "uid_bytes": "ac323e4dbf2b8acaa9cf5ef0f8a23d9a",
+          "geometry_sha256": "8a9810145de03238fe54e4d677f05adec70b12df82b66f82678806d227526b85"
+        }
+      ],
+      "references": [
+        {
+          "record": "0x85",
+          "field": 1338,
+          "target": 37384,
+          "output_target": 36566,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x85",
+          "field": 1356,
+          "target": 38307,
+          "output_target": 37489,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x85",
+          "field": 1374,
+          "target": 38570,
+          "output_target": 37752,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x20b",
+          "field": 37420,
+          "target": 37568,
+          "output_target": 36750,
+          "target_type": "0x55"
+        },
+        {
+          "record": "0x20b",
+          "field": 38343,
+          "target": 38491,
+          "output_target": 37673,
+          "target_type": "0x55"
+        },
+        {
+          "record": "0x20b",
+          "field": 38606,
+          "target": 38754,
+          "output_target": 37936,
+          "target_type": "0x55"
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+        }
+      ],
+      "changed_payloads": 2,
+      "selected_bytes": 48128,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "SimpleWithImages.xls",
+      "fixture_sha256": "dd35970bf68df7bb609b681634602ead30001816009c791012d00b5563ab9314",
+      "variant": "controlled-zlib1",
+      "encoder": "zopfli15",
+      "source_bytes": 48640,
+      "compaction_bytes": 48640,
+      "candidate_bytes": 47104,
+      "additional_savings_bytes": 1536,
+      "stream_savings_bytes": 1614,
+      "seconds": 2.108962,
+      "compaction_seconds": 0.028459,
+      "writer_seconds": 0.032904,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "WMF",
+          "decoded_bytes": 28674,
+          "encoded_bytes": 19578,
+          "output_encoded_bytes": 18341,
+          "decoded_sha256": "2b5571a4f84de834cf5a5eea68118748636b9104ea65a1a90ca0e241a303b3a8",
+          "uid_bytes": "0be40eea41334f83a817d1c146085fc7",
+          "geometry_sha256": "37d5005f952e2688412e550a624eaea25d46ee41721d0f7b1bb8b223290061bc"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 6184,
+          "encoded_bytes": 3152,
+          "output_encoded_bytes": 2775,
+          "decoded_sha256": "3c9e27e68d0322daaff3477a957d46ae5b32b23f058d29e65d3947b6eeafb2cb",
+          "uid_bytes": "ac323e4dbf2b8acaa9cf5ef0f8a23d9a",
+          "geometry_sha256": "8a9810145de03238fe54e4d677f05adec70b12df82b66f82678806d227526b85"
+        }
+      ],
+      "references": [
+        {
+          "record": "0x85",
+          "field": 1338,
+          "target": 37384,
+          "output_target": 35770,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x85",
+          "field": 1356,
+          "target": 38307,
+          "output_target": 36693,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x85",
+          "field": 1374,
+          "target": 38570,
+          "output_target": 36956,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x20b",
+          "field": 37420,
+          "target": 37568,
+          "output_target": 35954,
+          "target_type": "0x55"
+        },
+        {
+          "record": "0x20b",
+          "field": 38343,
+          "target": 38491,
+          "output_target": 36877,
+          "target_type": "0x55"
+        },
+        {
+          "record": "0x20b",
+          "field": 38606,
+          "target": 38754,
+          "output_target": 37140,
+          "target_type": "0x55"
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+        }
+      ],
+      "changed_payloads": 2,
+      "selected_bytes": 47104,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "SimpleWithImages.xls",
+      "fixture_sha256": "dd35970bf68df7bb609b681634602ead30001816009c791012d00b5563ab9314",
+      "variant": "controlled-zlib0",
+      "encoder": "zlib9",
+      "source_bytes": 60928,
+      "compaction_bytes": 60928,
+      "candidate_bytes": 48128,
+      "additional_savings_bytes": 12800,
+      "stream_savings_bytes": 12972,
+      "seconds": 0.045383,
+      "compaction_seconds": 0.03289,
+      "writer_seconds": 0.0339,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "WMF",
+          "decoded_bytes": 28674,
+          "encoded_bytes": 28685,
+          "output_encoded_bytes": 19006,
+          "decoded_sha256": "2b5571a4f84de834cf5a5eea68118748636b9104ea65a1a90ca0e241a303b3a8",
+          "uid_bytes": "0be40eea41334f83a817d1c146085fc7",
+          "geometry_sha256": "37d5005f952e2688412e550a624eaea25d46ee41721d0f7b1bb8b223290061bc"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 6184,
+          "encoded_bytes": 6195,
+          "output_encoded_bytes": 2906,
+          "decoded_sha256": "3c9e27e68d0322daaff3477a957d46ae5b32b23f058d29e65d3947b6eeafb2cb",
+          "uid_bytes": "ac323e4dbf2b8acaa9cf5ef0f8a23d9a",
+          "geometry_sha256": "8a9810145de03238fe54e4d677f05adec70b12df82b66f82678806d227526b85"
+        }
+      ],
+      "references": [
+        {
+          "record": "0x85",
+          "field": 1338,
+          "target": 49538,
+          "output_target": 36566,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x85",
+          "field": 1356,
+          "target": 50461,
+          "output_target": 37489,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x85",
+          "field": 1374,
+          "target": 50724,
+          "output_target": 37752,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x20b",
+          "field": 49574,
+          "target": 49722,
+          "output_target": 36750,
+          "target_type": "0x55"
+        },
+        {
+          "record": "0x20b",
+          "field": 50497,
+          "target": 50645,
+          "output_target": 37673,
+          "target_type": "0x55"
+        },
+        {
+          "record": "0x20b",
+          "field": 50760,
+          "target": 50908,
+          "output_target": 37936,
+          "target_type": "0x55"
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+        }
+      ],
+      "changed_payloads": 2,
+      "selected_bytes": 48128,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "SimpleWithImages.xls",
+      "fixture_sha256": "dd35970bf68df7bb609b681634602ead30001816009c791012d00b5563ab9314",
+      "variant": "controlled-zlib0",
+      "encoder": "zopfli15",
+      "source_bytes": 60928,
+      "compaction_bytes": 60928,
+      "candidate_bytes": 47104,
+      "additional_savings_bytes": 13824,
+      "stream_savings_bytes": 13768,
+      "seconds": 0.518209,
+      "compaction_seconds": 0.03289,
+      "writer_seconds": 0.011877,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "WMF",
+          "decoded_bytes": 28674,
+          "encoded_bytes": 28685,
+          "output_encoded_bytes": 18341,
+          "decoded_sha256": "2b5571a4f84de834cf5a5eea68118748636b9104ea65a1a90ca0e241a303b3a8",
+          "uid_bytes": "0be40eea41334f83a817d1c146085fc7",
+          "geometry_sha256": "37d5005f952e2688412e550a624eaea25d46ee41721d0f7b1bb8b223290061bc"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 6184,
+          "encoded_bytes": 6195,
+          "output_encoded_bytes": 2775,
+          "decoded_sha256": "3c9e27e68d0322daaff3477a957d46ae5b32b23f058d29e65d3947b6eeafb2cb",
+          "uid_bytes": "ac323e4dbf2b8acaa9cf5ef0f8a23d9a",
+          "geometry_sha256": "8a9810145de03238fe54e4d677f05adec70b12df82b66f82678806d227526b85"
+        }
+      ],
+      "references": [
+        {
+          "record": "0x85",
+          "field": 1338,
+          "target": 49538,
+          "output_target": 35770,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x85",
+          "field": 1356,
+          "target": 50461,
+          "output_target": 36693,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x85",
+          "field": 1374,
+          "target": 50724,
+          "output_target": 36956,
+          "target_type": "0x809"
+        },
+        {
+          "record": "0x20b",
+          "field": 49574,
+          "target": 49722,
+          "output_target": 35954,
+          "target_type": "0x55"
+        },
+        {
+          "record": "0x20b",
+          "field": 50497,
+          "target": 50645,
+          "output_target": 36877,
+          "target_type": "0x55"
+        },
+        {
+          "record": "0x20b",
+          "field": 50760,
+          "target": 50908,
+          "output_target": 37140,
+          "target_type": "0x55"
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "046c617bf589b70ad06db68f53c85236c6d676a7ff8e0fdc98edbc18527a602e"
+        },
+        {
+          "size": [
+            794,
+            1123
+          ],
+          "sha256": "3863baf3136f208100125cc400f5dcfd0825b2a7b81f5acca1b5a503afb76a84"
+        }
+      ],
+      "changed_payloads": 2,
+      "selected_bytes": 47104,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "ole2-embedding-2003.ppt",
+      "fixture_sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+      "variant": "original",
+      "encoder": "zlib9",
+      "source_bytes": 40448,
+      "compaction_bytes": 37888,
+      "candidate_bytes": 37888,
+      "additional_savings_bytes": 0,
+      "stream_savings_bytes": 0,
+      "seconds": 0.017334,
+      "compaction_seconds": 0.014329,
+      "writer_seconds": 0.014792,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": true,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 1224,
+          "encoded_bytes": 568,
+          "output_encoded_bytes": 568,
+          "decoded_sha256": "f6dcd2d52a70be0b1de07f83e163eee865f1373240c10a8ce0aa62e21a35e7a0",
+          "uid_bytes": "1453c99a963255a2d94ca0f29e37638a",
+          "geometry_sha256": "fee6013ffa77cb0b8b729be64c954499bdf1f67bfc91ecbf53664ef6574606d9"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 8488,
+          "encoded_bytes": 1373,
+          "output_encoded_bytes": 1373,
+          "decoded_sha256": "9ee6165d4775bbbe9bfe6cf4331779106f9714f340ad5acce000931cd1def4a1",
+          "uid_bytes": "a2673995da0295c1109033db9d6e2405",
+          "geometry_sha256": "cd43e6348d39f092ff2d767a82e13eedf972bf68257c682149cfd0dd28157dd4"
+        }
+      ],
+      "references": [
+        {
+          "field": 864,
+          "target": 0,
+          "output_target": 0
+        },
+        {
+          "field": 908,
+          "target": 626,
+          "output_target": 626
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            960,
+            720
+          ],
+          "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            960,
+            720
+          ],
+          "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+        }
+      ],
+      "changed_payloads": 0,
+      "selected_bytes": 37888,
+      "selected_verifier": "ole",
+      "selection_reason": "no smaller compressed metafile wrappers"
+    },
+    {
+      "fixture": "ole2-embedding-2003.ppt",
+      "fixture_sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+      "variant": "original",
+      "encoder": "zopfli15",
+      "source_bytes": 40448,
+      "compaction_bytes": 37888,
+      "candidate_bytes": 37888,
+      "additional_savings_bytes": 0,
+      "stream_savings_bytes": 149,
+      "seconds": 0.20615,
+      "compaction_seconds": 0.014329,
+      "writer_seconds": 0.015101,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 1224,
+          "encoded_bytes": 568,
+          "output_encoded_bytes": 536,
+          "decoded_sha256": "f6dcd2d52a70be0b1de07f83e163eee865f1373240c10a8ce0aa62e21a35e7a0",
+          "uid_bytes": "1453c99a963255a2d94ca0f29e37638a",
+          "geometry_sha256": "fee6013ffa77cb0b8b729be64c954499bdf1f67bfc91ecbf53664ef6574606d9"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 8488,
+          "encoded_bytes": 1373,
+          "output_encoded_bytes": 1256,
+          "decoded_sha256": "9ee6165d4775bbbe9bfe6cf4331779106f9714f340ad5acce000931cd1def4a1",
+          "uid_bytes": "a2673995da0295c1109033db9d6e2405",
+          "geometry_sha256": "cd43e6348d39f092ff2d767a82e13eedf972bf68257c682149cfd0dd28157dd4"
+        }
+      ],
+      "references": [
+        {
+          "field": 864,
+          "target": 0,
+          "output_target": 0
+        },
+        {
+          "field": 908,
+          "target": 626,
+          "output_target": 594
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            960,
+            720
+          ],
+          "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            960,
+            720
+          ],
+          "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+        }
+      ],
+      "changed_payloads": 2,
+      "selected_bytes": 37888,
+      "selected_verifier": "ole",
+      "selection_reason": "payload savings do not improve physical compaction size"
+    },
+    {
+      "fixture": "ole2-embedding-2003.ppt",
+      "fixture_sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+      "variant": "controlled-zlib1",
+      "encoder": "zlib9",
+      "source_bytes": 37888,
+      "compaction_bytes": 37888,
+      "candidate_bytes": 37888,
+      "additional_savings_bytes": 0,
+      "stream_savings_bytes": 210,
+      "seconds": 0.016679,
+      "compaction_seconds": 0.014303,
+      "writer_seconds": 0.014069,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 1224,
+          "encoded_bytes": 600,
+          "output_encoded_bytes": 568,
+          "decoded_sha256": "f6dcd2d52a70be0b1de07f83e163eee865f1373240c10a8ce0aa62e21a35e7a0",
+          "uid_bytes": "1453c99a963255a2d94ca0f29e37638a",
+          "geometry_sha256": "fee6013ffa77cb0b8b729be64c954499bdf1f67bfc91ecbf53664ef6574606d9"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 8488,
+          "encoded_bytes": 1551,
+          "output_encoded_bytes": 1373,
+          "decoded_sha256": "9ee6165d4775bbbe9bfe6cf4331779106f9714f340ad5acce000931cd1def4a1",
+          "uid_bytes": "a2673995da0295c1109033db9d6e2405",
+          "geometry_sha256": "cd43e6348d39f092ff2d767a82e13eedf972bf68257c682149cfd0dd28157dd4"
+        }
+      ],
+      "references": [
+        {
+          "field": 864,
+          "target": 0,
+          "output_target": 0
+        },
+        {
+          "field": 908,
+          "target": 658,
+          "output_target": 626
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            960,
+            720
+          ],
+          "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            960,
+            720
+          ],
+          "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+        }
+      ],
+      "changed_payloads": 2,
+      "selected_bytes": 37888,
+      "selected_verifier": "ole",
+      "selection_reason": "payload savings do not improve physical compaction size"
+    },
+    {
+      "fixture": "ole2-embedding-2003.ppt",
+      "fixture_sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+      "variant": "controlled-zlib1",
+      "encoder": "zopfli15",
+      "source_bytes": 37888,
+      "compaction_bytes": 37888,
+      "candidate_bytes": 37888,
+      "additional_savings_bytes": 0,
+      "stream_savings_bytes": 359,
+      "seconds": 0.206538,
+      "compaction_seconds": 0.014303,
+      "writer_seconds": 0.015265,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 1224,
+          "encoded_bytes": 600,
+          "output_encoded_bytes": 536,
+          "decoded_sha256": "f6dcd2d52a70be0b1de07f83e163eee865f1373240c10a8ce0aa62e21a35e7a0",
+          "uid_bytes": "1453c99a963255a2d94ca0f29e37638a",
+          "geometry_sha256": "fee6013ffa77cb0b8b729be64c954499bdf1f67bfc91ecbf53664ef6574606d9"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 8488,
+          "encoded_bytes": 1551,
+          "output_encoded_bytes": 1256,
+          "decoded_sha256": "9ee6165d4775bbbe9bfe6cf4331779106f9714f340ad5acce000931cd1def4a1",
+          "uid_bytes": "a2673995da0295c1109033db9d6e2405",
+          "geometry_sha256": "cd43e6348d39f092ff2d767a82e13eedf972bf68257c682149cfd0dd28157dd4"
+        }
+      ],
+      "references": [
+        {
+          "field": 864,
+          "target": 0,
+          "output_target": 0
+        },
+        {
+          "field": 908,
+          "target": 658,
+          "output_target": 594
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            960,
+            720
+          ],
+          "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            960,
+            720
+          ],
+          "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+        }
+      ],
+      "changed_payloads": 2,
+      "selected_bytes": 37888,
+      "selected_verifier": "ole",
+      "selection_reason": "payload savings do not improve physical compaction size"
+    },
+    {
+      "fixture": "ole2-embedding-2003.ppt",
+      "fixture_sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+      "variant": "controlled-zlib0",
+      "encoder": "zlib9",
+      "source_bytes": 46080,
+      "compaction_bytes": 46080,
+      "candidate_bytes": 37888,
+      "additional_savings_bytes": 8192,
+      "stream_savings_bytes": 7793,
+      "seconds": 0.01712,
+      "compaction_seconds": 0.014149,
+      "writer_seconds": 0.014486,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 1224,
+          "encoded_bytes": 1235,
+          "output_encoded_bytes": 568,
+          "decoded_sha256": "f6dcd2d52a70be0b1de07f83e163eee865f1373240c10a8ce0aa62e21a35e7a0",
+          "uid_bytes": "1453c99a963255a2d94ca0f29e37638a",
+          "geometry_sha256": "fee6013ffa77cb0b8b729be64c954499bdf1f67bfc91ecbf53664ef6574606d9"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 8488,
+          "encoded_bytes": 8499,
+          "output_encoded_bytes": 1373,
+          "decoded_sha256": "9ee6165d4775bbbe9bfe6cf4331779106f9714f340ad5acce000931cd1def4a1",
+          "uid_bytes": "a2673995da0295c1109033db9d6e2405",
+          "geometry_sha256": "cd43e6348d39f092ff2d767a82e13eedf972bf68257c682149cfd0dd28157dd4"
+        }
+      ],
+      "references": [
+        {
+          "field": 864,
+          "target": 0,
+          "output_target": 0
+        },
+        {
+          "field": 908,
+          "target": 1293,
+          "output_target": 626
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            960,
+            720
+          ],
+          "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            960,
+            720
+          ],
+          "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+        }
+      ],
+      "changed_payloads": 2,
+      "selected_bytes": 37888,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    },
+    {
+      "fixture": "ole2-embedding-2003.ppt",
+      "fixture_sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+      "variant": "controlled-zlib0",
+      "encoder": "zopfli15",
+      "source_bytes": 46080,
+      "compaction_bytes": 46080,
+      "candidate_bytes": 37888,
+      "additional_savings_bytes": 8192,
+      "stream_savings_bytes": 7942,
+      "seconds": 0.205349,
+      "compaction_seconds": 0.014149,
+      "writer_seconds": 0.015243,
+      "intent_equal": true,
+      "decoded_metafile_bytes_equal": true,
+      "uids_and_geometry_equal": true,
+      "host_references_equal": true,
+      "unrelated_bytes_and_directory_metadata_equal": true,
+      "strict_ole_manifest_equal": false,
+      "payloads": [
+        {
+          "type": "EMF",
+          "decoded_bytes": 1224,
+          "encoded_bytes": 1235,
+          "output_encoded_bytes": 536,
+          "decoded_sha256": "f6dcd2d52a70be0b1de07f83e163eee865f1373240c10a8ce0aa62e21a35e7a0",
+          "uid_bytes": "1453c99a963255a2d94ca0f29e37638a",
+          "geometry_sha256": "fee6013ffa77cb0b8b729be64c954499bdf1f67bfc91ecbf53664ef6574606d9"
+        },
+        {
+          "type": "EMF",
+          "decoded_bytes": 8488,
+          "encoded_bytes": 8499,
+          "output_encoded_bytes": 1256,
+          "decoded_sha256": "9ee6165d4775bbbe9bfe6cf4331779106f9714f340ad5acce000931cd1def4a1",
+          "uid_bytes": "a2673995da0295c1109033db9d6e2405",
+          "geometry_sha256": "cd43e6348d39f092ff2d767a82e13eedf972bf68257c682149cfd0dd28157dd4"
+        }
+      ],
+      "references": [
+        {
+          "field": 864,
+          "target": 0,
+          "output_target": 0
+        },
+        {
+          "field": 908,
+          "target": 1293,
+          "output_target": 594
+        }
+      ],
+      "render_equal": true,
+      "source_pages": [
+        {
+          "size": [
+            960,
+            720
+          ],
+          "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+        }
+      ],
+      "candidate_pages": [
+        {
+          "size": [
+            960,
+            720
+          ],
+          "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+        }
+      ],
+      "changed_payloads": 2,
+      "selected_bytes": 37888,
+      "selected_verifier": "officeart-intent",
+      "selection_reason": "smaller verified OfficeArt file"
+    }
+  ],
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "rasterizer": "pdftoppm version 26.05.0"
+}

@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68.0", "wheel"]
+requires = ["setuptools>=77.0.3", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,7 +7,8 @@ name = "filerepack"
 dynamic = ["version"]
 description = "Repacks existing (un)compressed files for higher compression"
 readme = {file = "README.md", content-type = "text/markdown"}
-license = {text = "BSD"}
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
 authors = [
     {name = "Ivan Begtin", email = "ivan@begtin.tech"},
 ]
@@ -16,7 +17,6 @@ keywords = ["files", "converter", "compression"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: BSD License",
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
@@ -29,24 +29,47 @@ classifiers = [
 ]
 dependencies = [
     "typer>=0.9.0",
+    "psutil>=5.9",
+    "tomli>=2; python_version < '3.11'",
 ]
 
 [project.optional-dependencies]
+tracev3 = ["lz4>=4.3", "psutil>=5.9"]
+serialization = ["psutil>=5.9"]
+scientific = ["psutil>=5.9", "numpy>=1.23", "h5py>=3.8", "netCDF4>=1.7.2",
+              "tifffile>=2023.7.10", "imagecodecs>=2023.7.10"]
+zarr = ["psutil>=5.9", "numpy>=1.23", "zarr>=2.18,<3", "numcodecs>=0.12,<0.16"]
+onnx = ["onnx>=1.16"]
+
 data = [
+    "psutil>=5.9",
     "duckdb>=0.9.0",
-    "pyarrow>=14.0",
+    "pyarrow>=19.0",
     "fastavro>=1.9",
 ]
 fonts = ["fonttools[woff]>=4.40"]
-parquet = ["duckdb>=0.9.0"]
+parquet = ["duckdb>=0.9.0", "pyarrow>=19.0", "psutil>=5.9"]
 progress = ["rich>=13.0"]
 media = ["mutagen>=1.47"]
-pdf = ["pikepdf>=8"]
+pdf = ["pikepdf>=8", "Pillow>=10"]
+validation = ["Pillow>=10", "pikepdf>=8"]
+dicom = ["pydicom>=2.4,<4", "numpy>=1.23", "pyjpegls>=1.2"]
+fits = ["astropy>=5.3"]
+blend = ["zstandard>=0.19"]
+duckdb = ["duckdb>=1.4.2", "pyarrow>=19.0"]
+tgs = ["zopfli>=0.2.3"]
+ole = ["olefile==0.47"]
+ole-recompress = ["olefile==0.47", "psutil>=5.9", "zopfli==0.4.3; python_version >= '3.10'"]
 dev = [
+    "build>=1.2",
     "pytest>=7.0",
     "pytest-cov>=4.0",
+    "warcio>=1.7.5,<2",
+    "Pillow>=10",
+    "pikepdf>=8",
     "ruff>=0.6",
-    "mypy>=1.0",
+    "mypy>=1.0,<2.4",
+    "olefile==0.47",
 ]
 
 [project.scripts]
@@ -78,10 +101,6 @@ ignore_missing_imports = true
 module = ["pytest", "_pytest.*", "typer.*"]
 follow_imports = "skip"
 
-[[tool.mypy.overrides]]
-module = ["filerepack.codecs"]
-warn_return_any = false
-
 [tool.ruff]
 line-length = 100
 target-version = "py39"
@@ -92,3 +111,11 @@ select = ["E", "F", "W", "C90"]
 
 [tool.ruff.lint.mccabe]
 max-complexity = 15
+
+# Native libraries are checked through runtime fixture gates. Their current
+# typed implementations may require a newer Python syntax than our 3.9 target.
+[[tool.mypy.overrides]]
+module = ["numpy.*", "h5py.*", "netCDF4.*", "tifffile.*", "numcodecs.*", "psutil.*",
+          "torch.*", "scipy.*", "pyreadstat.*", "zarr.*", "pandas.*"]
+follow_imports = "skip"
+follow_imports_for_stubs = true

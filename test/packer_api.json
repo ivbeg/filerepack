@@ -1,0 +1,543 @@
+{
+  "filerepack.repack": {
+    "pack_parquet": "(filepath, debug=False, quiet=False, ultra=False, **commit)",
+    "pack_gzip": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_xz": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_bz2": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_zstd": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_brotli": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_avif": "(filepath, debug=False, quiet=False, lossy=False, **commit)",
+    "pack_heic": "(filepath, debug=False, quiet=False, lossy=False, **commit)",
+    "pack_flac": "(filepath, debug=False, quiet=False, **commit)",
+    "jpeg_quality_to_qfactor": "(quality)",
+    "build_gs_pdf_cmd": "(gs_path, src, dest, profile='ebook', jpeg_quality=None)",
+    "pack_pdf": "(filepath, debug=False, quiet=False, lossy=False, pdf_profile=None, jpeg_quality=None, **commit)",
+    "pack_gif": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_webp": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_svg": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_tif": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_wmv": "(filepath, debug=False, quiet=False, lossless=False, convert_container=True, **commit)",
+    "pack_mp4": "(filepath, debug=False, quiet=False, lossless=False, convert_container=True, **commit)",
+    "pack_avi": "(filepath, debug=False, quiet=False, lossless=False, convert_container=True, **commit)",
+    "pack_asf": "(filepath, debug=False, quiet=False, lossless=False, convert_container=True, **commit)",
+    "pack_mkv": "(filepath, debug=False, quiet=False, lossless=False, convert_container=False, **commit)",
+    "pack_webm": "(filepath, debug=False, quiet=False, lossless=False, convert_container=False, **commit)",
+    "pack_jpg": "(filepath, debug=False, quiet=False, jpeg_quality=None, lossy=False, keep_meta=False, **commit)",
+    "pack_png": "(filepath, debug=False, quiet=False, png_quality=None, lossy=False, ultra=False, keep_meta=False, **commit)",
+    "pack_file_simple": "(filepath, pack_fn, **kwargs)"
+  },
+  "filerepack.codecs": {
+    "pack_lz4": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_lzip": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_lzo": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_lzma": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_compress": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_svgz": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_jxl": "(filepath, debug=False, quiet=False, lossy=False, **commit)",
+    "pack_bmp": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_tga": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_pnm": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_pcx": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_xml": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_json": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_jp2": "(filepath, debug=False, quiet=False, lossy=False, **commit)",
+    "pack_exr": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_dcm": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_dng": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_ico": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_icns": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_mov": "(filepath, debug=False, quiet=False, lossless=False, convert_container=False, **commit)",
+    "pack_m4v": "(filepath, debug=False, quiet=False, lossless=False, convert_container=False, **commit)",
+    "pack_3gp": "(filepath, debug=False, quiet=False, lossless=False, convert_container=True, **commit)",
+    "pack_ts": "(filepath, debug=False, quiet=False, lossless=False, convert_container=True, **commit)",
+    "pack_m4a": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_wv": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_tta": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_oga": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_ape": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_sqlite": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_orc": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_avro": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_feather": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_arrow": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_hdf5": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_netcdf": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_woff": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_woff2": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_mp3": "(filepath, debug=False, quiet=False, ultra=False, **commit)",
+    "pack_ogg": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_ai": "(filepath, debug=False, quiet=False, lossy=False, pdf_profile=None, jpeg_quality=None, **commit)",
+    "pack_psd": "(filepath, debug=False, quiet=False, **commit)"
+  },
+  "filerepack.markup": {
+    "pack_members": "(members, options=None)",
+    "pack_json": "(filepath, debug=False, quiet=False, **commit)",
+    "pack_xml": "(filepath, debug=False, quiet=False, **commit)"
+  },
+  "registry": {
+    "jpg": [
+      "pack_jpg",
+      "image",
+      {
+        "jpeg_quality": "jpeg_quality",
+        "keep_meta": "keep_meta"
+      }
+    ],
+    "png": [
+      "pack_png",
+      "image",
+      {
+        "png_quality": "png_quality",
+        "ultra": "ultra",
+        "keep_meta": "keep_meta"
+      }
+    ],
+    "gif": [
+      "pack_gif",
+      "image",
+      {}
+    ],
+    "webp": [
+      "pack_webp",
+      "image",
+      {}
+    ],
+    "svg": [
+      "pack_svg",
+      "image",
+      {
+        "keep_meta": "keep_meta"
+      }
+    ],
+    "svgz": [
+      "pack_svgz",
+      "image",
+      {}
+    ],
+    "tif": [
+      "pack_tif",
+      "image",
+      {}
+    ],
+    "tiff": [
+      "pack_tif",
+      "image",
+      {}
+    ],
+    "jxl": [
+      "pack_jxl",
+      "image",
+      {}
+    ],
+    "jp2": [
+      "pack_jp2",
+      "image",
+      {}
+    ],
+    "j2k": [
+      "pack_jp2",
+      "image",
+      {}
+    ],
+    "jpf": [
+      "pack_jp2",
+      "image",
+      {}
+    ],
+    "jpx": [
+      "pack_jp2",
+      "image",
+      {}
+    ],
+    "exr": [
+      "pack_exr",
+      "image",
+      {}
+    ],
+    "dng": [
+      "pack_dng",
+      "image",
+      {}
+    ],
+    "dcm": [
+      "pack_dcm",
+      "image",
+      {}
+    ],
+    "dicom": [
+      "pack_dcm",
+      "image",
+      {}
+    ],
+    "dic": [
+      "pack_dcm",
+      "image",
+      {}
+    ],
+    "ico": [
+      "pack_ico",
+      "image",
+      {}
+    ],
+    "icns": [
+      "pack_icns",
+      "image",
+      {}
+    ],
+    "bmp": [
+      "pack_bmp",
+      "image",
+      {}
+    ],
+    "tga": [
+      "pack_tga",
+      "image",
+      {}
+    ],
+    "pnm": [
+      "pack_pnm",
+      "image",
+      {}
+    ],
+    "pcx": [
+      "pack_pcx",
+      "image",
+      {}
+    ],
+    "xml": [
+      "pack_xml",
+      "document",
+      {
+        "keep_meta": "keep_meta",
+        "ultra": "ultra",
+        "jpeg_quality": "jpeg_quality",
+        "png_quality": "png_quality"
+      }
+    ],
+    "json": [
+      "pack_json",
+      "document",
+      {}
+    ],
+    "parquet": [
+      "pack_parquet",
+      "data",
+      {
+        "ultra": "ultra"
+      }
+    ],
+    "orc": [
+      "pack_orc",
+      "data",
+      {}
+    ],
+    "avro": [
+      "pack_avro",
+      "data",
+      {}
+    ],
+    "feather": [
+      "pack_feather",
+      "data",
+      {}
+    ],
+    "arrow": [
+      "pack_arrow",
+      "data",
+      {}
+    ],
+    "ipc": [
+      "pack_arrow",
+      "data",
+      {}
+    ],
+    "sqlite": [
+      "pack_sqlite",
+      "data",
+      {}
+    ],
+    "sqlite3": [
+      "pack_sqlite",
+      "data",
+      {}
+    ],
+    "gpkg": [
+      "pack_sqlite",
+      "data",
+      {}
+    ],
+    "mbtiles": [
+      "pack_sqlite",
+      "data",
+      {}
+    ],
+    "h5": [
+      "pack_hdf5",
+      "data",
+      {}
+    ],
+    "hdf5": [
+      "pack_hdf5",
+      "data",
+      {}
+    ],
+    "hdf": [
+      "pack_hdf5",
+      "data",
+      {}
+    ],
+    "nc": [
+      "pack_netcdf",
+      "data",
+      {}
+    ],
+    "nc4": [
+      "pack_netcdf",
+      "data",
+      {}
+    ],
+    "gz": [
+      "pack_gzip",
+      "data",
+      {}
+    ],
+    "xz": [
+      "pack_xz",
+      "data",
+      {}
+    ],
+    "bz2": [
+      "pack_bz2",
+      "data",
+      {}
+    ],
+    "zst": [
+      "pack_zstd",
+      "data",
+      {}
+    ],
+    "br": [
+      "pack_brotli",
+      "data",
+      {}
+    ],
+    "lz4": [
+      "pack_lz4",
+      "data",
+      {}
+    ],
+    "lz": [
+      "pack_lzip",
+      "data",
+      {}
+    ],
+    "lzma": [
+      "pack_lzma",
+      "data",
+      {}
+    ],
+    "lzo": [
+      "pack_lzo",
+      "data",
+      {}
+    ],
+    "z": [
+      "pack_compress",
+      "data",
+      {}
+    ],
+    "pdf": [
+      "pack_pdf",
+      "document",
+      {
+        "pdf_profile": "pdf_profile",
+        "jpeg_quality": "jpeg_quality",
+        "keep_meta": "keep_meta",
+        "ultra": "ultra"
+      }
+    ],
+    "avif": [
+      "pack_avif",
+      "image",
+      {}
+    ],
+    "heic": [
+      "pack_heic",
+      "image",
+      {}
+    ],
+    "heif": [
+      "pack_heic",
+      "image",
+      {}
+    ],
+    "flac": [
+      "pack_flac",
+      "audio",
+      {
+        "keep_meta": "keep_meta"
+      }
+    ],
+    "m4a": [
+      "pack_m4a",
+      "audio",
+      {
+        "keep_meta": "keep_meta"
+      }
+    ],
+    "wv": [
+      "pack_wv",
+      "audio",
+      {}
+    ],
+    "ape": [
+      "pack_ape",
+      "audio",
+      {
+        "keep_meta": "keep_meta"
+      }
+    ],
+    "tta": [
+      "pack_tta",
+      "audio",
+      {}
+    ],
+    "oga": [
+      "pack_oga",
+      "audio",
+      {
+        "keep_meta": "keep_meta"
+      }
+    ],
+    "ogg": [
+      "pack_ogg",
+      "audio",
+      {
+        "keep_meta": "keep_meta"
+      }
+    ],
+    "mp3": [
+      "pack_mp3",
+      "audio",
+      {
+        "ultra": "ultra",
+        "keep_meta": "keep_meta"
+      }
+    ],
+    "psd": [
+      "pack_psd",
+      "image",
+      {}
+    ],
+    "ai": [
+      "pack_ai",
+      "document",
+      {
+        "pdf_profile": "pdf_profile",
+        "jpeg_quality": "jpeg_quality"
+      }
+    ],
+    "woff": [
+      "pack_woff",
+      "data",
+      {}
+    ],
+    "woff2": [
+      "pack_woff2",
+      "data",
+      {}
+    ],
+    "wmv": [
+      "pack_wmv",
+      "video",
+      {
+        "wmv_lossless": "lossless",
+        "convert_container": "convert_container"
+      }
+    ],
+    "mp4": [
+      "pack_mp4",
+      "video",
+      {
+        "wmv_lossless": "lossless",
+        "convert_container": "convert_container"
+      }
+    ],
+    "avi": [
+      "pack_avi",
+      "video",
+      {
+        "wmv_lossless": "lossless",
+        "convert_container": "convert_container"
+      }
+    ],
+    "asf": [
+      "pack_asf",
+      "video",
+      {
+        "wmv_lossless": "lossless",
+        "convert_container": "convert_container"
+      }
+    ],
+    "mkv": [
+      "pack_mkv",
+      "video",
+      {
+        "wmv_lossless": "lossless"
+      }
+    ],
+    "webm": [
+      "pack_webm",
+      "video",
+      {
+        "wmv_lossless": "lossless"
+      }
+    ],
+    "mov": [
+      "pack_mov",
+      "video",
+      {
+        "wmv_lossless": "lossless"
+      }
+    ],
+    "m4v": [
+      "pack_m4v",
+      "video",
+      {
+        "wmv_lossless": "lossless"
+      }
+    ],
+    "3gp": [
+      "pack_3gp",
+      "video",
+      {
+        "wmv_lossless": "lossless",
+        "convert_container": "convert_container"
+      }
+    ],
+    "ts": [
+      "pack_ts",
+      "video",
+      {
+        "wmv_lossless": "lossless",
+        "convert_container": "convert_container"
+      }
+    ],
+    "mts": [
+      "pack_ts",
+      "video",
+      {
+        "wmv_lossless": "lossless",
+        "convert_container": "convert_container"
+      }
+    ],
+    "m2ts": [
+      "pack_ts",
+      "video",
+      {
+        "wmv_lossless": "lossless",
+        "convert_container": "convert_container"
+      }
+    ]
+  }
+}

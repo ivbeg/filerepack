@@ -1,4 +1,4 @@
-## ADDED Requirements
+## MODIFIED Requirements
 
 ### Requirement: Lossless PDF Uses qpdf
 The system SHALL recompress PDF files with qpdf (`--linearize --object-streams=generate --compress-streams=y`) when no lossy PDF option is set. Ghostscript SHALL NOT run on that default path.

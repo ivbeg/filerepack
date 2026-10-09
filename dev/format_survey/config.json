@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "seed": "filerepack-github-pilot-v1",
+  "formats": ["png", "jpg", "svg", "json", "ipynb", "pdf", "zip", "npz", "webp", "parquet"],
+  "per_format": 16,
+  "max_file_bytes": 4194304,
+  "max_download_bytes": 104857600,
+  "timeout_seconds": 90,
+  "decoded_byte_limit": 67108864,
+  "repositories": [
+    {"name": "python-pillow/Pillow", "stratum": "image-library"},
+    {"name": "numpy/numpy", "stratum": "scientific-library"},
+    {"name": "jupyter/notebook", "stratum": "notebook-application"},
+    {"name": "pandas-dev/pandas", "stratum": "data-library"},
+    {"name": "apache/parquet-testing", "stratum": "format-test-corpus"},
+    {"name": "qpdf/qpdf", "stratum": "document-library"},
+    {"name": "matplotlib/matplotlib", "stratum": "visualization-library"},
+    {"name": "mapbox/mapbox-gl-js", "stratum": "web-geospatial"},
+    {"name": "QGIS/QGIS", "stratum": "desktop-geospatial"},
+    {"name": "simple-icons/simple-icons", "stratum": "design-assets"},
+    {"name": "microsoft/vscode", "stratum": "developer-application"},
+    {"name": "openpreserve/format-corpus", "stratum": "preservation-test-corpus"}
+  ]
+}

@@ -12,6 +12,11 @@ from typing import Dict, Iterable, List, Optional, Sequence, Tuple
 # zypper, apk, choco, winget, scoop, npm, pip. `url` is a manual-download hint;
 # optional `note` is prepended in doctor output.
 PACKAGES: Dict[str, Dict[str, str]] = {
+    'ole_compactor': {
+        'url': 'https://github.com/ivbeg/filerepack/tree/master/tools/ole-compactor',
+        'note': 'Build with cargo install --locked --path tools/ole-compactor; '
+                'install filerepack[ole] for independent verification.',
+    },
     'szip': {
         'brew': 'p7zip', 'ports': 'p7zip', 'apt': 'p7zip-full',
         'dnf': 'p7zip p7zip-plugins', 'pacman': 'p7zip', 'zypper': 'p7zip',
@@ -105,6 +110,11 @@ PACKAGES: Dict[str, Dict[str, str]] = {
         'scoop': 'qpdf',
     },
     'ffmpeg': {
+        'brew': 'ffmpeg', 'ports': 'ffmpeg', 'apt': 'ffmpeg', 'dnf': 'ffmpeg',
+        'pacman': 'ffmpeg', 'zypper': 'ffmpeg', 'apk': 'ffmpeg',
+        'choco': 'ffmpeg', 'winget': 'Gyan.FFmpeg', 'scoop': 'ffmpeg',
+    },
+    'ffprobe': {
         'brew': 'ffmpeg', 'ports': 'ffmpeg', 'apt': 'ffmpeg', 'dnf': 'ffmpeg',
         'pacman': 'ffmpeg', 'zypper': 'ffmpeg', 'apk': 'ffmpeg',
         'choco': 'ffmpeg', 'winget': 'Gyan.FFmpeg', 'scoop': 'ffmpeg',

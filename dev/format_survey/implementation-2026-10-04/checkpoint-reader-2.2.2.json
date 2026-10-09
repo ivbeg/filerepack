@@ -1,0 +1,28 @@
+[
+  {
+    "reader": "2.2.2",
+    "profile": "preserve-mmap",
+    "equal": true,
+    "sharing": true,
+    "seconds": 0.0007049580017337576
+  },
+  {
+    "reader": "2.2.2",
+    "profile": "load-only",
+    "equal": true,
+    "sharing": true,
+    "seconds": 0.00043179199565202
+  },
+  {
+    "reader": "2.2.2",
+    "origin": "BAAI/bge-m3",
+    "profile": "preserve-mmap",
+    "equal": true
+  },
+  {
+    "reader": "2.2.2",
+    "origin": "BAAI/bge-m3",
+    "profile": "load-only",
+    "equal": true
+  }
+]

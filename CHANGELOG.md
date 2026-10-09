@@ -1,15 +1,297 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-10-09
+
+Support is limited to the qualified profiles documented below. Experimental
+formats and pending platform/reader gates remain explicitly marked.
+
+### Added
+
+- Read-only `filerepack inspect PATH --json` for eligibility, format capabilities,
+  prerequisites, protection state, effective settings and destination conflicts.
+  Directory inspection emits JSONL items and a completion summary without
+  encoding, extraction or candidate-savings estimates.
+- Version 1 optimization profiles: `fast`, `balanced`, `maximum` and `preserve`.
+  Explicit CLI/library settings override profile defaults, including false and
+  default-valued options. Profiles do not enable lossy encoding or OLE content
+  transforms; `options_for_profile` is exported for library callers.
+- Explicit nested selection through repeatable `--exclude-member`,
+  `--allow-category`, `--skip-category` and `--max-depth`, with supported archive,
+  XML/PDF image and cover-art adapters applying the selection policy.
+- Local version 1 JSON/JSONL audit reports via `--report`, independent of stdout
+  JSON/CSV. Records include terminal outcomes, publication-aware member events
+  and bounded tool/library/validator evidence. Relative and redacted path modes
+  are available; persistence failures cause a non-success exit and preserve
+  recoverable outcomes/spools.
+- Content-verified bulk checkpoints via `--manifest` / `--resume`. Reuse requires
+  matching source/output SHA-256 identities, effective settings and execution
+  fingerprints, including toolchain and optional-reader versions. Only completed
+  replaced/unchanged work is reusable; checkpoints use locks, checksums and
+  atomic replacement.
+- Root-operation deadlines and memory, decoded-byte, scratch, node and depth
+  budgets, with supervision of operation-owned command process trees. Bulk
+  scheduling reserves aggregate memory, scratch and CPU grants; `--jobs` limits
+  rather than guarantees concurrent workers. Full cumulative accounting for
+  every legacy adapter remains a qualification task.
+- Dependency-free WARC 1.0/1.1 recompression with one verified gzip member per
+  record and exact decoded capture bytes. Choose the smallest valid original or
+  level-9 member per record; ultra adds bounded optional Zopfli trials. Plain
+  standalone WARC converts to `.warc.gz`, nested WARC retains its name, and
+  adjacent CDX/CDXJ indexes guard in-place rewriting.
+- Raw CPIO and bzip2-wrapped `.cpbz2` / `.cpio.bz2` recompression. Shallow mode
+  verifies exact decoded CPIO bytes; deep mode optimizes safe regular single-link
+  members while retaining order, names, metadata and link relationships.
+  Standard-library bzip2 is available without an external encoder.
+- `.gzip` aliases, including `.tar.gzip`, `.warc.gzip` and gzip-wrapped
+  R serialization filenames.
+- Dependency-free `.nib` compaction for fully parsed NIBArchive version 1,
+  coder 9/10. Identical stored value sequences can be shared while object
+  identities, references, property order, exact scalar/data bytes and class
+  fallbacks are preserved. Keyed-plist nibs, bundles and unknown/trailing
+  structures are skipped under cumulative format limits.
+- Qualified Apple `.car` asset catalog optimization: lossless DEFLATE MLEC/CELM
+  rendition recompression and BOMStore free-space/index compaction. Live blocks,
+  variants, keys, metadata and opaque codecs are retained and independently
+  fingerprinted before publication.
+- Optional isolated `.tracev3` LZ4 chunkset recompression via the `tracev3` extra.
+  Preserve decoded block bytes/boundaries and opaque chunks; refuse outputs or
+  backups in the active macOS Unified Log store. Complete `.logarchive` directory
+  packages remain outside the profile.
+- Extension-preserving PSB, GeoJSON, Jupyter notebooks, JSON Lines/NDJSON,
+  QGIS QGS/QGZ/QGD, Qt Designer UI, Blender, FITS/FIT/FTS, attached NRRD and
+  Aseprite ASE/ASEPRITE profiles. Format-specific checks guard decoded content
+  and metadata; JSON Lines preserves record boundaries and exact tokens.
+  Optional `fits` and `blend` extras supply Astropy and Zstandard. FITS never
+  quantizes floating-point data; compressed primary images require a reader
+  supporting the documented tiled-compression layout.
+- Audited Mellel packages, offline SQLite `.vscdb`/`.sqlitedb`, DuckDB tables,
+  FWS/CWS SWF and Telegram TGS animations. Mellel retains internal payloads;
+  other profiles require logical/decoded preservation. JSON `.map`, `.har`,
+  `.topojson`, `.gltf` and XML `.rels` aliases use conservative markup handlers.
+  Optional `duckdb` and `tgs` extras supply their readers/encoders.
+- Passive preserving RDS/RDA/RData, modern PT/PTH ZIP checkpoint and IEEE SPSS
+  SAV profiles, with isolated workers supplied by `serialization`. Runtime
+  processing does not load R objects or unpickle checkpoints. R preserves its
+  compression envelope by default; `--r-compression` permits qualified changes.
+  Checkpoints retain 64-byte-aligned STORED tensor data by default;
+  `--checkpoint-compatibility load-only` explicitly permits DEFLATE storage and
+  disables mmap compatibility.
+- Qualified HDF5, NetCDF4 and native TIFF preservation through the `scientific`
+  extra. HDF5 additionally needs `h5repack`; unsupported graphs, filters, types,
+  fill states and image layouts remain unchanged. TIFF retains IFD/tag positions
+  and only rewrites a fully accounted image-data suffix. MAT Level-5/v7.3 and
+  existing ZSAV remain gated by `--experimental-formats` and pending reader/corpus
+  evidence. Scientific dry-run inspects without encoding or predicting savings.
+- `filerepack repack-store` and exported `repack_store` for complete offline
+  local Zarr v2 stores (`zarr` extra). Verify all decoded chunks and publish
+  `OUTPUT_PARENT/SOURCE_BASENAME` through exclusive atomic directory rename.
+  Existing destinations, links, object dtypes, unknown codecs/filters and v3
+  stores are refused. `--codec-policy compatible-upgrade` explicitly permits
+  Blosc zstd; native Linux/Windows publication gates remain pending.
+- Bounded inspection-only Safetensors, GGUF and ONNX profiles, with optional
+  `onnx` parsing. `filerepack inspect-dcp` and exported
+  `inspect_distributed_checkpoint` inventory flat local DCP directories without
+  parsing pickle metadata or claiming completeness. Same-format writers remain
+  unqualified and sources remain unchanged.
+- Optional CFB v3 container compaction for qualified DOC/DOT, BIFF8 XLS/XLT/XLA,
+  PPT/POT/PPS and MSG/VSD/PUB/MPP/MSI/HWP hosts, including eligible nested files.
+  The pinned Rust `filerepack-ole` writer and independent `olefile` verifier
+  retain live streams, empty objects and logical directory metadata. Qualified
+  unsigned DOC/XLS and single-edit PPT VBA projects are copied unchanged;
+  protected files and unknown/history-dependent layouts are skipped.
+- Opt-in `--ole-recompress` for qualified OfficeArt EMF/WMF, PNG IDAT and
+  sequential JPEG pictures, PPT embedded-storage wrappers and compressed HWP 5
+  streams. Independent verifiers check decoded payloads, host references,
+  metadata and immutable content. Populated BIFF8, audited Word piece/style
+  properties, mixed PICFs and floating delayed pictures have explicit profiles.
+- Opt-in `--ole-embedded-recompress` for qualified DOC/XLS Package files and CFB
+  substorages, and `--ole-deduplicate-images` for byte-identical compatible BLIPs
+  in fully resolved XLS/PPT stores. Both default to off. Ultra retains default
+  trials and adds bounded Zopfli50 alternatives without enabling a content mode.
+  All OLE modes select by final physical file size; native writer 0.4.0+ supplies
+  bounded path replacements and root-view extraction.
+- Audited notes-bearing single-edit PPT/POT/PPS picture profiles, including
+  notes/master links, shared picture consumers and programmable extensions.
+  PNG selection stays within existing limits; notes, unselected images and
+  master-owned Photoshop objects retain their bytes and independent identities.
+- Audited sound-free checker/visibility and fly-from-bottom PPT/PPT10 animation
+  profiles, bounded x/y keyframes, null-bullet text runs, font defaults and
+  composite master/layout references. Animation bytes and live shape references
+  remain exact; repeated embedded wrappers are diagnosed without sharing persist
+  offsets. Supplied `openbudget.ppt` and `opengovernment_rewired.ppt` save 10.41%
+  and 10.00% respectively, with identical rendered slides/notes and independent
+  reader/save/reopen checks. These are fixture results; see the
+  [checker](dev/ole/qualification-ppt-openbudget-animation.json) and
+  [fly animation](dev/ole/qualification-ppt-opengovernment-fly-animation.json) evidence.
+- Bounded PNG row-filter selection for qualified inline/floating DOC pictures
+  and PPT pictures. Optional oxipng 10.2.0 trials verify exact samples and restore
+  original metadata; unavailable or rejected trials retain earlier verified
+  encodings. Additional Word border, pagination, revision, conditional-style
+  and scalar drawing properties are qualified. Supplied `gov.doc` saves 10.82%
+  with identical page pixels and independent document preservation; see
+  [DOC PNG evidence](dev/ole/qualification-word-png-refilter-2026-10-08.json).
+- Licensed DOC/XLS preservation/render and rejection fixtures, plus a
+  checksummed 711-file Apache POI eligibility census with exact skip reasons.
+  Corpus boundaries and unavailable Office/Hancom/platform checks are recorded
+  in [OLE evidence](dev/ole/PORTFOLIO.md) and [the census](dev/ole/CORPUS.md).
+- Distribution validation builds, inspects and installs wheel/sdist artifacts in
+  fresh environments outside checkout imports, including CLI/API, license and
+  extracted-source tests. Platform, optional-reader, scientific-native and
+  OLE-native CI lanes, shared-core coverage ratchets and a reconciled verified
+  specification baseline are configured; remote results and deployment remain
+  separate qualification gates.
+
 ### Changed
 
-- Documentation is now a Docusaurus site under [`docs/`](docs/) (Getting Started, Use Cases, CLI reference, Formats, Tools, Library), ready for GitHub Pages at https://ivbeg.github.io/filerepack/
+- Typed terminal outcomes and stable reason codes are shared by library,
+  single-file, bulk and nested operations. Human results explicitly show
+  `SUCCESS`, `ERROR`, `SKIPPED` or `CANCELLED`; no size reduction is a successful
+  unchanged result. Optional payload skips are informational, and failure reasons
+  remain visible in quiet mode. Bulk completion reflects interruption and
+  report/checkpoint failures; machine-readable outcome schemas and exit codes
+  retain their contracts.
+- Publication shares typed filesystem snapshots and destination-local staging
+  across direct helpers and `FileRepacker`. Preserve source mode, mtime and
+  supported Linux/macOS xattrs, including resource forks; refuse detected
+  source/output changes, in-place symlinks and multiple hard links.
+  `RepackOptions.durability="atomic"` describes visibility; unsupported crash
+  durability is rejected before writes. Ownership, native ACLs and Windows
+  alternate streams remain outside the preservation contract.
+- Existing different output/conversion targets require `--overwrite` or
+  `RepackOptions(overwrite=True)`. Required backups are never overwritten and
+  backup failure stops processing; `--backup-dir` still requires `--backup`.
+  Distinct outputs preserve the source, with a byte-verified unchanged copy when
+  supported by the handler; scientific profiles publish only accepted smaller
+  candidates. Dry-run creates no destination or backup artifacts.
+- Every publishable writer requires a structural validator; missing/unknown
+  validators, truncated structures and unavailable decoders cannot authorize
+  replacement. Raster checks need Pillow (`validation` extra); media checks
+  need ffmpeg/ffprobe. Stream verification compares decoded bytes, image checks
+  compare decoded frames, and supported data adapters check schemas, metadata
+  and ordered values. Wider format variants remain gated.
+- Default video processing uses stream-copy remuxing. Explicit lossless/lossy
+  modes verify stream inventory and required packet or decoded-content
+  preservation instead of silently dropping tracks.
+- JPEG/PNG retain orientation and color presentation metadata; `--keep-meta`
+  additionally retains incidental metadata. Lossless PNG retains encoded depth
+  and color type and chooses among independently preserving candidates.
+  Lossless ImageMagick/AVIF/HEIC/JXL paths require source-content preservation.
+- Signed, encrypted and uninspectable PDFs skip all qpdf/pikepdf/Ghostscript
+  writers. Lossless publication needs qpdf 11+ object/stream comparison and
+  selects the smallest verified original/walked/qpdf alternative.
+  `--pdf-linearize` is an explicit constraint, subject to savings policy.
+  Walking covers shared/nested XObjects and supported Flate predictors with
+  exact decoded-stream and document checks. DCT/JPX precision and host dimensions
+  are checked; unqualified high-depth/signed/subsampled JPEG2000 is refused.
+- Parquet requires PyArrow 19+ (`parquet`/`data` extras); DuckDB alone no longer
+  supplies a preservation verifier. Supported Arrow/Feather/ORC profiles retain
+  framing, schemas and batch metadata; Avro retains encoded block data.
+- SQLite retains schema and row identities. In-place processing requires
+  `--sqlite-offline` and no sidecars; distinct outputs use a consistent snapshot
+  including committed WAL pages. A single-file backup of a live WAL source is
+  unsupported.
+- ODF/EPUB packages with unsupported structure, protection or control semantics
+  are skipped before extraction and nested edits.
+- WOFF/WOFF2 verification compares decoded tables, metadata and private data
+  in isolated native workers.
+- Legacy OLE results retain actual strategies and rejection/fallback reasons
+  in CLI/library/JSON/bulk output. Verbose diagnostics include payload counts,
+  per-object skips, encoders and stream/file savings. An unchanged result is
+  no longer labelled recompressed.
+- Candidate staging, verification, savings acceptance and publication use
+  `filerepack.candidates` / `filerepack.transactions`; argv execution and audio
+  probes use `filerepack.commands`. Dedicated archive, stream, image, media,
+  document, data and medical modules retain legacy helper imports, signatures
+  and encoding defaults through `repack.py` / `codecs.py`. Typed worker/progress
+  contracts replace dynamic back-imports and the relaxed mypy return override.
+- Package metadata and `__license__` identify BSD-3-Clause with setuptools
+  77.0.3+ SPDX/License-File support; the license text is unchanged.
+- Docusaurus documentation under [`docs/`](docs/) covers commands, formats,
+  use cases, tools and library APIs for GitHub Pages. README installation,
+  current CLI workflows, optional extras and format limits are synchronized;
+  unreleased entries are consolidated without changing historical releases.
+- `filerepack[dicom]` supplies pydicom, NumPy and pyjpegls. Python 3.9 uses the
+  compatible pydicom 2.4 profile; newer versions can compare frames incrementally.
+  DICOM output verification requires the original source for structural,
+  attribute and decoded-pixel comparison.
+
+### Fixed
+
+- Bulk discovery and submission are bounded; source/output/backup reservations
+  prevent competing operations, cancellation drains workers, and owned process
+  trees are supervised. Result-spool failures stop new work while preserving
+  drained terminal outcomes in a bounded emergency tail.
+- PNG quantization failures/interruption clean owned sidecars without deleting
+  pre-existing files. WOFF2 uses an owned directory; SQLite tracks candidate
+  journals. Archive exceptions clean candidates and extraction directories
+  while preserving the source.
+- Source distributions include the complete test package, helpers, fixtures,
+  initialization and coverage configuration. Runtime wheels exclude development
+  support. Compatibility regressions retain 69 public calling contracts and
+  79 dispatch routes, including fresh-process import orders and installed-wheel
+  scratch-fault checks.
+- Parquet rewrites retain physical/logical schema, nullability, nested fields,
+  identifiers and file/schema metadata. Batched verification checks ordered
+  values and floating-point bits; unrepresentable candidates are refused.
+- ODF/EPUB retains an uncompressed first `mimetype` without extra fields,
+  validates package references and preserves control-file bytes across deep,
+  no-deep, dry-run and distinct-output workflows.
+- Archive manifests reject missing/extra members, changed unapproved payloads,
+  ambiguous identities and unsupported metadata. Writers retain hidden members
+  and empty directories with literal tool-specific arguments. ZIP preserves
+  order, timestamps, attributes, extra fields and comments; tar preserves
+  supported ownership, permissions, timestamps and PAX metadata. Unsupported
+  links/sparse representations skip safely.
+- ZIP metadata restoration preserves explicitly zero external attributes,
+  including Mellel directories, instead of write-time 0600 defaults.
+- Compressed tar decodes its outer stream and rebuilds the actual tar members
+  without introducing another tar layer; deep modes and dry-run verify the
+  final encoded payload. RubyGems `.gem` uses plain tar and keeps checksummed
+  inner payloads; `.taz` uses Unix compress instead of gzip.
+- JSON minification preserves exact number/string tokens, duplicate keys,
+  member order, scalar roots and UTF-8 BOMs. Malformed/non-finite literals and
+  unsupported encodings skip. Reads stop at the 256 MiB validation bound,
+  including oversized HAR and source-map aliases.
+- Native XML minification preserves text/tail whitespace, inherited `xml:space`,
+  CDATA, entity references, namespaces, comments, processing instructions and
+  declarations. Only tag syntax and known OPC indentation are compacted;
+  unsupported DTD/version/encoding profiles are refused. Embedded image-URI
+  optimization targets complete `href`, `xlink:href` and `src` attribute values.
+- CLI, workers and `FileRepacker` validate ranges, finite thresholds, profiles
+  and paths before backups/copies/encoding. Size parsing accepts K/M/G/T with
+  or without B; jobs and progress intervals must be positive.
+- Cooperative path/file-identity reservations and collision-refusing publication
+  guard output races. Video/RAR conversions retain their source until publication
+  succeeds; reported paths reflect accepted conversion extensions.
+- DICOM scans after Pixel Data and inside sequence items, checking ordering,
+  headers, lengths, fragments and bounded parser counts. Signature elements,
+  truncation and exhausted limits stop encoding. JPEG-LS candidates must retain
+  lossless transfer syntax, image/frame/identity/private/nested attributes and
+  exact decoded pixels; missing/failed verification keeps the source.
+- OLE compaction and content modes preserve recorded root creation/modification
+  FILETIMEs. Pinned CFB simple-uppercase comparison accepts qualified root-name
+  encodings and Unicode names such as `ß` without renaming objects.
+- Combined OLE recompression/embedded/deduplication modes release parsed sources
+  and staged picture buffers before native assembly, stream replacements and
+  reuse verified sources to avoid redundant full-file memory use. Final worker
+  verification is bound to exact file snapshots. Rebuild the native helper for
+  these memory fixes and accelerated bounded PNG row verification.
+- Qualify the first BIFF8 drawing-group continuation encoded as a second
+  MsoDrawingGroup and bounded scalar tertiary worksheet fill properties;
+  worksheet drawings consume the cumulative root budget. DOC checks preserve
+  history/unreferenced pictures and reject hidden references, malformed property
+  tables and nonempty unsupported fill defaults.
+- Transaction regressions cover cross-device staging, metadata/xattr failures,
+  source/output races, stale verification, links, durability validation and
+  scratch cleanup. Native macOS xattrs/resource forks are exercised; real
+  cross-filesystem tests run when a second device is available.
 
 ## [0.3.0] - 2026-08-14
 

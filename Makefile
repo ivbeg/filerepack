@@ -1,4 +1,4 @@
-.PHONY: clean-pyc clean-build docs docs-serve clean test lint
+.PHONY: clean-pyc clean-build docs docs-serve clean test lint check-dist
 SHELL := /bin/bash
 
 help:
@@ -13,6 +13,7 @@ help:
 	@echo "docs-serve - serve documentation locally (Docusaurus)"
 	@echo "release - package and upload a release"
 	@echo "dist - package"
+	@echo "check-dist - build and validate source/wheel installations outside the checkout"
 
 clean-build:
 	rm -fr build/
@@ -43,8 +44,8 @@ clean: clean-build clean-pyc clean-test
 	rm -rf docs/.docusaurus/
 
 lint:
-	ruff check filerepack test
-	mypy filerepack test --ignore-missing-imports
+	ruff check filerepack test dev/validate_distribution.py
+	mypy filerepack test dev/validate_distribution.py --ignore-missing-imports
 
 test:
 	pytest --cov=filerepack --cov-report=term-missing
@@ -60,3 +61,6 @@ release: clean
 dist: clean
 	python -m build
 	ls -l dist
+
+check-dist:
+	python dev/validate_distribution.py

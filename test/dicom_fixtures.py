@@ -89,8 +89,6 @@ def build_dicom(
     if implicit_dataset:
         ds_parts.append(impl_elem(0x0008, 0x0016, uid_bytes(CT_SOP_CLASS), endian))
         ds_parts.append(impl_elem(0x0008, 0x0018, uid_bytes('1.2.3.4.5'), endian))
-        if signatures:
-            ds_parts.append(impl_elem(0xFFFA, 0xFFFA, b'', endian))
         if extra_dataset:
             ds_parts.extend(extra_dataset)
         if pixel_data is not None:
@@ -102,14 +100,18 @@ def build_dicom(
         ds_parts.append(
             expl_elem(0x0008, 0x0018, 'UI', uid_bytes('1.2.3.4.5'), endian),
         )
-        if signatures:
-            ds_parts.append(expl_empty_sq(0xFFFA, 0xFFFA, endian))
         if extra_dataset:
             ds_parts.extend(extra_dataset)
         if pixel_data is not None:
             ds_parts.append(
                 expl_elem(0x7FE0, 0x0010, 'OW', pixel_data, endian),
             )
+    if signatures:
+        ds_parts.append(
+            impl_elem(0xFFFA, 0xFFFA, b'', endian) if implicit_dataset
+            else expl_empty_sq(0xFFFA, 0xFFFA, endian)
+        )
+    ds_parts.sort(key=lambda part: struct.unpack(endian + 'HH', part[:4]))
     return b'\x00' * DICM_OFFSET + DICM_MAGIC + meta + b''.join(ds_parts)
 
 
@@ -131,6 +133,9 @@ def encoder_fixture() -> bytes:
     pixels = bytes(b for i in range(8 * 8) for b in (i % 251, 0))
     return build_dicom(
         transfer_syntax=TS_EXPLICIT_VR_LE,
-        extra_dataset=image_attrs(),
+        extra_dataset=[
+            expl_elem(0x0020, 0x000D, 'UI', uid_bytes('1.2.3.4.6')),
+            expl_elem(0x0020, 0x000E, 'UI', uid_bytes('1.2.3.4.7')),
+        ] + image_attrs(),
         pixel_data=pixels,
     )

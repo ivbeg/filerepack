@@ -1,0 +1,1161 @@
+{
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.7",
+  "writer": "filerepack-ole 0.2.0 (cfb 0.14.0)",
+  "olefile": "0.47",
+  "openmcdf": "3.3.0",
+  "corpus_commit": "12c3688d130035f3dc2ca2a0f50d929456435a93",
+  "peak_memory": "Not measured; fixed file/entry/depth bounds are enforced separately",
+  "cases": [
+    {
+      "name": "HeaderWithMacros.doc",
+      "source_bytes": 22528,
+      "fixture_name": "HeaderWithMacros.doc",
+      "variant": "original",
+      "fixture_sha256": "98b991a18dddaebeda8a3efd0951abeb2a4ce4b6065ed6a2f1c7aa13dbb526f8",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.022426,
+        "exit_code": 0,
+        "bytes": 22528,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "b28a8959a41a38c7b8fd828de7a9f1d5779105569939fb1589f34cf3df25dc3e"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "HeaderWithMacros.doc-holes",
+      "source_bytes": 63488,
+      "fixture_name": "HeaderWithMacros.doc",
+      "variant": "holes",
+      "fixture_sha256": "98b991a18dddaebeda8a3efd0951abeb2a4ce4b6065ed6a2f1c7aa13dbb526f8",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.052855,
+        "exit_code": 0,
+        "bytes": 22528,
+        "savings_bytes": 40960,
+        "manifest_equal": true
+      }
+    },
+    {
+      "name": "PngPicture.doc",
+      "source_bytes": 14336,
+      "fixture_name": "PngPicture.doc",
+      "variant": "original",
+      "fixture_sha256": "259aa01f88c17bb4ad364d08ce62424959f51717b37d8a5578e3045f9eaede6b",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.034742,
+        "exit_code": 0,
+        "bytes": 14336,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "081f0bd593fe84ff3c602956d15973bcee2a4a486c3e0382835372558e2a3175"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "PngPicture.doc-holes",
+      "source_bytes": 57344,
+      "fixture_name": "PngPicture.doc",
+      "variant": "holes",
+      "fixture_sha256": "259aa01f88c17bb4ad364d08ce62424959f51717b37d8a5578e3045f9eaede6b",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.042155,
+        "exit_code": 0,
+        "bytes": 14848,
+        "savings_bytes": 42496,
+        "manifest_equal": true
+      }
+    },
+    {
+      "name": "SampleSS.xls",
+      "source_bytes": 17408,
+      "fixture_name": "SampleSS.xls",
+      "variant": "original",
+      "fixture_sha256": "53c9bd7337aa79fedf29cef8d81ec47fff39f80e25da9d74bc354cfdf1c43b73",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.024079,
+        "exit_code": 0,
+        "bytes": 17408,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "8b9be98a5c2218eefcb255a991abc63e30c45d1d694b8ecfee7bd9b664dfc295"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "dd6514b6b811fb4baaf68b006270d26d47dda19f7a24352eb9e4be869cfb9265"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "SampleSS.xls-holes",
+      "source_bytes": 59392,
+      "fixture_name": "SampleSS.xls",
+      "variant": "holes",
+      "fixture_sha256": "53c9bd7337aa79fedf29cef8d81ec47fff39f80e25da9d74bc354cfdf1c43b73",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.040478,
+        "exit_code": 0,
+        "bytes": 17408,
+        "savings_bytes": 41984,
+        "manifest_equal": true
+      }
+    },
+    {
+      "name": "SampleShow.ppt",
+      "source_bytes": 125440,
+      "fixture_name": "SampleShow.ppt",
+      "variant": "original",
+      "fixture_sha256": "64275a6685b8f267827178037dcc59de927475e56385725916f4c6039c7ce7f6",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.03298,
+        "exit_code": 0,
+        "bytes": 124928,
+        "savings_bytes": 512,
+        "manifest_equal": true
+      },
+      "record_recompression": {
+        "seconds": 0.315035,
+        "bytes": 124928,
+        "savings_bytes": 512,
+        "intent_equal": true,
+        "verification_kind": "ole",
+        "details": {
+          "strategy": "ole-compaction",
+          "compaction_bytes": 124928,
+          "additional_savings_bytes": 0,
+          "recompression_skip": "PPT OLE records: unqualified record type/version: 1008",
+          "worker_usage": {
+            "decoded": 0,
+            "written": 124928,
+            "nodes": 470,
+            "peak_worker_rss_bytes": 32489472,
+            "seconds": 0.2505800419894513
+          }
+        },
+        "strict_manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "4517689eb9d565219c637835f2b55e1a4423f3b8f8c3aa9d64df6452e4a6c726"
+          },
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "d6f6449ab8b244b0faf76621a43eb61e5090a14ab39771ff9e875b2e09d4a1b3"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "SampleShow.ppt-holes",
+      "source_bytes": 166912,
+      "fixture_name": "SampleShow.ppt",
+      "variant": "holes",
+      "fixture_sha256": "64275a6685b8f267827178037dcc59de927475e56385725916f4c6039c7ce7f6",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.028098,
+        "exit_code": 0,
+        "bytes": 124928,
+        "savings_bytes": 41984,
+        "manifest_equal": true
+      },
+      "record_recompression": {
+        "seconds": 0.26055,
+        "bytes": 124928,
+        "savings_bytes": 41984,
+        "intent_equal": true,
+        "verification_kind": "ole",
+        "details": {
+          "strategy": "ole-compaction",
+          "compaction_bytes": 124928,
+          "additional_savings_bytes": 0,
+          "recompression_skip": "PPT OLE records: unqualified record type/version: 1008",
+          "worker_usage": {
+            "decoded": 0,
+            "written": 124928,
+            "nodes": 471,
+            "peak_worker_rss_bytes": 34406400,
+            "seconds": 0.2427865420031594
+          }
+        },
+        "strict_manifest_equal": true
+      }
+    },
+    {
+      "name": "Simple.xls",
+      "source_bytes": 13824,
+      "fixture_name": "Simple.xls",
+      "variant": "original",
+      "fixture_sha256": "2b5ec8298bacffdca61c50f6f7607da0a4e63cf76fa011c62f203e6a66bc072a",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.021259,
+        "exit_code": 0,
+        "bytes": 13824,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "42ae873cf36a9fc123bbe83838f50dac0ef2e289fa15a4bdf32fba4cc5f6a55e"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "Simple.xls-holes",
+      "source_bytes": 55296,
+      "fixture_name": "Simple.xls",
+      "variant": "holes",
+      "fixture_sha256": "2b5ec8298bacffdca61c50f6f7607da0a4e63cf76fa011c62f203e6a66bc072a",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.047452,
+        "exit_code": 0,
+        "bytes": 14336,
+        "savings_bytes": 40960,
+        "manifest_equal": true
+      }
+    },
+    {
+      "name": "SimpleMacro.doc",
+      "source_bytes": 36864,
+      "fixture_name": "SimpleMacro.doc",
+      "variant": "original",
+      "fixture_sha256": "39e9608c711d38f298ed20a5bfae12fcdaed6f4be2be4d26db670475216ca393",
+      "unsigned_vba": true,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.058991,
+        "exit_code": 0,
+        "bytes": 36864,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "4921043d42fd6265c267e724bf4c30f23f5bb438245eee114132b71f67a2cc13"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "SimpleMacro.doc-holes",
+      "source_bytes": 81920,
+      "fixture_name": "SimpleMacro.doc",
+      "variant": "holes",
+      "fixture_sha256": "39e9608c711d38f298ed20a5bfae12fcdaed6f4be2be4d26db670475216ca393",
+      "unsigned_vba": true,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.079155,
+        "exit_code": 0,
+        "bytes": 36864,
+        "savings_bytes": 45056,
+        "manifest_equal": true
+      }
+    },
+    {
+      "name": "SimpleMacro.ppt",
+      "source_bytes": 104960,
+      "fixture_name": "SimpleMacro.ppt",
+      "variant": "original",
+      "fixture_sha256": "c6755e4c536356082d09ae59185f527e7f8c835b4d99216696d041a024881bba",
+      "unsigned_vba": true,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.049596,
+        "exit_code": 0,
+        "bytes": 104960,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "record_recompression": {
+        "seconds": 0.489429,
+        "bytes": 104960,
+        "savings_bytes": 0,
+        "intent_equal": true,
+        "verification_kind": "ole",
+        "details": {
+          "strategy": "ole-compaction",
+          "compaction_bytes": 104960,
+          "additional_savings_bytes": 0,
+          "recompression_skip": "PPT OLE records: host VBA is not qualified",
+          "worker_usage": {
+            "decoded": 0,
+            "written": 104960,
+            "nodes": 0,
+            "peak_worker_rss_bytes": 34242560,
+            "seconds": 0.4684539170120843
+          }
+        },
+        "strict_manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "cd37cb14c5120ef50accea31e002feaed277e2bcf0b853f69ec8f6cf7670af70"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "SimpleMacro.ppt-holes",
+      "source_bytes": 146944,
+      "fixture_name": "SimpleMacro.ppt",
+      "variant": "holes",
+      "fixture_sha256": "c6755e4c536356082d09ae59185f527e7f8c835b4d99216696d041a024881bba",
+      "unsigned_vba": true,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.039688,
+        "exit_code": 0,
+        "bytes": 104960,
+        "savings_bytes": 41984,
+        "manifest_equal": true
+      },
+      "record_recompression": {
+        "seconds": 0.228004,
+        "bytes": 104960,
+        "savings_bytes": 41984,
+        "intent_equal": true,
+        "verification_kind": "ole",
+        "details": {
+          "strategy": "ole-compaction",
+          "compaction_bytes": 104960,
+          "additional_savings_bytes": 0,
+          "recompression_skip": "PPT OLE records: host VBA is not qualified",
+          "worker_usage": {
+            "decoded": 0,
+            "written": 104960,
+            "nodes": 0,
+            "peak_worker_rss_bytes": 32440320,
+            "seconds": 0.21265845799644012
+          }
+        },
+        "strict_manifest_equal": true
+      }
+    },
+    {
+      "name": "SimpleMacro.ppt-uncompressed",
+      "source_bytes": 113664,
+      "fixture_name": "SimpleMacro.ppt",
+      "variant": "uncompressed",
+      "fixture_sha256": "c6755e4c536356082d09ae59185f527e7f8c835b4d99216696d041a024881bba",
+      "unsigned_vba": true,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.022023,
+        "exit_code": 0,
+        "bytes": 113664,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "record_recompression": {
+        "seconds": 0.225463,
+        "bytes": 113664,
+        "savings_bytes": 0,
+        "intent_equal": true,
+        "verification_kind": "ole",
+        "details": {
+          "strategy": "ole-compaction",
+          "compaction_bytes": 113664,
+          "additional_savings_bytes": 0,
+          "recompression_skip": "PPT OLE records: host VBA is not qualified",
+          "worker_usage": {
+            "decoded": 0,
+            "written": 113664,
+            "nodes": 0,
+            "peak_worker_rss_bytes": 31670272,
+            "seconds": 0.2060025829996448
+          }
+        },
+        "strict_manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "cd37cb14c5120ef50accea31e002feaed277e2bcf0b853f69ec8f6cf7670af70"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "SimpleMacro.xls",
+      "source_bytes": 30720,
+      "fixture_name": "SimpleMacro.xls",
+      "variant": "original",
+      "fixture_sha256": "0e92c9bb018abd8a5f9121d65827c9e3bd280777219cb77a2efd70635143c00a",
+      "unsigned_vba": true,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.045389,
+        "exit_code": 0,
+        "bytes": 30720,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "6e4a8db94c529ed5ccad7ced1a1e3a5c5e3f2a5c1ccb03a7c7909e8e6fd0bc87"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "SimpleMacro.xls-holes",
+      "source_bytes": 78336,
+      "fixture_name": "SimpleMacro.xls",
+      "variant": "holes",
+      "fixture_sha256": "0e92c9bb018abd8a5f9121d65827c9e3bd280777219cb77a2efd70635143c00a",
+      "unsigned_vba": true,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.041694,
+        "exit_code": 0,
+        "bytes": 31232,
+        "savings_bytes": 47104,
+        "manifest_equal": true
+      }
+    },
+    {
+      "name": "SimpleWithFormula.xls",
+      "source_bytes": 13824,
+      "fixture_name": "SimpleWithFormula.xls",
+      "variant": "original",
+      "fixture_sha256": "73a99975b9ad250669bd49ffe2223ed50df8324775acfbc612740d38827913c9",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.011105,
+        "exit_code": 0,
+        "bytes": 13824,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "ff4602d5977f669c578a4d8c6803ef1b50ad980c38736e68538ee889cdea3947"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "SimpleWithFormula.xls-holes",
+      "source_bytes": 55296,
+      "fixture_name": "SimpleWithFormula.xls",
+      "variant": "holes",
+      "fixture_sha256": "73a99975b9ad250669bd49ffe2223ed50df8324775acfbc612740d38827913c9",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.018035,
+        "exit_code": 0,
+        "bytes": 14336,
+        "savings_bytes": 40960,
+        "manifest_equal": true
+      }
+    },
+    {
+      "name": "WithChart.xls",
+      "source_bytes": 20992,
+      "fixture_name": "WithChart.xls",
+      "variant": "original",
+      "fixture_sha256": "e72315361da2e7a59d50ad5f8b92dd7464004661014b2ab9b462c2c6a48b70f1",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.016479,
+        "exit_code": 0,
+        "bytes": 20992,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "aae1acafcdababbf0ea917b9867ca310a6916a18f6f26cfb02a06cb0fdbc6057"
+          },
+          {
+            "size": [
+              794,
+              1123
+            ],
+            "sha256": "cad049d37084131700ef532282288c9b34ad75c1c075090235e186b453e296a5"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "WithChart.xls-holes",
+      "source_bytes": 62976,
+      "fixture_name": "WithChart.xls",
+      "variant": "holes",
+      "fixture_sha256": "e72315361da2e7a59d50ad5f8b92dd7464004661014b2ab9b462c2c6a48b70f1",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.02513,
+        "exit_code": 0,
+        "bytes": 20992,
+        "savings_bytes": 41984,
+        "manifest_equal": true
+      }
+    },
+    {
+      "name": "external_name.xls",
+      "source_bytes": 173568,
+      "fixture_name": "external_name.xls",
+      "variant": "original",
+      "fixture_sha256": "571ad20771957c4f6af4b24daf7e1001782d035822879f8cd3e756948073340b",
+      "unsigned_vba": true,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.044068,
+        "exit_code": 0,
+        "bytes": 173568,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "1d0c22fe300bd4cb9fc988c3727779ccfb0b9a9efbc43197fd185e1e14a6c9af"
+          },
+          {
+            "size": [
+              1056,
+              816
+            ],
+            "sha256": "cc830ef935792d8051ba5df2b128b72a7e4e2739dbb802e9654729984ab8bea1"
+          },
+          {
+            "size": [
+              1344,
+              816
+            ],
+            "sha256": "0a5781bf55168b4bd724e19749a3e6e3f3e8a30de6c826da60d08de2ac1987b2"
+          },
+          {
+            "size": [
+              1056,
+              816
+            ],
+            "sha256": "df09e8d049375b9fc24371db8a0741e9193f84f16bc7ac35fa9f493a04333848"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "external_name.xls-holes",
+      "source_bytes": 218112,
+      "fixture_name": "external_name.xls",
+      "variant": "holes",
+      "fixture_sha256": "571ad20771957c4f6af4b24daf7e1001782d035822879f8cd3e756948073340b",
+      "unsigned_vba": true,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.042382,
+        "exit_code": 0,
+        "bytes": 173568,
+        "savings_bytes": 44544,
+        "manifest_equal": true
+      }
+    },
+    {
+      "name": "ole2-embedding-2003.ppt",
+      "source_bytes": 40448,
+      "fixture_name": "ole2-embedding-2003.ppt",
+      "variant": "original",
+      "fixture_sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 2560,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.023557,
+        "exit_code": 0,
+        "bytes": 37888,
+        "savings_bytes": 2560,
+        "manifest_equal": true
+      },
+      "record_recompression": {
+        "seconds": 1.172239,
+        "bytes": 37376,
+        "savings_bytes": 3072,
+        "intent_equal": true,
+        "verification_kind": "ppt-ole",
+        "details": {
+          "strategy": "ppt-ole-recompression",
+          "compaction_bytes": 37888,
+          "additional_savings_bytes": 512,
+          "encoders": [
+            "zopfli15",
+            "zopfli15"
+          ],
+          "document_stream_savings_bytes": 521,
+          "decoded_storage_bytes": 54272,
+          "worker_usage": {
+            "decoded": 162816,
+            "written": 84676,
+            "nodes": 418,
+            "peak_worker_rss_bytes": 38305792,
+            "seconds": 0.5025809579965426
+          }
+        },
+        "strict_manifest_equal": false
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "ole2-embedding-2003.ppt-holes",
+      "source_bytes": 80384,
+      "fixture_name": "ole2-embedding-2003.ppt",
+      "variant": "holes",
+      "fixture_sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.031497,
+        "exit_code": 0,
+        "bytes": 37888,
+        "savings_bytes": 42496,
+        "manifest_equal": true
+      },
+      "record_recompression": {
+        "seconds": 1.054642,
+        "bytes": 37376,
+        "savings_bytes": 43008,
+        "intent_equal": true,
+        "verification_kind": "ppt-ole",
+        "details": {
+          "strategy": "ppt-ole-recompression",
+          "compaction_bytes": 37888,
+          "additional_savings_bytes": 512,
+          "encoders": [
+            "zopfli15",
+            "zopfli15"
+          ],
+          "document_stream_savings_bytes": 521,
+          "decoded_storage_bytes": 54272,
+          "worker_usage": {
+            "decoded": 162816,
+            "written": 84676,
+            "nodes": 420,
+            "peak_worker_rss_bytes": 37814272,
+            "seconds": 0.48368145899439696
+          }
+        },
+        "strict_manifest_equal": false
+      }
+    },
+    {
+      "name": "ole2-embedding-2003.ppt-embedded-zlib1",
+      "source_bytes": 38400,
+      "fixture_name": "ole2-embedding-2003.ppt",
+      "variant": "embedded-zlib1",
+      "fixture_sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.027314,
+        "exit_code": 0,
+        "bytes": 38400,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "record_recompression": {
+        "seconds": 1.101916,
+        "bytes": 37376,
+        "savings_bytes": 1024,
+        "intent_equal": true,
+        "verification_kind": "ppt-ole",
+        "details": {
+          "strategy": "ppt-ole-recompression",
+          "compaction_bytes": 38400,
+          "additional_savings_bytes": 1024,
+          "encoders": [
+            "zopfli15",
+            "zopfli15"
+          ],
+          "document_stream_savings_bytes": 1229,
+          "decoded_storage_bytes": 54272,
+          "worker_usage": {
+            "decoded": 162816,
+            "written": 85188,
+            "nodes": 420,
+            "peak_worker_rss_bytes": 36896768,
+            "seconds": 0.5044196670060046
+          }
+        },
+        "strict_manifest_equal": false
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "ole2-embedding-2003.ppt-embedded-zlib0",
+      "source_bytes": 87552,
+      "fixture_name": "ole2-embedding-2003.ppt",
+      "variant": "embedded-zlib0",
+      "fixture_sha256": "6a66797577e941c4f32ca5340217445e404cc0701cc8a07dd3625ef256253afd",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.041879,
+        "exit_code": 0,
+        "bytes": 87552,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "record_recompression": {
+        "seconds": 1.223856,
+        "bytes": 37376,
+        "savings_bytes": 50176,
+        "intent_equal": true,
+        "verification_kind": "ppt-ole",
+        "details": {
+          "strategy": "ppt-ole-recompression",
+          "compaction_bytes": 87552,
+          "additional_savings_bytes": 50176,
+          "encoders": [
+            "zopfli15",
+            "zopfli15"
+          ],
+          "document_stream_savings_bytes": 49610,
+          "decoded_storage_bytes": 54272,
+          "worker_usage": {
+            "decoded": 162816,
+            "written": 134340,
+            "nodes": 420,
+            "peak_worker_rss_bytes": 39960576,
+            "seconds": 0.5601874999993015
+          }
+        },
+        "strict_manifest_equal": false
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              960,
+              720
+            ],
+            "sha256": "01867df51c583e5c6227943e5a31e9190c68ecc17d08459c28d47beffe8fcc4b"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "simple.doc",
+      "source_bytes": 19456,
+      "fixture_name": "simple.doc",
+      "variant": "original",
+      "fixture_sha256": "4876e828e62d490fa188c7c4e47013e2e0dfdf02f5903dfd374bc0d2b2049ca1",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.019634,
+        "exit_code": 0,
+        "bytes": 19456,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "c63cdaf5a2454c5ae6695d1b3d49ef94710c680650a63ab309d8d2513db3f5ad"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "simple.doc-holes",
+      "source_bytes": 60416,
+      "fixture_name": "simple.doc",
+      "variant": "holes",
+      "fixture_sha256": "4876e828e62d490fa188c7c4e47013e2e0dfdf02f5903dfd374bc0d2b2049ca1",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.020144,
+        "exit_code": 0,
+        "bytes": 19456,
+        "savings_bytes": 40960,
+        "manifest_equal": true
+      }
+    },
+    {
+      "name": "testPPT_oleWorkbook.ppt",
+      "source_bytes": 98304,
+      "fixture_name": "testPPT_oleWorkbook.ppt",
+      "variant": "original",
+      "fixture_sha256": "b5c19872ad7b0417c4c601f97bc0f8ee855fd7bbe9c196ab9dbad8316a71f44c",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.023113,
+        "exit_code": 0,
+        "bytes": 97792,
+        "savings_bytes": 512,
+        "manifest_equal": true
+      },
+      "record_recompression": {
+        "seconds": 0.236583,
+        "bytes": 97792,
+        "savings_bytes": 512,
+        "intent_equal": true,
+        "verification_kind": "ole",
+        "details": {
+          "strategy": "ole-compaction",
+          "compaction_bytes": 97792,
+          "additional_savings_bytes": 0,
+          "recompression_skip": "PPT OLE records: unqualified record type/version: 1058",
+          "worker_usage": {
+            "decoded": 0,
+            "written": 97792,
+            "nodes": 265,
+            "peak_worker_rss_bytes": 32276480,
+            "seconds": 0.21999379100452643
+          }
+        },
+        "strict_manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              1281,
+              720
+            ],
+            "sha256": "0c689cc5244d66fd31ba5532ad191b13ee2bcb477a4707708fdc3b831c064a78"
+          },
+          {
+            "size": [
+              1281,
+              720
+            ],
+            "sha256": "88339ff3d4f1b44f60ab115014eea817698ffc37ba91314d43f711ab1b79463c"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "testPPT_oleWorkbook.ppt-holes",
+      "source_bytes": 140288,
+      "fixture_name": "testPPT_oleWorkbook.ppt",
+      "variant": "holes",
+      "fixture_sha256": "b5c19872ad7b0417c4c601f97bc0f8ee855fd7bbe9c196ab9dbad8316a71f44c",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.031146,
+        "exit_code": 0,
+        "bytes": 97792,
+        "savings_bytes": 42496,
+        "manifest_equal": true
+      },
+      "record_recompression": {
+        "seconds": 0.217315,
+        "bytes": 97792,
+        "savings_bytes": 42496,
+        "intent_equal": true,
+        "verification_kind": "ole",
+        "details": {
+          "strategy": "ole-compaction",
+          "compaction_bytes": 97792,
+          "additional_savings_bytes": 0,
+          "recompression_skip": "PPT OLE records: unqualified record type/version: 1058",
+          "worker_usage": {
+            "decoded": 0,
+            "written": 97792,
+            "nodes": 266,
+            "peak_worker_rss_bytes": 34095104,
+            "seconds": 0.19904974999371916
+          }
+        },
+        "strict_manifest_equal": true
+      }
+    },
+    {
+      "name": "word_with_embeded.doc",
+      "source_bytes": 117248,
+      "fixture_name": "word_with_embeded.doc",
+      "variant": "original",
+      "fixture_sha256": "206acf1f7eb7b7d7d2075e04015d005ae9bb56f025560f2583ad3878257bc4c7",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 0,
+      "controlled_holes": false,
+      "rust": {
+        "seconds": 0.044793,
+        "exit_code": 0,
+        "bytes": 117248,
+        "savings_bytes": 0,
+        "manifest_equal": true
+      },
+      "render": {
+        "pages": [
+          {
+            "size": [
+              816,
+              1056
+            ],
+            "sha256": "d92733541e0298a758b963903f9154b101be92641de2c9242a1287adec332270"
+          }
+        ],
+        "equal": true,
+        "macros_security_level": 3,
+        "dpi": 96
+      }
+    },
+    {
+      "name": "word_with_embeded.doc-holes",
+      "source_bytes": 165888,
+      "fixture_name": "word_with_embeded.doc",
+      "variant": "holes",
+      "fixture_sha256": "206acf1f7eb7b7d7d2075e04015d005ae9bb56f025560f2583ad3878257bc4c7",
+      "unsigned_vba": false,
+      "free_regular_bytes_estimate": 40960,
+      "controlled_holes": true,
+      "rust": {
+        "seconds": 0.045604,
+        "exit_code": 0,
+        "bytes": 117248,
+        "savings_bytes": 48640,
+        "manifest_equal": true
+      }
+    }
+  ],
+  "skips": [
+    {
+      "name": "PasswordProtected.doc",
+      "reason": "Encrypted/obfuscated Word document"
+    },
+    {
+      "name": "Password_Protected-hello.ppt",
+      "reason": "Encrypted PowerPoint document"
+    },
+    {
+      "name": "SquareMacro.xls",
+      "reason": "OLE: unsupported root storage"
+    },
+    {
+      "name": "WithEmbeddedObjects.xls",
+      "reason": "OLE: unsupported root storage"
+    },
+    {
+      "name": "password.xls",
+      "reason": "Encrypted/obfuscated Excel workbook (FilePass)"
+    },
+    {
+      "name": "pictures.ppt",
+      "reason": "OLE: FAT sector marker mismatch"
+    },
+    {
+      "name": "pictures_escher.doc",
+      "reason": "OLE: storage contains stream allocation fields"
+    },
+    {
+      "name": "ppt_with_embeded.ppt",
+      "reason": "Empty/unknown PowerPoint VBA project flags"
+    }
+  ],
+  "renderer": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+  "rasterizer": "pdftoppm version 26.05.0",
+  "ppt_record_runtime": true
+}

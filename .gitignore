@@ -92,3 +92,13 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Local processing and verification artifacts
+/temp/
+/outputs/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+coverage.json
+.DS_Store
