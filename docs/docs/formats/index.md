@@ -20,16 +20,23 @@ that is not smaller than the original is discarded unless `--allow-grow`.
 CLI: [CLI reference](/commands/). Tools: [External tools](/tools/). Library:
 [Python API](/library/).
 
+The generated [capability registry](/formats/capabilities) describes registered
+adapter metadata, which can group profiles and omit backend prerequisites. Its
+SPSS family entry groups SAV with experimental ZSAV; SAV itself does not require
+`--experimental-formats`. Use the per-format guides below and the installation
+extra list for precise compatibility and dependency requirements.
+
 ## Nested walking
 
 With `--deep` (default), archives are extracted, each inner file is packed, then
 the container is rewritten:
 
 1. **ZIP family** (OOXML, ODF, EPUB, JAR, APK, …) — extract, pack members, rewrite as ZIP. OOXML-like files prefer Info-ZIP `zip` when it is on PATH so extra 7-Zip fields do not break Word/Excel.
-2. **7z / RAR / CAB / WIM** — same walk; RAR is rewritten as 7z when `rar` is missing.
+2. **7z / RAR / WIM** — same walk; RAR is rewritten as 7z when `rar` is missing. CAB is recognized but has no qualified writer.
 3. **Tarballs** (`tar`, `tar.gz` / `tgz`, `tar.bz2`, `tar.xz`, `tar.zst`, `tar.br`, `tar.lz4`, `tar.lzo`, `tar.lz`, `tar.lzma`, `tar.Z` / `taz`, plus `crate` / `unitypackage`) — decode the outer stream, extract tar members, pack eligible files, rebuild one tar, then encode the original outer codec. `--no-deep` skips member optimization while retaining the same tar layout. RubyGems `.gem` files are plain tar; their checksummed nested payloads remain unchanged during outer rewriting. A compressed stream whose payload is a tar (`.gz`, `.zst`, …) is detected by peeking the first 512 decompressed bytes.
 4. **Nested XML / JSON** inside those containers is minified (see [Markup](#markup-xml-json-svg)).
 5. **`--no-archives`** skips nested archive rewriting. **`--no-images`** skips image, video, and audio packers (including cover art), not XML/JSON or PDF.
+6. **CPIO** (`cpio`, `cpbz2`, `cpio.bz2`) — native record-aware rewriting of safe regular single-link members; linked/special entries retain their original bytes. See [CPIO usage](/use-cases/archives#cpio-and-bzip2-compressed-cpio).
 
 `--include-ext tar.gz` matches `foo.tar.gz`. `--include-ext gz` matches it too.
 `--include-ext jpg` matches `.jpg`, `.jpeg`, `.jpe`, `.jfif`, `.jif`, `.jfi`,
@@ -48,7 +55,9 @@ Duplicate names, case/Unicode-normalization collisions, unsafe paths, links,
 sparse files, encrypted ZIP members, prepended ZIP wrappers and unsupported metadata/type round-trips
 leave the archive unchanged with a warning. These member checks do not establish
 application-specific signature, checksum or package-layout validity; specialized
-container policies remain separate work.
+container policies have their own checks below, and broader alias policies remain
+open qualification work. CPIO separately preserves supported linked/special
+entries without materializing them.
 
 ## Nested assets (not ZIP)
 
@@ -103,8 +112,9 @@ and malformed wrappers cause a skip. Macro-free PPT retains edit-history support
 CFB v4, signed/encrypted/rights-managed files, unknown/embedded/incomplete or
 history-dependent VBA layouts, unclassified and malformed files skip with a reason. The bounded
 subset accepts minor versions 0x3B/0x3E, BMP names whose uppercase mappings do
-not expand, zero root creation time and
-storage entries with zero stream allocation fields. Other Unicode/root/storage
+not expand, recorded root creation/modification times and
+storage entries with zero stream allocation fields. Observed nonzero root creation
+FILETIMEs are preserved exactly. Other Unicode/root/storage
 variants remain unsupported. Limits: 128 MiB file/aggregate stream bytes, 8,192
 directory slots, 32 storage levels, 128 traversal levels, 200,000 application
 records, 4,096 PPT edits and a 120-second writer timeout. Each inspected property
@@ -158,8 +168,10 @@ Other archive families:
 |--------|------------|--------|
 | 7z | `7z`, `cb7` | |
 | RAR | `rar`, `cbr` | Rewritten as `.7z` if `rar` is missing |
-| CAB / WIM | `cab`, `wim` | Requires a working backend writer and successful member/metadata verification; otherwise unchanged |
+| WIM | `wim` | Requires a working backend writer and successful member/metadata verification; otherwise unchanged |
+| CAB | `cab` | Recognized, but no qualified writer; unchanged |
 | Tar | `tar`, `cbt`, `tgz`, `taz`, `tbz`, `tbz2`, `txz`, `tzst`, `tlz`, `tzo`, `gem`, `crate`, `unitypackage` | `gem` is plain tar, `crate`/`unitypackage` are gzip-wrapped tar, `taz` uses Unix compress; checksummed gem payloads are not walked |
+| CPIO | `cpio`, `cpbz2`, `cpio.bz2` | Native old-binary/odc/newc/CRC-newc profiles; compressed shallow mode preserves exact decoded CPIO bytes |
 
 ### ODF and EPUB package rules
 
@@ -220,8 +232,9 @@ instantiated. `--no-images` does not skip this document format.
 Keyed-plist nibs, nib directory bundles, other versions, malformed records and
 unparsed trailing data are skipped. This includes coder-10 files with an
 undocumented trailer. `.nib` members inside archives use the same policy during
-deep walking. Normal dry-run, distinct-output, backup and minimum-savings rules
-apply; already compact archives remain unchanged.
+deep walking. Dry-run inspects without encoding or predicting savings. Backup
+and minimum-savings rules apply; a distinct output is created only for an
+accepted smaller candidate. Already compact archives remain unchanged.
 
 Parsing, value visits and verification share the root `--format-max-*` budgets
 and cooperative deadline/cancellation checks. At the default 256 MiB memory
@@ -256,6 +269,8 @@ profile. It does not thin asset variants or rebuild from `.xcassets`. Structural
 and decoded-byte checks run before standard size, dry-run, backup and destination
 policies. A catalog that is already compact or uses only opaque compression may
 remain the same size.
+Dry-run inspects without encoding or predicting savings. A distinct CAR output
+is created only for an accepted smaller candidate.
 
 Native assetutil qualification used six temporary copies of installed catalogs:
 all 975 rendition descriptions and 953 allocated CSI block digests matched.
@@ -329,8 +344,10 @@ their original spelling; QGS does not perform image URI rewrites. Qt Designer
 
 ## Images
 
-`--no-images` skips this category. Lossless JPEG/PNG strip EXIF/ICC unless
-`--keep-meta`.
+`--no-images` skips this category. Lossless JPEG/PNG retain required orientation
+and color metadata; `--keep-meta` additionally requests incidental metadata.
+The current adapters conservatively retain all metadata when presentation fields
+are present. Lossless PNG also retains encoded bit depth and color type.
 
 | Kind | Extensions | Tools |
 |------|------------|-------|
@@ -351,7 +368,7 @@ their original spelling; QGS does not perform image URI rewrites. Qt Designer
 | Aseprite | `ase`, `aseprite` | Native zlib image/tilemap cel recompression; frames, durations, links, layers, palettes and unknown chunks retained |
 | Flash movie | `swf` | Native FWS/CWS zlib recompression; movie header and exact decoded tag bytes retained |
 | Telegram animation | `tgs` | Exact Lottie JSON bytes recompressed as gzip; optional `filerepack[tgs]` uses Zopfli |
-| DICOM | `dcm`, `dicom`, `dic` | Lossless JPEG-LS via `gdcmconv` or `dcmcjpls`, with `filerepack[dicom]` verification. Signed, non-image, and already-compressed instances are skipped. `--lossy` does not apply |
+| DICOM | `dcm`, `dicom`, `dic` | Lossless JPEG-LS via `gdcmconv` or `dcmcjpls`, with `filerepack[dicom]` verification. Qualified uncompressed/RLE sources only; signed, non-image and other compressed instances are skipped. `--lossy` does not apply |
 
 ### DICOM preservation
 
@@ -412,12 +429,16 @@ retained. Flate candidates contain PDF-compatible compressed sample data. See [S
 | Video | `mp4`, `mkv`, `webm`, `mov`, `m4v`, `wmv`, `avi`, `asf`, `3gp`, `ts`, `mts`, `m2ts` | `ffmpeg`. `--wmv-lossless` is CRF 0 (VP9 lossless for WebM) |
 | FLAC | `flac` | `flac` recompress; covers with `filerepack[media]` |
 | ALAC / M4A | `m4a`, `m4b` | ffmpeg ALAC when applicable; covers with mutagen |
-| Ogg / Opus | `ogg`, `opus`; `oga` | `optivorbis` for Vorbis/Opus. FLAC-in-Ogg `.oga` stays on ffmpeg |
+| Ogg / Opus | `ogg`, `opus`; `oga` | `optivorbis` for Vorbis; the registered Opus route has no qualified OptiVorbis codec optimization. Cover-art changes may still apply. FLAC-in-Ogg `.oga` stays on ffmpeg |
 | WavPack / TTA | `wv`, `tta` | ffmpeg |
 | Monkey's Audio | `ape` | `mac` when installed; covers with mutagen |
 | MP3 | `mp3` | `mp3packer` (lossless frame packing). `--ultra` passes `-z`. Covers with mutagen |
 
 `optivorbis` and `mp3packer` are not in Homebrew/apt; see [External tools](/tools/).
+Video defaults to stream-copy remuxing and requires both `ffmpeg` and `ffprobe`.
+`--video-mode lossless` explicitly re-encodes losslessly; `--video-mode lossy --lossy`
+permits lossy encoding. Unsupported streams or failed preservation checks prevent
+publication.
 
 ## Compressed streams and data
 
@@ -427,7 +448,7 @@ retained. Flate candidates contain PDF-compatible compressed sample data. See [S
 | CPIO and bzip2-compressed CPIO | `cpio`, `cpbz2` (also `cpio.bz2`) | Safe regular single-link members are deep-walked; links, metadata and untouched payloads are preserved |
 | WARC web archives | `warc`, `warc.gz`, `warc.gzip` | Standard library; exact decoded WARC 1.0/1.1 bytes, one level-9 gzip member per record |
 | lz4 / lzip / lzma / lzo / compress | `lz4`, `lz`, `lzma`, `lzo`, `z` | `lz4`, `lzip`, `lzma`, `lzop`, `compress` |
-| SQLite | `sqlite`, `sqlite3`, `db`, `gpkg`, `mbtiles` | `VACUUM`. `.db` still requires the `SQLite format 3` header |
+| SQLite | `sqlite`, `sqlite3`, `db`, `gpkg`, `mbtiles` | Verified `VACUUM`; in-place work requires `--sqlite-offline` and no sidecars. Distinct outputs use a consistent snapshot, including committed WAL pages. `.db` requires the SQLite header |
 | SQLite application aliases | `vscdb`, `sqlitedb` | Verified offline `VACUUM INTO`, preserving schema, rowids, values and application settings |
 | DuckDB | `duckdb` | `filerepack[duckdb]`: fresh database copy with independent catalog and value verification |
 | Parquet | `parquet` | `filerepack[parquet]` or `[data]` (PyArrow 19+). Schema, metadata and ordered values are verified before publication. `--ultra` is zstd level 22 |
@@ -525,28 +546,14 @@ benchmarks are separate from these structural/data checks.
 These stay untouched (no extract + rewrite):
 
 - Signed installers: `deb`, `rpm`, `pkg`, `dmg`
-- Disc/library archives 7-Zip cannot create: `iso`, `ar` / `a` / `lib`. CPIO has a native preserving writer for supported profiles; unsafe paths and linked/special members are retained without editing.
+- CAB (recognized, but no qualified writer), ISO and AR / `a` / `lib`
 - OpenType `.otf` fonts (ZIP ODF templates with that extension are packed)
 - LAS/LAZ point clouds (no extension-changing conversion is added)
 
 ## Python extras
 
-```bash
-pip install 'filerepack[parquet]'   # verified PyArrow Parquet
-pip install 'filerepack[data]'      # Parquet + ORC/Avro/Feather/Arrow
-pip install 'filerepack[fonts]'     # WOFF/WOFF2 via fonttools
-pip install 'filerepack[progress]'  # rich progress bars
-pip install 'filerepack[media]'     # mutagen cover-art walking
-pip install 'filerepack[pdf]'       # pikepdf + Pillow; qpdf 11+ for lossless comparison
-pip install 'filerepack[validation]' # Pillow raster checks + pikepdf inspection fallback
-pip install 'filerepack[ole]'        # legacy Office compaction; separate native writer
-pip install 'filerepack[ole-recompress]' # optional OLE payload encoding + worker isolation
-pip install "filerepack[scientific]" # Preserving scientific readers and isolation
-pip install 'filerepack[onnx]'       # Static ONNX protobuf/checker inspection
-pip install 'filerepack[dicom]'     # DICOM decoded-pixel verification
-pip install 'filerepack[fits]'      # Astropy lossless FITS tiled compression
-pip install 'filerepack[blend]'     # Zstandard Blender streams
-```
+The complete extra list and installation commands are maintained in
+[Installation](/getting-started/installation#optional-extras).
 
 See [preserving scientific profiles](scientific.md) for exact support, reader gates,
 resource options, checkpoint compatibility and the separate `repack-store` command.

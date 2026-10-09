@@ -26,10 +26,11 @@ make lint
 
 The site is Docusaurus under [`docs/`](https://github.com/ivbeg/filerepack/tree/master/docs).
 Source pages live in `docs/docs/`.
+The locked Docusaurus release needs Node.js 20+ and npm.
 
 ```bash
 cd docs
-npm install
+npm ci
 npm start
 ```
 

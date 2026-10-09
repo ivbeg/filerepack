@@ -6,13 +6,13 @@ This directory contains the Docusaurus documentation site for filerepack.
 
 ### Prerequisites
 
-- Node.js 18+ and npm
+- Node.js 20+ and npm (the locked Docusaurus version requires Node 20+)
 
 ### Installation
 
 ```bash
 cd docs
-npm install
+npm ci
 ```
 
 ### Local development
@@ -102,3 +102,8 @@ When adding or updating documentation:
 2. Follow the existing frontmatter (`title`, `description`).
 3. Test locally with `npm start`.
 4. Confirm `npm run build` succeeds (broken links fail the build).
+5. When changing formats, regenerate the registry page from the repository root:
+   `python dev/generate_capability_docs.py`. Do not edit that generated table manually.
+6. Keep `sidebars.js`, `src/components/DocsContents.js` and `static/llms.txt`
+   aligned when adding command or format pages. Check examples against
+   `filerepack <command> --help` and extras against `pyproject.toml`.

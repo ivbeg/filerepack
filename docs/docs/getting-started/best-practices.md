@@ -9,7 +9,7 @@ description: "Practical defaults for lossless repack, bulk jobs, and extras"
 - Run `filerepack doctor` after install so missing binaries are obvious.
 - Use `--dryrun` (and `--stats`) on a sample before rewriting a tree.
 - Keep JPEG/PNG/PDF lossless unless you explicitly want `--lossy` or a quality flag.
-- Do not pass `--allow-grow` unless you are debugging a packer.
+- Use `--allow-grow` only when a required layout, such as PDF linearization or record-based WARC gzip, matters more than size reduction. Some preserving profiles still require a smaller candidate.
 
 ## Nested files and Office
 
@@ -36,6 +36,8 @@ description: "Practical defaults for lossless repack, bulk jobs, and extras"
 - Parquet: `filerepack[parquet]` or `[data]`; `--ultra` is zstd level 22.
 - Cover art: `filerepack[media]`.
 - Fonts: `filerepack[fonts]`.
+- Raster verification: `filerepack[validation]`; video/audio verification needs ffmpeg and ffprobe.
+- Scientific/checkpoint formats: use the [complete extra list](/getting-started/installation#optional-extras) and check the [supported profiles](/formats/scientific).
 
 ## Configuration
 

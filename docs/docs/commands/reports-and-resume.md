@@ -1,4 +1,6 @@
 ---
+title: "Reports and resume"
+description: "Local audit reports, path disclosure and content-verified bulk checkpoints"
 sidebar_position: 5
 ---
 

@@ -8,8 +8,10 @@ slug: /tools
 
 `filerepack doctor` prints which binaries are on PATH and, for anything missing,
 OS-specific install commands (Homebrew / MacPorts on macOS, apt / dnf / pacman /
-zypper / apk on Linux, Chocolatey / winget / Scoop on Windows). Only `7zz` or
-`7z` is required for archive/OOXML work. Everything else enables extra formats.
+zypper / apk on Linux, Chocolatey / winget / Scoop on Windows). `7zz` or `7z`
+is required for ZIP/OOXML and generic archive work; native CPIO and WARC do not
+use it. Other tools enable their corresponding formats. `doctor` exits `1` if
+the archiver is missing even when your intended format does not need it.
 
 Override a tool with an environment variable (`FILEREPACK_7ZZ`,
 `FILEREPACK_JPEGOPTIM`, `FILEREPACK_JPEGTRAN`, `FILEREPACK_ZOPFLIPNG`,
@@ -22,6 +24,14 @@ szip = "/opt/homebrew/bin/7zz"
 qpdf = "/usr/local/bin/qpdf"
 ```
 
+Lookup order is the tool's environment override, the first successfully parsed
+configuration file's matching entry, then PATH. Configuration files are checked at
+`$XDG_CONFIG_HOME/filerepack/config.toml` (when set),
+`~/.config/filerepack/config.toml`, then `~/.filerepack.toml`; they are not merged.
+An invalid explicit executable override is reported as unavailable and does not
+fall back to PATH. Config keys use registry tool names such as `szip` and
+`ole_compactor`.
+
 For other Linux or Windows package managers, run `filerepack doctor` and follow
 the printed commands.
 
@@ -32,8 +42,8 @@ the printed commands.
 | `7zz` or `7z` | ZIP, 7z, OOXML, nested archives |
 | `zip` | Preferred rewrite for OOXML (docx/xlsx/pptx, …) |
 | `filerepack-ole` | Qualified DOC/XLS/PPT/MSG/VSD/PUB/MPP/MSI/HWP CFB compaction; requires `filerepack[ole]` and independent preservation checks |
-| `jpegoptim` | JPEG (lossless strip, or `-m` with `--jpeg-quality`) |
-| `jpegtran` | lossless JPEG (`-optimize -progressive`; mozjpeg or libjpeg-turbo). `--keep-meta` uses `-copy all` |
+| `jpegoptim` | JPEG entropy optimization, or `-m` with `--jpeg-quality`; required presentation metadata is retained |
+| `jpegtran` | Lossless JPEG (`-optimize -progressive`; mozjpeg or libjpeg-turbo); metadata is copied when presentation fields or `--keep-meta` require it |
 | `oxipng` / `optipng` | lossless PNG |
 | `zopflipng` | extra lossless PNG pass when `--ultra` is set |
 | `pngquant` | lossy PNG (`--png-quality` / `--lossy`) |
@@ -45,6 +55,7 @@ the printed commands.
 | `magick` / `convert`, `tiffcp` | HEIC, JPEG 2000, EXR, ICO, ICNS, DNG (tiffcp), BMP, TGA, PNM, PCX |
 | `avifenc` + `avifdec` | AVIF (ImageMagick fallback) |
 | `ffmpeg` | MP4, MKV, WebM, MOV, M4V, WMV, AVI, ASF, 3GP, MPEG-TS, ALAC/WavPack |
+| `ffprobe` | Required media stream/container inventory before publication; normally installed with ffmpeg |
 | `pigz` | faster gzip |
 | `xz`, `bzip2`, `zstd`, `brotli`, `lz4`, `lzip`, `lzma`, `lzop`, `compress` | xz / bz2 / zst / br / lz4 / lz / lzma / lzo / .Z |
 | `cjxl` + `djxl` | JPEG XL |
@@ -54,12 +65,12 @@ the printed commands.
 | `netCDF4`, `tifffile`, `imagecodecs`, `psutil` | Preserving NetCDF/TIFF adapters and worker isolation (`scientific` extra) |
 | `mac` | Monkey's Audio (`.ape`) |
 | `mp3packer` | lossless MP3 (`FILEREPACK_MP3PACKER`; not in Homebrew — see below) |
-| `optivorbis` | Ogg Vorbis/Opus (`FILEREPACK_OPTIVORBIS`; not in Homebrew — see below) |
-| `woff2_compress` / `woff2_decompress` | WOFF2 fallback |
+| `optivorbis` | Ogg Vorbis optimization (`FILEREPACK_OPTIVORBIS`; see below); official CLI does not provide Opus codec optimization |
+| `woff2_compress` / `woff2_decompress` | Alternative WOFF2 candidates; independent fontTools verification is still required |
 | `unrar`, `rar` | RAR extract / rewrite (`rar` missing → 7z) |
 | `pyarrow>=19` Python package | Verified Parquet recompression (`pip install 'filerepack[parquet]'`) |
 | `pyarrow`, `fastavro` | ORC / Feather / Arrow / Avro (`pip install 'filerepack[data]'`) |
-| `h5py`, `netCDF4` | HDF5 / NetCDF structural validation (`pip install h5py netCDF4`) |
+| `h5py`, `netCDF4` | Preserving HDF5 / NetCDF native readers (`pip install 'filerepack[scientific]'`) |
 | `fonttools` | WOFF / WOFF2 (`pip install 'filerepack[fonts]'`) |
 | `mutagen` | Cover art in MP3/FLAC/M4A/Ogg/APE (`pip install 'filerepack[media]'`) |
 | `Pillow` | Required raster decoding (`pip install 'filerepack[validation]'`) |
@@ -178,7 +189,8 @@ Linux/Windows zips from the same release: `mp3packer-ubuntu-arm64.zip`,
 
 ## optivorbis (not packaged)
 
-`optivorbis` losslessly remuxes Ogg Vorbis (and Opus in an Ogg container). It is
+The [official OptiVorbis CLI](https://github.com/OptiVorbis/OptiVorbis) losslessly
+optimizes Ogg Vorbis audio; it does not provide Opus codec optimization. It is
 not in Homebrew, MacPorts, apt, or Chocolatey, and Cargo cannot install it:
 crates.io `optivorbis` is a library, and the CLI package is unpublished.
 

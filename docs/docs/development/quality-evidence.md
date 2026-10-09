@@ -90,8 +90,10 @@ checks retain their stated formats and reader limits.
 
 ## Coverage and configured CI
 
-The current full run passes 2,361 tests with three filesystem-related skips.
-Measured line coverage is 76.12%, with 62.44% branch coverage.
+The recorded full checkout run on 2026-10-08 passed 2,361 tests with three
+filesystem-related skips. Its measured line coverage was 76.12%, with 62.44%
+branch coverage. These are dated results, not a claim about every subsequent
+checkout; see the [check receipts](https://github.com/ivbeg/filerepack/blob/master/dev/quality/checks-2026-10-07.json).
 Coverage excludes work performed in isolated child interpreters unless a child
 coverage configuration is explicitly supplied. The checker enforces 90% line
 coverage for shared transactions/candidates/destinations, 85% for option
@@ -101,7 +103,7 @@ validation/reports and 70% for the broad verifier. The verifier target remains
 CI retains core Python 3.9–3.13 and installed-artifact 3.9/3.13 checks. Configured
 Linux/macOS/Windows lanes exercise process/filesystem contracts; optional-reader,
 scientific-native and OLE-native lanes exercise real integrations. These remote
-jobs have not been executed in this session. A new Python version becomes
+job results are not established by the linked local evidence. A new Python version becomes
 qualified after its core/artifact/representative-reader checks pass.
 
 ## Open qualification

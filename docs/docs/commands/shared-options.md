@@ -18,7 +18,7 @@ not smaller are discarded unless `--allow-grow`.
 | `--min-savings PCT` | Keep result only if savings ≥ PCT; finite range 0–100 |
 | `--min-size` / `--max-size` | Size filters (`1MB`, `100KB`, …) |
 | `--backup` / `--backup-dir` | Required source backup before processing; `--backup-dir` selects its directory and needs `--backup` |
-| `--output-dir` | Preserve source and publish results here, including an unchanged copy if no improvement is accepted |
+| `--output-dir` | Preserve source and publish results here; unchanged-copy exceptions are listed under [repack](/commands/repack) |
 | `--overwrite` | Explicitly allow replacing an existing output/conversion target; never overwrite a required backup |
 | `--compression-level 1-9` | Archive compression (default 9) |
 | `--jpeg-quality 1-100` | Implies lossy JPEG; also re-encodes images inside PDFs |
@@ -29,14 +29,18 @@ not smaller are discarded unless `--allow-grow`.
 | `--ole-deduplicate-images` | Merge identical compatible images in fully resolved XLS/PPT stores; default: off |
 | `--pdf-profile` | Ghostscript Distiller preset: `screen`, `ebook`, `printer`, `prepress`, `default` (implies lossy PDF) |
 | `--lossy` | Ghostscript PDF (`/ebook` unless `--pdf-profile` is set), jpegoptim `-m`, pngquant, lossy AVIF/HEIC |
-| `--wmv-lossless` | Video CRF 0 (or VP9 lossless for WebM) |
-| `--convert-container` / `--no-convert-container` | WMV/AVI/ASF → MP4 and standalone plain WARC → `.warc.gz` (default: convert) |
+| `--wmv-lossless` | Compatibility alias for `--video-mode lossless`: CRF 0 (or VP9 lossless for WebM) |
+| `--video-mode remux\|lossless\|lossy` | Video fidelity (default: remux); lossy mode requires `--lossy` |
+| `--convert-container` / `--no-convert-container` | WMV/AVI/ASF/3GP/MPEG-TS → MP4 and standalone plain WARC → `.warc.gz` (default: convert) |
 | `--allow-grow` | Keep output even if larger |
 | `--keep-meta` | Retain incidental metadata as well as required orientation/color metadata |
 | `--max-extract-size` | Skip archive extract if uncompressed size exceeds this (`0` disables; default 8GB, also 100× the archive) |
 | `--ultra` | Stronger lossless passes: Parquet zstd 22, `zopflipng` for PNG, `mp3packer -z`, bounded OLE Zopfli50 trials (requires a separately enabled OLE content mode) |
 | `--json` / `--csv` | Machine-readable output (mutually exclusive) |
 | `--log-file PATH` | Also write CLI messages to a file |
+| `--report PATH` | Persistent local audit report; parent must exist and destination must be absent |
+| `--report-format json\|jsonl` | Report encoding; inferred from `.jsonl`, otherwise JSON |
+| `--report-paths absolute\|relative\|redacted` | Report path disclosure (default: absolute) |
 | `--stats` | Extra timing / counts |
 | `--progress` | Progress bar (`rich` if installed). `repack` is on for a TTY (`--no-progress` to hide); `bulk` needs `--progress` |
 | `--progress-interval N` | Interval when `rich` is not installed (default 10) |
@@ -91,8 +95,21 @@ flags or a Ghostscript PDF profile. In Python, `RepackOptions(profile='maximum',
 and `options_for_profile('maximum', ultra=False, compression_level=9)` both retain
 explicit override provenance. Without a profile, existing effort defaults apply.
 
-`--file-timeout SECONDS` is the root operation deadline; `--max-temp-bytes BYTES`
-is its scratch cap. The existing `--format-*` decoded/memory/node limits also
+| Resource flag | Default | Meaning |
+| --- | ---: | --- |
+| `--format-max-decoded-bytes` | 536870912 | Cumulative decoded bytes (512 MiB) |
+| `--format-max-memory-bytes` | 268435456 | Memory grant / sampled worker RSS limit (256 MiB) |
+| `--format-max-scratch-bytes` | 2147483648 | Scratch writes and live scratch cap (2 GiB) |
+| `--format-max-nodes` | 100000 | Cumulative graph/record visits |
+| `--format-max-depth` | 16 | Security nesting depth |
+| `--format-timeout` | 120 | Root deadline in seconds |
+| `--file-timeout` | unset | Override `--format-timeout` in seconds |
+| `--max-temp-bytes` | unset | Override `--format-max-scratch-bytes` in bytes |
+| `--tool-threads` | 1 | Threads granted to each encoder |
+
+Byte limits take integer bytes, not `MB` strings; deadlines take seconds. When
+both aliases and their `--format-*` equivalents are supplied, `--file-timeout`
+and `--max-temp-bytes` take precedence. The decoded/memory/node limits also
 apply to supported nested adapters and owned processes. `--tool-threads` sets
 native-library thread environment limits; adapters with other private thread
 controls still require their documented controls. Owned external commands are

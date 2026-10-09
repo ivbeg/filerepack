@@ -34,12 +34,16 @@ const sections = [
   {
     title: 'CLI Reference',
     to: '/commands/',
-    description: 'Command-by-command reference for repack, bulk, and doctor.',
+    description: 'File and store processing, read-only inspection, tool checks, reports, and resume.',
     links: [
       {label: 'All commands', to: '/commands/'},
       {label: 'Shared options', to: '/commands/shared-options'},
       {label: 'repack', to: '/commands/repack'},
       {label: 'bulk', to: '/commands/bulk'},
+      {label: 'inspect', to: '/commands/inspect'},
+      {label: 'repack-store', to: '/commands/repack-store'},
+      {label: 'inspect-dcp', to: '/commands/inspect-dcp'},
+      {label: 'Reports and resume', to: '/commands/reports-and-resume'},
       {label: 'doctor', to: '/commands/doctor'},
     ],
   },
@@ -49,6 +53,10 @@ const sections = [
     description: 'Format coverage, nested walking, and the external binaries each packer needs.',
     links: [
       {label: 'Format support matrix', to: '/formats/'},
+      {label: 'Scientific profiles', to: '/formats/scientific'},
+      {label: 'Model weight inspection', to: '/formats/model-weights'},
+      {label: 'Apple tracev3', to: '/formats/tracev3'},
+      {label: 'Capability registry', to: '/formats/capabilities'},
       {label: 'External tools', to: '/tools/'},
       {label: 'doctor command', to: '/commands/doctor'},
     ],
@@ -66,9 +74,10 @@ const sections = [
   {
     title: 'Development',
     to: '/development/contributing',
-    description: 'Contributing, tests, and license.',
+    description: 'Contributing, tests, qualification evidence, and license.',
     links: [
       {label: 'Contributing', to: '/development/contributing'},
+      {label: 'Quality evidence', to: '/development/quality-evidence'},
       {label: 'License', to: '/license'},
     ],
   },

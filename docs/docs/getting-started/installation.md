@@ -57,11 +57,17 @@ sections elsewhere in the docs link back here.
 | `validation` | Pillow raster verification and pikepdf protection-inspection fallback |
 | `ole` | olefile 0.47 for legacy DOC/XLS/PPT compaction; also requires the separately built native writer |
 | `ole-recompress` | olefile and psutil for opt-in OLE EMF/WMF and PPT embedded-object recompression; Zopfli 0.4.3 on Python 3.10+, zlib on Python 3.9; native writer 0.4.0+ |
+| `serialization` | Passive RDS/RDA/RData, PT/PTH checkpoint and SAV/experimental ZSAV handlers with worker isolation |
+| `scientific` | NumPy, h5py, netCDF4, tifffile and imagecodecs for preserving HDF5/NetCDF/TIFF and experimental MAT profiles; HDF5 also needs `h5repack` |
+| `zarr` | Zarr 2.18–2.x, NumPy and compatible numcodecs for complete offline local v2 stores via `repack-store` |
+| `onnx` | Bounded ONNX inspection and checker; no recompression writer |
+| `tracev3` | LZ4 and worker isolation for archived Apple Unified Log chunk streams |
 | `dicom` | pydicom, NumPy and pyjpegls for DICOM parsing and decoded-pixel verification |
 | `fits` | Astropy/CFITSIO lossless FITS tiled-image compression and verification |
 | `blend` | Zstandard compression/decompression for Blender projects; gzip uses the standard library |
 | `duckdb` | DuckDB 1.4.2+ and PyArrow 19+ for verified offline database compaction |
 | `tgs` | Zopfli for stronger Telegram TGS compression; standard-library gzip is the fallback |
+| `dev` | Build, pytest/coverage, lint/type checks and selected integration readers for repository development |
 
 ```bash
 pip install 'filerepack[parquet]'
@@ -73,6 +79,11 @@ pip install 'filerepack[pdf]'
 pip install 'filerepack[validation]'
 pip install 'filerepack[ole]'
 pip install 'filerepack[ole-recompress]'
+pip install 'filerepack[serialization]'
+pip install 'filerepack[scientific]'
+pip install 'filerepack[zarr]'
+pip install 'filerepack[onnx]'
+pip install 'filerepack[tracev3]'
 pip install 'filerepack[dicom]'
 pip install 'filerepack[fits]'
 pip install 'filerepack[blend]'
@@ -80,15 +91,22 @@ pip install 'filerepack[duckdb]'
 pip install 'filerepack[tgs]'
 ```
 
+Extras can be combined, for example `pip install 'filerepack[data,pdf,validation]'`.
+With uv or pipx, install the extras into the tool's own environment:
+`uv tool install 'filerepack[data,pdf,validation]'` or
+`pipx install 'filerepack[data,pdf,validation]'`. Installing them with a separate
+system `pip` does not add them to an isolated tool environment.
+
 ## External tools
 
-HDF5/NetCDF structural validation additionally requires `pip install h5py netCDF4`
-alongside the `h5repack`/`nccopy` tools. Unsupported or missing decoders leave
-candidates unpublished.
+Install `filerepack[scientific]` for HDF5/NetCDF readers and native writers.
+HDF5 also requires `h5repack`; NetCDF uses the Python netCDF4 writer and does
+not require `nccopy`. Unsupported or missing decoders leave candidates unpublished.
 
 Most formats also need command-line binaries (`7zz`, `jpegoptim`, `qpdf`,
-`ffmpeg`, …). Only `7zz` or `7z` is required for archive and OOXML work.
-Everything else enables extra formats.
+`ffmpeg`, …). `7zz` or `7z` is required for ZIP/OOXML and generic archive work;
+native CPIO and WARC do not require it. `doctor` still exits `1` when the
+archiver is missing. Other tools enable their corresponding formats.
 
 See what you have and how to install the rest on this OS:
 

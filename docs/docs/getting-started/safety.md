@@ -90,10 +90,13 @@ filerepack repack contract.docx --output-dir ./out
 filerepack repack contract.docx --output-dir ./out --overwrite
 ```
 
-`--output-dir` preserves the source. When no candidate passes the savings and
-validation checks, the destination receives a copy checked for byte identity
-with the source. This does not establish that an already malformed source is
-a valid format.
+`--output-dir` preserves the source. For ordinary supported inputs with no
+accepted improvement, the destination receives a copy checked for byte identity
+with the source. Scientific, NIB, CAR and WARC profiles create distinct outputs
+only for accepted candidates, and refused processing creates no fallback copy.
+SQLite distinct outputs use a consistent snapshot including committed WAL pages;
+that snapshot may be published without compaction savings. Copying an unchanged
+source does not establish that an already malformed source is a valid format.
 
 Different existing output/conversion targets are refused unless `--overwrite`
 is explicit. This includes the `.mp4` target of video conversion and `.7z` when
@@ -125,8 +128,9 @@ Extended attributes exposed by the Linux or macOS native APIs are copied and
 verified, including binary values and macOS resource forks. Metadata application
 or verification failure refuses publication and logs the reason. The default
 policy covers the supported attributes; platforms without an xattr API do not
-provide an xattr preservation guarantee. `keep_meta` controls format metadata
-such as EXIF/ICC separately.
+provide an xattr preservation guarantee. `keep_meta` controls incidental format
+metadata separately; lossless JPEG/PNG already retain required orientation/color
+information.
 
 On macOS, a new staging file can receive a protected `com.apple.provenance`
 attribute from the system. When the source has no such attribute, publication
@@ -152,6 +156,7 @@ must provide the required publication primitives or the operation fails.
 files unchanged and creating no output or backup directories. Scratch space
 also holds a private source copy during normal processing, so account for that
 additional disk use with large inputs.
+Scientific, NIB and CAR dry-runs inspect without encoding or measuring savings.
 
 ## Archive extract limits
 
@@ -164,10 +169,14 @@ a tiny zip bomb is not fully expanded.
 These are never extracted and rewritten:
 
 - Signed installers: `deb`, `rpm`, `pkg`, `dmg`
-- Disc/library archives 7-Zip cannot create: `iso`, `cpio`, `ar` / `a` / `lib`
+- CAB (no qualified writer), ISO and AR / `a` / `lib`
 - OpenType `.otf` fonts (ZIP ODF templates with that extension are packed)
 - Encrypted or digitally signed PDFs skip every rewriting path, including qpdf, pikepdf and Ghostscript
-- DICOM instances that are signed, non-image, or already compressed
+- DICOM instances that are signed, non-image, or use unsupported compressed transfer syntaxes; RLE Lossless sources can use the qualified GDCM path
+
+Raw and bzip2-wrapped CPIO have a native preserving writer. Deep walking only
+optimizes safe regular single-link members; linked/special entries remain exact.
+See [CPIO usage](/use-cases/archives#cpio-and-bzip2-compressed-cpio).
 
 ## Related docs
 

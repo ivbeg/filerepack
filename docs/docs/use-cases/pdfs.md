@@ -9,7 +9,10 @@ JPEG, PNG, and PDF default to **lossless** tools.
 ## Lossless
 
 Install `filerepack[pdf]` so pikepdf can walk embedded JPEG / JPEG 2000 / Flate
-image streams, then qpdf rewrites the file. Without pikepdf, only qpdf runs.
+image streams. Lossless acceptance also requires qpdf 11+ for independent
+object/decoded-stream comparison. Filerepack compares the original, walked and
+qpdf candidates and selects the smallest verified result. Without pikepdf,
+only qpdf candidates are available.
 
 ```bash
 pip install 'filerepack[pdf]'

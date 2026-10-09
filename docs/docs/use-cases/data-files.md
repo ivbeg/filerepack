@@ -27,19 +27,34 @@ or integer-backed decimals) are skipped with a reason. Missing PyArrow or failed
 verification also leaves the input unchanged. Install the updated `parquet` or
 `data` extra even if DuckDB is already installed.
 
-These checks currently apply to Parquet. Preservation/framing contracts for the
-other data writers and an explicit SQLite offline/snapshot policy remain planned
-work.
+Arrow/Feather, ORC and Avro also have qualified schema, metadata and value
+preservation checks. Arrow IPC retains file/stream framing. Unsupported variants
+remain unchanged; see the [format profiles](/formats/) and
+[quality evidence](/development/quality-evidence) for their qualification limits.
 
 ## SQLite and spatial containers
 
-`VACUUM` on SQLite. `.db` still requires the `SQLite format 3` header.
+SQLite compaction verifies schema, metadata, rows and rowids. `.db` requires the
+`SQLite format 3` header. In-place processing needs `--sqlite-offline`, closed
+database users and no WAL, shared-memory or journal sidecars:
 
 ```bash
-filerepack repack notes.sqlite
-filerepack repack map.gpkg
-filerepack repack tiles.mbtiles
+filerepack repack notes.sqlite --sqlite-offline
+filerepack repack map.gpkg --sqlite-offline
+filerepack repack tiles.mbtiles --sqlite-offline
 ```
+
+For a distinct output, filerepack takes a consistent snapshot including committed
+WAL pages. It can publish that snapshot even when VACUUM provides no savings:
+
+```bash
+filerepack repack notes.sqlite --output-dir ./snapshots
+```
+
+A live WAL source cannot use a single-file `--backup`. The offline assertion
+cannot detect every idle external connection. Close users before an in-place
+run. `.vscdb`, `.sqlitedb` and `.qgd` use separate offline-only profiles and refuse
+sidecars; close their application before processing.
 
 ## Columnar and scientific
 
@@ -53,6 +68,7 @@ filerepack repack frame.feather
 HDF5 needs `h5repack`; NetCDF4 uses its native Python writer. Both need the `scientific` extra:
 
 ```bash
+pip install 'filerepack[scientific]'
 filerepack repack model.h5
 filerepack repack grid.nc
 ```
@@ -88,8 +104,9 @@ pip install 'filerepack[fonts]'
 filerepack repack icon.woff2
 ```
 
-WOFF/WOFF2 also work via `woff2_compress` / `woff2_decompress` when fonttools
-is missing.
+WOFF/WOFF2 require fontTools/Brotli for independent exact-table and metadata
+comparison. External `woff2_compress` / `woff2_decompress` can provide a candidate,
+but cannot replace the required `fonts` extra. DSIG-bearing fonts are skipped.
 
 ## Compressed streams
 

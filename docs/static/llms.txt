@@ -9,23 +9,42 @@ CLI help: `filerepack <command> --help`
 
 - [Installation](https://ivbeg.github.io/filerepack/getting-started/installation) — pip extras, `filerepack doctor`, OS tools
 - [Quick start](https://ivbeg.github.io/filerepack/getting-started/quick-start)
+- [When to use](https://ivbeg.github.io/filerepack/getting-started/when-to-use)
 - [Cookbook](https://ivbeg.github.io/filerepack/getting-started/cookbook)
 - [Basic usage](https://ivbeg.github.io/filerepack/getting-started/basic-usage) — lossless vs lossy, nested walking, extras
 - [Shared CLI options](https://ivbeg.github.io/filerepack/commands/shared-options)
 - [Safety](https://ivbeg.github.io/filerepack/getting-started/safety)
 - [Troubleshooting](https://ivbeg.github.io/filerepack/getting-started/troubleshooting)
+- [Best practices](https://ivbeg.github.io/filerepack/getting-started/best-practices)
+
+## Use cases
+
+- [Office documents](https://ivbeg.github.io/filerepack/use-cases/office-documents)
+- [Archives](https://ivbeg.github.io/filerepack/use-cases/archives)
+- [Images and media](https://ivbeg.github.io/filerepack/use-cases/images-and-media)
+- [PDFs](https://ivbeg.github.io/filerepack/use-cases/pdfs)
+- [Bulk directories](https://ivbeg.github.io/filerepack/use-cases/bulk-directories)
+- [Data files](https://ivbeg.github.io/filerepack/use-cases/data-files)
 
 ## Commands
 
 - [Command index](https://ivbeg.github.io/filerepack/commands/)
 - [repack](https://ivbeg.github.io/filerepack/commands/repack)
 - [bulk](https://ivbeg.github.io/filerepack/commands/bulk)
+- [inspect](https://ivbeg.github.io/filerepack/commands/inspect) — eligibility and destinations; no encoding or savings prediction
+- [repack-store](https://ivbeg.github.io/filerepack/commands/repack-store) — complete offline local Zarr v2 stores
+- [inspect-dcp](https://ivbeg.github.io/filerepack/commands/inspect-dcp) — passive DCP directory inventory; completeness is not verified
+- [Reports and resume](https://ivbeg.github.io/filerepack/commands/reports-and-resume) — local audit files and content-verified bulk checkpoints
 - [doctor](https://ivbeg.github.io/filerepack/commands/doctor)
 - [Shared options](https://ivbeg.github.io/filerepack/commands/shared-options)
 
 ## Formats and tools
 
 - [Format support matrix](https://ivbeg.github.io/filerepack/formats/)
+- [Scientific profiles](https://ivbeg.github.io/filerepack/formats/scientific) — compatibility, experimental gates and resource limits
+- [Model weights](https://ivbeg.github.io/filerepack/formats/model-weights) — Safetensors/GGUF/ONNX/DCP inspection-only status
+- [Apple tracev3](https://ivbeg.github.io/filerepack/formats/tracev3) — archived chunk streams and active-store destination restrictions
+- [Capability registry](https://ivbeg.github.io/filerepack/formats/capabilities) — generated routing metadata; not a complete backend qualification
 - [External tools](https://ivbeg.github.io/filerepack/tools/)
 
 ## Library
@@ -35,4 +54,5 @@ CLI help: `filerepack <command> --help`
 ## Development
 
 - [Contributing](https://ivbeg.github.io/filerepack/development/contributing)
+- [Quality evidence](https://ivbeg.github.io/filerepack/development/quality-evidence) — dated checks, corpus measurements and remaining gates
 - [License](https://ivbeg.github.io/filerepack/license)

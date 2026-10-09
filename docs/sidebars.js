@@ -50,6 +50,8 @@ const sidebars = {
         'commands/repack',
         'commands/bulk',
         'commands/inspect',
+        'commands/repack-store',
+        'commands/inspect-dcp',
         'commands/reports-and-resume',
         'commands/doctor',
       ],

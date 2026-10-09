@@ -46,8 +46,12 @@ print(summary.filepath)  # effective output path
 
 A distinct `outfile` preserves source bytes for standalone and archive inputs.
 If no improved candidate is accepted, it receives an unchanged copy verified
-by byte identity. Use a source-compatible filename for this fallback. An
-accepted video/RAR conversion changes the effective extension to `.mp4`/`.7z`,
+by byte identity for ordinary supported inputs. Scientific, NIB, CAR and WARC
+profiles return the source without creating a distinct output when no candidate
+is accepted. Refused processing also creates no fallback copy. SQLite outputs
+use a consistent snapshot including committed WAL pages. Use a source-compatible
+filename for a fallback copy. An accepted video/RAR conversion changes the
+effective extension to `.mp4`/`.7z`,
 and `summary.filepath` reports that destination. Source aliases, including
 relative paths and filesystem links to the same file, are treated as an
 in-place request at the source entry. Such a request refuses a file-symlink
@@ -94,7 +98,7 @@ options = RepackOptions(
     wmv_lossless=False,
     convert_container=True,
     keep_if_larger=True,    # True discards output that is not smaller
-    keep_meta=False,        # True keeps JPEG/PNG EXIF/ICC
+    keep_meta=False,        # True also retains incidental metadata where supported
     min_savings=None,
     max_extract_bytes=None,  # None = 8GiB default; 0 disables
     max_extract_ratio=None,  # None = 100× archive size
@@ -108,6 +112,34 @@ options = RepackOptions(
 )
 summary = rp.repack("data.parquet", options=options)
 ```
+
+Profiles, selection and resource settings are also typed options:
+
+```python
+from filerepack import options_for_profile
+
+options = options_for_profile(
+    "maximum",
+    ultra=False,                       # explicit False overrides the profile
+    exclude_members=["originals/**"],
+    skip_categories=["video"],
+    max_depth=2,                       # optimization depth, root = 0
+    format_max_memory_bytes=512 * 1024 * 1024,
+    format_timeout=300.0,
+    tool_threads=1,
+)
+```
+
+`RepackOptions(profile="maximum", ultra=False)` retains the same explicit
+override. The CLI aliases `--file-timeout` and `--max-temp-bytes` correspond to
+`format_timeout` and `format_max_scratch_bytes`; they are not Python option fields.
+See [shared options](/commands/shared-options) for defaults and accounting limits.
+
+In-place SQLite needs `RepackOptions(sqlite_offline=True)` and closed users with
+no sidecars. A distinct `outfile` uses the snapshot policy; single-file backups
+of live WAL sources are refused. `video_mode="remux"` is the default;
+`video_mode="lossless"` enables lossless encoding and `video_mode="lossy"`
+requires `lossy=True`.
 
 Parquet requires `filerepack[parquet]` or `[data]` with PyArrow 19+; accepted
 candidates preserve schema, metadata and ordered values through batch verification.
@@ -142,6 +174,34 @@ extra `zopflipng` PNG candidate, and `mp3packer -z`. Cover-art walking needs
 `pip install 'filerepack[media]'`; lossless PDF image streams need
 `pip install 'filerepack[pdf]'`.
 
+## Outcomes and read-only inspection
+
+`summary.outcome` is the terminal `RepackOutcome`, with `status`, `reason_code`,
+`reason`, actual `source`/`destination`, sizes and `published`. Its `to_dict()`
+also includes the CLI-compatible `file`, `output_file` and savings fields.
+Statuses are `replaced`, `unchanged`, `skipped`, `unsupported`, `failed`,
+`predicted` and `cancelled`. Use `summary.member_outcomes` for nested events;
+staged member savings do not imply outer publication.
+
+```python
+from filerepack import inspect_file
+
+inspection = inspect_file("notes.json", outfile="out/notes.json")
+print(inspection.eligibility, inspection.blockers)
+print(inspection.to_dict()["estimates"]["candidate_savings"])  # not measured
+
+summary = rp.repack("notes.json", options=RepackOptions(dryrun=True))
+if summary.outcome is not None:
+    print(summary.outcome.to_dict())
+```
+
+`repack_store(source, output_parent, options)` returns `StoreResult` for complete
+offline local Zarr v2 stores. `inspect_distributed_checkpoint(source, options)`
+returns a passive flat-directory inventory without loading pickle metadata.
+Both are exported from `filerepack`; see [store contracts](/formats/scientific)
+and [DCP limits](/commands/inspect-dcp). CLI report/checkpoint flags belong to the
+CLI coordinator and are not `RepackOptions` fields.
+
 ## Format helpers
 
 ```python
@@ -152,12 +212,12 @@ from filerepack.codecs import pack_sqlite, pack_jxl, pack_dcm, pack_xml, pack_js
 kind = identify_filename("slides.pptx")
 print(kind.family, kind.key)          # zip, pptx
 
-result = pack_sqlite("notes.sqlite")
+result = pack_sqlite("notes.sqlite", sqlite_offline=True)  # close users first
 if result:
     print(result.insize, result.outsize, result.replaced)
 ```
 
-`pack_images(path, recursive=True)` walks a directory of standalone
+`rp.pack_images(path, recursive=True)` walks a directory of standalone
 images/videos. Format coverage: [Formats](/formats/).
 
 Existing helper imports from `filerepack.repack` and `filerepack.codecs` remain

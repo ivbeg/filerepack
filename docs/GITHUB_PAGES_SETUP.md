@@ -34,12 +34,14 @@ The published site is available at `https://ivbeg.github.io/filerepack/`.
      - Deploy to GitHub Pages
    - The workflow triggers on:
      - Pushes to `master`/`main` that affect files in `docs/`
+     - Pushes to `master`/`main` that change `.github/workflows/deploy-docs.yml`
      - Manual workflow dispatch
 
 3. **Verify deployment**:
    - After the workflow completes, the site is available at
      `https://ivbeg.github.io/filerepack/`
-   - Deployment typically takes 1–2 minutes
+   - Check both build and deployment jobs; a successful local build alone does
+     not confirm publication
 
 ## Moving to a custom domain or user site
 
@@ -55,18 +57,24 @@ projectName: 'filerepack',
 
 and configure the domain in the repository's Pages settings.
 
-## Manual deployment
+## Manual workflow deployment
 
-You can also deploy locally using the Docusaurus CLI:
+Use the same Actions workflow when deploying an existing branch manually:
 
-```bash
-cd docs
-npm install
-npm run build
-npm run deploy
-```
+1. Open **Actions → Deploy Documentation to GitHub Pages** in the repository.
+2. Select **Run workflow**, choose the intended branch and start the run.
+3. Check the `github-pages` environment for any required deployment approval.
+4. Verify the deployed site after both jobs finish.
 
-This requires a `GITHUB_TOKEN` with appropriate permissions.
+The workflow installs locked dependencies with `npm ci`, builds with Node.js 20,
+uploads `docs/build` and deploys that artifact using the workflow's Pages and
+OIDC permissions. No personal `GITHUB_TOKEN` is needed for this route.
+
+`npm run deploy` invokes Docusaurus's separate Git-branch deployment mechanism
+and pushes to `gh-pages`; it is not the artifact deployment used by this
+repository's **GitHub Actions** Pages source. See the
+[Docusaurus deployment guide](https://docusaurus.io/docs/deployment#deploying-to-github-pages)
+before intentionally adopting that alternative.
 
 ## Troubleshooting
 

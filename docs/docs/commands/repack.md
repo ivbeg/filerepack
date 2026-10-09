@@ -12,12 +12,18 @@ Rewrites one file in place (unless `--output-dir` or `--dryrun`). Archives and
 Office documents are walked with `--deep` (default). Progress is on for a TTY;
 pass `--no-progress` to hide it.
 
-`--output-dir` preserves the source and also publishes unchanged copies when
-no improvement is accepted. Existing different destinations require explicit
+`--output-dir` preserves the source and publishes unchanged copies for ordinary
+supported inputs when no improvement is accepted. Existing different destinations require explicit
 `--overwrite`; required backups are protected independently. JSON summaries
 include `output_file`, the actual destination after any accepted conversion.
+Scientific, NIB, CAR and WARC handlers create distinct outputs only for accepted
+candidates; unsupported, failed or intentionally skipped work does not create a
+fallback copy. SQLite outputs use a consistent snapshot, including committed WAL
+pages, even when compaction provides no size reduction.
 
 Shared flags: [Shared CLI options](/commands/shared-options).
+Most dry-runs measure candidates in scratch space. Scientific, NIB and CAR
+dry-runs inspect without encoding and report unchanged sizes.
 
 ## Completion status
 
@@ -54,7 +60,8 @@ filerepack repack notes.json --output-dir ./out
 filerepack repack notes.json --output-dir ./out --overwrite
 filerepack repack photo.jpg --keep-meta
 filerepack repack album.mp3
-filerepack repack data.sqlite
+filerepack repack data.sqlite --sqlite-offline  # close database users first
+filerepack repack data.sqlite --output-dir ./snapshots
 filerepack repack data.parquet --ultra
 filerepack repack scan.pdf --pdf-linearize
 filerepack repack scan.pdf --lossy

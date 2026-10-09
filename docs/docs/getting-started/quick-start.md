@@ -13,8 +13,8 @@ role and goal in the [cookbook](/getting-started/cookbook). Installation details
 ```bash
 pip install filerepack
 filerepack doctor
-filerepack repack document.docx
 filerepack repack document.docx --dryrun
+filerepack repack document.docx
 ```
 
 `repack` shows a progress bar on a TTY (`--no-progress` to hide it). Install
@@ -23,6 +23,7 @@ filerepack repack document.docx --dryrun
 ## Bulk-optimize a folder of photos
 
 ```bash
+pip install 'filerepack[validation]'
 filerepack bulk ./photos --include-ext jpg,png,webp --progress
 ```
 
@@ -41,6 +42,8 @@ filerepack repack scan.pdf --pdf-profile printer --jpeg-quality 75
 
 `--lossy` PDF uses Ghostscript `/ebook` so scanned pages actually shrink.
 `--pdf-profile prepress` restores print-quality Ghostscript.
+Install qpdf 11+ for lossless verification and Ghostscript for lossy presets;
+the Python extra alone does not install these executables.
 
 ## Walk nested files in an archive
 

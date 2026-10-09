@@ -16,7 +16,7 @@ you already know the format and want its flags directly.
 | One JPEG, with exact jpegoptim / jpegtran flags | **jpegoptim** / **jpegtran** |
 | One PNG, with oxipng / zopflipng / pngquant flags | **oxipng** / **pngquant** |
 | Lossless PDF rewrite only | **qpdf** |
-| Lossy PDF Distiller presets | **Ghostscript** (`gs`) — also available via `filerepack --lossy` |
+| Lossy PDF Distiller presets | **Ghostscript** (`gs`) — also available via `filerepack repack file.pdf --lossy` |
 | Re-encode one video | **ffmpeg** |
 | Recursively process a mixed directory of documents, photos, and archives | **filerepack bulk** |
 
