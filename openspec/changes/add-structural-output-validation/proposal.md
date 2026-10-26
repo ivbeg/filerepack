@@ -23,13 +23,13 @@ Truncated JPEG/PDF and arbitrary MP4/Arrow content pass current validators. The 
 ## Dependencies
 
 - [refactor-repack-transactions](../refactor-repack-transactions/proposal.md)
-- [fix-archive-member-preservation](../fix-archive-member-preservation/proposal.md)
-- [fix-compressed-tar-roundtrip](../fix-compressed-tar-roundtrip/proposal.md)
-- [fix-dicom-safety-validation](../fix-dicom-safety-validation/proposal.md)
+- [fix-archive-member-preservation](../archive/2026-10-26-fix-archive-member-preservation/proposal.md)
+- [fix-compressed-tar-roundtrip](../archive/2026-10-26-fix-compressed-tar-roundtrip/proposal.md)
+- [fix-dicom-safety-validation](../archive/2026-10-26-fix-dicom-safety-validation/proposal.md)
 
 ## Existing requirement baseline
 
-- nested-assets: Lossless PDF Stream Walking — openspec/changes/add-chisel-parity/specs/nested-assets/spec.md
+- nested-assets: Lossless PDF Stream Walking — openspec/changes/archive/2026-10-26-add-chisel-parity/specs/nested-assets/spec.md
 
 These complete replacement blocks use the named completed change as the reviewed baseline because canonical specs are currently absent. Reconcile that baseline through `update-quality-and-specification-gates` before archiving this change; do not copy future requirements into canonical specs prematurely.
 

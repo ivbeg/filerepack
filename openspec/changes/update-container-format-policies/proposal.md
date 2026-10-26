@@ -21,8 +21,8 @@ An ODT rewrite moved mimetype away from the first entry. Broad ZIP aliases and t
 
 ## Dependencies
 
-- [fix-archive-member-preservation](../fix-archive-member-preservation/proposal.md)
-- [fix-compressed-tar-roundtrip](../fix-compressed-tar-roundtrip/proposal.md)
+- [fix-archive-member-preservation](../archive/2026-10-26-fix-archive-member-preservation/proposal.md)
+- [fix-compressed-tar-roundtrip](../archive/2026-10-26-fix-compressed-tar-roundtrip/proposal.md)
 
 ## Validation
 

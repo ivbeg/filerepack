@@ -151,7 +151,7 @@ platform/application and peak-memory qualifications remain outside local evidenc
 `ole2-embedding-2003.ppt` fixture and two encoding-only derivatives. It is restricted
 to that fixture's exact surrounding bytes, object identities and edit/persist
 layout. It does not publish files or add runtime support. The separate proposal
-is `openspec/changes/add-ppt-ole-record-recompression`; it was approved on
+is `openspec/changes/archive/2026-10-26-add-ppt-ole-record-recompression`; it was approved on
 2026-10-04 and implemented in the separate runtime modules described below.
 Ordinary `ole` verification still requires every stream byte unchanged.
 
@@ -302,7 +302,7 @@ discovery. No runtime module, CLI, dependency or native interface changed here.
 The test allocator must remain outside runtime code. General adapters, complete
 host reference accounting, a bounded root-stream replacement interface, isolated
 encoding and an independent intended-change verifier are specified in
-`openspec/changes/add-officeart-payload-recompression/` and were subsequently approved under
+`openspec/changes/archive/2026-10-26-add-officeart-payload-recompression/` and were subsequently approved under
 `openspec/AGENTS.md`. PNG/JPEG recompression follows its own metadata/UID
 qualification; mixed-store raster bytes are copied exactly in the first stage.
 
@@ -418,7 +418,7 @@ venv/bin/python -m dev.ole.analyze_ppt_notes \
 ```
 
 See [measured evidence](qualification-ppt-notes-analysis.json) and the
-[support design](../../openspec/changes/extend-ppt-notes-picture-coverage/design.md).
+[support design](../../openspec/changes/archive/2026-10-26-extend-ppt-notes-picture-coverage/design.md).
 The subsequently approved proposal separates notes-aware host qualification from the selected
 payload operation, preserves nested Photoshop objects, supports existing image
 sharing and selects PNGs within the current 64 MiB allowance. Measured stream

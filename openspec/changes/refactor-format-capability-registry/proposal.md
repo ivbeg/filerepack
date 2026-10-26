@@ -23,7 +23,7 @@ Extension, alias, packer, tool, validator, and documentation tables are separate
 
 - [update-container-format-policies](../update-container-format-policies/proposal.md)
 - [add-structural-output-validation](../add-structural-output-validation/proposal.md)
-- [update-repack-outcomes](../update-repack-outcomes/proposal.md)
+- [update-repack-outcomes](../archive/2026-10-26-update-repack-outcomes/proposal.md)
 
 ## Validation
 

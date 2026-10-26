@@ -7,28 +7,30 @@ and required qualification are complete; approval does not claim delivery.
 
 ## Current baseline
 
-- [Container compaction](changes/add-ole-container-compaction/proposal.md) copies
+- [Container compaction](changes/archive/2026-10-26-add-ole-container-compaction/proposal.md) copies
   every live stream and logical CFB metadata item unchanged.
-- [PPT storage-wrapper recompression](changes/add-ppt-ole-record-recompression/proposal.md)
+- [PPT storage-wrapper recompression](changes/archive/2026-10-26-add-ppt-ole-record-recompression/proposal.md)
   preserves every decoded nested CFB byte.
-- [Initial OfficeArt recompression](changes/add-officeart-payload-recompression/proposal.md)
+- [Initial OfficeArt recompression](changes/archive/2026-10-26-add-officeart-payload-recompression/proposal.md)
   has an implemented, opt-in EMF/WMF slice. Raster images remain unchanged;
   populated BIFF8 workbooks and many Word picture layouts remain outside its gate.
-- Canonical openspec/specs is currently empty. The proposals below use uniquely
-  named ADDED requirements and reference the pending baseline changes. Integrate
-  the implemented baseline first; do not populate canonical specs with this plan.
+- Canonical openspec/specs was empty when this plan was written, so the proposals
+  below use uniquely named ADDED requirements. The reconciled canonical baseline
+  now holds 48 capabilities, including ole-compaction and the OLE recompression
+  capabilities, checked by `dev/check_spec_ownership.py`. Do not populate canonical
+  specs with requirements the baseline audit still records as pending.
 
 ## Delivery order and dependencies
 
 | Order | Change | Scope | Prerequisites |
 | --- | --- | --- | --- |
 | 1 | [extend-doc-xls-officeart-coverage](changes/extend-doc-xls-officeart-coverage/proposal.md) | Populated BIFF8 workbooks, Word formatting and floating/mixed picture layouts | Initial OfficeArt and strict OLE contracts |
-| 2 | [add-officeart-raster-recompression](changes/add-officeart-raster-recompression/proposal.md) | Lossless PNG IDAT and JPEG entropy optimization | Initial OfficeArt; expanded coverage for newly supported host layouts |
-| 3 | [add-ole-embedded-payload-recompression](changes/add-ole-embedded-payload-recompression/proposal.md) | Qualified DOC/XLS embedded files and CFB objects | Strict OLE and verified child packers; expanded host coverage where needed |
+| 2 | [add-officeart-raster-recompression](changes/archive/2026-10-26-add-officeart-raster-recompression/proposal.md) | Lossless PNG IDAT and JPEG entropy optimization | Initial OfficeArt; expanded coverage for newly supported host layouts |
+| 3 | [add-ole-embedded-payload-recompression](changes/archive/2026-10-26-add-ole-embedded-payload-recompression/proposal.md) | Qualified DOC/XLS embedded files and CFB objects | Strict OLE and verified child packers; expanded host coverage where needed |
 | 4 | [add-officeart-image-deduplication](changes/add-officeart-image-deduplication/proposal.md) | Byte-identical BLIPs in fully resolved shared picture stores | Expanded host/reference coverage |
 | 5 | [extend-ole-host-format-support](changes/extend-ole-host-format-support/proposal.md) | Strict compaction profiles for MSG, VSD, PUB, MPP, MSI and HWP 5 | Strict OLE verifier and native writer |
-| 6 | [add-hwp-stream-recompression](changes/add-hwp-stream-recompression/proposal.md) | Exact decoded-byte recompression of qualified HWP 5 streams | HWP host profile from order 5 |
-| 7 | [add-ole-maximum-compression-effort](changes/add-ole-maximum-compression-effort/proposal.md) | Bounded stronger Zopfli trials through existing ultra selection | Initial OfficeArt; raster codec only if delivered |
+| 6 | [add-hwp-stream-recompression](changes/archive/2026-10-26-add-hwp-stream-recompression/proposal.md) | Exact decoded-byte recompression of qualified HWP 5 streams | HWP host profile from order 5 |
+| 7 | [add-ole-maximum-compression-effort](changes/archive/2026-10-26-add-ole-maximum-compression-effort/proposal.md) | Bounded stronger Zopfli trials through existing ultra selection | Initial OfficeArt; raster codec only if delivered |
 
 Coverage and the initial PNG/JPEG codecs can be developed independently after
 approval; release claims for their combination require the same end-to-end
@@ -81,7 +83,11 @@ All seven runtime directions have bounded implementations. See
 Original/compaction/selected sizes, worker usage and 31 passive LibreOffice
 comparisons are recorded separately from synthetic controls. Individual tasks
 track verified implementation and remaining original-corpus qualification.
-No proposals are archived or claimed deployed; Office/Hancom and remote native
+Release 0.4.0 (2026-10-09) deployed the completed proposals, which were archived
+on 2026-10-26 without replacing verified canonical wording.
+extend-doc-xls-officeart-coverage and add-officeart-image-deduplication keep open
+tasks. extend-ole-host-format-support stays active until its pending
+`ole-host-profiles` requirements are reconciled. Office/Hancom and remote native
 platform limitations are explicit.
 
 The [1,055-file original coverage census](../dev/ole/CORPUS.md) pins each source

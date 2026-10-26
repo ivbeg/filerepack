@@ -21,7 +21,7 @@ Candidates are created in system temp storage, inode replacement changes permiss
 
 ## Dependencies
 
-- [fix-output-destination-safety](../fix-output-destination-safety/proposal.md)
+- [fix-output-destination-safety](../archive/2026-10-26-fix-output-destination-safety/proposal.md)
 
 ## Validation
 
