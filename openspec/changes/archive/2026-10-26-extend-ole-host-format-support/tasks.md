@@ -25,8 +25,8 @@
 ## Implementation evidence (2026-10-05)
 
 Bounded runtime profiles and local preservation/application measurements:
-[portfolio report](../../../dev/ole/PORTFOLIO.md),
-[public API JSON](../../../dev/ole/qualification-portfolio.json).
+[portfolio report](../../../../dev/ole/PORTFOLIO.md),
+[public API JSON](../../../../dev/ole/qualification-portfolio.json).
 Controls are labelled separately from originals. Office/Hancom and remote native
 platform execution are unavailable and are not reported as passed.
 Original-corpus expansion items remain unchecked; final source/artifact/static/docs

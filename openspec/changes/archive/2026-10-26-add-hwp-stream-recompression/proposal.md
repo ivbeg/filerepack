@@ -24,7 +24,7 @@ so it requires its own discovery, framing and verification contract.
 - Affected code: HWP host/stream codecs, isolated operation/verifier, native
   replacement, ole_recompress dispatch and docs/fixtures/extras.
 - Priority: P2; prerequisite: the HWP profile in
-  [additional host support](../../extend-ole-host-format-support/proposal.md).
+  [additional host support](../2026-10-26-extend-ole-host-format-support/proposal.md).
 - stdlib zlib provides the baseline; stronger Zopfli remains qualified/optional.
 - HWP 3/HWPX, changing compression flags, script rewriting, record reserialization,
   binary image conversion, encrypted/signed/distribution and unqualified

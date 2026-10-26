@@ -204,6 +204,71 @@ def test_new_host_impostors_are_rejected(tmp_path, extension):
     assert not inspect_ole(str(path)).eligible
 
 
+@pytest.mark.parametrize(
+    "message_class",
+    ("IPM.Note.SMIME", "IPM.Note.SMIME.MultipartSigned", "IPM.Note.rpmsg", "IPM.Appointment"),
+)
+def test_protected_and_unqualified_msg_classes_are_rejected(tmp_path, message_class):
+    original = read_compound(str(EXTENDED / "attachment_test_msg.msg"))
+    streams = {**original.streams, ("__substg1.0_001A001F",): message_class.encode("utf-16le")}
+    path = tmp_path / "message.msg"
+    path.write_bytes(container(original, streams))
+    inspection = inspect_ole(str(path))
+    assert not inspection.eligible and "MSG message class" in inspection.reason
+
+
+def msi_encode(name):
+    """Encode a table name with the MSI stream-name alphabet."""
+    alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz._"
+    pairs = [
+        chr(0x3800 + alphabet.index(name[i]) + (alphabet.index(name[i + 1]) << 6))
+        for i in range(0, len(name) - 1, 2)
+    ]
+    tail = [chr(0x4800 + alphabet.index(name[-1]))] if len(name) % 2 else []
+    return "䡀" + "".join(pairs + tail)
+
+
+@pytest.mark.parametrize(
+    "name,reason",
+    (
+        ("\x05DigitalSignature", "Signed/encrypted"),
+        (msi_encode("MsiDigitalSignatureEx"), "signed MSI"),
+        (msi_encode("MsiDigitalCertificate"), "signed MSI"),
+        ("\x01_Tables", "encoded-name aliases"),
+    ),
+)
+def test_signed_or_aliased_msi_databases_are_rejected(tmp_path, name, reason):
+    original = read_compound(str(EXTENDED / "SimpleComponent.msi"))
+    path = tmp_path / "package.msi"
+    path.write_bytes(container(original, {**original.streams, (name,): bytes(16)}))
+    inspection = inspect_ole(str(path))
+    assert not inspection.eligible and reason in inspection.reason
+
+
+@pytest.mark.parametrize("name", HOSTS)
+def test_new_hosts_dryrun_output_and_archive_member(tmp_path, native_writer, name):
+    original = read_compound(str(EXTENDED / name))
+    data = container(original, original.streams, free_sectors=80)
+    source, output = tmp_path / name, tmp_path / ("out-" + name)
+    source.write_bytes(data)
+    expected = ole_fingerprint(str(source))
+    result = FileRepacker().repack(str(source), options=RepackOptions(dryrun=True))
+    assert source.read_bytes() == data and not result.results[0].replaced
+    FileRepacker().repack(str(source), outfile=str(output))
+    assert source.read_bytes() == data and len(output.read_bytes()) < len(data)
+    assert ole_fingerprint(str(output)) == expected
+    archive = tmp_path / "parent.zip"
+    with zipfile.ZipFile(archive, "w") as parent:
+        parent.writestr(name, data)
+        parent.writestr("opaque.bin", b"unchanged")
+    FileRepacker().repack(str(archive))
+    member = tmp_path / ("member-" + name)
+    with zipfile.ZipFile(archive) as parent:
+        member.write_bytes(parent.read(name))
+        assert parent.read("opaque.bin") == b"unchanged"
+    assert len(member.read_bytes()) < len(data) and ole_fingerprint(str(member)) == expected
+
+
 def weak_hwp():
     source = read_compound(str(EXTENDED / "sample-5017-pics.hwp"))
     layout = inspect_hwp(source, budget())
