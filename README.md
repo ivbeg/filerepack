@@ -7,7 +7,7 @@ and rejected candidates leave the source unchanged.
 
 Python 3.9+ · macOS, Linux, Windows.
 
-Current release: **[0.4.0](CHANGELOG.md#040---2026-10-09)**. Support is limited to
+Current release: **[0.4.1](CHANGELOG.md#041---2026-10-26)**. Support is limited to
 the qualified profiles below; experimental formats and inspection-only model
 formats are marked explicitly.
 
