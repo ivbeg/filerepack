@@ -95,4 +95,4 @@ Rollback removes only the new qualification entries.
 - [MS-DOC character properties](https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-doc/7022285b-9621-42e9-ad4d-4e02c115ef18)
 - [MS-DOC UpxChpx restrictions](https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-doc/0188ecda-b590-4cb4-bb95-e76a47a9a2e2)
 - [MS-DOC direct character/piece formatting](https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-doc/be58bf9c-d1d3-40cc-91ee-36452d7939b2)
-- [Existing primary-source host analysis](../add-officeart-payload-recompression/design.md)
+- [Existing primary-source host analysis](../archive/2026-10-26-add-officeart-payload-recompression/design.md)

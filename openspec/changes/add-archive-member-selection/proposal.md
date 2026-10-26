@@ -20,12 +20,12 @@ Deep walking currently offers broad controls that make it difficult to avoid exp
 
 ## Dependencies
 
-- [fix-archive-member-preservation](../fix-archive-member-preservation/proposal.md)
-- [fix-compressed-tar-roundtrip](../fix-compressed-tar-roundtrip/proposal.md)
+- [fix-archive-member-preservation](../archive/2026-10-26-fix-archive-member-preservation/proposal.md)
+- [fix-compressed-tar-roundtrip](../archive/2026-10-26-fix-compressed-tar-roundtrip/proposal.md)
 - [update-container-format-policies](../update-container-format-policies/proposal.md)
 - [add-operation-resource-budgets](../add-operation-resource-budgets/proposal.md)
-- [update-media-preservation-policy](../update-media-preservation-policy/proposal.md)
-- [update-repack-outcomes](../update-repack-outcomes/proposal.md)
+- [update-media-preservation-policy](../archive/2026-10-26-update-media-preservation-policy/proposal.md)
+- [update-repack-outcomes](../archive/2026-10-26-update-repack-outcomes/proposal.md)
 
 ## Validation
 

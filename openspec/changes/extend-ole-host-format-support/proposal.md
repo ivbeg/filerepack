@@ -24,7 +24,7 @@ compatibility or preservation.
   original Office profile definitions.
 - Affected code: host inspection adapters, extension/format dispatch, native
   capability negotiation, verification, tool hints and documentation/fixtures.
-- Priority: P2. Prerequisite: [strict compaction](../add-ole-container-compaction/proposal.md).
+- Priority: P2. Prerequisite: [strict compaction](../archive/2026-10-26-add-ole-container-compaction/proposal.md).
 - CFB v4, OFT/VSS/VST/MPT templates, MSP/MST/MSM installer variants, Works/CAD,
   HWPX and host payload rewriting are outside this proposal.
 - Status: approved by the user on 2026-10-04: “Реализуй все предложения”.

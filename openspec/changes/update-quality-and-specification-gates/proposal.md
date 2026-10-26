@@ -21,7 +21,7 @@ CI covers Ubuntu/core dependencies and tests can pass without doing integration 
 
 ## Dependencies
 
-- [fix-distribution-test-support](../fix-distribution-test-support/proposal.md)
+- [fix-distribution-test-support](../archive/2026-10-26-fix-distribution-test-support/proposal.md)
 
 ## Validation
 

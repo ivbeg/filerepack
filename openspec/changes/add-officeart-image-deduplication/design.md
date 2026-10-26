@@ -58,4 +58,4 @@ for skipped stores; do not estimate savings from image counts alone.
 
 - [OfficeArt BLIP reference families](https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-odraw/c67b883b-8136-4e91-a1a3-2981d16e934f)
 - [OfficeArt FBSE fields](https://learn.microsoft.com/en-us/openspecs/office_file_formats/ms-odraw/2f2d7f5e-d5c4-4cb7-b230-59b3fe8f10d6)
-- [Qualified host and placement analysis](../add-officeart-payload-recompression/design.md)
+- [Qualified host and placement analysis](../archive/2026-10-26-add-officeart-payload-recompression/design.md)

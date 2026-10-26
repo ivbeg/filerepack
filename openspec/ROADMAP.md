@@ -6,22 +6,40 @@ This roadmap converts the review into **22 changes**, **27 capability delta file
 
 ## Status and specification baseline
 
-**Current reconciliation (updated 2026-10-08):** the implemented runtime now includes
+**Current reconciliation (updated 2026-10-26):** the implemented runtime now includes
 typed outcomes, bounded bulk coordination, inspection, audit/report evidence,
 content-verified resume, named profiles, member selection, recursive Flate PDF
 walking, preserving web fonts, CAR and tracev3. The current canonical baseline
-is populated with 180 reviewed requirements in 48 capabilities; the
-[baseline audit](baseline-audit.json) covers 281 historical/active source blocks.
+is populated with 189 reviewed requirements in 48 capabilities; the
+[baseline audit](baseline-audit.json) covers 290 historical/active source blocks.
 Live requirement ownership is unique and tested by `dev/check_spec_ownership.py`.
 [Current completion evidence](../dev/quality/completion-2026-10-07.md) and the
 change-level checklists supersede the dated implementation summaries below.
-External reader/corpus, full resource, remote platform and deployment gates
-remain separate. No change has been archived.
+External reader/corpus, full resource and remote platform gates remain separate.
+
+**Deployment and archival (2026-10-26):** release 0.4.0 is published on PyPI and
+as GitHub Release `v0.4.0` (2026-10-09), which confirms deployment of the work in
+that tag. The 38 changes with fully checked task lists whose requirement deltas
+the baseline audit records as verified canonical requirements were archived under
+`changes/archive/2026-10-26-<change-id>/` with `--skip-specs`, so verified canonical
+wording was not replaced. They include 13 changes from this roadmap:
+fix-archive-member-preservation, fix-compressed-tar-roundtrip,
+fix-markup-preservation, fix-output-destination-safety,
+fix-dicom-safety-validation, fix-distribution-test-support,
+update-repack-outcomes, update-bulk-execution-lifecycle,
+update-media-preservation-policy, add-inspection-command, add-audit-reports,
+add-resumable-bulk and extend-lossless-pdf-stream-walking. The other 9 roadmap
+changes keep open tasks and remain active, as do the other changes with open
+corpus, native reader or platform qualification tasks.
+[extend-ole-host-format-support](changes/extend-ole-host-format-support/proposal.md)
+has a complete checklist but also remains active: the audit records its four
+ADDED `ole-host-profiles` requirements as pending and they are not in the canonical
+baseline, so archiving it first needs that reconciliation.
 
 The following dated paragraphs preserve the earlier delivery history.
 
 
-The user authorized implementation on 2026-10-02. Six changes are implemented and verified locally: [fix-archive-member-preservation](changes/fix-archive-member-preservation/proposal.md), [fix-compressed-tar-roundtrip](changes/fix-compressed-tar-roundtrip/proposal.md), [fix-markup-preservation](changes/fix-markup-preservation/proposal.md), [fix-output-destination-safety](changes/fix-output-destination-safety/proposal.md), [fix-dicom-safety-validation](changes/fix-dicom-safety-validation/proposal.md) and [fix-distribution-test-support](changes/fix-distribution-test-support/proposal.md). Their implementation/verification tasks are checked, while integration and deployment remain open. Early A6 is partially implemented through [update-data-format-preservation](changes/update-data-format-preservation/proposal.md) (Parquet) and [update-container-format-policies](changes/update-container-format-policies/proposal.md) (ODF/EPUB). These broader changes retain open tasks for other data writers, SQLite, resource policies, container audits and capability/application evidence. The local implementation of [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md) is complete: shared staging/acceptance/publication and subprocess interfaces, source/metadata/link/durability policies, family relocation, compatibility exports and core/worker typing are in use. The overall change remains partial pending Linux/Windows, actual second-filesystem evidence and rollout. The remaining execution and capability proposals retain open implementation checklists. No deployment or archival is asserted.
+The user authorized implementation on 2026-10-02. Six changes are implemented and verified locally: [fix-archive-member-preservation](changes/archive/2026-10-26-fix-archive-member-preservation/proposal.md), [fix-compressed-tar-roundtrip](changes/archive/2026-10-26-fix-compressed-tar-roundtrip/proposal.md), [fix-markup-preservation](changes/archive/2026-10-26-fix-markup-preservation/proposal.md), [fix-output-destination-safety](changes/archive/2026-10-26-fix-output-destination-safety/proposal.md), [fix-dicom-safety-validation](changes/archive/2026-10-26-fix-dicom-safety-validation/proposal.md) and [fix-distribution-test-support](changes/archive/2026-10-26-fix-distribution-test-support/proposal.md). Their implementation/verification tasks are checked, while integration and deployment remain open. Early A6 is partially implemented through [update-data-format-preservation](changes/update-data-format-preservation/proposal.md) (Parquet) and [update-container-format-policies](changes/update-container-format-policies/proposal.md) (ODF/EPUB). These broader changes retain open tasks for other data writers, SQLite, resource policies, container audits and capability/application evidence. The local implementation of [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md) is complete: shared staging/acceptance/publication and subprocess interfaces, source/metadata/link/durability policies, family relocation, compatibility exports and core/worker typing are in use. The overall change remains partial pending Linux/Windows, actual second-filesystem evidence and rollout. The remaining execution and capability proposals retain open implementation checklists. No deployment or archival is asserted.
 
 Local checks on 2026-10-03: **857 tests passed, 3 skipped** with DICOM dependencies, including **63 new archive preservation cases**, **76 new markup preservation cases**, **116 new output-safety cases**, **66 new DICOM safety cases**, **29 new Parquet cases**, **62 new ODF/EPUB package cases**, **49 transaction cases** (47 passed, 2 second-filesystem skips on macOS) and **92 family/compatibility/scratch cases** (all passed). Without DICOM dependencies, **821 passed, 39 skipped**. Ruff and mypy passed; all **26** present changes passed strict OpenSpec validation; the Docusaurus documentation and wheel builds succeeded. All **91 A6 cases** passed with the minimum PyArrow 19.0.1; primary full checks used PyArrow 21. Installed-wheel smoke checks verified Parquet/ODF/EPUB preservation, distinct output, dry-run and a real Parquet CLI rewrite on PyArrow 19; the wheel contains the new modules and dependency metadata. Prior wheel checks also established collision refusal and real DICOM encoder/decoded-pixel verification. Full checks ran on macOS/Python 3.9 with pydicom 2.4.4; a separate Python 3.11/pydicom 3.0.2 environment previously passed all **93 DICOM tests**. Broader platform/extra coverage remains C2 work. Package tests use standards-shaped fixtures and do not establish complete ODF/EPUB conformance or application rendering. Parquet reads bounded row batches one source group at a time, but large groups/backend buffers still need the remaining operation resource policy. Video/RAR destination tests use controlled codec fixtures and do not establish real codec fidelity. DICOM tests use real GDCM/DCMTK encoders on synthetic images; clinical IOD, cryptographic signature and color-image guarantees remain unestablished.
 
@@ -33,16 +51,16 @@ The final B1/C5 artifact snapshot passed fresh installations on Python **3.9 and
 
 B2 local slice on **2026-10-04** is implemented through [add-structural-output-validation](changes/add-structural-output-validation/proposal.md): every publishable encoder declares a structural validator; unknown/missing validation and malformed output fail closed. Decoded streams, supported raster frames and Arrow/Feather/ORC logical content are compared. Whole-file PDF protection gates qpdf/pikepdf/Ghostscript and AI wrappers; original/walked/qpdf alternatives are retained through selection, and `--pdf-linearize` is explicit across CLI/library/bulk/workers. Complete remaining data/media/image metadata and fidelity contracts remain open, so B2 is **partial**. [Evidence and limits](changes/add-structural-output-validation/evidence.md) record **1217 checkout tests passed, 44 skipped**, **106 structural cases**, **109 PDF cases**, successful Ruff/mypy (**79 files**), documentation and **26** strict OpenSpec checks. Final fresh artifact installations on Python **3.9 and 3.13** each passed **344 wheel tests, 3 skips** and **1144 sdist tests, 89 skips**, with no checkout-runtime fallback. Optional skips and local macOS results do not establish wider format/platform/deployment guarantees.
 
-Before the 2026-10-07 reconciliation, `openspec list --specs` reported no canonical specifications. The completed active changes [add-chisel-parity](changes/add-chisel-parity/proposal.md), [add-dicom-support](changes/add-dicom-support/proposal.md), and [improve-lossy-pdf-compression](changes/improve-lossy-pdf-compression/proposal.md), together with historical archives, remain intact. Their completed checklists alone do not prove every promised behavior exists in code.
+Before the 2026-10-07 reconciliation, `openspec list --specs` reported no canonical specifications. The completed active changes [add-chisel-parity](changes/archive/2026-10-26-add-chisel-parity/proposal.md), [add-dicom-support](changes/archive/2026-10-26-add-dicom-support/proposal.md), and [improve-lossy-pdf-compression](changes/archive/2026-10-26-improve-lossy-pdf-compression/proposal.md), together with historical archives, remain intact. Their completed checklists alone do not prove every promised behavior exists in code.
 
 Six MODIFIED requirement blocks use named requirements from those completed active changes as their reviewed historical baseline:
 
 | New change | Capability | Replaced requirement |
 | --- | --- | --- |
-| [fix-markup-preservation](changes/fix-markup-preservation/proposal.md) | `xml-json` | JSON Identification and Minification; XML Identification and Minification |
-| [fix-dicom-safety-validation](changes/fix-dicom-safety-validation/proposal.md) | `dicom` | Unsafe DICOM Instances Are Skipped; DICOM Output Verification |
+| [fix-markup-preservation](changes/archive/2026-10-26-fix-markup-preservation/proposal.md) | `xml-json` | JSON Identification and Minification; XML Identification and Minification |
+| [fix-dicom-safety-validation](changes/archive/2026-10-26-fix-dicom-safety-validation/proposal.md) | `dicom` | Unsafe DICOM Instances Are Skipped; DICOM Output Verification |
 | [add-structural-output-validation](changes/add-structural-output-validation/proposal.md) | `nested-assets` | Lossless PDF Stream Walking |
-| [update-media-preservation-policy](changes/update-media-preservation-policy/proposal.md) | `encoder-quality` | Keep Metadata Flag |
+| [update-media-preservation-policy](changes/archive/2026-10-26-update-media-preservation-policy/proposal.md) | `encoder-quality` | Keep Metadata Flag |
 
 Audit actual implementation and deployment status through the C6 portion of [update-quality-and-specification-gates](changes/update-quality-and-specification-gates/proposal.md) before integrating or archiving these deltas. Establish only the implemented current baseline; record broader reader, resource and platform gaps explicitly. The PDF Flate branch is implemented in the current working tree. Reconcile each MODIFIED block against that baseline, and confirm that ADDED requirement names are still new when integration occurs. Canonical `openspec/specs/` must not be populated with unimplemented roadmap requirements.
 
@@ -54,28 +72,28 @@ Priority comes from the reviewed risk/value; dependencies determine implementati
 
 | Change | Scope | Priority | Plan slices | Prerequisite changes |
 | --- | --- | --- | --- | --- |
-| [fix-archive-member-preservation](changes/fix-archive-member-preservation/proposal.md) | Preserve complete archive member sets | P0 | A1 | None |
-| [fix-compressed-tar-roundtrip](changes/fix-compressed-tar-roundtrip/proposal.md) | Rebuild compressed tar archives with exactly one tar payload | P0 | A2 | None |
-| [fix-markup-preservation](changes/fix-markup-preservation/proposal.md) | Preserve XML text and JSON lexical values during minification | P0 | A3 | None |
-| [fix-output-destination-safety](changes/fix-output-destination-safety/proposal.md) | Protect destinations and honor standalone library output paths | P0 | A4 | None |
-| [fix-dicom-safety-validation](changes/fix-dicom-safety-validation/proposal.md) | Inspect complete DICOM datasets and verify lossless output | P0 | A5 | None |
+| [fix-archive-member-preservation](changes/archive/2026-10-26-fix-archive-member-preservation/proposal.md) | Preserve complete archive member sets | P0 | A1 | None |
+| [fix-compressed-tar-roundtrip](changes/archive/2026-10-26-fix-compressed-tar-roundtrip/proposal.md) | Rebuild compressed tar archives with exactly one tar payload | P0 | A2 | None |
+| [fix-markup-preservation](changes/archive/2026-10-26-fix-markup-preservation/proposal.md) | Preserve XML text and JSON lexical values during minification | P0 | A3 | None |
+| [fix-output-destination-safety](changes/archive/2026-10-26-fix-output-destination-safety/proposal.md) | Protect destinations and honor standalone library output paths | P0 | A4 | None |
+| [fix-dicom-safety-validation](changes/archive/2026-10-26-fix-dicom-safety-validation/proposal.md) | Inspect complete DICOM datasets and verify lossless output | P0 | A5 | None |
 | [update-data-format-preservation](changes/update-data-format-preservation/proposal.md) | Preserve data-file schema, metadata, framing, and SQLite snapshots | P0 | A6, C4 | None |
-| [update-container-format-policies](changes/update-container-format-policies/proposal.md) | Preserve specialized package structure and protected container integrity | P1 | A6, B2, C1 | [fix-archive-member-preservation](changes/fix-archive-member-preservation/proposal.md), [fix-compressed-tar-roundtrip](changes/fix-compressed-tar-roundtrip/proposal.md) |
-| [fix-distribution-test-support](changes/fix-distribution-test-support/proposal.md) | Include complete test support in source distributions | P1 | A7 | None |
-| [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md) | Centralize typed candidate transactions and destination-local publication | P1 | B1, C5 | [fix-output-destination-safety](changes/fix-output-destination-safety/proposal.md) |
-| [add-structural-output-validation](changes/add-structural-output-validation/proposal.md) | Require structural validators and protect PDFs before every rewrite path | P1 | B2 | [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md), [fix-archive-member-preservation](changes/fix-archive-member-preservation/proposal.md), [fix-compressed-tar-roundtrip](changes/fix-compressed-tar-roundtrip/proposal.md), [fix-dicom-safety-validation](changes/fix-dicom-safety-validation/proposal.md) |
-| [update-repack-outcomes](changes/update-repack-outcomes/proposal.md) | Expose typed outcomes and clean machine-readable CLI output | P1 | B3, C5 | None |
-| [update-bulk-execution-lifecycle](changes/update-bulk-execution-lifecycle/proposal.md) | Bound bulk scheduling and account for cancellation and conflicts | P1 | B4 | [fix-output-destination-safety](changes/fix-output-destination-safety/proposal.md), [update-repack-outcomes](changes/update-repack-outcomes/proposal.md) |
-| [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md) | Enforce cumulative decode, nesting, scratch, and process budgets | P1 | B5 | [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md), [update-repack-outcomes](changes/update-repack-outcomes/proposal.md), [update-bulk-execution-lifecycle](changes/update-bulk-execution-lifecycle/proposal.md) |
-| [update-media-preservation-policy](changes/update-media-preservation-policy/proposal.md) | Make media fidelity explicit and preserve all supported streams and frames | P1 | B6 | [add-structural-output-validation](changes/add-structural-output-validation/proposal.md), [update-repack-outcomes](changes/update-repack-outcomes/proposal.md) |
-| [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md) | Unify format metadata and validate tool and extra capabilities | P2 | C1, C5 | [update-container-format-policies](changes/update-container-format-policies/proposal.md), [add-structural-output-validation](changes/add-structural-output-validation/proposal.md), [update-repack-outcomes](changes/update-repack-outcomes/proposal.md) |
-| [update-quality-and-specification-gates](changes/update-quality-and-specification-gates/proposal.md) | Verify preservation, platforms, extras, and the canonical specification baseline | P2 | C2, C3, C6 | [fix-distribution-test-support](changes/fix-distribution-test-support/proposal.md) |
-| [add-inspection-command](changes/add-inspection-command/proposal.md) | Add bounded read-only file inspection and operation planning | P1 | D — inspection | [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md), [update-repack-outcomes](changes/update-repack-outcomes/proposal.md), [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md) |
-| [add-audit-reports](changes/add-audit-reports/proposal.md) | Add persistent versioned audit reports for every processing outcome | P2 | D — audit | [update-repack-outcomes](changes/update-repack-outcomes/proposal.md), [update-bulk-execution-lifecycle](changes/update-bulk-execution-lifecycle/proposal.md), [fix-output-destination-safety](changes/fix-output-destination-safety/proposal.md) |
-| [add-resumable-bulk](changes/add-resumable-bulk/proposal.md) | Add safe checkpoint manifests and resumable bulk processing | P2 | D — resume | [add-audit-reports](changes/add-audit-reports/proposal.md), [update-bulk-execution-lifecycle](changes/update-bulk-execution-lifecycle/proposal.md), [fix-output-destination-safety](changes/fix-output-destination-safety/proposal.md) |
-| [add-optimization-profiles](changes/add-optimization-profiles/proposal.md) | Add versioned optimization profiles and predictable execution budgets | P2 | D — profiles | [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md), [update-media-preservation-policy](changes/update-media-preservation-policy/proposal.md), [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md), [update-repack-outcomes](changes/update-repack-outcomes/proposal.md), [update-quality-and-specification-gates](changes/update-quality-and-specification-gates/proposal.md) |
-| [add-archive-member-selection](changes/add-archive-member-selection/proposal.md) | Add archive-member exclusions, optimization depth and category selection | P2 | D — member selection | [fix-archive-member-preservation](changes/fix-archive-member-preservation/proposal.md), [fix-compressed-tar-roundtrip](changes/fix-compressed-tar-roundtrip/proposal.md), [update-container-format-policies](changes/update-container-format-policies/proposal.md), [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md), [update-media-preservation-policy](changes/update-media-preservation-policy/proposal.md), [update-repack-outcomes](changes/update-repack-outcomes/proposal.md) |
-| [extend-lossless-pdf-stream-walking](changes/extend-lossless-pdf-stream-walking/proposal.md) | Complete lossless PDF Flate-image handling and traverse nested form resources | P3 | D — PDF stream expansion | [add-structural-output-validation](changes/add-structural-output-validation/proposal.md), [update-media-preservation-policy](changes/update-media-preservation-policy/proposal.md), [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md), [update-repack-outcomes](changes/update-repack-outcomes/proposal.md) |
+| [update-container-format-policies](changes/update-container-format-policies/proposal.md) | Preserve specialized package structure and protected container integrity | P1 | A6, B2, C1 | [fix-archive-member-preservation](changes/archive/2026-10-26-fix-archive-member-preservation/proposal.md), [fix-compressed-tar-roundtrip](changes/archive/2026-10-26-fix-compressed-tar-roundtrip/proposal.md) |
+| [fix-distribution-test-support](changes/archive/2026-10-26-fix-distribution-test-support/proposal.md) | Include complete test support in source distributions | P1 | A7 | None |
+| [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md) | Centralize typed candidate transactions and destination-local publication | P1 | B1, C5 | [fix-output-destination-safety](changes/archive/2026-10-26-fix-output-destination-safety/proposal.md) |
+| [add-structural-output-validation](changes/add-structural-output-validation/proposal.md) | Require structural validators and protect PDFs before every rewrite path | P1 | B2 | [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md), [fix-archive-member-preservation](changes/archive/2026-10-26-fix-archive-member-preservation/proposal.md), [fix-compressed-tar-roundtrip](changes/archive/2026-10-26-fix-compressed-tar-roundtrip/proposal.md), [fix-dicom-safety-validation](changes/archive/2026-10-26-fix-dicom-safety-validation/proposal.md) |
+| [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md) | Expose typed outcomes and clean machine-readable CLI output | P1 | B3, C5 | None |
+| [update-bulk-execution-lifecycle](changes/archive/2026-10-26-update-bulk-execution-lifecycle/proposal.md) | Bound bulk scheduling and account for cancellation and conflicts | P1 | B4 | [fix-output-destination-safety](changes/archive/2026-10-26-fix-output-destination-safety/proposal.md), [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md) |
+| [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md) | Enforce cumulative decode, nesting, scratch, and process budgets | P1 | B5 | [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md), [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md), [update-bulk-execution-lifecycle](changes/archive/2026-10-26-update-bulk-execution-lifecycle/proposal.md) |
+| [update-media-preservation-policy](changes/archive/2026-10-26-update-media-preservation-policy/proposal.md) | Make media fidelity explicit and preserve all supported streams and frames | P1 | B6 | [add-structural-output-validation](changes/add-structural-output-validation/proposal.md), [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md) |
+| [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md) | Unify format metadata and validate tool and extra capabilities | P2 | C1, C5 | [update-container-format-policies](changes/update-container-format-policies/proposal.md), [add-structural-output-validation](changes/add-structural-output-validation/proposal.md), [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md) |
+| [update-quality-and-specification-gates](changes/update-quality-and-specification-gates/proposal.md) | Verify preservation, platforms, extras, and the canonical specification baseline | P2 | C2, C3, C6 | [fix-distribution-test-support](changes/archive/2026-10-26-fix-distribution-test-support/proposal.md) |
+| [add-inspection-command](changes/archive/2026-10-26-add-inspection-command/proposal.md) | Add bounded read-only file inspection and operation planning | P1 | D — inspection | [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md), [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md), [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md) |
+| [add-audit-reports](changes/archive/2026-10-26-add-audit-reports/proposal.md) | Add persistent versioned audit reports for every processing outcome | P2 | D — audit | [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md), [update-bulk-execution-lifecycle](changes/archive/2026-10-26-update-bulk-execution-lifecycle/proposal.md), [fix-output-destination-safety](changes/archive/2026-10-26-fix-output-destination-safety/proposal.md) |
+| [add-resumable-bulk](changes/archive/2026-10-26-add-resumable-bulk/proposal.md) | Add safe checkpoint manifests and resumable bulk processing | P2 | D — resume | [add-audit-reports](changes/archive/2026-10-26-add-audit-reports/proposal.md), [update-bulk-execution-lifecycle](changes/archive/2026-10-26-update-bulk-execution-lifecycle/proposal.md), [fix-output-destination-safety](changes/archive/2026-10-26-fix-output-destination-safety/proposal.md) |
+| [add-optimization-profiles](changes/add-optimization-profiles/proposal.md) | Add versioned optimization profiles and predictable execution budgets | P2 | D — profiles | [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md), [update-media-preservation-policy](changes/archive/2026-10-26-update-media-preservation-policy/proposal.md), [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md), [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md), [update-quality-and-specification-gates](changes/update-quality-and-specification-gates/proposal.md) |
+| [add-archive-member-selection](changes/add-archive-member-selection/proposal.md) | Add archive-member exclusions, optimization depth and category selection | P2 | D — member selection | [fix-archive-member-preservation](changes/archive/2026-10-26-fix-archive-member-preservation/proposal.md), [fix-compressed-tar-roundtrip](changes/archive/2026-10-26-fix-compressed-tar-roundtrip/proposal.md), [update-container-format-policies](changes/update-container-format-policies/proposal.md), [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md), [update-media-preservation-policy](changes/archive/2026-10-26-update-media-preservation-policy/proposal.md), [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md) |
+| [extend-lossless-pdf-stream-walking](changes/archive/2026-10-26-extend-lossless-pdf-stream-walking/proposal.md) | Complete lossless PDF Flate-image handling and traverse nested form resources | P3 | D — PDF stream expansion | [add-structural-output-validation](changes/add-structural-output-validation/proposal.md), [update-media-preservation-policy](changes/archive/2026-10-26-update-media-preservation-policy/proposal.md), [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md), [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md) |
 
 ## Delivery order and gates
 
@@ -86,28 +104,28 @@ Priority comes from the reviewed risk/value; dependencies determine implementati
 
 A valid dependency order for individual proposals is:
 
-1. [fix-archive-member-preservation](changes/fix-archive-member-preservation/proposal.md)
-2. [fix-compressed-tar-roundtrip](changes/fix-compressed-tar-roundtrip/proposal.md)
-3. [fix-markup-preservation](changes/fix-markup-preservation/proposal.md)
-4. [fix-output-destination-safety](changes/fix-output-destination-safety/proposal.md)
-5. [fix-dicom-safety-validation](changes/fix-dicom-safety-validation/proposal.md)
+1. [fix-archive-member-preservation](changes/archive/2026-10-26-fix-archive-member-preservation/proposal.md)
+2. [fix-compressed-tar-roundtrip](changes/archive/2026-10-26-fix-compressed-tar-roundtrip/proposal.md)
+3. [fix-markup-preservation](changes/archive/2026-10-26-fix-markup-preservation/proposal.md)
+4. [fix-output-destination-safety](changes/archive/2026-10-26-fix-output-destination-safety/proposal.md)
+5. [fix-dicom-safety-validation](changes/archive/2026-10-26-fix-dicom-safety-validation/proposal.md)
 6. [update-data-format-preservation](changes/update-data-format-preservation/proposal.md)
 7. [update-container-format-policies](changes/update-container-format-policies/proposal.md)
-8. [fix-distribution-test-support](changes/fix-distribution-test-support/proposal.md)
+8. [fix-distribution-test-support](changes/archive/2026-10-26-fix-distribution-test-support/proposal.md)
 9. [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md)
 10. [add-structural-output-validation](changes/add-structural-output-validation/proposal.md)
-11. [update-repack-outcomes](changes/update-repack-outcomes/proposal.md)
-12. [update-bulk-execution-lifecycle](changes/update-bulk-execution-lifecycle/proposal.md)
+11. [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md)
+12. [update-bulk-execution-lifecycle](changes/archive/2026-10-26-update-bulk-execution-lifecycle/proposal.md)
 13. [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md)
-14. [update-media-preservation-policy](changes/update-media-preservation-policy/proposal.md)
+14. [update-media-preservation-policy](changes/archive/2026-10-26-update-media-preservation-policy/proposal.md)
 15. [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md)
 16. [update-quality-and-specification-gates](changes/update-quality-and-specification-gates/proposal.md)
-17. [add-inspection-command](changes/add-inspection-command/proposal.md)
-18. [add-audit-reports](changes/add-audit-reports/proposal.md)
-19. [add-resumable-bulk](changes/add-resumable-bulk/proposal.md)
+17. [add-inspection-command](changes/archive/2026-10-26-add-inspection-command/proposal.md)
+18. [add-audit-reports](changes/archive/2026-10-26-add-audit-reports/proposal.md)
+19. [add-resumable-bulk](changes/archive/2026-10-26-add-resumable-bulk/proposal.md)
 20. [add-optimization-profiles](changes/add-optimization-profiles/proposal.md)
 21. [add-archive-member-selection](changes/add-archive-member-selection/proposal.md)
-22. [extend-lossless-pdf-stream-walking](changes/extend-lossless-pdf-stream-walking/proposal.md)
+22. [extend-lossless-pdf-stream-walking](changes/archive/2026-10-26-extend-lossless-pdf-stream-walking/proposal.md)
 
 This is one topological order, not a delivery date or a claim that independent items cannot run concurrently. Read each design's migration plan before a change that alters defaults or fidelity: output collisions, SQLite replacement, protected containers, candidate validation, and video defaults include explicit compatibility decisions.
 
@@ -115,46 +133,46 @@ This is one topological order, not a delivery date or a claim that independent i
 
 | Source finding, slice, or feature | Proposals |
 | --- | --- |
-| R01 | [fix-archive-member-preservation](changes/fix-archive-member-preservation/proposal.md) |
-| R02 | [fix-compressed-tar-roundtrip](changes/fix-compressed-tar-roundtrip/proposal.md) |
-| R03 | [fix-markup-preservation](changes/fix-markup-preservation/proposal.md) |
-| R04 | [fix-output-destination-safety](changes/fix-output-destination-safety/proposal.md) |
-| R05 | [fix-dicom-safety-validation](changes/fix-dicom-safety-validation/proposal.md) |
-| R06 | [fix-markup-preservation](changes/fix-markup-preservation/proposal.md), [update-data-format-preservation](changes/update-data-format-preservation/proposal.md) |
-| R07 | [fix-output-destination-safety](changes/fix-output-destination-safety/proposal.md) |
-| R08 | [update-media-preservation-policy](changes/update-media-preservation-policy/proposal.md) |
+| R01 | [fix-archive-member-preservation](changes/archive/2026-10-26-fix-archive-member-preservation/proposal.md) |
+| R02 | [fix-compressed-tar-roundtrip](changes/archive/2026-10-26-fix-compressed-tar-roundtrip/proposal.md) |
+| R03 | [fix-markup-preservation](changes/archive/2026-10-26-fix-markup-preservation/proposal.md) |
+| R04 | [fix-output-destination-safety](changes/archive/2026-10-26-fix-output-destination-safety/proposal.md) |
+| R05 | [fix-dicom-safety-validation](changes/archive/2026-10-26-fix-dicom-safety-validation/proposal.md) |
+| R06 | [fix-markup-preservation](changes/archive/2026-10-26-fix-markup-preservation/proposal.md), [update-data-format-preservation](changes/update-data-format-preservation/proposal.md) |
+| R07 | [fix-output-destination-safety](changes/archive/2026-10-26-fix-output-destination-safety/proposal.md) |
+| R08 | [update-media-preservation-policy](changes/archive/2026-10-26-update-media-preservation-policy/proposal.md) |
 | R09 | [update-container-format-policies](changes/update-container-format-policies/proposal.md), [add-structural-output-validation](changes/add-structural-output-validation/proposal.md) |
 | R10 | [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md) |
-| R11 | [update-repack-outcomes](changes/update-repack-outcomes/proposal.md) |
-| R12 | [update-bulk-execution-lifecycle](changes/update-bulk-execution-lifecycle/proposal.md) |
+| R11 | [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md) |
+| R12 | [update-bulk-execution-lifecycle](changes/archive/2026-10-26-update-bulk-execution-lifecycle/proposal.md) |
 | R13 | [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md) |
 | R14 | [update-container-format-policies](changes/update-container-format-policies/proposal.md), [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md) |
-| R15 | [fix-output-destination-safety](changes/fix-output-destination-safety/proposal.md), [fix-distribution-test-support](changes/fix-distribution-test-support/proposal.md), [update-repack-outcomes](changes/update-repack-outcomes/proposal.md), [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md), [update-quality-and-specification-gates](changes/update-quality-and-specification-gates/proposal.md) |
-| A1 | [fix-archive-member-preservation](changes/fix-archive-member-preservation/proposal.md) |
-| A2 | [fix-compressed-tar-roundtrip](changes/fix-compressed-tar-roundtrip/proposal.md) |
-| A3 | [fix-markup-preservation](changes/fix-markup-preservation/proposal.md) |
-| A4 | [fix-output-destination-safety](changes/fix-output-destination-safety/proposal.md) |
-| A5 | [fix-dicom-safety-validation](changes/fix-dicom-safety-validation/proposal.md) |
+| R15 | [fix-output-destination-safety](changes/archive/2026-10-26-fix-output-destination-safety/proposal.md), [fix-distribution-test-support](changes/archive/2026-10-26-fix-distribution-test-support/proposal.md), [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md), [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md), [update-quality-and-specification-gates](changes/update-quality-and-specification-gates/proposal.md) |
+| A1 | [fix-archive-member-preservation](changes/archive/2026-10-26-fix-archive-member-preservation/proposal.md) |
+| A2 | [fix-compressed-tar-roundtrip](changes/archive/2026-10-26-fix-compressed-tar-roundtrip/proposal.md) |
+| A3 | [fix-markup-preservation](changes/archive/2026-10-26-fix-markup-preservation/proposal.md) |
+| A4 | [fix-output-destination-safety](changes/archive/2026-10-26-fix-output-destination-safety/proposal.md) |
+| A5 | [fix-dicom-safety-validation](changes/archive/2026-10-26-fix-dicom-safety-validation/proposal.md) |
 | A6 | [update-data-format-preservation](changes/update-data-format-preservation/proposal.md), [update-container-format-policies](changes/update-container-format-policies/proposal.md) |
-| A7 | [fix-distribution-test-support](changes/fix-distribution-test-support/proposal.md) |
+| A7 | [fix-distribution-test-support](changes/archive/2026-10-26-fix-distribution-test-support/proposal.md) |
 | B1 | [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md) |
 | B2 | [update-container-format-policies](changes/update-container-format-policies/proposal.md), [add-structural-output-validation](changes/add-structural-output-validation/proposal.md) |
-| B3 | [update-repack-outcomes](changes/update-repack-outcomes/proposal.md) |
-| B4 | [update-bulk-execution-lifecycle](changes/update-bulk-execution-lifecycle/proposal.md) |
+| B3 | [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md) |
+| B4 | [update-bulk-execution-lifecycle](changes/archive/2026-10-26-update-bulk-execution-lifecycle/proposal.md) |
 | B5 | [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md) |
-| B6 | [update-media-preservation-policy](changes/update-media-preservation-policy/proposal.md) |
+| B6 | [update-media-preservation-policy](changes/archive/2026-10-26-update-media-preservation-policy/proposal.md) |
 | C1 | [update-container-format-policies](changes/update-container-format-policies/proposal.md), [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md) |
 | C2 | [update-quality-and-specification-gates](changes/update-quality-and-specification-gates/proposal.md) |
 | C3 | [update-quality-and-specification-gates](changes/update-quality-and-specification-gates/proposal.md) |
 | C4 | [update-data-format-preservation](changes/update-data-format-preservation/proposal.md) |
-| C5 | [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md), [update-repack-outcomes](changes/update-repack-outcomes/proposal.md), [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md) |
+| C5 | [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md), [update-repack-outcomes](changes/archive/2026-10-26-update-repack-outcomes/proposal.md), [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md) |
 | C6 | [update-quality-and-specification-gates](changes/update-quality-and-specification-gates/proposal.md) |
-| N01 | [add-inspection-command](changes/add-inspection-command/proposal.md) |
-| N02 | [add-audit-reports](changes/add-audit-reports/proposal.md) |
-| N03 | [add-resumable-bulk](changes/add-resumable-bulk/proposal.md) |
+| N01 | [add-inspection-command](changes/archive/2026-10-26-add-inspection-command/proposal.md) |
+| N02 | [add-audit-reports](changes/archive/2026-10-26-add-audit-reports/proposal.md) |
+| N03 | [add-resumable-bulk](changes/archive/2026-10-26-add-resumable-bulk/proposal.md) |
 | N04 | [add-optimization-profiles](changes/add-optimization-profiles/proposal.md) |
 | N05 | [add-archive-member-selection](changes/add-archive-member-selection/proposal.md) |
-| N06 | [extend-lossless-pdf-stream-walking](changes/extend-lossless-pdf-stream-walking/proposal.md) |
+| N06 | [extend-lossless-pdf-stream-walking](changes/archive/2026-10-26-extend-lossless-pdf-stream-walking/proposal.md) |
 
 ## Review and validation workflow
 

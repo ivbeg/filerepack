@@ -22,9 +22,9 @@ Users currently combine compression level, ultra, metadata, quality, worker and 
 ## Dependencies
 
 - [add-operation-resource-budgets](../add-operation-resource-budgets/proposal.md)
-- [update-media-preservation-policy](../update-media-preservation-policy/proposal.md)
+- [update-media-preservation-policy](../archive/2026-10-26-update-media-preservation-policy/proposal.md)
 - [refactor-format-capability-registry](../refactor-format-capability-registry/proposal.md)
-- [update-repack-outcomes](../update-repack-outcomes/proposal.md)
+- [update-repack-outcomes](../archive/2026-10-26-update-repack-outcomes/proposal.md)
 - [update-quality-and-specification-gates](../update-quality-and-specification-gates/proposal.md)
 
 ## Validation

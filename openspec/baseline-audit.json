@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-10-09",
-  "deployment": "not confirmed; no changes archived",
+  "deployment": "confirmed for release 0.4.0 (PyPI and GitHub Release v0.4.0, 2026-10-09); 38 completed changes archived on 2026-10-26 without spec updates; changes with open tasks or pending requirements remain active",
   "entries": [
     {
       "source": "openspec/changes/archive/2026-08-14-add-dataclass-results/specs/architecture/spec.md",
@@ -274,7 +274,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-audit-reports/specs/audit-reporting/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-audit-reports/specs/audit-reporting/spec.md",
       "capability": "audit-reporting",
       "requirement": "Versioned Complete Audit Records",
       "disposition": "verified",
@@ -283,7 +283,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-audit-reports/specs/audit-reporting/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-audit-reports/specs/audit-reporting/spec.md",
       "capability": "audit-reporting",
       "requirement": "Bounded and Recoverable Report Persistence",
       "disposition": "verified",
@@ -292,7 +292,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-audit-reports/specs/audit-reporting/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-audit-reports/specs/audit-reporting/spec.md",
       "capability": "audit-reporting",
       "requirement": "Report Destination and Path Disclosure Policy",
       "disposition": "verified",
@@ -301,7 +301,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-audited-format-support/specs/audited-formats/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-audited-format-support/specs/audited-formats/spec.md",
       "capability": "audited-formats",
       "requirement": "Audited extension routing",
       "disposition": "verified",
@@ -310,7 +310,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-audited-format-support/specs/audited-formats/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-audited-format-support/specs/audited-formats/spec.md",
       "capability": "audited-formats",
       "requirement": "Verified offline databases",
       "disposition": "verified",
@@ -319,7 +319,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-audited-format-support/specs/audited-formats/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-audited-format-support/specs/audited-formats/spec.md",
       "capability": "audited-formats",
       "requirement": "Preserving animation compression",
       "disposition": "verified",
@@ -328,7 +328,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-car-recompression/specs/car-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-car-recompression/specs/car-recompression/spec.md",
       "capability": "car-recompression",
       "requirement": "Preserving CAR recompression",
       "disposition": "verified",
@@ -337,7 +337,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-car-recompression/specs/car-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-car-recompression/specs/car-recompression/spec.md",
       "capability": "car-recompression",
       "requirement": "Qualified structural and preservation gates",
       "disposition": "verified",
@@ -346,7 +346,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-car-recompression/specs/car-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-car-recompression/specs/car-recompression/spec.md",
       "capability": "car-recompression",
       "requirement": "Bounded CAR lifecycle",
       "disposition": "verified",
@@ -355,7 +355,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/encoder-quality/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/encoder-quality/spec.md",
       "capability": "encoder-quality",
       "requirement": "Optional jpegtran for Lossless JPEG",
       "disposition": "verified",
@@ -364,7 +364,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/encoder-quality/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/encoder-quality/spec.md",
       "capability": "encoder-quality",
       "requirement": "Optional zopflipng on PNG Ultra",
       "disposition": "verified",
@@ -373,7 +373,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/encoder-quality/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/encoder-quality/spec.md",
       "capability": "encoder-quality",
       "requirement": "Encoder Tool Discovery",
       "disposition": "verified",
@@ -382,7 +382,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/formats/spec.md",
       "capability": "formats",
       "requirement": "SQLite .db Alias",
       "disposition": "verified",
@@ -391,7 +391,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/formats/spec.md",
       "capability": "formats",
       "requirement": "Image Extension Aliases",
       "disposition": "verified",
@@ -400,7 +400,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/formats/spec.md",
       "capability": "formats",
       "requirement": "ImageMagick Raster Formats",
       "disposition": "verified",
@@ -409,7 +409,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/formats/spec.md",
       "capability": "formats",
       "requirement": "Ogg Vorbis and Opus",
       "disposition": "verified",
@@ -418,7 +418,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/formats/spec.md",
       "capability": "formats",
       "requirement": "M4B Alias",
       "disposition": "verified",
@@ -427,7 +427,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/formats/spec.md",
       "capability": "formats",
       "requirement": "Additional ZIP Aliases",
       "disposition": "verified",
@@ -436,7 +436,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/formats/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/formats/spec.md",
       "capability": "formats",
       "requirement": "ISO CPIO AR Only With Round-Trip",
       "disposition": "verified",
@@ -445,7 +445,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/nested-assets/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/nested-assets/spec.md",
       "capability": "nested-assets",
       "requirement": "Virtual Nested Asset Containers",
       "disposition": "verified",
@@ -454,7 +454,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/nested-assets/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/nested-assets/spec.md",
       "capability": "nested-assets",
       "requirement": "Audio Cover Art Extraction",
       "disposition": "verified",
@@ -463,7 +463,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/nested-assets/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/nested-assets/spec.md",
       "capability": "nested-assets",
       "requirement": "XML Data URI Extraction",
       "disposition": "verified",
@@ -472,7 +472,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/xml-json/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/xml-json/spec.md",
       "capability": "xml-json",
       "requirement": "SVG Packer Fallback",
       "disposition": "verified",
@@ -481,7 +481,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-cpio-member-recompression/specs/cpbz2-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-cpio-member-recompression/specs/cpbz2-recompression/spec.md",
       "capability": "cpbz2-recompression",
       "requirement": "CPBZ2 Stream Identification",
       "disposition": "verified",
@@ -490,7 +490,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-cpio-member-recompression/specs/cpbz2-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-cpio-member-recompression/specs/cpbz2-recompression/spec.md",
       "capability": "cpbz2-recompression",
       "requirement": "Exact CPIO Payload Preservation",
       "disposition": "verified",
@@ -499,7 +499,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-cpio-member-recompression/specs/cpbz2-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-cpio-member-recompression/specs/cpbz2-recompression/spec.md",
       "capability": "cpbz2-recompression",
       "requirement": "Shared Publication Policies",
       "disposition": "verified",
@@ -508,7 +508,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-cpio-member-recompression/specs/cpio-member-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-cpio-member-recompression/specs/cpio-member-recompression/spec.md",
       "capability": "cpio-member-recompression",
       "requirement": "CPIO Container Recognition",
       "disposition": "verified",
@@ -517,7 +517,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-cpio-member-recompression/specs/cpio-member-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-cpio-member-recompression/specs/cpio-member-recompression/spec.md",
       "capability": "cpio-member-recompression",
       "requirement": "Bounded CPIO Profile Parsing",
       "disposition": "verified",
@@ -526,7 +526,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-cpio-member-recompression/specs/cpio-member-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-cpio-member-recompression/specs/cpio-member-recompression/spec.md",
       "capability": "cpio-member-recompression",
       "requirement": "Safe CPIO Member Optimization",
       "disposition": "verified",
@@ -535,7 +535,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-cpio-member-recompression/specs/cpio-member-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-cpio-member-recompression/specs/cpio-member-recompression/spec.md",
       "capability": "cpio-member-recompression",
       "requirement": "Independently Verified CPIO Publication",
       "disposition": "verified",
@@ -544,7 +544,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-dicom-support/specs/dicom/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-dicom-support/specs/dicom/spec.md",
       "capability": "dicom",
       "requirement": "DICOM Format Identification",
       "disposition": "verified",
@@ -553,7 +553,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-dicom-support/specs/dicom/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-dicom-support/specs/dicom/spec.md",
       "capability": "dicom",
       "requirement": "Lossless DICOM Recompression",
       "disposition": "verified",
@@ -562,7 +562,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-dicom-support/specs/dicom/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-dicom-support/specs/dicom/spec.md",
       "capability": "dicom",
       "requirement": "DICOM Tool Discovery",
       "disposition": "verified",
@@ -616,7 +616,7 @@
       "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
     },
     {
-      "source": "openspec/changes/add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
       "capability": "hwp-stream-recompression",
       "requirement": "Opt-in qualified HWP stream selection",
       "disposition": "verified",
@@ -625,7 +625,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
       "capability": "hwp-stream-recompression",
       "requirement": "Exact HWP raw-DEFLATE content preservation",
       "disposition": "verified",
@@ -634,7 +634,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
       "capability": "hwp-stream-recompression",
       "requirement": "Qualified BinData compression identity",
       "disposition": "verified",
@@ -643,7 +643,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
       "capability": "hwp-stream-recompression",
       "requirement": "Independent HWP intended-change manifest",
       "disposition": "verified",
@@ -652,7 +652,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-hwp-stream-recompression/specs/hwp-stream-recompression/spec.md",
       "capability": "hwp-stream-recompression",
       "requirement": "Shared bounded HWP execution and physical selection",
       "disposition": "verified",
@@ -661,7 +661,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-inspection-command/specs/inspection/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-inspection-command/specs/inspection/spec.md",
       "capability": "inspection",
       "requirement": "Read Only Inspection Command",
       "disposition": "verified",
@@ -670,7 +670,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-inspection-command/specs/inspection/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-inspection-command/specs/inspection/spec.md",
       "capability": "inspection",
       "requirement": "Capability and Eligibility Planning",
       "disposition": "verified",
@@ -679,7 +679,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-inspection-command/specs/inspection/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-inspection-command/specs/inspection/spec.md",
       "capability": "inspection",
       "requirement": "Estimated and Measured Information Separation",
       "disposition": "verified",
@@ -742,7 +742,7 @@
       "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
     },
     {
-      "source": "openspec/changes/add-nib-compaction/specs/nib-compaction/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-nib-compaction/specs/nib-compaction/spec.md",
       "capability": "nib-compaction",
       "requirement": "Qualified compiled nib routing",
       "disposition": "verified",
@@ -751,7 +751,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-nib-compaction/specs/nib-compaction/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-nib-compaction/specs/nib-compaction/spec.md",
       "capability": "nib-compaction",
       "requirement": "Identity-preserving archive compaction",
       "disposition": "verified",
@@ -760,7 +760,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-nib-compaction/specs/nib-compaction/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-nib-compaction/specs/nib-compaction/spec.md",
       "capability": "nib-compaction",
       "requirement": "Independent bounded verification and publication",
       "disposition": "verified",
@@ -805,7 +805,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Shared codec with authoritative host discovery",
       "disposition": "verified",
@@ -814,7 +814,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Exact metafile preservation and separate verification",
       "disposition": "verified",
@@ -823,7 +823,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Bounded encoding and measured candidate selection",
       "disposition": "verified",
@@ -832,7 +832,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Raster image qualification is explicit",
       "disposition": "verified",
@@ -841,7 +841,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-officeart-payload-recompression/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Existing transaction and diagnostic policies apply",
       "disposition": "verified",
@@ -850,7 +850,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Qualified OfficeArt raster selection",
       "disposition": "verified",
@@ -859,7 +859,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Exact PNG IDAT preservation contract",
       "disposition": "verified",
@@ -868,7 +868,7 @@
       "note": "Working-tree evidence; not release/deployment evidence. 2026-10-08: separately qualified exact-unfiltered PPT PNG profile; original filtered codec and immutable host boundaries remain. See dev/ole/qualification-ppt-png-refiltering.json. DOC exception reconciled on 2026-10-08 under the separately qualified DOC PNG refiltering requirement."
     },
     {
-      "source": "openspec/changes/add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Exact JPEG coefficient and metadata contract",
       "disposition": "verified",
@@ -877,7 +877,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Independent raster and host union verification",
       "disposition": "verified",
@@ -886,7 +886,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-officeart-raster-recompression/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Bounded optional raster execution and measured selection",
       "disposition": "verified",
@@ -895,7 +895,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ole-container-compaction/specs/ole-compaction/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-container-compaction/specs/ole-compaction/spec.md",
       "capability": "ole-compaction",
       "requirement": "Qualified CFB Office Detection",
       "disposition": "verified",
@@ -904,7 +904,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ole-container-compaction/specs/ole-compaction/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-container-compaction/specs/ole-compaction/spec.md",
       "capability": "ole-compaction",
       "requirement": "Complete OLE Eligibility Gate",
       "disposition": "verified",
@@ -913,7 +913,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ole-container-compaction/specs/ole-compaction/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-container-compaction/specs/ole-compaction/spec.md",
       "capability": "ole-compaction",
       "requirement": "Stream-Preserving Container Compaction",
       "disposition": "verified",
@@ -922,7 +922,7 @@
       "note": "Working-tree evidence; not release/deployment evidence. 2026-10-08: qualify exact nonzero root creation FILETIME preservation through native DOC/XLS/PPT compaction, record/embedded modes and dry-run; reject creation/modification timestamp mutations. Evidence: test/test_ole.py and dev/ole/README.md."
     },
     {
-      "source": "openspec/changes/add-ole-container-compaction/specs/ole-compaction/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-container-compaction/specs/ole-compaction/spec.md",
       "capability": "ole-compaction",
       "requirement": "Independent Structural and Preservation Validation",
       "disposition": "verified",
@@ -931,7 +931,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ole-container-compaction/specs/ole-compaction/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-container-compaction/specs/ole-compaction/spec.md",
       "capability": "ole-compaction",
       "requirement": "Shared OLE Execution and Reporting Contract",
       "disposition": "verified",
@@ -940,7 +940,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
       "capability": "ole-embedded-recompression",
       "requirement": "Explicit embedded payload optimization mode",
       "disposition": "verified",
@@ -949,7 +949,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
       "capability": "ole-embedded-recompression",
       "requirement": "Authoritative embedded object discovery",
       "disposition": "verified",
@@ -958,7 +958,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
       "capability": "ole-embedded-recompression",
       "requirement": "Wrapper and substorage identity preservation",
       "disposition": "verified",
@@ -967,7 +967,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
       "capability": "ole-embedded-recompression",
       "requirement": "Independent recursive intended-change verification",
       "disposition": "verified",
@@ -976,7 +976,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-embedded-payload-recompression/specs/ole-embedded-recompression/spec.md",
       "capability": "ole-embedded-recompression",
       "requirement": "Shared recursive execution and parent savings",
       "disposition": "verified",
@@ -985,7 +985,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ole-maximum-compression-effort/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-maximum-compression-effort/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Versioned OLE maximum effort mapping",
       "disposition": "verified",
@@ -994,7 +994,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ole-maximum-compression-effort/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-maximum-compression-effort/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Best verified OLE trial retention",
       "disposition": "verified",
@@ -1003,7 +1003,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ole-maximum-compression-effort/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-maximum-compression-effort/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Effort compatibility and cumulative bounds",
       "disposition": "verified",
@@ -1012,7 +1012,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ole-maximum-compression-effort/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ole-maximum-compression-effort/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Measured maximum effort evidence",
       "disposition": "verified",
@@ -1129,7 +1129,7 @@
       "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
     },
     {
-      "source": "openspec/changes/add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
       "capability": "ppt-ole-recompression",
       "requirement": "Explicit PPT record recompression mode",
       "disposition": "verified",
@@ -1138,7 +1138,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
       "capability": "ppt-ole-recompression",
       "requirement": "Qualified single-edit embedded-object selection",
       "disposition": "verified",
@@ -1147,7 +1147,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
       "capability": "ppt-ole-recompression",
       "requirement": "Exact decoded-storage preservation and checked relocation",
       "disposition": "verified",
@@ -1156,7 +1156,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
       "capability": "ppt-ole-recompression",
       "requirement": "Independent intended-change verification",
       "disposition": "verified",
@@ -1165,7 +1165,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
       "capability": "ppt-ole-recompression",
       "requirement": "Bounded encoders and compatible native replacement",
       "disposition": "verified",
@@ -1174,7 +1174,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-ppt-ole-record-recompression/specs/ppt-ole-recompression/spec.md",
       "capability": "ppt-ole-recompression",
       "requirement": "Transaction and physical-savings acceptance",
       "disposition": "verified",
@@ -1183,7 +1183,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-preserving-format-support/specs/format-expansion/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-preserving-format-support/specs/format-expansion/spec.md",
       "capability": "format-expansion",
       "requirement": "Additional format routing",
       "disposition": "verified",
@@ -1192,7 +1192,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-preserving-format-support/specs/format-expansion/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-preserving-format-support/specs/format-expansion/spec.md",
       "capability": "format-expansion",
       "requirement": "Text and QGIS preservation",
       "disposition": "verified",
@@ -1201,7 +1201,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-preserving-format-support/specs/format-expansion/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-preserving-format-support/specs/format-expansion/spec.md",
       "capability": "format-expansion",
       "requirement": "Verified native lossless optimization",
       "disposition": "verified",
@@ -1210,7 +1210,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-preserving-format-support/specs/format-expansion/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-preserving-format-support/specs/format-expansion/spec.md",
       "capability": "format-expansion",
       "requirement": "Existing transaction contracts",
       "disposition": "verified",
@@ -1381,7 +1381,7 @@
       "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
     },
     {
-      "source": "openspec/changes/add-resumable-bulk/specs/resumable-bulk/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-resumable-bulk/specs/resumable-bulk/spec.md",
       "capability": "resumable-bulk",
       "requirement": "Versioned Atomic Bulk Checkpoints",
       "disposition": "verified",
@@ -1390,7 +1390,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-resumable-bulk/specs/resumable-bulk/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-resumable-bulk/specs/resumable-bulk/spec.md",
       "capability": "resumable-bulk",
       "requirement": "Content and Execution Verified Resume",
       "disposition": "verified",
@@ -1399,7 +1399,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-resumable-bulk/specs/resumable-bulk/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-resumable-bulk/specs/resumable-bulk/spec.md",
       "capability": "resumable-bulk",
       "requirement": "Resume Outcome and Savings Accounting",
       "disposition": "verified",
@@ -1543,7 +1543,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-tracev3-recompression/specs/tracev3-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-tracev3-recompression/specs/tracev3-recompression/spec.md",
       "capability": "tracev3-recompression",
       "requirement": "Lossless tracev3 recompression",
       "disposition": "verified",
@@ -1552,7 +1552,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-tracev3-recompression/specs/tracev3-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-tracev3-recompression/specs/tracev3-recompression/spec.md",
       "capability": "tracev3-recompression",
       "requirement": "Fail closed on unsupported or unsafe tracev3 inputs",
       "disposition": "verified",
@@ -1561,7 +1561,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-warc-recompression/specs/warc-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-warc-recompression/specs/warc-recompression/spec.md",
       "capability": "warc-recompression",
       "requirement": "Preserving record compression",
       "disposition": "verified",
@@ -1570,7 +1570,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-warc-recompression/specs/warc-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-warc-recompression/specs/warc-recompression/spec.md",
       "capability": "warc-recompression",
       "requirement": "WARC-aware routing and conversion",
       "disposition": "verified",
@@ -1579,7 +1579,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-warc-recompression/specs/warc-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-warc-recompression/specs/warc-recompression/spec.md",
       "capability": "warc-recompression",
       "requirement": "Independent verification and safe publication",
       "disposition": "verified",
@@ -1588,7 +1588,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-warc-recompression/specs/warc-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-warc-recompression/specs/warc-recompression/spec.md",
       "capability": "warc-recompression",
       "requirement": "Index awareness",
       "disposition": "verified",
@@ -1858,7 +1858,7 @@
       "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
     },
     {
-      "source": "openspec/changes/extend-lossless-pdf-stream-walking/specs/nested-assets/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-lossless-pdf-stream-walking/specs/nested-assets/spec.md",
       "capability": "nested-assets",
       "requirement": "Extended Lossless PDF Resource Traversal",
       "disposition": "verified",
@@ -1867,7 +1867,7 @@
       "note": "Working-tree qualified 2026-10-08: bounded Flate/Form traversal plus DCT/JPX sample precision, host semantics, standalone OpenJPEG inventory and Poppler 72-dpi comparisons. No release/deployment claim."
     },
     {
-      "source": "openspec/changes/extend-lossless-pdf-stream-walking/specs/nested-assets/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-lossless-pdf-stream-walking/specs/nested-assets/spec.md",
       "capability": "nested-assets",
       "requirement": "PDF Flate Image Semantic Preservation",
       "disposition": "verified",
@@ -1876,7 +1876,7 @@
       "note": "Working-tree qualified 2026-10-08: bounded Flate/Form traversal plus DCT/JPX sample precision, host semantics, standalone OpenJPEG inventory and Poppler 72-dpi comparisons. No release/deployment claim."
     },
     {
-      "source": "openspec/changes/extend-lossless-pdf-stream-walking/specs/nested-assets/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-lossless-pdf-stream-walking/specs/nested-assets/spec.md",
       "capability": "nested-assets",
       "requirement": "Shared PDF Image Optimization and Final Acceptance",
       "disposition": "verified",
@@ -1984,7 +1984,7 @@
       "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
     },
     {
-      "source": "openspec/changes/fix-archive-member-preservation/specs/archive-repacking/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-fix-archive-member-preservation/specs/archive-repacking/spec.md",
       "capability": "archive-repacking",
       "requirement": "Complete Archive Member Enumeration",
       "disposition": "verified",
@@ -1993,7 +1993,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/fix-archive-member-preservation/specs/archive-repacking/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-fix-archive-member-preservation/specs/archive-repacking/spec.md",
       "capability": "archive-repacking",
       "requirement": "Archive Member Manifest Preservation",
       "disposition": "verified",
@@ -2002,7 +2002,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/fix-compressed-tar-roundtrip/specs/archive-repacking/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-fix-compressed-tar-roundtrip/specs/archive-repacking/spec.md",
       "capability": "archive-repacking",
       "requirement": "Single Compressed Tar Payload",
       "disposition": "verified",
@@ -2011,7 +2011,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/fix-compressed-tar-roundtrip/specs/archive-repacking/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-fix-compressed-tar-roundtrip/specs/archive-repacking/spec.md",
       "capability": "archive-repacking",
       "requirement": "Verified Archive Alias Structure",
       "disposition": "verified",
@@ -2020,7 +2020,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/fix-dicom-safety-validation/specs/dicom/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-fix-dicom-safety-validation/specs/dicom/spec.md",
       "capability": "dicom",
       "requirement": "Unsafe DICOM Instances Are Skipped",
       "disposition": "verified",
@@ -2029,7 +2029,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/fix-dicom-safety-validation/specs/dicom/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-fix-dicom-safety-validation/specs/dicom/spec.md",
       "capability": "dicom",
       "requirement": "DICOM Output Verification",
       "disposition": "verified",
@@ -2038,7 +2038,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/fix-distribution-test-support/specs/distribution-validation/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-fix-distribution-test-support/specs/distribution-validation/spec.md",
       "capability": "distribution-validation",
       "requirement": "Complete Source Distribution Test Suite",
       "disposition": "verified",
@@ -2047,7 +2047,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/fix-distribution-test-support/specs/distribution-validation/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-fix-distribution-test-support/specs/distribution-validation/spec.md",
       "capability": "distribution-validation",
       "requirement": "Installed Artifact Smoke Validation",
       "disposition": "verified",
@@ -2056,7 +2056,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/fix-markup-preservation/specs/xml-json/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-fix-markup-preservation/specs/xml-json/spec.md",
       "capability": "xml-json",
       "requirement": "JSON Identification and Minification",
       "disposition": "verified",
@@ -2065,7 +2065,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/fix-markup-preservation/specs/xml-json/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-fix-markup-preservation/specs/xml-json/spec.md",
       "capability": "xml-json",
       "requirement": "XML Identification and Minification",
       "disposition": "verified",
@@ -2074,7 +2074,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/fix-output-destination-safety/specs/publish-destinations/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-fix-output-destination-safety/specs/publish-destinations/spec.md",
       "capability": "publish-destinations",
       "requirement": "Validation Before Filesystem Mutation",
       "disposition": "verified",
@@ -2083,7 +2083,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/fix-output-destination-safety/specs/publish-destinations/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-fix-output-destination-safety/specs/publish-destinations/spec.md",
       "capability": "publish-destinations",
       "requirement": "Collision Safe Output Publication",
       "disposition": "verified",
@@ -2092,7 +2092,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/fix-output-destination-safety/specs/publish-destinations/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-fix-output-destination-safety/specs/publish-destinations/spec.md",
       "capability": "publish-destinations",
       "requirement": "Consistent Library Output Destinations",
       "disposition": "verified",
@@ -2101,7 +2101,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/improve-lossy-pdf-compression/specs/pdf/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-improve-lossy-pdf-compression/specs/pdf/spec.md",
       "capability": "pdf",
       "requirement": "Lossless PDF Uses qpdf",
       "disposition": "verified",
@@ -2110,7 +2110,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/improve-lossy-pdf-compression/specs/pdf/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-improve-lossy-pdf-compression/specs/pdf/spec.md",
       "capability": "pdf",
       "requirement": "Lossy PDF Uses Ghostscript Profiles",
       "disposition": "verified",
@@ -2119,7 +2119,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/improve-lossy-pdf-compression/specs/pdf/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-improve-lossy-pdf-compression/specs/pdf/spec.md",
       "capability": "pdf",
       "requirement": "JPEG Quality Applies to PDF Images",
       "disposition": "verified",
@@ -2128,7 +2128,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/improve-lossy-pdf-compression/specs/pdf/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-improve-lossy-pdf-compression/specs/pdf/spec.md",
       "capability": "pdf",
       "requirement": "Illustrator PDF Wrappers Follow PDF Options",
       "disposition": "verified",
@@ -2137,7 +2137,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/improve-warc-recompression/specs/warc-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-improve-warc-recompression/specs/warc-recompression/spec.md",
       "capability": "warc-recompression",
       "requirement": "Per-record gzip candidate selection",
       "disposition": "verified",
@@ -2146,7 +2146,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/improve-warc-recompression/specs/warc-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-improve-warc-recompression/specs/warc-recompression/spec.md",
       "capability": "warc-recompression",
       "requirement": "Bounded ultra WARC compression",
       "disposition": "verified",
@@ -2218,7 +2218,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/update-bulk-execution-lifecycle/specs/bulk-execution/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-update-bulk-execution-lifecycle/specs/bulk-execution/spec.md",
       "capability": "bulk-execution",
       "requirement": "Bounded Bulk Discovery and Scheduling",
       "disposition": "verified",
@@ -2227,7 +2227,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/update-bulk-execution-lifecycle/specs/bulk-execution/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-update-bulk-execution-lifecycle/specs/bulk-execution/spec.md",
       "capability": "bulk-execution",
       "requirement": "Coordinator Owned Destination Reservations",
       "disposition": "verified",
@@ -2236,7 +2236,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/update-bulk-execution-lifecycle/specs/bulk-execution/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-update-bulk-execution-lifecycle/specs/bulk-execution/spec.md",
       "capability": "bulk-execution",
       "requirement": "Accounted Fail Fast and Cancellation",
       "disposition": "verified",
@@ -2308,7 +2308,7 @@
       "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
     },
     {
-      "source": "openspec/changes/update-media-preservation-policy/specs/encoder-quality/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-update-media-preservation-policy/specs/encoder-quality/spec.md",
       "capability": "encoder-quality",
       "requirement": "Keep Metadata Flag",
       "disposition": "verified",
@@ -2317,7 +2317,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/update-media-preservation-policy/specs/media-preservation/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-update-media-preservation-policy/specs/media-preservation/spec.md",
       "capability": "media-preservation",
       "requirement": "Explicit Video Fidelity Modes",
       "disposition": "verified",
@@ -2326,7 +2326,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/update-media-preservation-policy/specs/media-preservation/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-update-media-preservation-policy/specs/media-preservation/spec.md",
       "capability": "media-preservation",
       "requirement": "Complete Supported Media Inventory",
       "disposition": "verified",
@@ -2335,7 +2335,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/update-media-preservation-policy/specs/media-preservation/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-update-media-preservation-policy/specs/media-preservation/spec.md",
       "capability": "media-preservation",
       "requirement": "Image and Lossless Media Content Fidelity",
       "disposition": "verified-adjusted",
@@ -2344,7 +2344,7 @@
       "note": "Requalified 2026-10-08: PNG encoded precision/color type, bounded unsigned 8-bit JPEG2000 components and semantic boxes, decoded-frame/presentation/media/native-TIFF checks. Every other encoded image precision profile remains open under structural-output-validation task 1.2b; no universal codec qualification is claimed."
     },
     {
-      "source": "openspec/changes/update-media-preservation-policy/specs/media-preservation/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-update-media-preservation-policy/specs/media-preservation/spec.md",
       "capability": "media-preservation",
       "requirement": "Inherited Embedded Asset Policy",
       "disposition": "verified",
@@ -2398,7 +2398,7 @@
       "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
     },
     {
-      "source": "openspec/changes/update-repack-outcomes/specs/cli-reporting/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-update-repack-outcomes/specs/cli-reporting/spec.md",
       "capability": "cli-reporting",
       "requirement": "Machine Readable Standard Output",
       "disposition": "verified",
@@ -2407,7 +2407,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/update-repack-outcomes/specs/cli-reporting/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-update-repack-outcomes/specs/cli-reporting/spec.md",
       "capability": "cli-reporting",
       "requirement": "Isolated Invocation Logging State",
       "disposition": "verified",
@@ -2416,7 +2416,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/update-repack-outcomes/specs/repack-outcomes/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-update-repack-outcomes/specs/repack-outcomes/spec.md",
       "capability": "repack-outcomes",
       "requirement": "Typed Terminal Repack Outcomes",
       "disposition": "verified",
@@ -2425,7 +2425,7 @@
       "note": "Working-tree evidence; not release/deployment evidence. 2026-10-08: human repack/bulk completion and error labels follow existing statuses/exit codes; no-benefit results are successful, optional skips are informational, quiet retains errors and report/checkpoint/scan failures cannot claim successful completion. Evidence: test/test_cli_status.py and test/test_ole_diagnostics.py."
     },
     {
-      "source": "openspec/changes/update-repack-outcomes/specs/repack-outcomes/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-update-repack-outcomes/specs/repack-outcomes/spec.md",
       "capability": "repack-outcomes",
       "requirement": "Reconciled Outcome Summaries",
       "disposition": "verified",
@@ -2434,7 +2434,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/update-repack-outcomes/specs/repack-outcomes/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-update-repack-outcomes/specs/repack-outcomes/spec.md",
       "capability": "repack-outcomes",
       "requirement": "Deterministic CLI Outcome Exit Codes",
       "disposition": "verified",
@@ -2443,7 +2443,7 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-cpbz2-recompression/specs/cpbz2-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-cpbz2-recompression/specs/cpbz2-recompression/spec.md",
       "capability": "cpbz2-recompression",
       "requirement": "CPBZ2 Legacy Extension Filter Compatibility",
       "disposition": "verified",
@@ -2452,70 +2452,70 @@
       "note": "Working-tree evidence; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/encoder-quality/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/encoder-quality/spec.md",
       "capability": "encoder-quality",
       "requirement": "Keep Metadata Flag",
       "disposition": "superseded",
       "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/nested-assets/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/nested-assets/spec.md",
       "capability": "nested-assets",
       "requirement": "Lossless PDF Stream Walking",
       "disposition": "superseded",
       "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/xml-json/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/xml-json/spec.md",
       "capability": "xml-json",
       "requirement": "JSON Identification and Minification",
       "disposition": "superseded",
       "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
     },
     {
-      "source": "openspec/changes/add-chisel-parity/specs/xml-json/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-chisel-parity/specs/xml-json/spec.md",
       "capability": "xml-json",
       "requirement": "XML Identification and Minification",
       "disposition": "superseded",
       "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
     },
     {
-      "source": "openspec/changes/add-cpbz2-recompression/specs/cpbz2-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-cpbz2-recompression/specs/cpbz2-recompression/spec.md",
       "capability": "cpbz2-recompression",
       "requirement": "CPBZ2 Stream Identification",
       "disposition": "superseded",
       "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
     },
     {
-      "source": "openspec/changes/add-cpbz2-recompression/specs/cpbz2-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-cpbz2-recompression/specs/cpbz2-recompression/spec.md",
       "capability": "cpbz2-recompression",
       "requirement": "Exact CPIO Payload Preservation",
       "disposition": "superseded",
       "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
     },
     {
-      "source": "openspec/changes/add-cpbz2-recompression/specs/cpbz2-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-cpbz2-recompression/specs/cpbz2-recompression/spec.md",
       "capability": "cpbz2-recompression",
       "requirement": "Shared Publication Policies",
       "disposition": "superseded",
       "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
     },
     {
-      "source": "openspec/changes/add-dicom-support/specs/dicom/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-dicom-support/specs/dicom/spec.md",
       "capability": "dicom",
       "requirement": "Unsafe DICOM Instances Are Skipped",
       "disposition": "superseded",
       "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
     },
     {
-      "source": "openspec/changes/add-dicom-support/specs/dicom/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-add-dicom-support/specs/dicom/spec.md",
       "capability": "dicom",
       "requirement": "DICOM Output Verification",
       "disposition": "superseded",
       "note": "Original block preserved in change-level superseded-requirements.md; later MODIFIED delta owns the current requirement."
     },
     {
-      "source": "openspec/changes/extend-ppt-notes-picture-coverage/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-ppt-notes-picture-coverage/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Independent notes-bearing PPT Pictures qualification",
       "disposition": "verified",
@@ -2524,7 +2524,7 @@
       "note": "2026-10-08 approved implementation: generated notes/master/shared-picture and negative-mutation tests; independent outer olefile checks; three pinned supplied originals and normalized duplicate; exact LibreOffice slide/notes rendering including normative-master controls; native physical savings within default budgets. Local Python 3.9/3.13 macOS qualification only; remote CI and Microsoft PowerPoint are not asserted. See dev/ole/qualification-ppt-notes-runtime.json and dev/ole/README.md. 2026-10-08: separately qualified exact-unfiltered PPT PNG profile; original filtered codec and immutable host boundaries remain. See dev/ole/qualification-ppt-png-refiltering.json."
     },
     {
-      "source": "openspec/changes/extend-ppt-notes-picture-coverage/specs/ppt-ole-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-ppt-notes-picture-coverage/specs/ppt-ole-recompression/spec.md",
       "capability": "ppt-ole-recompression",
       "requirement": "Notes-aware immutable PPT host graph",
       "disposition": "verified",
@@ -2533,7 +2533,7 @@
       "note": "2026-10-08 approved implementation: generated notes/master/shared-picture and negative-mutation tests; independent outer olefile checks; three pinned supplied originals and normalized duplicate; exact LibreOffice slide/notes rendering including normative-master controls; native physical savings within default budgets. Local Python 3.9/3.13 macOS qualification only; remote CI and Microsoft PowerPoint are not asserted. See dev/ole/qualification-ppt-notes-runtime.json and dev/ole/README.md."
     },
     {
-      "source": "openspec/changes/extend-ppt-png-refiltering/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-ppt-png-refiltering/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Qualified PPT PNG refiltering",
       "disposition": "verified",
@@ -2542,7 +2542,7 @@
       "note": "2026-10-08 user-approved implementation: independent exact-sample filter controls, hostile/missing encoder and budget checks; digest/snapshot-bound completed worker verification; all three supplied PPTs under unchanged default limits, 88 equal slide and 88 equal notes RGB pages, unchanged Photoshop objects and source hashes. Local macOS qualification; remote CI and Microsoft PowerPoint editing are not asserted. See dev/ole/qualification-ppt-png-refiltering.json and dev/ole/README.md. Final resource profile: native png-unfilter-v1 controls, bounded one-second optional trials with final-verification reserve; root limits remain unchanged."
     },
     {
-      "source": "openspec/changes/extend-ppt-png-refiltering/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-ppt-png-refiltering/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Sequential PPT PNG root reservation",
       "disposition": "verified",
@@ -2551,7 +2551,7 @@
       "note": "2026-10-08 user-approved implementation: independent exact-sample filter controls, hostile/missing encoder and budget checks; digest/snapshot-bound completed worker verification; all three supplied PPTs under unchanged default limits, 88 equal slide and 88 equal notes RGB pages, unchanged Photoshop objects and source hashes. Local macOS qualification; remote CI and Microsoft PowerPoint editing are not asserted. See dev/ole/qualification-ppt-png-refiltering.json and dev/ole/README.md. Final resource profile: native png-unfilter-v1 controls, bounded one-second optional trials with final-verification reserve; root limits remain unchanged."
     },
     {
-      "source": "openspec/changes/extend-ppt-roundtrip-picture-coverage/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-ppt-roundtrip-picture-coverage/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Audited additional PPT round-trip Pictures forms",
       "disposition": "verified",
@@ -2560,7 +2560,7 @@
       "note": "2026-10-08 user-approved implementation: generated header/owner/layout/reference/property/tag faults and immutable-byte verification; local Python 3.9.6/3.13.7 native tests, public dry-run, aliases and no-benefit fallback. Supplied original yields a verified 2,082,816-byte candidate; 11 slide and 11 notes RGB pages plus legacy-master control agree. Defaults and strict filesystem guards retained. Distinct output uses an exact-byte copy with mode 0644: original mode 0700 causes macOS to add protected provenance, so exact-original metadata publication is refused. Original bytes/mode/attributes remain unchanged. Remote CI and Microsoft PowerPoint are not asserted. See dev/ole/qualification-ppt-roundtrip-runtime.json. Follow-up on 2026-10-08 corrects the earlier mode-based diagnosis: provenance is assigned at native stage creation. Direct output from the unchanged actual original now retains mode 0700 and mtime, allowing only creation-time native provenance absent from the source; all original values remain exact. Private in-place/backup and independent content checks also pass; see dev/ole/qualification-ppt-macos-publication.json. Verified fly-from-bottom extension: bounded coordinate keyframes, null-bullet text, font defaults and composite references; opengovernment source/candidate animation bytes and POI save/reopen content match, with 19 equal slides/notes pages. Evidence: dev/ole/qualification-ppt-opengovernment-fly-animation.json."
     },
     {
-      "source": "openspec/changes/extend-word-property-coverage/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-word-property-coverage/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Audited Word table-style and display-property coverage",
       "disposition": "verified",
@@ -2569,7 +2569,7 @@
       "note": "Working-tree qualification: controlled Word preservation/corruption regressions and dev/ole/qualification-word-properties-2026-10-08.json; identical 34/48 LibreOffice pages, unchanged source hashes. Microsoft Office and remote platforms unmeasured; not release/deployment evidence."
     },
     {
-      "source": "openspec/changes/extend-doc-png-refiltering/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-doc-png-refiltering/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Qualified DOC PNG refiltering",
       "disposition": "verified",
@@ -2578,7 +2578,7 @@
       "note": "Local user-approved DOC qualification: controlled sample/metadata/history/reference/encoder/budget checks; complete independent preservation and 34/48 identical LibreOffice RGB pages, unchanged originals. See dev/ole/qualification-word-png-refilter-2026-10-08.json. Microsoft Office and remote platforms unmeasured; no release/deployment claim."
     },
     {
-      "source": "openspec/changes/extend-ppt-animation-storage-sharing/specs/ppt-ole-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-ppt-animation-storage-sharing/specs/ppt-ole-recompression/spec.md",
       "capability": "ppt-ole-recompression",
       "requirement": "Preserve independent PPT objects when storage sharing fails qualification",
       "disposition": "verified",
@@ -2587,7 +2587,7 @@
       "note": "Local generated/native/source qualification, identical slide/notes pixels and independent reader/save/edit controls. Physical storage sharing explicitly rejected after resolving one of seven objects. No runtime alias/nested-color exception, release or deployment."
     },
     {
-      "source": "openspec/changes/extend-ppt-animation-storage-sharing/specs/officeart-recompression/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-ppt-animation-storage-sharing/specs/officeart-recompression/spec.md",
       "capability": "officeart-recompression",
       "requirement": "Audited sound-free PPT animation Pictures qualification",
       "disposition": "verified",
@@ -2596,5 +2596,5 @@
       "note": "Local generated/native/source qualification, identical slide/notes pixels and independent reader/save/edit controls. Physical storage sharing explicitly rejected after resolving one of seven objects. No runtime alias/nested-color exception, release or deployment. Verified fly-from-bottom extension: bounded coordinate keyframes, null-bullet text, font defaults and composite references; opengovernment source/candidate animation bytes and POI save/reopen content match, with 19 equal slides/notes pages. Evidence: dev/ole/qualification-ppt-opengovernment-fly-animation.json."
     }
   ],
-  "updated_date": "2026-10-09"
+  "updated_date": "2026-10-26"
 }

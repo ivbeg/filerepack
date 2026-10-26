@@ -63,20 +63,27 @@ TIFF/HDF5/NetCDF приоритет включает устранение про
 | [refactor-repack-transactions](changes/refactor-repack-transactions/proposal.md) | Общие staging, проверка, принятие по размеру и публикация обычных файлов; Zarr добавляет самостоятельный контракт каталогов |
 | [add-structural-output-validation](changes/add-structural-output-validation/proposal.md) | Полная проверка кандидата до публикации; новые требования уточняют предметное сравнение |
 | [update-data-format-preservation](changes/update-data-format-preservation/proposal.md) | Общая сохранность данных; новый HDF5/NetCDF change уточняет графы, raw values и политики сжатия |
-| [update-media-preservation-policy](changes/update-media-preservation-policy/proposal.md) | Общая сохранность изображений; TIFF добавляет IFD/tags и точные native samples |
+| [update-media-preservation-policy](changes/archive/2026-10-26-update-media-preservation-policy/proposal.md) | Общая сохранность изображений; TIFF добавляет IFD/tags и точные native samples |
 | [add-operation-resource-budgets](changes/add-operation-resource-budgets/proposal.md) | Совокупные decode/memory/scratch/time budgets, включая внешние процессы и повторные проходы |
 | [refactor-format-capability-registry](changes/refactor-format-capability-registry/proposal.md) | Различение идентификации, экспериментального профиля и проверенного writer; варианты внутри одного расширения |
 | [update-quality-and-specification-gates](changes/update-quality-and-specification-gates/proposal.md) | Реальные fixtures, отдельный reader, версия backend и явные пробелы в покрытии |
-| [fix-archive-member-preservation](changes/fix-archive-member-preservation/proposal.md) и [update-container-format-policies](changes/update-container-format-policies/proposal.md) | Сохранность членов и защита специализированных контейнеров; PT не обходит свою политику через общий ZIP-handler |
+| [fix-archive-member-preservation](changes/archive/2026-10-26-fix-archive-member-preservation/proposal.md) и [update-container-format-policies](changes/update-container-format-policies/proposal.md) | Сохранность членов и защита специализированных контейнеров; PT не обходит свою политику через общий ZIP-handler |
 
 Не требуется ждать реализации всех перечисленных предложений целиком. Перед
 включением конкретного writer должны работать необходимые ему гарантии; общая
 реализация этих гарантий остаётся в соответствующих компонентах.
 
-В `openspec/specs/` пока нет канонических опубликованных capabilities. Поэтому
-новые самостоятельные требования оформлены как `ADDED`, в том числе уточнения
-существующих обработчиков. Ранее созданные changes и их отметки задач сохранены.
-При архивировании необходимо сверить уже опубликованные к тому моменту capabilities.
+Когда создавались эти предложения, в `openspec/specs/` ещё не было канонических
+capabilities. Поэтому новые самостоятельные требования оформлены как `ADDED`, в том
+числе уточнения существующих обработчиков. Ранее созданные changes и их отметки
+задач сохранены. После сверки базовой линии `openspec/specs/` содержит
+48 канонических capabilities со 189 требованиями. Их соответствие
+[аудиту базовой линии](baseline-audit.json) проверяет `dev/check_spec_ownership.py`.
+`ADDED`-требования форматных предложений этого плана в канонические спецификации
+не перенесены: аудит отмечает их как `pending`. После выпуска 0.4.0 завершённые
+changes архивированы 2026-10-26 без изменения спецификаций. Предложения этого
+плана с открытыми задачами остаются активными. При их архивировании каждое
+требование нужно сверить с capabilities, действующими на тот момент.
 
 Практический порядок: R и базовые TIFF/HDF5/NetCDF профили; затем Level-5 MAT.
 MAT v7.3 зависит от доказанного HDF5 preservation. Zarr требует отдельного

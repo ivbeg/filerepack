@@ -23,8 +23,8 @@ RAR size checks occur after extraction, nested archives receive fresh limits, st
 ## Dependencies
 
 - [refactor-repack-transactions](../refactor-repack-transactions/proposal.md)
-- [update-repack-outcomes](../update-repack-outcomes/proposal.md)
-- [update-bulk-execution-lifecycle](../update-bulk-execution-lifecycle/proposal.md)
+- [update-repack-outcomes](../archive/2026-10-26-update-repack-outcomes/proposal.md)
+- [update-bulk-execution-lifecycle](../archive/2026-10-26-update-bulk-execution-lifecycle/proposal.md)
 
 ## Validation
 

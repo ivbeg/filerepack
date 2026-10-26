@@ -26,8 +26,8 @@ even when their pictures contain eligible compressed content.
 - Affected code: ole_word_art.py, ole_xls_art.py, ole_art_layout.py,
   ole_officeart.py, ole_recompress.py and production verifier/fixture support.
 - Priority: P1; first delivery in the [OLE plan](../../OLE-OPTIMIZATION-PLAN.md).
-- Prerequisites: [initial OfficeArt](../add-officeart-payload-recompression/proposal.md)
-  and [strict compaction](../add-ole-container-compaction/proposal.md).
+- Prerequisites: [initial OfficeArt](../archive/2026-10-26-add-officeart-payload-recompression/proposal.md)
+  and [strict compaction](../archive/2026-10-26-add-ole-container-compaction/proposal.md).
 - PNG/JPEG rewriting, cell/text re-encoding, BIFF5, charts/pivots/controls and
   unqualified Word/private record families are outside this delivery.
 - Status: approved by the user on 2026-10-04: “Реализуй все предложения”.
