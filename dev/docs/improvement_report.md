@@ -3,6 +3,9 @@
 > **Date:** 2026-08-14 (updated same day after implementation)
 > **Status:** Implemented in **0.2.0**. P0 data-loss paths, lossless defaults, `--jobs`, `doctor`, extra formats, extract-size limits, Info-ZIP OOXML rewrite, ruff, and docs split are in the tree.
 > **Scope:** Full review of the current tree (v0.1.4 + large unreleased work, then 0.2.0)
+> **Superseded:** historical baseline only. Current plans are
+> [repository-review-and-improvement-plan.md](repository-review-and-improvement-plan.md)
+> and [openspec/ROADMAP.md](../../openspec/ROADMAP.md).
 
 The sections below are the review that drove 0.2.0. They describe the *pre-0.2.0* working tree unless marked done.
 

@@ -148,7 +148,7 @@ retain the full scope of 72 tasks. In particular:
   Safetensors/GGUF/ONNX/DCP remain inspection-only and DCP completeness remains unknown.
 - Preserve the explicit scientific gates for MATLAB, historical R/standalone
   LibTorch readers, real independent ZSAV/Zarr origins, TIFF/GeoTIFF/COG and
-  representative cold-read/resource costs.x
+  representative cold-read/resource costs.
 - Execute the configured Linux/macOS/Windows lanes, establish actual
   second-filesystem/native-store evidence and confirm deployment before archive.
 
