@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Recompressed `.gz`, `.svgz` and `.tar.gz` members keep the source member's
+  file name, comment, modification time and OS byte. Encoders previously
+  recorded the scratch file name (restored by `gunzip -N`) and the current
+  time, so identical inputs, and dry-run versus real runs, produced different
+  bytes. Payload-dependent `FEXTRA` subfields are not carried.
+- Budgeted command, verifier, prefix and format-worker supervision accepts a
+  child that exits before psutil attaches. Windows reported such fast children
+  as `NoSuchProcess`, failing the operation instead of reading its result.
+
 ## [0.4.0] - 2026-10-09
 
 Support is limited to the qualified profiles documented below. Experimental

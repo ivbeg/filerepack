@@ -14,7 +14,7 @@ from .evidence import command
 def _cancelable_run(cmd: List[str], **kwargs: object) -> subprocess.CompletedProcess:
     """Own the process tree and bound diagnostics, RSS, scratch and wall time."""
     from .format_support import (
-        current_budget, check_cancelled, FormatLimit, _terminate, tool_environment,
+        current_budget, check_cancelled, FormatLimit, _monitor, _terminate, tool_environment,
     )
     command(cmd[0])
     budget = current_budget()
@@ -41,7 +41,7 @@ def _cancelable_run(cmd: List[str], **kwargs: object) -> subprocess.CompletedPro
         kwargs.setdefault('env', tool_environment())
         process = subprocess.Popen(cmd, start_new_session=os.name == 'posix',
                                    **kwargs)  # type: ignore[call-overload]
-        monitor = psutil.Process(process.pid)
+        monitor = _monitor(process)
         started = time.monotonic()
         try:
             while process.poll() is None:
@@ -54,7 +54,7 @@ def _cancelable_run(cmd: List[str], **kwargs: object) -> subprocess.CompletedPro
                 try:
                     rss = monitor.memory_info().rss + sum(
                         child.memory_info().rss for child in monitor.children(recursive=True)
-                    )
+                    ) if monitor else 0
                     if rss > budget.limits.memory:
                         raise FormatLimit('owned command process-tree RSS budget exceeded')
                 except psutil.NoSuchProcess:
@@ -156,6 +156,8 @@ def _check_decoder(budget: Any, monitor: Any) -> None:
     import psutil
     from .format_support import FormatLimit
     budget.check_scratch()
+    if monitor is None:
+        return
     try:
         resident = monitor.memory_info().rss + sum(
             item.memory_info().rss for item in monitor.children(recursive=True)
@@ -194,7 +196,9 @@ def consume_command(
     Reading runs separately so a stalled pipe cannot bypass the process timeout.
     Verifier diagnostics are discarded, avoiding unbounded stderr capture.
     """
-    from .format_support import current_budget, FormatLimit, _terminate, tool_environment
+    from .format_support import (
+        current_budget, FormatLimit, _monitor, _terminate, tool_environment,
+    )
     budget = current_budget()
     failed = threading.Event()
     command(cmd[0])
@@ -203,10 +207,7 @@ def consume_command(
                                    start_new_session=os.name == 'posix', env=tool_environment())
     except OSError:
         return False
-    monitor = None
-    if budget:
-        import psutil
-        monitor = psutil.Process(process.pid)
+    monitor = _monitor(process) if budget else None
     assert process.stdout is not None
     output = process.stdout
 
@@ -245,13 +246,14 @@ def consume_command(
 
 def capture_prefix(cmd: List[str], maximum: int = 512, timeout: float = 2.0) -> bytes:
     """Read a bounded prefix and terminate the owned producer, including descendants."""
-    import psutil
-    from .format_support import current_budget, Budget, FormatLimits, _terminate, tool_environment
+    from .format_support import (
+        current_budget, Budget, FormatLimits, _monitor, _terminate, tool_environment,
+    )
     budget = current_budget() or Budget(FormatLimits(seconds=timeout))
     command(cmd[0])
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
                                start_new_session=os.name == 'posix', env=tool_environment())
-    monitor = psutil.Process(process.pid)
+    monitor = _monitor(process)
     result: List[bytes] = []
     ready = threading.Event()
     assert process.stdout is not None

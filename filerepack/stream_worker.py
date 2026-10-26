@@ -56,8 +56,13 @@ def decoded_blocks(path: str, codec: str, budget: Budget) -> Iterator[bytes]:
 def _writer(path: str, codec: str, level: int) -> Iterator[Any]:
     writer: Any
     if codec == 'gz':
-        writer = gzip.open(path, 'wb', compresslevel=level)
-    elif codec == 'bz2':
+        # No scratch file name or current time; the caller carries the source header.
+        with open(path, 'wb') as raw, gzip.GzipFile(
+            filename='', mode='wb', fileobj=raw, compresslevel=level, mtime=0,
+        ) as writer:
+            yield writer
+        return
+    if codec == 'bz2':
         writer = bz2.open(path, 'wb', compresslevel=level)
     elif codec in ('xz', 'lzma'):
         writer = lzma.open(path, 'wb', preset=level,
