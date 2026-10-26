@@ -166,6 +166,12 @@ gzip (`.gz` or `.gzip`), xz, bz2, zst, brotli, lz4, lzip, lzma, lzo, and Unix
 `.Z` are recompressed with the matching CLI (`pigz` is preferred for gzip). If
 the payload is a tar, the tarball is walked first — see [Archives](/use-cases/archives).
 
+Recompressed gzip keeps the leading member's file name, comment, modification
+time and OS byte, so `gunzip -N` restores the original name. Gzip input whose
+leading member has an `FEXTRA` field, such as BGZF (tabix/CSI-indexed `.vcf.gz`,
+`.bed.gz`) or dictzip, is left unchanged and reported as `unsupported`: a single
+recompressed member would invalidate compressed-offset indexes and random access.
+
 ```bash
 filerepack repack dump.json.gz
 filerepack repack dump.json.gzip

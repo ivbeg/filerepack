@@ -378,7 +378,11 @@ def pack_svgz(
     filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
 ) -> Optional[PackResult]:
     import gzip
-    from .streams import _stamp_gzip_header
+    from .format_support import unchanged
+    from .streams import _stamp_gzip_header, gzip_extra_refusal
+    refusal = gzip_extra_refusal(filepath)
+    if refusal:
+        return unchanged(filepath, refusal)
     insize = os.path.getsize(filepath)
     svg_temp = tx.make_temp('.svg')
     gz_temp = tx.make_temp('.svgz')

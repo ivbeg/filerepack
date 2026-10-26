@@ -126,3 +126,47 @@ def test_tar_gzip_rebuild_keeps_source_name_and_mtime(tmp_path):
     assert _fields(data) == original
     with tarfile.open(path, 'r:gz') as archive:
         assert archive.extractfile('data.txt').read() == PAYLOAD
+
+
+def _bgzf(payload, block=30000):
+    """Minimal BGZF: one FEXTRA 'BC' member per block plus the empty EOF block."""
+    blocks = [payload[i:i + block] for i in range(0, len(payload), block)] + [b'']
+    data = b''
+    for chunk in blocks:
+        compressor = zlib.compressobj(1, zlib.DEFLATED, -15)
+        body = compressor.compress(chunk) + compressor.flush()
+        size = 18 + len(body) + 8
+        data += (b'\x1f\x8b\x08\x04\x00\x00\x00\x00\x00\xff\x06\x00BC\x02\x00'
+                 + (size - 1).to_bytes(2, 'little') + body
+                 + zlib.crc32(chunk).to_bytes(4, 'little') + len(chunk).to_bytes(4, 'little'))
+    return data
+
+
+def test_bgzf_stream_is_left_unchanged(tmp_path):
+    path = tmp_path / 'variants.vcf.gz'
+    path.write_bytes(_bgzf(PAYLOAD))
+    (tmp_path / 'variants.vcf.gz.tbi').write_bytes(b'TBI\x01')
+    original = path.read_bytes()
+    assert gzip.decompress(original) == PAYLOAD
+    summary = FileRepacker().repack(str(path))
+    assert path.read_bytes() == original
+    assert summary.outcome.status == 'unsupported'
+    assert summary.outcome.reason_code == 'unsupported_profile'
+    assert 'BGZF' in summary.outcome.reason
+
+
+def test_bgzf_tar_is_left_unchanged(tmp_path):
+    if not (shutil.which('7zz') or shutil.which('7z')):
+        pytest.skip('7zz/7z required for archive integration')
+    payload = io.BytesIO()
+    with tarfile.open(fileobj=payload, mode='w') as archive:
+        member = tarfile.TarInfo('data.txt')
+        member.size = len(PAYLOAD)
+        archive.addfile(member, io.BytesIO(PAYLOAD))
+    path = tmp_path / 'bundle.tar.gz'
+    path.write_bytes(_bgzf(payload.getvalue()))
+    original = path.read_bytes()
+    summary = FileRepacker().repack(str(path))
+    assert path.read_bytes() == original
+    assert summary.outcome.status == 'unsupported'
+    assert summary.outcome.reason_code == 'unsupported_profile'

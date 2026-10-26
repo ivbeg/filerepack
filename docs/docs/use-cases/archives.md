@@ -63,6 +63,8 @@ too.
 `.crate` and `.unitypackage` follow the gzip/tar stages. `.gem` is plain tar;
 its checksummed inner archives are kept byte-for-byte unchanged. `.taz` uses
 Unix compress (`.Z`), not gzip. Malformed or mismatched wrappers are skipped.
+A rebuilt gzip wrapper keeps the source member's name and modification time;
+BGZF or other `FEXTRA` gzip wrappers are left unchanged.
 Optional codecs need their corresponding executable for encoding and decoding.
 
 ## CPIO and bzip2-compressed CPIO

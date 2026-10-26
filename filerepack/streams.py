@@ -14,7 +14,9 @@ from .outcomes import record, Status
 from .tools import resolve_tool
 from .transactions import guard_packer
 from .commands import run_to_file as _run_to_file
-from .format_support import current_budget, current_options, run_operation, tool_threads
+from .format_support import (
+    current_budget, current_options, run_operation, tool_threads, unchanged,
+)
 
 
 def _native_stream(action: str, source: str, codec: str, candidate: Optional[str] = None):
@@ -55,6 +57,20 @@ def _gzip_header(path: str) -> Optional[bytes]:
     if flags & _GZIP_FHCRC:
         position += 2
     return data[:position] if position <= len(data) - 8 else None
+
+
+def gzip_extra_refusal(path: str) -> Optional[str]:
+    """Refuse a leading member with FEXTRA; its subfields may index the compressed layout.
+
+    BGZF ('BC') and dictzip ('RA') locate blocks by compressed offset. A single
+    recompressed member would invalidate tabix/CSI/GZI indexes and random access.
+    """
+    with open(path, 'rb') as fh:
+        prefix = fh.read(4)
+    if len(prefix) == 4 and prefix[:3] == b'\x1f\x8b\x08' and prefix[3] & _GZIP_FEXTRA:
+        return ('Unsupported gzip FEXTRA layout (for example BGZF or dictzip); '
+                'recompression would invalidate random-access indexes')
+    return None
 
 
 def _stamp_gzip_header(source: Optional[str], candidate: str) -> None:
@@ -253,6 +269,9 @@ def pack_gzip(
         from .warc import pack_warc
 
         return pack_warc(filepath, debug=debug, quiet=quiet, **commit)
+    refusal = gzip_extra_refusal(filepath)
+    if refusal:
+        return unchanged(filepath, refusal)
 
     def _gz_out(path: str) -> ContextManager[BinaryWriter]:
         return gzip.open(path, 'wb', compresslevel=9)

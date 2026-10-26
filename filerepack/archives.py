@@ -25,8 +25,9 @@ from .consts import DEFAULT_MAX_EXTRACT_BYTES, DEFAULT_MAX_EXTRACT_RATIO, ZIP_SE
 from .destinations import DestinationPlan, PathReservation, normalize_path
 from .formats import identify_filename
 from .models import ProgressHook, RepackSummary
+from .outcomes import RepackOutcome
 from .package_policy import inspect_package, verify_package
-from .streams import BinaryReader, _compress_file
+from .streams import BinaryReader, _compress_file, gzip_extra_refusal
 from .tools import resolve_szip, resolve_tool
 from .utils import dir_total_size, extract_exceeds_limit, zip_uncompressed_size
 
@@ -186,6 +187,11 @@ class ArchiveRepacker:
             family = kind.family if kind else 'zip'
         summary = RepackSummary(filepath=filename, total_insize=f_insize)
         summary.total_outsize = f_insize
+        refusal = gzip_extra_refusal(filename) if family == 'tar.gz' else None
+        if refusal:
+            summary.outcome = RepackOutcome(filename, filename, 'unsupported', f_insize,
+                                            f_insize, 'unsupported_profile', refusal)
+            return summary
         fpath = make_temp_dir(prefix='filerepack-archive-', directory=self.temppath)
         tar_payload: Optional[str] = None
         try:
