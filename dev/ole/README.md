@@ -11,6 +11,10 @@ rejected profiles with pinned source hashes; its stage counts do not predict
 physical savings. Earlier measurements below document individual implementation
 stages.
 
+`inspect_ole_directory.py` is a stdlib-only, read-only diagnostic for the outer
+CFB directory of `.ppt` files: `python dev/ole/inspect_ole_directory.py PATH
+[--json]`. It is not a complete CFB/PPT validator; unused entries are normal.
+
 ```sh
 python -m pip install -e '.[dev,ole]'
 cargo build --release --locked --manifest-path tools/ole-compactor/Cargo.toml
