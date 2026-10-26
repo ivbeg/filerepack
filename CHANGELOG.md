@@ -13,7 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   file name, comment, modification time and OS byte. Encoders previously
   recorded the scratch file name (restored by `gunzip -N`) and the current
   time, so identical inputs, and dry-run versus real runs, produced different
-  bytes. Payload-dependent `FEXTRA` subfields are not carried.
+  bytes.
+- Gzip, `.svgz` and gzip-compressed tar inputs whose leading member has an
+  `FEXTRA` field, such as BGZF (tabix/CSI-indexed `.vcf.gz`) or dictzip, are
+  left unchanged and reported as `unsupported`. Recompressing them into one
+  member invalidated compressed-offset indexes and random access.
 - Budgeted command, verifier, prefix and format-worker supervision accepts a
   child that exits before psutil attaches. Windows reported such fast children
   as `NoSuchProcess`, failing the operation instead of reading its result.
