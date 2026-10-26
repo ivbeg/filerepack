@@ -314,7 +314,7 @@ def test_tar_failed_stages_keep_original_and_clean_scratch(tmp_path, archive_too
     scratch = tmp_path / 'scratch'
     scratch.mkdir()
 
-    def corrupt_encoder(source, destination, codec, debug):
+    def corrupt_encoder(source, destination, codec, debug, header_source=None):
         with open(destination, 'wb') as stream:
             stream.write(gzip.compress(b'not a tar payload'))
         return True

@@ -5,6 +5,7 @@ import gzip
 import bz2
 import lzma
 import os
+import zlib
 from typing import Any, Callable, ContextManager, List, Literal, Optional, Protocol
 
 from . import candidates as tx
@@ -30,6 +31,75 @@ def _bounded_copy(source: Any, target: Any, *, decoded: bool = False) -> None:
         target.write(block)
         if budget:
             budget.check_scratch()
+
+
+_GZIP_FTEXT, _GZIP_FHCRC, _GZIP_FEXTRA, _GZIP_FNAME, _GZIP_FCOMMENT = 1, 2, 4, 8, 16
+_GZIP_HEADER_LIMIT = 64 * 1024
+
+
+def _gzip_header(path: str) -> Optional[bytes]:
+    """Return the leading member header, or None when it is not a bounded gzip header."""
+    with open(path, 'rb') as fh:
+        data = fh.read(_GZIP_HEADER_LIMIT)
+    if len(data) < 18 or data[:3] != b'\x1f\x8b\x08' or data[3] & 0xE0:
+        return None
+    flags, position = data[3], 10
+    if flags & _GZIP_FEXTRA:
+        position += 2 + int.from_bytes(data[position:position + 2], 'little')
+    for bit in (_GZIP_FNAME, _GZIP_FCOMMENT):
+        if flags & bit:
+            end = data.find(b'\0', position)
+            if end < 0:
+                return None
+            position = end + 1
+    if flags & _GZIP_FHCRC:
+        position += 2
+    return data[:position] if position <= len(data) - 8 else None
+
+
+def _stamp_gzip_header(source: Optional[str], candidate: str) -> None:
+    """Give an encoded candidate the source member's name, comment, mtime and OS.
+
+    Encoders otherwise record the scratch file name and the current time, which
+    `gunzip -N` would restore and which makes identical inputs encode differently.
+    XFL describes the new encoding. FEXTRA is not carried because subfields such
+    as BGZF block sizes describe the previous compressed layout.
+    """
+    encoded = _gzip_header(candidate)
+    if encoded is None:
+        raise ValueError('Encoder produced an invalid gzip header')
+    original = _gzip_header(source) if source else None
+    if original is None:
+        header = bytearray(b'\x1f\x8b\x08\x00\x00\x00\x00\x00' + encoded[8:10])
+    else:
+        flags = original[3] & (_GZIP_FTEXT | _GZIP_FHCRC | _GZIP_FNAME | _GZIP_FCOMMENT)
+        header = bytearray(original[:3] + bytes([flags]) + original[4:8] + encoded[8:9]
+                           + original[9:10])
+        position = 10
+        if original[3] & _GZIP_FEXTRA:
+            position += 2 + int.from_bytes(original[10:12], 'little')
+        for bit in (_GZIP_FNAME, _GZIP_FCOMMENT):
+            if original[3] & bit:
+                end = original.index(b'\0', position) + 1
+                header += original[position:end]
+                position = end
+        if flags & _GZIP_FHCRC:
+            header += (zlib.crc32(header) & 0xFFFF).to_bytes(2, 'little')
+    if header == encoded:
+        return
+    if len(header) == len(encoded):
+        with open(candidate, 'r+b') as fh:
+            fh.write(header)
+        return
+    restamped = tx.make_temp(os.path.splitext(candidate)[1])
+    try:
+        with open(candidate, 'rb') as body, open(restamped, 'wb') as target:
+            body.seek(len(encoded))
+            target.write(header)
+            _bounded_copy(body, target)
+        os.replace(restamped, candidate)
+    finally:
+        tx.remove_quietly(restamped)
 
 
 class BinaryReader(Protocol):
@@ -64,11 +134,13 @@ def _pack_stream_codec(
             level = current_options().get('compression_level', 9)
             flags = [f'-{level}', '-c']
             if cli_key == 'pigz':
-                flags += ['-p', str(tool_threads())]
+                flags += ['-n', '-p', str(tool_threads())]
             used_cli = _run_to_file([tool] + flags + [dec_temp], out_temp, debug)
 
         if not used_cli:
             _native_stream('encode', dec_temp, verify, out_temp)
+        if verify == 'gz':
+            _stamp_gzip_header(filepath, out_temp)
 
         return tx.commit_output(
             out_temp, filepath, insize, verify=verify, lossless=True, **tx.commit_kwargs(**commit)
@@ -116,14 +188,25 @@ def _pack_pipe_codec(
         tx.remove_quietly(out_temp)
 
 
-def _compress_file(src: str, dest: str, codec: str, debug: bool = False) -> bool:
-    """Compress a single payload file with the named stream codec."""
+def _compress_file(
+    src: str, dest: str, codec: str, debug: bool = False, *, header_source: Optional[str] = None,
+) -> bool:
+    """Compress a single payload file with the named stream codec.
+
+    A gzip candidate takes its member metadata from header_source when given.
+    """
     if codec == 'gz':
         tool = resolve_tool('pigz')
         if tool:
-            return _run_to_file([tool, '-9', '-p', str(tool_threads()), '-c', src], dest, debug)
-        _native_stream('encode', src, codec, dest)
-        return os.path.exists(dest) and os.path.getsize(dest) > 0
+            if not _run_to_file([tool, '-9', '-n', '-p', str(tool_threads()), '-c', src],
+                                dest, debug):
+                return False
+        else:
+            _native_stream('encode', src, codec, dest)
+            if not (os.path.exists(dest) and os.path.getsize(dest) > 0):
+                return False
+        _stamp_gzip_header(header_source, dest)
+        return True
     if codec == 'bz2':
         tool = resolve_tool('bzip2')
         if tool:

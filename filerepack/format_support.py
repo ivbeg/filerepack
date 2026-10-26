@@ -236,6 +236,19 @@ def unchanged(path: str, reason: str, details: Optional[Dict[str, Any]] = None) 
     return PackResult(path, size, size, 0.0, replaced=False, reason=reason, details=details or {})
 
 
+def _monitor(process: subprocess.Popen) -> Any:
+    """Attach the RSS/tree supervisor; None when the child already exited.
+
+    POSIX keeps an unreaped child as a zombie, but Windows reports a fast child
+    that exits before attachment as missing. No live tree remains to supervise.
+    """
+    import psutil
+    try:
+        return psutil.Process(process.pid)
+    except psutil.NoSuchProcess:
+        return None
+
+
 def _terminate(process: subprocess.Popen, monitor: Any) -> None:
     if os.name != "nt":
         try:
@@ -247,6 +260,8 @@ def _terminate(process: subprocess.Popen, monitor: Any) -> None:
             # is an unreaped zombie. Refresh before attempting a direct kill.
             if process.poll() is None:
                 process.kill()
+    elif monitor is None:
+        process.kill()
     else:
         try:
             for child in monitor.children(recursive=True):
@@ -328,7 +343,7 @@ def run_operation(
                 env=tool_environment(),
                 start_new_session=os.name != "nt",
             )
-            monitor = psutil.Process(process.pid)
+            monitor = _monitor(process)
             try:
                 assert process.stdin is not None
                 process.stdin.write(json.dumps(request).encode())
@@ -341,7 +356,7 @@ def run_operation(
                     if event is not None and event.is_set():
                         raise FormatLimit("format operation cancelled")
                     try:
-                        children = [monitor, *monitor.children(recursive=True)]
+                        children = [monitor, *monitor.children(recursive=True)] if monitor else []
                         resident = sum(
                             child.memory_info().rss for child in children if child.is_running()
                         )

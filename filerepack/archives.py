@@ -279,7 +279,7 @@ class ArchiveRepacker:
             return
         if family.startswith('tar') and family != 'tar':
             outer = family.split('.', 1)[1]
-            self._write_tar_bundle(fpath, dest, options, summary, f_insize, outer)
+            self._write_tar_bundle(fpath, dest, filename, options, summary, f_insize, outer)
             return
         archive_type = family if family in ('zip', '7z', 'tar', 'cab', 'wim') else 'zip'
         self._write_archive(
@@ -396,7 +396,7 @@ class ArchiveRepacker:
             summary.filepath = dest
 
     def _write_tar_bundle(
-        self, fpath: str, dest: str, options: Dict[str, Any],
+        self, fpath: str, dest: str, filename: str, options: Dict[str, Any],
         summary: RepackSummary, f_insize: int, outer: str,
     ) -> None:
         """Write an uncompressed tar, then wrap it in gz/xz/bz2/zst/..."""
@@ -414,7 +414,8 @@ class ArchiveRepacker:
         try:
             out_temp = _make_temp(suffix)
             write_tar(tar_temp, fpath, options['_archive_manifest'])
-            if not _compress_file(tar_temp, out_temp, outer, options.get('debug', False)):
+            if not _compress_file(tar_temp, out_temp, outer, options.get('debug', False),
+                                  header_source=filename):
                 summary.total_outsize = f_insize
                 return
             # Verify what was actually encoded, not just the intermediate tar.

@@ -378,6 +378,7 @@ def pack_svgz(
     filepath: str, debug: bool = False, quiet: bool = False, **commit: Any,
 ) -> Optional[PackResult]:
     import gzip
+    from .streams import _stamp_gzip_header
     insize = os.path.getsize(filepath)
     svg_temp = tx.make_temp('.svg')
     gz_temp = tx.make_temp('.svgz')
@@ -388,8 +389,11 @@ def pack_svgz(
             svg_temp, debug=debug, quiet=quiet, dryrun=False,
             keep_if_larger=True, min_savings=None,
         )
-        with open(svg_temp, 'rb') as f_in, gzip.open(gz_temp, 'wb', compresslevel=9) as f_out:
+        with open(svg_temp, 'rb') as f_in, open(gz_temp, 'wb') as raw, gzip.GzipFile(
+            filename='', mode='wb', fileobj=raw, compresslevel=9, mtime=0,
+        ) as f_out:
             copyfileobj(f_in, f_out, length=tx.COPY_BUF)
+        _stamp_gzip_header(filepath, gz_temp)
         return tx.commit_output(
             gz_temp, filepath, insize, verify='svgz', **tx.commit_kwargs(**commit)
         )

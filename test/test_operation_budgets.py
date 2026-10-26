@@ -65,3 +65,32 @@ def test_stream_decode_bomb_and_validation_share_the_root_budget(tmp_path, codec
     assert summary.outcome.status == 'skipped'
     assert summary.outcome.reason_code == 'resource_limit'
     assert source.read_bytes() == original and not output.exists()
+
+
+def test_supervisors_accept_a_child_that_exits_before_attachment(monkeypatch, tmp_path):
+    """Windows reports a fast child that exited before psutil attached as missing."""
+    import gzip
+    import os
+    import psutil
+    from filerepack.commands import capture_command, consume_command
+    from filerepack.format_support import format_scope, run_operation
+    attach = psutil.Process
+
+    def exited(pid=None):
+        if pid is None or pid == os.getpid():
+            return attach(pid)
+        raise psutil.NoSuchProcess(pid)
+
+    monkeypatch.setattr(psutil, 'Process', exited)
+    script = [sys.executable, '-c', 'print("done")']
+    source = tmp_path / 'source.gz'
+    source.write_bytes(gzip.compress(b'payload'))
+    with format_scope({}):
+        result = capture_command(script)
+        assert result is not None and result.stdout.strip() == 'done'
+        output = bytearray()
+        assert consume_command(script, output.extend)
+        assert output.strip() == b'done'
+        assert capture_prefix(script).strip() == b'done'
+        assert run_operation('stream-native', 'fingerprint', str(source),
+                             options={'stream_codec': 'gz'})['ok']
