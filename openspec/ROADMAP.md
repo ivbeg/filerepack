@@ -10,7 +10,7 @@ This roadmap converts the review into **22 changes**, **27 capability delta file
 typed outcomes, bounded bulk coordination, inspection, audit/report evidence,
 content-verified resume, named profiles, member selection, recursive Flate PDF
 walking, preserving web fonts, CAR and tracev3. The current canonical baseline
-is populated with 189 reviewed requirements in 48 capabilities; the
+is populated with 193 reviewed requirements in 49 capabilities; the
 [baseline audit](baseline-audit.json) covers 290 historical/active source blocks.
 Live requirement ownership is unique and tested by `dev/check_spec_ownership.py`.
 [Current completion evidence](../dev/quality/completion-2026-10-07.md) and the
@@ -31,10 +31,10 @@ update-media-preservation-policy, add-inspection-command, add-audit-reports,
 add-resumable-bulk and extend-lossless-pdf-stream-walking. The other 9 roadmap
 changes keep open tasks and remain active, as do the other changes with open
 corpus, native reader or platform qualification tasks.
-[extend-ole-host-format-support](changes/extend-ole-host-format-support/proposal.md)
-has a complete checklist but also remains active: the audit records its four
-ADDED `ole-host-profiles` requirements as pending and they are not in the canonical
-baseline, so archiving it first needs that reconciliation.
+[extend-ole-host-format-support](changes/archive/2026-10-26-extend-ole-host-format-support/proposal.md)
+was archived separately on the same day with its spec delta applied: its four
+`ole-host-profiles` requirements were reconciled against the 0.4.0 runtime, gained
+protection, alias and archive-member tests, and joined the canonical baseline.
 
 The following dated paragraphs preserve the earlier delivery history.
 

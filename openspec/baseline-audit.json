@@ -1885,40 +1885,40 @@
       "note": "Working-tree qualified 2026-10-08: bounded Flate/Form traversal plus DCT/JPX sample precision, host semantics, standalone OpenJPEG inventory and Poppler 72-dpi comparisons. No release/deployment claim."
     },
     {
-      "source": "openspec/changes/extend-ole-host-format-support/specs/ole-host-profiles/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-ole-host-format-support/specs/ole-host-profiles/spec.md",
       "capability": "ole-host-profiles",
       "requirement": "Qualified additional CFB host profiles",
-      "disposition": "pending",
+      "disposition": "verified",
       "source_requirement_sha256": "0caca1a3a4c08b7a8d773fc84e50942890ecf33ae62aee0455571513de72e61c",
-      "canonical_requirement_sha256": null,
-      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+      "canonical_requirement_sha256": "0caca1a3a4c08b7a8d773fc84e50942890ecf33ae62aee0455571513de72e61c",
+      "note": "Reconciled 2026-10-26 against release 0.4.0: content-based gates, impostor, protected MSG class, signed/aliased MSI and HWP flag skips, exact manifests, root budgets, dry-run/output and archive-member routing are tested for all six hosts in test/test_ole_extended.py. Office/Hancom applications and remote native-platform runs are not claimed."
     },
     {
-      "source": "openspec/changes/extend-ole-host-format-support/specs/ole-host-profiles/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-ole-host-format-support/specs/ole-host-profiles/spec.md",
       "capability": "ole-host-profiles",
       "requirement": "Host-specific protection and writer eligibility",
-      "disposition": "pending",
+      "disposition": "verified",
       "source_requirement_sha256": "f04962bbd27995bfbce35ff6c99cde663d59d538a727eebc79410041e3968e6d",
-      "canonical_requirement_sha256": null,
-      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+      "canonical_requirement_sha256": "f04962bbd27995bfbce35ff6c99cde663d59d538a727eebc79410041e3968e6d",
+      "note": "Reconciled 2026-10-26 against release 0.4.0: content-based gates, impostor, protected MSG class, signed/aliased MSI and HWP flag skips, exact manifests, root budgets, dry-run/output and archive-member routing are tested for all six hosts in test/test_ole_extended.py. Office/Hancom applications and remote native-platform runs are not claimed."
     },
     {
-      "source": "openspec/changes/extend-ole-host-format-support/specs/ole-host-profiles/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-ole-host-format-support/specs/ole-host-profiles/spec.md",
       "capability": "ole-host-profiles",
       "requirement": "Identical streams and complete metadata across new hosts",
-      "disposition": "pending",
+      "disposition": "verified",
       "source_requirement_sha256": "7322f07ceac8bc06afaa6ccc49206fee374d07bbe43b3b965e4717caa71c8249",
-      "canonical_requirement_sha256": null,
-      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+      "canonical_requirement_sha256": "7322f07ceac8bc06afaa6ccc49206fee374d07bbe43b3b965e4717caa71c8249",
+      "note": "Reconciled 2026-10-26 against release 0.4.0: content-based gates, impostor, protected MSG class, signed/aliased MSI and HWP flag skips, exact manifests, root budgets, dry-run/output and archive-member routing are tested for all six hosts in test/test_ole_extended.py. Office/Hancom applications and remote native-platform runs are not claimed."
     },
     {
-      "source": "openspec/changes/extend-ole-host-format-support/specs/ole-host-profiles/spec.md",
+      "source": "openspec/changes/archive/2026-10-26-extend-ole-host-format-support/specs/ole-host-profiles/spec.md",
       "capability": "ole-host-profiles",
       "requirement": "Compatible execution and per-host evidence",
-      "disposition": "pending",
+      "disposition": "verified",
       "source_requirement_sha256": "0f52ebf29c37ca64f56271e7273b722df3b986dbc7b4c6d3f5258ce49cb9ef3e",
-      "canonical_requirement_sha256": null,
-      "note": "Full writer/corpus/platform/resource qualification remains open; see source change tasks and validation notes."
+      "canonical_requirement_sha256": "0f52ebf29c37ca64f56271e7273b722df3b986dbc7b4c6d3f5258ce49cb9ef3e",
+      "note": "Reconciled 2026-10-26 against release 0.4.0: content-based gates, impostor, protected MSG class, signed/aliased MSI and HWP flag skips, exact manifests, root budgets, dry-run/output and archive-member routing are tested for all six hosts in test/test_ole_extended.py. Office/Hancom applications and remote native-platform runs are not claimed."
     },
     {
       "source": "openspec/changes/extend-tiff-recompression/specs/tiff-recompression/spec.md",

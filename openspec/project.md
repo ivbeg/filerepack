@@ -34,7 +34,7 @@ filerepack is a Python CLI tool and library for lossless and lossy re-compressio
 - Preservation regressions use real format bytes and controlled faults; available external tools are exercised with explicit skips for missing integrations
 - Source releases include the complete test package; runtime wheels exclude test/development support
 - `python dev/validate_distribution.py` builds and installs sdist/wheel artifacts in fresh environments, checks import provenance/exports/CLI/license metadata and runs extracted tests against the installed runtime
-- CI retains Ubuntu Python 3.9–3.13 and separate 3.9/3.13 artifact checks, with Linux/macOS/Windows process/filesystem, optional-reader, scientific-native and OLE-native lanes. These lanes are configured; remote results are not asserted. Newer Python versions need core/artifact/native-reader qualification before being described as tested.
+- CI retains Ubuntu Python 3.9–3.13 and separate 3.9/3.13 artifact checks, with Linux/macOS/Windows process/filesystem, optional-reader, scientific-native and OLE-native lanes. These lanes run remotely for every push and pull request and all passed on 2026-10-26 before the 0.4.1 release. Newer Python versions need core/artifact/native-reader qualification before being described as tested.
 
 ### Git Workflow
 - Single `master` branch
@@ -60,7 +60,7 @@ filerepack is a Python CLI tool and library for lossless and lossy re-compressio
 
 ## Verified specification baseline
 
-The reconciliation updated on 2026-10-09 contains 189 verified current requirements in 48
+The reconciliation updated on 2026-10-26 contains 193 verified current requirements in 49
 capabilities, with unique live delta ownership. `baseline-audit.json` records
 all 290 reviewed active/historical source blocks, narrowed historical wording
 and pending broader writer/corpus/resource claims. Run

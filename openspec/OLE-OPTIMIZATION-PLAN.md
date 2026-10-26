@@ -16,8 +16,8 @@ and required qualification are complete; approval does not claim delivery.
   populated BIFF8 workbooks and many Word picture layouts remain outside its gate.
 - Canonical openspec/specs was empty when this plan was written, so the proposals
   below use uniquely named ADDED requirements. The reconciled canonical baseline
-  now holds 48 capabilities, including ole-compaction and the OLE recompression
-  capabilities, checked by `dev/check_spec_ownership.py`. Do not populate canonical
+  now holds 49 capabilities, including ole-compaction, ole-host-profiles and the
+  OLE recompression capabilities, checked by `dev/check_spec_ownership.py`. Do not populate canonical
   specs with requirements the baseline audit still records as pending.
 
 ## Delivery order and dependencies
@@ -28,7 +28,7 @@ and required qualification are complete; approval does not claim delivery.
 | 2 | [add-officeart-raster-recompression](changes/archive/2026-10-26-add-officeart-raster-recompression/proposal.md) | Lossless PNG IDAT and JPEG entropy optimization | Initial OfficeArt; expanded coverage for newly supported host layouts |
 | 3 | [add-ole-embedded-payload-recompression](changes/archive/2026-10-26-add-ole-embedded-payload-recompression/proposal.md) | Qualified DOC/XLS embedded files and CFB objects | Strict OLE and verified child packers; expanded host coverage where needed |
 | 4 | [add-officeart-image-deduplication](changes/add-officeart-image-deduplication/proposal.md) | Byte-identical BLIPs in fully resolved shared picture stores | Expanded host/reference coverage |
-| 5 | [extend-ole-host-format-support](changes/extend-ole-host-format-support/proposal.md) | Strict compaction profiles for MSG, VSD, PUB, MPP, MSI and HWP 5 | Strict OLE verifier and native writer |
+| 5 | [extend-ole-host-format-support](changes/archive/2026-10-26-extend-ole-host-format-support/proposal.md) | Strict compaction profiles for MSG, VSD, PUB, MPP, MSI and HWP 5 | Strict OLE verifier and native writer |
 | 6 | [add-hwp-stream-recompression](changes/archive/2026-10-26-add-hwp-stream-recompression/proposal.md) | Exact decoded-byte recompression of qualified HWP 5 streams | HWP host profile from order 5 |
 | 7 | [add-ole-maximum-compression-effort](changes/archive/2026-10-26-add-ole-maximum-compression-effort/proposal.md) | Bounded stronger Zopfli trials through existing ultra selection | Initial OfficeArt; raster codec only if delivered |
 
@@ -86,9 +86,9 @@ track verified implementation and remaining original-corpus qualification.
 Release 0.4.0 (2026-10-09) deployed the completed proposals, which were archived
 on 2026-10-26 without replacing verified canonical wording.
 extend-doc-xls-officeart-coverage and add-officeart-image-deduplication keep open
-tasks. extend-ole-host-format-support stays active until its pending
-`ole-host-profiles` requirements are reconciled. Office/Hancom and remote native
-platform limitations are explicit.
+tasks. extend-ole-host-format-support was archived on 2026-10-26 after its
+`ole-host-profiles` requirements were reconciled into the canonical baseline.
+Office/Hancom and remote native platform limitations are explicit.
 
 The [1,055-file original coverage census](../dev/ole/CORPUS.md) pins each source
 identity and rejection reason. It qualifies an additional populated worksheet

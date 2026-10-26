@@ -73,4 +73,4 @@ regressions. Rollback removes only individual new profile registrations.
 - [Windows Installer storage](https://learn.microsoft.com/en-us/visualstudio/extensibility/internals/windows-installer-basics?view=visualstudio)
 - [Installer stream naming](https://learn.microsoft.com/en-us/windows/win32/msi/ole-limitations-on-streams)
 - [Hancom HWP structure](https://blog.hancom.com/en/hwp-hwpx-data-extraction-format-library/)
-- [Existing qualified CFB contract](../archive/2026-10-26-add-ole-container-compaction/specs/ole-compaction/spec.md)
+- [Existing qualified CFB contract](../2026-10-26-add-ole-container-compaction/specs/ole-compaction/spec.md)
